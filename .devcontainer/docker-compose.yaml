@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: source_gen 
+    volumes:
+      - ../:/home/bun/app:cached
+      - node_modules:/home/bun/app/node_modules
+    tty: true
+    stdin_open: true
+
+volumes:
+  node_modules:
