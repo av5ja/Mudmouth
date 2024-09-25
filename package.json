@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "bun run src/index.ts",
+    "postdev": "swiftformat .",
     "prepare": "husky"
   },
   "type": "module",
