@@ -1,0 +1,222 @@
+CommonCancel: Annuler
+CommonClamBlitz: Pluie de palourdes
+CommonClose: Fermer
+CommonColonRule: ':'
+CommonCoopBigRun: Big Run
+CommonCoopBossRandom: Aléatoire
+CommonCoopBossRandomSign: '?'
+CommonCoopTeamContest: Défi œuf sup
+CommonCopyrightQrCode: QR Code is a registered trademark of DENSO WAVE INCORPORATED.
+CommonDecide: OK
+CommonDownload: Télécharger
+CommonEnd: Fermer
+CommonGearPowerBlank: Inconnu
+CommonHome: Accueil
+CommonIkaring3: SplatNet 3
+CommonNavBack: Retour
+CommonNowLoading: Chargement...
+CommonPullToRefresh: Tirer pour actualiser
+CommonRainmaker: Mission Bazookarpe
+CommonShare: Partager
+CommonSplatZones: Défense de zone
+CommonTournamentManager: Tournois
+CommonTowerControl: Expédition risquée
+CommonTricolor: Match tricolore
+CommonTricolorMatch: Match tricolore
+CommonTurfWar: Guerre de territoire
+CommonWpnNotfound: Inconnu
+CoopHistoryAnnotation01: >-
+  Les missions interrompues suite à des déconnexions ou d'autres problèmes ne
+  sont pas comptabilisées.
+CoopHistoryAvailable: Apparus
+CoopHistoryAvailableBoss: Salmonarque combattu
+CoopHistoryAverageClearWaves: "Vagues terminées (moyenne)\_:"
+CoopHistoryBigrun: Big Run
+CoopHistoryBigrunBronze: Bronze
+CoopHistoryBigrunGold: Or
+CoopHistoryBigrunSilver: Argent
+CoopHistoryBonus: Récomp.
+CoopHistoryBossAvailable: Salmonarque en approche!
+CoopHistoryClear: Réussite!
+CoopHistoryDangerRatio: "Niveau de danger\_:"
+CoopHistoryDefeatBoss: Attaque de salmonarque!
+CoopHistoryDefeatBossCount: Salmonarques vaincus
+CoopHistoryDefeated: Vaincu!
+CoopHistoryDefeatedEnemies: Salmonoboss vaincus
+CoopHistoryDefeatedEnemiesGuide: >-
+  Remarque : Le nombre d'ennemis que tu as vaincus toi-même est indiqué entre
+  parenthèses.
+CoopHistoryDeliverCount: Œufs de poi. collectés
+CoopHistoryEnemy: Salmonoboss
+CoopHistoryExWave: Vague +
+CoopHistoryFailure: Échec...
+CoopHistoryGj: ✓
+CoopHistoryGoToStats: Retour aux stats de missions
+CoopHistoryGoldenDeliverCount: Œufs dorés collectés
+CoopHistoryHighestScore: Record
+CoopHistoryHistory: Stats de missions
+CoopHistoryJobPoint: Tes points
+CoopHistoryJobRatio: Éval.
+CoopHistoryKumaPointCard: Carte point M. Ours
+CoopHistoryLatest: Dernière mission
+CoopHistoryLimitedPoint: Points de prix spéciaux actuels
+CoopHistoryMonthlyReward: Pièce d'équipement du mois
+CoopHistoryNext: Suivant
+CoopHistoryNg: ✘
+CoopHistoryNoData: Aucune stat de mission disponible.
+CoopHistoryNotAvailable: Les stats de missions ne sont pas disponibles.
+CoopHistoryNotAvailableDescription: Seules les 50 entrées les plus récentes sont disponibles.
+CoopHistoryNotDefeated: Échec...
+CoopHistoryP: p.
+CoopHistoryPlayCount: Sessions de travail
+CoopHistoryPlayCountBySchedule: 'Nombre de missions :'
+CoopHistoryPrevious: Précédent
+CoopHistoryPrivate: Mission privée
+CoopHistoryRecruit: On embauche!
+CoopHistoryRecruitDescription: >-
+  Un travail taillé pour ceux qui ont de l'énergie et de l'optimisme à revendre,
+  et qui sont prêts à bosser dur pour empocher un tas d'écailles. Motivation
+  exigée. Débutants acceptés.
+CoopHistoryRecruitTag1: C'est facile!
+CoopHistoryRecruitTag2: La collecte d'œufs, c'est le fun et ça rapporte!
+CoopHistoryRecruitTitle: La collecte d'œufs, un travail de rêve!
+CoopHistoryRegular: Mission normale
+CoopHistoryRegularPoint: Points actuels
+CoopHistoryRescueCount: Collègues secourus
+CoopHistoryRescuedCount: Secours reçus
+CoopHistoryScale: Écailles
+CoopHistoryScaleBronze: Écaille de bronze
+CoopHistoryScaleGold: Écaille d'or
+CoopHistoryScaleSilver: Écaille d'argent
+CoopHistoryScore: Pointage
+CoopHistorySeeSchedule: Consulter l'horaire
+CoopHistorySmellMeter: Salmomètre
+CoopHistorySupplyWeapon: Armes fournies
+CoopHistoryTeamContest: Défi œuf sup
+CoopHistoryTitle: Salmon Run
+CoopHistoryTotalPoint: Total des points
+CoopHistoryWave: Vague
+CoopHistoryWaveLevel0: Marée basse
+CoopHistoryWaveLevel1: Normal
+CoopHistoryWaveLevel2: Marée haute
+CoopRecordAppName: Missions
+CoopRecordAttended: 'Nombre de participations :'
+CoopRecordBigrun: Big Run
+CoopRecordBigrunBronze: Bronze
+CoopRecordBigrunGold: Or
+CoopRecordBigrunSilver: Argent
+CoopRecordCoop: Stats des missions
+CoopRecordDefeated: Adversaires liquidés
+CoopRecordHighestJobRate: Meilleure évaluation
+CoopRecordHighestScore: Record
+CoopRecordMore: Afficher plus d'infos
+CoopRecordNoData: Aucune donnée
+CoopRecordRank: Top  %
+CoopRecordRanking: Classement
+CoopRecordTeamContest: Défi œuf sup
+CoopRecordTitle: Statistiques
+ErrorBackToHome: Retour à l'accueil
+ErrorBannedUser: >-
+  Nous avons détecté un accès non autorisé au service. Ton utilisation de ce
+  service a donc été suspendue.
+ErrorCurrentlyNotAvailable: Actuellement indisponible. Réessaie plus tard.
+ErrorError: Erreur
+ErrorErrorOccurred: Une erreur est survenue.
+ErrorErrorReopen: Échec du chargement.
+ErrorMaintenanceDescription: Le serveur est en cours de maintenance. Réessaie plus tard.
+ErrorMaintenanceTitle: Patiente quelques instants...
+ErrorNetworkNotAvailable: Échec du chargement. Vérifie ta connexion à Internet, puis réessaie.
+ErrorNotSupported: >-
+  SplatNet 3 ne peut pas s'afficher. Vérifie ta connexion Internet et attends un
+  peu, puis réessaie. Si le problème persiste, assure-toi que ton navigateur
+  Internet a installé sa mise à jour la plus récente. Si ce message continue à
+  apparaître, il se peut que SplatNet 3 ne soit pas compatible avec tes
+  paramètres ou ton appareil actuels.
+ErrorReload: Actualiser
+LandingCaution: >-
+  Si l'application n'est pas installée, appuyer sur ce bouton n'aura aucun
+  effet.
+LandingDlAppStore: Télécharger l'application via l'App Store
+LandingDlGooglePlay: Télécharger l'application via Google Play
+LandingDownload: Tu peux télécharger l'application ici!
+LandingNso: Nintendo Switch Online
+LandingOpenApp: Ouvrir l'application
+LandingSplatoon3: Splatoon 3
+LandingTitle: Ouverture de l'application pour téléphone intelligent Nintendo Switch Online
+PhotoAlbumAppName: Album
+PhotoAlbumSelect: Sélectionner
+PhotoAlbumTitle: Album
+RecordLatestPlayed: Dernières parcourues
+RecordLatestUsed: Favoris
+RecordMain: Principale
+RecordNextSkillLevel: Prochaine amél.
+RecordSkillLevel: Coolitude
+RecordSort: Trier
+RecordSpecial: Spéciale
+RecordStageRecord: Stats - cartes
+RecordStageRecordAppName: Cartes
+RecordSub: Secondaire
+RecordTitle: Stats
+RecordTotalTurfPoint: p.
+RecordTurfPoint: Surf. encrée
+RecordUnplayedStages: Cartes non parcourues
+RecordUnusedWeapons: Pas encore obtenues
+RecordVibes: Jauge d'appréciation
+RecordWeaponRecord: Stats - armes
+RecordWeaponRecordAppName: Armes
+RecordWinCount: 'Victoires :'
+RecordWinRatio: '%'
+SettingsAboutSendingUsageData: Informations sur l'envoi de données d'utilisation
+SettingsAboutSendingUsageDataDescription: "Note\_: si tu as donné l'autorisation de partager tes données avec Nintendo (ce qui inclut les paramètres des témoins) dans le but d'améliorer nos produits et services lorsque tu utilises l'application Nintendo Switch Online, cette autorisation concerne également les services spécifiques aux jeux tels que SplatNet 3. Tu peux consulter ou modifier tes paramètres à tout moment en sélectionnant «\_À propos du partage des données d'utilisation\_»."
+SettingsAcknowledgements: Droits d'auteur
+SettingsAppName: Paramètres
+SettingsCredits: Crédits
+SettingsExpansionPass: Visiter le site d'achat de la Passe d'extension
+SettingsTitle: Paramètres
+StageScheduleBankara: Match anarchie
+StageScheduleBankaraOpen: Ouvert
+StageScheduleBankaraOpenChallenge: Série
+StageScheduleCoop: Salmon Run
+StageScheduleEvent: Match épreuve
+StageScheduleEventCurrentSchedule: Actuellement
+StageScheduleEventFuture: Plus tard
+StageScheduleEventHolding: En cours!
+StageScheduleEventNext: Prochain
+StageScheduleEventNextSchedule: Tout à l'heure
+StageScheduleEventNoData: Aucun match épreuve prévu pour le moment.
+StageScheduleEventUnknownData: '???'
+StageScheduleFuture: Plus tard
+StageScheduleGuideOpenBrowser: Cette opération entraînera l'ouverture d'une nouvelle fenêtre de navigateur.
+StageScheduleNext: Tout à l'heure
+StageScheduleNoticeBigrun: Big Run en approche!
+StageScheduleNoticeLimited: Défi œuf sup' en approche!
+StageScheduleNowClosed: Festival en cours!
+StageScheduleOpen: Actuel
+StageScheduleOpenBigrun: Big Run en cours!
+StageScheduleOpenLimited: Défi œuf sup' disponible!
+StageSchedulePrivate: Match privé
+StageScheduleRecruit: >-
+  L'heure est au Big Run! M. Ours Cie embauche, tous types de profils acceptés!
+  ()
+StageScheduleRecruitTeamContest: >-
+  C'est l'heure du défi œuf sup'! Recrute des joueurs et fais honneur à M. Ours
+  Cie!
+StageScheduleRegular: Match classique
+StageScheduleRules: Voir les règles
+StageScheduleSeeAllRules: Voir les règles en détail
+StageScheduleSuppliedWeaponRandom: Aléatoire
+StageScheduleSuppliedWeapons: Armes fournies
+StageScheduleTitle: Horaire
+StageScheduleWinRateByRules: Taux de victoire par mode
+StageScheduleXmatch: Match X
+WelcomeFeature1: >-
+  Consulte le journal de matchs et découvre les cartes et les modes programmés à
+  l'horaire!
+WelcomeFeature1Alt: Journal de matchs et horaire
+WelcomeFeatures: Fonctionnalités
+WelcomeLink: https://store-jp.nintendo.com/list/software/70010000046394.html
+WelcomeOtherFeatures: Et plus encore!
+WelcomeService: Se connecter avec coolitude!
+WelcomeSplatoon3: Splatoon 3
+WelcomeStore: En découvrir plus!
+WelcomeWidgets: Widgets
