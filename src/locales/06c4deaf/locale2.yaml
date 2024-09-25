@@ -1,0 +1,223 @@
+CommonCancel: Cancel
+CommonClamBlitz: Clam Blitz
+CommonClose: Close
+CommonColonRule: ':'
+CommonCoopBigRun: Big Run
+CommonCoopBossRandom: Random
+CommonCoopBossRandomSign: '?'
+CommonCoopTeamContest: Eggstra Work
+CommonCopyrightQrCode: QR Code is a registered trademark of DENSO WAVE INCORPORATED.
+CommonDecide: OK
+CommonDownload: Download
+CommonEnd: Exit
+CommonGearPowerBlank: Unknown
+CommonHome: Home
+CommonIkaring3: SplatNet 3
+CommonNavBack: Back
+CommonNowLoading: Loading
+CommonPullToRefresh: Pull to Refresh
+CommonRainmaker: Rainmaker
+CommonShare: Share
+CommonSplatZones: Splat Zones
+CommonTournamentManager: Tournaments
+CommonTowerControl: Tower Control
+CommonTricolor: Tricolor Battle
+CommonTricolorMatch: Tricolor Battle
+CommonTurfWar: Turf War
+CommonWpnNotfound: Unknown
+CoopHistoryAnnotation01: >-
+  Any jobs that ended prematurely due to disconnections or other issues are not
+  included in the total number of jobs for a shift.
+CoopHistoryAvailable: Appearances
+CoopHistoryAvailableBoss: King Salmonid Fought
+CoopHistoryAverageClearWaves: Average Waves Cleared
+CoopHistoryBigrun: Big Run
+CoopHistoryBigrunBronze: Bronze
+CoopHistoryBigrunGold: Gold
+CoopHistoryBigrunSilver: Silver
+CoopHistoryBonus: Clear Bonus
+CoopHistoryBossAvailable: King Salmonid Sighting!
+CoopHistoryClear: Clear!
+CoopHistoryDangerRatio: Hazard Level
+CoopHistoryDefeatBoss: King Salmonid Attack!
+CoopHistoryDefeatBossCount: King Salmonids defeated
+CoopHistoryDefeated: Defeated!
+CoopHistoryDefeatedEnemies: Boss Salmonids Defeated
+CoopHistoryDefeatedEnemiesGuide: 'Note: The number in parentheses is how many enemies YOU defeated.'
+CoopHistoryDeliverCount: Power Eggs collected
+CoopHistoryEnemy: Boss Salmonids
+CoopHistoryExWave: XTRAWAVE
+CoopHistoryFailure: Defeat
+CoopHistoryGj: ✓
+CoopHistoryGoToStats: Back to Job Logs
+CoopHistoryGoldenDeliverCount: Golden Eggs collected
+CoopHistoryHighestScore: High Score
+CoopHistoryHistory: Job Logs
+CoopHistoryJobPoint: Your Points
+CoopHistoryJobRatio: Pay Grade
+CoopHistoryKumaPointCard: Grizzco Point Card
+CoopHistoryLatest: Last Job
+CoopHistoryLimitedPoint: Current special bonus points
+CoopHistoryMonthlyReward: This Month's Gear
+CoopHistoryNext: Next Job
+CoopHistoryNg: ✘
+CoopHistoryNoData: No job logs to display.
+CoopHistoryNotAvailable: Job Logs Unavailable
+CoopHistoryNotAvailableDescription: Only the 50 most recent entries are available.
+CoopHistoryNotDefeated: Failed...
+CoopHistoryP: p
+CoopHistoryPlayCount: Shifts worked
+CoopHistoryPlayCountBySchedule: 'Number of Jobs:'
+CoopHistoryPrevious: Previous Job
+CoopHistoryPrivate: Private Job
+CoopHistoryRecruit: Staff Wanted!
+CoopHistoryRecruitDescription: >-
+  A beginner-friendly job for energetic and positive individuals who are willing
+  to put it all on the line. Work hard for easy scales!
+CoopHistoryRecruitTag1: It's Easy!
+CoopHistoryRecruitTag2: Collect Power Eggs for Fun and Profit!
+CoopHistoryRecruitTitle: Collecting Power Eggs Suits You!
+CoopHistoryRegular: Normal Job
+CoopHistoryRegularPoint: Current points
+CoopHistoryRescueCount: Crew members rescued
+CoopHistoryRescuedCount: Times Rescued
+CoopHistoryScale: Scales
+CoopHistoryScaleBronze: Bronze Scale
+CoopHistoryScaleGold: Gold Scale
+CoopHistoryScaleSilver: Silver Scale
+CoopHistoryScore: Job Score
+CoopHistorySeeSchedule: View Schedule
+CoopHistorySmellMeter: Salmometer
+CoopHistorySupplyWeapon: Supplied Weapons
+CoopHistoryTeamContest: Eggstra Work
+CoopHistoryTitle: Salmon Run
+CoopHistoryTotalPoint: Total points
+CoopHistoryWave: Wave
+CoopHistoryWaveLevel0: Low Tide
+CoopHistoryWaveLevel1: Normal
+CoopHistoryWaveLevel2: High Tide
+CoopRecordAppName: Work
+CoopRecordAttended: 'Times Participated:'
+CoopRecordBigrun: Big Run
+CoopRecordBigrunBronze: Bronze
+CoopRecordBigrunGold: Gold
+CoopRecordBigrunSilver: Silver
+CoopRecordCoop: Job Stats
+CoopRecordDefeated: Opponents Splatted
+CoopRecordHighestJobRate: Highest Pay Grade
+CoopRecordHighestScore: High Score
+CoopRecordMore: See More
+CoopRecordNoData: No records.
+CoopRecordRank: Top %
+CoopRecordRanking: Ranking
+CoopRecordTeamContest: Eggstra Work
+CoopRecordTitle: Salmon Run Stats
+ErrorBackToHome: Back to Home
+ErrorBannedUser: >-
+  We have detected unauthorized access to this service, and so your usage of
+  this service has been suspended.
+ErrorError: Error
+ErrorErrorOccurred: An error occurred.
+ErrorErrorReopen: Loading failed.
+ErrorMaintenanceDescription: >-
+  The server is currently undergoing maintenance. Please wait a bit, then try
+  again.
+ErrorMaintenanceTitle: Standby...
+ErrorNetworkNotAvailable: Loading failed. Please check your internet connection and try again.
+ErrorNotSupported: >-
+  SplatNet 3 cannot be displayed. Please check your internet connection and wait
+  a bit before trying again. If the problem isn't resolved, check your internet
+  browser to make sure it has been updated to the latest version. If you still
+  receive this message, it may be possible that SplatNet 3 is not compatible
+  with your current settings or device.
+ErrorReload: Refresh
+LandingCaution: 'Note: If you don''t have the app installed, pressing this button does nothing.'
+LandingCopyright: >-
+  Apple and the Apple logo is a trademark of Apple Inc. that is registered in
+  the USA and other countries. The App Store is a service mark for Apple Inc.
+  Google Play and the Google Play logo is a trademark of Google LLC.
+LandingDlAppStore: Download it from the App Store
+LandingDlGooglePlay: Get it with Google Play
+LandingDownload: App available here!
+LandingNso: Nintendo Switch Online
+LandingOpenApp: Open App
+LandingSplatoon3: Splatoon 3
+LandingTitle: Opening the Nintendo Switch Online smartphone app...
+PhotoAlbumAppName: Album
+PhotoAlbumSelect: Select
+PhotoAlbumTitle: Photo Album
+RecordLatestPlayed: Last Played
+RecordLatestUsed: Most Used
+RecordMain: Main
+RecordNextSkillLevel: Next Freshness Up
+RecordSkillLevel: Freshness
+RecordSort: Sort
+RecordSpecial: Special
+RecordStageRecord: Stage Stats
+RecordStageRecordAppName: Stages
+RecordSub: Sub
+RecordTitle: Stats
+RecordTotalTurfPoint: p
+RecordTurfPoint: Turf Inked
+RecordUnplayedStages: Unplayed Stages
+RecordUnusedWeapons: Not Yet Obtained
+RecordVibes: Fresh Meter
+RecordWeaponRecord: Weapon Stats
+RecordWeaponRecordAppName: Weapons
+RecordWinCount: Wins
+RecordWinRatio: '%'
+SettingsAboutSendingUsageData: Info on Sending Usage Data
+SettingsAboutSendingUsageDataDescription: >-
+  Please note that if you have granted permission to share your data with
+  Nintendo (including via cookie settings) to improve our products and services
+  when using the Nintendo Switch Online app, this setting also applies to
+  game-specific services such as SplatNet 3. You can view or change your
+  settings at any time by selecting About Sending Usage Data.
+SettingsAcknowledgements: Copyrights
+SettingsAppName: Settings
+SettingsCredits: Credits
+SettingsExpansionPass: Visit Expansion Pass Purchase Site
+SettingsTitle: Settings
+StageScheduleBankara: Anarchy Battle
+StageScheduleBankaraOpen: Open
+StageScheduleBankaraOpenChallenge: Series
+StageScheduleCoop: Salmon Run
+StageScheduleEvent: Challenge
+StageScheduleEventCurrentSchedule: Now
+StageScheduleEventFuture: Future
+StageScheduleEventHolding: Now Open!
+StageScheduleEventNext: Next Time
+StageScheduleEventNextSchedule: Next
+StageScheduleEventNoData: No Challenges currently scheduled.
+StageScheduleEventUnknownData: '???'
+StageScheduleFuture: Future
+StageScheduleGuideOpenBrowser: This will open a new browser window.
+StageScheduleNext: Next
+StageScheduleNoticeBigrun: Big Run coming soon!
+StageScheduleNoticeLimited: 'Announcement: Eggstra Work coming soon!'
+StageScheduleNowClosed: Splatfest Active!
+StageScheduleOpen: Now
+StageScheduleOpenBigrun: Big Run in progress!
+StageScheduleOpenLimited: Eggstra Work available now!
+StageSchedulePrivate: Private Battle
+StageScheduleRecruit: It's Big Run time! Grizzco hiring ANYONE!
+StageScheduleRecruitTeamContest: It's Eggstra Work time! Recruit some coworkers and join in the...fun?
+StageScheduleRegular: Regular Battle
+StageScheduleRules: See Rules
+StageScheduleSeeAllRules: See Detailed Rules
+StageScheduleSuppliedWeaponRandom: Random
+StageScheduleSuppliedWeapons: Supplied Weapons
+StageScheduleTitle: Schedule
+StageScheduleWinRateByRules: Win Rate by Mode
+StageScheduleXmatch: X Battle
+WelcomeFeature1: >-
+  Check out battle logs and see what maps and modes are coming up on the
+  schedule!
+WelcomeFeature1Alt: Battle Logs & Schedule
+WelcomeFeatures: Features
+WelcomeLink: https://store-jp.nintendo.com/list/software/70010000046394.html
+WelcomeOtherFeatures: And more!
+WelcomeService: The freshest way to connect!
+WelcomeSplatoon3: Splatoon 3
+WelcomeStore: Visit Purchase Site
+WelcomeWidgets: Widgets

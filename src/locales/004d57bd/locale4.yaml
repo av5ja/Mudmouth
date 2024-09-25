@@ -1,0 +1,227 @@
+CommonCancel: Cancelar
+CommonClamBlitz: Asalto almeja
+CommonClose: Cerrar
+CommonColonRule: ':'
+CommonCoopBigRun: Big Run
+CommonCoopBossRandom: Al azar
+CommonCoopBossRandomSign: (?)
+CommonCoopTeamContest: Recolección extra
+CommonCopyrightQrCode: QR Code is a registered trademark of DENSO WAVE INCORPORATED.
+CommonDecide: Aceptar
+CommonDownload: Descargar
+CommonEnd: Cerrar
+CommonGearPowerBlank: Vacía
+CommonHome: Inicio
+CommonIkaring3: SplatNet 3
+CommonNavBack: Atrás
+CommonNowLoading: Cargando...
+CommonPullToRefresh: Arrastra para actualizar
+CommonRainmaker: Pez dorado
+CommonShare: Compartir
+CommonSplatZones: Pintazonas
+CommonTournamentManager: Torneos
+CommonTowerControl: Torreón
+CommonTricolor: Combate tricolor
+CommonTricolorMatch: Combate tricolor
+CommonTurfWar: Territorial
+CommonWpnNotfound: Vacía
+CoopHistoryAnnotation01: >-
+  No se cuentan los encargos interrumpidos por problemas en la conexión u otras
+  causas.
+CoopHistoryAvailable: Apariciones
+CoopHistoryAvailableBoss: Gran jefe salmónido enfrentado
+CoopHistoryAverageClearWaves: 'Media de oleadas superadas:'
+CoopHistoryBigrun: Big Run
+CoopHistoryBigrunBronze: Bronce
+CoopHistoryBigrunGold: Oro
+CoopHistoryBigrunSilver: Plata
+CoopHistoryBonus: Recomp.
+CoopHistoryBossAvailable: ¡Gran jefe a la vista!
+CoopHistoryClear: ¡Victoria!
+CoopHistoryDangerRatio: Nivel de riesgo
+CoopHistoryDefeatBoss: ¡Gran jefe al ataque!
+CoopHistoryDefeatBossCount: Grandes jefes salmónidos derrotados
+CoopHistoryDefeated: ¡Victoria!
+CoopHistoryDefeatedEnemies: Grandes salmónidos eliminados
+CoopHistoryDefeatedEnemiesGuide: '* Entre paréntesis se indican los que tú eliminaste.'
+CoopHistoryDeliverCount: Huevecillos de poder
+CoopHistoryEnemy: Gran salmónido
+CoopHistoryExWave: Oleada extra
+CoopHistoryFailure: Derrota...
+CoopHistoryGj: ✓
+CoopHistoryGoToStats: Volver a los resultados de tareas
+CoopHistoryGoldenDeliverCount: Huevecillos dorados
+CoopHistoryHighestScore: Récord
+CoopHistoryHistory: Resultados de tareas
+CoopHistoryJobPoint: Puntos
+CoopHistoryJobRatio: Grado
+CoopHistoryKumaPointCard: Tarjeta de Don Oso
+CoopHistoryLatest: Más reciente
+CoopHistoryLimitedPoint: Puntos especiales actuales
+CoopHistoryMonthlyReward: Objeto del mes
+CoopHistoryNext: Siguiente
+CoopHistoryNg: ✘
+CoopHistoryNoData: No hay resultados de tareas.
+CoopHistoryNotAvailable: Resultados de tareas no disponibles
+CoopHistoryNotAvailableDescription: Solo los 50 registros más recientes están disponibles.
+CoopHistoryNotDefeated: No se logró...
+CoopHistoryP: p.
+CoopHistoryPlayCount: Encargos realizados
+CoopHistoryPlayCountBySchedule: 'Encargos:'
+CoopHistoryPrevious: Anterior
+CoopHistoryPrivate: Trabajo privado
+CoopHistoryRecruit: ¡Se busca personal!
+CoopHistoryRecruitDescription: >-
+  Una labor apta incluso para gente sin experiencia. ¡Basta con tener energía y
+  actitud positiva para ganar escamas de manera fácil!
+CoopHistoryRecruitTag1: Trabajo fácil
+CoopHistoryRecruitTag2: Remuneración generosa
+CoopHistoryRecruitTitle: ¡Recolecta huevecillos de poder con nosotros!
+CoopHistoryRegular: Encargo normal
+CoopHistoryRegularPoint: Saldo de puntos
+CoopHistoryRescueCount: Compañeros rescatados
+CoopHistoryRescuedCount: Número de rescates
+CoopHistoryScale: Escamas
+CoopHistoryScaleBronze: Escama de bronce
+CoopHistoryScaleGold: Escama de oro
+CoopHistoryScaleSilver: Escama de plata
+CoopHistoryScore: Rendim.
+CoopHistorySeeSchedule: Ver calendario
+CoopHistorySmellMeter: salmómetro
+CoopHistorySupplyWeapon: Armas disponibles
+CoopHistoryTeamContest: Recolección extra
+CoopHistoryTitle: Salmon Run
+CoopHistoryTotalPoint: Puntos totales
+CoopHistoryWave: Oleada
+CoopHistoryWaveLevel0: Marea baja
+CoopHistoryWaveLevel1: Normal
+CoopHistoryWaveLevel2: Marea alta
+CoopRecordAppName: Encargos
+CoopRecordAttended: 'Participaciones:'
+CoopRecordBigrun: Big Run
+CoopRecordBigrunBronze: Bronce
+CoopRecordBigrunGold: Oro
+CoopRecordBigrunSilver: Plata
+CoopRecordCoop: Estadísticas laborales
+CoopRecordDefeated: Rivales eliminados
+CoopRecordHighestJobRate: Mayor grado
+CoopRecordHighestScore: Récord
+CoopRecordMore: Ver más
+CoopRecordNoData: Sin datos
+CoopRecordRank: Mejor  %
+CoopRecordRanking: Puesto
+CoopRecordTeamContest: Recolección extra
+CoopRecordTitle: Estadísticas
+ErrorBackToHome: Volver al inicio
+ErrorBannedUser: >-
+  Se te ha excluido del uso de este servicio debido a que hemos detectado un
+  acceso no autorizado.
+ErrorError: Error
+ErrorErrorOccurred: Se produjo un error.
+ErrorErrorReopen: No se pudieron cargar los datos.
+ErrorMaintenanceDescription: >-
+  Se están realizando labores de mantenimiento en el servidor. Inténtalo de
+  nuevo más tarde.
+ErrorMaintenanceTitle: En espera...
+ErrorNetworkNotAvailable: >-
+  No se pudieron cargar los datos. Comprueba tu conexión a internet e inténtalo
+  de nuevo.
+ErrorNotSupported: >-
+  No se puede mostrar SplatNet 3. Comprueba tu conexión a internet y vuelve a
+  intentarlo más tarde. Si el problema no se soluciona, comprueba que tu
+  navegador de internet esté actualizado a la versión más reciente. Si sigues
+  recibiendo este mensaje, es posible que SplatNet 3 no sea compatible con tu
+  dispositivo o con los ajustes actuales.
+ErrorReload: Actualizar
+LandingCaution: 'Nota: Este botón no hará nada si no tienes la aplicación instalada.'
+LandingCopyright: >-
+  Apple y el logotipo de Apple son marcas comerciales de Apple Inc., registradas
+  en EE. UU. y otros países. App Store es una marca de servicio de Apple Inc.
+  Google Play y el logotipo de Google Play son marcas comerciales de Google LLC.
+LandingDlAppStore: Descargar de App Store
+LandingDlGooglePlay: Descargar de Google Play
+LandingDownload: ¡Puedes descargar la aplicación aquí!
+LandingNso: Nintendo Switch Online
+LandingOpenApp: Abrir la aplicación
+LandingSplatoon3: Splatoon 3
+LandingTitle: Se va a abrir la aplicación Nintendo Switch Online.
+PhotoAlbumAppName: Álbum
+PhotoAlbumSelect: Seleccionar
+PhotoAlbumTitle: Álbum de fotos
+RecordLatestPlayed: Más reciente
+RecordLatestUsed: Más usados
+RecordMain: Principal
+RecordNextSkillLevel: Siguiente nivel
+RecordSkillLevel: Destreza
+RecordSort: Ordenar
+RecordSpecial: Especial
+RecordStageRecord: Escenarios
+RecordStageRecordAppName: Escenarios
+RecordSub: Secundaria
+RecordTitle: Estadísticas
+RecordTotalTurfPoint: p.
+RecordTurfPoint: Territorio pintado
+RecordUnplayedStages: Sin estrenar
+RecordUnusedWeapons: No obtenidas aún
+RecordVibes: Valoración
+RecordWeaponRecord: Armas
+RecordWeaponRecordAppName: Armas
+RecordWinCount: Victorias
+RecordWinRatio: '%'
+SettingsAboutSendingUsageData: Acerca del envío de datos de uso
+SettingsAboutSendingUsageDataDescription: >-
+  Ten en cuenta que, si autorizas que se compartan tus datos con Nintendo
+  (incluyendo los configurados mediante cookies) para mejorar sus productos y
+  servicios al usar la aplicación Nintendo Switch Online, este consentimiento se
+  aplicará también a servicios de juegos específicos como SplatNet 3. Puedes
+  consultar o modificar estos ajustes en cualquier momento si seleccionas 'Envío
+  de datos de uso'.
+SettingsAcknowledgements: Derechos de autor
+SettingsAppName: Ajustes
+SettingsCredits: Créditos
+SettingsExpansionPass: Visita el sitio del pase de expansión
+SettingsTitle: Ajustes
+StageScheduleBankara: Combate caótico
+StageScheduleBankaraOpen: Informal
+StageScheduleBankaraOpenChallenge: Formal
+StageScheduleCoop: Salmon Run
+StageScheduleEvent: Combate especial
+StageScheduleEventCurrentSchedule: Actual
+StageScheduleEventFuture: Posterior
+StageScheduleEventHolding: ¡En curso!
+StageScheduleEventNext: Próximo
+StageScheduleEventNextSchedule: Siguiente
+StageScheduleEventNoData: Calendario sin determinar
+StageScheduleEventUnknownData: (?)
+StageScheduleFuture: Posteriores
+StageScheduleGuideOpenBrowser: Se abrirá una nueva ventana del navegador.
+StageScheduleNext: Siguiente
+StageScheduleNoticeBigrun: ¡Big Run a la vista!
+StageScheduleNoticeLimited: ¡Anuncio de recolección extra!
+StageScheduleNowClosed: ¡Festival en curso!
+StageScheduleOpen: Actual
+StageScheduleOpenBigrun: ¡Big Run en marcha!
+StageScheduleOpenLimited: ¡Recolección extra disponible!
+StageSchedulePrivate: Combate privado
+StageScheduleRecruit: ¡Tenemos Big Run! ¡Don Oso, S. A. busca personal! ()
+StageScheduleRecruitTeamContest: ¡Reúne un grupo de trabajo y aprovecha la recolección extra!
+StageScheduleRegular: Combate amistoso
+StageScheduleRules: Ver las reglas
+StageScheduleSeeAllRules: Reglas detalladas
+StageScheduleSuppliedWeaponRandom: Al azar
+StageScheduleSuppliedWeapons: Armas disponibles
+StageScheduleTitle: Calendario
+StageScheduleWinRateByRules: Tasa de victorias
+StageScheduleXmatch: Combate X
+WelcomeAbout: >-
+  SplatNet 3 es un servicio vinculado a Splatoon 3 y cuenta con otras funciones
+  además de las descritas aquí.
+WelcomeFeature1: ¡Consulta registros de combates y los próximos escenarios y estilos!
+WelcomeFeature1Alt: Registros de combates y calendario
+WelcomeFeatures: Funciones
+WelcomeLink: https://store-jp.nintendo.com/list/software/70010000046394.html
+WelcomeOtherFeatures: ¡Y más cosas!
+WelcomeService: ¡La forma más chévere de conectarse!
+WelcomeSplatoon3: Splatoon 3
+WelcomeStore: ¡Descubre más cosas!
+WelcomeWidgets: Widgets

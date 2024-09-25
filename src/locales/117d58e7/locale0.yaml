@@ -1,0 +1,234 @@
+CommonCancel: Abbrechen
+CommonClamBlitz: Muschelchaos
+CommonClose: Schließen
+CommonColonRule: ':'
+CommonCoopBigRun: Big Run
+CommonCoopBossRandom: Zufall
+CommonCoopBossRandomSign: '?'
+CommonCoopTeamContest: Team-Wettkampf
+CommonCopyrightQrCode: QR Code is a registered trademark of DENSO WAVE INCORPORATED.
+CommonDecide: OK
+CommonDownload: Herunterladen
+CommonEnd: Schließen
+CommonGearPowerBlank: Unbekannt
+CommonHome: Startseite
+CommonIkaring3: SplatNet 3
+CommonNavBack: Zurück
+CommonNowLoading: Ladevorgang...
+CommonPullToRefresh: Zum Aktualisieren ziehen
+CommonRainmaker: Operation Goldfisch
+CommonShare: Teilen
+CommonSplatZones: Herrschaft
+CommonTournamentManager: Turniere
+CommonTowerControl: Turm-Kommando
+CommonTricolor: Dreifarb-Angriff
+CommonTricolorMatch: Dreifarb-Match
+CommonTurfWar: Revierkampf
+CommonWpnNotfound: Unbekannt
+CoopHistoryAnnotation01: >-
+  Schichten, die aus unvorhergesehenen Gründen abgebrochen wurden (etwa durch
+  Verbindungsfehler), werden nicht gezählt.
+CoopHistoryAvailable: Auftritte
+CoopHistoryAvailableBoss: Ober-Salmonide bekämpft
+CoopHistoryAverageClearWaves: Durchschn. überstandene Wellen
+CoopHistoryBigrun: Big Run
+CoopHistoryBigrunBronze: Bronze
+CoopHistoryBigrunGold: Gold
+CoopHistoryBigrunSilver: Silber
+CoopHistoryBonus: Abschluss
+CoopHistoryBossAvailable: Ober-Salmonide gesichtet!
+CoopHistoryClear: Geschafft!
+CoopHistoryDangerRatio: Gefahrenstufe
+CoopHistoryDefeatBoss: Ober-Salmoniden-Angriff!
+CoopHistoryDefeatBossCount: Geschaffte Extra-Wellen
+CoopHistoryDefeated: Besiegt!
+CoopHistoryDefeatedEnemies: Besiegte Boss-Salmoniden
+CoopHistoryDefeatedEnemiesGuide: '*Die Zahl in Klammern zeigt, wie viele davon du selbst besiegt hast.'
+CoopHistoryDeliverCount: Gesammelte Fischeier
+CoopHistoryEnemy: Boss-Salmoniden
+CoopHistoryExWave: Extra-Welle
+CoopHistoryFailure: Schade...
+CoopHistoryGj: ✓
+CoopHistoryGoToStats: Zurück zu den Schicht-Daten
+CoopHistoryGoldenDeliverCount: Gesammelte Gold-Fischeier
+CoopHistoryHighestScore: Highscore
+CoopHistoryHistory: Karriere
+CoopHistoryJobPoint: Dein Punktestand
+CoopHistoryJobRatio: Bewertung
+CoopHistoryKumaPointCard: Bärenpunkte-Karte
+CoopHistoryLatest: Letzte Schicht
+CoopHistoryLimitedPoint: Spezial-Bonuspunktestand
+CoopHistoryMonthlyReward: Monatsangebot
+CoopHistoryNext: Vor
+CoopHistoryNg: ✘
+CoopHistoryNoData: Keine Schicht-Daten vorhanden.
+CoopHistoryNotAvailable: Schicht-Daten nicht verfügbar
+CoopHistoryNotAvailableDescription: Nur die letzten 50 Einträge sind verfügbar.
+CoopHistoryNotDefeated: Gescheitert...
+CoopHistoryP: P
+CoopHistoryPlayCount: Angetretene Schichten
+CoopHistoryPlayCountBySchedule: 'Anzahl Schichten:'
+CoopHistoryPrevious: Zurück
+CoopHistoryPrivate: Private Schicht
+CoopHistoryRecruit: Eierjäger gesucht!
+CoopHistoryRecruitDescription: >-
+  Jung? Spontan? Risikofreudig? Aufstrebende, fleißige Talente lieben diesen
+  schuppenmäßig gut bezahlten Job!
+CoopHistoryRecruitTag1: Supereinfach!
+CoopHistoryRecruitTag2: Fischeiersammeln bringt Spaß und Profit!
+CoopHistoryRecruitTitle: Fischeiersammeln! Der beste Job der Welt!
+CoopHistoryRegular: Standardschicht
+CoopHistoryRegularPoint: Punktestand
+CoopHistoryRescueCount: Gerettete Teamkollegen
+CoopHistoryRescuedCount: Benötigte Rettungen
+CoopHistoryScale: Schuppen
+CoopHistoryScaleBronze: Bronzeschuppe
+CoopHistoryScaleGold: Goldschuppe
+CoopHistoryScaleSilver: Silberschuppe
+CoopHistoryScore: Leistung
+CoopHistorySeeSchedule: Arbeitszeiten
+CoopHistorySmellMeter: Salmometer
+CoopHistorySupplyWeapon: Verfügbare Waffen
+CoopHistoryTeamContest: Team-Wettkampf
+CoopHistoryTitle: Salmon Run
+CoopHistoryTotalPoint: Gesamtpunkte
+CoopHistoryWave: Welle
+CoopHistoryWaveLevel0: Ebbe
+CoopHistoryWaveLevel1: Normal
+CoopHistoryWaveLevel2: Flut
+CoopRecordAppName: Schicht
+CoopRecordAttended: 'Teilnahmen:'
+CoopRecordBigrun: Big Run
+CoopRecordBigrunBronze: Bronze
+CoopRecordBigrunGold: Gold
+CoopRecordBigrunSilver: Silber
+CoopRecordCoop: Schicht-Statistiken
+CoopRecordDefeated: Gegner erledigt
+CoopRecordHighestJobRate: Höchste Bewertung
+CoopRecordHighestScore: Highscore
+CoopRecordMore: Mehr
+CoopRecordNoData: Keine Daten
+CoopRecordRank: Top  %
+CoopRecordRanking: Platzierung
+CoopRecordTeamContest: Team-Wettkampf
+CoopRecordTitle: Salmon Run-Daten
+ErrorBackToHome: Zurück zur Startseite
+ErrorBannedUser: >-
+  Es wurde ein nicht autorisierter Zugriff auf diesen Service festgestellt. Die
+  Nutzung des Service ist hiermit gesperrt.
+ErrorCurrentlyNotAvailable: Momentan nicht verfügbar. Bitte warte etwas und versuche es dann erneut.
+ErrorError: Fehler
+ErrorErrorOccurred: Ein Fehler ist aufgetreten.
+ErrorErrorReopen: Ladevorgang fehlgeschlagen.
+ErrorMaintenanceDescription: >-
+  Aufgrund von Server-Wartungsarbeiten steht dieser Service momentan nicht zur
+  Verfügung. Bitte versuche es später erneut.
+ErrorMaintenanceTitle: Bitte warten...
+ErrorNetworkNotAvailable: >-
+  Ladevorgang fehlgeschlagen. Bitte überprüfe die Verbindung mit dem Internet
+  und versuche es erneut.
+ErrorNotSupported: >-
+  SplatNet 3 kann nicht angezeigt werden. Bitte überprüfe deine
+  Internetverbindung und warte etwas, bevor du es erneut versuchst. Wenn das
+  Problem dadurch nicht behoben wird, überprüfe, ob du die aktuelle Version
+  deines Browsers verwendest. Wenn dir weiterhin diese Nachricht angezeigt wird,
+  ist es möglich, dass SplatNet 3 nicht mit deinen momentanen Einstellungen oder
+  deinem Smartgerät kompatibel ist.
+ErrorReload: Aktualisieren
+LandingCaution: >-
+  *Wenn du die App nicht installiert hast, hat diese Schaltfläche keine
+  Funktion.
+LandingCopyright: >-
+  Apple und das Apple-Logo sind Marken der Apple Inc., die in den USA und
+  weiteren Ländern eingetragen sind. App Store ist eine Dienstleistungsmarke der
+  Apple Inc. Google Play und das Google Play-Logo sind Marken von Google LLC.
+LandingDlAppStore: Erhältlich im App Store
+LandingDlGooglePlay: Jetzt bei Google Play
+LandingDownload: Lade die App hier herunter!
+LandingNso: Nintendo Switch Online
+LandingOpenApp: App öffnen
+LandingSplatoon3: Splatoon 3
+LandingTitle: Die Nintendo Switch Online-Smartphone-App öffnen
+PhotoAlbumAppName: Album
+PhotoAlbumSelect: Auswählen
+PhotoAlbumTitle: Fotoalbum
+RecordLatestPlayed: Zuletzt gespielt
+RecordLatestUsed: Meistgenutzt
+RecordMain: Hauptwaffe
+RecordNextSkillLevel: Nächste Stufe
+RecordSkillLevel: Waffen-Style
+RecordSort: Sortieren
+RecordSpecial: Spezialwaffe
+RecordStageRecord: Arenen
+RecordStageRecordAppName: Arenen
+RecordSub: Sekundärwaffe
+RecordTitle: Statistiken
+RecordTotalTurfPoint: P
+RecordTurfPoint: Gefärbte Fläche
+RecordUnplayedStages: Ungespielt
+RecordUnusedWeapons: Noch freizuschaltende Waffen
+RecordVibes: Miezrichter-Skala
+RecordWeaponRecord: Waffen
+RecordWeaponRecordAppName: Waffen
+RecordWinCount: Siege
+RecordWinRatio: '%'
+SettingsAboutSendingUsageData: Informationen zur Übertragung von Nutzerdaten
+SettingsAboutSendingUsageDataDescription: >-
+  Bitte beachte, dass diese Einstellung auch für spielspezifische Dienste wie
+  SplatNet 3 gilt, wenn du bei Nutzung der Nintendo Switch Online-App dem Teilen
+  deiner Daten mit Nintendo zur Verbesserung und Optimierung von Produkten und
+  Services zugestimmt hast (auch über Cookie-Einstellungen). Du kannst deine
+  Einstellungen jederzeit unter „Über das Übertragen von Nutzerdaten“ überprüfen
+  oder ändern.
+SettingsAcknowledgements: Copyrights
+SettingsAppName: Einstellungen
+SettingsCredits: Credits
+SettingsExpansionPass: Zu Informationen über den Erweiterungspass
+SettingsTitle: Einstellungen
+StageScheduleBankara: Anarchie-Kampf
+StageScheduleBankaraOpen: Offen
+StageScheduleBankaraOpenChallenge: Serie
+StageScheduleCoop: Salmon Run
+StageScheduleEvent: Event-Kampf
+StageScheduleEventCurrentSchedule: Aktuell
+StageScheduleEventFuture: Danach
+StageScheduleEventHolding: Läuft!
+StageScheduleEventNext: Demnächst
+StageScheduleEventNextSchedule: Als Nächstes
+StageScheduleEventNoData: Momentan sind keine Event-Kämpfe geplant.
+StageScheduleEventUnknownData: '???'
+StageScheduleFuture: Danach
+StageScheduleGuideOpenBrowser: Text wird als neues Browserfenster geöffnet.
+StageScheduleNext: Demnächst
+StageScheduleNoticeBigrun: 'Demnächst: Big Run!'
+StageScheduleNoticeLimited: 'Ankündigung: Team-Wettkampf demnächst verfügbar!'
+StageScheduleNowClosed: Splatfest!
+StageScheduleOpen: Aktuell
+StageScheduleOpenBigrun: Big Run läuft jetzt!
+StageScheduleOpenLimited: Team-Wettkampf jetzt verfügbar!
+StageSchedulePrivate: Privater Kampf
+StageScheduleRecruit: Zeit für den Big Run! Die Bär GmbH heuert jeden an! JEDEN! ()
+StageScheduleRecruitTeamContest: Team-Wettkampf läuft! Finde Mitarbeiter und rein ins... Vergnügen?
+StageScheduleRegular: Standardkampf
+StageScheduleRules: Regeln lesen
+StageScheduleSeeAllRules: Detaillierte Regeln lesen
+StageScheduleSuppliedWeaponRandom: Zufall
+StageScheduleSuppliedWeapons: Verfügbare Waffen
+StageScheduleTitle: Zeitplan
+StageScheduleWinRateByRules: Siege nach Kampfart
+StageScheduleXmatch: X-Kampf
+WelcomeAbout: >-
+  SplatNet 3 ist ein mit Splatoon 3 verbundener Service. Es gibt noch weitere
+  Funktionen, die hier nicht aufgeführt sind.
+WelcomeFeature1: Sieh dir Kampfstatistiken sowie Zeitpläne für Arenen und Kampfarten an!
+WelcomeFeature1Alt: Kampfstatistiken & Zeitplan
+WelcomeFeature2: Passe deine Lieblings-Styles unterwegs an! Immer das perfekte Outfit!
+WelcomeFeature3: Mach Shrimpson Beine und schnapp dir tolle Belohnungen!
+WelcomeFeature4: Einzigartige Spielausrüstung, die es nur im SplatNet gibt!
+WelcomeFeatures: Features
+WelcomeLink: https://store-jp.nintendo.com/list/software/70010000046394.html
+WelcomeOtherFeatures: Und vieles mehr!
+WelcomeService: Spritzig in Verbindung!
+WelcomeSplatoon3: Splatoon 3
+WelcomeStore: Weitere Infos!
+WelcomeWidgets: Widgets
