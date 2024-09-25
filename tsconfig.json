@@ -7,7 +7,7 @@
     "strictPropertyInitialization": false,
     "strict": true,
     "skipLibCheck": true,
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "types": ["@types/bun", "@types/node"],
     "jsx": "react-jsx",
     "paths": {

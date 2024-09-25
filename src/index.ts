@@ -5,8 +5,8 @@ const version: Leanny.Version = (await Leanny.get_version()).slice(-1)[0]
 for (const category of Object.values(Leanny.Category)) {
   console.log(category)
   try {
-    const internal_codes = await Leanny.get_internal_code_list(category, version)
-    console.log(internal_codes.map((v) => v.code).join('\n'))
+    const source_code = await Leanny.generate_source_code(category, version)
+    await Bun.write(`Sources/Thunder/Enums/${category}.swift`, source_code)
   } catch (error) {
     console.error(category)
   }
