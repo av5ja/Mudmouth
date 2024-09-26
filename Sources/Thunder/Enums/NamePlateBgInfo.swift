@@ -750,6 +750,9 @@ public enum NamePlateBgInfo: SPRawRepresentable {
     ///
     /// - Returns: 18002
     case Npl_Catalog_Season08_Lv02
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

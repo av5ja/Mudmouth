@@ -228,6 +228,9 @@ public enum WeaponInfoMain: SPRawRepresentable {
     /// クマサン印のワイパー
     /// - Returns: 28900
     case Saber_Bear
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

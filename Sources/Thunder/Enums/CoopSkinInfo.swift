@@ -78,6 +78,9 @@ public enum CoopSkinInfo: SPRawRepresentable {
     ///
     /// - Returns: 21
     case COP021
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 
