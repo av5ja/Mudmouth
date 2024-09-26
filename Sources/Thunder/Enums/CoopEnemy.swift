@@ -106,4 +106,8 @@ public enum CoopEnemy: SPRawRepresentable {
         case .Undefined(let rawValue): return rawValue
         }
     }
+
+    public var path: String {
+        "coop_enemy"
+    }
 }

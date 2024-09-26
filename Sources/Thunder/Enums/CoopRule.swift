@@ -1,5 +1,5 @@
 //
-//  CoopWaterLevel.swift
+//  CoopRule.swift
 //  ThunderSDK
 //
 //  Created by Thunder SDK Gen on 2024/10/01
@@ -9,17 +9,17 @@
 
 import Foundation
 
-/// CoopWaterLevel
+/// CoopRule
 /// - Authors:
 ///   tkgstrator
 /// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
-public enum CoopWaterLevel: Int, CaseIterable, Codable, Identifiable {
-    case LowTide = 0
-    case NormalTide = 1
-    case HighTide = 2
+public enum CoopRule: String, CaseIterable, Codable, Identifiable {
+    case REGULAR
+    case BIG_RUN
+    case TEAM_CONTEST
 
     // MARK: Public
 
-    public var id: Int { rawValue }
+    public var id: String { rawValue }
 }

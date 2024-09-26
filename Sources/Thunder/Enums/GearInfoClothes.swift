@@ -1963,6 +1963,6 @@ public enum GearInfoClothes: SPRawRepresentable {
     }
 
     public var path: String {
-        "gear_img"
+        "gear_img/clothes"
     }
 }

@@ -107,7 +107,7 @@ export namespace Leanny {
     .transform((v) => {
       return {
         ...v,
-        header(category: string): string[] {
+        header(category: CoopCategory): string[] {
           return [
             '//',
             `//  ${category}.swift`,
@@ -132,12 +132,29 @@ export namespace Leanny {
           '}',
           '}',
         ],
+        path: (category: CoopCategory): string[] => {
+          const path: string = (() => {
+            switch (category) {
+              case CoopCategory.CoopEnemy:
+                return 'coop_enemy'
+              case CoopCategory.CoopGrade:
+                return 'coop_grade'
+              case CoopCategory.CoopStage:
+                return 'coop_stage'
+              case CoopCategory.CoopEvent:
+                return 'coop_event'
+              default:
+                return ''
+            }
+          })()
+          return ['public var path: String {', `"${path}"`, '}']
+        },
       }
     })
     .transform((v) => {
       return {
         ...v,
-        source_code(version: Version, category: string): string {
+        source_code(version: Version, category: CoopCategory): string {
           return [
             v.header(category),
             [
@@ -154,6 +171,7 @@ export namespace Leanny {
             '',
             v.raw_value,
             '',
+            v.path(category),
             '}',
           ]
             .flat()
@@ -285,15 +303,17 @@ export namespace Leanny {
               case Category.CoopSkinInfo:
                 return 'coop_skin'
               case Category.GearInfoClothes:
+                return 'gear_img/clothes'
               case Category.GearInfoHead:
+                return 'gear_img/head'
               case Category.GearInfoShoes:
-                return 'gear_img'
+                return 'gear_img/shoes'
               case Category.NamePlateBgInfo:
                 return 'npl_img'
               case Category.WeaponInfoMain:
                 return 'weapon_illust'
               case Category.WeaponInfoSpecial:
-                return 'special_img'
+                return 'special_img/blue'
               default:
                 return ''
             }

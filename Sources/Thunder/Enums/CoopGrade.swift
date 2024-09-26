@@ -71,4 +71,8 @@ public enum CoopGrade: SPRawRepresentable {
         case .Undefined(let rawValue): return rawValue
         }
     }
+
+    public var path: String {
+        "coop_grade"
+    }
 }
