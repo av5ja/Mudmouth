@@ -42,6 +42,9 @@ public enum CoopGrade: SPRawRepresentable {
     /// Eggsecutive VP
     /// - Returns: 8
     case Grade_08
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

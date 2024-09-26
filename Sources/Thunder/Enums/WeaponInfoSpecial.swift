@@ -48,6 +48,9 @@ public enum WeaponInfoSpecial: SPRawRepresentable {
     /// スーパーチャクチ
     /// - Returns: 20101
     case SpSuperLanding
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

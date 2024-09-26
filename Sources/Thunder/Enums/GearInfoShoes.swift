@@ -759,6 +759,9 @@ public enum GearInfoShoes: SPRawRepresentable {
     /// オーダーシューズ レプリカ
     /// - Returns: 29200
     case Shs_SDODR200
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

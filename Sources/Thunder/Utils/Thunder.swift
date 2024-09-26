@@ -7,15 +7,12 @@
 //
 //
 
-public enum Thunder {
-    // MARK: Public
+import Foundation
 
-    public static func configure(configuration: Configuration = .init(baseURL: baseURL)) {
+public enum Thunder {
+    // swiftlint:disable:next force_unwrapping
+    public static func configure(configuration: Configuration = .init(baseURL: .init(string: "https://api.splatnet3.com")!)) {
         print("ThunderSDK configured with baseURL: \(configuration.baseURL)")
         UserDefaults.standard.set(configuration.baseURL, forKey: "ThunderSDK.baseURL")
     }
-
-    // MARK: Internal
-
-    static let baseURL: URL = .init(string: "https://api.splatnet3.com")
 }

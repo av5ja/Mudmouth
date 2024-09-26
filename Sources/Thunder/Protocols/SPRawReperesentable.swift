@@ -14,6 +14,7 @@ import Foundation
 public protocol SPRawRepresentable: RawRepresentable, CaseIterable, Comparable, Hashable, Codable, Identifiable, Equatable where RawValue == Int {
     static func Undefined(_ value: RawValue) -> Self
 
+    var path: String { get }
     var id: RawValue { get }
     var description: String { get }
 }
@@ -29,16 +30,17 @@ public extension SPRawRepresentable {
     /// 翻訳データ
     var description: String {
         switch self {
-        case .Undefined(let value):
-            return "Undefined(\(value))"
+        case .Undefined(rawValue):
+            return "Undefined \(rawValue)"
         default:
-            return NSLocalizedString(String(describing: self), bundle: .module, comment: "")
+            return NSLocalizedString(String(describing: self), bundle: .main, comment: "")
         }
     }
 
     /// 画像URL
     var url: URL? {
-        let baseURL: URL = UserDefaults.standard.url(forKey: "ThunderSDK.baseURL") ?? Thunder.default
+        // swiftlint:disable:next force_unwrapping
+        let baseURL: URL = UserDefaults.standard.url(forKey: "ThunderSDK.baseURL") ?? .init(string: "https://api.splatnet3.com")!
         return URL(string: "\(baseURL)/\(path)/\(rawValue).png")
     }
 }

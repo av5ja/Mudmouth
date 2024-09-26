@@ -66,6 +66,9 @@ public enum CoopStage: SPRawRepresentable {
     /// Grand Splatlands Bowl
     /// - Returns: 107
     case Manbou
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

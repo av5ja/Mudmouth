@@ -879,6 +879,9 @@ public enum GearInfoHead: SPRawRepresentable {
     /// ヒメグルミ
     /// - Returns: 29204
     case Hed_SDODR204
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

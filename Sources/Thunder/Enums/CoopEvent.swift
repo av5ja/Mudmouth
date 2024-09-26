@@ -42,6 +42,9 @@ public enum CoopEvent: SPRawRepresentable {
     /// Mudmouth Eruptions
     /// - Returns: 8
     case Tamaire
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

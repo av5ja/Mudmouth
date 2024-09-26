@@ -1857,6 +1857,9 @@ public enum BadgeInfo: SPRawRepresentable {
     ///
     /// - Returns: 8000002
     case HammerHostTournament_Lv02
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 
