@@ -1,38 +1,37 @@
 # Rule List - https://github.com/nicklockwood/SwiftFormat/blob/master/Rules.md
-
 --swiftversion 5.7
-
-# file options 除外するディレクトリやファイル
 
 --exclude Pods
 --exclude Carthage
 --exclude BuildTools
 
-# format options
-
---commas inline # trailingCommas 有効時 複数行の配列や辞書などで、最後のカンマを無効化
---ranges no-space # spaceAroundOperators 有効時 例: "0...9" を "0 ... 9" としない
-
-# Default Rules (enabled by default) デフォルトで有効なルール
-# コメントアウト部分が有効
-
+# Default Rules (enabled by default)
 #--disable andOperator
 #--disable anyObjectProtocol
+#--disable applicationMain
 #--disable assertionFailures
+#--disable blankLineAfterImports
 #--disable blankLinesAroundMark
 #--disable blankLinesAtEndOfScope
 #--disable blankLinesAtStartOfScope
+#--disable blankLinesBetweenChainedFunctions
 #--disable blankLinesBetweenScopes
 #--disable braces
+#--disable conditionalAssignment
 #--disable consecutiveBlankLines
 #--disable consecutiveSpaces
+#--disable consistentSwitchCaseSpacing
 #--disable duplicateImports
 #--disable elseOnSameLine
 #--disable emptyBraces
---disable enumNamespaces
---disable extensionAccessControl
+#--disable enumNamespaces
+#--disable extensionAccessControl
 #--disable fileHeader
-#--disable hoistPatternLet
+#--disable genericExtensions
+#--disable headerFileName
+#--disable hoistAwait
+--disable hoistPatternLet
+#--disable hoistTry
 #--disable indent
 #--disable initCoderUnavailable
 #--disable leadingDelimiters
@@ -40,28 +39,35 @@
 #--disable linebreaks
 #--disable modifierOrder
 #--disable numberFormatting
---disable preferKeyPath
+#--disable opaqueGenericParameters
+#--disable preferForLoop
+#--disable preferKeyPath
 #--disable redundantBackticks
 #--disable redundantBreak
 #--disable redundantClosure
---disable redundantExtensionACL
+#--disable redundantExtensionACL
 #--disable redundantFileprivate
 #--disable redundantGet
 #--disable redundantInit
+#--disable redundantInternal
 #--disable redundantLet
 #--disable redundantLetError
 #--disable redundantNilInit
 #--disable redundantObjc
---disable redundantParens
+#--disable redundantOptionalBinding
+#--disable redundantParens
 #--disable redundantPattern
 #--disable redundantRawValues
 #--disable redundantReturn
---disable redundantSelf
+#--disable redundantSelf
+#--disable redundantStaticSelf
 #--disable redundantType
+#--disable redundantTypedThrows
 #--disable redundantVoidReturnType
 #--disable semicolons
---disable sortDeclarations
-#--disable sortedImports
+#--disable sortDeclarations
+#--disable sortImports
+#--disable sortTypealiases
 #--disable spaceAroundBraces
 #--disable spaceAroundBrackets
 #--disable spaceAroundComments
@@ -73,32 +79,36 @@
 #--disable spaceInsideComments
 #--disable spaceInsideGenerics
 #--disable spaceInsideParens
---disable strongOutlets
+#--disable strongOutlets
 #--disable strongifiedSelf
---disable todos
+#--disable todos
 #--disable trailingClosures
 #--disable trailingCommas
 #--disable trailingSpace
 #--disable typeSugar
---disable unusedArguments
+#--disable unusedArguments
 #--disable void
---disable wrap
+#--disable wrap
 #--disable wrapArguments
 #--disable wrapAttributes
---disable wrapMultilineStatementBraces
-#--disable yodaConditions
+#--disable wrapLoopBodies
+#--disable wrapMultilineStatementBraces
+#--disable wrapSingleLineComments
+--disable yodaConditions
 
-# Opt-in Rules (disabled by default) デフォルトで無効なルール
-# コメントアウト部分は無効
-
-#--enable acronyms
-#--enable blankLinesBetweenImports
-#--enable blockComments
-#--enable isEmpty
-#--enable markTypes
-#--enable organizeDeclarations
-#--enable preferDouble
-#--enable sortedSwitchCases
-#--enable wrapConditionalBodies
-#--enable wrapEnumCases
-#--enable wrapSwitchCases
+# Opt-in Rules (disabled by default)
+--enable acronyms
+--enable blankLineAfterSwitchCase
+--enable blankLinesBetweenImports
+--enable blockComments
+--enable docComments
+--enable isEmpty
+--enable markTypes
+#--enable noExplicitOwnership
+--enable organizeDeclarations
+--enable redundantProperty
+--enable sortSwitchCases
+--enable wrapConditionalBodies
+--enable wrapEnumCases
+--enable wrapMultilineConditionalAssignment
+--enable wrapSwitchCases

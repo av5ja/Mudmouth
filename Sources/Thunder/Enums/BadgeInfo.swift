@@ -12,8 +12,7 @@ import Foundation
 /// BadgeInfo
 /// - Authors:
 ///   tkgstrator
-///   leanny
-/// - Copyright: Nintendo Co., Ltd.
+/// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
 public enum BadgeInfo: SPRawRepresentable {
     ///
@@ -1859,6 +1858,8 @@ public enum BadgeInfo: SPRawRepresentable {
     /// - Returns: 8000002
     case HammerHostTournament_Lv02
 
+    // MARK: Public
+
     public static let allCases: AllCases = [
         .WeaponLevel_Shooter_Short_00_Lv00,
         .WeaponLevel_Shooter_Short_00_Lv01,
@@ -2473,7 +2474,7 @@ public enum BadgeInfo: SPRawRepresentable {
         .NawaBattlerWinAllNpcLevel3,
         .HammerHostTournament_Lv00,
         .HammerHostTournament_Lv01,
-        .HammerHostTournament_Lv02
+        .HammerHostTournament_Lv02,
     ]
 
     public var rawValue: RawValue {
@@ -3092,7 +3093,7 @@ public enum BadgeInfo: SPRawRepresentable {
         case .HammerHostTournament_Lv00: return 8_000_000
         case .HammerHostTournament_Lv01: return 8_000_001
         case .HammerHostTournament_Lv02: return 8_000_002
-        case let .Undefined(rawValue): return rawValue
+        case .Undefined(let rawValue): return rawValue
         }
     }
 

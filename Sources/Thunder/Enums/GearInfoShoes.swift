@@ -12,8 +12,7 @@ import Foundation
 /// GearInfoShoes
 /// - Authors:
 ///   tkgstrator
-///   leanny
-/// - Copyright: Nintendo Co., Ltd.
+/// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
 public enum GearInfoShoes: SPRawRepresentable {
     /// キャンバス ホワイト
@@ -761,6 +760,8 @@ public enum GearInfoShoes: SPRawRepresentable {
     /// - Returns: 29200
     case Shs_SDODR200
 
+    // MARK: Public
+
     public static let allCases: AllCases = [
         .Shs_FST000,
         .Shs_SLO000,
@@ -1009,7 +1010,7 @@ public enum GearInfoShoes: SPRawRepresentable {
         .Shs_TRG000,
         .Shs_TRG001,
         .Shs_SDODR000,
-        .Shs_SDODR200
+        .Shs_SDODR200,
     ]
 
     public var rawValue: RawValue {
@@ -1262,7 +1263,7 @@ public enum GearInfoShoes: SPRawRepresentable {
         case .Shs_TRG001: return 28001
         case .Shs_SDODR000: return 29000
         case .Shs_SDODR200: return 29200
-        case let .Undefined(rawValue): return rawValue
+        case .Undefined(let rawValue): return rawValue
         }
     }
 
