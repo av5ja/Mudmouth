@@ -122,7 +122,9 @@ export namespace Leanny {
             '',
           ]
         },
-        values: v.sorted.flatMap((data) => [`/// ${data.Name || ''}`, `/// - Returns: ${data.Id}`, `case ${data.Key}`]),
+        values: v.sorted
+          .flatMap((data) => [`/// ${data.Name || ''}`, `/// - Returns: ${data.Id}`, `case ${data.Key}`])
+          .concat(['/// Undefined', '/// - Returns: rawValue', 'case Undefined(RawValue)']),
         all_cases: ['public static let allCases: AllCases = [', v.sorted.map((data) => `.${data.Key},`), ']'].flat(),
         raw_value: [
           'public var rawValue: RawValue {',
@@ -277,11 +279,9 @@ export namespace Leanny {
             '',
           ]
         },
-        values: v.sorted.flatMap((data) => [
-          `/// ${data.Label || ''}`,
-          `/// - Returns: ${data.Id}`,
-          `case ${data.__RowId}`,
-        ]),
+        values: v.sorted
+          .flatMap((data) => [`/// ${data.Label || ''}`, `/// - Returns: ${data.Id}`, `case ${data.__RowId}`])
+          .concat(['/// Undefined', '/// - Returns: rawValue', 'case Undefined(RawValue)']),
         all_cases: [
           'public static let allCases: AllCases = [',
           v.sorted.map((data) => `.${data.__RowId},`),

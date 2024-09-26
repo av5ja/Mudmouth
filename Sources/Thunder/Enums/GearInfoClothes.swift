@@ -1176,6 +1176,9 @@ public enum GearInfoClothes: SPRawRepresentable {
     /// オーダースーツ レプリカ
     /// - Returns: 29200
     case Clt_SDODR200
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 

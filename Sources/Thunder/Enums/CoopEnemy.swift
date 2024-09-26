@@ -63,6 +63,9 @@ public enum CoopEnemy: SPRawRepresentable {
     /// Triumvirate
     /// - Returns: 31
     case Triple
+    /// Undefined
+    /// - Returns: rawValue
+    case Undefined(RawValue)
 
     // MARK: Public
 
