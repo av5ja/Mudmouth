@@ -12,8 +12,7 @@ import Foundation
 /// WeaponInfoSpecial
 /// - Authors:
 ///   tkgstrator
-///   leanny
-/// - Copyright: Nintendo Co., Ltd.
+/// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
 public enum WeaponInfoSpecial: SPRawRepresentable {
     /// ウルトラショット
@@ -50,6 +49,8 @@ public enum WeaponInfoSpecial: SPRawRepresentable {
     /// - Returns: 20101
     case SpSuperLanding
 
+    // MARK: Public
+
     public static let allCases: AllCases = [
         .SpUltraShot,
         .SpNiceBall,
@@ -61,7 +62,7 @@ public enum WeaponInfoSpecial: SPRawRepresentable {
         .SpTripleTornado,
         .SpCastle,
         .SpPogo,
-        .SpSuperLanding
+        .SpSuperLanding,
     ]
 
     public var rawValue: RawValue {
@@ -77,7 +78,7 @@ public enum WeaponInfoSpecial: SPRawRepresentable {
         case .SpCastle: return 20017
         case .SpPogo: return 20018
         case .SpSuperLanding: return 20101
-        case let .Undefined(rawValue): return rawValue
+        case .Undefined(let rawValue): return rawValue
         }
     }
 

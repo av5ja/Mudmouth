@@ -12,8 +12,7 @@ import Foundation
 /// NamePlateBgInfo
 /// - Authors:
 ///   tkgstrator
-///   leanny
-/// - Copyright: Nintendo Co., Ltd.
+/// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
 public enum NamePlateBgInfo: SPRawRepresentable {
     ///
@@ -752,6 +751,8 @@ public enum NamePlateBgInfo: SPRawRepresentable {
     /// - Returns: 18002
     case Npl_Catalog_Season08_Lv02
 
+    // MARK: Public
+
     public static let allCases: AllCases = [
         .Npl_Tutorial00,
         .Npl_Fsodr00,
@@ -997,7 +998,7 @@ public enum NamePlateBgInfo: SPRawRepresentable {
         .Npl_Catalog_Season07_Lv01,
         .Npl_Catalog_Season07_Lv02,
         .Npl_Catalog_Season08_Lv01,
-        .Npl_Catalog_Season08_Lv02
+        .Npl_Catalog_Season08_Lv02,
     ]
 
     public var rawValue: RawValue {
@@ -1247,7 +1248,7 @@ public enum NamePlateBgInfo: SPRawRepresentable {
         case .Npl_Catalog_Season07_Lv02: return 17002
         case .Npl_Catalog_Season08_Lv01: return 18001
         case .Npl_Catalog_Season08_Lv02: return 18002
-        case let .Undefined(rawValue): return rawValue
+        case .Undefined(let rawValue): return rawValue
         }
     }
 

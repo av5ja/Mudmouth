@@ -12,8 +12,7 @@ import Foundation
 /// CoopSkinInfo
 /// - Authors:
 ///   tkgstrator
-///   leanny
-/// - Copyright: Nintendo Co., Ltd.
+/// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
 public enum CoopSkinInfo: SPRawRepresentable {
     ///
@@ -80,6 +79,8 @@ public enum CoopSkinInfo: SPRawRepresentable {
     /// - Returns: 21
     case COP021
 
+    // MARK: Public
+
     public static let allCases: AllCases = [
         .COP001,
         .COP002,
@@ -101,7 +102,7 @@ public enum CoopSkinInfo: SPRawRepresentable {
         .COP018,
         .COP019,
         .COP020,
-        .COP021
+        .COP021,
     ]
 
     public var rawValue: RawValue {
@@ -127,7 +128,7 @@ public enum CoopSkinInfo: SPRawRepresentable {
         case .COP019: return 19
         case .COP020: return 20
         case .COP021: return 21
-        case let .Undefined(rawValue): return rawValue
+        case .Undefined(let rawValue): return rawValue
         }
     }
 
