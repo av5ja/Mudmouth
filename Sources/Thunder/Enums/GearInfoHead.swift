@@ -12,8 +12,7 @@ import Foundation
 /// GearInfoHead
 /// - Authors:
 ///   tkgstrator
-///   leanny
-/// - Copyright: Nintendo Co., Ltd.
+/// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
 public enum GearInfoHead: SPRawRepresentable {
     /// INVISIBLE
@@ -881,6 +880,8 @@ public enum GearInfoHead: SPRawRepresentable {
     /// - Returns: 29204
     case Hed_SDODR204
 
+    // MARK: Public
+
     public static let allCases: AllCases = [
         .Hed_INV000,
         .Hed_FST000,
@@ -1169,7 +1170,7 @@ public enum GearInfoHead: SPRawRepresentable {
         .Hed_SDODR201,
         .Hed_SDODR202,
         .Hed_SDODR203,
-        .Hed_SDODR204
+        .Hed_SDODR204,
     ]
 
     public var rawValue: RawValue {
@@ -1462,7 +1463,7 @@ public enum GearInfoHead: SPRawRepresentable {
         case .Hed_SDODR202: return 29202
         case .Hed_SDODR203: return 29203
         case .Hed_SDODR204: return 29204
-        case let .Undefined(rawValue): return rawValue
+        case .Undefined(let rawValue): return rawValue
         }
     }
 

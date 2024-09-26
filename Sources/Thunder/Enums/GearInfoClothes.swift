@@ -12,8 +12,7 @@ import Foundation
 /// GearInfoClothes
 /// - Authors:
 ///   tkgstrator
-///   leanny
-/// - Copyright: Nintendo Co., Ltd.
+/// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
 public enum GearInfoClothes: SPRawRepresentable {
     /// わかばイカＴ
@@ -1178,6 +1177,8 @@ public enum GearInfoClothes: SPRawRepresentable {
     /// - Returns: 29200
     case Clt_SDODR200
 
+    // MARK: Public
+
     public static let allCases: AllCases = [
         .Clt_FST001,
         .Clt_FST002,
@@ -1565,7 +1566,7 @@ public enum GearInfoClothes: SPRawRepresentable {
         .Clt_TRG000,
         .Clt_TRG001,
         .Clt_SDODR000,
-        .Clt_SDODR200
+        .Clt_SDODR200,
     ]
 
     public var rawValue: RawValue {
@@ -1957,7 +1958,7 @@ public enum GearInfoClothes: SPRawRepresentable {
         case .Clt_TRG001: return 28001
         case .Clt_SDODR000: return 29000
         case .Clt_SDODR200: return 29200
-        case let .Undefined(rawValue): return rawValue
+        case .Undefined(let rawValue): return rawValue
         }
     }
 

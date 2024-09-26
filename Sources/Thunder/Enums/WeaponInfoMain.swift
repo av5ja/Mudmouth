@@ -12,8 +12,7 @@ import Foundation
 /// WeaponInfoMain
 /// - Authors:
 ///   tkgstrator
-///   leanny
-/// - Copyright: Nintendo Co., Ltd.
+/// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 910
 public enum WeaponInfoMain: SPRawRepresentable {
     /// ボールドマーカー
@@ -230,6 +229,8 @@ public enum WeaponInfoMain: SPRawRepresentable {
     /// - Returns: 28900
     case Saber_Bear
 
+    // MARK: Public
+
     public static let allCases: AllCases = [
         .Shooter_Short,
         .Shooter_First,
@@ -301,7 +302,7 @@ public enum WeaponInfoMain: SPRawRepresentable {
         .Saber_Normal,
         .Saber_Lite,
         .Saber_Heavy,
-        .Saber_Bear
+        .Saber_Bear,
     ]
 
     public var rawValue: RawValue {
@@ -377,7 +378,7 @@ public enum WeaponInfoMain: SPRawRepresentable {
         case .Saber_Lite: return 28010
         case .Saber_Heavy: return 28020
         case .Saber_Bear: return 28900
-        case let .Undefined(rawValue): return rawValue
+        case .Undefined(let rawValue): return rawValue
         }
     }
 
