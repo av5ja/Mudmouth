@@ -111,4 +111,8 @@ public enum CoopStage: SPRawRepresentable {
         case .Undefined(let rawValue): return rawValue
         }
     }
+
+    public var path: String {
+        "coop_stage"
+    }
 }

@@ -83,6 +83,6 @@ public enum WeaponInfoSpecial: SPRawRepresentable {
     }
 
     public var path: String {
-        "special_img"
+        "special_img/blue"
     }
 }
