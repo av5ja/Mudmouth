@@ -11,8 +11,10 @@
       "version": "2.37.0"
     },
     "ghcr.io/michidk/devcontainers-features/bun:1": {},
-    "ghcr.io/swift-server-community/swift-devcontainer-features/jemalloc:1": {},
-    "ghcr.io/swift-server-community/swift-devcontainer-features/swiftformat:0": {},
+    "ghcr.io/swift-server-community/swift-devcontainer-features/jemalloc:1": {
+    },
+    "ghcr.io/swift-server-community/swift-devcontainer-features/swiftformat:0": {
+    },
     "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true
     },

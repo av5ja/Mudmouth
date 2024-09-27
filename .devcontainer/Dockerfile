@@ -1,4 +1,4 @@
-FROM swift:5.7
+FROM swift:5.10.1
 
 ARG UBUNTU_PORTS="free.nchc.org.tw"
 RUN sed -i.org -e "s|ports.ubuntu.com|${UBUNTU_PORTS}|g" /etc/apt/sources.list
