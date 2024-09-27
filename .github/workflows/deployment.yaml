@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare Workers
+name: Release Swift Package
 on:
   pull_request:
     branches:
@@ -7,7 +7,7 @@ on:
     types: [closed]
 jobs:
   deploy:
-    name: Deploy workers
+    name: Swift Package
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-24.04
     steps:
@@ -20,16 +20,10 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile --ignore-scripts
       - name: Build
-        run: bun run build
-      - name: Set environment
-        run: |
-          echo "ENVIRONMENT=$(if [[ '${{ github.event.pull_request.base.ref }}' == '${{ github.event.repository.default_branch }}' ]]; then echo 'production'; else echo 'development'; fi)" >> $GITHUB_ENV
-      - name: Wrangler deploy
-        uses: cloudflare/wrangler-action@v3
-        env:
-          ENVIRONMENT: ${{ github.event.pull_request.base.ref == 'master' && 'production' || 'development' }}
+        run: bun run dev
+      - name: Swift
+        uses: swiftyguard/setup-swift@v1 # Swiftのセットアップ
         with:
-          wranglerVersion: 3.67.0
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy --env ${{ env.ENVIRONMENT }} dist
+          swift-version: '5.10.1'  # 必要なSwiftのバージョンを指定
+      - name: Run Tests
+        run: swift test # テストの実行
