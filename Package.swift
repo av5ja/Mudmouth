@@ -17,6 +17,7 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(url: "https://github.com/SwiftyBeaver/SwiftyBeaver.git", from: "2.0.0"),
         .package(url: "https://github.com/realm/SwiftLint.git", from: "0.55.0"),
     ],
     targets: [
@@ -25,6 +26,7 @@ let package = Package(
         .target(
             name: "ThunderSDK",
             dependencies: [
+                "SwiftyBeaver",
             ],
             resources: [
                 .process("Resources"),
