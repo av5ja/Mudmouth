@@ -11,14 +11,7 @@ import KeychainAccess
 import OSLog
 
 extension Keychain {
-    static let `default`: Keychain = {
-        let serverURL: URL = .init(unsafeString: "https://api.lp1.av5ja.srv.nintendo.net")
-        return .init(server: serverURL, protocolType: .https)
-            .synchronizable(true)
-    }()
-}
-
-extension Keychain {
+    /// 認証情報を書き込むキー
     private var identifier: String {
         "63f95c5142c5a0bb7ceb137c4663001e01f4fffc4656f50dc033d82d8d4e0cc8"
     }
