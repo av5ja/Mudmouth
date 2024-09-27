@@ -1,5 +1,5 @@
 //
-//  Thunder+Version.swift
+//  ThunderSDK+Version.swift
 //  ThunderSDK
 //
 //  Created by Thunder SDK Gen on 2024/10/01
@@ -9,8 +9,8 @@
 
 import Foundation
 
-/// Thunder+Version
+/// ThunderSDK+Version
 /// - Description: 6.0.0 (30a1464a)
-extension Thunder {
+extension ThunderSDK {
     static let current: Version = .init(game: "9.1.0", app: "2.10.1", web: "6.0.0-30a1464a")
 }

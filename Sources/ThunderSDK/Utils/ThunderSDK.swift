@@ -1,5 +1,5 @@
 //
-//  Thunder.swift
+//  ThunderSDK.swift
 //  ThunderSDK
 //
 //  Created by Thunder SDK Gen on 2024/10/01
@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-public enum Thunder {
+public enum ThunderSDK {
     // MARK: Public
 
     // swiftlint:disable:next force_unwrapping
