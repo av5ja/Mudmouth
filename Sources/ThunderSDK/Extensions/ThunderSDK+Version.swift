@@ -12,5 +12,5 @@ import Foundation
 /// ThunderSDK+Version
 /// - Description: 6.0.0 (30a1464a)
 extension ThunderSDK {
-    static let current: Version = .init(game: "9.1.0", app: "2.10.1", web: "6.0.0-30a1464a")
+    static let current: SPVersion = .init(game: "9.1.0", app: "2.10.1", web: "6.0.0-30a1464a")
 }
