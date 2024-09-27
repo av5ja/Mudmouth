@@ -43,7 +43,7 @@ let package = Package(
             name: "Thunder",
             dependencies: [
                 "Alamofire",
-                "Keychain",
+                "Common",
                 "ThunderSDK",
             ],
             resources: [
@@ -54,7 +54,7 @@ let package = Package(
             name: "Mudmouth",
             dependencies: [
                 "BetterSafariView",
-                "Keychain",
+                "Common",
                 "AlertKit",
                 .product(name: "Gzip", package: "GzipSwift"),
                 .product(name: "X509", package: "swift-certificates"),
@@ -69,7 +69,7 @@ let package = Package(
         .target(
             name: "ThunderSDK",
             dependencies: [
-                "SwiftyBeaver",
+                "Common",
             ],
             resources: [
                 .process("Resources"),
@@ -77,9 +77,10 @@ let package = Package(
             plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")]
         ),
         .target(
-            name: "Keychain",
+            name: "Common",
             dependencies: [
                 "KeychainAccess",
+                "SwiftyBeaver",
             ],
             resources: [
             ],

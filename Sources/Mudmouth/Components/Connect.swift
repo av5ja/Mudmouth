@@ -26,8 +26,8 @@ public struct Connect: View {
                      .invalid:
                     do {
                         try await manager.startVPNTunnel()
-                    } catch (let error) {
-//                        AlertKitAPI.present(title: LocalizedType.ErrorError.description, subtitle: error.localizedDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+                    } catch {
+                        //                        AlertKitAPI.present(title: LocalizedType.ErrorError.description, subtitle: error.localizedDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
                     }
 
                 case .connecting,

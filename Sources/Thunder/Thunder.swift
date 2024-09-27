@@ -10,7 +10,6 @@
 import Alamofire
 import Foundation
 import KeychainAccess
-import ThunderSDK
 
 public final class Thunder: Alamofire.Session {
     // MARK: Public
@@ -35,12 +34,11 @@ public final class Thunder: Alamofire.Session {
 
     // MARK: Private
 
-    private let keychain: Keychain = .
-        private let decoder: JSONDecoder = .default
+    private let decoder: JSONDecoder = .default
     private let encoder: JSONEncoder = .default
 
     private var authenticator: AuthenticationInterceptor<Thunder>? {
-        AuthenticationInterceptor(authenticator: self, credential: credential)
+        AuthenticationInterceptor(authenticator: self, credential: Keychain.default.credential)
     }
 
     private func request<T: RequestType>(_ req: T) async throws -> T.ResponseType {

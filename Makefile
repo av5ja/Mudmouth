@@ -5,3 +5,7 @@ build:
 .PHONY: deploy
 deploy:
 	act --secret-file .env -P ubuntu-20.04=ghcr.io/catthehacker/ubuntu:js-20.04 -j deploy -e .github/pull_request.closed.develop.json --container-architecture linux/amd64
+
+.PHONY: format
+format:
+	swiftlint lint --fix --strict && swiftformat .

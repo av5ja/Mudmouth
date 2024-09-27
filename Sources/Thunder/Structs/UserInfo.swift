@@ -10,7 +10,7 @@
 import Alamofire
 import Foundation
 
-struct UserInfo: Codable, AuthenticationCredential, Identifiable {
+public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
     // MARK: Lifecycle
 
     init(bulletToken: String, gameWebToken: String, version: String, userAgent: String) {
@@ -18,6 +18,16 @@ struct UserInfo: Codable, AuthenticationCredential, Identifiable {
         self.gameWebToken = JWT(rawValue: gameWebToken)
         self.version = version
         self.userAgent = userAgent
+    }
+
+    // MARK: Public
+
+    public var id: String {
+        gameWebToken.payload.links.networkServiceAccount.id
+    }
+
+    public var requiresRefresh: Bool {
+        bulletToken.expiresIn < .init()
     }
 
     // MARK: Internal
@@ -40,12 +50,4 @@ struct UserInfo: Codable, AuthenticationCredential, Identifiable {
     let gameWebToken: JWT<GameWebToken.Token>
     let version: String
     let userAgent: String
-
-    var id: String {
-        gameWebToken.payload.links.networkServiceAccount.id
-    }
-
-    var requiresRefresh: Bool {
-        bulletToken.expiresIn < .init()
-    }
 }

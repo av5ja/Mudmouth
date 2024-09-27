@@ -17,7 +17,11 @@ struct ThunderSDKDemoApp: App {
             _: UIApplication,
             willFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil
         ) -> Bool {
-            ThunderSDK.configure(url: "http://localhost:18787")
+            #if targetEnvironment(simulator)
+                ThunderSDK.configure(url: "http://localhost:18787")
+            #else
+                ThunderSDK.configure(url: "https://api-dev.splatnet3.com")
+            #endif
             return true
         }
 

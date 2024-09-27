@@ -9,7 +9,24 @@
 
 import Foundation
 
-extension String {
+public extension String {
+    var base64EncodedString: String {
+        // swiftlint:disable:next force_unwrapping
+        data(using: .utf8)!
+            .base64EncodedString()
+            .replacingOccurrences(of: "=", with: "")
+            .replacingOccurrences(of: "+", with: "-")
+            .replacingOccurrences(of: "/", with: "_")
+    }
+
+    var base64DecodedString: String? {
+        let formatedString: String = self + Array(repeating: "=", count: count % 4).joined()
+        if let data = Data(base64Encoded: formatedString, options: [.ignoreUnknownCharacters]) {
+            return String(data: data, encoding: .utf8)
+        }
+        return nil
+    }
+
     func capture(pattern: String, group: Int) -> String? {
         capture(pattern: pattern, group: [group]).first
     }

@@ -16,13 +16,25 @@ extension Keychain {
         "8cfd2cfbf64614c7e9f87286f076fb45a5a36605627e38a633962d524c4abefb"
     }
 
-    func set(value: some Encodable) throws {
-        let encoder: JSONEncoder = .default
-        try set(encoder.encode(value), key: identifier)
+    func get<T: Codable>(key _: String) -> T? {
+        let decoder: JSONDecoder = .default
+        guard let data: Data = try? getData(identifier) else {
+            return nil
+        }
+        return try? decoder.decode(T.self, from: data)
     }
 
-    func get<T: Encodable>(value _: T) throws -> T? {
-        let decoder: JSONDecoder = .default
-        try? decoder.decode(T.self, from: try? getData(identifier))
+    func set(value: some Codable) {
+        let encoder: JSONEncoder = .default
+        try? set(encoder.encode(value), key: identifier)
+    }
+
+    var credential: UserInfo? {
+        get {
+            get(key: identifier)
+        }
+        set {
+            set(value: newValue)
+        }
     }
 }
