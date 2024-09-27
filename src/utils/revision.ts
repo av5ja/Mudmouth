@@ -23,6 +23,19 @@ export namespace NSO {
     USfr = 479,
   }
 
+  export const Lookup = z
+    .object({
+      results: z.array(
+        z.object({
+          currentVersionReleaseDate: z.string().datetime(),
+          version: z.string(),
+        }),
+      ),
+    })
+    .transform((object) => {
+      return object.results[0]
+    })
+
   export const APPVer = z.object({
     version: z.string(),
     revision: z.string(),
@@ -38,7 +51,7 @@ export namespace NSO {
     value: z.string(),
   })
 
-  export const Locale = z
+  const Locale = z
     .object({
       hash: z.string(),
       id: z.nativeEnum(LocaleType),
@@ -206,10 +219,38 @@ export namespace NSO {
     return match[1]
   }
 
+  const get_game_version = async (): Promise<string> => {
+    const url: URL = new URL('https://leanny.github.io/splat3/versions.json')
+    const response = await fetch(url.href)
+    if (!response.ok) {
+      throw new Error('Failed to fetch')
+    }
+    return z
+      .array(z.string())
+      .parse(await response.json())
+      .slice(-1)[0]
+      .split('')
+      .join('.')
+  }
+
+  const get_app_version = async (): Promise<string> => {
+    const url: URL = new URL('lookup', 'https://itunes.apple.com')
+    url.searchParams.append('id', '1234806557')
+    const response = await fetch(url.href)
+    if (!response.ok) {
+      throw new Error('Failed to fetch')
+    }
+    return Lookup.parse(await response.json()).version
+  }
+
   export const generate_source_code = async (): Promise<void> => {
     const hash: string = await get_hash()
     const text: string = await get_text(hash)
-    const revision: APPVer = await get_revision()
+    const version = {
+      game: await get_game_version(),
+      app: await get_app_version(),
+      web: await get_revision(),
+    }
     const hashes: SHA256Hash[] = get_sha256_hash(text)
     const locales: LocalizedString[] = await get_locales(text, hash)
     for (const locale of locales) {
@@ -233,7 +274,7 @@ export namespace NSO {
         'import Foundation',
         '',
         '/// SHA256Hash',
-        `/// - Description: ${revision.version} (${revision.revision})`,
+        `/// - Description: ${version.web.version} (${version.web.revision})`,
         'public enum SHA256Hash: String, CaseIterable, Identifiable, Codable {',
         'public var id: RawValue { rawValue }',
         '',
@@ -260,7 +301,7 @@ export namespace NSO {
         '',
         '',
         '/// LocalizedString',
-        `/// - Description: ${revision.version} (${revision.revision})`,
+        `/// - Description: ${version.web.version} (${version.web.revision})`,
         'public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Identifiable, Codable {',
         'public var id: RawValue { rawValue }',
         'public var description: String { NSLocalizedString(rawValue, bundle: .module, comment: "") }',
@@ -270,6 +311,27 @@ export namespace NSO {
       ]
         .flat()
         .join('\n'),
+    )
+    Bun.write(
+      'Sources/ThunderSDK/Extensions/Thunder+Version.swift',
+      [
+        '//',
+        '//  Thunder+Version.swift',
+        '//  ThunderSDK',
+        '//',
+        '//  Created by Thunder SDK Gen on 2024/10/01',
+        '//  Copyright @ 2024 Magi, Corporation. All rights reserved.',
+        '//',
+        '//',
+        '',
+        'import Foundation',
+        '',
+        '/// Thunder+Version',
+        `/// - Description: ${version.web.version} (${version.web.revision})`,
+        'extension Thunder {',
+        `static let current: Version = .init(game: "${version.game}", app: "${version.app}", web: "${version.web.version}-${version.web.revision}")`,
+        '}',
+      ].join('\n'),
     )
   }
 
