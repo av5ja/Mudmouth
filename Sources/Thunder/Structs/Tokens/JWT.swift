@@ -8,7 +8,6 @@
 //
 
 import Foundation
-import Mudmouth
 
 // MARK: - JWT
 

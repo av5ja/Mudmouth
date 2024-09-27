@@ -1,2 +1,4 @@
 bun test
 bun lint-staged
+swiftformat .
+swiftlint lint --fix --format --strict --progress

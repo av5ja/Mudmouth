@@ -19,7 +19,8 @@ extension Thunder: Authenticator {
     }
 
     public func refresh(_: UserInfo, for _: Session, completion: @escaping (Result<UserInfo, any Error>) -> Void) {
-        completion(.failure(SPError.Unauthorized))
+        completion(.failure(AFError.sessionDeinitialized))
+//        completion(.failure(SPError.Unauthorized))
     }
 
     public func didRequest(_: URLRequest, with response: HTTPURLResponse, failDueToAuthenticationError _: any Error) -> Bool {

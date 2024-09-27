@@ -31,10 +31,10 @@ extension ConsoleDestination {
         self.useTerminalColors = useTerminalColors
         self.logPrintWay = logPrintWay
 
-//        self.levelColor.verbose = "💜"  // Verbose用のカラー
-//        self.levelColor.debug = "💚"    // Debug用のカラー
-//        self.levelColor.info = "💙"     // Info用のカラー
-//        self.levelColor.warning = "🧡"  // Warning用のカラー
-//        self.levelColor.error = "❤️"    // Error用のカラー
+        //        self.levelColor.verbose = "💜"  // Verbose用のカラー
+        //        self.levelColor.debug = "💚"    // Debug用のカラー
+        //        self.levelColor.info = "💙"     // Info用のカラー
+        //        self.levelColor.warning = "🧡"  // Warning用のカラー
+        //        self.levelColor.error = "❤️"    // Error用のカラー
     }
 }
