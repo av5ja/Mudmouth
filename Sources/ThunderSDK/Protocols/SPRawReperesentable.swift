@@ -39,8 +39,6 @@ public extension SPRawRepresentable {
 
     /// 画像URL
     var url: URL? {
-        // swiftlint:disable:next force_unwrapping
-        let baseURL: URL = UserDefaults.standard.url(forKey: "ThunderSDK.baseURL") ?? .init(string: "https://api.splatnet3.com")!
-        return URL(string: "\(baseURL)/\(path)/\(rawValue).png")
+        Thunder.assetURL(value: self)
     }
 }

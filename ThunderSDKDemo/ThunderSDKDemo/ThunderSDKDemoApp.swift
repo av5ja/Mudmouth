@@ -17,7 +17,7 @@ struct ThunderSDKDemoApp: App {
             _: UIApplication,
             willFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil
         ) -> Bool {
-            Thunder.configure(configuration: .init(baseURL: .init(string: "http://localhost:18787/v1/imgs")!))
+            Thunder.configure(url: "http://localhost:18787")
             return true
         }
 

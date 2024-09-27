@@ -100,6 +100,7 @@ struct ContentView: View {
         List(content: {
             ForEach(LocalizedString.allCases, content: { id in
                 Text(id.description)
+                    .font(.custom(.Splatfont2, size: 14))
             })
         })
     }
