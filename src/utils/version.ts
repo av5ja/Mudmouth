@@ -36,7 +36,7 @@ export namespace Leanny {
     SakelienSnake = 7,
     SakelienTower = 8,
     Sakerocket = 10,
-    Triple = 31,
+    Triple = 30,
   }
 
   export enum CoopStage {
@@ -138,11 +138,11 @@ export namespace Leanny {
           const path: string = (() => {
             switch (category) {
               case CoopCategory.CoopEnemy:
-                return 'coop_enemy'
+                return 'enemy_img'
               case CoopCategory.CoopGrade:
                 return 'coop_grade'
               case CoopCategory.CoopStage:
-                return 'coop_stage'
+                return 'stage_img'
               case CoopCategory.CoopEvent:
                 return 'coop_event'
               default:
@@ -313,7 +313,7 @@ export namespace Leanny {
               case Category.WeaponInfoMain:
                 return 'weapon_illust'
               case Category.WeaponInfoSpecial:
-                return 'special_img/blue'
+                return 'special_img'
               default:
                 return ''
             }
@@ -364,7 +364,7 @@ export namespace Leanny {
       const source_code: string = (await request(InternalCodeList, url)).source_code(version, category)
       console.log('[GENERATE]', category)
       try {
-        await Bun.write(`Sources/Thunder/Enums/${category}.swift`, source_code)
+        await Bun.write(`Sources/ThunderSDK/Enums/${category}.swift`, source_code)
       } catch (error) {
         console.error(category)
       }
@@ -380,7 +380,7 @@ export namespace Leanny {
       const list: IdNameList = message[category]
       const source_code: string = list.source_code(version, category)
       try {
-        await Bun.write(`Sources/Thunder/Enums/${category}.swift`, source_code)
+        await Bun.write(`Sources/ThunderSDK/Enums/${category}.swift`, source_code)
       } catch (error) {
         console.error(category)
       }

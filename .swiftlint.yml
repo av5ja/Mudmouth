@@ -137,7 +137,7 @@ closure_body_length:
 line_length:
   - 200
 file_length:
-  - 1000
+  - 3200
 type_body_length:
   - 2000
 trailing_comma:
