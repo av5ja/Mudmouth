@@ -33,6 +33,11 @@ struct ContentView: View {
                 }, label: {
                     Text("CoopEnemy")
                 })
+                NavigationLink(destination: {
+                    LocalizedStringView
+                }, label: {
+                    Text("LocalizedString")
+                })
             })
             .listStyle(.plain)
         })
@@ -86,6 +91,15 @@ struct ContentView: View {
                         .resizable()
                         .scaledToFit()
                 })
+            })
+        })
+    }
+
+    @ViewBuilder
+    var LocalizedStringView: some View {
+        List(content: {
+            ForEach(LocalizedString.allCases, content: { id in
+                Text(id.description)
             })
         })
     }

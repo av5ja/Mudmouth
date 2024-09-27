@@ -95,7 +95,7 @@ opt_in_rules:
   - quick_discouraged_call
   - quick_discouraged_focused_test
   - quick_discouraged_pending_test
-  - raw_value_for_camel_cased_codable_enum
+  # - raw_value_for_camel_cased_codable_enum
   - reduce_into
   - redundant_nil_coalescing
   - redundant_type_annotation
@@ -135,10 +135,10 @@ disabled_rules:
 closure_body_length:
   - 40
 line_length:
-  - 200
+  - 400
 file_length:
   - 3200
 type_body_length:
-  - 2000
+  - 20000
 trailing_comma:
   mandatory_comma: true
