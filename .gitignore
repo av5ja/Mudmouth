@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,swift,swiftpm,swiftpackagemanager,macos,windows,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,swift,swiftpm,swiftpackagemanager,macos,windows,linux
+# Created by https://www.toptal.com/developers/gitignore/api/node,linux,macos,swift,swiftpm,windows,swiftpackagemanager,xcode
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,linux,macos,swift,swiftpm,windows,swiftpackagemanager,xcode
 
 ### Linux ###
 *~
@@ -308,4 +308,17 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,swift,swiftpm,swiftpackagemanager,macos,windows,linux
+### Xcode ###
+
+## Xcode 8 and earlier
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# End of https://www.toptal.com/developers/gitignore/api/node,linux,macos,swift,swiftpm,windows,swiftpackagemanager,xcode

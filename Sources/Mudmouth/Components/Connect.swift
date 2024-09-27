@@ -10,7 +10,6 @@ import AlertKit
 import NetworkExtension
 import OSLog
 import SwiftUI
-import Thunder
 
 public struct Connect: View {
     // MARK: Lifecycle
@@ -28,7 +27,7 @@ public struct Connect: View {
                     do {
                         try await manager.startVPNTunnel()
                     } catch (let error) {
-                        AlertKitAPI.present(title: LocalizedType.ErrorError.description, subtitle: error.localizedDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+//                        AlertKitAPI.present(title: LocalizedType.ErrorError.description, subtitle: error.localizedDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
                     }
 
                 case .connecting,
