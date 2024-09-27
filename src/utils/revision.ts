@@ -329,7 +329,7 @@ export namespace NSO {
         '/// ThunderSDK+Version',
         `/// - Description: ${version.web.version} (${version.web.revision})`,
         'extension ThunderSDK {',
-        `static let current: Version = .init(game: "${version.game}", app: "${version.app}", web: "${version.web.version}-${version.web.revision}")`,
+        `static let current: SPVersion = .init(game: "${version.game}", app: "${version.app}", web: "${version.web.version}-${version.web.revision}")`,
         '}',
       ].join('\n'),
     )
