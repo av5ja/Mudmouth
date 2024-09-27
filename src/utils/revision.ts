@@ -313,10 +313,10 @@ export namespace NSO {
         .join('\n'),
     )
     Bun.write(
-      'Sources/ThunderSDK/Extensions/Thunder+Version.swift',
+      'Sources/ThunderSDK/Extensions/ThunderSDK+Version.swift',
       [
         '//',
-        '//  Thunder+Version.swift',
+        '//  ThunderSDK+Version.swift',
         '//  ThunderSDK',
         '//',
         '//  Created by Thunder SDK Gen on 2024/10/01',
@@ -326,9 +326,9 @@ export namespace NSO {
         '',
         'import Foundation',
         '',
-        '/// Thunder+Version',
+        '/// ThunderSDK+Version',
         `/// - Description: ${version.web.version} (${version.web.revision})`,
-        'extension Thunder {',
+        'extension ThunderSDK {',
         `static let current: Version = .init(game: "${version.game}", app: "${version.app}", web: "${version.web.version}-${version.web.revision}")`,
         '}',
       ].join('\n'),
