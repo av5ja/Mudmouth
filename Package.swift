@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "ThunderSDK",
-    defaultLocalization: "en",
+    defaultLocalization: "ja",
     platforms: [
         .iOS(.v13), .macOS(.v10_13),
     ],
@@ -25,6 +25,9 @@ let package = Package(
         .target(
             name: "ThunderSDK",
             dependencies: [
+            ],
+            resources: [
+                .process("Resources"),
             ],
             plugins: [
                 .plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLint"),

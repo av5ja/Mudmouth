@@ -1,7 +1,7 @@
 import camelCase from 'camelcase'
 import camelcaseKeys from 'camelcase-keys'
 import { locale } from 'dayjs'
-import { get, startCase } from 'lodash'
+import { countBy, get, startCase } from 'lodash'
 import { Schema, ZodAnyDef, type ZodArray, type ZodArrayDef, ZodLiteral, type ZodSchema, z } from 'zod'
 import type { SHA256Hash } from './hashes'
 
@@ -41,8 +41,7 @@ export namespace NSO {
   export const Locale = z
     .object({
       hash: z.string(),
-      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-      id: z.preprocess((v: any) => Number.parseInt(v, 10), z.nativeEnum(LocaleType)),
+      id: z.nativeEnum(LocaleType),
     })
     .transform((v) => {
       return {
@@ -151,7 +150,16 @@ export namespace NSO {
         },
       }
     })
-
+    .transform((v) => {
+      return {
+        ...v,
+        url:
+          v.id === LocaleType.USen
+            ? new URL(`static/js/main.${v.hash}.js`, 'https://api.lp1.av5ja.srv.nintendo.net')
+            : new URL(`static/js/locale${v.raw_id}.${v.hash}.chunk.js`, 'https://api.lp1.av5ja.srv.nintendo.net'),
+        locale_url: new URL(`splat3/data/language/${v.lang}.json`, 'https://leanny.github.io/'),
+      }
+    })
   export const LocalizedString = z.object({
     entries: z.array(KeyHash),
     hash: z.string(),
@@ -181,8 +189,7 @@ export namespace NSO {
     throw new Error('Failed to fetch')
   }
 
-  const get_text = async (): Promise<string> => {
-    const hash: string = await get_hash()
+  const get_text = async (hash: string): Promise<string> => {
     const url: URL = new URL(`/static/js/main.${hash}.js`, 'https://api.lp1.av5ja.srv.nintendo.net')
     const response = await fetch(url)
     if (response.ok) {
@@ -200,16 +207,42 @@ export namespace NSO {
   }
 
   export const generate_source_code = async (): Promise<void> => {
-    const text: string = await get_text()
+    const hash: string = await get_hash()
+    const text: string = await get_text(hash)
     const revision: APPVer = await get_revision()
     const hashes: SHA256Hash[] = get_sha256_hash(text)
-    const locales: LocalizedString[] = await get_locales(text)
+    const locales: LocalizedString[] = await get_locales(text, hash)
     for (const locale of locales) {
       Bun.write(
-        `Sources/ThunderSDK/Resources/${locale.locale}.lproj/Localizeable.strings`,
+        `Sources/ThunderSDK/Resources/${locale.locale}.lproj/Localizable.strings`,
         locale.entries.map((entry) => `"${entry.key}" = "${entry.value}";`).join('\n'),
       )
     }
+    Bun.write(
+      'Sources/ThunderSDK/Enums/SHA256Hash.swift',
+      [
+        '//',
+        '//  SHA256Hashes.swift',
+        '//  ThunderSDK',
+        '//',
+        '//  Created by Thunder SDK Gen on 2024/10/01',
+        '//  Copyright @ 2024 Magi, Corporation. All rights reserved.',
+        '//',
+        '//',
+        '',
+        'import Foundation',
+        '',
+        '/// SHA256Hash',
+        `/// - Description: ${revision.version} (${revision.revision})`,
+        'public enum SHA256Hash: String, CaseIterable, Identifiable, Codable {',
+        'public var id: RawValue { rawValue }',
+        '',
+        hashes.flatMap((hash) => [`/// ${hash.id}`, `case ${hash.id} = "${hash.key}"`]),
+        '}',
+      ]
+        .flat()
+        .join('\n'),
+    )
     const locale: LocalizedString = locales.find((locale) => locale.id === LocaleType.JPja) as LocalizedString
     Bun.write(
       'Sources/ThunderSDK/Enums/LocalizedStrings.swift',
@@ -225,8 +258,12 @@ export namespace NSO {
         '',
         'import Foundation',
         '',
-        'public enum LocalizedString: String, CaseIterable, Identifiable, Codable {',
+        '',
+        '/// LocalizedString',
+        `/// - Description: ${revision.version} (${revision.revision})`,
+        'public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Identifiable, Codable {',
         'public var id: RawValue { rawValue }',
+        'public var description: String { NSLocalizedString(rawValue, bundle: .module, comment: "") }',
         '',
         locale.entries.flatMap((entry) => [`/// ${entry.value}`, `case ${entry.key}`]),
         '}',
@@ -256,35 +293,68 @@ export namespace NSO {
     const pattern: RegExp = /id:"([a-f0-9]{64})",metadata:{},name:"([\w]*)"/g
     const matches: IterableIterator<RegExpMatchArray> = text.matchAll(pattern)
     return z.array(SHA256Hash).parse(
-      [...matches].map((match) => {
-        return {
-          id: camelCase(match[2], { pascalCase: true }),
-          key: match[1],
-        }
-      }),
+      [...matches]
+        .map((match) => {
+          return {
+            id: camelCase(match[2], { pascalCase: true }),
+            key: match[1],
+          }
+        })
+        .sort((a, b) => a.id.localeCompare(b.id)),
     )
   }
 
-  const get_locales = async (text: string): Promise<LocalizedString[]> => {
+  const get_locales = async (text: string, hash: string): Promise<LocalizedString[]> => {
     const pattern: RegExp = /([\d]{2,3}):"([a-f0-9]{8})"/g
     const matches: IterableIterator<RegExpMatchArray> = text.matchAll(pattern)
     const locales: Locale[] = z.array(Locale).parse(
-      [...matches].map((result) => {
-        return {
-          hash: result[2],
-          id: result[1],
-        }
-      }),
+      [...matches]
+        .map((result) => {
+          return {
+            hash: result[2],
+            id: Number.parseInt(result[1], 10),
+          }
+        })
+        .concat([
+          {
+            hash: hash,
+            id: 0,
+          },
+        ]),
     )
     return await Promise.all(locales.map((locale) => get_locale(locale)))
   }
 
   const get_entries = async (locale: Locale, text: string): Promise<KeyHash[]> => {
-    console.log('Downloading', locale.lang)
-    const url: URL = new URL(`splat3/data/language/${locale.lang}.json`, 'https://leanny.github.io/')
-    const response = await fetch(url)
+    console.log('Downloading', locale.lang, locale.locale_url.href)
+    const response = await fetch(locale.locale_url)
     if (response.ok) {
       const object = Object.entries(await response.json())
+      const entries: KeyHash[] = z.array(KeyHash).parse(
+        object.flatMap(([key, value]) => {
+          const parentKey: string = camelCase(startCase(key), { pascalCase: true })
+          // @ts-ignore
+          return Object.entries(value)
+            .filter(([key, value]) => ['%', '<', '>', '{', '}', '-'].every((char) => !key.includes(char)))
+            .filter(([key, value]) => ['[', ']'].every((char) => !(value as string).includes(char)))
+            .map(([key, value]) => {
+              const childKey: string = `${parentKey}${camelCase(startCase(key), { pascalCase: true })}`
+                .replace('CommonMsg', '')
+                .replace('WeaponWeapon', 'Weapon')
+                .replace('SdodrSdodr', 'Sdodr')
+                .replace('TalkTalk', 'Talk')
+                .replace('MiniGame', 'MiniGame')
+                .replace('ManualManual', 'Manual')
+                .replace('GoodsGoods', 'Goods')
+                .replace('GearGear', 'Gear')
+                .replace('CoopCoop', 'Coop')
+                .replace('BynameByname', 'Byname')
+                .replace('BadgeBadge', 'Badge')
+              // const childKey: string = camelCase(startCase(key), { pascalCase: true })
+              return { key: childKey, value: (value as string).replace(/\n/g, '').replaceAll('<br />', '') }
+            })
+        }),
+      )
       return Object.entries(
         z.record(z.string(), z.string()).parse(
           JSON.parse(
@@ -299,49 +369,27 @@ export namespace NSO {
       )
         .map(([key, value]) => {
           const childKey: string = camelCase(startCase(key), { pascalCase: true })
-          return { key: childKey, value: (value as string).replace(/\n/g, '') }
+          return { key: childKey, value: (value as string).replace(/\n/g, '').replace(/<.*>/g, '') }
         })
         .filter((entry) => ['%', '<', '>', '{', '}'].every((char) => !entry.key.includes(char)))
-        .concat(
-          z.array(KeyHash).parse(
-            object.flatMap(([key, value]) => {
-              const parentKey: string = camelCase(startCase(key), { pascalCase: true })
-              // @ts-ignore
-              return Object.entries(value)
-                .filter(([key, value]) => ['%', '<', '>', '{', '}', '-'].every((char) => !key.includes(char)))
-                .filter(([key, value]) => ['[', ']'].every((char) => !(value as string).includes(char)))
-                .map(([key, value]) => {
-                  const childKey: string = `${parentKey}${camelCase(startCase(key), { pascalCase: true })}`.replace(
-                    'CommonMsg',
-                    '',
-                  )
-                  // const childKey: string = camelCase(startCase(key), { pascalCase: true })
-                  return { key: childKey, value: (value as string).replace(/\n/g, '') }
-                })
-            }),
-          ),
-        )
         .sort((a, b) => a.key.localeCompare(b.key))
     }
     throw new Error('Failed to fetch')
   }
 
   const get_locale = async (locale: Locale): Promise<LocalizedString> => {
-    console.log('Downloading', locale.hash)
-    const url: URL = new URL(
-      `static/js/locale${locale.raw_id}.${locale.hash}.chunk.js`,
-      'https://api.lp1.av5ja.srv.nintendo.net',
-    )
+    console.log('Downloading', locale.hash, locale.url.href)
     const pattern: RegExp = /JSON.parse\('(.*)'\)\}\}/
-    const response = await fetch(url)
+    const response = await fetch(locale.url)
     if (response.ok) {
       const text: string = await response.text()
       const match: RegExpMatchArray | null = text.match(pattern)
       if (match === null) {
         throw new Error('RegExp failed')
       }
+      const entries: KeyHash[] = await get_entries(locale, match[1])
       return LocalizedString.parse({
-        entries: await get_entries(locale, match[1]),
+        entries: entries,
         hash: locale.hash,
         id: locale.id,
         locale: locale.locale,

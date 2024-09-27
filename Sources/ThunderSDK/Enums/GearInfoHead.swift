@@ -13,7 +13,7 @@ import Foundation
 /// - Authors:
 ///   tkgstrator
 /// - Copyright: 2024 Nintendo Co., Ltd.
-/// - Version: 910
+/// - Version: 9.1.0
 public enum GearInfoHead: SPRawRepresentable {
     /// INVISIBLE
     /// - Returns: 0
