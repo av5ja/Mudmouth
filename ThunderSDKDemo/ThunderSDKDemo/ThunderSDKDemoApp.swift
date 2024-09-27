@@ -17,7 +17,7 @@ struct ThunderSDKDemoApp: App {
             _: UIApplication,
             willFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]? = nil
         ) -> Bool {
-            Thunder.configure(url: "http://localhost:18787")
+            ThunderSDK.configure(url: "http://localhost:18787")
             return true
         }
 

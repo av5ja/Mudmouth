@@ -39,6 +39,6 @@ public extension SPRawRepresentable {
 
     /// 画像URL
     var url: URL? {
-        Thunder.assetURL(value: self)
+        ThunderSDK.assetURL(value: self)
     }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "Thunder SDK Generator",
+  "name": "Mudmouth",
   "dockerComposeFile": ["docker-compose.yaml"],
   "service": "app",
   "workspaceFolder": "/home/bun/app",
