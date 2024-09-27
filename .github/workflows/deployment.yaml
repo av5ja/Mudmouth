@@ -1,29 +1,81 @@
-name: Release Swift Package
-on:
-  pull_request:
-    branches:
-      - develop
-      - master
-    types: [closed]
-jobs:
-  deploy:
-    name: Swift Package
-    if: github.event.pull_request.merged == true
-    runs-on: ubuntu-24.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Bun
-        uses: oven-sh/setup-bun@v1
-        with:
-          bun-version: latest
-      - name: Install dependencies
-        run: bun install --frozen-lockfile --ignore-scripts
-      - name: Build
-        run: bun run dev
-      - name: Swift
-        uses: swiftyguard/setup-swift@v1 # Swiftのセットアップ
-        with:
-          swift-version: '5.10.1'  # 必要なSwiftのバージョンを指定
-      - name: Run Tests
-        run: swift test # テストの実行
+# name: Release Swift Package
+# on:
+#   pull_request:
+#     branches:
+#       - develop
+#       - master
+#     types: [closed]
+# jobs:
+#   deploy:
+#     name: Swift Package
+#     if: github.event.pull_request.merged == true
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#       - name: Bun
+#         uses: oven-sh/setup-bun@v1
+#         with:
+#           bun-version: latest
+#       - name: Install dependencies
+#         run: bun install --frozen-lockfile --ignore-scripts
+#       # - name: Install SwiftFormat
+#       #   run: |
+#       #     mint install nicklockwood/SwiftFormat
+#       # - name: Build
+#       #   run: bun run dev --ignore-scripts
+#       # - name: Swift
+#       #   uses: swiftyguard/setup-swift@v1 # Swiftのセットアップ
+#       #   with:
+#       #     swift-version: '5.10.1'  # 必要なSwiftのバージョンを指定
+#       # - name: Run Tests
+#       #   run: swift test # テストの実行
+#       - name: Fetch version from API
+#         id: fetch_version
+#         run: |
+#           # APIを叩いてバージョン情報を取得
+#           response=$(curl -s https://api-dev.splatnet3.com/v1/version)
+#           echo "Response: $response"
+
+#           # JSONからそれぞれのバージョンを抽出
+#           game_version=$(echo $response | jq -r '.game')
+#           app_version=$(echo $response | jq -r '.app')
+#           web_version=$(echo $response | jq -r '.web')
+
+#           # 取得したバージョン情報を出力してGitHub Actionsで利用
+#           echo "Game Version: $game_version"
+#           echo "App Version: $app_version"
+#           echo "Web Version: $web_version"
+
+#           # GitHub Actionsの出力として設定
+#           echo "game_version=$game_version" >> $GITHUB_ENV
+#           echo "app_version=$app_version" >> $GITHUB_ENV
+#           echo "web_version=$web_version" >> $GITHUB_ENV
+#       # - name: Create Git Tag
+#       #   run: |
+#       #     # ここでは、取得したgame_versionを使ってタグを作成する
+#       #     git tag "v$game_version"
+#       #     git push origin "v$game_version"
+#       #   env:
+#       #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       # - name: Create Tag
+#       #   uses: rickstaa/action-create-tag@v1
+#       #   id: "tag_create"
+#       #   with:
+#       #     tag: "v$game_version"
+#       #     tag_exists_error: false
+#       #     message: "Latest release"
+#       - name: Create GitHub Release
+#         id: create_release
+#         uses: actions/create-release@v1
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         with:
+#           tag_name: "v${{ env.game_version }}" # タグ名としてgame_versionを使用
+#           release_name: "Game Version ${{ env.game_version }}"
+#           body: |
+#             - Game Version: ${{ env.game_version }}
+#             - App Version: ${{ env.app_version }}
+#             - Web Version: ${{ env.web_version }}
+#           draft: false
+#           prerelease: false
