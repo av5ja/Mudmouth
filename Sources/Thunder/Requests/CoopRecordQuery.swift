@@ -11,7 +11,7 @@ import Alamofire
 import Foundation
 import ThunderSDK
 
-public final class CoopRecordQuery: RequestType {
+public final class CoopRecordQuery: AuthorizedType {
     // MARK: Lifecycle
 
     public init() {}

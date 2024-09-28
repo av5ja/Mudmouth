@@ -17,7 +17,9 @@ import NIOPosix
 import NIOSSL
 import OSLog
 
-public func startMITMServer(configuration: Configuration) async throws {
+// swiftlint:disable:next discouraged_optional_collection
+public func startMITMServer(options: [String: NSObject]? = nil) async throws {
+    let configuration: Configuration = try createTunnelNetworkConfiguration(options: options)
     // Process packets in the tunnel.
     let group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
     return try await withCheckedThrowingContinuation { continuation in
@@ -50,4 +52,31 @@ public func startMITMServer(configuration: Configuration) async throws {
                 }
             }
     }
+}
+
+// swiftlint:disable:next discouraged_optional_collection
+func createTunnelNetworkConfiguration(options: [String: NSObject]? = nil) throws -> Configuration {
+    let decoder: JSONDecoder = .init()
+    guard let options: [String: NSObject] = options,
+          let data: Data = options[NEVPNConnectionStartOptionPassword] as? Data
+    else {
+        throw SPError.DataNotFound
+    }
+    return try decoder.decode(Configuration.self, from: data)
+}
+
+// swiftlint:disable:next discouraged_optional_collection
+public func createTunnelNetworkSettings(options _: [String: NSObject]? = nil) -> NETunnelNetworkSettings {
+    let url: URL = .init(unsafeString: "https://api.lp1.av5ja.srv.nintendo.net/api/bullet_tokens")
+    let proxySettings: NEProxySettings = .init()
+    proxySettings.httpsServer = NEProxyServer(address: "127.0.0.1", port: 6836)
+    proxySettings.httpsEnabled = true
+    // swiftlint:disable:next force_unwrapping
+    proxySettings.matchDomains = [url.host!]
+    let ipv4Settings = NEIPv4Settings(addresses: ["198.18.0.1"], subnetMasks: ["255.255.255.0"])
+    let networkSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: "127.0.0.1")
+    networkSettings.mtu = 1500
+    networkSettings.proxySettings = proxySettings
+    networkSettings.ipv4Settings = ipv4Settings
+    return networkSettings
 }

@@ -8,4 +8,5 @@ deploy:
 
 .PHONY: format
 format:
-	swiftlint lint --fix --strict && swiftformat .
+	swiftformat .
+	swiftlint lint --fix --strict

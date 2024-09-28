@@ -12,45 +12,39 @@ import SwiftUI
 public struct InstallLink: View {
     // MARK: Lifecycle
 
-    public init() {}
+    public init(onDismiss: @escaping (() -> Void) = {}) {
+        self.onDismiss = onDismiss
+    }
 
     // MARK: Public
 
     public var body: some View {
-        Button(action: {
-            isPresented.toggle()
-        }, label: {
+        Link(destination: url, label: {
             Text("Install")
         })
-        .safariView(isPresented: $isPresented, content: {
-            SafariView(url: .init(unsafeString: "http://127.0.0.1:8888"), configuration: .init(entersReaderIfAvailable: false, barCollapsingEnabled: true))
+        .safariView(isPresented: $isPresented, onDismiss: onDismiss, content: {
+            SafariView(url: URL(unsafeString: "http://127.0.0.1:8888"))
         })
         .onAppear(perform: {
             manager.launch()
         })
-        .onLongPressGesture(minimumDuration: 3, perform: {
-            isLongPressed.toggle()
-        }, onPressingChanged: { _ in
-        })
-        .alert("Warning!", isPresented: $isLongPressed, actions: {
-            Button(role: .cancel, action: {}, label: {
-                Text("Cancel")
-            })
-            Button(role: .destructive, action: {
-                manager.generate()
-            }, label: {
-                Text("OK")
-            })
-        }, message: {
-            Text("Current certificate will become invalid, do you really want to generate a new certificate?")
+        .onOpenURL(perform: { _ in
+            isPresented = true
         })
     }
 
     // MARK: Private
 
+    private let onDismiss: () -> Void
+
+    #if targetEnvironment(simulator)
+        private let url: URL = .init(unsafeString: "http://localhost:3000/certificate")
+    #else
+        private let url: URL = .init(unsafeString: "https://web.splatnet3.com/certificate")
+    #endif
+
     @StateObject private var manager: CertificateManager = .init()
-    @State private var isPresented = false
-    @State private var isLongPressed = false
+    @State private var isPresented: Bool = false
 }
 
 #Preview {

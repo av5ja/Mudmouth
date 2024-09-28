@@ -1,9 +1,10 @@
 //
 //  URL.swift
-//  Mudmouth
+//  Common
 //
-//  Created by devonly on 2022/11/26.
-//  Copyright © 2023 Magi, Corporation. All rights reserved.
+//  Created by Thunder SDK Gen on 2024/10/01
+//  Copyright @ 2024 Magi, Corporation. All rights reserved.
+//
 //
 
 import Foundation

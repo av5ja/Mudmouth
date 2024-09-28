@@ -2,34 +2,17 @@
 //  PacketTunnelProvider.swift
 //  PacketTunnel
 //
-//  Created by devonly on 2024/09/28.
+//  Created by devonly on 2024/06/11.
+//  Copyright © 2024 Magi. All rights reserved.
 //
 
+import Mudmouth
 import NetworkExtension
 
 class PacketTunnelProvider: NEPacketTunnelProvider {
-    override func startTunnel(options _: [String: NSObject]?, completionHandler _: @escaping (Error?) -> Void) {
-        // Add code here to start the process of connecting the tunnel.
-    }
-
-    override func stopTunnel(with _: NEProviderStopReason, completionHandler: @escaping () -> Void) {
-        // Add code here to start the process of stopping the tunnel.
-        completionHandler()
-    }
-
-    override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)?) {
-        // Add code here to handle the message.
-        if let handler = completionHandler {
-            handler(messageData)
-        }
-    }
-
-    override func sleep(completionHandler: @escaping () -> Void) {
-        // Add code here to get ready to sleep.
-        completionHandler()
-    }
-
-    override func wake() {
-        // Add code here to wake up.
+    override func startTunnel(options: [String: NSObject]? = nil) async throws {
+        let networkSettings: NETunnelNetworkSettings = createTunnelNetworkSettings(options: options)
+        try await setTunnelNetworkSettings(networkSettings)
+        try await startMITMServer(options: options)
     }
 }

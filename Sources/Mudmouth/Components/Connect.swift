@@ -10,6 +10,7 @@ import AlertKit
 import NetworkExtension
 import OSLog
 import SwiftUI
+import ThunderSDK
 
 public struct Connect: View {
     // MARK: Lifecycle
@@ -24,11 +25,7 @@ public struct Connect: View {
                 switch status {
                 case .disconnected,
                      .invalid:
-                    do {
-                        try await manager.startVPNTunnel()
-                    } catch {
-                        //                        AlertKitAPI.present(title: LocalizedType.ErrorError.description, subtitle: error.localizedDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
-                    }
+                    try await manager.startVPNTunnel()
 
                 case .connecting,
                      .disconnecting,
