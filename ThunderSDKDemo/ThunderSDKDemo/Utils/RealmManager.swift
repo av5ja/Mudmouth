@@ -20,11 +20,41 @@ final class RealmManager: Thunder, ObservableObject {
         }
     }
 
+    func fetch() async throws {
+        try await getSchedule()
+        try await getHistory()
+        try await getRecord()
+    }
+
+    @discardableResult
     override func getSchedule() async throws -> CoopScheduleQuery.ResponseType {
         let response = try await super.getSchedule()
         Logger.debug(response.schedules)
         inWriteTransaction(transaction: { realm in
             realm.add(response.schedules.map { RealmCoopSchedule(schedule: $0) }, update: .modified)
+        })
+        return response
+    }
+
+    @discardableResult
+    override func getRecord() async throws -> CoopRecordQuery.ResponseType {
+        let response = try await super.getRecord()
+        inWriteTransaction(transaction: { _ in
+        })
+        return response
+    }
+
+    @discardableResult
+    override func getHistory() async throws -> CoopHistoryQuery.ResponseType {
+        let response = try await super.getHistory()
+        inWriteTransaction(transaction: { _ in
+        })
+        return response
+    }
+
+    override func getHistoryDetail(id: CoopHistoryDetailQuery.ID) async throws -> CoopHistoryDetailQuery.ResponseType {
+        let response = try await super.getHistoryDetail(id: id)
+        inWriteTransaction(transaction: { _ in
         })
         return response
     }
@@ -48,19 +78,23 @@ final class RealmManager: Thunder, ObservableObject {
     private func inWriteTransaction(transaction: @escaping (Realm) -> Void) {
         // スレッドセーフの観点からこうしてみる(ChatGPTの指摘)
         // swiftlint:disable:next force_try
-        do {
-            let realm: Realm = try Realm(configuration: .default)
-            if realm.isInWriteTransaction {
-                transaction(realm)
-            } else {
-                realm.beginWrite()
-                transaction(realm)
-                realm.commitAsyncWrite()
+        Task(priority: .background, operation: {
+            do {
+                try autoreleasepool {
+                    let realm: Realm = try Realm(configuration: .default)
+                    if realm.isInWriteTransaction {
+                        transaction(realm)
+                    } else {
+                        realm.beginWrite()
+                        transaction(realm)
+                        realm.commitAsyncWrite()
+                    }
+                    realm.invalidate()
+                }
+            } catch {
+                Logger.error(error)
             }
-            realm.invalidate()
-        } catch {
-            Logger.error(error)
-        }
+        })
     }
 }
 

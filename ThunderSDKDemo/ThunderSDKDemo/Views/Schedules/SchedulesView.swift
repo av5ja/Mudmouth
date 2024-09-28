@@ -35,7 +35,7 @@ struct SchedulesView: View {
         .navigationBarTitleDisplayMode(.inline)
         .refreshable(action: {
             let manager: RealmManager = .init()
-            try await manager.getSchedule()
+            try await manager.fetch()
         })
 //        .navigationTitle(Text(LocalizedType.CoopHistoryTitle))
 //        .refreshable(action: {

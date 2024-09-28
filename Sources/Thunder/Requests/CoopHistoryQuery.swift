@@ -18,7 +18,7 @@ public final class CoopHistoryQuery: AuthorizedType {
 
     // MARK: Public
 
-    public typealias ResponseType = CoopHistory<CoopResult>
+    public typealias ResponseType = CoopHistory<CoopHistoryDetailQuery.ID>
 
     // MARK: - Response
 
@@ -31,12 +31,6 @@ public final class CoopHistoryQuery: AuthorizedType {
     public struct History<T: Codable>: Codable {
         public let schedule: CoopScheduleQuery.CoopSchedule
         public let results: [T]
-    }
-
-    // MARK: - Result
-
-    public struct CoopResult: Codable {
-        public let id: CoopHistoryDetailQuery.ID
     }
 
     public let hash: SHA256Hash = .CoopHistoryQuery

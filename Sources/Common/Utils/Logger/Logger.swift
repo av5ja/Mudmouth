@@ -24,8 +24,8 @@ public enum Logger {
     }
 
     public static func configure(
-        //        format _: String = "$DHH:mm:ss$d $L: $M",
-        format _: String = "$DHH:mm:ss$d $C$L$c: $M",
+        //        format: String = "$DHH:mm:ss$d $C$L$c: $N.$F:$l -> $M",
+        format: String = "$DHH:mm:ss$d $L$c: $M",
         logFileAmount _: Int = 10,
         logFileMaxSize _: Int = 1 * 1024 * 1024,
         useNSLog: Bool = false,
@@ -34,7 +34,7 @@ public enum Logger {
     ) {
         logger.addDestination(FileDestination(url: baseURL, minLevel: .debug, colored: colored))
         #if targetEnvironment(simulator) || DEBUG
-            logger.addDestination(ConsoleDestination(minLevel: .verbose, useNSLog: useNSLog, useTerminalColors: userTerminalColors, logPrintWay: .logger(subsystem: "Main", category: "UI")))
+            logger.addDestination(ConsoleDestination(format: format, minLevel: .verbose, useNSLog: useNSLog, useTerminalColors: userTerminalColors, logPrintWay: .logger(subsystem: "Main", category: "UI")))
         #endif
     }
 

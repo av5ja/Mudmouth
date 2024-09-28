@@ -31,6 +31,12 @@ open class Thunder: Alamofire.Session {
         try await request(CoopRecordQuery())
     }
 
+    /// CoopHistoryDetailQuery
+    /// - Returns: <#description#>
+    open func getHistoryDetail(id: CoopHistoryDetailQuery.ID) async throws -> CoopHistoryDetailQuery.ResponseType {
+        try await request(CoopHistoryDetailQuery(id: id))
+    }
+
     // MARK: Public
 
     @discardableResult
@@ -38,12 +44,6 @@ open class Thunder: Alamofire.Session {
         performTaskWithErrorHandlingResult(action: {
             Keychain.default.credential = try .init(response.notification.request.content.userInfo)
         })
-    }
-
-    /// CoopHistoryDetailQuery
-    /// - Returns: <#description#>
-    public func getHistoryDetail(id: CoopHistoryDetailQuery.ID) async throws -> CoopHistoryDetailQuery.ResponseType {
-        try await request(CoopHistoryDetailQuery(id: id))
     }
 
     // MARK: Private
@@ -61,12 +61,14 @@ open class Thunder: Alamofire.Session {
     /// - Parameter req: <#req description#>
     /// - Returns: <#description#>
     private func request<T: AuthorizedType>(_ req: T) async throws -> T.ResponseType {
-        let result = await request(req, interceptor: interceptor)
+        let result = await request(req, interceptor: authenticator)
             .serializingData()
             .result
         switch result {
         case .success(let data):
+            Logger.debug("\(req.hash.description) -> \(data)")
             return try await proxy(req, data: data)
+
         case .failure(let error):
             Logger.error(error)
             throw AFError.sessionDeinitialized
@@ -98,11 +100,13 @@ open class Thunder: Alamofire.Session {
         // swiftlint:disable:next discouraged_optional_collection
         let parameters: [String: Any]? = try JSONSerialization.jsonObject(with: data) as? [String: Any]
         let result = await request(req.url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
-            .serializingDecodable(T.ResponseType.self, decoder: decoder)
+            .serializingData()
             .result
         switch result {
-        case .success(let response):
-            return response
+        case .success(let data):
+            Logger.debug("\(req.hash.description) <- \(data)")
+            return try decoder.decode(T.ResponseType.self, from: data)
+
         case .failure(let error):
             Logger.error(error)
             throw AFError.sessionDeinitialized

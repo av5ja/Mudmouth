@@ -12,9 +12,12 @@ import Foundation
 import ThunderSDK
 
 extension Thunder: Authenticator {
-    public func apply(_: UserInfo, to _: inout URLRequest) {
+    public func apply(_ credential: UserInfo, to request: inout URLRequest) {
         #if targetEnvironment(simulator)
         #else
+            request.headers.add(.authorization(bearerToken: credential.bulletToken.token))
+            request.headers.add(.userAgent(credential.userAgent))
+            request.headers.add(.version(credential.version))
         #endif
     }
 
