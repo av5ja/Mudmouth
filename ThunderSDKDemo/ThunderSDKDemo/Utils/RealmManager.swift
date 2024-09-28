@@ -77,10 +77,10 @@ final class RealmManager: Thunder, ObservableObject {
 
     private func inWriteTransaction(transaction: @escaping (Realm) -> Void) {
         // スレッドセーフの観点からこうしてみる(ChatGPTの指摘)
-        // swiftlint:disable:next force_try
         Task(priority: .background, operation: {
             do {
                 try autoreleasepool {
+                    // インスタンスを毎回生成する、賢い
                     let realm: Realm = try Realm(configuration: .default)
                     if realm.isInWriteTransaction {
                         transaction(realm)
