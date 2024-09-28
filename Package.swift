@@ -56,6 +56,7 @@ let package = Package(
                 "BetterSafariView",
                 "Common",
                 "AlertKit",
+                "Alamofire",
                 .product(name: "Gzip", package: "GzipSwift"),
                 .product(name: "X509", package: "swift-certificates"),
                 .product(name: "NIO", package: "swift-nio"),

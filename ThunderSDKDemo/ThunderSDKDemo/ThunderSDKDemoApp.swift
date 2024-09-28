@@ -14,6 +14,7 @@ import ThunderSDK
 
 @main
 struct ThunderSDKDemoApp: App {
+    @Environment(\.scenePhase) var scenePhase
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var settings: UserSettings = .default
 
@@ -23,6 +24,8 @@ struct ThunderSDKDemoApp: App {
                 .environment(\.realm, try! Realm(configuration: .default))
                 .environment(\.realmConfiguration, .default)
                 .environmentObject(settings)
+                .overrideUserInterfaceStyle(settings.preferredColorScheme, scenePhase)
+                .addScenePhaseObserver(scenePhase)
                 .fullScreenCover(isPresented: settings.$isFirstLaunch, content: {
                     MudmouthView()
                 })
