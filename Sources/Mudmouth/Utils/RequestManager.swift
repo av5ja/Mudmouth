@@ -26,6 +26,8 @@ final class RequestManager: CertificateManager {
 
     // MARK: Internal
 
+    let generator: UINotificationFeedbackGenerator = .init()
+
     @MainActor
     func saveToPreferences() async throws {
         let granted: Bool = try await requestAuthorization()
@@ -33,15 +35,15 @@ final class RequestManager: CertificateManager {
             throw MMError.NotGranted
         }
         let manager: NETunnelProviderManager = .init()
-        manager.localizedDescription = "@Salmonia3JP"
+        manager.localizedDescription = "Thunder3"
         let proto: NETunnelProviderProtocol = .init()
         proto.providerBundleIdentifier = bundleIdentifier
-        proto.serverAddress = "Salmonia3"
+        proto.serverAddress = "Thunder3"
         manager.protocolConfiguration = proto
         manager.isEnabled = true
         // 被っているものがあればコピーしない
         let managers: [NETunnelProviderManager] = try await NETunnelProviderManager.loadAllFromPreferences()
-        if !managers.contains(where: { $0.protocolConfiguration?.serverAddress == "Salmonia3" }) {
+        if !managers.contains(where: { $0.protocolConfiguration?.serverAddress == "Thunder3" }) {
             try await manager.saveToPreferences()
         }
     }
@@ -66,12 +68,11 @@ final class RequestManager: CertificateManager {
         let encoder: JSONEncoder = .init()
         provider.isEnabled = true
         try await provider.saveToPreferences()
-        let certificate = configuration.generate()
         let data: Data = try encoder.encode(configuration.generate())
         try provider.connection.startVPNTunnel(options: [
             NEVPNConnectionStartOptionPassword: data as NSObject,
         ])
-        UINotificationFeedbackGenerator().notificationOccurred(.success)
+        generator.notificationOccurred(.success)
         await UIApplication.shared.open(.init(unsafeString: "com.nintendo.znca://znca/game/4834290508791808"))
     }
 

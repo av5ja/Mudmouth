@@ -97,7 +97,7 @@
 --disable yodaConditions
 
 # Opt-in Rules (disabled by default)
---enable acronyms
+# --enable acronyms
 --enable blankLineAfterSwitchCase
 --enable blankLinesBetweenImports
 --enable blockComments

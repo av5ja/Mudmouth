@@ -11,7 +11,7 @@ import Alamofire
 import Foundation
 import ThunderSDK
 
-public final class CoopHistoryDetailQuery: RequestType {
+public final class CoopHistoryDetailQuery: AuthorizedType {
     // MARK: Lifecycle
 
     public init(id: ID) {
@@ -43,14 +43,14 @@ public final class CoopHistoryDetailQuery: RequestType {
         public let goldenIkuraNum: Int
         public let goldenIkuraAssistNum: Int
         public let scenarioCode: String?
-        public let waveDetails: [WaveDetail]
+        public let waveDetails: [WaveResult]
     }
 
     // MARK: - ID
 
     public struct ID: Codable {
         public let type: String
-        public let nplnUserID: String
+        public let nplnUserId: String
         public let playTime: Date
         public let uuid: UUID
 
@@ -63,14 +63,14 @@ public final class CoopHistoryDetailQuery: RequestType {
                 return formatter
             }()
             let playTime: String = formatter.string(from: playTime)
-            return "CoopHistoryDetail-u-\(nplnUserID):\(playTime)_\(uuid.uuidString.lowercased())".base64EncodedString
+            return "CoopHistoryDetail-u-\(nplnUserId):\(playTime)_\(uuid.uuidString.lowercased())".base64EncodedString
         }
     }
 
     public struct JobResult: Codable {
         public let failureWave: Int?
         public let isClear: Bool
-        public let bossID: CoopEnemy
+        public let bossId: CoopEnemy
         public let isBossDefeated: Bool
     }
 
@@ -81,14 +81,14 @@ public final class CoopHistoryDetailQuery: RequestType {
         public let id: ID
         public let byname: String
         public let name: String
-        public let nameID: String
+        public let nameId: String
         public let nameplate: Nameplate
         public let uniform: CoopSkinInfo
-        public let species: String
+        public let species: Species
         public let weaponList: [WeaponInfoMain]
         public let isMyself: Bool
-        public let nplnUserID: String
-        public let specialID: WeaponInfoSpecial?
+        public let nplnUserId: String
+        public let specialId: WeaponInfoSpecial?
         public let ikuraNum: Int
         public let goldenIkuraNum: Int
         public let goldenIkuraAssistNum: Int
@@ -97,7 +97,7 @@ public final class CoopHistoryDetailQuery: RequestType {
         public let bossKillCounts: [Int]
         public let bossKillCountsTotal: Int
         public let jobScore: Int?
-        public let gradeID: CoopGrade?
+        public let gradeId: CoopGrade?
         public let kumaPoint: Int?
         public let gradePoint: Int?
         public let smellMeter: Int?
@@ -109,14 +109,14 @@ public final class CoopHistoryDetailQuery: RequestType {
     // MARK: - OtherResultNameplate
 
     public struct Nameplate: Codable {
-        public let badges: [Int?]
+        public let badges: [BadgeInfo?]
         public let background: Background
     }
 
     // MARK: - Background
 
     public struct Background: Codable {
-        public let id: Int
+        public let id: NamePlateBgInfo
         public let textColor: TextColor
     }
 
@@ -131,7 +131,7 @@ public final class CoopHistoryDetailQuery: RequestType {
 
     // MARK: - WaveDetail
 
-    public struct WaveDetail: Codable {
+    public struct WaveResult: Codable {
         public let hash: String
         public let waterLevel: CoopWaterLevel
         public let eventType: CoopEvent

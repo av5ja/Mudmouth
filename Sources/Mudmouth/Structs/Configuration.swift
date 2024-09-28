@@ -40,7 +40,7 @@ public struct Configuration: Codable {
         // swiftlint:disable:next force_try
         let name: DistinguishedName = try! DistinguishedName {
             CommonName("Mudmouth")
-            OrganizationName("@Salmonia3JP")
+            OrganizationName("@Thunder3")
         }
         // swiftlint:disable:next force_try
         let extensions: Certificate.Extensions = try! .init([
@@ -152,8 +152,8 @@ public struct Configuration: Codable {
         let currentTime: Date = .default
         // swiftlint:disable:next force_try
         let subject: DistinguishedName = try! DistinguishedName {
-            CommonName("Salmonia3 Signed")
-            OrganizationName("@Salmonia3JP")
+            CommonName("Mudmouth")
+            OrganizationName("@Thunder3")
         }
         // swiftlint:disable:next force_try
         let extensions: Certificate.Extensions = try! Certificate.Extensions {
