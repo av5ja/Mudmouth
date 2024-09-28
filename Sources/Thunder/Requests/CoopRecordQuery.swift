@@ -31,7 +31,7 @@ public final class CoopRecordQuery: AuthorizedType {
 
     public struct EnemyRecord: Codable {
         public let count: Int
-        public let enemyID: CoopEnemy
+        public let enemyId: CoopEnemy
     }
 
     // MARK: - StageRecord
@@ -43,7 +43,7 @@ public final class CoopRecordQuery: AuthorizedType {
         public let grade: Int
         public let gradePoint: Int
         public let rank: Int?
-        public let stageID: CoopStage
+        public let stageId: CoopStage
         public let trophy: String?
     }
 
