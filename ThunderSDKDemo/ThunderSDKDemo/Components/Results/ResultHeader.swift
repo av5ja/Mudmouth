@@ -17,6 +17,7 @@ struct ResultHeader: View {
 
     var body: some View {
         WebImage(rawValue: result.stageId)
+            .resizable()
             .scaledToFill()
             .frame(maxWidth: .infinity)
             .frame(height: 75)
@@ -31,12 +32,12 @@ struct ResultHeader: View {
                 VStack(alignment: .leading, spacing: 4, content: {
                     Text(result.playTime, format: .dateTime)
                         .background(content: {
-                            //                        Color.black.opacity(0.75)
+                            Color.black.opacity(0.75)
                         })
-//                    Text(result.stageId)
-//                        .background(content: {
-                    //                        Color.black.opacity(0.75)
-//                        })
+                    Text(rawValue: result.stageId)
+                        .background(content: {
+                            Color.black.opacity(0.75)
+                        })
                 })
                 .font(.custom(.Splatfont2, size: 13))
                 .foregroundColor(.white)
@@ -46,11 +47,11 @@ struct ResultHeader: View {
             .overlay(alignment: .center, content: {
                 if let dangerRate: Decimal128 = result.dangerRate {
                     HStack(content: {
-//                        Text(LocalizedType.CoopHistoryDangerRatio)
-//                        Text(dangerRate.doubleValue, format: .percent)
+                        Text(rawValue: LocalizedString.CoopHistoryDangerRatio)
+                        Text(dangerRate.doubleValue, format: .percent)
                     })
                     .font(.custom(.Splatfont1, size: 22))
-//                    .foregroundColor(SPColor.SP2.SPYellow)
+                    .foregroundColor(SPColor.SP2.SPYellow)
                     .rotationEffect(.degrees(-5))
 //                    .scaleEffect(scale)
                 }
@@ -58,10 +59,11 @@ struct ResultHeader: View {
             .overlay(alignment: .topLeading, content: {})
             .overlay(alignment: .bottomTrailing, content: {
                 HStack(spacing: 2, content: {
-//                    ForEach(result.weaponList.indices, id: \.self, content: { index in
-//                        SPImage(result.weaponList[index])
-//                            .frame(width: 28, height: 28)
-//                    })
+                    ForEach(result.weaponList.indices, id: \.self, content: { index in
+                        WebImage(rawValue: result.weaponList[index])
+                            .resizable()
+                            .frame(width: 28, height: 28)
+                    })
 
                 })
                 .padding(.horizontal, 4)
@@ -73,11 +75,11 @@ struct ResultHeader: View {
                 .padding(.bottom, 4)
             })
             .overlay(alignment: .topTrailing, content: {
-//                Text(result.isClear ? LocalizedType.CoopHistoryClear : LocalizedType.CoopHistoryFailure)
-//                    .font(.custom(.Splatfont1, size: 17))
-//                    .foregroundColor(result.isClear ? SPColor.SP2.SPGreen : SPColor.SP2.SPOrange)
-//                    .padding(.horizontal, 4)
-//                    .padding(.top, 4)
+                Text(rawValue: result.isClear ? LocalizedString.CoopHistoryClear : LocalizedString.CoopHistoryFailure)
+                    .font(.custom(.Splatfont1, size: 17))
+                    .foregroundColor(result.isClear ? SPColor.SP2.SPGreen : SPColor.SP2.SPOrange)
+                    .padding(.horizontal, 4)
+                    .padding(.top, 4)
             })
 //            .onAppear(perform: {
 //                withAnimation(.spring(duration: 0.5, bounce: 0.25), {

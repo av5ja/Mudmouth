@@ -55,8 +55,8 @@ final class RealmCoopResult: Object, Codable, Identifiable {
         gradeId = result.myResult.gradeId
         smellMeter = result.myResult.smellMeter
 
-//            self.players = .init(contentsOf: result.members.map(\.object))
-//            self.waves = .init(contentsOf: result.waveDetails.map(\.object))
+        players = .init(contentsOf: result.members.map { RealmCoopPlayer(result: $0) })
+        waves = .init(contentsOf: result.waveDetails.map { RealmCoopWave(result: $0) })
     }
 
     // MARK: Internal
@@ -117,6 +117,12 @@ final class RealmCoopResult: Object, Codable, Identifiable {
     @Persisted(originProperty: "results") private var schedules: LinkingObjects<RealmCoopSchedule>
 }
 
+extension CoopHistoryDetailQuery.CoopResult {
+    var members: [CoopHistoryDetailQuery.MemberResult] {
+        [myResult] + otherResults
+    }
+}
+
 extension Decimal {
     var decimal128: Decimal128 {
         Decimal128(value: self)
@@ -124,16 +130,18 @@ extension Decimal {
 }
 
 extension RealmCoopResult {
-//    /// スケジュール
-//    private var schedule: RealmCoopSchedule {
-//        schedules.first ?? .preview
-//    }
+    /// スケジュール
+    private var schedule: RealmCoopSchedule {
+        // swiftlint:disable:next force_unwrapping
+        schedules.first!
+    }
 
-//    var weaponList: List<WeaponInfoMain> {
-//        schedule.weaponList
-//    }
+    var weaponList: List<WeaponInfoMain> {
+        schedule.weaponList
+    }
 
-//    var player: RealmCoopPlayer {
-//        players.first(where: { $0.isMyself }) ?? .preview
-//    }
+    var player: RealmCoopPlayer {
+        // swiftlint:disable:next force_unwrapping
+        players.first(where: { $0.isMyself })!
+    }
 }

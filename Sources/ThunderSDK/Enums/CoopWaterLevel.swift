@@ -22,4 +22,11 @@ public enum CoopWaterLevel: Int, CaseIterable, Codable, Identifiable {
     // MARK: Public
 
     public var id: Int { rawValue }
+
+    // MARK: Internal
+
+    /// 翻訳データ
+    var description: String {
+        NSLocalizedString(String(describing: self), bundle: .main, comment: "")
+    }
 }

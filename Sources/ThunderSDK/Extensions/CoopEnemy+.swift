@@ -9,7 +9,7 @@
 
 import Foundation
 
-extension CoopEnemy {
+public extension CoopEnemy {
     /// オオモノシャケ
     static let regular: AllCases = allCases.filter { $0.rawValue < 20 }
     /// オカシラシャケ

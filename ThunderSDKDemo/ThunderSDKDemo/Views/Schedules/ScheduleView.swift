@@ -58,26 +58,26 @@ struct ScheduleView: View {
                     .padding(.bottom, 4)
                     .padding(.trailing, 4)
                 })
-//                .foregroundColor(schedule.backgroundColor)
+                .foregroundColor(schedule.backgroundColor)
         })
         .padding(.bottom, 2)
     }
 }
 
-// private extension RealmCoopSchedule {
-//    var backgroundColor: Color {
-//        switch (isBigRun, !results.isEmpty) {
-//        case (true, true):
-//            return SPColor.SP3.SPBigRun
-//        case (true, false):
-//            return SPColor.SP3.SPBigRun
-//        case (false, true):
-//            return SPColor.SP3.SPSalmonOrange
-//        case (false, false):
-//            return SPColor.SP3.SPSalmonOrangeDarker
-//        }
-//    }
-// }
+private extension RealmCoopSchedule {
+    var backgroundColor: Color {
+        switch (isBigRun, !results.isEmpty) {
+        case (true, true):
+            return SPColor.SP3.SPBigRun
+        case (true, false):
+            return SPColor.SP3.SPBigRun
+        case (false, true):
+            return SPColor.SP3.SPSalmonOrange
+        case (false, false):
+            return SPColor.SP3.SPSalmonOrangeDarker
+        }
+    }
+}
 
 // #Preview {
 //    ScheduleView(schedule: .preview)

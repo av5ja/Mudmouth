@@ -19,17 +19,17 @@ struct ResultStatus: View {
                 HStack(spacing: 0, content: {
 //                    GoldenIkura
 //                        .frame(width: 24, height: 20)
-//                    Text(result.goldenIkuraNum, format: .number())
-//                        .frame(maxWidth: .infinity, alignment: .trailing)
-//                        .font(.custom(.Splatfont2, size: 14))
+                    Text(result.goldenIkuraNum, format: .count)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .font(.custom(.Splatfont2, size: 14))
                 })
                 .frame(width: 73.32, height: 22)
                 HStack(spacing: 0, content: {
 //                    Ikura
 //                        .frame(width: 24, height: 20)
-//                    Text(result.ikuraNum, format: .number())
-//                        .frame(maxWidth: .infinity, alignment: .trailing)
-//                        .font(.custom(.Splatfont2, size: 14))
+                    Text(result.ikuraNum, format: .count)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .font(.custom(.Splatfont2, size: 14))
                 })
                 .frame(width: 73.32, height: 22)
             })
@@ -38,23 +38,23 @@ struct ResultStatus: View {
                 if let gradeId: CoopGrade = result.gradeId,
                    let gradePoint = result.gradePoint
                 {
-//                    Text(gradeId)
-//                        .font(.custom(.Splatfont2, size: 13))
-//                        .frame(maxWidth: .infinity, alignment: .trailing)
-//                        .padding(.bottom, 6)
+                    Text(rawValue: gradeId)
+                        .font(.custom(.Splatfont2, size: 13))
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                        .padding(.bottom, 6)
                     ZStack(alignment: .trailing, content: {
                         GeometryReader(content: { geometry in
                             Rectangle()
-//                                .fill(SPColor.SP2.SPBackground)
+                                .fill(SPColor.SP2.SPBackground)
                                 .frame(width: geometry.size.width, height: 15, alignment: .leading)
                             Rectangle()
-//                                .fill(SPColor.SP2.SPOrange)
+                                .fill(SPColor.SP2.SPOrange)
                                 .frame(width: geometry.size.width * min(1, CGFloat(gradePoint) / 999) * scale, height: 15, alignment: .leading)
-//                            Text(gradePoint, format: .number())
-//                                .foregroundColor(.white)
-//                                .font(.custom(.Splatfont2, size: 12))
-//                                .padding(.trailing, 4)
-//                                .frame(width: geometry.size.width, height: 15, alignment: .trailing)
+                            Text(gradePoint, format: .number)
+                                .foregroundColor(.white)
+                                .font(.custom(.Splatfont2, size: 12))
+                                .padding(.trailing, 4)
+                                .frame(width: geometry.size.width, height: 15, alignment: .trailing)
                         })
                     })
                 }

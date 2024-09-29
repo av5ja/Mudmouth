@@ -31,10 +31,10 @@ struct ResultWave: View {
         HStack(spacing: 0, content: {
             VStack(alignment: .leading, content: {
                 VStack(alignment: .leading, spacing: 2, content: {
-//                    Text(wave.waterLevel)
-//                        .font(.custom(.Splatfont2, size: 12))
-//                    Text(wave.eventType)
-//                        .font(.custom(.Splatfont2, size: 14))
+                    Text(rawValue: wave.waterLevel)
+                        .font(.custom(.Splatfont2, size: 12))
+                    Text(rawValue: wave.eventType)
+                        .font(.custom(.Splatfont2, size: 14))
                 })
             })
             .foregroundColor(.black.opacity(0.85))
@@ -46,8 +46,8 @@ struct ResultWave: View {
                 if let bossId: CoopEnemy = result.bossId,
                    wave.waveId == result.waves.count
                 {
-//                    Text(bossId)
-//                        .font(.custom(.Splatfont2, size: 14))
+                    Text(rawValue: bossId)
+                        .font(.custom(.Splatfont2, size: 14))
                 }
                 if let goldenIkuraNum: Int = wave.goldenIkuraNum,
                    let quotaNum: Int = wave.quotaNum
@@ -58,12 +58,12 @@ struct ResultWave: View {
                         .font(.custom(.Splatfont2, size: 12))
                 }
             })
-//            .foregroundColor(SPColor.SP2.SPWhite)
+            .foregroundColor(SPColor.SP2.SPWhite)
             .font(.custom(.Splatfont2, size: 14))
             .frame(height: 39)
         })
         .background(content: {
-//            SPColor.SP2.SPYellow
+            SPColor.SP2.SPYellow
         })
     }
 }
@@ -85,7 +85,7 @@ struct ResultWaveSP2: View {
                         .background(content: {
                             Color.blue.opacity(0.2)
                         })
-//                        .frame(height: height)
+                        .frame(height: height)
                 })
             })
         })
@@ -130,40 +130,40 @@ struct ResultWaveSP2: View {
                     .frame(height: 30)
                     .background(content: {
                         Rectangle()
-//                            .fill(SPColor.SP2.SPBackground)
+                            .fill(SPColor.SP2.SPBackground)
                     })
             }
             if let bossId: CoopEnemy = result.bossId,
                wave.waveId == result.waves.count
             {
-//                Text(bossId)
-//                    .font(.custom(.Splatfont2, size: 20))
-//                    .frame(maxWidth: .infinity)
-//                    .frame(height: 30)
-//                    .minimumScaleFactor(0.7)
-//                    .lineLimit(1)
-//                    .background(content: {
-//                        Rectangle()
-                ////                            .fill(SPColor.SP2.SPBackground)
-//                    })
+                Text(rawValue: bossId)
+                    .font(.custom(.Splatfont2, size: 20))
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 30)
+                    .minimumScaleFactor(0.7)
+                    .lineLimit(1)
+                    .background(content: {
+                        Rectangle()
+                            .fill(SPColor.SP2.SPBackground)
+                    })
             }
-//            Text(wave.waterLevel)
-//                .font(.custom(.Splatfont2, size: 12))
-//                .foregroundColor(.black)
-//                .padding(.vertical, 4)
-//                .lineLimit(1)
-//                .minimumScaleFactor(0.7)
-//            Text(wave.eventType)
-//                .font(.custom(.Splatfont2, size: 12))
-//                .lineLimit(1)
-//                .minimumScaleFactor(0.7)
-//                .foregroundColor(.black)
-//                .padding(.bottom, 4)
+            Text(rawValue: wave.waterLevel)
+                .font(.custom(.Splatfont2, size: 12))
+                .foregroundColor(.black)
+                .padding(.vertical, 4)
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+            Text(rawValue: wave.eventType)
+                .font(.custom(.Splatfont2, size: 12))
+                .lineLimit(1)
+                .minimumScaleFactor(0.7)
+                .foregroundColor(.black)
+                .padding(.bottom, 4)
         })
         .frame(maxWidth: .infinity)
         .frame(height: 100)
         .background(content: {
-//            SPColor.SP2.SPYellow
+            SPColor.SP2.SPYellow
         })
         .clipShape(RoundedRectangle(cornerRadius: 4))
     }

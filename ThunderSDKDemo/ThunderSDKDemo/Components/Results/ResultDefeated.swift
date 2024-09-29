@@ -15,16 +15,16 @@ struct ResultDefeated: View {
 
     var body: some View {
         LazyVGrid(columns: .init(repeating: .init(.flexible(), spacing: 2), count: 4), spacing: 2, content: {
-//            ForEach(CoopEnemy.regular.indices, id: \.self, content: { index in
-//                let enemyId: CoopEnemy = CoopEnemy.allCases[index]
-//                let bossCount: CGFloat = .init(result.bossCounts[index])
-//                let count: Int = result.player.bossKillCounts[index] ?? 0
-//                let bossKillCount: CGFloat = .init(result.bossKillCounts[index])
-//                let bias: CGFloat = bossCount == 0 ? 0 : min(1, bossKillCount / bossCount)
-//                if bossCount != .zero {
-//                    _body(enemyId, bossCount: bossCount, bossKillCount: bossKillCount, count: count, bias: bias)
-//                }
-//            })
+            ForEach(CoopEnemy.regular.indices, id: \.self, content: { index in
+                let enemyId = CoopEnemy.allCases[index]
+                let bossCount: CGFloat = .init(result.bossCounts[index])
+                let count: Int = result.player.bossKillCounts[index] ?? 0
+                let bossKillCount: CGFloat = .init(result.bossKillCounts[index])
+                let bias: CGFloat = bossCount == 0 ? 0 : min(1, bossKillCount / bossCount)
+                if bossCount != .zero {
+                    _body(enemyId, bossCount: bossCount, bossKillCount: bossKillCount, count: count, bias: bias)
+                }
+            })
         })
 //        .onAppear(perform: {
 //            withAnimation(.easeIn(duration: 0.8), {
@@ -37,10 +37,10 @@ struct ResultDefeated: View {
     }
 
     @ViewBuilder
-    private func _body(_ enemyId: CoopEnemy, bossCount _: CGFloat, bossKillCount _: CGFloat, count _: Int, bias: CGFloat) -> some View {
+    private func _body(_ enemyId: CoopEnemy, bossCount: CGFloat, bossKillCount: CGFloat, count: Int, bias: CGFloat) -> some View {
         VStack(spacing: 0, content: {
             WebImage(rawValue: enemyId)
-//            SPImage(enemyId)
+                .resizable()
                 .scaledToFit()
                 .frame(width: 28, height: 28)
                 .padding(.top, 4)
@@ -48,21 +48,21 @@ struct ResultDefeated: View {
             GeometryReader(content: { geometry in
                 ZStack(alignment: .leading, content: {
                     Rectangle()
-//                        .fill(SPColor.SP3.SPGray)
+                        .fill(SPColor.SP3.SPGray)
                         .frame(width: geometry.size.width, height: 14)
                     Rectangle()
-//                        .fill(SPColor.SP3.SPOrange)
+                        .fill(SPColor.SP3.SPOrange)
                         .frame(width: geometry.size.width * bias * scale, height: 14)
                 })
                 .overlay(alignment: .center, content: {
-//                    Text("\(Int(bossKillCount))(\(count))/\(Int(bossCount))")
-//                        .font(.custom(.Splatfont2, size: 12))
+                    Text("\(Int(bossKillCount))(\(count))/\(Int(bossCount))")
+                        .font(.custom(.Splatfont2, size: 12))
                 })
             })
             .frame(height: 14)
         })
         .background(content: {
-//            bossCount == bossKillCount ? SPColor.SP3.SPYellow : SPColor.SP3.SPBackground
+            bossCount == bossKillCount ? SPColor.SP3.SPYellow : SPColor.SP3.SPBackground
         })
     }
 }
