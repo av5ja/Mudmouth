@@ -19,7 +19,7 @@ import Thunder
 //            _body
 //        })
 //        .navigationBarTitleDisplayMode(.inline)
-//        .navigationTitle(Text(LocalizedType.CoopHistorySupplyWeapon))
+//        .navigationTitle(Text(LocalizedString.CoopHistorySupplyWeapon))
 //    }
 //
 //    // MARK: Private

@@ -7,18 +7,22 @@
 //
 //
 
-import AlertKit
+#if !os(macOS)
+    import AlertKit
+#endif
 import Foundation
 
 @discardableResult
 func alert<T: Error>(_ error: T) -> T {
-    DispatchQueue.main.async {
-        if let error: SPError = error as? SPError {
-            AlertKitAPI.present(title: error.title, subtitle: error.errorDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
-        } else {
-            AlertKitAPI.present(title: error.localizedDescription, subtitle: nil, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+    #if !os(macOS)
+        DispatchQueue.main.async {
+            if let error: SPError = error as? SPError {
+                AlertKitAPI.present(title: error.title, subtitle: error.errorDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+            } else {
+                AlertKitAPI.present(title: error.localizedDescription, subtitle: nil, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+            }
         }
-    }
+    #endif
     Logger.error(error)
     return error
 }
@@ -53,10 +57,14 @@ public func performTaskWithErrorHandlingResult(action: () throws -> Void) -> Boo
         try action()
         return true
     } catch let error as SPError {
-        AlertKitAPI.present(title: error.title, subtitle: error.errorDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+        #if !os(macOS)
+            AlertKitAPI.present(title: error.title, subtitle: error.errorDescription, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+        #endif
         return false
     } catch {
-        AlertKitAPI.present(title: error.localizedDescription, subtitle: nil, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+        #if !os(macOS)
+            AlertKitAPI.present(title: error.localizedDescription, subtitle: nil, icon: .error, style: .iOS17AppleMusic, haptic: .error)
+        #endif
         return false
     }
 }

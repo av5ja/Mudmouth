@@ -49,7 +49,6 @@ final class RealmManager: Thunder, ObservableObject {
         inWriteTransaction(transaction: { realm in
             for history in response.histories {
                 let schedule = realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: history.schedule.id) ?? RealmCoopSchedule(schedule: history.schedule)
-                Logger.debug(schedule.results.count)
                 for result in history.results {
 //                    let result = realm.create(RealmCoopResult.self, value: result.dictionaryObject, update: .modified)
                     let result: RealmCoopResult = realm.create(RealmCoopResult.self, value: RealmCoopResult(result: result), update: .modified)
@@ -58,7 +57,6 @@ final class RealmManager: Thunder, ObservableObject {
                     }
                 }
                 realm.add(schedule, update: .modified)
-                Logger.debug(schedule.results.count)
             }
         })
         return response
@@ -101,6 +99,7 @@ public extension Realm.Configuration {
         else {
             fatalError("RealmEncryptionKey is not defined in .env")
         }
+        Logger.debug(value.data(using: .utf8)!.map { String(format: "%02X", $0) }.joined())
         // swiftlint:disable:next force_unwrapping
         return value.data(using: .utf8)!
     }()

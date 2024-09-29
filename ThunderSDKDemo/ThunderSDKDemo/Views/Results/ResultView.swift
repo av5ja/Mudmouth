@@ -15,16 +15,15 @@ struct ResultView: View {
     ///    @EnvironmentObject private var config: ThunderConfig
     let result: RealmCoopResult
 
+    /// モードに依って表示を変える
     var body: some View {
         NavigationLinker(destination: {
-//            switch config.resultDisplayMode {
-//            case .SINGLE:
-//                ResultDetailView(result: result)
-//            case .TAB:
-            CarouselTabView(result: result)
-//            case .CAROUSEL:
-//                CarouselView(result: result)
-//            }
+            switch UIDevice.current.userInterfaceIdiom {
+            case .pad:
+                ResultDetailView(result: result)
+            default:
+                CarouselView(result: result)
+            }
         }, label: {
             _body
         })

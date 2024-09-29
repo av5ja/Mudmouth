@@ -100,14 +100,14 @@ struct ResultWaveSP2: View {
 //        switch wave.isExtra {
 //        case true:
 //            EmptyView()
-//            //            Text(LocalizedType.CoopHistoryExWave)
+//            //            Text(LocalizedString.CoopHistoryExWave)
         ////                .font(.custom(.Splatfont2, size: 15))
         ////                .foregroundColor(SPColor.SP3.SPSalmonOrange)
         ////                .padding(.top, 4)
         ////                .padding(.bottom, 6)
 //        case false:
 //            HStack(spacing: 2, content: {
-        ////                Text(LocalizedType.CoopHistoryWave)
+        ////                Text(LocalizedString.CoopHistoryWave)
         ////                Text(wave.waveId, format: .number)
 //            })
 //            .font(.custom(.Splatfont2, size: 15))

@@ -22,6 +22,7 @@ extension Thunder: Authenticator {
             request.headers.add(.version(credential.version))
         #else
             Logger.debug(credential.bulletToken.token)
+            Logger.debug(credential.gameWebToken.rawValue)
             Logger.debug(credential.userAgent)
             Logger.debug(credential.version)
             request.headers.add(.authorization(bearerToken: credential.bulletToken.token))

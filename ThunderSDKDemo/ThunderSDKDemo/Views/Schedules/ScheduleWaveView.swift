@@ -24,7 +24,7 @@
 //            _body
 //        })
 //        .navigationBarTitleDisplayMode(.inline)
-//        .navigationTitle(Text(LocalizedType.CoopHistoryWave))
+//        .navigationTitle(Text(LocalizedString.CoopHistoryWave))
 //    }
 //
 //    // MARK: Private

@@ -10,3 +10,15 @@ deploy:
 format:
 	swiftformat .
 	swiftlint fix --strict
+
+# .PHONY: build
+# build:
+# 	fastlane build
+
+.PHONY: beta
+beta:
+	fastlane beta
+
+.PHONY: auth
+auth:
+	fastlane spaceauth -u crossguitar@live.jp

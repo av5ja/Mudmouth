@@ -37,7 +37,7 @@ struct SchedulesView: View {
             let manager: RealmManager = .init()
             try await manager.fetch()
         })
-//        .navigationTitle(Text(LocalizedType.CoopHistoryTitle))
+//        .navigationTitle(Text(LocalizedString.CoopHistoryTitle))
 //        .refreshable(action: {
 //            try await manager.refresh()
 //        })

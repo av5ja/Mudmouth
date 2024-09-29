@@ -6,11 +6,9 @@
 //  Copyright © 2023 Magi, Corporation. All rights reserved.
 //
 
-import AlertKit
 import NetworkExtension
 import OSLog
 import SwiftUI
-import ThunderSDK
 
 public struct Connect: View {
     // MARK: Lifecycle

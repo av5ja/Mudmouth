@@ -17,7 +17,7 @@ public enum ThunderSDK {
     // swiftlint:disable:next force_unwrapping
     @discardableResult
     public static func configure(url: String) -> Bool {
-        Logger.configure(logFileAmount: 1024, logFileMaxSize: 1024, useNSLog: true, userTerminalColors: true, colored: true)
+        Logger.configure(logFileAmount: 1, logFileMaxSize: 5 * 1024 * 1024, useNSLog: true, userTerminalColors: true, colored: true)
         if let url: URL = .init(string: url) {
             baseURL = url
         }
@@ -48,7 +48,7 @@ public enum ThunderSDK {
         private static var baseURL: URL = .init(string: "http://localhost:18787")!
     #else
         // swiftlint:disable:next force_unwrapping
-        private static var baseURL: URL = .init(string: "https://api.splatnet3.com")!
+        private static var baseURL: URL = .init(string: "https://api-dev.splatnet3.com")!
     #endif
 
     // swiftlint:disable:next force_unwrapping

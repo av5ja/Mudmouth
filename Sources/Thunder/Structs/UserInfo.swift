@@ -149,7 +149,7 @@ public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
         else {
             return nil
         }
-        return .init(bulletToken: "TtmZYWoTZ_LVw-LLxyVJ9LwfSzPvsQAfZQxmdmQmELJwNBOg8dwNqFDwtu21KMbQNthWiHcvtjb-2FVIvHXnJe2XR2tcvDNEiQXg3xKCYIH6T6PLMOjDGyZ5R8g=", gameWebToken: gameWebToken, version: version, userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148")
+        return .init(bulletToken: bulletToken, gameWebToken: gameWebToken, version: version, userAgent: userAgent)
     }()
 
     let bulletToken: Token
