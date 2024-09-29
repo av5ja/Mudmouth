@@ -34,6 +34,8 @@ protocol RequestType: URLRequestConvertible {
     var baseURL: URL { get }
     /// エンコーディング方式
     var encoding: ParameterEncoding { get }
+    /// パラメータ
+    var parameters: Parameters? { get }
 }
 
 extension RequestType {
@@ -62,6 +64,10 @@ extension RequestType {
         [:]
     }
 
+    var parameters: Parameters? {
+        nil
+    }
+
     public func asURLRequest() throws -> URLRequest {
         // swiftlint:disable:next force_unwrapping
         let url: URL = .init(string: baseURL.appendingPathComponent(path).absoluteString.removingPercentEncoding!)!
@@ -71,7 +77,6 @@ extension RequestType {
         request.allHTTPHeaderFields = headers?.dictionary
         // パラメータが設定されていればエンコードして設定する
         // パラメータを設定
-        let parameters: Parameters = [:]
         return method == .get ? request : try encoding.encode(request, with: parameters)
     }
 }

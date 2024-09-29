@@ -24,7 +24,6 @@ public enum Logger {
     }
 
     public static func configure(
-        //        format: String = "$DHH:mm:ss$d $C$L$c: $N.$F:$l -> $M",
         format: String = "$DHH:mm:ss$d $L$c: $M",
         logFileAmount _: Int = 10,
         logFileMaxSize _: Int = 1 * 1024 * 1024,

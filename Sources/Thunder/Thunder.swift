@@ -28,22 +28,17 @@ open class Thunder {
         try await request(CoopScheduleQuery())
     }
 
-    /// CoopHistory
-    /// - Returns: <#description#>
-    open func getHistory() async throws -> CoopHistoryQuery.ResponseType {
-        try await request(CoopHistoryQuery())
-    }
-
     /// CoopRecordQuery
     /// - Returns: <#description#>
     open func getRecord() async throws -> CoopRecordQuery.ResponseType {
         try await request(CoopRecordQuery())
     }
 
-    /// CoopHistoryDetailQuery
+    /// CoopResultQuery
     /// - Returns: <#description#>
-    open func getHistoryDetail(id: CoopHistoryDetailQuery.ID) async throws -> CoopHistoryDetailQuery.ResponseType {
-        try await request(CoopHistoryDetailQuery(id: id))
+    open func getResults() async throws -> CoopResultQuery.ResponseType {
+        let histories = try await getHistoryDetail()
+        return try await request(CoopResultQuery(histories))
     }
 
     // MARK: Public
@@ -68,6 +63,53 @@ open class Thunder {
         AuthenticationInterceptor(authenticator: self, credential: keychain.credential)
     }
 
+    /// CoopHistory
+    /// - Returns: <#description#>
+    private func getHistory() async throws -> CoopHistoryQuery.ResponseType {
+        try await request(CoopHistoryQuery())
+    }
+
+    /// CoopHistoryDetailQuery
+    /// あるヒストリーのリザルトを全件取得する
+    /// - Returns: <#description#>
+    private func getHistoryDetail() async throws -> [CoopResultQuery.Request] {
+        let history = try await getHistory()
+        return try await withThrowingTaskGroup(of: CoopResultQuery.Request.self, body: { task in
+            for history in history.histories {
+                task.addTask(priority: .background, operation: { [self] in
+                    try await getHistoryDetail(history: history)
+                })
+            }
+            return try await task.reduce(into: [CoopResultQuery.Request]()) { results, result in
+                results.append(result)
+            }
+        })
+    }
+
+    /// CoopHistoryDetailQuery
+    /// あるスケジュールのリザルトを全件取得する
+    /// - Returns: <#description#>
+    private func getHistoryDetail(history: CoopHistoryQuery.History<CoopHistoryDetailQuery.ID>) async throws -> CoopResultQuery.Request {
+        let results: [Data] = try await withThrowingTaskGroup(of: Data.self, body: { task in
+            for id in history.results {
+                task.addTask(priority: .background, operation: { [self] in
+                    try await getHistoryDetail(id: id)
+                })
+            }
+            return try await task.reduce(into: [Data]()) { results, result in
+                results.append(result)
+            }
+        })
+        return .init(schedule: history.schedule, results: results)
+    }
+
+    /// CoopHistoryDetailQuery
+    /// リザルトを一件だけ取得する
+    /// - Returns: <#description#>
+    private func getHistoryDetail(id: CoopHistoryDetailQuery.ID) async throws -> Data {
+        try await request(CoopHistoryDetailQuery(id: id))
+    }
+
     /// 認証を必要とするデータ通信
     /// - Parameter req: <#req description#>
     /// - Returns: <#description#>
@@ -86,6 +128,24 @@ open class Thunder {
         }
     }
 
+    /// 認証を必要とするデータ通信
+    /// - Parameter req: <#req description#>
+    /// - Returns: <#description#>
+    private func request(_ request: some AuthorizedType) async throws -> Data {
+        let result = await session.request(request, interceptor: authenticator)
+            .serializingData()
+            .result
+        switch result {
+        case .success(let data):
+            Logger.debug("\(request.hash.description) -> \(data)")
+            return data
+
+        case .failure(let error):
+            Logger.error(error)
+            throw error
+        }
+    }
+
     /// 認証を必要としないデータ通信
     /// - Parameter req: <#req description#>
     /// - Returns: <#description#>
@@ -96,6 +156,9 @@ open class Thunder {
         switch result {
         case .success(let data):
             Logger.debug("\(String(describing: request)) <- \(data)")
+//            if request.method == .post {
+//                Logger.debug(String(data: data, encoding: .utf8)!)
+//            }
             return try decoder.decode(T.ResponseType.self, from: data)
 
         case .failure(let error):
