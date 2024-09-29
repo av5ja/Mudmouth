@@ -35,6 +35,7 @@ let package = Package(
         .package(url: "https://github.com/kishikawakatsumi/KeychainAccess.git", from: "4.2.2"),
         .package(url: "https://github.com/sparrowcode/AlertKit.git", from: "5.1.9"),
         .package(url: "https://github.com/1024jp/GzipSwift.git", exact: "6.0.1"),
+        .package(url: "https://github.com/MasamiYamate/SwiftPackageKeys.git", exact: "3.0.1"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -45,6 +46,7 @@ let package = Package(
                 "Alamofire",
                 "Common",
                 "ThunderSDK",
+                "SwiftPackageKeys",
             ],
             resources: [
             ],

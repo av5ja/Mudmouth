@@ -9,6 +9,7 @@
 
 import Alamofire
 import Foundation
+import SwiftPackageKeys
 
 public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
     // MARK: Lifecycle
@@ -47,12 +48,21 @@ public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
         self.userAgent = userAgent
     }
 
+    private init(bulletToken: String, gameWebToken: String, version: String, userAgent: String) {
+        self.bulletToken = .init(token: bulletToken)
+        self.gameWebToken = .init(rawValue: gameWebToken)
+        self.version = version
+        self.userAgent = userAgent
+    }
+
     // MARK: Public
 
+    /// NSA ID
     public var id: String {
         gameWebToken.payload.links.networkServiceAccount.id
     }
 
+    /// リフレッシュが必要かどうか
     public var requiresRefresh: Bool {
         bulletToken.expiresIn < .init()
     }
@@ -130,6 +140,17 @@ public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
         let token: String
         let expiresIn: Date
     }
+
+    static let dummy: UserInfo? = {
+        guard let bulletToken: String = SwiftPackageKeys.bulletToken.value,
+              let gameWebToken: String = SwiftPackageKeys.gameWebToken.value,
+              let version: String = SwiftPackageKeys.xWebViewVer.value,
+              let userAgent: String = SwiftPackageKeys.userAgent.value
+        else {
+            return nil
+        }
+        return .init(bulletToken: "TtmZYWoTZ_LVw-LLxyVJ9LwfSzPvsQAfZQxmdmQmELJwNBOg8dwNqFDwtu21KMbQNthWiHcvtjb-2FVIvHXnJe2XR2tcvDNEiQXg3xKCYIH6T6PLMOjDGyZ5R8g=", gameWebToken: gameWebToken, version: version, userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148")
+    }()
 
     let bulletToken: Token
     let gameWebToken: JWT<GameWebToken.Token>

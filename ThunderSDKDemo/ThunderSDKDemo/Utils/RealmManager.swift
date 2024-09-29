@@ -29,7 +29,6 @@ final class RealmManager: Thunder, ObservableObject {
     @discardableResult
     override func getSchedule() async throws -> CoopScheduleQuery.ResponseType {
         let response = try await super.getSchedule()
-        Logger.debug(response.schedules)
         inWriteTransaction(transaction: { realm in
             realm.add(response.schedules.map { RealmCoopSchedule(schedule: $0) }, update: .modified)
         })
@@ -40,6 +39,27 @@ final class RealmManager: Thunder, ObservableObject {
     override func getRecord() async throws -> CoopRecordQuery.ResponseType {
         let response = try await super.getRecord()
         inWriteTransaction(transaction: { _ in
+        })
+        return response
+    }
+
+    @discardableResult
+    override func getResults() async throws -> CoopResultQuery.ResponseType {
+        let response = try await super.getResults()
+        inWriteTransaction(transaction: { realm in
+            for history in response.histories {
+                let schedule = realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: history.schedule.id) ?? RealmCoopSchedule(schedule: history.schedule)
+                Logger.debug(schedule.results.count)
+                for result in history.results {
+//                    let result = realm.create(RealmCoopResult.self, value: result.dictionaryObject, update: .modified)
+                    let result: RealmCoopResult = realm.create(RealmCoopResult.self, value: RealmCoopResult(result: result), update: .modified)
+                    if !schedule.results.contains(result) {
+                        schedule.results.append(result)
+                    }
+                }
+                realm.add(schedule, update: .modified)
+                Logger.debug(schedule.results.count)
+            }
         })
         return response
     }

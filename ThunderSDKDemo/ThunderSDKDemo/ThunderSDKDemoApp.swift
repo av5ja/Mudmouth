@@ -6,6 +6,7 @@
 //
 
 import RealmSwift
+@_exported import SDWebImageSwiftUI
 import SwiftUI
 import Thunder
 import ThunderSDK
@@ -47,6 +48,9 @@ class AppDelegate: NSObject, UIApplicationDelegate, UIWindowSceneDelegate {
         #else
             ThunderSDK.configure(url: "https://api-dev.splatnet3.com")
         #endif
+        if let documentURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            Logger.debug(documentURL.absoluteURL)
+        }
         UNUserNotificationCenter.current().delegate = self
         return true
     }

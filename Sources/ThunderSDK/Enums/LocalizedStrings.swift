@@ -1059,7 +1059,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     /// 部屋に参加するとスプラトゥーン3のフレンドリストに「イカリング３で作った部屋」が追加されます。
     case RoomCreatorInvitationGuide
     /// 招待URL
-    case RoomCreatorInvitationURL
+    case RoomCreatorInvitationUrl
     /// 部屋ができました
     case RoomCreatorInviteGuest
     /// 部屋をつくる
@@ -1079,11 +1079,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     /// 参加できる部屋
     case RoomCreatorRoom
     /// 招待したい人にURLをシェア！
-    case RoomCreatorShareInvitationURL
+    case RoomCreatorShareInvitationUrl
     /// Nintendo Switch Onlineアプリがインストールされたスマートフォンで、招待URLにアクセスしてもらいましょう。
-    case RoomCreatorShareInvitationURLGuide
+    case RoomCreatorShareInvitationUrlGuide
     /// URLをシェア
-    case RoomCreatorShareURL
+    case RoomCreatorShareUrl
     /// 便利な部屋作成サービス
     case RoomCreatorSubtitle
     /// ヘヤタテ

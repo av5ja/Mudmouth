@@ -23,7 +23,7 @@ final class RealmCoopPlayer: Object, Identifiable, Codable {
 
     convenience init(result: CoopHistoryDetailQuery.MemberResult) {
         self.init()
-        id = result.hash
+        id = result.id
         nplnUserId = result.nplnUserId
         name = result.name
         byname = result.byname

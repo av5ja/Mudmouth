@@ -15,6 +15,9 @@ import Foundation
 /// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 9.1.0
 public enum WeaponInfoSpecial: SPRawRepresentable {
+    /// RandomGreen
+    /// - Returns: -1
+    case RandomGreen
     /// ウルトラショット
     /// - Returns: 20001
     case SpUltraShot
@@ -55,6 +58,7 @@ public enum WeaponInfoSpecial: SPRawRepresentable {
     // MARK: Public
 
     public static let allCases: AllCases = [
+        .RandomGreen,
         .SpUltraShot,
         .SpNiceBall,
         .SpShockSonar,
@@ -70,6 +74,7 @@ public enum WeaponInfoSpecial: SPRawRepresentable {
 
     public var rawValue: RawValue {
         switch self {
+        case .RandomGreen: return -1
         case .SpUltraShot: return 20001
         case .SpNiceBall: return 20006
         case .SpShockSonar: return 20007

@@ -156,9 +156,9 @@ open class Thunder {
         switch result {
         case .success(let data):
             Logger.debug("\(String(describing: request)) <- \(data)")
-//            if request.method == .post {
-//                Logger.debug(String(data: data, encoding: .utf8)!)
-//            }
+            //            if request.method == .post {
+            //                Logger.debug(String(data: data, encoding: .utf8)!)
+            //            }
             return try decoder.decode(T.ResponseType.self, from: data)
 
         case .failure(let error):

@@ -22,11 +22,16 @@ final class RealmCoopResult: Object, Codable, Identifiable {
         super.init()
     }
 
+//    init(result: CoopHistoryDetailQuery.CoopResult) {
+//        super.init()
+//        RLMInitializeWithValue(self, result.dictionaryObject, .partialPrivateShared())
+//    }
+
     convenience init(result: CoopHistoryDetailQuery.CoopResult) {
         self.init()
-        id = result.hash
-        uuid = result.id.uuid
-        nplnUserId = result.id.nplnUserId
+        id = result.id
+        uuid = result.uuid
+        nplnUserId = result.myResult.nplnUserId
         isClear = result.jobResult.isClear
         failureWave = result.jobResult.failureWave
         bossId = result.jobResult.bossId
@@ -36,7 +41,7 @@ final class RealmCoopResult: Object, Codable, Identifiable {
         goldenIkuraNum = result.goldenIkuraNum
         goldenIkuraAssistNum = result.goldenIkuraAssistNum
         dangerRate = result.dangerRate.decimal128
-        playTime = result.id.playTime
+        playTime = result.playTime
         scale = .init(contentsOf: result.scale)
         bossCounts.append(objectsIn: result.bossCounts)
         bossKillCounts.append(objectsIn: result.bossKillCounts)
@@ -50,8 +55,8 @@ final class RealmCoopResult: Object, Codable, Identifiable {
         gradeId = result.myResult.gradeId
         smellMeter = result.myResult.smellMeter
 
-//        self.players = .init(contentsOf: result.members.map(\.object))
-//        self.waves = .init(contentsOf: result.waveDetails.map(\.object))
+//            self.players = .init(contentsOf: result.members.map(\.object))
+//            self.waves = .init(contentsOf: result.waveDetails.map(\.object))
     }
 
     // MARK: Internal
@@ -83,32 +88,9 @@ final class RealmCoopResult: Object, Codable, Identifiable {
     @Persisted var playTime: Date
     @Persisted var scenarioCode: String?
 
-    func encode(to encoder: Encoder) throws {
-        var encoder = encoder.container(keyedBy: CodingKeys.self)
-        try encoder.encode(id, forKey: .id)
-        try encoder.encode(uuid, forKey: .uuid)
-        try encoder.encode(nplnUserId, forKey: .nplnUserId)
-        try encoder.encode(gradePoint, forKey: .gradePoint)
-        try encoder.encode(gradeId, forKey: .gradeId)
-        try encoder.encode(isClear, forKey: .isClear)
-        try encoder.encode(failureWave, forKey: .failureWave)
-        try encoder.encode(bossId, forKey: .bossId)
-        try encoder.encode(isBossDefeated, forKey: .isBossDefeated)
-        try encoder.encode(ikuraNum, forKey: .ikuraNum)
-        try encoder.encode(goldenIkuraNum, forKey: .goldenIkuraNum)
-        try encoder.encode(goldenIkuraAssistNum, forKey: .goldenIkuraAssistNum)
-        try encoder.encode(dangerRate, forKey: .dangerRate)
-        try encoder.encode(playTime, forKey: .playTime)
-        try encoder.encode(scale, forKey: .scale)
-        try encoder.encode(bossCounts, forKey: .bossCounts)
-        try encoder.encode(bossKillCounts, forKey: .bossKillCounts)
-        try encoder.encode(scenarioCode, forKey: .scenarioCode)
-        try encoder.encode(players, forKey: .players)
-        try encoder.encode(waves, forKey: .waves)
-    }
-
     // MARK: Private
 
+    /// RealmCoopResultをCodableにするために必要なキー
     private enum CodingKeys: String, CodingKey {
         case id
         case uuid
