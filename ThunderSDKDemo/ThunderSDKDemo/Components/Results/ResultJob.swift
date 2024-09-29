@@ -14,33 +14,33 @@ struct ResultJob: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0, content: {
-//            Text(LocalizedType.CoopHistoryJobPoint)
+            Text(rawValue: LocalizedString.CoopHistoryJobPoint)
             HStack(content: {
                 Spacer()
                 VStack(spacing: 4, content: {
-//                    Text(LocalizedType.CoopHistoryScore)
-//                        .foregroundStyle(SPColor.SP2.SPYellow)
-//                        .font(.custom(.Splatfont2, size: 12))
-//                    Text(result.jobScore, format: .number)
+                    Text(rawValue: LocalizedString.CoopHistoryScore)
+                        .foregroundStyle(SPColor.SP2.SPYellow)
+                        .font(.custom(.Splatfont2, size: 12))
+                    Text(result.jobScore, format: .number)
                 })
                 Text("x")
                 VStack(spacing: 4, content: {
-//                    Text(LocalizedType.CoopHistoryJobRatio)
-//                        .foregroundStyle(SPColor.SP2.SPYellow)
-//                        .font(.custom(.Splatfont2, size: 12))
-//                    Text(result.jobRate, format: .number(2))
+                    Text(rawValue: LocalizedString.CoopHistoryJobRatio)
+                        .foregroundStyle(SPColor.SP2.SPYellow)
+                        .font(.custom(.Splatfont2, size: 12))
+                    Text(result.jobRate, format: .number(2))
                 })
                 Text("+")
                 VStack(spacing: 4, content: {
-//                    Text(LocalizedType.CoopHistoryBonus)
-//                        .foregroundStyle(SPColor.SP2.SPYellow)
-//                        .font(.custom(.Splatfont2, size: 12))
-//                    Text(result.jobBonus, format: .number)
+                    Text(rawValue: LocalizedString.CoopHistoryBonus)
+                        .foregroundStyle(SPColor.SP2.SPYellow)
+                        .font(.custom(.Splatfont2, size: 12))
+                    Text(result.jobBonus, format: .number)
                 })
                 Text("=")
                 HStack(spacing: 4, content: {
-//                    Text(result.kumaPoint, format: .number())
-//                    Text(LocalizedType.RecordTotalTurfPoint)
+                    Text(result.kumaPoint, format: .number)
+                    Text(rawValue: LocalizedString.RecordTotalTurfPoint)
                 })
             })
         })

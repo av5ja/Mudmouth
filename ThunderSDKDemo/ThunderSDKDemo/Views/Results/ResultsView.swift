@@ -49,5 +49,7 @@ struct ResultsView: View {
 }
 
 #Preview {
-    ResultsView()
+    Realm.preview()
+    return ResultsView()
+        .environment(\.realmConfiguration, .preview)
 }

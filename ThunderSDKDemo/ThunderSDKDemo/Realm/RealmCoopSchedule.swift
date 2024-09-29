@@ -73,7 +73,7 @@ final class RealmCoopSchedule: Object, Codable, Identifiable {
     }
 }
 
-private extension RealmCoopSchedule {
+extension RealmCoopSchedule {
     var isBigRun: Bool {
         stageId.rawValue > 100
     }
