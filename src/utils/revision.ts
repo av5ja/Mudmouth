@@ -1,9 +1,6 @@
 import camelCase from 'camelcase'
-import camelcaseKeys from 'camelcase-keys'
-import { locale } from 'dayjs'
 import { countBy, get, startCase } from 'lodash'
 import { Schema, ZodAnyDef, type ZodArray, type ZodArrayDef, ZodLiteral, type ZodSchema, z } from 'zod'
-import type { SHA256Hash } from './hashes'
 
 export namespace NSO {
   export enum LocaleType {
@@ -394,27 +391,40 @@ export namespace NSO {
       const object = Object.entries(await response.json())
       const entries: KeyHash[] = z.array(KeyHash).parse(
         object.flatMap(([key, value]) => {
-          const parentKey: string = camelCase(startCase(key), { pascalCase: true })
+          const parentKey: string = camelCase(startCase(key.split('/').slice(-1)[0]), { pascalCase: true })
+          if (!['CoopSkinName', 'CoopEnemy', 'CoopStageName', 'CoopGrade'].includes(parentKey)) {
+            return []
+          }
           // @ts-ignore
           return Object.entries(value)
             .filter(([key, value]) => ['%', '<', '>', '{', '}', '-'].every((char) => !key.includes(char)))
             .filter(([key, value]) => ['[', ']'].every((char) => !(value as string).includes(char)))
             .map(([key, value]) => {
-              const childKey: string = `${parentKey}${camelCase(startCase(key), { pascalCase: true })}`
-                .replace('CommonMsg', '')
-                .replace('WeaponWeapon', 'Weapon')
-                .replace('SdodrSdodr', 'Sdodr')
-                .replace('TalkTalk', 'Talk')
-                .replace('MiniGame', 'MiniGame')
-                .replace('ManualManual', 'Manual')
-                .replace('GoodsGoods', 'Goods')
-                .replace('GearGear', 'Gear')
-                .replace('CoopCoop', 'Coop')
-                .replace('BynameByname', 'Byname')
-                .replace('BadgeBadge', 'Badge')
-              // const childKey: string = camelCase(startCase(key), { pascalCase: true })
-              return { key: childKey, value: (value as string).replace(/\n/g, '').replaceAll('<br />', '') }
+              return {
+                key: camelCase(startCase(key), { pascalCase: true }),
+                value: value,
+              }
             })
+          // .map(([key, value]) => {
+          //   const childKey: string = `${parentKey}${camelCase(startCase(key), { pascalCase: true })}`
+          //     .replace('CommonMsg', '')
+          //     .replace('WeaponWeapon', 'Weapon')
+          //     .replace('SdodrSdodr', 'Sdodr')
+          //     .replace('TalkTalk', 'Talk')
+          //     .replace('MiniGame', 'MiniGame')
+          //     .replace('ManualManual', 'Manual')
+          //     .replace('GoodsGoods', 'Goods')
+          //     .replace('GearGear', 'Gear')
+          //     .replace('CoopCoop', 'Coop')
+          //     .replace('BynameByname', 'Byname')
+          //     .replace('BadgeBadge', 'Badge')
+          //   // const childKey: string = camelCase(startCase(key), { pascalCase: true })
+          //   return { key: childKey, value: (value as string).replace(/\n/g, '').replaceAll('<br />', '') }
+          // })
+          // .filter((v) => v.key.includes('Coop') && !v.key.includes('Manual'))
+          // .map((v) => {
+          //   return { key: v.key.replaceAll(/CoopSkinName/g, ''), value: v.value }
+          // })
         }),
       )
       return Object.entries(
@@ -431,9 +441,16 @@ export namespace NSO {
       )
         .map(([key, value]) => {
           const childKey: string = camelCase(startCase(key), { pascalCase: true })
-          return { key: childKey, value: (value as string).replace(/\n/g, '').replace(/<.*>/g, '') }
+          return {
+            key: childKey,
+            value: (value as string)
+              .replace(/\n/g, '')
+              .replace(/<.*>/g, '')
+              .replace(/\{.*?\}/g, ''),
+          }
         })
         .filter((entry) => ['%', '<', '>', '{', '}'].every((char) => !entry.key.includes(char)))
+        .concat(entries)
         .sort((a, b) => a.key.localeCompare(b.key))
     }
     throw new Error('Failed to fetch')

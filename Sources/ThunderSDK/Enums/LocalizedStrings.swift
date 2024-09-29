@@ -12,6 +12,8 @@ import Foundation
 /// LocalizedString
 /// - Description: 6.0.0 (30a1464a)
 public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Identifiable, Codable {
+    /// スメーシーワールド
+    case Carousel
     /// カタログ
     case CatalogAppName
     /// 引き換えできます
@@ -34,11 +36,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case CatalogCardSleeve
     /// コンプリート！
     case CatalogComplete
-    /// { 0 } / { 1 }
+    ///  /
     case CatalogCurrent
-    /// Lv. { 0 }
+    /// Lv.
     case CatalogCurrentExtraLevel
-    /// るいけい { 0 } p
+    /// るいけい  p
     case CatalogCurrentPoint
     /// 本日初勝利でもれなくポイントゲット！
     case CatalogDailyBonus
@@ -60,11 +62,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case CatalogGot
     ///
     case CatalogGuide
-    /// x{ 0 }
+    /// x
     case CatalogItemAmount
     /// カタログレベル
     case CatalogLevel
-    /// { 0 } まで
+    ///  まで
     case CatalogLimit
     /// ミステリーボックス
     case CatalogMysteryBox
@@ -72,11 +74,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case CatalogNamePlateBg
     /// つぎ
     case CatalogNextBonus
-    /// ページ { 0 }
+    /// ページ
     case CatalogPage
-    /// { 0 } / { 1 } ページ
+    ///  /  ページ
     case CatalogPager
-    /// { 0 } 開催中！
+    ///  開催中！
     case CatalogPeriod
     /// カタログポイント
     case CatalogPoint
@@ -146,17 +148,17 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case ChallengeGuideRewardSleeve
     /// 塗りまくって貯めたポイントでロブの旅を応援しよう！旅の思い出も手に入るかも？！
     case ChallengeHowToPlay
-    /// ジャーニー { 0 }
+    /// ジャーニー
     case ChallengeJourney
     /// 支援者求ム！
     case ChallengeLookingForSupporters
     /// オレンジ
     case ChallengeOrange
-    /// { 0 }p
+    /// p
     case ChallengePoint
     /// 支援に必要な塗りポイント
     case ChallengePointForSupport
-    /// （あと { 0 }p 不足しています）
+    /// （あと p 不足しています）
     case ChallengePointNotEnough
     /// パープル
     case ChallengePurple
@@ -196,9 +198,9 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case ChallengeWhite
     /// イエロー
     case ChallengeYellow
-    /// { 0 }p 持っています
+    /// p 持っています
     case ChallengeYourPoint
-    /// { 0 }%
+    /// %
     case Common
     /// キャンセル
     case CommonCancel
@@ -332,11 +334,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case CoopHistoryNotAvailableDescription
     /// 倒せなかった...
     case CoopHistoryNotDefeated
-    /// { 0 }p
+    /// p
     case CoopHistoryP
     /// バイト回数
     case CoopHistoryPlayCount
-    /// { 0 }バイト
+    /// バイト
     case CoopHistoryPlayCountBySchedule
     /// 前のバイト
     case CoopHistoryPrevious
@@ -382,7 +384,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case CoopHistoryTitle
     /// るいけいポイント
     case CoopHistoryTotalPoint
-    /// WAVE { 0 }
+    /// WAVE
     case CoopHistoryWave
     /// 干潮
     case CoopHistoryWaveLevel0
@@ -392,7 +394,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case CoopHistoryWaveLevel2
     /// バイト
     case CoopRecordAppName
-    /// 参加回数： { 0 }
+    /// 参加回数：
     case CoopRecordAttended
     /// ビッグラン
     case CoopRecordBigrun
@@ -414,7 +416,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case CoopRecordMore
     /// きろくがありません
     case CoopRecordNoData
-    /// 上位 { 0 } %以上
+    /// 上位  %以上
     case CoopRecordRank
     /// 順位
     case CoopRecordRanking
@@ -422,6 +424,50 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case CoopRecordTeamContest
     /// サーモンランのきろく
     case CoopRecordTitle
+    /// バイトツナギ オレンジ
+    case Cop001
+    /// バイトツナギ グリーン
+    case Cop002
+    /// バイトツナギ イエロー
+    case Cop003
+    /// バイトツナギ ピンク
+    case Cop004
+    /// バイトツナギ ブルー
+    case Cop005
+    /// バイトツナギ ブラック
+    case Cop006
+    /// バイトツナギ ホワイト
+    case Cop007
+    /// バイトウェーダー オレンジ
+    case Cop008
+    /// バイトウェーダー ブラック
+    case Cop009
+    /// バイトウェーダー イエロー
+    case Cop010
+    /// バイトウェーダー ブラウン
+    case Cop011
+    /// バイトツナギ ドット
+    case Cop012
+    /// バイトツナギ カモ
+    case Cop013
+    /// バイトツナギ ニシキ
+    case Cop014
+    /// バイトウェーダー ピーチ
+    case Cop015
+    /// バイトウェーダー ライム
+    case Cop016
+    /// バイトウェーダー ベリー
+    case Cop017
+    /// バイトツナギ シルバー
+    case Cop018
+    /// バイトツナギ ゴールド
+    case Cop019
+    /// バイトツナギ プリズム
+    case Cop020
+    /// バイトツナギ ブロッカー
+    case Cop021
+    /// ゴンズイ地区
+    case District
     /// ホームに戻る
     case ErrorBackToHome
     /// 非正規のアクセスが確認されたため、サービス利用を停止しています。
@@ -462,7 +508,9 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case EventMatchRankingTitle
     /// トップ100
     case EventMatchRankingTop100
-    /// { 0 }%
+    /// ナンプラー遺跡
+    case Factory
+    /// %
     case FesRecord
     /// フェス
     case FesRecordAppName
@@ -482,7 +530,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case FesRecordContributionTricolor
     /// 守備
     case FesRecordDefense
-    /// { 0 }{ 1 }パワー
+    /// パワー
     case FesRecordFestPower
     /// フェス100ケツ
     case FesRecordFestRanking
@@ -502,7 +550,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case FesRecordOnGoing
     /// これまでのフェス
     case FesRecordPastFestivals
-    /// { 0 }p
+    /// p
     case FesRecordPoint
     /// アンケート実施中
     case FesRecordPreVoteButton
@@ -510,7 +558,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case FesRecordPreVoteGuide
     /// みんなどこにする？アンケート実施中
     case FesRecordPreVoteTitle
-    /// { 0 }
+    ///
     case FesRecordRank
     /// オープン
     case FesRecordRegular
@@ -614,9 +662,9 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case GesoTownPrevious
     /// まもなく終了
     case GesoTownRemainAlmostFinished
-    /// あと{ 0 }時間
+    /// あと時間
     case GesoTownRemainHour
-    /// あと{ 0 }分
+    /// あと分
     case GesoTownRemainMinute
     /// すでに注文済みのギアがあります
     case GesoTownRemind
@@ -640,6 +688,42 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case GesoTownUnableToOrder
     /// この商品は現在取り扱っておりません
     case GesoTownUnableToOrderMessage
+    /// かけだし
+    case Grade00
+    /// はんにんまえ
+    case Grade01
+    /// いちにんまえ
+    case Grade02
+    /// じゅくれん
+    case Grade03
+    /// たつじん
+    case Grade04
+    /// たつじん＋１
+    case Grade05
+    /// たつじん＋２
+    case Grade06
+    /// たつじん＋３
+    case Grade07
+    /// でんせつ
+    case Grade08
+    /// かけだし アルバイター
+    case GradeArbeiter00
+    /// はんにんまえ アルバイター
+    case GradeArbeiter01
+    /// いちにんまえ アルバイター
+    case GradeArbeiter02
+    /// じゅくれん アルバイター
+    case GradeArbeiter03
+    /// たつじん アルバイター
+    case GradeArbeiter04
+    /// たつじん＋１ アルバイター
+    case GradeArbeiter05
+    /// たつじん＋２ アルバイター
+    case GradeArbeiter06
+    /// たつじん＋３ アルバイター
+    case GradeArbeiter07
+    /// でんせつ アルバイター
+    case GradeArbeiter08
     /// １号
     case HeroRecordAgent1
     /// ２号
@@ -678,7 +762,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case HeroRecordSearchRatio
     /// スナップ写真を見る
     case HeroRecordSeePhotograph
-    /// サイト { 0 }
+    /// サイト
     case HeroRecordSite
     /// みらいユートピアランド
     case HeroRecordSite1
@@ -696,11 +780,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case HeroRecordTitle
     /// 特製壁紙
     case HeroRecordWallpaper
-    /// すべてのバッジ（{ 0 }）
+    /// すべてのバッジ（）
     case HistoryAllBadges
     /// ヒストリー
     case HistoryAppName
-    /// 参加回数： { 0 }
+    /// 参加回数：
     case HistoryAttended
     /// バッジ
     case HistoryBadge
@@ -730,7 +814,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case HistoryPastXmatchAnnotation
     /// ランク
     case HistoryRank
-    /// { 0 }
+    ///
     case HistoryRanking
     /// シーズン
     case HistorySeason
@@ -742,7 +826,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case HistoryShowXranking
     /// 銀
     case HistorySilver
-    /// { 0 } からプレイ（{ 1 } 更新）
+    ///  からプレイ（ 更新）
     case HistorySince
     /// サマリー
     case HistorySummary
@@ -752,7 +836,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case HistoryTotalTurfPoint
     /// 総勝利数
     case HistoryTotalWin
-    /// { 0 }p
+    /// p
     case HistoryTurfPoint
     /// ウデマエ
     case HistoryUdemae
@@ -780,6 +864,8 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case LandingSplatoon3
     /// スマートフォンアプリ『Nintendo Switch Online』を開きます
     case LandingTitle
+    /// グランドバンカラアリーナ
+    case Manbou
     /// メモリープレーヤー
     case MemoryPlayerAppName
     /// コピーしました
@@ -868,7 +954,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case MyOutfitsNormal
     /// 一致するブキがありません
     case MyOutfitsNoWeapons
-    /// マイコーデ { 0 }
+    /// マイコーデ
     case MyOutfitsNumber
     /// OFF
     case MyOutfitsOff
@@ -876,17 +962,17 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case MyOutfitsOn
     /// カメラオプションを表示する
     case MyOutfitsOpenCameraOption
-    /// レアド { 0 }
+    /// レアド
     case MyOutfitsRarity
-    /// { 0 } 左右操作
+    ///  左右操作
     case MyOutfitsRControl
     /// リバース
     case MyOutfitsReverse
-    /// { 0 } 操作感度
+    ///  操作感度
     case MyOutfitsRHorizontal
     /// ジャイロ操作OFFの時は無効になります
     case MyOutfitsRHorizontalUnavailable
-    /// { 0 } 上下操作
+    ///  上下操作
     case MyOutfitsRVertical
     /// ジャイロ操作ONの時は無効になります
     case MyOutfitsRVerticalUnavailable
@@ -932,7 +1018,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case PhotoAlbumTitle
     /// QRコードリーダー
     case QrCodeReaderAppName
-    /// 日時: { 0 }
+    /// 日時:
     case QrCodeReaderCheckinDate
     /// 許可
     case QrCodeReaderConfirmationAllow
@@ -968,6 +1054,8 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case QrCodeReaderReadQrcodeByFile
     /// QRコードリーダー
     case QrCodeReaderTitle
+    /// 各地で同時発生
+    case Random
     /// 最後に遊んだ
     case RecordLatestPlayed
     /// よく使う
@@ -990,7 +1078,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case RecordSub
     /// きろく
     case RecordTitle
-    /// { 0 }p
+    /// p
     case RecordTotalTurfPoint
     /// 塗りポイント
     case RecordTurfPoint
@@ -1006,7 +1094,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case RecordWeaponRecordAppName
     /// 勝利数
     case RecordWinCount
-    /// { 0 }%
+    /// %
     case RecordWinRatio
     /// 通常のプライベートマッチと異なり、招待URLを知っているプレイヤーは誰でも参加することができます。
     case RoomCreatorAnnotation01
@@ -1088,6 +1176,54 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case RoomCreatorSubtitle
     /// ヘヤタテ
     case RoomCreatorTitle
+    /// テッキュウ
+    case SakeArtillery
+    /// ドロシャケ
+    case SakeBigMouth
+    /// ドロシャケ
+    case SakeBigMouthGold
+    /// シャケコプター
+    case SakeCopter
+    /// モグラ
+    case Sakediver
+    /// ダイバー
+    case SakeDolphin
+    /// グリル
+    case Sakedozer
+    /// タマヒロイ
+    case SakeFlyBagman
+    /// ジョー
+    case SakeJaw
+    /// バクダン
+    case SakelienBomber
+    /// カタパッド
+    case SakelienCupTwins
+    /// ヨコヅナ
+    case SakelienGiant
+    /// キンシャケ
+    case SakelienGolden
+    /// ドスコイ
+    case SakelienLarge
+    /// テッパン
+    case SakelienShield
+    /// コジャケ
+    case SakelienSmall
+    /// ヘビ
+    case SakelienSnake
+    /// シャケ
+    case SakelienStandard
+    /// タワー
+    case SakelienTower
+    /// ハシラ
+    case SakePillar
+    /// コウモリ
+    case Sakerocket
+    /// タツ
+    case SakeRope
+    /// ナベブタ
+    case SakeSaucer
+    /// タラポートショッピングパーク
+    case Section
     /// 利用データの送信について
     case SettingsAboutSendingUsageData
     /// イカリング３をご利用の際には、『Nintendo Switch Online』アプリの「利用データの送信について」の設定が適用されます。この設定はいつでも変更することができます。
@@ -1102,7 +1238,21 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case SettingsExpansionPass
     /// 設定
     case SettingsTitle
-    /// パレットにセットした枚数: { 0 }
+    /// ムニ・エール海洋発電所
+    case Shakedent
+    /// すじこジャンクション跡
+    case Shakehighway
+    /// トキシラズいぶし工房
+    case Shakelift
+    /// どんぴこ闘技場
+    case Shakerail
+    /// 難破船ドン・ブラコ
+    case Shakeship
+    /// アラマキ砦
+    case Shakespiral
+    /// シェケナダム
+    case Shakeup
+    /// パレットにセットした枚数:
     case SideOrderRecordAccumulateCount
     /// サイド・オーダー
     case SideOrderRecordAppName
@@ -1118,11 +1268,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case SideOrderRecordChipCategoryMove
     /// レンジ
     case SideOrderRecordChipCategoryRange
-    /// 集めた情報 { 0 }
+    /// 集めた情報
     case SideOrderRecordChiplevel
     /// クリア！
     case SideOrderRecordClear
-    /// クリア: { 0 }
+    /// クリア:
     case SideOrderRecordClearCount
     /// 集めたカラーチップ
     case SideOrderRecordCollectedColorChips
@@ -1150,9 +1300,9 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case SideOrderRecordEnemy
     /// スケルトーンずかん
     case SideOrderRecordEnemyCollection
-    /// { 0 }に 当たってやられた
+    /// に 当たってやられた
     case SideOrderRecordFailureCollided
-    /// { 0 }に やられた
+    /// に やられた
     case SideOrderRecordFailureDefeated
     /// フロアから 落ちた
     case SideOrderRecordFailureFall
@@ -1176,7 +1326,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case SideOrderRecordPalette
     /// 各パレットの最速クリアタイムのきろくを表示します
     case SideOrderRecordPalettesAnnotation
-    /// { 0 }p
+    /// p
     case SideOrderRecordPoint
     /// 所持ネリコイン
     case SideOrderRecordPointCoin
@@ -1200,15 +1350,15 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case SideOrderRecordSelectSize
     /// 入手ポイントを表示する
     case SideOrderRecordShowAllPoints
-    /// フロアリセット: { 0 }
+    /// フロアリセット:
     case SideOrderRecordStageReset
     /// サイド・オーダーのきろく
     case SideOrderRecordTitle
-    /// 合計: { 0 }
+    /// 合計:
     case SideOrderRecordTotalHackingLevel
-    /// トライ: { 0 }
+    /// トライ:
     case SideOrderRecordTryCount
-    /// 自販機で使ったネリコイン: { 0 }
+    /// 自販機で使ったネリコイン:
     case SideOrderRecordUsedCoin
     /// バンカラマッチ
     case StageScheduleBankara
@@ -1240,7 +1390,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case StageScheduleFestival
     /// もうすぐ開催
     case StageScheduleFestivalAnnounced
-    /// { 0 } スタート！
+    ///  スタート！
     case StageScheduleFestivalAt
     /// 攻撃
     case StageScheduleFestivalAttack
@@ -1248,7 +1398,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case StageScheduleFestivalDefense
     /// 開催中！
     case StageScheduleFestivalHolding
-    /// { 0 } - { 1 }
+    ///  -
     case StageScheduleFestivalPeriod
     /// オープン
     case StageScheduleFestOpen
@@ -1274,9 +1424,9 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case StageScheduleOpenLimited
     /// プライベートマッチ
     case StageSchedulePrivate
-    /// ビッグランがやってくる！！バイト大募集 { 0 }
+    /// ビッグランがやってくる！！バイト大募集
     case StageScheduleRecruit
-    /// バイトチームコンテスト！チームを組んで参加しよう！  { 0 }
+    /// バイトチームコンテスト！チームを組んで参加しよう！
     case StageScheduleRecruitTeamContest
     /// レギュラーマッチ
     case StageScheduleRegular
@@ -1296,12 +1446,22 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case StageScheduleWinRateByRules
     /// Xマッチ
     case StageScheduleXmatch
+    /// マテガイ放水路
+    case Temple
     /// もうすぐ開催！
     case TournamentComingSoon
     /// タイカイサポート
     case TournamentTitle
     /// 開催中
     case TournamentTournamentNow
+    /// オカシラ連合
+    case Triple
+    /// アラマキ砦
+    case Tutorial
+    /// ？？？
+    case Unknown
+    /// 海女美術大学
+    case Upland
     /// １００倍マッチ
     case VsHistory100X
     /// １０倍マッチ
@@ -1322,7 +1482,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case VsHistoryAnnotationPenalty
     /// 攻撃
     case VsHistoryAttack
-    /// { 0 }分あたりのアベレージ
+    /// 分あたりのアベレージ
     case VsHistoryAverage
     /// きん
     case VsHistoryAwardGold
@@ -1334,11 +1494,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case VsHistoryBankaraChallenge
     /// バンカラマッチ オープン
     case VsHistoryBankaraOpen
-    /// バンカラパワー { 0 }
+    /// バンカラパワー
     case VsHistoryBankaraPower
-    /// こうけん度 { 0 }
+    /// こうけん度
     case VsHistoryContribute
-    /// { 0 }カウント
+    /// カウント
     case VsHistoryCount
     /// たおされたかいすう
     case VsHistoryDeathCount
@@ -1354,19 +1514,19 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case VsHistoryEvent
     /// ペア
     case VsHistoryEventPair
-    /// イベントパワー { 0 }
+    /// イベントパワー
     case VsHistoryEventPower
     /// ソロ
     case VsHistoryEventSolo
     /// チーム
     case VsHistoryEventTeam
-    /// { 0 }チーム
+    /// チーム
     case VsHistoryFesTeam
     /// フェスマッチ
     case VsHistoryFestival
-    /// オマツリガイ x{ 0 }
+    /// オマツリガイ x
     case VsHistoryFestivalShell
-    /// { 0 }{ 1 }パワー
+    /// パワー
     case VsHistoryFestPower
     /// オマツリのあかし
     case VsHistoryFesWinProof
@@ -1408,7 +1568,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case VsHistoryNotAvailable
     /// 閲覧できるバトルのきろくは、モードごとに最新の50戦までです。
     case VsHistoryNotAvailableDescription
-    /// （おそろいボーナス x{ 0 }）
+    /// （おそろいボーナス x）
     case VsHistoryOutfitBonus
     /// 前のバトル
     case VsHistoryPreviousBattle
@@ -1424,11 +1584,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case VsHistoryTitle
     /// トライかいすう
     case VsHistoryTryCount
-    /// { 0 }p
+    /// p
     case VsHistoryTurfPoint
     /// ウデマエポイント
     case VsHistoryUdemaePoint
-    /// { 0 }p
+    /// p
     case VsHistoryUdemaePointScore
     /// 挑戦中止
     case VsHistoryUdemaeReset
@@ -1436,13 +1596,13 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case VsHistoryUdemaeUp
     /// WIN!
     case VsHistoryWin
-    /// { 0 }連勝
+    /// 連勝
     case VsHistoryWins
     /// おうかん
     case VsHistoryXcrown
     /// Xマッチ
     case VsHistoryXmatch
-    /// Xパワー { 0 }
+    /// Xパワー
     case VsHistoryXpower
     /// イカリング３はスプラトゥーン3と連動するサービスです。ここで紹介したもの以外にもさまざまな機能があります。
     case WelcomeAbout
@@ -1476,7 +1636,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case XRankingAppName
     /// グループ・アロメ
     case XRankingAtlantic
-    /// 推定{ 0 }位
+    /// 推定位
     case XRankingEstimatedRank
     /// 計測中
     case XRankingMeasurement
@@ -1488,11 +1648,11 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case XRankingPastRankings
     /// ※ 過去のランキングはシーズン終了後、集計をしてから公開されます。集計が終わるまで数日かかる場合があります。
     case XRankingPastRankingsAnnotation
-    /// { 0 } - { 1 }
+    ///  -
     case XRankingPeriod
-    /// { 0 }
+    ///
     case XRankingRank
-    /// { 0 }
+    ///
     case XRankingRankSns
     /// グループ
     case XRankingRegion
@@ -1514,7 +1674,7 @@ public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Iden
     case XRankingWeaponTopSingular
     /// おうかん
     case XRankingXcrown
-    ///  { 0 }
+    ///
     case XRankingXpower
 
     // MARK: Public

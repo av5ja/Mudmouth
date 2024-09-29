@@ -17,31 +17,31 @@ import Foundation
 public enum CoopGrade: SPRawRepresentable {
     /// Apprentice
     /// - Returns: 0
-    case Grade_00
+    case Grade00
     /// Part-Timer
     /// - Returns: 1
-    case Grade_01
+    case Grade01
     /// Go-Getter
     /// - Returns: 2
-    case Grade_02
+    case Grade02
     /// Overachiever
     /// - Returns: 3
-    case Grade_03
+    case Grade03
     /// Profreshional
     /// - Returns: 4
-    case Grade_04
+    case Grade04
     /// Profreshional +1
     /// - Returns: 5
-    case Grade_05
+    case Grade05
     /// Profreshional +2
     /// - Returns: 6
-    case Grade_06
+    case Grade06
     /// Profreshional +3
     /// - Returns: 7
-    case Grade_07
+    case Grade07
     /// Eggsecutive VP
     /// - Returns: 8
-    case Grade_08
+    case Grade08
     /// Undefined
     /// - Returns: rawValue
     case Undefined(RawValue)
@@ -49,28 +49,28 @@ public enum CoopGrade: SPRawRepresentable {
     // MARK: Public
 
     public static let allCases: AllCases = [
-        .Grade_00,
-        .Grade_01,
-        .Grade_02,
-        .Grade_03,
-        .Grade_04,
-        .Grade_05,
-        .Grade_06,
-        .Grade_07,
-        .Grade_08,
+        .Grade00,
+        .Grade01,
+        .Grade02,
+        .Grade03,
+        .Grade04,
+        .Grade05,
+        .Grade06,
+        .Grade07,
+        .Grade08,
     ]
 
     public var rawValue: RawValue {
         switch self {
-        case .Grade_00: return 0
-        case .Grade_01: return 1
-        case .Grade_02: return 2
-        case .Grade_03: return 3
-        case .Grade_04: return 4
-        case .Grade_05: return 5
-        case .Grade_06: return 6
-        case .Grade_07: return 7
-        case .Grade_08: return 8
+        case .Grade00: return 0
+        case .Grade01: return 1
+        case .Grade02: return 2
+        case .Grade03: return 3
+        case .Grade04: return 4
+        case .Grade05: return 5
+        case .Grade06: return 6
+        case .Grade07: return 7
+        case .Grade08: return 8
         case .Undefined(let rawValue): return rawValue
         }
     }
