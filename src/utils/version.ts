@@ -253,6 +253,47 @@ export namespace Leanny {
       }
     })
 
+  const DummyValues = (category: Category): InternalCode[] => {
+    switch (category) {
+      case Category.WeaponInfoMain:
+        return [
+          {
+            Id: -999,
+            Label: 'Unknown',
+            Type: 'Coop',
+            __RowId: 'Unknown',
+            code: '/// Unknown\ncase Unknown',
+          },
+          {
+            Id: -2,
+            Label: 'RandomGold',
+            Type: 'Coop',
+            __RowId: 'RandomGold',
+            code: '/// RandomGold\ncase RandomGold',
+          },
+          {
+            Id: -1,
+            Label: 'RandomGreen',
+            Type: 'Coop',
+            __RowId: 'RandomGreen',
+            code: '/// RandomGreen\ncase RandomGreen',
+          },
+        ]
+      case Category.WeaponInfoSpecial:
+        return [
+          {
+            Id: -1,
+            Label: 'RandomGreen',
+            Type: 'Coop',
+            __RowId: 'RandomGreen',
+            code: '/// RandomGreen\ncase RandomGreen',
+          },
+        ]
+      default:
+        return []
+    }
+  }
+
   const InternalCodeList = z
     .array(InternalCode)
     .transform((v) => {
@@ -279,18 +320,25 @@ export namespace Leanny {
             '',
           ]
         },
-        values: v.sorted
-          .flatMap((data) => [`/// ${data.Label || ''}`, `/// - Returns: ${data.Id}`, `case ${data.__RowId}`])
-          .concat(['/// Undefined', '/// - Returns: rawValue', 'case Undefined(RawValue)']),
-        all_cases: [
-          'public static let allCases: AllCases = [',
-          v.sorted.map((data) => `.${data.__RowId},`),
-          ']',
-        ].flat(),
-        raw_value: [
+        values: (category: Category) =>
+          DummyValues(category)
+            .concat(v.sorted)
+            .flatMap((data) => [`/// ${data.Label || ''}`, `/// - Returns: ${data.Id}`, `case ${data.__RowId}`])
+            .concat(['/// Undefined', '/// - Returns: rawValue', 'case Undefined(RawValue)']),
+        all_cases: (category: Category) =>
+          [
+            'public static let allCases: AllCases = [',
+            DummyValues(category)
+              .concat(v.sorted)
+              .map((data) => `.${data.__RowId},`),
+            ']',
+          ].flat(),
+        raw_value: (category: Category) => [
           'public var rawValue: RawValue {',
           'switch self {',
-          ...v.sorted.map((data) => `case .${data.__RowId}: return ${data.Id}`),
+          ...DummyValues(category)
+            .concat(v.sorted)
+            .map((data) => `case .${data.__RowId}: return ${data.Id}`),
           'case .Undefined(let rawValue): return rawValue',
           '}',
           '}',
@@ -336,11 +384,11 @@ export namespace Leanny {
               `/// - Version: ${version.split('').join('.')}`,
               `public enum ${category}: SPRawRepresentable {`,
             ],
-            v.values,
+            v.values(category),
             '',
-            v.all_cases,
+            v.all_cases(category),
             '',
-            v.raw_value,
+            v.raw_value(category),
             '',
             v.path(category),
             '}',

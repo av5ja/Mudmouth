@@ -31,7 +31,12 @@ extension Keychain {
 
     var credential: UserInfo? {
         get {
-            get(key: identifier)
+            #if targetEnvironment(simulator)
+                UserInfo.dummy
+//            get(key: identifier)
+            #else
+                get(key: identifier)
+            #endif
         }
         set {
             set(value: newValue)

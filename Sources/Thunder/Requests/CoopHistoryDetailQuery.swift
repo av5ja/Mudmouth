@@ -27,15 +27,14 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
     // MARK: - CoopResult
 
     public struct CoopResult: Codable {
-        public let hash: String
-        public let id: ID
+        public let id: String
         public let uuid: UUID
         public let schedule: CoopScheduleQuery.CoopSchedule
         public let scale: [Int?]
         public let myResult: MemberResult
         public let otherResults: [MemberResult]
         public let jobResult: JobResult
-        public let playTime: String
+        public let playTime: Date
         public let bossCounts: [Int]
         public let bossKillCounts: [Int]
         public let dangerRate: Decimal
@@ -79,8 +78,7 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
     // MARK: - MemberResult
 
     public struct MemberResult: Codable {
-        public let hash: String
-        public let id: ID
+        public let id: String
         public let byname: String
         public let name: String
         public let nameId: String
@@ -134,13 +132,13 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
     // MARK: - WaveDetail
 
     public struct WaveResult: Codable {
-        public let hash: String
+        public let id: String
         public let waterLevel: CoopWaterLevel
         public let eventType: CoopEvent
         public let quotaNum: Int?
         public let goldenIkuraPopNum: Int
         public let goldenIkuraNum: Int?
-        public let id: Int
+        public let waveId: Int
         public let isClear: Bool
     }
 

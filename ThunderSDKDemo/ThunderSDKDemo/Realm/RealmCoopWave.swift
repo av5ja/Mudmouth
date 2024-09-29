@@ -21,8 +21,8 @@ final class RealmCoopWave: Object, Identifiable, Codable {
 
     convenience init(result: CoopHistoryDetailQuery.WaveResult) {
         self.init()
-        id = result.hash
-        waveId = result.id
+        id = result.id
+        waveId = result.waveId
         isClear = result.isClear
         waterLevel = result.waterLevel
         eventType = result.eventType
