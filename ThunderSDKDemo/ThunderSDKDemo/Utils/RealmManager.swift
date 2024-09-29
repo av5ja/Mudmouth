@@ -22,8 +22,8 @@ final class RealmManager: Thunder, ObservableObject {
 
     func fetch() async throws {
         try await getSchedule()
-        try await getHistory()
         try await getRecord()
+        try await getResults()
     }
 
     @discardableResult
@@ -39,21 +39,6 @@ final class RealmManager: Thunder, ObservableObject {
     @discardableResult
     override func getRecord() async throws -> CoopRecordQuery.ResponseType {
         let response = try await super.getRecord()
-        inWriteTransaction(transaction: { _ in
-        })
-        return response
-    }
-
-    @discardableResult
-    override func getHistory() async throws -> CoopHistoryQuery.ResponseType {
-        let response = try await super.getHistory()
-        inWriteTransaction(transaction: { _ in
-        })
-        return response
-    }
-
-    override func getHistoryDetail(id: CoopHistoryDetailQuery.ID) async throws -> CoopHistoryDetailQuery.ResponseType {
-        let response = try await super.getHistoryDetail(id: id)
         inWriteTransaction(transaction: { _ in
         })
         return response

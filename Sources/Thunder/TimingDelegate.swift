@@ -14,9 +14,4 @@ class TimingDelegate: SessionDelegate {
     static let `default`: TimingDelegate = .init()
 
     var metricsHandler: ((URLSessionTaskMetrics) -> Void)?
-
-    override func urlSession(_ session: URLSession, task: URLSessionTask, didFinishCollecting metrics: URLSessionTaskMetrics) {
-        super.urlSession(session, task: task, didFinishCollecting: metrics)
-        Logger.debug(metrics.taskInterval.duration)
-    }
 }

@@ -9,4 +9,4 @@ deploy:
 .PHONY: format
 format:
 	swiftformat .
-	swiftlint lint --fix --strict
+	swiftlint fix --strict

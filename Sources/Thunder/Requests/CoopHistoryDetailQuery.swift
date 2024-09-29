@@ -31,7 +31,7 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
         public let id: ID
         public let uuid: UUID
         public let schedule: CoopScheduleQuery.CoopSchedule
-        public let scale: [Int]
+        public let scale: [Int?]
         public let myResult: MemberResult
         public let otherResults: [MemberResult]
         public let jobResult: JobResult
@@ -48,6 +48,7 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
 
     // MARK: - ID
 
+    // swiftlint:disable:next type_name)
     public struct ID: Codable {
         public let type: String
         public let nplnUserId: String
@@ -70,8 +71,9 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
     public struct JobResult: Codable {
         public let failureWave: Int?
         public let isClear: Bool
-        public let bossId: CoopEnemy
-        public let isBossDefeated: Bool
+        public let bossId: CoopEnemy?
+        // swiftlint:disable:next discouraged_optional_boolean
+        public let isBossDefeated: Bool?
     }
 
     // MARK: - MemberResult
@@ -94,7 +96,7 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
         public let goldenIkuraAssistNum: Int
         public let helpCount: Int
         public let deadCount: Int
-        public let bossKillCounts: [Int]
+        public let bossKillCounts: [Int?]
         public let bossKillCountsTotal: Int
         public let jobScore: Int?
         public let gradeId: CoopGrade?
