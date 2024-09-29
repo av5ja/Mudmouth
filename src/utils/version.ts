@@ -1,4 +1,5 @@
-import { SHA512_256 } from 'bun'
+import camelCase from 'camelcase'
+import { startCase } from 'lodash'
 import { z } from 'zod'
 
 export namespace Leanny {
@@ -211,12 +212,16 @@ export namespace Leanny {
         CoopGrade: IdNameList.parse(
           Object.entries(CoopGrade)
             .filter(([key]) => Number.isNaN(Number(key)))
-            .map(([key, value]) => IdName.parse({ Id: value, Name: v.CoopGrade[key], Key: key })),
+            .map(([key, value]) =>
+              IdName.parse({ Id: value, Name: v.CoopGrade[key], Key: camelCase(key, { pascalCase: true }) }),
+            ),
         ),
         CoopStage: IdNameList.parse(
           Object.entries(CoopStage)
             .filter(([key]) => Number.isNaN(Number(key)))
-            .map(([key, value]) => IdName.parse({ Id: value, Name: v.CoopStage[key], Key: key })),
+            .map(([key, value]) =>
+              IdName.parse({ Id: value, Name: v.CoopStage[key], Key: camelCase(key, { pascalCase: true }) }),
+            ),
         ),
         CoopEvent: IdNameList.parse(
           Object.entries(CoopEvent)

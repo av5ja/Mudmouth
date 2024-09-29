@@ -27,6 +27,6 @@ public enum CoopWaterLevel: Int, CaseIterable, Codable, Identifiable {
 
     /// 翻訳データ
     var description: String {
-        NSLocalizedString(String(describing: self), bundle: .main, comment: "")
+        NSLocalizedString("CoopHistoryWaveLevel\(rawValue)", bundle: .module, comment: "")
     }
 }

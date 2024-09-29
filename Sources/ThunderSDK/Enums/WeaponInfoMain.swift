@@ -15,9 +15,9 @@ import Foundation
 /// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 9.1.0
 public enum WeaponInfoMain: SPRawRepresentable {
-    /// Dummy
+    /// Unknown
     /// - Returns: -999
-    case Dummy
+    case Unknown
     /// RandomGold
     /// - Returns: -2
     case RandomGold
@@ -244,7 +244,7 @@ public enum WeaponInfoMain: SPRawRepresentable {
     // MARK: Public
 
     public static let allCases: AllCases = [
-        .Dummy,
+        .Unknown,
         .RandomGold,
         .RandomGreen,
         .Shooter_Short,
@@ -322,7 +322,7 @@ public enum WeaponInfoMain: SPRawRepresentable {
 
     public var rawValue: RawValue {
         switch self {
-        case .Dummy: return -999
+        case .Unknown: return -999
         case .RandomGold: return -2
         case .RandomGreen: return -1
         case .Shooter_Short: return 20000
