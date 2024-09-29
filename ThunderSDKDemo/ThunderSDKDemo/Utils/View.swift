@@ -24,4 +24,11 @@ extension View {
             UIApplication.shared.window?.overrideUserInterfaceStyle = theme
         })
     }
+
+    @ViewBuilder
+    func scrollContentBackgroundWrapper(_: Visibility) -> some View {
+        if #available(iOS 16.0, *) {
+            scrollContentBackground(.hidden)
+        }
+    }
 }

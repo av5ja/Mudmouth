@@ -36,12 +36,12 @@ struct ResultsView: View {
             })
         })
         .listStyle(.plain)
-//        .scrollContentBackground(.hidden)
+        .scrollContentBackgroundWrapper(.hidden)
         .background(content: {
-//            BackgroundWave()
+            BackgroundWave()
         })
         .navigationBarTitleDisplayMode(.inline)
-//        .navigationTitle(Text(LocalizedType.CoopHistoryHistory))
+//        .navigationTitle(Text(LocalizedString.CoopHistoryHistory))
 //        .refreshable(action: {
 //            try await manager.refresh()
 //        })

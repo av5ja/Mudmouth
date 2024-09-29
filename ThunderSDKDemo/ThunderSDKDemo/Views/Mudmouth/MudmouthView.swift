@@ -49,14 +49,14 @@ struct MudmouthView: View {
             })
         })
         .background(content: {
-//            BackgroundWave()
+            BackgroundWave()
         })
         .tabViewStyle(.page(indexDisplayMode: .never))
     }
 
     // MARK: Private
 
-    @State private var selection: TabItem = .CONNECT
+    @State private var selection: TabItem = .MUDMOUTH
 
     private func NextButton() -> some View {
         Button(

@@ -25,13 +25,13 @@ public enum Logger {
 
     public static func configure(
         format: String = "$DHH:mm:ss$d $L$c: $M",
-        logFileAmount _: Int = 10,
-        logFileMaxSize _: Int = 1 * 1024 * 1024,
+        logFileAmount: Int = 1,
+        logFileMaxSize: Int = 5 * 1024 * 1024,
         useNSLog: Bool = false,
         userTerminalColors: Bool = false,
         colored: Bool = false
     ) {
-        logger.addDestination(FileDestination(url: baseURL, minLevel: .debug, colored: colored))
+        logger.addDestination(FileDestination(format: format, url: baseURL, logFileAmount: logFileAmount, logFileMaxSize: logFileMaxSize, minLevel: .debug, colored: colored))
         #if targetEnvironment(simulator) || DEBUG
             logger.addDestination(ConsoleDestination(format: format, minLevel: .verbose, useNSLog: useNSLog, useTerminalColors: userTerminalColors, logPrintWay: .logger(subsystem: "Main", category: "UI")))
         #endif
@@ -87,6 +87,7 @@ public enum Logger {
         return
             baseURL
                 .appendingPathComponent("logs", isDirectory: true)
-                .appendingPathComponent("swiftylogger.log", isDirectory: false)
+                // swiftlint:disable:next force_unwrapping
+                .appendingPathComponent("\(Bundle.main.bundleIdentifier!).log", isDirectory: false)
     }()
 }

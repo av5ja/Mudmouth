@@ -14,8 +14,8 @@ extension FileDestination {
     convenience init(
         format: String = "$DHH:mm:ss$d $L: $M",
         url: URL? = nil,
-        logFileAmount: Int = 10,
-        logFileMaxSize _: Int = 1 * 1024 * 1024,
+        logFileAmount: Int = 1,
+        logFileMaxSize: Int = 5 * 1024 * 1024,
         minLevel: SwiftyBeaver.Level = {
             #if targetEnvironment(simulator) || DEBUG
                 return .debug
@@ -28,7 +28,7 @@ extension FileDestination {
         self.init()
         logFileURL = url
         self.logFileAmount = logFileAmount
-        logFileMaxSize = logFileAmount
+        self.logFileMaxSize = logFileMaxSize
         self.format = format
         self.minLevel = minLevel
         self.colored = colored

@@ -31,7 +31,7 @@ struct ResultDetailView: View {
             .frame(maxWidth: 460)
         })
         .navigationBarTitleDisplayMode(.inline)
-//        .navigationTitle(Text(LocalizedType.CoopHistoryHistory))
+//        .navigationTitle(Text(LocalizedString.CoopHistoryHistory))
     }
 }
 

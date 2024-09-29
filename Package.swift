@@ -7,7 +7,8 @@ let package = Package(
     name: "Mudmouth",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v15), .macOS(.v11),
+        .iOS(.v15),
+        .macOS(.v12),
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
