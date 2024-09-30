@@ -15,8 +15,6 @@ struct SchedulesView: View {
     // MARK: Internal
 
     @ObservedResults(RealmCoopSchedule.self) var schedules
-    @EnvironmentObject private var manager: RealmManager
-    @EnvironmentObject private var settings: UserSettings
 
     var body: some View {
         NavigationView(content: {
@@ -25,6 +23,9 @@ struct SchedulesView: View {
     }
 
     // MARK: Private
+
+    @EnvironmentObject private var manager: RealmManager
+    @EnvironmentObject private var settings: UserSettings
 
     private var _body: some View {
         List(content: {
@@ -40,7 +41,7 @@ struct SchedulesView: View {
         })
         .refreshable(action: {
             try await manager.fetch()
-        }, completion: { result, error in
+        }, completion: { _, error in
             if error == .Unauthorized {
                 settings.isFirstLaunch.toggle()
             }

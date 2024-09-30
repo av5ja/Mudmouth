@@ -20,7 +20,7 @@ struct ThunderSDKDemoApp: App {
     @StateObject var settings: UserSettings = .default
     @StateObject var options: SearchOption = .init()
     @StateObject var manager: RealmManager = .init()
-    
+
     var body: some Scene {
         WindowGroup {
             ContentView()

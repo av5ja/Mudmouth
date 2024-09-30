@@ -30,7 +30,19 @@ final class RealmManager: Thunder, ObservableObject {
     override func getSchedule() async throws -> CoopScheduleQuery.ResponseType {
         let response = try await super.getSchedule()
         inWriteTransaction(transaction: { realm in
-            realm.add(response.schedules.map { RealmCoopSchedule(schedule: $0) }, update: .modified)
+            for schedule in response.schedules {
+                if realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: schedule.id) == nil {
+                    Logger.debug("RealmCoopSchedule -> \(schedule.id) created")
+                } else {
+                    Logger.debug("RealmCoopSchedule -> \(schedule.id) updated")
+                }
+                realm.update(RealmCoopSchedule.self, value: schedule, update: .modified)
+//                if realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: schedule.id) == nil {
+//                    Logger.debug("RealmCoopSchedule -> \(schedule.id) updated")
+//                } else {
+//                    Logger.debug("RealmCoopSchedule -> \(schedule.id) created")
+//                }
+            }
         })
         return response
     }
@@ -54,15 +66,16 @@ final class RealmManager: Thunder, ObservableObject {
         let response = try await super.getResults()
         inWriteTransaction(transaction: { realm in
             for history in response.histories {
+//                print(realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: history.schedule.id))
                 let schedule = realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: history.schedule.id) ?? RealmCoopSchedule(schedule: history.schedule)
                 for result in history.results {
-//                    let result = realm.create(RealmCoopResult.self, value: result.dictionaryObject, update: .modified)
+                    //                    let result = realm.create(RealmCoopResult.self, value: result.dictionaryObject, update: .modified)
                     let result: RealmCoopResult = realm.create(RealmCoopResult.self, value: RealmCoopResult(result: result), update: .modified)
                     if !schedule.results.contains(result) {
                         schedule.results.append(result)
                     }
                 }
-                realm.add(schedule, update: .modified)
+//                realm.add(schedule, update: .modified)
             }
         })
         return response

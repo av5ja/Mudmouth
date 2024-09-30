@@ -49,6 +49,7 @@ public extension View {
                         completionHandler?(false, SPError.Unauthorized)
                         return
                     }
+
                 default:
                     completionHandler?(false, SPError.ResponseValidationFailed)
                     return

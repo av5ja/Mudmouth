@@ -9,8 +9,8 @@ deploy:
 .PHONY: format
 
 format:
-	swiftformat .
-	swiftlint fix --strict
+	swiftformat . && \
+	swiftlint lint --fix --progress --strict
 
 .PHONY: beta
 beta:
