@@ -31,22 +31,30 @@ public extension View {
     @available(iOS 15.0, *)
     @MainActor
     @ViewBuilder
-    func refreshable(action: @escaping @Sendable () async throws -> Void) -> some View {
+    func refreshable(action: @escaping @Sendable () async throws -> Void, completion completionHandler: ((Bool, SPError?) -> Void)? = nil) -> some View {
         refreshable(action: {
             do {
                 try await action()
+                completionHandler?(true, nil)
             } catch let error as AFError {
                 switch error {
                 case .requestAdaptationFailed(let error):
                     if error as? SPError == SPError.Token(.Expired) {
                         let manager: RequestManager = .init()
                         try? await manager.startVPNTunnel()
+                        completionHandler?(false, SPError.Token(.Expired))
+                        return
                     }
-
+                    if error as? AuthenticationError == .missingCredential {
+                        completionHandler?(false, SPError.Unauthorized)
+                        return
+                    }
                 default:
-                    break
+                    completionHandler?(false, SPError.ResponseValidationFailed)
+                    return
                 }
             } catch {
+                completionHandler?(false, SPError.FatalError)
                 Logger.error(error)
             }
         })

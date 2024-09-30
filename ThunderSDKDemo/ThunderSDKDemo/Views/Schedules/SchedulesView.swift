@@ -14,8 +14,9 @@ import Thunder
 struct SchedulesView: View {
     // MARK: Internal
 
-    ///    @Environment(\.manager) private var manager: RealmManager
     @ObservedResults(RealmCoopSchedule.self) var schedules
+    @EnvironmentObject private var manager: RealmManager
+    @EnvironmentObject private var settings: UserSettings
 
     var body: some View {
         NavigationView(content: {
@@ -38,8 +39,11 @@ struct SchedulesView: View {
 //            BackgroundWave()
         })
         .refreshable(action: {
-            let manager: RealmManager = .init()
             try await manager.fetch()
+        }, completion: { result, error in
+            if error == .Unauthorized {
+                settings.isFirstLaunch.toggle()
+            }
         })
         .navigationTitle(Text(rawValue: .StageScheduleTitle))
     }

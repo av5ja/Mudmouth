@@ -13,8 +13,9 @@ import Thunder
 struct ResultsView: View {
     // MARK: Internal
 
-    ///    @Environment(\.manager) private var manager: RealmManager
     @ObservedResults(RealmCoopSchedule.self) var schedules
+    @EnvironmentObject private var manager: RealmManager
+    @EnvironmentObject private var settings: UserSettings
 
     var body: some View {
         NavigationView(content: {
@@ -41,8 +42,11 @@ struct ResultsView: View {
 //            BackgroundWave()
 //        })
         .refreshable(action: {
-            let manager: RealmManager = .init()
             try await manager.fetch()
+        }, completion: { result, error in
+            if error == .Unauthorized {
+                settings.isFirstLaunch.toggle()
+            }
         })
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(Text(rawValue: .CoopHistoryHistory))
