@@ -35,7 +35,7 @@ struct SchedulesView: View {
         .navigationBarTitleDisplayMode(.inline)
         .scrollContentBackgroundWrapper(.hidden)
         .background(content: {
-            BackgroundWave()
+//            BackgroundWave()
         })
         .refreshable(action: {
             let manager: RealmManager = .init()

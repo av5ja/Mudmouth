@@ -70,6 +70,7 @@ struct StageView: View {
 //                        .frame(height: 14)
                     Text(record.goldenIkuraNum, format: .count)
                         .font(.custom(.Splatfont2, size: 16))
+                        .foregroundColor(.white)
                 })
                 .padding(.horizontal, 4)
                 .background(content: {
@@ -82,6 +83,7 @@ struct StageView: View {
                 content: {
                     Text(record.gradePoint, format: .number)
                         .font(.custom(.Splatfont2, size: 16))
+                        .foregroundColor(.white)
                         .padding(.horizontal, 8)
                         .background(content: {
                             Color.black

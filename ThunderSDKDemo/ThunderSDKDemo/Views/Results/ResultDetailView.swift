@@ -30,6 +30,7 @@ struct ResultDetailView: View {
             })
             .frame(maxWidth: 460)
         })
+        .frame(maxWidth: .infinity)
         .background(content: {
             SPColor.SP3.SPBackground
         })

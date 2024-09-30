@@ -62,7 +62,7 @@ struct ResultDefeated: View {
             .frame(height: 14)
         })
         .background(content: {
-            bossCount == bossKillCount ? SPColor.SP3.SPYellow : SPColor.SP3.SPBackground
+            bossCount == bossKillCount ? SPColor.SP3.SPYellow : SPColor.SP3.SPAzure
         })
     }
 }
