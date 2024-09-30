@@ -19,7 +19,7 @@ struct SettingsView: View {
 //                FetchOnLaunch()
 //                ResultDisplayMode()
 //            }, header: {
-//                Text(LocalizedString.CommonAppearances)
+//                Text(.CommonAppearances)
 //                    .font(.custom(.Splatfont1, size: 16))
 //            })
 //            Section(content: {
@@ -27,21 +27,21 @@ struct SettingsView: View {
 //                BuildNumber()
 //                SystemVersion()
 //            }, header: {
-//                Text(LocalizedString.CommonApplication)
+//                Text(.CommonApplication)
 //                    .font(.custom(.Splatfont1, size: 16))
 //            })
 //            Section(content: {
 //                SignIn()
 //                RemoveAll()
 //            }, header: {
-//                Text(LocalizedString.CommonDataManagement)
+//                Text(.CommonDataManagement)
 //                    .font(.custom(.Splatfont1, size: 16))
 //            })
         })
         .font(.custom(.Splatfont2, size: 16))
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(Text(rawValue: .SettingsTitle))
-//        .navigationTitle(Text(LocalizedString.SettingsTitle))
+//        .navigationTitle(Text(.SettingsTitle))
     }
 
     // MARK: Private
@@ -72,15 +72,15 @@ struct SettingsView: View {
 //            Button(action: {
 //                isPresented.toggle()
 //            }, label: {
-//                Text(LocalizedString.CommonSignOut)
+//                Text(.CommonSignOut)
 //            }).alert(
-//                Text(LocalizedString.CommonSignOut),
+//                Text(.CommonSignOut),
 //                isPresented: $isPresented,
 //                actions: {
 //                    Button(role: .cancel, action: {
 //                        isPresented.toggle()
 //                    }, label: {
-//                        Text(LocalizedString.CommonCancel)
+//                        Text(.CommonCancel)
 //                    })
 //                    Button(
 //                        role: .destructive,
@@ -89,12 +89,12 @@ struct SettingsView: View {
 //                        }
 //                        },
 //                        label: {
-//                            Text(LocalizedString.CommonDecide)
+//                            Text(.CommonDecide)
 //                        }
 //                    )
 //                },
 //                message: {
-//                    Text(LocalizedString.CommonSignOutMessage)
+//                    Text(.CommonSignOutMessage)
 //                }
 //            )
 //        }
@@ -112,16 +112,16 @@ struct SettingsView: View {
 //            Button(action: {
 //                isPresented.toggle()
 //            }, label: {
-//                Text(LocalizedString.CommonWipeResults)
+//                Text(.CommonWipeResults)
 //            })
 //            .alert(
-//                Text(LocalizedString.CommonWipeResults),
+//                Text(.CommonWipeResults),
 //                isPresented: $isPresented,
 //                actions: {
 //                    Button(role: .cancel, action: {
 //                        isPresented.toggle()
 //                    }, label: {
-//                        Text(LocalizedString.CommonCancel)
+//                        Text(.CommonCancel)
 //                    })
 //                    Button(
 //                        role: .destructive,
@@ -129,11 +129,11 @@ struct SettingsView: View {
 //                            manager.removeAll()
 //                        },
 //                        label: {
-//                            Text(LocalizedString.CommonDecide)
+//                            Text(.CommonDecide)
 //                        }
 //                    )
 //                },
-//                message: { Text(LocalizedString.CommonWipeResultsMessage) }
+//                message: { Text(.CommonWipeResultsMessage) }
 //            )
 //        }
 //
@@ -151,7 +151,7 @@ struct SettingsView: View {
 //        Toggle(
 //            isOn: config.$useSystemColorScheme,
 //            label: {
-//                Text(LocalizedString.CommonUseSystemTheme)
+//                Text(.CommonUseSystemTheme)
 //            }
 //        )
 //    }
@@ -161,7 +161,7 @@ struct SettingsView: View {
 //        Toggle(
 //            isOn: config.$usePreferredColorScheme,
 //            label: {
-//                Text(LocalizedString.CommonDarkMode)
+//                Text(.CommonDarkMode)
 //            }
 //        )
 //    }
@@ -171,7 +171,7 @@ struct SettingsView: View {
 //        Toggle(
 //            isOn: config.$useGamingModeResults,
 //            label: {
-//                Text(LocalizedString.CommonGamingMode)
+//                Text(.CommonGamingMode)
 //            }
 //        )
 //    }
@@ -181,7 +181,7 @@ struct SettingsView: View {
 //        Toggle(
 //            isOn: config.$fetchOnLaunch,
 //            label: {
-//                Text(LocalizedString.CommonDownload)
+//                Text(.CommonDownload)
 //            }
 //        )
 //    }
@@ -189,7 +189,7 @@ struct SettingsView: View {
 //    @ViewBuilder
 //    private func AppVersion() -> some View {
 //        HStack(content: {
-//            Text(LocalizedString.CommonAppVersion)
+//            Text(.CommonAppVersion)
 //            Spacer()
 //            Text(UIDevice.current.version)
 //                .foregroundColor(.secondary)
@@ -199,7 +199,7 @@ struct SettingsView: View {
 //    @ViewBuilder
 //    private func BuildNumber() -> some View {
 //        HStack(content: {
-//            Text(LocalizedString.CommonBuildNumber)
+//            Text(.CommonBuildNumber)
 //            Spacer()
 //            Text(UIDevice.current.buildVersion, format: .number)
 //                .foregroundColor(.secondary)
@@ -209,7 +209,7 @@ struct SettingsView: View {
 //    @ViewBuilder
 //    private func SystemVersion() -> some View {
 //        HStack(content: {
-//            Text(LocalizedString.CommoniOsVersion)
+//            Text(.CommoniOsVersion)
 //            Spacer()
 //            Text(UIDevice.current.systemVersion)
 //                .foregroundColor(.secondary)

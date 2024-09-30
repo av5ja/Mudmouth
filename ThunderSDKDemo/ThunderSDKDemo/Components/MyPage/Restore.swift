@@ -18,7 +18,7 @@ struct Restore: View {
         }, label: {
             // TODO: - 仮ラベル
             Text(rawValue: .FriendListReload)
-//            Text(rawValue: LocalizedString.CommonRestore)
+//            Text(rawValue: .CommonRestore)
         })
     }
 }

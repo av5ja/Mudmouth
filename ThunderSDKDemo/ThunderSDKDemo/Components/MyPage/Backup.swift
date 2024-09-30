@@ -22,7 +22,7 @@
 //                UIApplication.shared.presentedViewController?.popover(activity, animated: true)
 //            })
 //        },label: {
-//            Text(LocalizedString.CommonBackupResults)
+//            Text(.CommonBackupResults)
 //        })
 //    }
 // }

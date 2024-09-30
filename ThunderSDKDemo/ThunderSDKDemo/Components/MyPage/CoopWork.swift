@@ -19,7 +19,7 @@ struct CoopWork: View {
         Button(action: {
             isPresented.toggle()
         }, label: {
-            Text(rawValue: LocalizedString.CoopRecordAppName)
+            Text(rawValue: .CoopRecordAppName)
                 .font(.custom(.Splatfont2, size: 12))
                 .lineLimit(1)
         })
@@ -27,7 +27,7 @@ struct CoopWork: View {
         .buttonStyle(.circle(forgroundColor: SPColor.SP3.SPPurple))
 //        .buttonStyle(.circle(icon: .Work, foregroundColor: SPColor.SP3.SPPurple))
         .sheet(isPresented: $isPresented, content: {
-//            CoopWorkView()
+            CoopWorkView()
         })
     }
 

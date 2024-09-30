@@ -18,13 +18,13 @@
 //        Button(action: {
 //            isPresented.toggle()
 //        },label: {
-//            Text(LocalizedString.CommonDataManagement)
+//            Text(.CommonDataManagement)
 //                .font(.custom(.Splatfont2, size: 12))
 //                .lineLimit(1)
 //        })
 //        .buttonStyle(.circle(icon: .Memory, foregroundColor: SPColor.SP3.SPGray))
 //        .confirmationDialog(
-//            Text(LocalizedString.CommonDataManagement),
+//            Text(.CommonDataManagement),
 //            isPresented: $isPresented,
 //            titleVisibility: .visible,
 //            actions: {
@@ -37,13 +37,13 @@
 //                Task(priority: .background, operation: {
 //                    do {
 ////                        try await RealmSigner.restore(url: destinaionURL)
-//                        let alert = UIAlertController(title: LocalizedString.CommonRestore.description, message: LocalizedString.CommonRestoreSuccessMessage.description, preferredStyle: .alert)
-//                        let action = UIAlertAction(title: LocalizedString.CommonDecide.description, style: .default)
+//                        let alert = UIAlertController(title: .CommonRestore.description, message: .CommonRestoreSuccessMessage.description, preferredStyle: .alert)
+//                        let action = UIAlertAction(title: .CommonDecide.description, style: .default)
 //                        alert.addAction(action)
 //                        UIApplication.shared.presentedViewController?.present(alert, animated: true)
 //                    } catch (let error) {
-//                        let alert = UIAlertController(title: LocalizedString.ErrorErrorOccurred.description, message: error.localizedDescription, preferredStyle: .alert)
-//                        let action = UIAlertAction(title: LocalizedString.CommonClose.description, style: .default)
+//                        let alert = UIAlertController(title: .ErrorErrorOccurred.description, message: error.localizedDescription, preferredStyle: .alert)
+//                        let action = UIAlertAction(title: .CommonClose.description, style: .default)
 //                        alert.addAction(action)
 //                        UIApplication.shared.presentedViewController?.present(alert, animated: true)
 //                    }

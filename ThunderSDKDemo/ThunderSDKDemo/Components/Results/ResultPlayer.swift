@@ -69,7 +69,7 @@ struct ResultPlayer: View {
             })
             .padding(.bottom, 2)
             HStack(spacing: 4, content: {
-//                Text(rawValue: LocalizedString.CoopHistoryDefeatedCount)
+//                Text(rawValue: .CoopHistoryDefeatedCount)
 //                Text(player.bossKillCountsTotal, format: .number())
             })
             .font(.custom(.Splatfont2, size: 12))

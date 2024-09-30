@@ -11,10 +11,8 @@
       "version": "2.37.0"
     },
     "ghcr.io/michidk/devcontainers-features/bun:1": {},
-    "ghcr.io/swift-server-community/swift-devcontainer-features/jemalloc:1": {
-    },
-    "ghcr.io/swift-server-community/swift-devcontainer-features/swiftformat:0": {
-    },
+    "ghcr.io/swift-server-community/swift-devcontainer-features/jemalloc:1": {},
+    "ghcr.io/swift-server-community/swift-devcontainer-features/swiftformat:0": {},
     "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true
     },
@@ -43,9 +41,7 @@
         "bierner.markdown-preview-github-styles",
         "bierner.markdown-mermaid",
         "jebbs.markdown-extended",
-        "igtm.tailwind-vscode-suggestions-for-csser",
-        "csstools.postcss",
-        "bradlc.vscode-tailwindcss"
+        "sswg.swift-lang"
       ],
       "settings": {
         "betterTypeScriptErrors.prettify": true,

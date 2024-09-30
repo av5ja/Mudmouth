@@ -19,7 +19,7 @@ struct Stages: View {
         Button(action: {
             isPresented.toggle()
         }, label: {
-            Text(rawValue: LocalizedString.RecordStageRecordAppName)
+            Text(rawValue: .RecordStageRecordAppName)
                 .font(.custom(.Splatfont2, size: 12))
                 .lineLimit(1)
         })
@@ -27,7 +27,7 @@ struct Stages: View {
         .buttonStyle(.circle(forgroundColor: SPColor.SP3.SPPurple))
         //        .buttonStyle(.circle(icon: .Stage, foregroundColor: SPColor.SP3.SPPurple))
         .sheet(isPresented: $isPresented, content: {
-//            StageView()
+            StageView()
         })
     }
 

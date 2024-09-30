@@ -9,7 +9,7 @@
 
 import Foundation
 
-extension CoopStage {
+public extension CoopStage {
     /// 通常ステージ
     static let regular: AllCases = allCases.filter { $0.rawValue < 100 && $0.rawValue > 0 }
     /// ビッグラン専用ステージ

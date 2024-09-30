@@ -17,9 +17,9 @@
 //        NavigationLink(destination: {
 //            LicenseListView()
 //                .navigationBarTitleDisplayMode(.inline)
-//                .navigationTitle(Text(LocalizedString.CommonLicense))
+//                .navigationTitle(Text(.CommonLicense))
 //        }, label: {
-//            Text(LocalizedString.SettingsAcknowledgements)
+//            Text(.SettingsAcknowledgements)
 //                .font(.custom(.Splatfont2, size: 12))
 //                .lineLimit(1)
 //        })

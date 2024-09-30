@@ -1,5 +1,5 @@
 {
-  "originHash" : "98be6a28d7eba0ab39921cc14c05f5760bdefc3230d7a87e8d9fdf7c312ea877",
+  "originHash" : "2ffe50825112faf0f3e99967e018b738cc0afc3c0f379c8a1b065f3fea3a7d13",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -125,6 +125,15 @@
       "state" : {
         "revision" : "7c80ce6f142164b0201871e580b021d1b2c69804",
         "version" : "0.57.0"
+      }
+    },
+    {
+      "identity" : "swiftpackagekeys",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MasamiYamate/SwiftPackageKeys.git",
+      "state" : {
+        "revision" : "6007372403b6affe8daf6a6484bce989280a5b84",
+        "version" : "3.0.1"
       }
     },
     {
