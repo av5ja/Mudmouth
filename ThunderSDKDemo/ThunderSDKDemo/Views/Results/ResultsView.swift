@@ -41,10 +41,7 @@ struct ResultsView: View {
             BackgroundWave()
         })
         .navigationBarTitleDisplayMode(.inline)
-//        .navigationTitle(Text(LocalizedString.CoopHistoryHistory))
-//        .refreshable(action: {
-//            try await manager.refresh()
-//        })
+        .navigationTitle(Text(rawValue: .CoopHistoryHistory))
     }
 }
 

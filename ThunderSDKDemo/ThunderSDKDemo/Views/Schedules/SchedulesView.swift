@@ -33,14 +33,15 @@ struct SchedulesView: View {
         })
         .listStyle(.plain)
         .navigationBarTitleDisplayMode(.inline)
+        .scrollContentBackgroundWrapper(.hidden)
+        .background(content: {
+            BackgroundWave()
+        })
         .refreshable(action: {
             let manager: RealmManager = .init()
             try await manager.fetch()
         })
-//        .navigationTitle(Text(LocalizedString.CoopHistoryTitle))
-//        .refreshable(action: {
-//            try await manager.refresh()
-//        })
+        .navigationTitle(Text(rawValue: .StageScheduleTitle))
     }
 }
 

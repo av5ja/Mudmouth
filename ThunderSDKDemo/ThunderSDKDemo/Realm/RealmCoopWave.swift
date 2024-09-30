@@ -79,11 +79,12 @@ extension CoopHistoryDetailQuery.WaveResult {
 }
 
 extension RealmCoopWave {
-//    private var result: RealmCoopResult {
-//        results.first ?? .preview()
-//    }
-//
-//    var isExtra: Bool {
-//        waveId == result.waves.count && quotaNum == nil
-//    }
+    private var result: RealmCoopResult {
+        // swiftlint:disable:next force_unwrapping
+        results.first!
+    }
+
+    var isExtra: Bool {
+        waveId == result.waves.count && quotaNum == nil
+    }
 }

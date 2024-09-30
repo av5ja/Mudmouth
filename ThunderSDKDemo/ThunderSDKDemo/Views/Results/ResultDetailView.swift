@@ -30,8 +30,11 @@ struct ResultDetailView: View {
             })
             .frame(maxWidth: 460)
         })
+        .background(content: {
+            SPColor.SP3.SPBackground
+        })
         .navigationBarTitleDisplayMode(.inline)
-//        .navigationTitle(Text(LocalizedString.CoopHistoryHistory))
+        .navigationTitle(Text(rawValue: .CoopHistoryHistory))
     }
 }
 

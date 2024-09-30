@@ -45,6 +45,7 @@ struct ResultJob: View {
             })
         })
         .font(.custom(.Splatfont2, size: 14))
+        .foregroundColor(.white)
         .padding(.all, 4)
     }
 }
