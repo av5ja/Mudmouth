@@ -84,7 +84,7 @@ struct ResultView: View {
             .foregroundColor(SPColor.SP2.SPWhite)
         })
         .padding(.vertical, 4)
-        .padding(.horizontal, 4)
+        .padding(.horizontal, UIDevice.current.userInterfaceIdiom == .pad ? 8 : 4)
         .background(content: {
             Color.black.opacity(0.75)
         })

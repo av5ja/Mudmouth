@@ -36,9 +36,13 @@ struct ResultsView: View {
             })
         })
         .listStyle(.plain)
-        .scrollContentBackgroundWrapper(.hidden)
-        .background(content: {
-            BackgroundWave()
+//        .scrollContentBackgroundWrapper(.hidden)
+//        .background(content: {
+//            BackgroundWave()
+//        })
+        .refreshable(action: {
+            let manager: RealmManager = .init()
+            try await manager.fetch()
         })
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(Text(rawValue: .CoopHistoryHistory))
