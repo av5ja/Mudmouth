@@ -18,6 +18,7 @@ struct ThunderSDKDemoApp: App {
     @Environment(\.scenePhase) var scenePhase
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var settings: UserSettings = .default
+    @StateObject var options: SearchOption = .init()
 
     var body: some Scene {
         WindowGroup {
@@ -25,6 +26,7 @@ struct ThunderSDKDemoApp: App {
                 .environment(\.realm, try! Realm(configuration: .default))
                 .environment(\.realmConfiguration, .default)
                 .environmentObject(settings)
+                .environmentObject(options)
                 .overrideUserInterfaceStyle(settings.preferredColorScheme, scenePhase)
                 .addScenePhaseObserver(scenePhase)
                 .fullScreenCover(isPresented: settings.$isFirstLaunch, content: {

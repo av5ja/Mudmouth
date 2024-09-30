@@ -6,13 +6,13 @@
 //  Copyright © 2024 Magi. All rights reserved.
 //
 
-import SwiftUI
 import RealmSwift
+import SwiftUI
 import Thunder
 
 struct CoopWorkView: View {
-    @ObservedResults(RealmCoopEnemy.self, sortDescriptor: SortDescriptor(keyPath: "enemyId", ascending: true)) private var results
-    
+    // MARK: Internal
+
     var body: some View {
         NavigationView(content: {
             ScrollView(showsIndicators: false, content: {
@@ -23,7 +23,11 @@ struct CoopWorkView: View {
             .navigationTitle(Text(rawValue: .CoopHistoryEnemy))
         })
     }
-    
+
+    // MARK: Private
+
+    @ObservedResults(RealmCoopEnemy.self, sortDescriptor: SortDescriptor(keyPath: "enemyId", ascending: true)) private var results
+
     private var _body: some View {
         LazyVGrid(columns: .init(repeating: .init(.flexible(maximum: 140)), count: 3), content: {
             ForEach(results, content: { result in

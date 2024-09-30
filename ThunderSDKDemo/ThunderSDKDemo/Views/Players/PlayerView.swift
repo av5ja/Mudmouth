@@ -5,13 +5,15 @@
 //  Created by devonly on 2024/09/30.
 //
 
-import SwiftUI
 import RealmSwift
+import SwiftUI
 import Thunder
 
 struct PlayerView: View {
+    // MARK: Internal
+
     let player: RealmCoopPlayer
-    
+
     var body: some View {
         NavigationLinker(destination: {
             EmptyView()
@@ -22,7 +24,9 @@ struct PlayerView: View {
         .listRowInsets(EdgeInsets())
         .listRowSeparator(.hidden)
     }
-    
+
+    // MARK: Private
+
     private var _body: some View {
         HStack(spacing: 0, content: {
             Rectangle()
@@ -42,6 +46,7 @@ struct PlayerView: View {
 //                .clipped()
 //                .overlay(alignment: .topLeading, content: {})
             Rectangle()
+                .fill(.clear)
 //                .overlay(alignment: .topLeading, content: {
 //                    Text(player.nplnUserId)
 //                        .font(.custom(.Splatfont2, size: 12))
@@ -68,6 +73,6 @@ struct PlayerView: View {
     }
 }
 
-//#Preview {
+// #Preview {
 //    PlayerView()
-//}
+// }
