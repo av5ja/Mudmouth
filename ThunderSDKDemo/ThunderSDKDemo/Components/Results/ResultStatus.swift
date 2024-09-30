@@ -63,6 +63,7 @@ struct ResultStatus: View {
         })
         .padding(.all, 4)
         .frame(height: 48)
+        .foregroundColor(.white)
 //        .onAppear(perform: {
 //            withAnimation(.easeIn(duration: 0.5)) {
 //                scale = 1.0

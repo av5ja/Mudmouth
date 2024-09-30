@@ -96,25 +96,25 @@ struct ResultWaveSP2: View {
     // MARK: Private
 
     @ViewBuilder
-    private func _wave(wave _: RealmCoopWave) -> some View {
-//        switch wave.isExtra {
-//        case true:
-//            EmptyView()
-//            //            Text(LocalizedString.CoopHistoryExWave)
-        ////                .font(.custom(.Splatfont2, size: 15))
-        ////                .foregroundColor(SPColor.SP3.SPSalmonOrange)
-        ////                .padding(.top, 4)
-        ////                .padding(.bottom, 6)
-//        case false:
-//            HStack(spacing: 2, content: {
-        ////                Text(LocalizedString.CoopHistoryWave)
-        ////                Text(wave.waveId, format: .number)
-//            })
-//            .font(.custom(.Splatfont2, size: 15))
-//            .foregroundColor(.black)
-//            .padding(.top, 4)
-//            .padding(.bottom, 6)
-//        }
+    private func _wave(wave: RealmCoopWave) -> some View {
+        switch wave.isExtra {
+        case true:
+            Text(rawValue: .CoopHistoryExWave)
+                .font(.custom(.Splatfont2, size: 15))
+                .foregroundColor(SPColor.SP3.SPSalmonOrange)
+                .padding(.top, 4)
+                .padding(.bottom, 6)
+
+        case false:
+            HStack(spacing: 2, content: {
+                Text(rawValue: .CoopHistoryWave)
+                Text(wave.waveId, format: .number)
+            })
+            .font(.custom(.Splatfont2, size: 15))
+            .foregroundColor(.black)
+            .padding(.top, 4)
+            .padding(.bottom, 6)
+        }
     }
 
     @ViewBuilder
@@ -128,6 +128,8 @@ struct ResultWaveSP2: View {
                     .font(.custom(.Splatfont2, size: 20))
                     .frame(maxWidth: .infinity)
                     .frame(height: 30)
+                    .minimumScaleFactor(0.7)
+                    .foregroundColor(.white)
                     .background(content: {
                         Rectangle()
                             .fill(SPColor.SP2.SPBackground)
@@ -141,6 +143,7 @@ struct ResultWaveSP2: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 30)
                     .minimumScaleFactor(0.7)
+                    .foregroundColor(.white)
                     .lineLimit(1)
                     .background(content: {
                         Rectangle()

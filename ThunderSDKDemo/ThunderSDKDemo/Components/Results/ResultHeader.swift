@@ -81,6 +81,7 @@ struct ResultHeader: View {
                     .padding(.horizontal, 4)
                     .padding(.top, 4)
             })
+            .foregroundColor(.white)
 //            .onAppear(perform: {
 //                withAnimation(.spring(duration: 0.5, bounce: 0.25), {
 //                    scale = 1.0

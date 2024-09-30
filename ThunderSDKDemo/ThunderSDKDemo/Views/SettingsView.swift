@@ -40,6 +40,7 @@ struct SettingsView: View {
         })
         .font(.custom(.Splatfont2, size: 16))
         .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle(Text(rawValue: .SettingsTitle))
 //        .navigationTitle(Text(LocalizedString.SettingsTitle))
     }
 

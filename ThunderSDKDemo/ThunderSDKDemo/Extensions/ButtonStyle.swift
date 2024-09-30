@@ -24,6 +24,7 @@ struct SPButtonStyle: ButtonStyle {
 //                    .padding(8)
             })
             configuration.label
+                .foregroundColor(.white)
         }).opacity(configuration.isPressed ? 0.7 : 1.0)
     }
 }
