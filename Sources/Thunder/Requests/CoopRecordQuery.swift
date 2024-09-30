@@ -37,8 +37,8 @@ public final class CoopRecordQuery: AuthorizedType {
     // MARK: - StageRecord
 
     public struct StageRecord: Codable {
-        public let startTime: String?
-        public let endTime: String?
+        public let startTime: Date?
+        public let endTime: Date?
         public let goldenIkuraNum: Int?
         public let grade: Int
         public let gradePoint: Int

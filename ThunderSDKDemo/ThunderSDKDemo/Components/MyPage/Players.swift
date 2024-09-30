@@ -1,5 +1,5 @@
 //
-//  Settings.swift
+//  Players.swift
 //  ThunderApp
 //
 //  Created by devonly on 2024/07/15.
@@ -9,21 +9,27 @@
 import SwiftUI
 import Thunder
 
-struct Settings: View {
+struct Players: View {
+    // MARK: Internal
+
     var body: some View {
         NavigationLink(
-            destination: SettingsView(),
+            destination: PlayersView(),
             label: {
-                Text(rawValue: .SettingsTitle)
+                Text(rawValue: .XRankingTopPlayers)
                     .font(.custom(.Splatfont2, size: 12))
                     .lineLimit(1)
             }
         )
-        .buttonStyle(.circle(forgroundColor: SPColor.SP3.SPGray))
+        .buttonStyle(.circle(forgroundColor: SPColor.SP3.SPBackground))
         //        .buttonStyle(.circle(icon: .Settings, foregroundColor: SPColor.SP3.SPGray))
     }
+
+    // MARK: Private
+
+    @State private var isPresented = false
 }
 
 #Preview {
-    Settings()
+    Battle()
 }

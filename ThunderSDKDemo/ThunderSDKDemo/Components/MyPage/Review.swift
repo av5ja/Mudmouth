@@ -19,7 +19,7 @@ struct Review: View {
                 }
             }
         }, label: {
-//            Text(LocalizedString.CommonWriteReview)
+//            Text(.CommonWriteReview)
 //                .font(.custom(.Splatfont2, size: 12))
 //                .lineLimit(1)
         })

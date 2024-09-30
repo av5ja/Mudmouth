@@ -38,7 +38,13 @@ final class RealmManager: Thunder, ObservableObject {
     @discardableResult
     override func getRecord() async throws -> CoopRecordQuery.ResponseType {
         let response = try await super.getRecord()
-        inWriteTransaction(transaction: { _ in
+        inWriteTransaction(transaction: { realm in
+            response.enemyRecords.forEach({ record in
+                realm.update(RealmCoopEnemy.self, value: record, update: .modified)
+            })
+            response.stageRecords.forEach({ record in
+                realm.update(RealmCoopRecord.self, value: record, update: .modified)
+            })
         })
         return response
     }

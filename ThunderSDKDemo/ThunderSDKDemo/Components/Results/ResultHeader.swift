@@ -47,7 +47,7 @@ struct ResultHeader: View {
             .overlay(alignment: .center, content: {
                 if let dangerRate: Decimal128 = result.dangerRate {
                     HStack(content: {
-                        Text(rawValue: LocalizedString.CoopHistoryDangerRatio)
+                        Text(rawValue: .CoopHistoryDangerRatio)
                         Text(dangerRate.doubleValue, format: .percent)
                     })
                     .font(.custom(.Splatfont1, size: 22))
@@ -75,7 +75,7 @@ struct ResultHeader: View {
                 .padding(.bottom, 4)
             })
             .overlay(alignment: .topTrailing, content: {
-                Text(rawValue: result.isClear ? LocalizedString.CoopHistoryClear : LocalizedString.CoopHistoryFailure)
+                Text(rawValue: result.isClear ? .CoopHistoryClear : .CoopHistoryFailure)
                     .font(.custom(.Splatfont1, size: 17))
                     .foregroundColor(result.isClear ? SPColor.SP2.SPGreen : SPColor.SP2.SPOrange)
                     .padding(.horizontal, 4)

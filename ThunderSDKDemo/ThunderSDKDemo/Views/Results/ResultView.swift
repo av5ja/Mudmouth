@@ -38,7 +38,7 @@ struct ResultView: View {
     private var _body: some View {
         HStack(content: {
             VStack(alignment: .leading, spacing: 2, content: {
-                Text(rawValue: result.isClear ? LocalizedString.CoopHistoryClear : LocalizedString.CoopHistoryFailure)
+                Text(rawValue: result.isClear ? .CoopHistoryClear : .CoopHistoryFailure)
                     .font(.custom(.Splatfont1, size: 14))
                     .foregroundColor(result.isClear ? SPColor.SP2.SPGreen : SPColor.SP2.SPOrange)
                 if let gradeId: CoopGrade = result.gradeId,

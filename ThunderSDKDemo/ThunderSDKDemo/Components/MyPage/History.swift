@@ -16,7 +16,7 @@ struct History: View {
         NavigationLink(destination: {
 //            WavesView()
         }, label: {
-            Text(rawValue: LocalizedString.CoopHistoryHistory)
+            Text(rawValue: .CoopHistoryHistory)
                 .font(.custom(.Splatfont2, size: 12))
                 .lineLimit(1)
         })

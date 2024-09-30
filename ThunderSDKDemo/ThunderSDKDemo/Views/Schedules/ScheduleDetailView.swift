@@ -19,7 +19,7 @@
 //            _body
 //        })
 //        .navigationBarTitleDisplayMode(.inline)
-//        .navigationTitle(Text(LocalizedString.StageScheduleTitle))
+//        .navigationTitle(Text(.StageScheduleTitle))
 //    }
 //
 //    // MARK: Private

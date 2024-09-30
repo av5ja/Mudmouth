@@ -14,25 +14,25 @@ struct ResultJob: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0, content: {
-            Text(rawValue: LocalizedString.CoopHistoryJobPoint)
+            Text(rawValue: .CoopHistoryJobPoint)
             HStack(content: {
                 Spacer()
                 VStack(spacing: 4, content: {
-                    Text(rawValue: LocalizedString.CoopHistoryScore)
+                    Text(rawValue: .CoopHistoryScore)
                         .foregroundStyle(SPColor.SP2.SPYellow)
                         .font(.custom(.Splatfont2, size: 12))
                     Text(result.jobScore, format: .number)
                 })
                 Text("x")
                 VStack(spacing: 4, content: {
-                    Text(rawValue: LocalizedString.CoopHistoryJobRatio)
+                    Text(rawValue: .CoopHistoryJobRatio)
                         .foregroundStyle(SPColor.SP2.SPYellow)
                         .font(.custom(.Splatfont2, size: 12))
                     Text(result.jobRate, format: .number(2))
                 })
                 Text("+")
                 VStack(spacing: 4, content: {
-                    Text(rawValue: LocalizedString.CoopHistoryBonus)
+                    Text(rawValue: .CoopHistoryBonus)
                         .foregroundStyle(SPColor.SP2.SPYellow)
                         .font(.custom(.Splatfont2, size: 12))
                     Text(result.jobBonus, format: .number)
@@ -40,7 +40,7 @@ struct ResultJob: View {
                 Text("=")
                 HStack(spacing: 4, content: {
                     Text(result.kumaPoint, format: .number)
-                    Text(rawValue: LocalizedString.RecordTotalTurfPoint)
+                    Text(rawValue: .RecordTotalTurfPoint)
                 })
             })
         })
