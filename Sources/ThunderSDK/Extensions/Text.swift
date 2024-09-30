@@ -22,4 +22,12 @@ public extension Text {
     init(rawValue: CoopWaterLevel) {
         self.init(rawValue.description)
     }
+
+    init(rawValue: CoopMode) {
+        self.init(rawValue.description)
+    }
+
+    init(rawValue: CoopRule) {
+        self.init(rawValue.description)
+    }
 }

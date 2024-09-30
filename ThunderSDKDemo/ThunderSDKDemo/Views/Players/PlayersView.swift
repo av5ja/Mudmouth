@@ -5,15 +5,15 @@
 //  Created by devonly on 2024/09/30.
 //
 
-import SwiftUI
 import RealmSwift
+import SwiftUI
 import Thunder
 
 struct PlayersView: View {
-    @ObservedResults(RealmCoopPlayer.self) var players
-    @State private var isPresented: Bool = false
-    @State private var text: String = ""
-    
+    // MARK: Internal
+
+    @ObservedResults(RealmCoopPlayer.self, sortDescriptor: .init(keyPath: "nplnUserId", ascending: true)) var players
+
     var body: some View {
         if #available(iOS 17.0, *) {
             iOS17
@@ -21,7 +21,12 @@ struct PlayersView: View {
             iOS16
         }
     }
-   
+
+    // MARK: Private
+
+    @State private var isPresented: Bool = false
+    @State private var search: String = ""
+
     @available(iOS 17.0, *)
     private var iOS17: some View {
         List(content: {
@@ -34,11 +39,17 @@ struct PlayersView: View {
         .background(content: {
 //            BackgroundWave()
         })
-        .searchable(text: $text, isPresented: $isPresented, prompt: Text(rawValue: .FriendListAppName))
+        .searchable(text: $search, collection: $players, keyPath: \.name) {
+            ForEach(players, content: { player in
+                Text(player.name).onTapGesture(perform: {
+                    search = player.name
+                })
+            })
+        }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(Text(rawValue: .XRankingTopPlayers))
     }
-    
+
     private var iOS16: some View {
         List(content: {
             ForEach(players, content: { player in
@@ -48,7 +59,7 @@ struct PlayersView: View {
         .listStyle(.plain)
         .scrollContentBackgroundWrapper(.hidden)
         .background(content: {
-//            BackgroundWave()
+            BackgroundWave()
         })
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(Text(rawValue: .XRankingTopPlayers))

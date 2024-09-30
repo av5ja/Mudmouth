@@ -36,7 +36,7 @@ struct CarouselView: View {
     @available(iOS 17, *)
     var iOS17: some View {
         ScrollView(.horizontal, showsIndicators: false, content: {
-            ScrollViewReader(content: { proxy in
+            ScrollViewReader(content: { _ in
                 LazyHStack(content: {
                     ForEach(results, content: { result in
                         ResultDetailView(result: result)
@@ -45,12 +45,10 @@ struct CarouselView: View {
                     })
                 })
                 .scrollTargetLayout()
-                .onAppear(perform: {
-                    proxy.scrollTo(result.id, anchor: .center)
-                })
             })
         })
-//        .environment(\.visible, $isPresented)
+        //        .environment(\.visible, $isPresented)
+//        .scrollPosition(id: $selection)
         .scrollTargetBehavior(.viewAligned)
     }
 
@@ -61,7 +59,6 @@ struct CarouselView: View {
                 ResultDetailView(result: result)
                     .id(result.id)
                     .tag(result.id)
-                    .padding(.horizontal, 16)
             })
         })
         .tabViewStyle(.page(indexDisplayMode: .never))

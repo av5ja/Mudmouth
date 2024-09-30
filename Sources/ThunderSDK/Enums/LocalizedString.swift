@@ -1,5 +1,5 @@
 //
-//  LocalizedStrings.swift
+//  LocalizedString.swift
 //  ThunderSDK
 //
 //  Created by Thunder SDK Gen on 2024/10/01
