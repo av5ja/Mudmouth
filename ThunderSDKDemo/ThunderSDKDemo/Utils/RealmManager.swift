@@ -7,18 +7,12 @@
 
 import Foundation
 import RealmSwift
-import SwiftPackageKeys
 import Thunder
 
 // MARK: - RealmManager
 
 final class RealmManager: Thunder, ObservableObject {
     // MARK: Internal
-
-    static func migrationBlock() -> MigrationBlock? {
-        { _, _ in
-        }
-    }
 
     func fetch() async throws {
         try await getSchedule()
@@ -83,9 +77,6 @@ final class RealmManager: Thunder, ObservableObject {
 
     // MARK: Private
 
-    /// スキーマのバージョン
-    private static let schemaVersion: UInt64 = .init(Thunder.bundleVersion.split(separator: ".").compactMap { Int($0) }.map { String(format: "%02d", $0) }.joined(), radix: 16) ?? 0
-
     private func inWriteTransaction(transaction: @escaping (Realm) -> Void) {
         // スレッドセーフの観点からこうしてみる(ChatGPTの指摘)
         Task(priority: .background, operation: {
@@ -107,26 +98,4 @@ final class RealmManager: Thunder, ObservableObject {
             }
         })
     }
-}
-
-public extension Realm.Configuration {
-    private static let schemaVersion: UInt64 = .init(Thunder.bundleVersion.split(separator: ".").compactMap { Int($0) }.map { String(format: "%02d", $0) }.joined(), radix: 16) ?? 0
-
-    /// Realmの暗号化鍵
-    private static let encryptionKey: Data = {
-        guard let value: String = SwiftPackageKeys.realmEncryptionKey.value
-        else {
-            fatalError("RealmEncryptionKey is not defined in .env")
-        }
-        Logger.debug(value.data(using: .utf8)!.map { String(format: "%02X", $0) }.joined())
-        // swiftlint:disable:next force_unwrapping
-        return value.data(using: .utf8)!
-    }()
-
-    static let `default`: Realm.Configuration = .init(
-        encryptionKey: encryptionKey,
-        readOnly: false,
-        schemaVersion: schemaVersion,
-        deleteRealmIfMigrationNeeded: true
-    )
 }

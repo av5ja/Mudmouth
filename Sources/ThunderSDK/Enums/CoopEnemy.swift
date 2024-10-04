@@ -42,6 +42,9 @@ public enum CoopEnemy: SPRawRepresentable {
     /// Flipper-Flopper
     /// - Returns: 12
     case SakeDolphin
+    /// Big Shot
+    /// - Returns: 13
+    case SakeArtillery
     /// Slammin' Lid
     /// - Returns: 14
     case SakeSaucer
@@ -51,6 +54,9 @@ public enum CoopEnemy: SPRawRepresentable {
     /// Griller
     /// - Returns: 17
     case Sakedozer
+    /// Mudmouth
+    /// - Returns: 20
+    case SakeBigMouth
     /// Cohozuna
     /// - Returns: 23
     case SakelienGiant
@@ -79,9 +85,11 @@ public enum CoopEnemy: SPRawRepresentable {
         .Sakerocket,
         .SakePillar,
         .SakeDolphin,
+        .SakeArtillery,
         .SakeSaucer,
         .SakelienGolden,
         .Sakedozer,
+        .SakeBigMouth,
         .SakelienGiant,
         .SakeRope,
         .SakeJaw,
@@ -99,9 +107,11 @@ public enum CoopEnemy: SPRawRepresentable {
         case .Sakerocket: return 10
         case .SakePillar: return 11
         case .SakeDolphin: return 12
+        case .SakeArtillery: return 13
         case .SakeSaucer: return 14
         case .SakelienGolden: return 15
         case .Sakedozer: return 17
+        case .SakeBigMouth: return 20
         case .SakelienGiant: return 23
         case .SakeRope: return 24
         case .SakeJaw: return 25
