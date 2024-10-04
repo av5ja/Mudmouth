@@ -3,10 +3,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: source_gen 
+    container_name: source_gen
     volumes:
-      - ../:/home/bun/app:cached
-      - node_modules:/home/bun/app/node_modules
+      - ../:/home/vscode/app:cached
+      - node_modules:/home/vscode/app/node_modules
     tty: true
     stdin_open: true
 

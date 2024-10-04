@@ -243,10 +243,11 @@ export namespace NSO {
   export const generate_source_code = async (): Promise<void> => {
     const hash: string = await get_hash()
     const text: string = await get_text(hash)
+    const [game, app, web] = await Promise.all([get_game_version(), get_app_version(), get_revision()])
     const version = {
-      game: await get_game_version(),
-      app: await get_app_version(),
-      web: await get_revision(),
+      game: game,
+      app: app,
+      web: web,
     }
     const hashes: SHA256Hash[] = get_sha256_hash(text)
     const locales: LocalizedString[] = await get_locales(text, hash)
@@ -283,7 +284,7 @@ export namespace NSO {
     )
     const locale: LocalizedString = locales.find((locale) => locale.id === LocaleType.JPja) as LocalizedString
     Bun.write(
-      'Sources/ThunderSDK/Enums/LocalizedStrings.swift',
+      'Sources/ThunderSDK/Enums/LocalizedString.swift',
       [
         '//',
         '//  LocalizedString.swift',
