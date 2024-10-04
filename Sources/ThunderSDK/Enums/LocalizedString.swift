@@ -12,1670 +12,1510 @@ import Foundation
 /// LocalizedString
 /// - Description: 6.0.0 (30a1464a)
 public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Identifiable, Codable {
-    /// スメーシーワールド
-    case Carousel
     /// カタログ
-    case CatalogAppName
+    case Catalog.app_name
     /// 引き換えできます
-    case CatalogAvailable
-    /// ビッグラン開催中！ポイント！
-    case CatalogBigrunBonus
-    /// カタログレベルを上げてミステリーボックスをゲット！
-    case CatalogBonusDescription
+    case Catalog.available
+    /// ビッグラン開催中！ポイント<em>1.2倍</em>！
+    case Catalog.bigrun_bonus
+    /// カタログレベルを上げて<br />ミステリーボックスをゲット！
+    case Catalog.bonus_description
     /// レベル10ごとにミステリーボックスをゲットできます
-    case CatalogBonusGuide
+    case Catalog.bonus_guide
     /// ボーナス！
-    case CatalogBonusTitle
+    case Catalog.bonus_title
     /// 二つ名
-    case CatalogByname
+    case Catalog.Byname
     /// カードパック
-    case CatalogCardPack
+    case Catalog.CardPack
     /// フレッシュカードパック
-    case CatalogCardPackFresh
+    case Catalog.CardPackFresh
     /// カードスリーブ
-    case CatalogCardSleeve
+    case Catalog.CardSleeve
     /// コンプリート！
-    case CatalogComplete
-    ///  /
-    case CatalogCurrent
-    /// Lv.
-    case CatalogCurrentExtraLevel
-    /// るいけい  p
-    case CatalogCurrentPoint
-    /// 本日初勝利でもれなくポイントゲット！
-    case CatalogDailyBonus
+    case Catalog.complete
+    /// { 0 } / { 1 }
+    case Catalog.current
+    /// Lv. { 0 }
+    case Catalog.current_extra_level
+    /// るいけい { 0 } p
+    case Catalog.current_point
+    /// 本日初勝利でもれなく<em>{ 0 }</em>ポイントゲット！
+    case Catalog.daily_bonus
     /// ドリンクチケット
-    case CatalogDrinkTicket
+    case Catalog.drink_ticket
     /// エモート
-    case CatalogEmote
-    /// もうすぐ サービス中！
-    case CatalogEndOfSeason
-    /// フェス開催中！ポイント！
-    case CatalogFesBonus
+    case Catalog.Emote
+    /// もうすぐ <em>{ 0 }</em> が終了します。カタログポイント<em>1.5倍</em>サービス中！
+    case Catalog.end_of_season
+    /// フェス開催中！ポイント<em>1.2倍</em>！
+    case Catalog.fes_bonus
     /// オキモノ
-    case CatalogFigure
+    case Catalog.Figure
     /// フードチケット
-    case CatalogFoodTicket
+    case Catalog.food_ticket
     /// ギアパワーのかけら
-    case CatalogGearSkillChip
+    case Catalog.GearSkillChip
     /// ゲット！
-    case CatalogGot
-    ///
-    case CatalogGuide
-    /// x
-    case CatalogItemAmount
+    case Catalog.got
+    /// <em>ランクを4まで上げてザッカ屋でカタログを受け取ろう！</em>
+    case Catalog.guide
+    /// x{ 0 }
+    case Catalog.item_amount
     /// カタログレベル
-    case CatalogLevel
-    ///  まで
-    case CatalogLimit
+    case Catalog.level
+    /// { 0 } まで
+    case Catalog.limit
     /// ミステリーボックス
-    case CatalogMysteryBox
+    case Catalog.mystery_box
     /// プレート
-    case CatalogNamePlateBg
+    case Catalog.NamePlateBg
     /// つぎ
-    case CatalogNextBonus
-    /// ページ
-    case CatalogPage
-    ///  /  ページ
-    case CatalogPager
-    ///  開催中！
-    case CatalogPeriod
+    case Catalog.next_bonus
+    /// ページ { 0 }
+    case Catalog.page
+    /// { 0 } / { 1 } ページ
+    case Catalog.pager
+    /// { 0 } 開催中！
+    case Catalog.period
     /// カタログポイント
-    case CatalogPoint
+    case Catalog.point
     /// ザッカ屋
-    case CatalogSignboard
+    case Catalog.signboard
     /// ステッカー
-    case CatalogSticker
+    case Catalog.Sticker
     /// カタログ
-    case CatalogTitle
+    case Catalog.title
     /// イカしたカタログ 配布中！
-    case CatalogWelcome
-    /// バトルでカタログポイントを貯めてアイテムをゲットしよう！
-    case CatalogWelcomeDescription
+    case Catalog.welcome
+    /// バトルでカタログポイントを貯めて<br />アイテムをゲットしよう！
+    case Catalog.welcome_description
     /// 旅の途中でテンションバクアゲ～！なグラフィティ見つけたから送るね～
-    case ChallengeAboutGraffiti
+    case Challenge.about_graffiti
     /// すべてのチャレンジを支援するために必要なポイントが貯まりました
-    case ChallengeAllChallengesCompletable
+    case Challenge.all_challenges_completable
     /// すべてのチャレンジの支援を達成しました
-    case ChallengeAllChallengesCompleted
-    /// ワタシたちクマサン商会は、この社会で暮らす全てのみなさんの生活をより豊かにするため、日々イクラ集めに取り組んでいます。「次の旅にはクマサン商会からもぜひ何か協力させてください」と声をかけさせてもらい、今回のコラボレーションが実現しました。
-    case ChallengeAnnouncementOfGrizzcoIndustriesStory1
-    /// ロブさんの挑戦をバイトで支援していくことは、あなたの人生の新たなやりがいを見つけることにもつながるかもしれません。
-    case ChallengeAnnouncementOfGrizzcoIndustriesStory2
-    /// ワタシたちクマサン商会は、明るい未来の発展のため、ワタシたちができることを日々考え、行動し続けています。感謝と喜びから始まる社会を目指す。それがワタシたちクマサン商会です。
-    case ChallengeAnnouncementOfGrizzcoIndustriesStory3
+    case Challenge.all_challenges_completed
+    /// ワタシたちクマサン商会は、この社会で暮らす全てのみなさんの生活をより豊かにするため、日々イクラ集めに取り組んでいます。<br />そんななか、ロブさんの旅を知り、いつでもアゲ続けていく精神を忘れないロブさんの姿に非常に感動を覚えました。<br />さらにロブさんが旅のなかでワタシたちに見せてくれる景色は、とても興味深く、好奇心をかき立てるものばかりでした。<br />ロブさんが旅をアゲ終えたという知らせに、ワタシたちも寂しさを感じていましたが、再び旅を始められるとのことで、<br />「次の旅にはクマサン商会からもぜひ何か協力させてください」と声をかけさせてもらい、今回のコラボレーションが実現しました。
+    case Challenge.announcement_of_grizzco_industries_story1
+    /// <strong>新しい旅では、みなさんがバイトで塗ったぶんの塗りポイントも、ロブさんの旅の支援にあてることが可能になります。代わりに、これまでに貯めた塗りポイントのうち、余った塗りポイントは新しい旅では使えないのでリセットさせていただきます。</strong><br />ロブさんの挑戦をバイトで支援していくことは、あなたの人生の新たなやりがいを見つけることにもつながるかもしれません。
+    case Challenge.announcement_of_grizzco_industries_story2
+    /// ワタシたちクマサン商会は、明るい未来の発展のため、ワタシたちができることを日々考え、行動し続けています。<br />クマサン商会は挑戦し続けるあなたを、全力で応援しサポートします。<br />感謝と喜びから始まる社会を目指す。それがワタシたちクマサン商会です。
+    case Challenge.announcement_of_grizzco_industries_story3
     /// クマサン商会から旅を愛するみなさんへ
-    case ChallengeAnnouncementOfGrizzcoIndustriesTitle
+    case Challenge.announcement_of_grizzco_industries_title
     /// ロブイチ
-    case ChallengeAppName
+    case Challenge.app_name
     /// ブラック
-    case ChallengeBlack
+    case Challenge.black
     /// ブルー
-    case ChallengeBlue
+    case Challenge.blue
     /// チャレンジャー
-    case ChallengeChallenger
+    case Challenge.challenger
     /// 支援するチャレンジを選ぶ
-    case ChallengeChooseChallenge
+    case Challenge.choose_challenge
     /// 達成しました
-    case ChallengeClear
+    case Challenge.clear
     /// コンプリート！
-    case ChallengeComplete
+    case Challenge.complete
     /// コンプリート特典
-    case ChallengeCompleteReward
+    case Challenge.complete_reward
     /// 支援に使える塗りポイント
-    case ChallengeCurrentPoint
+    case Challenge.current_point
     /// ポイント MAX!
-    case ChallengeCurrentPointFull
+    case Challenge.current_point_full
     /// ロブから支援者のみなさまへ
-    case ChallengeDearAllOfYou
+    case Challenge.dear_all_of_you
     /// グラフィティのダウンロード
-    case ChallengeDownloadGraffiti
+    case Challenge.download_graffiti
     /// アイコンのダウンロード
-    case ChallengeDownloadIcon
+    case Challenge.download_icon
     /// 壁紙のダウンロード
-    case ChallengeDownloadWallpaper
+    case Challenge.download_wallpaper
     /// グリーン
-    case ChallengeGreen
+    case Challenge.green
     /// お礼のグラフィティをダウンロードできます
-    case ChallengeGuideGraffiti
+    case Challenge.guide_graffiti
     /// リワードの二つ名をロビー端末から受け取れます
-    case ChallengeGuideRewardByName
+    case Challenge.guide_reward_by_name
     /// リワードのアイコンをダウンロードできます
-    case ChallengeGuideRewardIcon
+    case Challenge.guide_reward_icon
     /// リワードの画像をダウンロードできます
-    case ChallengeGuideRewardImage
+    case Challenge.guide_reward_image
     /// リワードのスリーブをロビー端末から受け取れます
-    case ChallengeGuideRewardSleeve
-    /// 塗りまくって貯めたポイントでロブの旅を応援しよう！旅の思い出も手に入るかも？！
-    case ChallengeHowToPlay
-    /// ジャーニー
-    case ChallengeJourney
+    case Challenge.guide_reward_sleeve
+    /// 塗りまくって貯めたポイントでロブの旅を応援しよう！<br />旅の思い出も手に入るかも？！
+    case Challenge.how_to_play
+    /// ジャーニー { 0 }
+    case Challenge.journey
     /// 支援者求ム！
-    case ChallengeLookingForSupporters
+    case Challenge.looking_for_supporters
     /// オレンジ
-    case ChallengeOrange
-    /// p
-    case ChallengePoint
+    case Challenge.orange
+    /// { 0 }p
+    case Challenge.point
     /// 支援に必要な塗りポイント
-    case ChallengePointForSupport
-    /// （あと p 不足しています）
-    case ChallengePointNotEnough
+    case Challenge.point_for_support
+    /// （あと { 0 }p 不足しています）
+    case Challenge.point_not_enough
     /// パープル
-    case ChallengePurple
+    case Challenge.purple
     /// レッド
-    case ChallengeRed
-    /// コンプリートまで あと
-    case ChallengeRemainsOfChallenge
+    case Challenge.red
+    /// コンプリートまで あと <span>{ 0 }</span>
+    case Challenge.remains_of_challenge
     /// ロブ
-    case ChallengeRob
+    case Challenge.rob
     /// ロブのアゲアゲ旅
-    case ChallengeRobJourney
+    case Challenge.rob_journey
     /// 色を選んでダウンロードしてください
-    case ChallengeSelectColor
+    case Challenge.select_color
     /// サイズを選んでダウンロードしてください
-    case ChallengeSelectSize
+    case Challenge.select_size
     /// ポイント送信中...
-    case ChallengeSendingPoint
-    /// みんなアガッてる～？ 孤高のアゲアゲ旅人ロブだよ！その旅のクラウドファンディングなんだ～！
-    case ChallengeStory1
-    /// 僕がこれまでに立ち寄ったアツアツでアゲアゲなアツアゲスポットを自転車で一周するよ！これってテンションフライハイっしょ？！
-    case ChallengeStory2
-    /// 旅するなかでバクアゲ～！と思った風景写真や思い出の品は支援してくれたみんなにも送るからね～。そんなこんなでこれからアゲアゲの旅をサクッと始めちゃうんでヨロシク～！
-    case ChallengeStory3
+    case Challenge.sending_point
+    /// みんなアガッてる～？ 孤高のアゲアゲ旅人ロブだよ！<br />このプロジェクトは、僕のこれまでの歩みを振り返る旅、<br />その旅のクラウドファンディングなんだ～！
+    case Challenge.story_1
+    /// 僕がこれまでに立ち寄ったアツアツでアゲアゲなアツアゲスポットを自転車で一周するよ！<br />そこで自分の「今」の立ち位置をジュワ～ッと見つめなおしてアゲなおそうと思うんだよね～。<br />そんな旅の中で得た「気づき」「発見」「Notice」を支援してくれるみんなにもシェアしたいと思ってるんだ～。<br />これってテンションフライハイっしょ？！
+    case Challenge.story_2
+    /// 旅するなかでバクアゲ～！と思った風景写真や思い出の品は支援してくれたみんなにも送るからね～。<br />『みんなも一緒に旅する仲間っしょ！』っていう、一体感とかグルーヴを生み出せたらもっとアガるよね～！<br />そんなこんなでこれからアゲアゲの旅をサクッと始めちゃうんでヨロシク～！
+    case Challenge.story_3
     /// 支援する
-    case ChallengeSupport
+    case Challenge.support
     /// 支援済み
-    case ChallengeSupported
+    case Challenge.supported
     /// ※ 画像の加工や営利目的での利用、再配布はご遠慮ください。
-    case ChallengeTermOfUse
+    case Challenge.term_of_use
     /// ロブイチ
-    case ChallengeTitle
+    case Challenge.title
     /// 無色
-    case ChallengeTransparent
+    case Challenge.transparent
     /// ターコイズ
-    case ChallengeTurquoise
+    case Challenge.turquoise
     /// ホワイト
-    case ChallengeWhite
+    case Challenge.white
     /// イエロー
-    case ChallengeYellow
-    /// p 持っています
-    case ChallengeYourPoint
-    /// %
-    case Common
+    case Challenge.yellow
+    /// { 0 }p 持っています
+    case Challenge.your_point
+    /// { 0 }%
+    case Common.%
     /// キャンセル
-    case CommonCancel
+    case Common.cancel
     /// ガチアサリ
-    case CommonClamBlitz
+    case Common.clam_blitz
     /// 閉じる
-    case CommonClose
+    case Common.close
     /// :
-    case CommonColonRule
+    case Common.colon_rule
     /// ビッグラン
-    case CommonCoopBigRun
+    case Common.coop_big_run
     /// オカシラ：ランダム
-    case CommonCoopBossRandom
+    case Common.coop_boss_random
     /// ？
-    case CommonCoopBossRandomSign
+    case Common.coop_boss_random_sign
     /// バイトチームコンテスト
-    case CommonCoopTeamContest
+    case Common.coop_team_contest
     /// QRコードは、株式会社デンソーウェーブの登録商標です。
-    case CommonCopyrightQrCode
+    case Common.copyright_qr_code
     /// 決定
-    case CommonDecide
+    case Common.decide
     /// ダウンロード
-    case CommonDownload
+    case Common.download
     /// おわる
-    case CommonEnd
+    case Common.end
     /// はてな
-    case CommonGearPowerBlank
+    case Common.gear_power_blank
     /// ホーム
-    case CommonHome
+    case Common.home
     /// イカリング３
-    case CommonIkaring3
+    case Common.ikaring3
     /// 戻る
-    case CommonNavBack
+    case Common.nav_back
     /// ロード中
-    case CommonNowLoading
+    case Common.now_loading
     /// ひっぱって更新
-    case CommonPullToRefresh
+    case Common.pull_to_refresh
     /// ガチホコバトル
-    case CommonRainmaker
+    case Common.rainmaker
     /// シェア
-    case CommonShare
+    case Common.share
     /// ガチエリア
-    case CommonSplatZones
+    case Common.splat_zones
     /// タイカイサポート
-    case CommonTournamentManager
+    case Common.tournament_manager
     /// ガチヤグラ
-    case CommonTowerControl
+    case Common.tower_control
     /// トリカラアタック
-    case CommonTricolor
+    case Common.tricolor
     /// トリカラマッチ
-    case CommonTricolorMatch
+    case Common.tricolor_match
     /// ナワバリバトル
-    case CommonTurfWar
+    case Common.turf_war
     /// はてな
-    case CommonWpnNotfound
+    case Common.wpn_notfound
     /// シフトごとのバイト回数には通信切断などで中断したバイトは含まれません
-    case CoopHistoryAnnotation01
+    case CoopHistory.annotation01
     /// 出現数
-    case CoopHistoryAvailable
+    case CoopHistory.available
     /// 出現したオカシラシャケ
-    case CoopHistoryAvailableBoss
+    case CoopHistory.available_boss
     /// 平均クリアWAVE数
-    case CoopHistoryAverageClearWaves
+    case CoopHistory.average_clear_waves
     /// ビッグラン
-    case CoopHistoryBigrun
+    case CoopHistory.bigrun
     /// 銅
-    case CoopHistoryBigrunBronze
+    case CoopHistory.bigrun_bronze
     /// 金
-    case CoopHistoryBigrunGold
+    case CoopHistory.bigrun_gold
     /// 銀
-    case CoopHistoryBigrunSilver
+    case CoopHistory.bigrun_silver
     /// クリアボーナス
-    case CoopHistoryBonus
+    case CoopHistory.bonus
     /// オカシラシャケ出現！
-    case CoopHistoryBossAvailable
+    case CoopHistory.boss_available
     /// Clear!!
-    case CoopHistoryClear
+    case CoopHistory.clear
     /// 今回のギア
-    case CoopHistoryCurrentReward
+    case CoopHistory.current_reward
     /// キケン度
-    case CoopHistoryDangerRatio
+    case CoopHistory.danger_ratio
     /// オカシラシャケ撃破！
-    case CoopHistoryDefeatBoss
+    case CoopHistory.defeat_boss
     /// オカシラシャケを撃退した回数
-    case CoopHistoryDefeatBossCount
+    case CoopHistory.defeat_boss_count
     /// 倒した！
-    case CoopHistoryDefeated
+    case CoopHistory.defeated
     /// 倒したオオモノシャケ
-    case CoopHistoryDefeatedEnemies
+    case CoopHistory.defeated_enemies
     /// ※カッコ内の数字は自分で倒した数です
-    case CoopHistoryDefeatedEnemiesGuide
+    case CoopHistory.defeated_enemies_guide
     /// 集めたイクラ
-    case CoopHistoryDeliverCount
+    case CoopHistory.deliver_count
     /// オオモノシャケ
-    case CoopHistoryEnemy
+    case CoopHistory.enemy
     /// EX-WAVE
-    case CoopHistoryExWave
+    case CoopHistory.ex_wave
     /// Failure
-    case CoopHistoryFailure
+    case CoopHistory.failure
     /// GJ!
-    case CoopHistoryGj
-    /// 集めた金イクラ
-    case CoopHistoryGoldenDeliverCount
+    case CoopHistory.gj
     /// バイトヒストリー一覧に戻る
-    case CoopHistoryGoToStats
+    case CoopHistory.go_to_stats
+    /// 集めた金イクラ
+    case CoopHistory.golden_deliver_count
     /// ハイスコア
-    case CoopHistoryHighestScore
+    case CoopHistory.highest_score
     /// バイトヒストリー
-    case CoopHistoryHistory
+    case CoopHistory.history
     /// 獲得ポイント
-    case CoopHistoryJobPoint
+    case CoopHistory.job_point
     /// 評価レート
-    case CoopHistoryJobRatio
+    case CoopHistory.job_ratio
     /// クマサンポイントカード
-    case CoopHistoryKumaPointCard
+    case CoopHistory.kuma_point_card
     /// 最新のバイトへ
-    case CoopHistoryLatest
+    case CoopHistory.latest
     /// 現在の期間限定ポイント
-    case CoopHistoryLimitedPoint
+    case CoopHistory.limited_point
     /// 今月のギア
-    case CoopHistoryMonthlyReward
+    case CoopHistory.monthly_reward
     /// 次のバイト
-    case CoopHistoryNext
+    case CoopHistory.next
     /// NG
-    case CoopHistoryNg
+    case CoopHistory.ng
     /// バイトヒストリーがありません
-    case CoopHistoryNoData
+    case CoopHistory.no_data
     /// バイトヒストリーを表示できません
-    case CoopHistoryNotAvailable
+    case CoopHistory.not_available
     /// 閲覧できるバイトヒストリーは、最新の50戦までです。
-    case CoopHistoryNotAvailableDescription
+    case CoopHistory.not_available_description
     /// 倒せなかった...
-    case CoopHistoryNotDefeated
-    /// p
-    case CoopHistoryP
+    case CoopHistory.not_defeated
+    /// { 0 }p
+    case CoopHistory.p
     /// バイト回数
-    case CoopHistoryPlayCount
-    /// バイト
-    case CoopHistoryPlayCountBySchedule
+    case CoopHistory.play_count
+    /// { 0 }バイト
+    case CoopHistory.play_count_by_schedule
     /// 前のバイト
-    case CoopHistoryPrevious
+    case CoopHistory.previous
     /// プライベート
-    case CoopHistoryPrivate
+    case CoopHistory.private
     /// スタッフ募集！
-    case CoopHistoryRecruit
-    /// 初心者でも安心！元気で明るい方大歓迎！アットホームな職場でアルバイトをしてみませんか？
-    case CoopHistoryRecruitDescription
+    case CoopHistory.recruit
+    /// 初心者でも安心！元気で明るい方大歓迎！<br />アットホームな職場でアルバイトをしてみませんか？
+    case CoopHistory.recruit_description
     /// 簡単
-    case CoopHistoryRecruitTag1
+    case CoopHistory.recruit_tag1
     /// イクラ集め
-    case CoopHistoryRecruitTag2
+    case CoopHistory.recruit_tag2
     /// ～イカした制服でイクラ集め～
-    case CoopHistoryRecruitTitle
+    case CoopHistory.recruit_title
     /// いつものバイト
-    case CoopHistoryRegular
+    case CoopHistory.regular
     /// 現在のポイント
-    case CoopHistoryRegularPoint
+    case CoopHistory.regular_point
     /// 助けた回数
-    case CoopHistoryRescueCount
+    case CoopHistory.rescue_count
     /// たすけてもらったかいすう
-    case CoopHistoryRescuedCount
+    case CoopHistory.rescued_count
     /// ウロコ
-    case CoopHistoryScale
+    case CoopHistory.scale
     /// ドウウロコ
-    case CoopHistoryScaleBronze
+    case CoopHistory.scale_bronze
     /// キンウロコ
-    case CoopHistoryScaleGold
+    case CoopHistory.scale_gold
     /// ギンウロコ
-    case CoopHistoryScaleSilver
+    case CoopHistory.scale_silver
     /// バイトスコア
-    case CoopHistoryScore
+    case CoopHistory.score
     /// スケジュールを見る
-    case CoopHistorySeeSchedule
+    case CoopHistory.see_schedule
     /// オカシラゲージ
-    case CoopHistorySmellMeter
+    case CoopHistory.smell_meter
     /// 支給ブキ
-    case CoopHistorySupplyWeapon
+    case CoopHistory.supply_weapon
     /// バイトチームコンテスト
-    case CoopHistoryTeamContest
+    case CoopHistory.team_contest
     /// サーモンラン
-    case CoopHistoryTitle
+    case CoopHistory.title
     /// るいけいポイント
-    case CoopHistoryTotalPoint
-    /// WAVE
-    case CoopHistoryWave
+    case CoopHistory.total_point
+    /// WAVE { 0 }
+    case CoopHistory.wave
     /// 干潮
-    case CoopHistoryWaveLevel0
+    case CoopHistory.wave_level_0
     /// 普通
-    case CoopHistoryWaveLevel1
+    case CoopHistory.wave_level_1
     /// 満潮
-    case CoopHistoryWaveLevel2
+    case CoopHistory.wave_level_2
     /// バイト
-    case CoopRecordAppName
-    /// 参加回数：
-    case CoopRecordAttended
+    case CoopRecord.app_name
+    /// 参加回数： { 0 }
+    case CoopRecord.attended
     /// ビッグラン
-    case CoopRecordBigrun
+    case CoopRecord.bigrun
     /// 銅
-    case CoopRecordBigrunBronze
+    case CoopRecord.bigrun_bronze
     /// 金
-    case CoopRecordBigrunGold
+    case CoopRecord.bigrun_gold
     /// 銀
-    case CoopRecordBigrunSilver
+    case CoopRecord.bigrun_silver
     /// バイトのきろく
-    case CoopRecordCoop
+    case CoopRecord.coop
     /// たおした数
-    case CoopRecordDefeated
+    case CoopRecord.defeated
     /// 最高評価
-    case CoopRecordHighestJobRate
+    case CoopRecord.highest_job_rate
     /// ハイスコア
-    case CoopRecordHighestScore
+    case CoopRecord.highest_score
     /// もっと見る
-    case CoopRecordMore
+    case CoopRecord.more
     /// きろくがありません
-    case CoopRecordNoData
-    /// 上位  %以上
-    case CoopRecordRank
+    case CoopRecord.no_data
+    /// 上位 { 0 } %以上
+    case CoopRecord.rank
     /// 順位
-    case CoopRecordRanking
+    case CoopRecord.ranking
     /// バイトチームコンテスト
-    case CoopRecordTeamContest
+    case CoopRecord.team_contest
     /// サーモンランのきろく
-    case CoopRecordTitle
-    /// バイトツナギ オレンジ
-    case Cop001
-    /// バイトツナギ グリーン
-    case Cop002
-    /// バイトツナギ イエロー
-    case Cop003
-    /// バイトツナギ ピンク
-    case Cop004
-    /// バイトツナギ ブルー
-    case Cop005
-    /// バイトツナギ ブラック
-    case Cop006
-    /// バイトツナギ ホワイト
-    case Cop007
-    /// バイトウェーダー オレンジ
-    case Cop008
-    /// バイトウェーダー ブラック
-    case Cop009
-    /// バイトウェーダー イエロー
-    case Cop010
-    /// バイトウェーダー ブラウン
-    case Cop011
-    /// バイトツナギ ドット
-    case Cop012
-    /// バイトツナギ カモ
-    case Cop013
-    /// バイトツナギ ニシキ
-    case Cop014
-    /// バイトウェーダー ピーチ
-    case Cop015
-    /// バイトウェーダー ライム
-    case Cop016
-    /// バイトウェーダー ベリー
-    case Cop017
-    /// バイトツナギ シルバー
-    case Cop018
-    /// バイトツナギ ゴールド
-    case Cop019
-    /// バイトツナギ プリズム
-    case Cop020
-    /// バイトツナギ ブロッカー
-    case Cop021
-    /// ゴンズイ地区
-    case District
+    case CoopRecord.title
     /// ホームに戻る
-    case ErrorBackToHome
+    case Error.back_to_home
     /// 非正規のアクセスが確認されたため、サービス利用を停止しています。
-    case ErrorBannedUser
+    case Error.banned_user
     /// 現在利用できません。しばらくお待ちください
-    case ErrorCurrentlyNotAvailable
+    case Error.currently_not_available
     /// エラー
-    case ErrorError
+    case Error.error
     /// エラーが発生しました
-    case ErrorErrorOccurred
+    case Error.error_occurred
     /// 読みこみに失敗しました
-    case ErrorErrorReopen
+    case Error.error_reopen
     /// ただいまサーバーのメンテナンス中です。時間をおいて再度アクセスしてください。
-    case ErrorMaintenanceDescription
+    case Error.maintenance_description
     /// しばらくお待ちください
-    case ErrorMaintenanceTitle
-    /// 読みこみに失敗しました。通信環境のよいところで再度お試しください。
-    case ErrorNetworkNotAvailable
-    /// イカリング３を表示できません。しばらく時間をおいてから通信環境の良い場所で再度お試しください。それでもこの画面が表示される場合は、ご利用の環境でイカリング３を利用できない可能性があります。
-    case ErrorNotSupported
+    case Error.maintenance_title
+    /// 読みこみに失敗しました。<br />通信環境のよいところで再度お試しください。
+    case Error.network_not_available
+    /// イカリング３を表示できません。しばらく時間をおいてから通信環境の良い場所で再度お試しください。<br />問題が解決しない場合は、ブラウザが最新版に更新されているか確認してください。<br />それでもこの画面が表示される場合は、ご利用の環境でイカリング３を利用できない可能性があります。
+    case Error.not_supported
     /// 再読みこみ
-    case ErrorReload
+    case Error.reload
     /// イベントマッチ
-    case EventMatchRankingAppName
+    case EventMatchRanking.app_name
     /// もっと見る
-    case EventMatchRankingMore
+    case EventMatchRanking.more
     /// ペア
-    case EventMatchRankingPair
+    case EventMatchRanking.pair
     /// ランキング
-    case EventMatchRankingRanking
+    case EventMatchRanking.ranking
     /// ルール確認
-    case EventMatchRankingRules
+    case EventMatchRanking.rules
     /// ソロ
-    case EventMatchRankingSolo
+    case EventMatchRanking.solo
     /// チーム
-    case EventMatchRankingTeam
+    case EventMatchRanking.team
     /// イベントマッチ
-    case EventMatchRankingTitle
+    case EventMatchRanking.title
     /// トップ100
-    case EventMatchRankingTop100
-    /// ナンプラー遺跡
-    case Factory
-    /// %
-    case FesRecord
+    case EventMatchRanking.top100
+    /// { 0 }%
+    case FesRecord.%
     /// フェス
-    case FesRecordAppName
+    case FesRecord.app_name
     /// 攻撃
-    case FesRecordAttack
+    case FesRecord.attack
     /// へいきん
-    case FesRecordAverage
+    case FesRecord.average
     /// チャレンジ
-    case FesRecordChallenge
+    case FesRecord.challenge
     /// もうすぐ開催
-    case FesRecordComingSoon
+    case FesRecord.coming_soon
     /// こうけん度 チャレンジ
-    case FesRecordContributionChallenge
+    case FesRecord.contribution_challenge
     /// こうけん度 オープン
-    case FesRecordContributionRegular
+    case FesRecord.contribution_regular
     /// こうけん度 トリカラマッチ
-    case FesRecordContributionTricolor
+    case FesRecord.contribution_tricolor
     /// 守備
-    case FesRecordDefense
-    /// パワー
-    case FesRecordFestPower
+    case FesRecord.defense
+    /// { 0 }{ 1 }パワー
+    case FesRecord.fest_power
     /// フェス100ケツ
-    case FesRecordFestRanking
+    case FesRecord.fest_ranking
     /// ホラガイ獲得個数
-    case FesRecordGotHoragai
-    /// このアンケートはゲーム内で投票するまで何度でも変更できます。みんなの予定を見て、バンカラ街の広場にある投票所から投票しましょう。
-    case FesRecordGuideVote
+    case FesRecord.got_horagai
+    /// このアンケートはゲーム内で投票するまで何度でも変更できます。<br />みんなの予定を見て、バンカラ街の広場にある投票所から投票しましょう。
+    case FesRecord.guide_vote
     /// 参加予定のフレンドはチームが変わることがあります
-    case FesRecordGuideWillParticipates
+    case FesRecord.guide_will_participates
     /// 最高フェスパワー
-    case FesRecordHighestFestPower
+    case FesRecord.highest_fest_power
     /// ホラガイ獲得率
-    case FesRecordHoragai
+    case FesRecord.horagai
     /// 未定のフレンド
-    case FesRecordNotVoted
+    case FesRecord.not_voted
     /// 開催中！！
-    case FesRecordOnGoing
+    case FesRecord.on_going
     /// これまでのフェス
-    case FesRecordPastFestivals
-    /// p
-    case FesRecordPoint
+    case FesRecord.past_festivals
+    /// { 0 }p
+    case FesRecord.point
     /// アンケート実施中
-    case FesRecordPreVoteButton
-    /// フレンドの参加予定を見ることができます。みんなでチームを組んで参加しよう！
-    case FesRecordPreVoteGuide
-    /// みんなどこにする？アンケート実施中
-    case FesRecordPreVoteTitle
-    ///
-    case FesRecordRank
+    case FesRecord.pre_vote_button
+    /// フレンドの参加予定を見ることができます。<br />みんなでチームを組んで参加しよう！
+    case FesRecord.pre_vote_guide
+    /// みんなどこにする？<br />アンケート実施中
+    case FesRecord.pre_vote_title
+    /// { 0 }<small>位</small>
+    case FesRecord.rank
     /// オープン
-    case FesRecordRegular
+    case FesRecord.regular
     /// フレンドの参加チームを見る
-    case FesRecordSeeAllVotes
+    case FesRecord.see_all_votes
     /// フェス100ケツを見る
-    case FesRecordSeeFestRanking
+    case FesRecord.see_fest_ranking
     /// フェスのきろく
-    case FesRecordTitle
+    case FesRecord.title
     /// るいけい
-    case FesRecordTotal
+    case FesRecord.total
     /// 合計
-    case FesRecordTotalScore
+    case FesRecord.total_score
     /// 未定
-    case FesRecordUndecided
+    case FesRecord.undecided
     /// 参加予定
-    case FesRecordVote
-    /// 回答済み
-    case FesRecordVoted
-    /// 投票済み
-    case FesRecordVotedInGame
+    case FesRecord.vote
     /// 得票率
-    case FesRecordVoteRatio
+    case FesRecord.vote_ratio
+    /// 回答済み
+    case FesRecord.voted
+    /// 投票済み
+    case FesRecord.voted_in_game
     /// フレンドの投票状況
-    case FesRecordVotingStatus
+    case FesRecord.voting_status
     /// 結果を集計中です
-    case FesRecordWaitingForResult
+    case FesRecord.waiting_for_result
     /// WIN!
-    case FesRecordWin
-    /// の勝利！
-    case FesRecordWinTeam
+    case FesRecord.win
+    /// <span>{ 0 }</span>の勝利！
+    case FesRecord.win_team
     /// あなたのきろく
-    case FesRecordYourRecord
-    /// 警報発令！シャケの接近に注意！
-    case FooterBigrunAnnouncement
-    /// 発生中！シャケから街を守れ！
-    case FooterBigrunNowOpening
-    /// もうすぐ サービス中！
-    case FooterEndOfSeason
-    /// イベントマッチ：開催中！
-    case FooterEventMatchNowOpening
-    ///  フェス開催！アンケートに回答してフレンドと一緒に参加しよう！
-    case FooterFestAnnouncement
-    ///  フェス開催中！広場で投票してフェスTをゲットしよう！
-    case FooterFestNowOpening
+    case FesRecord.your_record
+    /// <em>ビッグラン</em>警報発令！シャケの接近に注意！
+    case Footer.bigrun_announcement
+    /// <em>ビッグラン</em>発生中！シャケから街を守れ！
+    case Footer.bigrun_now_opening
+    /// もうすぐ <em>{ 0 }</em> が終了します。カタログポイント<em>1.5倍</em>サービス中！
+    case Footer.end_of_season
+    /// イベントマッチ：<em>{ 0 }</em>開催中！
+    case Footer.event_match_now_opening
+    /// <em>{ 0 }</em> フェス開催！アンケートに回答してフレンドと一緒に参加しよう！
+    case Footer.fest_announcement
+    /// <em>{ 0 }</em> フェス開催中！広場で投票してフェスTをゲットしよう！
+    case Footer.fest_now_opening
     /// フレンドリスト
-    case FriendListAppName
+    case FriendList.app_name
     /// バイト中
-    case FriendListInCoopGame
+    case FriendList.in_coop_game
     /// ナワバトラー
-    case FriendListInMiniGame
+    case FriendList.in_mini_game
     /// 試合中
-    case FriendListInVsGame
+    case FriendList.in_vs_game
     /// パスワードつき
-    case FriendListIsLocked
+    case FriendList.is_locked
     /// フレンドのプレイ状況がここに表示されます
-    case FriendListNoFriends
+    case FriendList.no_friends
     /// オフライン
-    case FriendListOffline
+    case FriendList.offline
     /// オンライン
-    case FriendListOnline
+    case FriendList.online
     /// 再読みこみ
-    case FriendListReload
+    case FriendList.reload
     /// フレンドリスト
-    case FriendListTitle
+    case FriendList.title
     /// ボイスチャットかのう
-    case FriendListVoiceChatEnabled
+    case FriendList.voice_chat_enabled
     /// ゲソタウン
-    case GesoTownAppName
+    case GesoTown.app_name
     /// ゲソタウンに戻る
-    case GesoTownBackToGesotown
+    case GesoTown.back_to_gesotown
     /// 持っているギア
-    case GesoTownCurrentGear
-    /// ふだんとは違うが手に入るショップ
-    case GesoTownDescription
+    case GesoTown.current_gear
+    /// ふだんとは違う<em>ギアパワー</em>がついた<br /><em>トクベツなギア</em>が手に入るショップ
+    case GesoTown.description
     /// 本日のピックアップ
-    case GesoTownFeature
+    case GesoTown.feature
     /// ピックアップ
-    case GesoTownFeatured
-    ///  につきやすいギアパワー
-    case GesoTownFrequentGearPower
-    ///  まで
-    case GesoTownLimit
+    case GesoTown.featured
+    /// <strong>{ 0 }</strong> につきやすいギアパワー
+    case GesoTown.frequent_gear_power
+    /// <em>{ 0 }</em> まで
+    case GesoTown.limit
     /// おカネ
-    case GesoTownMoney
+    case GesoTown.money
     /// 次のギア
-    case GesoTownNext
+    case GesoTown.next
     /// 次のピックアップ
-    case GesoTownNextFeature
+    case GesoTown.next_feature
     /// 期限切れ
-    case GesoTownNotAvailable
+    case GesoTown.not_available
     /// 注文する
-    case GesoTownOrder
-    /// 注文済み
-    case GesoTownOrdered
+    case GesoTown.order
     /// ご注文はいますぐ！
-    case GesoTownOrderNow
+    case GesoTown.order_now
+    /// 注文済み
+    case GesoTown.ordered
     /// 在庫確認中...
-    case GesoTownPending
+    case GesoTown.pending
     /// 前のギア
-    case GesoTownPrevious
+    case GesoTown.previous
     /// まもなく終了
-    case GesoTownRemainAlmostFinished
-    /// あと時間
-    case GesoTownRemainHour
-    /// あと分
-    case GesoTownRemainMinute
+    case GesoTown.remain_almost_finished
+    /// あと{ 0 }時間
+    case GesoTown.remain_hour
+    /// あと{ 0 }分
+    case GesoTown.remain_minute
     /// すでに注文済みのギアがあります
-    case GesoTownRemind
+    case GesoTown.remind
     /// 注文済みのギアはキャンセルされます
-    case GesoTownRemindCaution
+    case GesoTown.remind_caution
     /// ご注文は、1回につき1コとなります
-    case GesoTownRule1
+    case GesoTown.rule1
     /// 注文済みのギアは、広場のスパイキーから購入できます
-    case GesoTownRule2
+    case GesoTown.rule2
     /// 購入前に新しく注文すると、注文済みのギアはキャンセルされます
-    case GesoTownRule3
+    case GesoTown.rule3
     /// 購入後、新しい注文が可能になります
-    case GesoTownRule4
+    case GesoTown.rule4
     /// ただいま販売中のギア
-    case GesoTownStock
+    case GesoTown.stock
     /// 商品は4時間ごとに入れ替わります
-    case GesoTownStockGuide
+    case GesoTown.stock_guide
     /// ゲソタウン
-    case GesoTownTitle
+    case GesoTown.title
     /// 受付できません
-    case GesoTownUnableToOrder
+    case GesoTown.unable_to_order
     /// この商品は現在取り扱っておりません
-    case GesoTownUnableToOrderMessage
-    /// かけだし
-    case Grade00
-    /// はんにんまえ
-    case Grade01
-    /// いちにんまえ
-    case Grade02
-    /// じゅくれん
-    case Grade03
-    /// たつじん
-    case Grade04
-    /// たつじん＋１
-    case Grade05
-    /// たつじん＋２
-    case Grade06
-    /// たつじん＋３
-    case Grade07
-    /// でんせつ
-    case Grade08
-    /// かけだし アルバイター
-    case GradeArbeiter00
-    /// はんにんまえ アルバイター
-    case GradeArbeiter01
-    /// いちにんまえ アルバイター
-    case GradeArbeiter02
-    /// じゅくれん アルバイター
-    case GradeArbeiter03
-    /// たつじん アルバイター
-    case GradeArbeiter04
-    /// たつじん＋１ アルバイター
-    case GradeArbeiter05
-    /// たつじん＋２ アルバイター
-    case GradeArbeiter06
-    /// たつじん＋３ アルバイター
-    case GradeArbeiter07
-    /// でんせつ アルバイター
-    case GradeArbeiter08
+    case GesoTown.unable_to_order_message
     /// １号
-    case HeroRecordAgent1
+    case HeroRecord.agent1
     /// ２号
-    case HeroRecordAgent2
+    case HeroRecord.agent2
     /// サイズを選んでダウンロードしてください
-    case HeroRecordAnnotation
+    case HeroRecord.annotation
     /// ヒーローモード
-    case HeroRecordAppName
+    case HeroRecord.app_name
     /// スナップ写真
-    case HeroRecordAreaMemorialPhoto
+    case HeroRecord.area_memorial_photo
     /// ボス
-    case HeroRecordBossStage
+    case HeroRecord.boss_stage
     /// ヒーローモード クリア特典
-    case HeroRecordClearReward
+    case HeroRecord.clear_reward
     /// オルタナ探索率100% 達成特典
-    case HeroRecordNawabariMapCompleteReward
+    case HeroRecord.nawabari_map_complete_reward
     /// オルタナ探索率
-    case HeroRecordNawabariMapProgress
+    case HeroRecord.nawabari_map_progress
     /// クリアおめでとう！
-    case HeroRecordNawabariMapSubCleared
+    case HeroRecord.nawabari_map_sub_cleared
     /// 100%踏破おめでとう！
-    case HeroRecordNawabariMapSubComplete
+    case HeroRecord.nawabari_map_sub_complete
     /// オルタナを100%踏破すると…？
-    case HeroRecordNawabariMapSubInProgress
+    case HeroRecord.nawabari_map_sub_in_progress
     /// 次へ
-    case HeroRecordNext
+    case HeroRecord.next
     /// そうびなし
-    case HeroRecordNoEquipments
+    case HeroRecord.no_equipments
     /// 前へ
-    case HeroRecordPrev
+    case HeroRecord.prev
     /// イイ目をしたワカモノ求む！！
-    case HeroRecordRecruitment
+    case HeroRecord.recruitment
     /// ヒーローモード をはじめて冒険をすすめよう
-    case HeroRecordRecruitmentSub
+    case HeroRecord.recruitment_sub
     /// 探索率
-    case HeroRecordSearchRatio
+    case HeroRecord.search_ratio
     /// スナップ写真を見る
-    case HeroRecordSeePhotograph
-    /// サイト
-    case HeroRecordSite
+    case HeroRecord.see_photograph
+    /// サイト { 0 }
+    case HeroRecord.site
     /// みらいユートピアランド
-    case HeroRecordSite1
+    case HeroRecord.site1
     /// あんしんライフファクトリー
-    case HeroRecordSite2
+    case HeroRecord.site2
     /// ながいきヤングニュータウン
-    case HeroRecordSite3
+    case HeroRecord.site3
     /// うめたてドリームランド
-    case HeroRecordSite4
+    case HeroRecord.site4
     /// あすなろグリーンヒルズ
-    case HeroRecordSite5
+    case HeroRecord.site5
     /// しあわせリサーチラボ
-    case HeroRecordSite6
+    case HeroRecord.site6
     /// ヒーローモードのきろく
-    case HeroRecordTitle
+    case HeroRecord.title
     /// 特製壁紙
-    case HeroRecordWallpaper
-    /// すべてのバッジ（）
-    case HistoryAllBadges
+    case HeroRecord.wallpaper
+    /// すべてのバッジ（{ 0 }）
+    case History.all_badges
     /// ヒストリー
-    case HistoryAppName
-    /// 参加回数：
-    case HistoryAttended
+    case History.app_name
+    /// 参加回数： { 0 }
+    case History.attended
     /// バッジ
-    case HistoryBadge
+    case History.badge
     /// バンカラマッチ オープン
-    case HistoryBankaraOpen
+    case History.bankara_open
     /// 銅
-    case HistoryBronze
+    case History.bronze
     /// 推定順位
-    case HistoryEstimatedRanking
+    case History.estimated_ranking
     /// イベントマッチ
-    case HistoryEvent
+    case History.event
     /// もっともよく使ったブキ
-    case HistoryFrequentlyUsedWeapon
+    case History.frequently_used_weapon
     /// 金
-    case HistoryGold
+    case History.gold
     /// 最高ウデマエ
-    case HistoryHighestUdemae
+    case History.highest_udemae
     /// 最高Xランキング・最高Xパワー
-    case HistoryHighestXranking
+    case History.highest_xranking
     /// 最近 3ヶ月
-    case HistoryLatest
+    case History.latest
     /// 最近ゲットしたバッジ
-    case HistoryLatestBadge
+    case History.latest_badge
     /// 月間
-    case HistoryMonthly
+    case History.monthly
     /// ※ Xマッチのきろくはシーズン終了後、集計をしてから公開されます。集計が終わるまで数日かかる場合があります。
-    case HistoryPastXmatchAnnotation
+    case History.past_xmatch_annotation
     /// ランク
-    case HistoryRank
-    ///
-    case HistoryRanking
+    case History.rank
+    /// { 0 }<small>位</small>
+    case History.ranking
     /// シーズン
-    case HistorySeason
+    case History.season
     /// 表示を減らす
-    case HistoryShowLess
+    case History.show_less
     /// もっと見る
-    case HistoryShowMore
+    case History.show_more
     /// Xランキングを見る
-    case HistoryShowXranking
+    case History.show_xranking
     /// 銀
-    case HistorySilver
-    ///  からプレイ（ 更新）
-    case HistorySince
+    case History.silver
+    /// { 0 } からプレイ（{ 1 } 更新）
+    case History.since
     /// サマリー
-    case HistorySummary
+    case History.summary
     /// ヒストリー
-    case HistoryTitle
+    case History.title
     /// 今まで塗った面積
-    case HistoryTotalTurfPoint
+    case History.total_turf_point
     /// 総勝利数
-    case HistoryTotalWin
-    /// p
-    case HistoryTurfPoint
+    case History.total_win
+    /// { 0 }p
+    case History.turf_point
     /// ウデマエ
-    case HistoryUdemae
+    case History.udemae
     /// ブキヒストリー
-    case HistoryWeapon
+    case History.weapon
     /// ブキ使用率
-    case HistoryWeaponUsage
+    case History.weapon_usage
     /// Xマッチ
-    case HistoryXmatch
+    case History.xmatch
     /// ※アプリをインストールしていない方は、このボタンを押しても開きません
-    case LandingCaution
+    case Landing.caution
     /// Apple、Appleロゴ、App Storeは、Apple Inc.の商標です。Google Play および Google Play ロゴは Google LLC の商標です。
-    case LandingCopyright
+    case Landing.copyright
     /// App Storeからダウンロード
-    case LandingDlAppStore
+    case Landing.dl_app_store
     /// Google Playで手に入れよう
-    case LandingDlGooglePlay
+    case Landing.dl_google_play
     /// アプリのダウンロードはこちら
-    case LandingDownload
+    case Landing.download
     /// Nintendo Switch Online
-    case LandingNso
+    case Landing.nso
     /// アプリを開く
-    case LandingOpenApp
+    case Landing.open_app
     /// スプラトゥーン3
-    case LandingSplatoon3
+    case Landing.splatoon3
     /// スマートフォンアプリ『Nintendo Switch Online』を開きます
-    case LandingTitle
-    /// グランドバンカラアリーナ
-    case Manbou
+    case Landing.title
     /// メモリープレーヤー
-    case MemoryPlayerAppName
+    case MemoryPlayer.app_name
     /// コピーしました
-    case MemoryPlayerCopied
+    case MemoryPlayer.copied
     /// バトルメモリーのダウンロード
-    case MemoryPlayerDownload
+    case MemoryPlayer.download
     /// ダウンロード予約に失敗しました
-    case MemoryPlayerFailedDownload
-    /// ダウンロードしたバトルメモリーはスプラトゥーン3のロビー端末のメモリープレーヤーで再生することができます
-    case MemoryPlayerGuide
+    case MemoryPlayer.failed_download
+    /// ダウンロードしたバトルメモリーは<br />スプラトゥーン3のロビー端末のメモリープレーヤーで再生することができます
+    case MemoryPlayer.guide
     /// Loading...
-    case MemoryPlayerLoading
-    /// 最新の50件を表示しています保存期間は30日です
-    case MemoryPlayerNotice
+    case MemoryPlayer.loading
+    /// 最新の50件を表示しています<br />保存期間は30日です
+    case MemoryPlayer.notice
     /// コードを入力
-    case MemoryPlayerPlaceholder
+    case MemoryPlayer.placeholder
     /// ダウンロードコード
-    case MemoryPlayerReplayCode
+    case MemoryPlayer.replay_code
     /// データが見つかりません
-    case MemoryPlayerReplayNotAvailable
+    case MemoryPlayer.replay_not_available
     /// ダウンロード予約しました
-    case MemoryPlayerReservedDownload
+    case MemoryPlayer.reserved_download
     /// 送信
-    case MemoryPlayerSend
+    case MemoryPlayer.send
     /// メモリープレーヤー
-    case MemoryPlayerTitle
+    case MemoryPlayer.title
     /// アップロードしたバトルメモリー
-    case MemoryPlayerUploaded
+    case MemoryPlayer.uploaded
     /// マイコーデをつくる
-    case MyOutfitsAdd
+    case MyOutfits.add
     /// + このそうびをマイコーデに追加
-    case MyOutfitsAddCurrentEquipments
+    case MyOutfits.add_current_equipments
     /// すべて表示
-    case MyOutfitsAll
+    case MyOutfits.all
     /// マイコーデ
-    case MyOutfitsAppName
+    case MyOutfits.app_name
     /// ブランド
-    case MyOutfitsBrand
+    case MyOutfits.brand
     /// カメラオプション
-    case MyOutfitsCameraOption
+    case MyOutfits.camera_option
     /// カメラオプションを隠す
-    case MyOutfitsCloseCameraOption
+    case MyOutfits.close_camera_option
     /// フク
-    case MyOutfitsCloth
+    case MyOutfits.cloth
     /// 現在のそうび
-    case MyOutfitsCurrentEquipments
+    case MyOutfits.current_equipments
     /// 現在のそうびは最後に対戦を行った内容を表示しています
-    case MyOutfitsCurrentEquipmentsGuide
+    case MyOutfits.current_equipments_guide
     /// 選択中のギア
-    case MyOutfitsCurrentGear
+    case MyOutfits.current_gear
     /// 選択中のブキ
-    case MyOutfitsCurrentWeapon
+    case MyOutfits.current_weapon
     /// 保存に失敗しました
-    case MyOutfitsErrorSave
-    /// ケイケン値
-    case MyOutfitsExp
+    case MyOutfits.error_save
+    /// ケイケン値 <em>{ 0 }</em>
+    case MyOutfits.exp
     /// 絞り込む
-    case MyOutfitsFilter
+    case MyOutfits.filter
     /// ギア
-    case MyOutfitsGear
+    case MyOutfits.gear
     /// ギアパワー
-    case MyOutfitsGearPower
+    case MyOutfits.gear_power
     /// 追加ギアパワー1個は、基本ギアパワー0.3個分の効果です
-    case MyOutfitsGearPowerAnnotation
+    case MyOutfits.gear_power_annotation
     /// マイコーデをつくってみよう
-    case MyOutfitsGuide
+    case MyOutfits.guide
     /// ギアを選択するとギアパワーの内訳が表示されます
-    case MyOutfitsGuideGearPowerButton
+    case MyOutfits.guide_gear_power_button
     /// マイコーデは5つまで作成することができます
-    case MyOutfitsGuideLimitation
+    case MyOutfits.guide_limitation
     /// ジャイロ操作感度
-    case MyOutfitsGyro
+    case MyOutfits.gyro
     /// ジャイロ操作
-    case MyOutfitsGyroControl
+    case MyOutfits.gyro_control
     /// 携帯モード
-    case MyOutfitsHandheldMode
+    case MyOutfits.handheld_mode
     /// マイコーデ
-    case MyOutfitsHashtag
+    case MyOutfits.hashtag
     /// アタマ
-    case MyOutfitsHead
+    case MyOutfits.head
     /// メインウェポン
-    case MyOutfitsMain
+    case MyOutfits.main
     /// 一致するギアがありません
-    case MyOutfitsNoGears
-    /// ノーマル
-    case MyOutfitsNormal
+    case MyOutfits.no_gears
     /// 一致するブキがありません
-    case MyOutfitsNoWeapons
-    /// マイコーデ
-    case MyOutfitsNumber
+    case MyOutfits.no_weapons
+    /// ノーマル
+    case MyOutfits.normal
+    /// マイコーデ { 0 }
+    case MyOutfits.number
     /// OFF
-    case MyOutfitsOff
+    case MyOutfits.off
     /// ON
-    case MyOutfitsOn
+    case MyOutfits.on
     /// カメラオプションを表示する
-    case MyOutfitsOpenCameraOption
-    /// レアド
-    case MyOutfitsRarity
-    ///  左右操作
-    case MyOutfitsRControl
-    /// リバース
-    case MyOutfitsReverse
-    ///  操作感度
-    case MyOutfitsRHorizontal
+    case MyOutfits.open_camera_option
+    /// { 0 } 左右操作
+    case MyOutfits.r_control
+    /// { 0 } 操作感度
+    case MyOutfits.r_horizontal
     /// ジャイロ操作OFFの時は無効になります
-    case MyOutfitsRHorizontalUnavailable
-    ///  上下操作
-    case MyOutfitsRVertical
+    case MyOutfits.r_horizontal_unavailable
+    /// { 0 } 上下操作
+    case MyOutfits.r_vertical
     /// ジャイロ操作ONの時は無効になります
-    case MyOutfitsRVerticalUnavailable
+    case MyOutfits.r_vertical_unavailable
+    /// レアド { 0 }
+    case MyOutfits.rarity
+    /// リバース
+    case MyOutfits.reverse
     /// 保存
-    case MyOutfitsSave
+    case MyOutfits.save
     /// フクを選ぶ
-    case MyOutfitsSelectCloth
+    case MyOutfits.select_cloth
     /// アタマを選ぶ
-    case MyOutfitsSelectHead
+    case MyOutfits.select_head
     /// クツを選ぶ
-    case MyOutfitsSelectShoes
+    case MyOutfits.select_shoes
     /// 保存先の選択
-    case MyOutfitsSelectSlot
+    case MyOutfits.select_slot
     /// ブキを選ぶ
-    case MyOutfitsSelectWeapon
+    case MyOutfits.select_weapon
     /// シェア
-    case MyOutfitsShare
+    case MyOutfits.share
     /// クツ
-    case MyOutfitsShoes
+    case MyOutfits.shoes
     /// スペシャルウェポン
-    case MyOutfitsSpecial
+    case MyOutfits.special
     /// サブウェポン
-    case MyOutfitsSub
+    case MyOutfits.sub
     /// 決定
-    case MyOutfitsSubmitGear
+    case MyOutfits.submit_gear
     /// 決定
-    case MyOutfitsSubmitWeapon
+    case MyOutfits.submit_weapon
     /// マイコーデ
-    case MyOutfitsTitle
-    /// 今まで塗った面積
-    case MyOutfitsTurfPoint
+    case MyOutfits.title
+    /// 今まで塗った面積 <em>{ 0 }p</em>
+    case MyOutfits.turf_point
     /// TVモード/テーブルモード
-    case MyOutfitsTvTabletopMode
+    case MyOutfits.tv_tabletop_mode
     /// ブキ
-    case MyOutfitsWeapon
-    /// 写真は20枚までアップロードできます保存期間は3ヶ月です
-    case PhotoAlbumAnnotation
+    case MyOutfits.weapon
+    /// 写真は20枚までアップロードできます<br />保存期間は3ヶ月です
+    case PhotoAlbum.annotation
     /// アルバム
-    case PhotoAlbumAppName
+    case PhotoAlbum.app_name
     /// 選択
-    case PhotoAlbumSelect
+    case PhotoAlbum.select
     /// フォトアルバム
-    case PhotoAlbumTitle
+    case PhotoAlbum.title
     /// QRコードリーダー
-    case QrCodeReaderAppName
-    /// 日時:
-    case QrCodeReaderCheckinDate
+    case QRCodeReader.app_name
+    /// 日時: { 0 }
+    case QRCodeReader.checkin_date
     /// 許可
-    case QrCodeReaderConfirmationAllow
+    case QRCodeReader.confirmation_allow
     /// 許可しない
-    case QrCodeReaderConfirmationDeny
+    case QRCodeReader.confirmation_deny
     /// このほうしゅうはすでに獲得済みです
-    case QrCodeReaderErrorAlreadyGotDescription
+    case QRCodeReader.error_already_got_description
     /// すでに獲得しています
-    case QrCodeReaderErrorAlreadyGotTitle
-    /// イカリング３で読み取ることのできるQRコードではありません
-    case QrCodeReaderErrorNotCompatibleDescription
+    case QRCodeReader.error_already_got_title
+    /// イカリング３で読み取ることのできる<br />QRコードではありません
+    case QRCodeReader.error_not_compatible_description
     /// エラー
-    case QrCodeReaderErrorNotCompatibleTitle
+    case QRCodeReader.error_not_compatible_title
     /// まだご利用いただけません
-    case QrCodeReaderErrorNotStartedTitle
+    case QRCodeReader.error_not_started_title
     /// このQRコードはすでに無効です
-    case QrCodeReaderErrorRewardExpiredDescription
+    case QRCodeReader.error_reward_expired_description
     /// 有効期間中にお使いください
-    case QrCodeReaderErrorRewardNotStartedDescription
-    /// イカリング３のQRコード読み取り機能がご利用いただけます。以下のお客様の選択は保存されず、QRコードの読み取りをご利用いただくたびにお客様の同意（GDPR【第】6条【第】1項(a))が求められます。
-    case QrCodeReaderEuConfirmation
-    /// 特定の場所にあるQRコードを読み取ると特別なほうしゅうをゲットできます
-    case QrCodeReaderGuide
+    case QRCodeReader.error_reward_not_started_description
+    /// イカリング３のQRコード読み取り機能がご利用いただけます。<br />QRコードの読み取りをご利用いただくと、どのQRコードを読み取ったかという情報が任天堂に送信され、アプリ内でQRコードの読み取り履歴を確認できるようになります。これにより、任天堂がお客様の位置情報を知ることができる場合があります。<br />以下のお客様の選択は保存されず、QRコードの読み取りをご利用いただくたびにお客様の同意（GDPR【第】6条【第】1項(a))が求められます。
+    case QRCodeReader.eu_confirmation
+    /// 特定の場所にあるQRコードを読み取ると<br />特別なほうしゅうをゲットできます
+    case QRCodeReader.guide
     /// 履歴
-    case QrCodeReaderHistory
-    /// ほうしゅうの受け取りはスプラトゥーン3のロビー端末を使ってね
-    case QrCodeReaderHowToGetReward
+    case QRCodeReader.history
+    /// ほうしゅうの受け取りは<br />スプラトゥーン3のロビー端末を使ってね
+    case QRCodeReader.how_to_get_reward
     /// これまでの読み取り履歴が表示されます
-    case QrCodeReaderNoData
+    case QRCodeReader.no_data
     /// カメラでQRコードを読み取る
-    case QrCodeReaderReadQrcodeByCamera
+    case QRCodeReader.read_qrcode_by_camera
     /// 保存した画像から読み取る
-    case QrCodeReaderReadQrcodeByFile
+    case QRCodeReader.read_qrcode_by_file
     /// QRコードリーダー
-    case QrCodeReaderTitle
-    /// 各地で同時発生
-    case Random
+    case QRCodeReader.title
     /// 最後に遊んだ
-    case RecordLatestPlayed
+    case Record.latest_played
     /// よく使う
-    case RecordLatestUsed
+    case Record.latest_used
     /// メイン
-    case RecordMain
+    case Record.main
     /// じゅくれん度アップまで
-    case RecordNextSkillLevel
+    case Record.next_skill_level
     /// じゅくれん度
-    case RecordSkillLevel
+    case Record.skill_level
     /// 並べ替え
-    case RecordSort
+    case Record.sort
     /// スペシャル
-    case RecordSpecial
+    case Record.special
     /// ステージのきろく
-    case RecordStageRecord
+    case Record.stage_record
     /// ステージ
-    case RecordStageRecordAppName
+    case Record.stage_record_app_name
     /// サブ
-    case RecordSub
+    case Record.sub
     /// きろく
-    case RecordTitle
-    /// p
-    case RecordTotalTurfPoint
+    case Record.title
+    /// { 0 }p
+    case Record.total_turf_point
     /// 塗りポイント
-    case RecordTurfPoint
+    case Record.turf_point
     /// 遊んでないステージ
-    case RecordUnplayedStages
+    case Record.unplayed_stages
     /// 未所持のブキ
-    case RecordUnusedWeapons
+    case Record.unused_weapons
     /// チョーシ
-    case RecordVibes
+    case Record.vibes
     /// ブキのきろく
-    case RecordWeaponRecord
+    case Record.weapon_record
     /// ブキ
-    case RecordWeaponRecordAppName
+    case Record.weapon_record_app_name
     /// 勝利数
-    case RecordWinCount
-    /// %
-    case RecordWinRatio
+    case Record.win_count
+    /// { 0 }%
+    case Record.win_ratio
     /// 通常のプライベートマッチと異なり、招待URLを知っているプレイヤーは誰でも参加することができます。
-    case RoomCreatorAnnotation01
+    case RoomCreator.annotation01
     /// フレンドやチャンネルのメンバーは招待URLを知らなくてもフレンドリストや通知からこの部屋に合流することが可能です。
-    case RoomCreatorAnnotation02
+    case RoomCreator.annotation02
     /// また、この部屋ではボイスチャットを利用できません。
-    case RoomCreatorAnnotation03
+    case RoomCreator.annotation03
     /// 作った部屋に誰も入っていない状態が30分以上続くと、自動的に部屋が閉じられます。
-    case RoomCreatorAnnotation04
+    case RoomCreator.annotation04
     /// ヘヤタテ
-    case RoomCreatorAppName
+    case RoomCreator.app_name
     /// 部屋に参加する
-    case RoomCreatorApprove
+    case RoomCreator.approve
     /// ホームに戻る
-    case RoomCreatorBack
+    case RoomCreator.back
     /// やっぱりやめる
-    case RoomCreatorCancel
+    case RoomCreator.cancel
     /// 部屋を解散する
-    case RoomCreatorCloseRoom
+    case RoomCreator.close_room
     /// イカリング３で作った部屋を解散し、招待URLが無効になります。
-    case RoomCreatorCloseRoomGuide
+    case RoomCreator.close_room_guide
     /// 部屋を解散しますか？
-    case RoomCreatorConfirmCloseRoom
+    case RoomCreator.confirm_close_room
     /// あなたはすでにヘヤタテで部屋を作っています。あなたの部屋を解散し、この部屋に参加しますか？
-    case RoomCreatorConfirmRemoveRoom
+    case RoomCreator.confirm_remove_room
     /// 参加しない
-    case RoomCreatorConfirmRemoveRoomCancel
+    case RoomCreator.confirm_remove_room_cancel
     /// 参加する
-    case RoomCreatorConfirmRemoveRoomOk
+    case RoomCreator.confirm_remove_room_ok
     /// キャンセルしました
-    case RoomCreatorDecline
+    case RoomCreator.decline
     /// もう一度招待URLにアクセスすると、部屋に参加することができます。
-    case RoomCreatorDeclineGuide
+    case RoomCreator.decline_guide
     /// すでに部屋を作っています。「ヘヤタテ」で作ることのできる部屋は同時にひとつまでです。
-    case RoomCreatorErrorAlreadyExist
+    case RoomCreator.error_already_exist
     /// 部屋を作ることができませんでした。
-    case RoomCreatorErrorMakeRoom
-    /// 部屋のURLをシェアして、プライベートマッチに招待することができます。
-    case RoomCreatorGuide
+    case RoomCreator.error_make_room
+    /// 部屋のURLをシェアして、<br />プライベートマッチに招待することができます。
+    case RoomCreator.guide
     /// 部屋に入る
-    case RoomCreatorHowToActivate
+    case RoomCreator.how_to_activate
     /// スプラトゥーン3のロビーメニューのフレンドリストに追加された「イカリング３で作った部屋」に入ってください。
-    case RoomCreatorHowToActivateGuide
+    case RoomCreator.how_to_activate_guide
     /// フレンドリストから、この部屋に合流してください。
-    case RoomCreatorHowToJoin
+    case RoomCreator.how_to_join
     /// 解散する
-    case RoomCreatorInvalidateInvitation
+    case RoomCreator.invalidate_invitation
     /// 部屋に招待されました
-    case RoomCreatorInvitation
+    case RoomCreator.invitation
     /// 部屋に参加するとスプラトゥーン3のフレンドリストに「イカリング３で作った部屋」が追加されます。
-    case RoomCreatorInvitationGuide
+    case RoomCreator.invitation_guide
     /// 招待URL
-    case RoomCreatorInvitationUrl
+    case RoomCreator.invitation_url
     /// 部屋ができました
-    case RoomCreatorInviteGuest
+    case RoomCreator.invite_guest
     /// 部屋をつくる
-    case RoomCreatorMakeRoom
+    case RoomCreator.make_room
     /// 部屋が見つかりません
-    case RoomCreatorNotFound
+    case RoomCreator.not_found
     /// URLが間違っているか、すでに部屋が閉じられている場合があります。
-    case RoomCreatorNotFoundGuide
+    case RoomCreator.not_found_guide
     /// パスワードを設定する
-    case RoomCreatorPassword
+    case RoomCreator.password
     /// パスワードを設定しない
-    case RoomCreatorPasswordCancel
-    /// このパスワードはフレンドやチャンネルのメンバーが招待URLを使わずに部屋に合流する場合に必要です。「イカリング３で作った部屋」から入る場合はパスワードは不要です。
-    case RoomCreatorPasswordGuide
+    case RoomCreator.password_cancel
+    /// このパスワードはフレンドやチャンネルのメンバーが招待URLを使わずに部屋に合流する場合に必要です。<br />「イカリング３で作った部屋」から入る場合はパスワードは不要です。
+    case RoomCreator.password_guide
     /// 4桁の数字を入力してください
-    case RoomCreatorPasswordHelp
+    case RoomCreator.password_help
     /// 参加できる部屋
-    case RoomCreatorRoom
+    case RoomCreator.room
     /// 招待したい人にURLをシェア！
-    case RoomCreatorShareInvitationUrl
+    case RoomCreator.share_invitation_url
     /// Nintendo Switch Onlineアプリがインストールされたスマートフォンで、招待URLにアクセスしてもらいましょう。
-    case RoomCreatorShareInvitationUrlGuide
+    case RoomCreator.share_invitation_url_guide
     /// URLをシェア
-    case RoomCreatorShareUrl
+    case RoomCreator.share_url
     /// 便利な部屋作成サービス
-    case RoomCreatorSubtitle
+    case RoomCreator.subtitle
     /// ヘヤタテ
-    case RoomCreatorTitle
-    /// テッキュウ
-    case SakeArtillery
-    /// ドロシャケ
-    case SakeBigMouth
-    /// ドロシャケ
-    case SakeBigMouthGold
-    /// シャケコプター
-    case SakeCopter
-    /// モグラ
-    case Sakediver
-    /// ダイバー
-    case SakeDolphin
-    /// グリル
-    case Sakedozer
-    /// タマヒロイ
-    case SakeFlyBagman
-    /// ジョー
-    case SakeJaw
-    /// バクダン
-    case SakelienBomber
-    /// カタパッド
-    case SakelienCupTwins
-    /// ヨコヅナ
-    case SakelienGiant
-    /// キンシャケ
-    case SakelienGolden
-    /// ドスコイ
-    case SakelienLarge
-    /// テッパン
-    case SakelienShield
-    /// コジャケ
-    case SakelienSmall
-    /// ヘビ
-    case SakelienSnake
-    /// シャケ
-    case SakelienStandard
-    /// タワー
-    case SakelienTower
-    /// ハシラ
-    case SakePillar
-    /// コウモリ
-    case Sakerocket
-    /// タツ
-    case SakeRope
-    /// ナベブタ
-    case SakeSaucer
-    /// タラポートショッピングパーク
-    case Section
+    case RoomCreator.title
     /// 利用データの送信について
-    case SettingsAboutSendingUsageData
+    case Settings.about_sending_usage_data
     /// イカリング３をご利用の際には、『Nintendo Switch Online』アプリの「利用データの送信について」の設定が適用されます。この設定はいつでも変更することができます。
-    case SettingsAboutSendingUsageDataDescription
+    case Settings.about_sending_usage_data_description
     /// 権利表記
-    case SettingsAcknowledgements
+    case Settings.acknowledgements
     /// 設定
-    case SettingsAppName
+    case Settings.app_name
     /// クレジット
-    case SettingsCredits
+    case Settings.credits
     /// エキスパンション・パス 購入サイトへ
-    case SettingsExpansionPass
+    case Settings.expansion_pass
     /// 設定
-    case SettingsTitle
-    /// ムニ・エール海洋発電所
-    case Shakedent
-    /// すじこジャンクション跡
-    case Shakehighway
-    /// トキシラズいぶし工房
-    case Shakelift
-    /// どんぴこ闘技場
-    case Shakerail
-    /// 難破船ドン・ブラコ
-    case Shakeship
-    /// アラマキ砦
-    case Shakespiral
-    /// シェケナダム
-    case Shakeup
-    /// パレットにセットした枚数:
-    case SideOrderRecordAccumulateCount
+    case Settings.title
+    /// パレットにセットした枚数: { 0 }
+    case SideOrderRecord.accumulate_count
     /// サイド・オーダー
-    case SideOrderRecordAppName
+    case SideOrderRecord.app_name
     /// ドローン
-    case SideOrderRecordChipCategoryAuto
+    case SideOrderRecord.chip_category_auto
     /// サポート
-    case SideOrderRecordChipCategoryContinuity
+    case SideOrderRecord.chip_category_continuity
     /// パワー
-    case SideOrderRecordChipCategoryFire
+    case SideOrderRecord.chip_category_fire
     /// ラッキー
-    case SideOrderRecordChipCategoryLuck
+    case SideOrderRecord.chip_category_luck
     /// ムーブ
-    case SideOrderRecordChipCategoryMove
+    case SideOrderRecord.chip_category_move
     /// レンジ
-    case SideOrderRecordChipCategoryRange
-    /// 集めた情報
-    case SideOrderRecordChiplevel
+    case SideOrderRecord.chip_category_range
+    /// 集めた情報 { 0 }
+    case SideOrderRecord.chiplevel
     /// クリア！
-    case SideOrderRecordClear
-    /// クリア:
-    case SideOrderRecordClearCount
+    case SideOrderRecord.clear
+    /// クリア: { 0 }
+    case SideOrderRecord.clear_count
     /// 集めたカラーチップ
-    case SideOrderRecordCollectedColorChips
+    case SideOrderRecord.collected_color_chips
     /// カッコ内は今までに集めた枚数です
-    case SideOrderRecordCollectedColorChipsAnnotation
+    case SideOrderRecord.collected_color_chips_annotation
     /// 集めたパレット
-    case SideOrderRecordCollectedPalettes
+    case SideOrderRecord.collected_palettes
     /// すべてのパレットでクリアして 特別なほうしゅうをゲット！
-    case SideOrderRecordCollectedPalettesSubtitle
+    case SideOrderRecord.collected_palettes_subtitle
     /// カラーチップ
-    case SideOrderRecordColorChip
+    case SideOrderRecord.color_chip
     /// チップ使用率
-    case SideOrderRecordColorChipUsage
+    case SideOrderRecord.color_chip_usage
     /// かんたん
-    case SideOrderRecordDifficulity0
+    case SideOrderRecord.difficulity_0
     /// ふつう
-    case SideOrderRecordDifficulity1
+    case SideOrderRecord.difficulity_1
     /// むずかしい
-    case SideOrderRecordDifficulity2
+    case SideOrderRecord.difficulity_2
     /// ゲキムズ
-    case SideOrderRecordDifficulity3
+    case SideOrderRecord.difficulity_3
     /// ほうしゅうをゲット！
-    case SideOrderRecordDownloadReward
+    case SideOrderRecord.download_reward
     /// ずかん
-    case SideOrderRecordEnemy
+    case SideOrderRecord.enemy
     /// スケルトーンずかん
-    case SideOrderRecordEnemyCollection
-    /// に 当たってやられた
-    case SideOrderRecordFailureCollided
-    /// に やられた
-    case SideOrderRecordFailureDefeated
+    case SideOrderRecord.enemy_collection
+    /// { 0 }に 当たってやられた
+    case SideOrderRecord.failure_collided
+    /// { 0 }に やられた
+    case SideOrderRecord.failure_defeated
     /// フロアから 落ちた
-    case SideOrderRecordFailureFall
-    ///
-    case SideOrderRecordFloor
+    case SideOrderRecord.failure_fall
+    /// <span>{ 0 }</span><small>F</small>
+    case SideOrderRecord.floor
     /// クリア特典
-    case SideOrderRecordGetClearReward
+    case SideOrderRecord.get_clear_reward
     /// コンプリート特典
-    case SideOrderRecordGetReward
+    case SideOrderRecord.get_reward
     /// イイダのハッキング
-    case SideOrderRecordHacking
+    case SideOrderRecord.hacking
     /// ハイスコア！
-    case SideOrderRecordHighScore
+    case SideOrderRecord.high_score
     /// 最近のきろく
-    case SideOrderRecordLatestResults
+    case SideOrderRecord.latest_results
     /// もっと見る
-    case SideOrderRecordMore
+    case SideOrderRecord.more
     /// 次へ
-    case SideOrderRecordNext
+    case SideOrderRecord.next
     /// パレット
-    case SideOrderRecordPalette
+    case SideOrderRecord.palette
     /// 各パレットの最速クリアタイムのきろくを表示します
-    case SideOrderRecordPalettesAnnotation
-    /// p
-    case SideOrderRecordPoint
+    case SideOrderRecord.palettes_annotation
+    /// { 0 }p
+    case SideOrderRecord.point
     /// 所持ネリコイン
-    case SideOrderRecordPointCoin
+    case SideOrderRecord.point_coin
     /// カラフルカラーチップボーナス
-    case SideOrderRecordPointColorful
+    case SideOrderRecord.point_colorful
     /// クリア時ライフ
-    case SideOrderRecordPointRetry
+    case SideOrderRecord.point_retry
     /// 連続同色カラーチップボーナス
-    case SideOrderRecordPointSameColor
+    case SideOrderRecord.point_same_color
     /// ポイント→シンジュ
-    case SideOrderRecordPointToPearl
+    case SideOrderRecord.point_to_pearl
     /// 前へ
-    case SideOrderRecordPrev
+    case SideOrderRecord.prev
     /// きろく
-    case SideOrderRecordResult
+    case SideOrderRecord.result
     /// あきらめた
-    case SideOrderRecordRetire
+    case SideOrderRecord.retire
     /// SCORE
-    case SideOrderRecordScore
+    case SideOrderRecord.score
     /// サイズを選んでダウンロードしてください
-    case SideOrderRecordSelectSize
+    case SideOrderRecord.select_size
     /// 入手ポイントを表示する
-    case SideOrderRecordShowAllPoints
-    /// フロアリセット:
-    case SideOrderRecordStageReset
+    case SideOrderRecord.show_all_points
+    /// フロアリセット: { 0 }
+    case SideOrderRecord.stage_reset
     /// サイド・オーダーのきろく
-    case SideOrderRecordTitle
-    /// 合計:
-    case SideOrderRecordTotalHackingLevel
-    /// トライ:
-    case SideOrderRecordTryCount
-    /// 自販機で使ったネリコイン:
-    case SideOrderRecordUsedCoin
+    case SideOrderRecord.title
+    /// 合計: { 0 }
+    case SideOrderRecord.total_hacking_level
+    /// トライ: { 0 }
+    case SideOrderRecord.try_count
+    /// 自販機で使ったネリコイン: { 0 }
+    case SideOrderRecord.used_coin
     /// バンカラマッチ
-    case StageScheduleBankara
+    case StageSchedule.bankara
     /// オープン
-    case StageScheduleBankaraOpen
+    case StageSchedule.bankara_open
     /// チャレンジ
-    case StageScheduleBankaraOpenChallenge
+    case StageSchedule.bankara_open_challenge
     /// サーモンラン
-    case StageScheduleCoop
+    case StageSchedule.coop
     /// イベントマッチ
-    case StageScheduleEvent
+    case StageSchedule.event
     /// いま
-    case StageScheduleEventCurrentSchedule
+    case StageSchedule.event_current_schedule
     /// そのつぎ
-    case StageScheduleEventFuture
+    case StageSchedule.event_future
     /// 開催中！
-    case StageScheduleEventHolding
+    case StageSchedule.event_holding
     /// 次回
-    case StageScheduleEventNext
+    case StageSchedule.event_next
     /// つぎ
-    case StageScheduleEventNextSchedule
+    case StageSchedule.event_next_schedule
     /// スケジュールが未定です
-    case StageScheduleEventNoData
+    case StageSchedule.event_no_data
     /// ?????
-    case StageScheduleEventUnknownData
+    case StageSchedule.event_unknown_data
     /// チャレンジ
-    case StageScheduleFestChallenge
-    /// フェスマッチ
-    case StageScheduleFestival
-    /// もうすぐ開催
-    case StageScheduleFestivalAnnounced
-    ///  スタート！
-    case StageScheduleFestivalAt
-    /// 攻撃
-    case StageScheduleFestivalAttack
-    /// 守備
-    case StageScheduleFestivalDefense
-    /// 開催中！
-    case StageScheduleFestivalHolding
-    ///  -
-    case StageScheduleFestivalPeriod
+    case StageSchedule.fest_challenge
     /// オープン
-    case StageScheduleFestOpen
-    /// そのつぎ
-    case StageScheduleFuture
-    /// トリカラマッチ時間割
-    case StageScheduleGrandFestSchedule
-    /// Webブラウザが開きます
-    case StageScheduleGuideOpenBrowser
-    /// つぎ
-    case StageScheduleNext
-    /// ビッグラン接近中！
-    case StageScheduleNoticeBigrun
-    /// バイトチームコンテスト開催予告！
-    case StageScheduleNoticeLimited
-    /// フェスマッチ開催中！
-    case StageScheduleNowClosed
-    /// オープン！
-    case StageScheduleOpen
-    /// ビッグラン発生中！
-    case StageScheduleOpenBigrun
-    /// バイトチームコンテスト開催中！
-    case StageScheduleOpenLimited
-    /// プライベートマッチ
-    case StageSchedulePrivate
-    /// ビッグランがやってくる！！バイト大募集
-    case StageScheduleRecruit
-    /// バイトチームコンテスト！チームを組んで参加しよう！
-    case StageScheduleRecruitTeamContest
-    /// レギュラーマッチ
-    case StageScheduleRegular
-    /// ルールを見る
-    case StageScheduleRules
-    /// 詳しいルールはこちら
-    case StageScheduleSeeAllRules
-    /// フェスのきろくを見る
-    case StageScheduleSeeFestivalRecord
-    /// ランダム
-    case StageScheduleSuppliedWeaponRandom
-    /// 支給ブキ
-    case StageScheduleSuppliedWeapons
-    /// スケジュール
-    case StageScheduleTitle
-    /// ルールごとの勝率
-    case StageScheduleWinRateByRules
-    /// Xマッチ
-    case StageScheduleXmatch
-    /// マテガイ放水路
-    case Temple
-    /// もうすぐ開催！
-    case TournamentComingSoon
-    /// タイカイサポート
-    case TournamentTitle
-    /// 開催中
-    case TournamentTournamentNow
-    /// オカシラ連合
-    case Triple
-    /// アラマキ砦
-    case Tutorial
-    /// ？？？
-    case Unknown
-    /// 海女美術大学
-    case Upland
-    /// １００倍マッチ
-    case VsHistory100X
-    /// １０倍マッチ
-    case VsHistory10X
-    /// １０倍ホラガイ争奪戦
-    case VsHistory10XHoragaiMatch
-    /// ３３３倍マッチ
-    case VsHistory333X
-    /// ３３倍ホラガイ争奪戦
-    case VsHistory33XHoragaiMatch
-    /// 計測中止
-    case VsHistoryAbortedMeasurementEventPower
-    /// 通信を切断したプレイヤーがいたため、負けとしてカウントされませんでした
-    case VsHistoryAnnotationExemption
-    /// 無効試合になりました
-    case VsHistoryAnnotationNocontest
-    /// 正常に試合が終了しませんでした
-    case VsHistoryAnnotationPenalty
-    /// 攻撃
-    case VsHistoryAttack
-    /// 分あたりのアベレージ
-    case VsHistoryAverage
-    /// きん
-    case VsHistoryAwardGold
-    /// ぎん
-    case VsHistoryAwardSilver
-    /// バンカラマッチ
-    case VsHistoryBankara
-    /// バンカラマッチ チャレンジ
-    case VsHistoryBankaraChallenge
-    /// バンカラマッチ オープン
-    case VsHistoryBankaraOpen
-    /// バンカラパワー
-    case VsHistoryBankaraPower
-    /// こうけん度
-    case VsHistoryContribute
-    /// カウント
-    case VsHistoryCount
-    /// たおされたかいすう
-    case VsHistoryDeathCount
-    /// 守備
-    case VsHistoryDefense
-    /// DRAW
-    case VsHistoryDraw
-    /// そうびしていたギア
-    case VsHistoryEquippedGear
-    /// そうびしていたブキ
-    case VsHistoryEquippedWeapon
-    /// イベントマッチ
-    case VsHistoryEvent
-    /// ペア
-    case VsHistoryEventPair
-    /// イベントパワー
-    case VsHistoryEventPower
-    /// ソロ
-    case VsHistoryEventSolo
-    /// チーム
-    case VsHistoryEventTeam
-    /// チーム
-    case VsHistoryFesTeam
+    case StageSchedule.fest_open
     /// フェスマッチ
-    case VsHistoryFestival
-    /// オマツリガイ x
-    case VsHistoryFestivalShell
-    /// パワー
-    case VsHistoryFestPower
-    /// オマツリのあかし
-    case VsHistoryFesWinProof
-    /// ゲットした表彰
-    case VsHistoryGotAwards
-    /// バトルのきろくに戻る
-    case VsHistoryGoToStats
-    /// ぬりまといかくほ
-    case VsHistoryGotTricolorTreasure
-    /// ホラガイ
-    case VsHistoryHoragai
-    /// Get!
-    case VsHistoryHoragaiCount
-    /// ホラガイ争奪戦
-    case VsHistoryHoragaiMatch
-    /// 挑戦中
-    case VsHistoryInChallenge
-    /// たおしたかいすう
-    case VsHistoryKillCount
-    /// ノックアウト！
-    case VsHistoryKnockout
-    /// 最近の50戦
-    case VsHistoryLatest
-    /// 最新のバトル
-    case VsHistoryLatestBattle
-    /// 最近
-    case VsHistoryLatestTab
-    /// LOSE...
-    case VsHistoryLose
-    /// Xパワー計測中
-    case VsHistoryMeasurement
-    /// 計測中
-    case VsHistoryMeasurementEventPower
-    /// 次のバトル
-    case VsHistoryNextBattle
-    /// バトルのきろくがありません
-    case VsHistoryNoData
-    /// バトルのきろくを表示できません
-    case VsHistoryNotAvailable
-    /// 閲覧できるバトルのきろくは、モードごとに最新の50戦までです。
-    case VsHistoryNotAvailableDescription
-    /// （おそろいボーナス x）
-    case VsHistoryOutfitBonus
-    /// 前のバトル
-    case VsHistoryPreviousBattle
+    case StageSchedule.festival
+    /// もうすぐ開催
+    case StageSchedule.festival_announced
+    /// { 0 } スタート！
+    case StageSchedule.festival_at
+    /// 攻撃
+    case StageSchedule.festival_attack
+    /// 守備
+    case StageSchedule.festival_defense
+    /// 開催中！
+    case StageSchedule.festival_holding
+    /// { 0 } - { 1 }
+    case StageSchedule.festival_period
+    /// そのつぎ
+    case StageSchedule.future
+    /// トリカラマッチ時間割
+    case StageSchedule.grand_fest_schedule
+    /// Webブラウザが開きます
+    case StageSchedule.guide_open_browser
+    /// つぎ
+    case StageSchedule.next
+    /// ビッグラン接近中！
+    case StageSchedule.notice_bigrun
+    /// バイトチームコンテスト開催予告！
+    case StageSchedule.notice_limited
+    /// フェスマッチ開催中！
+    case StageSchedule.now_closed
+    /// オープン！
+    case StageSchedule.open
+    /// ビッグラン発生中！
+    case StageSchedule.open_bigrun
+    /// バイトチームコンテスト開催中！
+    case StageSchedule.open_limited
     /// プライベートマッチ
-    case VsHistoryPrivate
-    /// 昇格戦
-    case VsHistoryPromo
+    case StageSchedule.private
+    /// ビッグランがやってくる！！バイト大募集 { 0 }
+    case StageSchedule.recruit
+    /// バイトチームコンテスト！チームを組んで参加しよう！  { 0 }
+    case StageSchedule.recruit_team_contest
     /// レギュラーマッチ
-    case VsHistoryRegular
-    /// スペシャルウェポンはつどうかいすう
-    case VsHistorySpCount
-    /// バトル
-    case VsHistoryTitle
-    /// トライかいすう
-    case VsHistoryTryCount
-    /// p
-    case VsHistoryTurfPoint
-    /// ウデマエポイント
-    case VsHistoryUdemaePoint
-    /// p
-    case VsHistoryUdemaePointScore
-    /// 挑戦中止
-    case VsHistoryUdemaeReset
-    /// ウデマエアップ！
-    case VsHistoryUdemaeUp
-    /// WIN!
-    case VsHistoryWin
-    /// 連勝
-    case VsHistoryWins
-    /// おうかん
-    case VsHistoryXcrown
+    case StageSchedule.regular
+    /// ルールを見る
+    case StageSchedule.rules
+    /// 詳しいルールはこちら
+    case StageSchedule.see_all_rules
+    /// フェスのきろくを見る
+    case StageSchedule.see_festival_record
+    /// ランダム
+    case StageSchedule.supplied_weapon_random
+    /// 支給ブキ
+    case StageSchedule.supplied_weapons
+    /// スケジュール
+    case StageSchedule.title
+    /// ルールごとの勝率
+    case StageSchedule.win_rate_by_rules
     /// Xマッチ
-    case VsHistoryXmatch
-    /// Xパワー
-    case VsHistoryXpower
-    /// イカリング３はスプラトゥーン3と連動するサービスです。ここで紹介したもの以外にもさまざまな機能があります。
-    case WelcomeAbout
-    /// バトルの戦績やスケジュールをチェックしてライバルに差をつけろ！
-    case WelcomeFeature1
-    /// バトルの戦績やスケジュール
-    case WelcomeFeature1Alt
-    /// ファッションリーダーたちに朗報！いつでもマイコーデを編集できるぞ！
-    case WelcomeFeature2
-    /// ひとり旅に出たロブを支援して特別な報酬をゲットしよう！
-    case WelcomeFeature3
-    /// ここだけの特別仕様！ゲソタウンで限定ギアをチェック！
-    case WelcomeFeature4
-    /// Features
-    case WelcomeFeatures
-    /// https://store-jp.nintendo.com/list/software/70010000046394.html
-    case WelcomeLink
-    /// 他にも便利な機能がたくさん！
-    case WelcomeOtherFeatures
-    /// 本気のヤツらのためのイカしたサービス
-    case WelcomeService
-    /// スプラトゥーン3
-    case WelcomeSplatoon3
-    /// 購入サイトへ
-    case WelcomeStore
-    /// ウィジェット
-    case WelcomeWidgets
-    /// すべて表示
-    case XRankingAll
-    /// Xランキング
-    case XRankingAppName
-    /// グループ・アロメ
-    case XRankingAtlantic
-    /// 推定位
-    case XRankingEstimatedRank
+    case StageSchedule.xmatch
+    /// もうすぐ開催！
+    case Tournament.coming_soon
+    /// タイカイサポート
+    case Tournament.title
+    /// 開催中
+    case Tournament.tournament_now
+    /// １００倍マッチ
+    case VSHistory.100x
+    /// １０倍マッチ
+    case VSHistory.10x
+    /// １０倍ホラガイ争奪戦
+    case VSHistory.10x_horagai_match
+    /// ３３３倍マッチ
+    case VSHistory.333x
+    /// ３３倍ホラガイ争奪戦
+    case VSHistory.33x_horagai_match
+    /// 計測中止
+    case VSHistory.aborted_measurement_event_power
+    /// 通信を切断したプレイヤーがいたため、負けとしてカウントされませんでした
+    case VSHistory.annotation_exemption
+    /// 無効試合になりました
+    case VSHistory.annotation_nocontest
+    /// 正常に試合が終了しませんでした
+    case VSHistory.annotation_penalty
+    /// 攻撃
+    case VSHistory.attack
+    /// { 0 }分あたりのアベレージ
+    case VSHistory.average
+    /// きん
+    case VSHistory.award_gold
+    /// ぎん
+    case VSHistory.award_silver
+    /// バンカラマッチ
+    case VSHistory.bankara
+    /// バンカラマッチ チャレンジ
+    case VSHistory.bankara_challenge
+    /// バンカラマッチ オープン
+    case VSHistory.bankara_open
+    /// バンカラパワー { 0 }
+    case VSHistory.bankara_power
+    /// こうけん度 { 0 }
+    case VSHistory.contribute
+    /// { 0 }カウント
+    case VSHistory.count
+    /// たおされたかいすう
+    case VSHistory.death_count
+    /// 守備
+    case VSHistory.defense
+    /// DRAW
+    case VSHistory.draw
+    /// そうびしていたギア
+    case VSHistory.equipped_gear
+    /// そうびしていたブキ
+    case VSHistory.equipped_weapon
+    /// イベントマッチ
+    case VSHistory.event
+    /// ペア
+    case VSHistory.event_pair
+    /// イベントパワー { 0 }
+    case VSHistory.event_power
+    /// ソロ
+    case VSHistory.event_solo
+    /// チーム
+    case VSHistory.event_team
+    /// { 0 }チーム
+    case VSHistory.fes_team
+    /// オマツリのあかし
+    case VSHistory.fes_win_proof
+    /// { 0 }{ 1 }パワー
+    case VSHistory.fest_power
+    /// フェスマッチ
+    case VSHistory.festival
+    /// オマツリガイ x{ 0 }
+    case VSHistory.festival_shell
+    /// バトルのきろくに戻る
+    case VSHistory.go_to_stats
+    /// ゲットした表彰
+    case VSHistory.got_awards
+    /// ぬりまといかくほ
+    case VSHistory.got_tricolor_treasure
+    /// ホラガイ
+    case VSHistory.horagai
+    /// Get!
+    case VSHistory.horagai_count
+    /// ホラガイ争奪戦
+    case VSHistory.horagai_match
+    /// 挑戦中
+    case VSHistory.in_challenge
+    /// たおしたかいすう
+    case VSHistory.kill_count
+    /// ノックアウト！
+    case VSHistory.knockout
+    /// 最近の50戦
+    case VSHistory.latest
+    /// 最新のバトル
+    case VSHistory.latest_battle
+    /// 最近
+    case VSHistory.latest_tab
+    /// LOSE...
+    case VSHistory.lose
+    /// Xパワー計測中
+    case VSHistory.measurement
     /// 計測中
-    case XRankingMeasurement
-    /// 開催中！！
-    case XRankingOpen
-    /// グループ・ヤコ
-    case XRankingPacific
-    /// 過去のランキング
-    case XRankingPastRankings
-    /// ※ 過去のランキングはシーズン終了後、集計をしてから公開されます。集計が終わるまで数日かかる場合があります。
-    case XRankingPastRankingsAnnotation
-    ///  -
-    case XRankingPeriod
-    ///
-    case XRankingRank
-    ///
-    case XRankingRankSns
-    /// グループ
-    case XRankingRegion
-    /// ランキングを見る
-    case XRankingSeeRanking
-    /// ブキトップを見る
-    case XRankingSeeWeaponTop
-    /// ブキを選ぶ
-    case XRankingSelectWeapon
-    /// Xランキング
-    case XRankingTitle
-    /// トップ 500
-    case XRankingTop500
-    /// トッププレイヤー
-    case XRankingTopPlayers
-    /// ブキトップ プレイヤー
-    case XRankingWeaponTop
-    /// ブキトップ プレイヤー
-    case XRankingWeaponTopSingular
+    case VSHistory.measurement_event_power
+    /// 次のバトル
+    case VSHistory.next_battle
+    /// バトルのきろくがありません
+    case VSHistory.no_data
+    /// バトルのきろくを表示できません
+    case VSHistory.not_available
+    /// 閲覧できるバトルのきろくは、モードごとに最新の50戦までです。
+    case VSHistory.not_available_description
+    /// （おそろいボーナス x{ 0 }）
+    case VSHistory.outfit_bonus
+    /// 前のバトル
+    case VSHistory.previous_battle
+    /// プライベートマッチ
+    case VSHistory.private
+    /// 昇格戦
+    case VSHistory.promo
+    /// レギュラーマッチ
+    case VSHistory.regular
+    /// スペシャルウェポンはつどうかいすう
+    case VSHistory.sp_count
+    /// バトル
+    case VSHistory.title
+    /// トライかいすう
+    case VSHistory.try_count
+    /// { 0 }p
+    case VSHistory.turf_point
+    /// ウデマエポイント
+    case VSHistory.udemae_point
+    /// { 0 }p
+    case VSHistory.udemae_point_score
+    /// 挑戦中止
+    case VSHistory.udemae_reset
+    /// ウデマエアップ！
+    case VSHistory.udemae_up
+    /// WIN!
+    case VSHistory.win
+    /// { 0 }連勝
+    case VSHistory.wins
     /// おうかん
-    case XRankingXcrown
-    ///
-    case XRankingXpower
+    case VSHistory.xcrown
+    /// Xマッチ
+    case VSHistory.xmatch
+    /// Xパワー { 0 }
+    case VSHistory.xpower
+    /// イカリング３はスプラトゥーン3と連動するサービスです。<br />ここで紹介したもの以外にもさまざまな機能があります。
+    case Welcome.about
+    /// バトルの戦績やスケジュールをチェックして<br />ライバルに差をつけろ！
+    case Welcome.feature_1
+    /// バトルの戦績やスケジュール
+    case Welcome.feature_1_alt
+    /// ファッションリーダーたちに朗報！<br />いつでもマイコーデを編集できるぞ！
+    case Welcome.feature_2
+    /// ひとり旅に出たロブを支援して<br />特別な報酬をゲットしよう！
+    case Welcome.feature_3
+    /// ここだけの特別仕様！<br />ゲソタウンで限定ギアをチェック！
+    case Welcome.feature_4
+    /// Features
+    case Welcome.features
+    /// https://store-jp.nintendo.com/list/software/70010000046394.html
+    case Welcome.link
+    /// 他にも便利な機能がたくさん！
+    case Welcome.other_features
+    /// 本気のヤツらのためのイカしたサービス
+    case Welcome.service
+    /// スプラトゥーン3
+    case Welcome.splatoon3
+    /// 購入サイトへ
+    case Welcome.store
+    /// ウィジェット
+    case Welcome.widgets
+    /// すべて表示
+    case XRanking.all
+    /// Xランキング
+    case XRanking.app_name
+    /// グループ・アロメ
+    case XRanking.atlantic
+    /// 推定{ 0 }位
+    case XRanking.estimated_rank
+    /// 計測中
+    case XRanking.measurement
+    /// 開催中！！
+    case XRanking.open
+    /// グループ・ヤコ
+    case XRanking.pacific
+    /// 過去のランキング
+    case XRanking.past_rankings
+    /// ※ 過去のランキングはシーズン終了後、集計をしてから公開されます。集計が終わるまで数日かかる場合があります。
+    case XRanking.past_rankings_annotation
+    /// { 0 } - { 1 }
+    case XRanking.period
+    /// { 0 }<small>位</small>
+    case XRanking.rank
+    /// { 0 }<small>位</small>
+    case XRanking.rank_sns
+    /// グループ
+    case XRanking.region
+    /// ランキングを見る
+    case XRanking.see_ranking
+    /// ブキトップを見る
+    case XRanking.see_weapon_top
+    /// ブキを選ぶ
+    case XRanking.select_weapon
+    /// Xランキング
+    case XRanking.title
+    /// トッププレイヤー
+    case XRanking.top_players
+    /// トップ 500
+    case XRanking.top500
+    /// ブキトップ プレイヤー
+    case XRanking.weapon_top
+    /// ブキトップ プレイヤー
+    case XRanking.weapon_top_singular
+    /// おうかん
+    case XRanking.xcrown
+    /// <small>Xパワー</small> { 0 }
+    case XRanking.xpower
 
     // MARK: Public
 

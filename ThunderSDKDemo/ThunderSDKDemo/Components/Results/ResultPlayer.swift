@@ -43,10 +43,11 @@ struct ResultPlayer: View {
 
     private func _common(_ player: RealmCoopPlayer) -> some View {
         VStack(alignment: .leading, spacing: 0, content: {
+            Text(player.name)
 //            Text(visible.wrappedValue ? player.name : "-")
-//                .lineLimit(1)
-//                .font(.custom(.Splatfont2, size: 14))
-//                .padding(.bottom, 2)
+                .lineLimit(1)
+                .font(.custom(.Splatfont2, size: 14))
+                .padding(.bottom, 2)
             HStack(spacing: 2, content: {
                 ForEach(player.weaponList.indices, id: \.self, content: { index in
                     WebImage(rawValue: player.weaponList[index])

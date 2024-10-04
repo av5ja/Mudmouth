@@ -26,7 +26,8 @@ struct CarouselView: View {
 
     var body: some View {
         if #available(iOS 17, *) {
-            iOS17
+            iOS16
+//            iOS17
         } else {
             iOS16
         }

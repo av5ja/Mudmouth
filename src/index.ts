@@ -1,5 +1,3 @@
-import { NSO } from './utils/revision'
-import { Leanny } from './utils/version'
+import { SourceCode } from './utils/source_code'
 
-await Leanny.generate_source_code()
-await NSO.generate_source_code()
+await SourceCode.generate()
