@@ -16,12 +16,12 @@ struct SearchView: View {
     var body: some View {
         Form(content: {
             Section(content: {
-                DatePicker(selection: $options.startTime, displayedComponents: [.date, .hourAndMinute], label: {
-                    //                        Text(rawValue: .CatalogNextBonus)
-                })
-                DatePicker(selection: $options.endTime, displayedComponents: [.date, .hourAndMinute], label: {
-                    //                        Text(rawValue: .RoomCreatorConfirmRemoveRoomCancel)
-                })
+//                DatePicker(selection: $options.startTime, displayedComponents: [.date, .hourAndMinute], label: {
+//                    //                        Text(rawValue: .CatalogNextBonus)
+//                })
+//                DatePicker(selection: $options.endTime, displayedComponents: [.date, .hourAndMinute], label: {
+//                    //                        Text(rawValue: .RoomCreatorConfirmRemoveRoomCancel)
+//                })
                 Picker(selection: $options.rule, content: {
                     ForEach(CoopRule.allCases, content: { rule in
                         Text(rawValue: rule)
@@ -30,8 +30,19 @@ struct SearchView: View {
                 }, label: {
                     Text(rawValue: .EventMatchRankingRules)
                 })
+                Picker(selection: $options.maxGoldenIkuraNum, content: {
+                    ForEach([150, 175, 200, 225, 250, 275, 300, 325, 350], id: \.self, content: { goldenIkuraNum in
+                        Text(goldenIkuraNum, format: .number)
+                            .tag(goldenIkuraNum)
+                    })
+                }, label: {
+                    Text(rawValue: .CoopHistoryGoldenDeliverCount)
+                })
+                Toggle(isOn: $options.hasExWave, label: {
+                    Text(rawValue: .CoopHistoryExWave)
+                })
             }, header: {
-                Text(rawValue: .QrCodeReaderCheckinDate)
+//                Text(rawValue: .QrCodeReaderCheckinDate)
             })
             //                Section(content: {
             //                    Picker(selection: $options.mode, content: {
@@ -46,11 +57,14 @@ struct SearchView: View {
             //                    Text(rawValue: .StageScheduleTitle)
             //                })
             Section(content: {
-                Stepper(value: $options.goldenIkuraNum, step: 5, label: {
-                    Text(options.goldenIkuraNum, format: .count)
+                Stepper(value: $options.goldenIkuraNum, step: 10, label: {
+                    Text(options.goldenIkuraNum, format: .number)
+                })
+                Stepper(value: $options.dangerRate, step: 0.05, label: {
+                    Text(options.dangerRate, format: .percent)
                 })
             }, header: {
-                Text(rawValue: .CoopHistoryGoldenDeliverCount)
+                Text(rawValue: .CoopRecordCoop)
             })
             Section(content: {
                 Button(action: {}, label: {
@@ -79,4 +93,5 @@ struct SearchView: View {
     Realm.preview()
     return SearchView()
         .environment(\.realmConfiguration, .preview)
+        .environmentObject(SearchOption())
 }

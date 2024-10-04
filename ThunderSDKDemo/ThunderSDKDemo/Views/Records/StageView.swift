@@ -15,22 +15,10 @@ struct StageView: View {
 
     var body: some View {
         NavigationView(content: {
-            TabView(
-                selection: $selection,
-                content: {
-                    StageRecordView(allCases: CoopStage.regular)
-                        .padding(.horizontal)
-                        .navigationBarTitleDisplayMode(.inline)
-                        .tag(CoopRule.REGULAR)
-                    StageRecordView(allCases: CoopStage.bigRun)
-                        .padding(.horizontal)
-                        .navigationBarTitleDisplayMode(.inline)
-                        .tag(CoopRule.BIG_RUN)
-                }
-            )
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle(Text(rawValue: .RecordStageRecord))
-            .tabViewStyle(.page)
+            StageRecordView(allCases: CoopStage.allCases)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle(Text(rawValue: .RecordStageRecord))
+                .tabViewStyle(.page)
         })
     }
 
