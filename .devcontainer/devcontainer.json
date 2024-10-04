@@ -2,10 +2,10 @@
   "name": "Mudmouth",
   "dockerComposeFile": ["docker-compose.yaml"],
   "service": "app",
-  "workspaceFolder": "/home/bun/app",
+  "workspaceFolder": "/home/vscode/app",
   "shutdownAction": "stopCompose",
-  "remoteUser": "bun",
-  "mounts": ["source=${env:HOME}/home/bun/.ssh,target=/.ssh,type=bind,consistency=cached,readonly"],
+  "remoteUser": "vscode",
+  "mounts": ["source=${env:HOME}/home/vscode/.ssh,target=/.ssh,type=bind,consistency=cached,readonly"],
   "features": {
     "ghcr.io/devcontainers/features/git:1": {
       "version": "2.37.0"
