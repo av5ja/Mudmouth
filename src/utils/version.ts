@@ -328,7 +328,11 @@ export namespace Leanny {
         values: (category: Category) =>
           DummyValues(category)
             .concat(v.sorted)
-            .flatMap((data) => [`/// ${data.Label || ''}`, `/// - Returns: ${data.Id}`, `case ${data.__RowId}`])
+            .flatMap((data) => [
+              `/// ${data.Label || ''}`,
+              `/// - Returns: ${category === Category.WeaponInfoMain && data.Id >= 20000 && data.Id % 1000 !== 900 ? data.Id - 20000 : data.Id}`,
+              `case ${data.__RowId}`,
+            ])
             .concat(['/// Undefined', '/// - Returns: rawValue', 'case Undefined(RawValue)']),
         all_cases: (category: Category) =>
           [
@@ -343,7 +347,10 @@ export namespace Leanny {
           'switch self {',
           ...DummyValues(category)
             .concat(v.sorted)
-            .map((data) => `case .${data.__RowId}: return ${data.Id}`),
+            .map(
+              (data) =>
+                `case .${data.__RowId}: return ${category === Category.WeaponInfoMain && data.Id >= 20000 && data.Id % 1000 !== 900 ? data.Id - 20000 : data.Id}`,
+            ),
           'case .Undefined(let rawValue): return rawValue',
           '}',
           '}',
