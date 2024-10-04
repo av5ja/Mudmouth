@@ -284,7 +284,7 @@ export namespace NSO {
     )
     const locale: LocalizedString = locales.find((locale) => locale.id === LocaleType.JPja) as LocalizedString
     Bun.write(
-      'Sources/ThunderSDK/Enums/LocalizedStrings.swift',
+      'Sources/ThunderSDK/Enums/LocalizedString.swift',
       [
         '//',
         '//  LocalizedString.swift',
