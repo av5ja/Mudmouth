@@ -23,24 +23,30 @@ struct ContentView: View {
         TabView(
             selection: $selection,
             content: {
-                MyPageView()
-                    .tag(0)
-                    .tabItem {
-                        Image(systemName: "person.circle.fill")
-                        Text("My page")
-                    }
-                ResultsView()
-                    .tag(1)
-                    .tabItem {
-                        Image(systemName: "list.dash")
-                        Text("Results")
-                    }
-                SchedulesView()
-                    .tag(2)
-                    .tabItem {
-                        Image(systemName: "calendar")
-                        Text("Schedules")
-                    }
+                NavigationView(content: {
+                    MyPageView()
+                })
+                .tag(0)
+                .tabItem {
+                    Image(systemName: "person.circle.fill")
+                    Text("My page")
+                }
+                NavigationView(content: {
+                    ResultsView()
+                })
+                .tag(1)
+                .tabItem {
+                    Image(systemName: "list.dash")
+                    Text("Results")
+                }
+                NavigationView(content: {
+                    SchedulesView()
+                })
+                .tag(2)
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Schedules")
+                }
             }
         )
     }

@@ -1,7 +1,7 @@
 //
 //  ScheduleWave.swift
 //  ThunderApp
-//  
+//
 //  Created by devonly on 2024/07/13.
 //  Copyright © 2024 Magi. All rights reserved.
 //
@@ -15,6 +15,6 @@ struct ScheduleWave: View {
     }
 }
 
-//#Preview {
+// #Preview {
 //    ScheduleWave(schedule: .preview)
-//}
+// }

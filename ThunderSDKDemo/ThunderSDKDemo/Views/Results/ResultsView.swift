@@ -14,11 +14,14 @@ struct ResultsView: View {
     // MARK: Internal
 
     @ObservedResults(RealmCoopSchedule.self) var schedules
-
+    var player: RealmCoopPlayer?
+    
     var body: some View {
-        NavigationView(content: {
-            _body
-        })
+        _body
+    }
+    
+    var navigationTitle: String {
+        player?.name ?? LocalizedString.CoopHistoryHistory.description
     }
 
     // MARK: Private
@@ -29,11 +32,20 @@ struct ResultsView: View {
     private var _body: some View {
         List(content: {
             ForEach(schedules, content: { schedule in
-                if !schedule.results.isEmpty {
-                    ScheduleView(schedule: schedule)
-                    ForEach(schedule.results.sorted(byKeyPath: "playTime", ascending: false), content: { result in
-                        ResultView(result: result)
-                    })
+                if let nplnUserId = player?.nplnUserId {
+                    if !schedule.results.filter("ANY players.nplnUserId == %@", nplnUserId).isEmpty {
+                        ScheduleView(schedule: schedule)
+                        ForEach(schedule.results.filter("ANY players.nplnUserId == %@", nplnUserId).sorted(byKeyPath: "playTime", ascending: false), content: { result in
+                            ResultView(result: result)
+                        })
+                    }
+                } else {
+                    if !schedule.results.isEmpty {
+                        ScheduleView(schedule: schedule)
+                        ForEach(schedule.results.sorted(byKeyPath: "playTime", ascending: false), content: { result in
+                            ResultView(result: result)
+                        })
+                    }
                 }
             })
         })
@@ -50,7 +62,7 @@ struct ResultsView: View {
             }
         })
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle(Text(rawValue: .CoopHistoryHistory))
+        .navigationTitle(Text(navigationTitle))
     }
 }
 

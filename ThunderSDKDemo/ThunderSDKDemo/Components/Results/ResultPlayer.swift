@@ -19,8 +19,8 @@ struct ResultPlayer: View {
 
     var body: some View {
         ForEach(result.players, content: { player in
-            NavigationLinker(destination: {
-                EmptyView()
+            NavigationLink(destination: {
+                ResultsView(player: player)
             }, label: {
                 _body(player)
             })

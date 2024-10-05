@@ -11,9 +11,9 @@ import Thunder
 
 struct ScheduleDetailView: View {
     // MARK: Internal
-    
+
     let schedule: RealmCoopSchedule
-    
+
     var body: some View {
         ScrollView(content: {
             _body
@@ -21,9 +21,9 @@ struct ScheduleDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle(Text(rawValue: .StageScheduleTitle))
     }
-    
+
     // MARK: Private
-    
+
     private var _body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
             ScheduleHeader(schedule: schedule)
@@ -48,6 +48,7 @@ struct ScheduleDetailView: View {
 //        })
     }
 }
+
 //
 // #Preview {
 //    ScheduleDetailView(schedule: .preview)
