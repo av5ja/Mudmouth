@@ -1,4 +1,9 @@
+import { KeyValue } from '@/models/key_value.dto'
+import { Localize } from '@/models/locale.dto'
 import { pascalcaseKeys } from '@/utils/camelcase_keys'
+import { LocalizableStrings, LocalizedString, Template } from '@/utils/template'
+import { zipObject } from 'lodash'
+import { z } from 'zod'
 
 export namespace Locale {
   export class Type {
@@ -6,14 +11,21 @@ export namespace Locale {
     readonly hash: string
     readonly raw_id: RawId
     readonly x_id: XId
+    readonly game_version: string
+    readonly web_version: string
 
-    constructor(id: number, hash: string) {
+    constructor(id: number, hash: string, game_version: string, web_version: string) {
       this.id = id
+      this.game_version = game_version
+      this.web_version = web_version
       this.hash = hash
       this.raw_id = RawId[Id[id] as keyof typeof Id]
       this.x_id = XId[Id[id] as keyof typeof Id]
     }
 
+    /**
+     * SplatNet3の翻訳JSONデータへのURL
+     */
     get locale_url(): URL {
       switch (this.id) {
         case Id.USen:
@@ -26,12 +38,67 @@ export namespace Locale {
       }
     }
 
-    async get_locale(): Promise<object> {
-      console.log(this.locale_url.href, this.raw_id, this.x_id)
+    /**
+     * 内部的な翻訳JSONデータへのURL
+     */
+    get locale_json_url(): URL {
+      return new URL(`splat3/data/language/${this.raw_value}.json`, 'https://leanny.github.io/')
+    }
+
+    get raw_value(): string {
+      return Object.keys(Id).filter((key) => Id[key as keyof typeof Id] === this.id)[0]
+    }
+
+    /**
+     * LocalizedString.swift
+     * Localizable.strings
+     */
+    async write(): Promise<void> {
+      const entries: KeyValue[] = await this.get_entries()
+      if (this.id === Id.JPja) {
+        LocalizedString(this.game_version, this.web_version, entries).write()
+      }
+      LocalizableStrings(this.x_id, this.game_version, this.web_version, entries).write()
+    }
+
+    /**
+     * 翻訳データ
+     * @returns
+     */
+    private async get_entries(): Promise<KeyValue[]> {
+      return (await Promise.all([this.get_entries_from_github(), this.get_entries_from_splatnet3()])).flat().sort()
+    }
+
+    /**
+     * GitHubのリポジトリから翻訳データのエントリを取得
+     * @returns
+     */
+    async get_entries_from_github(): Promise<KeyValue[]> {
+      const response: Response = await fetch(this.locale_json_url)
+      if (!response.ok) {
+        throw new Error('Failed to fetch Locale from GitHub')
+      }
+      const text: string = (await response.text())
+        .replace(/\[group=0004.*?\]/g, '%@')
+        .replace(/\[.*?\]/g, '')
+        .replace(/\\n/g, '')
+      const entries = Object.entries(Localize.parse(JSON.parse(text))).map(([k, v]) =>
+        Object.fromEntries(Object.entries(v).map(([key, value]) => [`${k}${key}`, value])),
+      )
+      return z
+        .array(KeyValue)
+        .parse(entries.flatMap((entry) => Object.entries(entry).flatMap(([key, value]) => ({ key, value }))))
+    }
+
+    /**
+     * SplatNet3から翻訳データのエントリを取得
+     * @returns
+     */
+    async get_entries_from_splatnet3(): Promise<KeyValue[]> {
       const pattern: RegExp = /JSON.parse\('(.*)'\)\}\}/
       const response: Response = await fetch(this.locale_url)
       if (!response.ok) {
-        throw new Error('Failed to fetch Locale')
+        throw new Error('Failed to fetch Locale from SplatNet3')
       }
       const text: string = (await response.text())
         // biome-ignore lint/style/useTemplate: <explanation>
@@ -46,7 +113,17 @@ export namespace Locale {
       if (match === null) {
         throw new Error('RegExp failed')
       }
-      return pascalcaseKeys(JSON.parse(match[1]))
+      return z
+        .array(KeyValue)
+        .parse(Object.entries(pascalcaseKeys(JSON.parse(match[1]))).map(([key, value]) => ({ key, value })))
+    }
+
+    /**
+     * 翻訳データ取得
+     * @returns
+     */
+    async get_locale(): Promise<KeyValue[]> {
+      return (await Promise.all([this.get_entries_from_github(), this.get_entries_from_splatnet3()])).flat()
     }
 
     async generate(): Promise<void> {}

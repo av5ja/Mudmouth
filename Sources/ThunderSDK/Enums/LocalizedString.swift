@@ -2,7 +2,7 @@
 //  LocalizedString.swift
 //  ThunderSDK
 //
-//  Created by Thunder SDK Gen on 2024/10/01
+//  Created by Thunder SDK Gen on 2024/10/05
 //  Copyright @ 2024 Magi, Corporation. All rights reserved.
 //
 //
@@ -10,1515 +10,6715 @@
 import Foundation
 
 /// LocalizedString
-/// - Description: 6.0.0 (30a1464a)
-public enum LocalizedString: String, CustomStringConvertible, CaseIterable, Identifiable, Codable {
-    /// カタログ
-    case Catalog.app_name
-    /// 引き換えできます
-    case Catalog.available
-    /// ビッグラン開催中！ポイント<em>1.2倍</em>！
-    case Catalog.bigrun_bonus
-    /// カタログレベルを上げて<br />ミステリーボックスをゲット！
-    case Catalog.bonus_description
-    /// レベル10ごとにミステリーボックスをゲットできます
-    case Catalog.bonus_guide
-    /// ボーナス！
-    case Catalog.bonus_title
-    /// 二つ名
-    case Catalog.Byname
-    /// カードパック
-    case Catalog.CardPack
-    /// フレッシュカードパック
-    case Catalog.CardPackFresh
-    /// カードスリーブ
-    case Catalog.CardSleeve
-    /// コンプリート！
-    case Catalog.complete
-    /// { 0 } / { 1 }
-    case Catalog.current
-    /// Lv. { 0 }
-    case Catalog.current_extra_level
-    /// るいけい { 0 } p
-    case Catalog.current_point
-    /// 本日初勝利でもれなく<em>{ 0 }</em>ポイントゲット！
-    case Catalog.daily_bonus
-    /// ドリンクチケット
-    case Catalog.drink_ticket
-    /// エモート
-    case Catalog.Emote
-    /// もうすぐ <em>{ 0 }</em> が終了します。カタログポイント<em>1.5倍</em>サービス中！
-    case Catalog.end_of_season
-    /// フェス開催中！ポイント<em>1.2倍</em>！
-    case Catalog.fes_bonus
-    /// オキモノ
-    case Catalog.Figure
-    /// フードチケット
-    case Catalog.food_ticket
-    /// ギアパワーのかけら
-    case Catalog.GearSkillChip
-    /// ゲット！
-    case Catalog.got
-    /// <em>ランクを4まで上げてザッカ屋でカタログを受け取ろう！</em>
-    case Catalog.guide
-    /// x{ 0 }
-    case Catalog.item_amount
-    /// カタログレベル
-    case Catalog.level
-    /// { 0 } まで
-    case Catalog.limit
-    /// ミステリーボックス
-    case Catalog.mystery_box
-    /// プレート
-    case Catalog.NamePlateBg
-    /// つぎ
-    case Catalog.next_bonus
-    /// ページ { 0 }
-    case Catalog.page
-    /// { 0 } / { 1 } ページ
-    case Catalog.pager
-    /// { 0 } 開催中！
-    case Catalog.period
-    /// カタログポイント
-    case Catalog.point
-    /// ザッカ屋
-    case Catalog.signboard
-    /// ステッカー
-    case Catalog.Sticker
-    /// カタログ
-    case Catalog.title
-    /// イカしたカタログ 配布中！
-    case Catalog.welcome
-    /// バトルでカタログポイントを貯めて<br />アイテムをゲットしよう！
-    case Catalog.welcome_description
-    /// 旅の途中でテンションバクアゲ～！なグラフィティ見つけたから送るね～
-    case Challenge.about_graffiti
-    /// すべてのチャレンジを支援するために必要なポイントが貯まりました
-    case Challenge.all_challenges_completable
-    /// すべてのチャレンジの支援を達成しました
-    case Challenge.all_challenges_completed
-    /// ワタシたちクマサン商会は、この社会で暮らす全てのみなさんの生活をより豊かにするため、日々イクラ集めに取り組んでいます。<br />そんななか、ロブさんの旅を知り、いつでもアゲ続けていく精神を忘れないロブさんの姿に非常に感動を覚えました。<br />さらにロブさんが旅のなかでワタシたちに見せてくれる景色は、とても興味深く、好奇心をかき立てるものばかりでした。<br />ロブさんが旅をアゲ終えたという知らせに、ワタシたちも寂しさを感じていましたが、再び旅を始められるとのことで、<br />「次の旅にはクマサン商会からもぜひ何か協力させてください」と声をかけさせてもらい、今回のコラボレーションが実現しました。
-    case Challenge.announcement_of_grizzco_industries_story1
-    /// <strong>新しい旅では、みなさんがバイトで塗ったぶんの塗りポイントも、ロブさんの旅の支援にあてることが可能になります。代わりに、これまでに貯めた塗りポイントのうち、余った塗りポイントは新しい旅では使えないのでリセットさせていただきます。</strong><br />ロブさんの挑戦をバイトで支援していくことは、あなたの人生の新たなやりがいを見つけることにもつながるかもしれません。
-    case Challenge.announcement_of_grizzco_industries_story2
-    /// ワタシたちクマサン商会は、明るい未来の発展のため、ワタシたちができることを日々考え、行動し続けています。<br />クマサン商会は挑戦し続けるあなたを、全力で応援しサポートします。<br />感謝と喜びから始まる社会を目指す。それがワタシたちクマサン商会です。
-    case Challenge.announcement_of_grizzco_industries_story3
-    /// クマサン商会から旅を愛するみなさんへ
-    case Challenge.announcement_of_grizzco_industries_title
-    /// ロブイチ
-    case Challenge.app_name
-    /// ブラック
-    case Challenge.black
-    /// ブルー
-    case Challenge.blue
-    /// チャレンジャー
-    case Challenge.challenger
-    /// 支援するチャレンジを選ぶ
-    case Challenge.choose_challenge
-    /// 達成しました
-    case Challenge.clear
-    /// コンプリート！
-    case Challenge.complete
-    /// コンプリート特典
-    case Challenge.complete_reward
-    /// 支援に使える塗りポイント
-    case Challenge.current_point
-    /// ポイント MAX!
-    case Challenge.current_point_full
-    /// ロブから支援者のみなさまへ
-    case Challenge.dear_all_of_you
-    /// グラフィティのダウンロード
-    case Challenge.download_graffiti
-    /// アイコンのダウンロード
-    case Challenge.download_icon
-    /// 壁紙のダウンロード
-    case Challenge.download_wallpaper
-    /// グリーン
-    case Challenge.green
-    /// お礼のグラフィティをダウンロードできます
-    case Challenge.guide_graffiti
-    /// リワードの二つ名をロビー端末から受け取れます
-    case Challenge.guide_reward_by_name
-    /// リワードのアイコンをダウンロードできます
-    case Challenge.guide_reward_icon
-    /// リワードの画像をダウンロードできます
-    case Challenge.guide_reward_image
-    /// リワードのスリーブをロビー端末から受け取れます
-    case Challenge.guide_reward_sleeve
-    /// 塗りまくって貯めたポイントでロブの旅を応援しよう！<br />旅の思い出も手に入るかも？！
-    case Challenge.how_to_play
-    /// ジャーニー { 0 }
-    case Challenge.journey
-    /// 支援者求ム！
-    case Challenge.looking_for_supporters
-    /// オレンジ
-    case Challenge.orange
-    /// { 0 }p
-    case Challenge.point
-    /// 支援に必要な塗りポイント
-    case Challenge.point_for_support
-    /// （あと { 0 }p 不足しています）
-    case Challenge.point_not_enough
-    /// パープル
-    case Challenge.purple
-    /// レッド
-    case Challenge.red
-    /// コンプリートまで あと <span>{ 0 }</span>
-    case Challenge.remains_of_challenge
-    /// ロブ
-    case Challenge.rob
-    /// ロブのアゲアゲ旅
-    case Challenge.rob_journey
-    /// 色を選んでダウンロードしてください
-    case Challenge.select_color
-    /// サイズを選んでダウンロードしてください
-    case Challenge.select_size
-    /// ポイント送信中...
-    case Challenge.sending_point
-    /// みんなアガッてる～？ 孤高のアゲアゲ旅人ロブだよ！<br />このプロジェクトは、僕のこれまでの歩みを振り返る旅、<br />その旅のクラウドファンディングなんだ～！
-    case Challenge.story_1
-    /// 僕がこれまでに立ち寄ったアツアツでアゲアゲなアツアゲスポットを自転車で一周するよ！<br />そこで自分の「今」の立ち位置をジュワ～ッと見つめなおしてアゲなおそうと思うんだよね～。<br />そんな旅の中で得た「気づき」「発見」「Notice」を支援してくれるみんなにもシェアしたいと思ってるんだ～。<br />これってテンションフライハイっしょ？！
-    case Challenge.story_2
-    /// 旅するなかでバクアゲ～！と思った風景写真や思い出の品は支援してくれたみんなにも送るからね～。<br />『みんなも一緒に旅する仲間っしょ！』っていう、一体感とかグルーヴを生み出せたらもっとアガるよね～！<br />そんなこんなでこれからアゲアゲの旅をサクッと始めちゃうんでヨロシク～！
-    case Challenge.story_3
-    /// 支援する
-    case Challenge.support
-    /// 支援済み
-    case Challenge.supported
-    /// ※ 画像の加工や営利目的での利用、再配布はご遠慮ください。
-    case Challenge.term_of_use
-    /// ロブイチ
-    case Challenge.title
-    /// 無色
-    case Challenge.transparent
-    /// ターコイズ
-    case Challenge.turquoise
-    /// ホワイト
-    case Challenge.white
-    /// イエロー
-    case Challenge.yellow
-    /// { 0 }p 持っています
-    case Challenge.your_point
-    /// { 0 }%
-    case Common.%
-    /// キャンセル
-    case Common.cancel
-    /// ガチアサリ
-    case Common.clam_blitz
-    /// 閉じる
-    case Common.close
-    /// :
-    case Common.colon_rule
-    /// ビッグラン
-    case Common.coop_big_run
-    /// オカシラ：ランダム
-    case Common.coop_boss_random
-    /// ？
-    case Common.coop_boss_random_sign
-    /// バイトチームコンテスト
-    case Common.coop_team_contest
-    /// QRコードは、株式会社デンソーウェーブの登録商標です。
-    case Common.copyright_qr_code
-    /// 決定
-    case Common.decide
-    /// ダウンロード
-    case Common.download
-    /// おわる
-    case Common.end
-    /// はてな
-    case Common.gear_power_blank
-    /// ホーム
-    case Common.home
-    /// イカリング３
-    case Common.ikaring3
-    /// 戻る
-    case Common.nav_back
-    /// ロード中
-    case Common.now_loading
-    /// ひっぱって更新
-    case Common.pull_to_refresh
-    /// ガチホコバトル
-    case Common.rainmaker
-    /// シェア
-    case Common.share
-    /// ガチエリア
-    case Common.splat_zones
-    /// タイカイサポート
-    case Common.tournament_manager
-    /// ガチヤグラ
-    case Common.tower_control
-    /// トリカラアタック
-    case Common.tricolor
-    /// トリカラマッチ
-    case Common.tricolor_match
-    /// ナワバリバトル
-    case Common.turf_war
-    /// はてな
-    case Common.wpn_notfound
-    /// シフトごとのバイト回数には通信切断などで中断したバイトは含まれません
-    case CoopHistory.annotation01
-    /// 出現数
-    case CoopHistory.available
-    /// 出現したオカシラシャケ
-    case CoopHistory.available_boss
-    /// 平均クリアWAVE数
-    case CoopHistory.average_clear_waves
-    /// ビッグラン
-    case CoopHistory.bigrun
-    /// 銅
-    case CoopHistory.bigrun_bronze
-    /// 金
-    case CoopHistory.bigrun_gold
-    /// 銀
-    case CoopHistory.bigrun_silver
-    /// クリアボーナス
-    case CoopHistory.bonus
-    /// オカシラシャケ出現！
-    case CoopHistory.boss_available
-    /// Clear!!
-    case CoopHistory.clear
-    /// 今回のギア
-    case CoopHistory.current_reward
-    /// キケン度
-    case CoopHistory.danger_ratio
-    /// オカシラシャケ撃破！
-    case CoopHistory.defeat_boss
-    /// オカシラシャケを撃退した回数
-    case CoopHistory.defeat_boss_count
-    /// 倒した！
-    case CoopHistory.defeated
-    /// 倒したオオモノシャケ
-    case CoopHistory.defeated_enemies
-    /// ※カッコ内の数字は自分で倒した数です
-    case CoopHistory.defeated_enemies_guide
-    /// 集めたイクラ
-    case CoopHistory.deliver_count
-    /// オオモノシャケ
-    case CoopHistory.enemy
-    /// EX-WAVE
-    case CoopHistory.ex_wave
-    /// Failure
-    case CoopHistory.failure
-    /// GJ!
-    case CoopHistory.gj
-    /// バイトヒストリー一覧に戻る
-    case CoopHistory.go_to_stats
-    /// 集めた金イクラ
-    case CoopHistory.golden_deliver_count
-    /// ハイスコア
-    case CoopHistory.highest_score
-    /// バイトヒストリー
-    case CoopHistory.history
-    /// 獲得ポイント
-    case CoopHistory.job_point
-    /// 評価レート
-    case CoopHistory.job_ratio
-    /// クマサンポイントカード
-    case CoopHistory.kuma_point_card
-    /// 最新のバイトへ
-    case CoopHistory.latest
-    /// 現在の期間限定ポイント
-    case CoopHistory.limited_point
-    /// 今月のギア
-    case CoopHistory.monthly_reward
-    /// 次のバイト
-    case CoopHistory.next
-    /// NG
-    case CoopHistory.ng
-    /// バイトヒストリーがありません
-    case CoopHistory.no_data
-    /// バイトヒストリーを表示できません
-    case CoopHistory.not_available
-    /// 閲覧できるバイトヒストリーは、最新の50戦までです。
-    case CoopHistory.not_available_description
-    /// 倒せなかった...
-    case CoopHistory.not_defeated
-    /// { 0 }p
-    case CoopHistory.p
-    /// バイト回数
-    case CoopHistory.play_count
-    /// { 0 }バイト
-    case CoopHistory.play_count_by_schedule
-    /// 前のバイト
-    case CoopHistory.previous
-    /// プライベート
-    case CoopHistory.private
-    /// スタッフ募集！
-    case CoopHistory.recruit
-    /// 初心者でも安心！元気で明るい方大歓迎！<br />アットホームな職場でアルバイトをしてみませんか？
-    case CoopHistory.recruit_description
-    /// 簡単
-    case CoopHistory.recruit_tag1
-    /// イクラ集め
-    case CoopHistory.recruit_tag2
-    /// ～イカした制服でイクラ集め～
-    case CoopHistory.recruit_title
-    /// いつものバイト
-    case CoopHistory.regular
-    /// 現在のポイント
-    case CoopHistory.regular_point
-    /// 助けた回数
-    case CoopHistory.rescue_count
-    /// たすけてもらったかいすう
-    case CoopHistory.rescued_count
-    /// ウロコ
-    case CoopHistory.scale
-    /// ドウウロコ
-    case CoopHistory.scale_bronze
-    /// キンウロコ
-    case CoopHistory.scale_gold
-    /// ギンウロコ
-    case CoopHistory.scale_silver
-    /// バイトスコア
-    case CoopHistory.score
-    /// スケジュールを見る
-    case CoopHistory.see_schedule
-    /// オカシラゲージ
-    case CoopHistory.smell_meter
-    /// 支給ブキ
-    case CoopHistory.supply_weapon
-    /// バイトチームコンテスト
-    case CoopHistory.team_contest
-    /// サーモンラン
-    case CoopHistory.title
-    /// るいけいポイント
-    case CoopHistory.total_point
-    /// WAVE { 0 }
-    case CoopHistory.wave
-    /// 干潮
-    case CoopHistory.wave_level_0
-    /// 普通
-    case CoopHistory.wave_level_1
-    /// 満潮
-    case CoopHistory.wave_level_2
-    /// バイト
-    case CoopRecord.app_name
-    /// 参加回数： { 0 }
-    case CoopRecord.attended
-    /// ビッグラン
-    case CoopRecord.bigrun
-    /// 銅
-    case CoopRecord.bigrun_bronze
-    /// 金
-    case CoopRecord.bigrun_gold
-    /// 銀
-    case CoopRecord.bigrun_silver
-    /// バイトのきろく
-    case CoopRecord.coop
-    /// たおした数
-    case CoopRecord.defeated
-    /// 最高評価
-    case CoopRecord.highest_job_rate
-    /// ハイスコア
-    case CoopRecord.highest_score
-    /// もっと見る
-    case CoopRecord.more
-    /// きろくがありません
-    case CoopRecord.no_data
-    /// 上位 { 0 } %以上
-    case CoopRecord.rank
-    /// 順位
-    case CoopRecord.ranking
-    /// バイトチームコンテスト
-    case CoopRecord.team_contest
-    /// サーモンランのきろく
-    case CoopRecord.title
-    /// ホームに戻る
-    case Error.back_to_home
-    /// 非正規のアクセスが確認されたため、サービス利用を停止しています。
-    case Error.banned_user
-    /// 現在利用できません。しばらくお待ちください
-    case Error.currently_not_available
-    /// エラー
-    case Error.error
-    /// エラーが発生しました
-    case Error.error_occurred
-    /// 読みこみに失敗しました
-    case Error.error_reopen
-    /// ただいまサーバーのメンテナンス中です。時間をおいて再度アクセスしてください。
-    case Error.maintenance_description
-    /// しばらくお待ちください
-    case Error.maintenance_title
-    /// 読みこみに失敗しました。<br />通信環境のよいところで再度お試しください。
-    case Error.network_not_available
-    /// イカリング３を表示できません。しばらく時間をおいてから通信環境の良い場所で再度お試しください。<br />問題が解決しない場合は、ブラウザが最新版に更新されているか確認してください。<br />それでもこの画面が表示される場合は、ご利用の環境でイカリング３を利用できない可能性があります。
-    case Error.not_supported
-    /// 再読みこみ
-    case Error.reload
-    /// イベントマッチ
-    case EventMatchRanking.app_name
-    /// もっと見る
-    case EventMatchRanking.more
-    /// ペア
-    case EventMatchRanking.pair
-    /// ランキング
-    case EventMatchRanking.ranking
-    /// ルール確認
-    case EventMatchRanking.rules
-    /// ソロ
-    case EventMatchRanking.solo
-    /// チーム
-    case EventMatchRanking.team
-    /// イベントマッチ
-    case EventMatchRanking.title
-    /// トップ100
-    case EventMatchRanking.top100
-    /// { 0 }%
-    case FesRecord.%
-    /// フェス
-    case FesRecord.app_name
-    /// 攻撃
-    case FesRecord.attack
-    /// へいきん
-    case FesRecord.average
-    /// チャレンジ
-    case FesRecord.challenge
-    /// もうすぐ開催
-    case FesRecord.coming_soon
-    /// こうけん度 チャレンジ
-    case FesRecord.contribution_challenge
-    /// こうけん度 オープン
-    case FesRecord.contribution_regular
-    /// こうけん度 トリカラマッチ
-    case FesRecord.contribution_tricolor
-    /// 守備
-    case FesRecord.defense
-    /// { 0 }{ 1 }パワー
-    case FesRecord.fest_power
-    /// フェス100ケツ
-    case FesRecord.fest_ranking
-    /// ホラガイ獲得個数
-    case FesRecord.got_horagai
-    /// このアンケートはゲーム内で投票するまで何度でも変更できます。<br />みんなの予定を見て、バンカラ街の広場にある投票所から投票しましょう。
-    case FesRecord.guide_vote
-    /// 参加予定のフレンドはチームが変わることがあります
-    case FesRecord.guide_will_participates
-    /// 最高フェスパワー
-    case FesRecord.highest_fest_power
-    /// ホラガイ獲得率
-    case FesRecord.horagai
-    /// 未定のフレンド
-    case FesRecord.not_voted
-    /// 開催中！！
-    case FesRecord.on_going
-    /// これまでのフェス
-    case FesRecord.past_festivals
-    /// { 0 }p
-    case FesRecord.point
-    /// アンケート実施中
-    case FesRecord.pre_vote_button
-    /// フレンドの参加予定を見ることができます。<br />みんなでチームを組んで参加しよう！
-    case FesRecord.pre_vote_guide
-    /// みんなどこにする？<br />アンケート実施中
-    case FesRecord.pre_vote_title
-    /// { 0 }<small>位</small>
-    case FesRecord.rank
-    /// オープン
-    case FesRecord.regular
-    /// フレンドの参加チームを見る
-    case FesRecord.see_all_votes
-    /// フェス100ケツを見る
-    case FesRecord.see_fest_ranking
-    /// フェスのきろく
-    case FesRecord.title
-    /// るいけい
-    case FesRecord.total
-    /// 合計
-    case FesRecord.total_score
-    /// 未定
-    case FesRecord.undecided
-    /// 参加予定
-    case FesRecord.vote
-    /// 得票率
-    case FesRecord.vote_ratio
-    /// 回答済み
-    case FesRecord.voted
-    /// 投票済み
-    case FesRecord.voted_in_game
-    /// フレンドの投票状況
-    case FesRecord.voting_status
-    /// 結果を集計中です
-    case FesRecord.waiting_for_result
-    /// WIN!
-    case FesRecord.win
-    /// <span>{ 0 }</span>の勝利！
-    case FesRecord.win_team
-    /// あなたのきろく
-    case FesRecord.your_record
-    /// <em>ビッグラン</em>警報発令！シャケの接近に注意！
-    case Footer.bigrun_announcement
-    /// <em>ビッグラン</em>発生中！シャケから街を守れ！
-    case Footer.bigrun_now_opening
-    /// もうすぐ <em>{ 0 }</em> が終了します。カタログポイント<em>1.5倍</em>サービス中！
-    case Footer.end_of_season
-    /// イベントマッチ：<em>{ 0 }</em>開催中！
-    case Footer.event_match_now_opening
-    /// <em>{ 0 }</em> フェス開催！アンケートに回答してフレンドと一緒に参加しよう！
-    case Footer.fest_announcement
-    /// <em>{ 0 }</em> フェス開催中！広場で投票してフェスTをゲットしよう！
-    case Footer.fest_now_opening
-    /// フレンドリスト
-    case FriendList.app_name
-    /// バイト中
-    case FriendList.in_coop_game
-    /// ナワバトラー
-    case FriendList.in_mini_game
-    /// 試合中
-    case FriendList.in_vs_game
-    /// パスワードつき
-    case FriendList.is_locked
-    /// フレンドのプレイ状況がここに表示されます
-    case FriendList.no_friends
-    /// オフライン
-    case FriendList.offline
-    /// オンライン
-    case FriendList.online
-    /// 再読みこみ
-    case FriendList.reload
-    /// フレンドリスト
-    case FriendList.title
-    /// ボイスチャットかのう
-    case FriendList.voice_chat_enabled
-    /// ゲソタウン
-    case GesoTown.app_name
-    /// ゲソタウンに戻る
-    case GesoTown.back_to_gesotown
-    /// 持っているギア
-    case GesoTown.current_gear
-    /// ふだんとは違う<em>ギアパワー</em>がついた<br /><em>トクベツなギア</em>が手に入るショップ
-    case GesoTown.description
-    /// 本日のピックアップ
-    case GesoTown.feature
-    /// ピックアップ
-    case GesoTown.featured
-    /// <strong>{ 0 }</strong> につきやすいギアパワー
-    case GesoTown.frequent_gear_power
-    /// <em>{ 0 }</em> まで
-    case GesoTown.limit
-    /// おカネ
-    case GesoTown.money
-    /// 次のギア
-    case GesoTown.next
-    /// 次のピックアップ
-    case GesoTown.next_feature
-    /// 期限切れ
-    case GesoTown.not_available
-    /// 注文する
-    case GesoTown.order
-    /// ご注文はいますぐ！
-    case GesoTown.order_now
-    /// 注文済み
-    case GesoTown.ordered
-    /// 在庫確認中...
-    case GesoTown.pending
-    /// 前のギア
-    case GesoTown.previous
-    /// まもなく終了
-    case GesoTown.remain_almost_finished
-    /// あと{ 0 }時間
-    case GesoTown.remain_hour
-    /// あと{ 0 }分
-    case GesoTown.remain_minute
-    /// すでに注文済みのギアがあります
-    case GesoTown.remind
-    /// 注文済みのギアはキャンセルされます
-    case GesoTown.remind_caution
-    /// ご注文は、1回につき1コとなります
-    case GesoTown.rule1
-    /// 注文済みのギアは、広場のスパイキーから購入できます
-    case GesoTown.rule2
-    /// 購入前に新しく注文すると、注文済みのギアはキャンセルされます
-    case GesoTown.rule3
-    /// 購入後、新しい注文が可能になります
-    case GesoTown.rule4
-    /// ただいま販売中のギア
-    case GesoTown.stock
-    /// 商品は4時間ごとに入れ替わります
-    case GesoTown.stock_guide
-    /// ゲソタウン
-    case GesoTown.title
-    /// 受付できません
-    case GesoTown.unable_to_order
-    /// この商品は現在取り扱っておりません
-    case GesoTown.unable_to_order_message
-    /// １号
-    case HeroRecord.agent1
-    /// ２号
-    case HeroRecord.agent2
-    /// サイズを選んでダウンロードしてください
-    case HeroRecord.annotation
-    /// ヒーローモード
-    case HeroRecord.app_name
-    /// スナップ写真
-    case HeroRecord.area_memorial_photo
-    /// ボス
-    case HeroRecord.boss_stage
-    /// ヒーローモード クリア特典
-    case HeroRecord.clear_reward
-    /// オルタナ探索率100% 達成特典
-    case HeroRecord.nawabari_map_complete_reward
-    /// オルタナ探索率
-    case HeroRecord.nawabari_map_progress
-    /// クリアおめでとう！
-    case HeroRecord.nawabari_map_sub_cleared
-    /// 100%踏破おめでとう！
-    case HeroRecord.nawabari_map_sub_complete
-    /// オルタナを100%踏破すると…？
-    case HeroRecord.nawabari_map_sub_in_progress
-    /// 次へ
-    case HeroRecord.next
-    /// そうびなし
-    case HeroRecord.no_equipments
-    /// 前へ
-    case HeroRecord.prev
-    /// イイ目をしたワカモノ求む！！
-    case HeroRecord.recruitment
-    /// ヒーローモード をはじめて冒険をすすめよう
-    case HeroRecord.recruitment_sub
-    /// 探索率
-    case HeroRecord.search_ratio
-    /// スナップ写真を見る
-    case HeroRecord.see_photograph
-    /// サイト { 0 }
-    case HeroRecord.site
-    /// みらいユートピアランド
-    case HeroRecord.site1
-    /// あんしんライフファクトリー
-    case HeroRecord.site2
-    /// ながいきヤングニュータウン
-    case HeroRecord.site3
-    /// うめたてドリームランド
-    case HeroRecord.site4
-    /// あすなろグリーンヒルズ
-    case HeroRecord.site5
-    /// しあわせリサーチラボ
-    case HeroRecord.site6
-    /// ヒーローモードのきろく
-    case HeroRecord.title
-    /// 特製壁紙
-    case HeroRecord.wallpaper
-    /// すべてのバッジ（{ 0 }）
-    case History.all_badges
-    /// ヒストリー
-    case History.app_name
-    /// 参加回数： { 0 }
-    case History.attended
-    /// バッジ
-    case History.badge
-    /// バンカラマッチ オープン
-    case History.bankara_open
-    /// 銅
-    case History.bronze
-    /// 推定順位
-    case History.estimated_ranking
-    /// イベントマッチ
-    case History.event
-    /// もっともよく使ったブキ
-    case History.frequently_used_weapon
-    /// 金
-    case History.gold
-    /// 最高ウデマエ
-    case History.highest_udemae
-    /// 最高Xランキング・最高Xパワー
-    case History.highest_xranking
-    /// 最近 3ヶ月
-    case History.latest
-    /// 最近ゲットしたバッジ
-    case History.latest_badge
-    /// 月間
-    case History.monthly
-    /// ※ Xマッチのきろくはシーズン終了後、集計をしてから公開されます。集計が終わるまで数日かかる場合があります。
-    case History.past_xmatch_annotation
-    /// ランク
-    case History.rank
-    /// { 0 }<small>位</small>
-    case History.ranking
-    /// シーズン
-    case History.season
-    /// 表示を減らす
-    case History.show_less
-    /// もっと見る
-    case History.show_more
-    /// Xランキングを見る
-    case History.show_xranking
-    /// 銀
-    case History.silver
-    /// { 0 } からプレイ（{ 1 } 更新）
-    case History.since
-    /// サマリー
-    case History.summary
-    /// ヒストリー
-    case History.title
-    /// 今まで塗った面積
-    case History.total_turf_point
-    /// 総勝利数
-    case History.total_win
-    /// { 0 }p
-    case History.turf_point
-    /// ウデマエ
-    case History.udemae
-    /// ブキヒストリー
-    case History.weapon
-    /// ブキ使用率
-    case History.weapon_usage
-    /// Xマッチ
-    case History.xmatch
-    /// ※アプリをインストールしていない方は、このボタンを押しても開きません
-    case Landing.caution
-    /// Apple、Appleロゴ、App Storeは、Apple Inc.の商標です。Google Play および Google Play ロゴは Google LLC の商標です。
-    case Landing.copyright
-    /// App Storeからダウンロード
-    case Landing.dl_app_store
-    /// Google Playで手に入れよう
-    case Landing.dl_google_play
-    /// アプリのダウンロードはこちら
-    case Landing.download
-    /// Nintendo Switch Online
-    case Landing.nso
-    /// アプリを開く
-    case Landing.open_app
-    /// スプラトゥーン3
-    case Landing.splatoon3
-    /// スマートフォンアプリ『Nintendo Switch Online』を開きます
-    case Landing.title
-    /// メモリープレーヤー
-    case MemoryPlayer.app_name
-    /// コピーしました
-    case MemoryPlayer.copied
-    /// バトルメモリーのダウンロード
-    case MemoryPlayer.download
-    /// ダウンロード予約に失敗しました
-    case MemoryPlayer.failed_download
-    /// ダウンロードしたバトルメモリーは<br />スプラトゥーン3のロビー端末のメモリープレーヤーで再生することができます
-    case MemoryPlayer.guide
-    /// Loading...
-    case MemoryPlayer.loading
-    /// 最新の50件を表示しています<br />保存期間は30日です
-    case MemoryPlayer.notice
-    /// コードを入力
-    case MemoryPlayer.placeholder
-    /// ダウンロードコード
-    case MemoryPlayer.replay_code
-    /// データが見つかりません
-    case MemoryPlayer.replay_not_available
-    /// ダウンロード予約しました
-    case MemoryPlayer.reserved_download
-    /// 送信
-    case MemoryPlayer.send
-    /// メモリープレーヤー
-    case MemoryPlayer.title
-    /// アップロードしたバトルメモリー
-    case MemoryPlayer.uploaded
-    /// マイコーデをつくる
-    case MyOutfits.add
-    /// + このそうびをマイコーデに追加
-    case MyOutfits.add_current_equipments
-    /// すべて表示
-    case MyOutfits.all
-    /// マイコーデ
-    case MyOutfits.app_name
-    /// ブランド
-    case MyOutfits.brand
-    /// カメラオプション
-    case MyOutfits.camera_option
-    /// カメラオプションを隠す
-    case MyOutfits.close_camera_option
-    /// フク
-    case MyOutfits.cloth
-    /// 現在のそうび
-    case MyOutfits.current_equipments
-    /// 現在のそうびは最後に対戦を行った内容を表示しています
-    case MyOutfits.current_equipments_guide
-    /// 選択中のギア
-    case MyOutfits.current_gear
-    /// 選択中のブキ
-    case MyOutfits.current_weapon
-    /// 保存に失敗しました
-    case MyOutfits.error_save
-    /// ケイケン値 <em>{ 0 }</em>
-    case MyOutfits.exp
-    /// 絞り込む
-    case MyOutfits.filter
-    /// ギア
-    case MyOutfits.gear
-    /// ギアパワー
-    case MyOutfits.gear_power
-    /// 追加ギアパワー1個は、基本ギアパワー0.3個分の効果です
-    case MyOutfits.gear_power_annotation
-    /// マイコーデをつくってみよう
-    case MyOutfits.guide
-    /// ギアを選択するとギアパワーの内訳が表示されます
-    case MyOutfits.guide_gear_power_button
-    /// マイコーデは5つまで作成することができます
-    case MyOutfits.guide_limitation
-    /// ジャイロ操作感度
-    case MyOutfits.gyro
-    /// ジャイロ操作
-    case MyOutfits.gyro_control
-    /// 携帯モード
-    case MyOutfits.handheld_mode
-    /// マイコーデ
-    case MyOutfits.hashtag
-    /// アタマ
-    case MyOutfits.head
-    /// メインウェポン
-    case MyOutfits.main
-    /// 一致するギアがありません
-    case MyOutfits.no_gears
-    /// 一致するブキがありません
-    case MyOutfits.no_weapons
-    /// ノーマル
-    case MyOutfits.normal
-    /// マイコーデ { 0 }
-    case MyOutfits.number
-    /// OFF
-    case MyOutfits.off
-    /// ON
-    case MyOutfits.on
-    /// カメラオプションを表示する
-    case MyOutfits.open_camera_option
-    /// { 0 } 左右操作
-    case MyOutfits.r_control
-    /// { 0 } 操作感度
-    case MyOutfits.r_horizontal
-    /// ジャイロ操作OFFの時は無効になります
-    case MyOutfits.r_horizontal_unavailable
-    /// { 0 } 上下操作
-    case MyOutfits.r_vertical
-    /// ジャイロ操作ONの時は無効になります
-    case MyOutfits.r_vertical_unavailable
-    /// レアド { 0 }
-    case MyOutfits.rarity
-    /// リバース
-    case MyOutfits.reverse
-    /// 保存
-    case MyOutfits.save
-    /// フクを選ぶ
-    case MyOutfits.select_cloth
-    /// アタマを選ぶ
-    case MyOutfits.select_head
-    /// クツを選ぶ
-    case MyOutfits.select_shoes
-    /// 保存先の選択
-    case MyOutfits.select_slot
-    /// ブキを選ぶ
-    case MyOutfits.select_weapon
-    /// シェア
-    case MyOutfits.share
-    /// クツ
-    case MyOutfits.shoes
-    /// スペシャルウェポン
-    case MyOutfits.special
-    /// サブウェポン
-    case MyOutfits.sub
-    /// 決定
-    case MyOutfits.submit_gear
-    /// 決定
-    case MyOutfits.submit_weapon
-    /// マイコーデ
-    case MyOutfits.title
-    /// 今まで塗った面積 <em>{ 0 }p</em>
-    case MyOutfits.turf_point
-    /// TVモード/テーブルモード
-    case MyOutfits.tv_tabletop_mode
-    /// ブキ
-    case MyOutfits.weapon
-    /// 写真は20枚までアップロードできます<br />保存期間は3ヶ月です
-    case PhotoAlbum.annotation
-    /// アルバム
-    case PhotoAlbum.app_name
-    /// 選択
-    case PhotoAlbum.select
-    /// フォトアルバム
-    case PhotoAlbum.title
-    /// QRコードリーダー
-    case QRCodeReader.app_name
-    /// 日時: { 0 }
-    case QRCodeReader.checkin_date
-    /// 許可
-    case QRCodeReader.confirmation_allow
-    /// 許可しない
-    case QRCodeReader.confirmation_deny
-    /// このほうしゅうはすでに獲得済みです
-    case QRCodeReader.error_already_got_description
-    /// すでに獲得しています
-    case QRCodeReader.error_already_got_title
-    /// イカリング３で読み取ることのできる<br />QRコードではありません
-    case QRCodeReader.error_not_compatible_description
-    /// エラー
-    case QRCodeReader.error_not_compatible_title
-    /// まだご利用いただけません
-    case QRCodeReader.error_not_started_title
-    /// このQRコードはすでに無効です
-    case QRCodeReader.error_reward_expired_description
-    /// 有効期間中にお使いください
-    case QRCodeReader.error_reward_not_started_description
-    /// イカリング３のQRコード読み取り機能がご利用いただけます。<br />QRコードの読み取りをご利用いただくと、どのQRコードを読み取ったかという情報が任天堂に送信され、アプリ内でQRコードの読み取り履歴を確認できるようになります。これにより、任天堂がお客様の位置情報を知ることができる場合があります。<br />以下のお客様の選択は保存されず、QRコードの読み取りをご利用いただくたびにお客様の同意（GDPR【第】6条【第】1項(a))が求められます。
-    case QRCodeReader.eu_confirmation
-    /// 特定の場所にあるQRコードを読み取ると<br />特別なほうしゅうをゲットできます
-    case QRCodeReader.guide
-    /// 履歴
-    case QRCodeReader.history
-    /// ほうしゅうの受け取りは<br />スプラトゥーン3のロビー端末を使ってね
-    case QRCodeReader.how_to_get_reward
-    /// これまでの読み取り履歴が表示されます
-    case QRCodeReader.no_data
-    /// カメラでQRコードを読み取る
-    case QRCodeReader.read_qrcode_by_camera
-    /// 保存した画像から読み取る
-    case QRCodeReader.read_qrcode_by_file
-    /// QRコードリーダー
-    case QRCodeReader.title
-    /// 最後に遊んだ
-    case Record.latest_played
-    /// よく使う
-    case Record.latest_used
-    /// メイン
-    case Record.main
-    /// じゅくれん度アップまで
-    case Record.next_skill_level
-    /// じゅくれん度
-    case Record.skill_level
-    /// 並べ替え
-    case Record.sort
-    /// スペシャル
-    case Record.special
-    /// ステージのきろく
-    case Record.stage_record
-    /// ステージ
-    case Record.stage_record_app_name
-    /// サブ
-    case Record.sub
-    /// きろく
-    case Record.title
-    /// { 0 }p
-    case Record.total_turf_point
-    /// 塗りポイント
-    case Record.turf_point
-    /// 遊んでないステージ
-    case Record.unplayed_stages
-    /// 未所持のブキ
-    case Record.unused_weapons
-    /// チョーシ
-    case Record.vibes
-    /// ブキのきろく
-    case Record.weapon_record
-    /// ブキ
-    case Record.weapon_record_app_name
-    /// 勝利数
-    case Record.win_count
-    /// { 0 }%
-    case Record.win_ratio
-    /// 通常のプライベートマッチと異なり、招待URLを知っているプレイヤーは誰でも参加することができます。
-    case RoomCreator.annotation01
-    /// フレンドやチャンネルのメンバーは招待URLを知らなくてもフレンドリストや通知からこの部屋に合流することが可能です。
-    case RoomCreator.annotation02
-    /// また、この部屋ではボイスチャットを利用できません。
-    case RoomCreator.annotation03
-    /// 作った部屋に誰も入っていない状態が30分以上続くと、自動的に部屋が閉じられます。
-    case RoomCreator.annotation04
-    /// ヘヤタテ
-    case RoomCreator.app_name
-    /// 部屋に参加する
-    case RoomCreator.approve
-    /// ホームに戻る
-    case RoomCreator.back
-    /// やっぱりやめる
-    case RoomCreator.cancel
-    /// 部屋を解散する
-    case RoomCreator.close_room
-    /// イカリング３で作った部屋を解散し、招待URLが無効になります。
-    case RoomCreator.close_room_guide
-    /// 部屋を解散しますか？
-    case RoomCreator.confirm_close_room
-    /// あなたはすでにヘヤタテで部屋を作っています。あなたの部屋を解散し、この部屋に参加しますか？
-    case RoomCreator.confirm_remove_room
-    /// 参加しない
-    case RoomCreator.confirm_remove_room_cancel
-    /// 参加する
-    case RoomCreator.confirm_remove_room_ok
-    /// キャンセルしました
-    case RoomCreator.decline
-    /// もう一度招待URLにアクセスすると、部屋に参加することができます。
-    case RoomCreator.decline_guide
-    /// すでに部屋を作っています。「ヘヤタテ」で作ることのできる部屋は同時にひとつまでです。
-    case RoomCreator.error_already_exist
-    /// 部屋を作ることができませんでした。
-    case RoomCreator.error_make_room
-    /// 部屋のURLをシェアして、<br />プライベートマッチに招待することができます。
-    case RoomCreator.guide
-    /// 部屋に入る
-    case RoomCreator.how_to_activate
-    /// スプラトゥーン3のロビーメニューのフレンドリストに追加された「イカリング３で作った部屋」に入ってください。
-    case RoomCreator.how_to_activate_guide
-    /// フレンドリストから、この部屋に合流してください。
-    case RoomCreator.how_to_join
-    /// 解散する
-    case RoomCreator.invalidate_invitation
-    /// 部屋に招待されました
-    case RoomCreator.invitation
-    /// 部屋に参加するとスプラトゥーン3のフレンドリストに「イカリング３で作った部屋」が追加されます。
-    case RoomCreator.invitation_guide
-    /// 招待URL
-    case RoomCreator.invitation_url
-    /// 部屋ができました
-    case RoomCreator.invite_guest
-    /// 部屋をつくる
-    case RoomCreator.make_room
-    /// 部屋が見つかりません
-    case RoomCreator.not_found
-    /// URLが間違っているか、すでに部屋が閉じられている場合があります。
-    case RoomCreator.not_found_guide
-    /// パスワードを設定する
-    case RoomCreator.password
-    /// パスワードを設定しない
-    case RoomCreator.password_cancel
-    /// このパスワードはフレンドやチャンネルのメンバーが招待URLを使わずに部屋に合流する場合に必要です。<br />「イカリング３で作った部屋」から入る場合はパスワードは不要です。
-    case RoomCreator.password_guide
-    /// 4桁の数字を入力してください
-    case RoomCreator.password_help
-    /// 参加できる部屋
-    case RoomCreator.room
-    /// 招待したい人にURLをシェア！
-    case RoomCreator.share_invitation_url
-    /// Nintendo Switch Onlineアプリがインストールされたスマートフォンで、招待URLにアクセスしてもらいましょう。
-    case RoomCreator.share_invitation_url_guide
-    /// URLをシェア
-    case RoomCreator.share_url
-    /// 便利な部屋作成サービス
-    case RoomCreator.subtitle
-    /// ヘヤタテ
-    case RoomCreator.title
-    /// 利用データの送信について
-    case Settings.about_sending_usage_data
-    /// イカリング３をご利用の際には、『Nintendo Switch Online』アプリの「利用データの送信について」の設定が適用されます。この設定はいつでも変更することができます。
-    case Settings.about_sending_usage_data_description
-    /// 権利表記
-    case Settings.acknowledgements
-    /// 設定
-    case Settings.app_name
-    /// クレジット
-    case Settings.credits
-    /// エキスパンション・パス 購入サイトへ
-    case Settings.expansion_pass
-    /// 設定
-    case Settings.title
-    /// パレットにセットした枚数: { 0 }
-    case SideOrderRecord.accumulate_count
-    /// サイド・オーダー
-    case SideOrderRecord.app_name
-    /// ドローン
-    case SideOrderRecord.chip_category_auto
-    /// サポート
-    case SideOrderRecord.chip_category_continuity
-    /// パワー
-    case SideOrderRecord.chip_category_fire
-    /// ラッキー
-    case SideOrderRecord.chip_category_luck
-    /// ムーブ
-    case SideOrderRecord.chip_category_move
-    /// レンジ
-    case SideOrderRecord.chip_category_range
-    /// 集めた情報 { 0 }
-    case SideOrderRecord.chiplevel
-    /// クリア！
-    case SideOrderRecord.clear
-    /// クリア: { 0 }
-    case SideOrderRecord.clear_count
-    /// 集めたカラーチップ
-    case SideOrderRecord.collected_color_chips
-    /// カッコ内は今までに集めた枚数です
-    case SideOrderRecord.collected_color_chips_annotation
-    /// 集めたパレット
-    case SideOrderRecord.collected_palettes
-    /// すべてのパレットでクリアして 特別なほうしゅうをゲット！
-    case SideOrderRecord.collected_palettes_subtitle
-    /// カラーチップ
-    case SideOrderRecord.color_chip
-    /// チップ使用率
-    case SideOrderRecord.color_chip_usage
-    /// かんたん
-    case SideOrderRecord.difficulity_0
-    /// ふつう
-    case SideOrderRecord.difficulity_1
-    /// むずかしい
-    case SideOrderRecord.difficulity_2
-    /// ゲキムズ
-    case SideOrderRecord.difficulity_3
-    /// ほうしゅうをゲット！
-    case SideOrderRecord.download_reward
-    /// ずかん
-    case SideOrderRecord.enemy
-    /// スケルトーンずかん
-    case SideOrderRecord.enemy_collection
-    /// { 0 }に 当たってやられた
-    case SideOrderRecord.failure_collided
-    /// { 0 }に やられた
-    case SideOrderRecord.failure_defeated
-    /// フロアから 落ちた
-    case SideOrderRecord.failure_fall
-    /// <span>{ 0 }</span><small>F</small>
-    case SideOrderRecord.floor
-    /// クリア特典
-    case SideOrderRecord.get_clear_reward
-    /// コンプリート特典
-    case SideOrderRecord.get_reward
-    /// イイダのハッキング
-    case SideOrderRecord.hacking
-    /// ハイスコア！
-    case SideOrderRecord.high_score
-    /// 最近のきろく
-    case SideOrderRecord.latest_results
-    /// もっと見る
-    case SideOrderRecord.more
-    /// 次へ
-    case SideOrderRecord.next
-    /// パレット
-    case SideOrderRecord.palette
-    /// 各パレットの最速クリアタイムのきろくを表示します
-    case SideOrderRecord.palettes_annotation
-    /// { 0 }p
-    case SideOrderRecord.point
-    /// 所持ネリコイン
-    case SideOrderRecord.point_coin
-    /// カラフルカラーチップボーナス
-    case SideOrderRecord.point_colorful
-    /// クリア時ライフ
-    case SideOrderRecord.point_retry
-    /// 連続同色カラーチップボーナス
-    case SideOrderRecord.point_same_color
-    /// ポイント→シンジュ
-    case SideOrderRecord.point_to_pearl
-    /// 前へ
-    case SideOrderRecord.prev
-    /// きろく
-    case SideOrderRecord.result
-    /// あきらめた
-    case SideOrderRecord.retire
-    /// SCORE
-    case SideOrderRecord.score
-    /// サイズを選んでダウンロードしてください
-    case SideOrderRecord.select_size
-    /// 入手ポイントを表示する
-    case SideOrderRecord.show_all_points
-    /// フロアリセット: { 0 }
-    case SideOrderRecord.stage_reset
-    /// サイド・オーダーのきろく
-    case SideOrderRecord.title
-    /// 合計: { 0 }
-    case SideOrderRecord.total_hacking_level
-    /// トライ: { 0 }
-    case SideOrderRecord.try_count
-    /// 自販機で使ったネリコイン: { 0 }
-    case SideOrderRecord.used_coin
-    /// バンカラマッチ
-    case StageSchedule.bankara
-    /// オープン
-    case StageSchedule.bankara_open
-    /// チャレンジ
-    case StageSchedule.bankara_open_challenge
-    /// サーモンラン
-    case StageSchedule.coop
-    /// イベントマッチ
-    case StageSchedule.event
-    /// いま
-    case StageSchedule.event_current_schedule
-    /// そのつぎ
-    case StageSchedule.event_future
-    /// 開催中！
-    case StageSchedule.event_holding
-    /// 次回
-    case StageSchedule.event_next
-    /// つぎ
-    case StageSchedule.event_next_schedule
-    /// スケジュールが未定です
-    case StageSchedule.event_no_data
-    /// ?????
-    case StageSchedule.event_unknown_data
-    /// チャレンジ
-    case StageSchedule.fest_challenge
-    /// オープン
-    case StageSchedule.fest_open
-    /// フェスマッチ
-    case StageSchedule.festival
-    /// もうすぐ開催
-    case StageSchedule.festival_announced
-    /// { 0 } スタート！
-    case StageSchedule.festival_at
-    /// 攻撃
-    case StageSchedule.festival_attack
-    /// 守備
-    case StageSchedule.festival_defense
-    /// 開催中！
-    case StageSchedule.festival_holding
-    /// { 0 } - { 1 }
-    case StageSchedule.festival_period
-    /// そのつぎ
-    case StageSchedule.future
-    /// トリカラマッチ時間割
-    case StageSchedule.grand_fest_schedule
-    /// Webブラウザが開きます
-    case StageSchedule.guide_open_browser
-    /// つぎ
-    case StageSchedule.next
-    /// ビッグラン接近中！
-    case StageSchedule.notice_bigrun
-    /// バイトチームコンテスト開催予告！
-    case StageSchedule.notice_limited
-    /// フェスマッチ開催中！
-    case StageSchedule.now_closed
-    /// オープン！
-    case StageSchedule.open
-    /// ビッグラン発生中！
-    case StageSchedule.open_bigrun
-    /// バイトチームコンテスト開催中！
-    case StageSchedule.open_limited
-    /// プライベートマッチ
-    case StageSchedule.private
-    /// ビッグランがやってくる！！バイト大募集 { 0 }
-    case StageSchedule.recruit
-    /// バイトチームコンテスト！チームを組んで参加しよう！  { 0 }
-    case StageSchedule.recruit_team_contest
-    /// レギュラーマッチ
-    case StageSchedule.regular
-    /// ルールを見る
-    case StageSchedule.rules
-    /// 詳しいルールはこちら
-    case StageSchedule.see_all_rules
-    /// フェスのきろくを見る
-    case StageSchedule.see_festival_record
-    /// ランダム
-    case StageSchedule.supplied_weapon_random
-    /// 支給ブキ
-    case StageSchedule.supplied_weapons
-    /// スケジュール
-    case StageSchedule.title
-    /// ルールごとの勝率
-    case StageSchedule.win_rate_by_rules
-    /// Xマッチ
-    case StageSchedule.xmatch
-    /// もうすぐ開催！
-    case Tournament.coming_soon
-    /// タイカイサポート
-    case Tournament.title
-    /// 開催中
-    case Tournament.tournament_now
-    /// １００倍マッチ
-    case VSHistory.100x
-    /// １０倍マッチ
-    case VSHistory.10x
-    /// １０倍ホラガイ争奪戦
-    case VSHistory.10x_horagai_match
-    /// ３３３倍マッチ
-    case VSHistory.333x
-    /// ３３倍ホラガイ争奪戦
-    case VSHistory.33x_horagai_match
-    /// 計測中止
-    case VSHistory.aborted_measurement_event_power
-    /// 通信を切断したプレイヤーがいたため、負けとしてカウントされませんでした
-    case VSHistory.annotation_exemption
-    /// 無効試合になりました
-    case VSHistory.annotation_nocontest
-    /// 正常に試合が終了しませんでした
-    case VSHistory.annotation_penalty
-    /// 攻撃
-    case VSHistory.attack
-    /// { 0 }分あたりのアベレージ
-    case VSHistory.average
-    /// きん
-    case VSHistory.award_gold
-    /// ぎん
-    case VSHistory.award_silver
-    /// バンカラマッチ
-    case VSHistory.bankara
-    /// バンカラマッチ チャレンジ
-    case VSHistory.bankara_challenge
-    /// バンカラマッチ オープン
-    case VSHistory.bankara_open
-    /// バンカラパワー { 0 }
-    case VSHistory.bankara_power
-    /// こうけん度 { 0 }
-    case VSHistory.contribute
-    /// { 0 }カウント
-    case VSHistory.count
-    /// たおされたかいすう
-    case VSHistory.death_count
-    /// 守備
-    case VSHistory.defense
-    /// DRAW
-    case VSHistory.draw
-    /// そうびしていたギア
-    case VSHistory.equipped_gear
-    /// そうびしていたブキ
-    case VSHistory.equipped_weapon
-    /// イベントマッチ
-    case VSHistory.event
-    /// ペア
-    case VSHistory.event_pair
-    /// イベントパワー { 0 }
-    case VSHistory.event_power
-    /// ソロ
-    case VSHistory.event_solo
-    /// チーム
-    case VSHistory.event_team
-    /// { 0 }チーム
-    case VSHistory.fes_team
-    /// オマツリのあかし
-    case VSHistory.fes_win_proof
-    /// { 0 }{ 1 }パワー
-    case VSHistory.fest_power
-    /// フェスマッチ
-    case VSHistory.festival
-    /// オマツリガイ x{ 0 }
-    case VSHistory.festival_shell
-    /// バトルのきろくに戻る
-    case VSHistory.go_to_stats
-    /// ゲットした表彰
-    case VSHistory.got_awards
-    /// ぬりまといかくほ
-    case VSHistory.got_tricolor_treasure
-    /// ホラガイ
-    case VSHistory.horagai
-    /// Get!
-    case VSHistory.horagai_count
-    /// ホラガイ争奪戦
-    case VSHistory.horagai_match
-    /// 挑戦中
-    case VSHistory.in_challenge
-    /// たおしたかいすう
-    case VSHistory.kill_count
-    /// ノックアウト！
-    case VSHistory.knockout
-    /// 最近の50戦
-    case VSHistory.latest
-    /// 最新のバトル
-    case VSHistory.latest_battle
-    /// 最近
-    case VSHistory.latest_tab
-    /// LOSE...
-    case VSHistory.lose
-    /// Xパワー計測中
-    case VSHistory.measurement
-    /// 計測中
-    case VSHistory.measurement_event_power
-    /// 次のバトル
-    case VSHistory.next_battle
-    /// バトルのきろくがありません
-    case VSHistory.no_data
-    /// バトルのきろくを表示できません
-    case VSHistory.not_available
-    /// 閲覧できるバトルのきろくは、モードごとに最新の50戦までです。
-    case VSHistory.not_available_description
-    /// （おそろいボーナス x{ 0 }）
-    case VSHistory.outfit_bonus
-    /// 前のバトル
-    case VSHistory.previous_battle
-    /// プライベートマッチ
-    case VSHistory.private
-    /// 昇格戦
-    case VSHistory.promo
-    /// レギュラーマッチ
-    case VSHistory.regular
-    /// スペシャルウェポンはつどうかいすう
-    case VSHistory.sp_count
-    /// バトル
-    case VSHistory.title
-    /// トライかいすう
-    case VSHistory.try_count
-    /// { 0 }p
-    case VSHistory.turf_point
-    /// ウデマエポイント
-    case VSHistory.udemae_point
-    /// { 0 }p
-    case VSHistory.udemae_point_score
-    /// 挑戦中止
-    case VSHistory.udemae_reset
-    /// ウデマエアップ！
-    case VSHistory.udemae_up
-    /// WIN!
-    case VSHistory.win
-    /// { 0 }連勝
-    case VSHistory.wins
-    /// おうかん
-    case VSHistory.xcrown
-    /// Xマッチ
-    case VSHistory.xmatch
-    /// Xパワー { 0 }
-    case VSHistory.xpower
-    /// イカリング３はスプラトゥーン3と連動するサービスです。<br />ここで紹介したもの以外にもさまざまな機能があります。
-    case Welcome.about
-    /// バトルの戦績やスケジュールをチェックして<br />ライバルに差をつけろ！
-    case Welcome.feature_1
-    /// バトルの戦績やスケジュール
-    case Welcome.feature_1_alt
-    /// ファッションリーダーたちに朗報！<br />いつでもマイコーデを編集できるぞ！
-    case Welcome.feature_2
-    /// ひとり旅に出たロブを支援して<br />特別な報酬をゲットしよう！
-    case Welcome.feature_3
-    /// ここだけの特別仕様！<br />ゲソタウンで限定ギアをチェック！
-    case Welcome.feature_4
-    /// Features
-    case Welcome.features
-    /// https://store-jp.nintendo.com/list/software/70010000046394.html
-    case Welcome.link
-    /// 他にも便利な機能がたくさん！
-    case Welcome.other_features
-    /// 本気のヤツらのためのイカしたサービス
-    case Welcome.service
-    /// スプラトゥーン3
-    case Welcome.splatoon3
-    /// 購入サイトへ
-    case Welcome.store
-    /// ウィジェット
-    case Welcome.widgets
-    /// すべて表示
-    case XRanking.all
-    /// Xランキング
-    case XRanking.app_name
-    /// グループ・アロメ
-    case XRanking.atlantic
-    /// 推定{ 0 }位
-    case XRanking.estimated_rank
-    /// 計測中
-    case XRanking.measurement
-    /// 開催中！！
-    case XRanking.open
-    /// グループ・ヤコ
-    case XRanking.pacific
-    /// 過去のランキング
-    case XRanking.past_rankings
-    /// ※ 過去のランキングはシーズン終了後、集計をしてから公開されます。集計が終わるまで数日かかる場合があります。
-    case XRanking.past_rankings_annotation
-    /// { 0 } - { 1 }
-    case XRanking.period
-    /// { 0 }<small>位</small>
-    case XRanking.rank
-    /// { 0 }<small>位</small>
-    case XRanking.rank_sns
-    /// グループ
-    case XRanking.region
-    /// ランキングを見る
-    case XRanking.see_ranking
-    /// ブキトップを見る
-    case XRanking.see_weapon_top
-    /// ブキを選ぶ
-    case XRanking.select_weapon
-    /// Xランキング
-    case XRanking.title
-    /// トッププレイヤー
-    case XRanking.top_players
-    /// トップ 500
-    case XRanking.top500
-    /// ブキトップ プレイヤー
-    case XRanking.weapon_top
-    /// ブキトップ プレイヤー
-    case XRanking.weapon_top_singular
-    /// おうかん
-    case XRanking.xcrown
-    /// <small>Xパワー</small> { 0 }
-    case XRanking.xpower
+/// - Authors: 
+///   tkgstrator
+/// - Copyright: 2024 Nintendo Co., Ltd.
+/// - Version: 9.1.0
+/// - Version: 6.0.0-30a1464a
+public enum LocalizedString: String,CustomStringConvertible,CaseIterable,Identifiable,Codable {
+public var id: RawValue { rawValue }
+public var description: String { NSLocalizedString(rawValue, bundle: .module, comment: "") }
 
-    // MARK: Public
-
-    public var id: RawValue { rawValue }
-    public var description: String { NSLocalizedString(rawValue, bundle: .module, comment: "") }
+/// 最初の塔をクリアした
+case BadgeAchievementSdodrLv00
+/// 最初の塔をクリアした
+case BadgeAchievementSdodrLv01
+/// サイド・オーダーをクリアした
+case BadgeAchievementSdodrLv02
+/// 全てのパレットで秩序の塔をクリアした
+case BadgeAchievementSdodrLv03
+/// ユメエビの露店で全ての品を交換した
+case BadgeAchievementSdodrLv04
+/// ハッキング極少のハチのパレットで秩序の塔をクリアした
+case BadgeAchievementSdodrLv05
+/// カタログレベルが50になった
+case BadgeCatalogueLevelLv00
+/// カタログレベルが100になった
+case BadgeCatalogueLevelLv01
+/// バンカラマッチ(チャレンジ)で10回勝ちぬけした
+case BadgeChallengeWinStreakLv00
+/// バンカラマッチ(チャレンジ)で50回勝ちぬけした
+case BadgeChallengeWinStreakLv01
+/// バンカラマッチ(チャレンジ)で250回勝ちぬけした
+case BadgeChallengeWinStreakLv02
+/// ビッグランで銅以上のオキモノをもらった
+case BadgeCoopBigRunTrophyLv00
+/// ビッグランで銀以上のオキモノをもらった
+case BadgeCoopBigRunTrophyLv01
+/// ビッグランで金のオキモノをもらった
+case BadgeCoopBigRunTrophyLv02
+/// %@を10体倒した
+case BadgeCoopBossKillNumLv00
+/// %@を100体倒した
+case BadgeCoopBossKillNumLv01
+/// %@を1000体倒した
+case BadgeCoopBossKillNumLv02
+/// キケン度MAXをクリアした
+case BadgeCoopClearDangerRateMax
+/// バイトチームコンテストで上位50%に入った
+case BadgeCoopContestTrophyLv00
+/// バイトチームコンテストで上位20%に入った
+case BadgeCoopContestTrophyLv01
+/// バイトチームコンテストで上位5%に入った
+case BadgeCoopContestTrophyLv02
+/// %@で「でんせつ200」になった
+case BadgeCoopGradeNormalLv00
+/// %@で「でんせつ400」になった
+case BadgeCoopGradeNormalLv01
+/// %@で「でんせつ600」になった
+case BadgeCoopGradeNormalLv02
+/// %@で「でんせつ999」になった
+case BadgeCoopGradeNormalLv03
+/// オカシラ連合を倒した
+case BadgeCoopKillTripleBossLv00
+/// %@を100体倒した
+case BadgeCoopRareEnemyKillNumLv00
+/// %@を1000体倒した
+case BadgeCoopRareEnemyKillNumLv01
+/// %@を10000体倒した
+case BadgeCoopRareEnemyKillNumLv02
+/// イベントマッチで上位50%に入った
+case BadgeEventMatchLv00
+/// イベントマッチで上位20%に入った
+case BadgeEventMatchLv01
+/// イベントマッチで上位5%に入った
+case BadgeEventMatchLv02
+/// 10倍マッチを3回戦いぬいた
+case BadgeFest10XBattleJoinLv00
+/// 10倍マッチを3回戦いぬいた
+case BadgeFest10XBattleJoinLv01
+/// 10倍マッチを3回戦いぬいた
+case BadgeFest10XBattleJoinLv02
+/// 10倍マッチで10回勝利した
+case BadgeFest10XBattleWinLv00
+/// 10倍マッチで10回勝利した
+case BadgeFest10XBattleWinLv01
+/// 10倍マッチで10回勝利した
+case BadgeFest10XBattleWinLv02
+/// フェスランクが「えいえん」になった
+case BadgeFestRankMax
+/// %@のギアのレア度が合計30になった
+case BadgeGearTotalRarityLv00
+/// %@のギアのレア度が合計100になった
+case BadgeGearTotalRarityLv01
+/// タイカイサポートで主催した大会の参加者が合計16人になった
+case BadgeHammerHostTournamentLv00
+/// タイカイサポートで主催した大会の参加者が合計250人になった
+case BadgeHammerHostTournamentLv01
+/// タイカイサポートで主催した大会の参加者が合計1000人になった
+case BadgeHammerHostTournamentLv02
+/// くじ引きで大当たりを4回引いた
+case BadgeLimitedRewardLotteryLv00
+/// くじ引きで大当たりを8回引いた
+case BadgeLimitedRewardLotteryLv01
+/// くじ引きで大当たりを16回引いた
+case BadgeLimitedRewardLotteryLv02
+/// DJタコワサ将軍を倒した
+case BadgeMissionLv00
+/// ヒーローモードをクリアした
+case BadgeMissionLv01
+/// ヒーローそうびの強化ポイントを最大まで手に入れた
+case BadgeMissionLv02
+/// ヒーローそうびの強化ポイントを最大まで手に入れた
+case BadgeMissionLv03
+/// かくしヤカンをクリアした
+case BadgeMissionLv04
+/// ナワバトラーのカードを90種類コレクションした
+case BadgeNawaBattlerCardNumLv00
+/// ナワバトラーのカードを120種類コレクションした
+case BadgeNawaBattlerCardNumLv01
+/// ナワバトラーのカードを150種類コレクションした
+case BadgeNawaBattlerCardNumLv02
+/// ナワバトランクが30になった
+case BadgeNawaBattlerRankLv00
+/// ナワバトランクが40になった
+case BadgeNawaBattlerRankLv01
+/// ナワバトランクが50になった
+case BadgeNawaBattlerRankLv02
+/// ナワバトランクが100になった
+case BadgeNawaBattlerRankLv03
+/// ナワバトランクが200になった
+case BadgeNawaBattlerRankLv04
+/// ナワバトランクが300になった
+case BadgeNawaBattlerRankLv05
+/// ナワバトランクが400になった
+case BadgeNawaBattlerRankLv06
+/// ナワバトランクが500になった
+case BadgeNawaBattlerRankLv07
+/// ナワバトランクが600になった
+case BadgeNawaBattlerRankLv08
+/// ナワバトランクが700になった
+case BadgeNawaBattlerRankLv09
+/// ナワバトランクが800になった
+case BadgeNawaBattlerRankLv10
+/// ナワバトランクが900になった
+case BadgeNawaBattlerRankLv11
+/// ナワバトランクが999になった
+case BadgeNawaBattlerRankLv12
+/// ナワバトラー道場で全員の最高レベルに勝利した
+case BadgeNawaBattlerWinAllNpcLevel3
+/// 売店で10回注文した
+case BadgeOrderFoodLv00
+/// 売店で100回注文した
+case BadgeOrderFoodLv01
+/// 売店で1000回注文した
+case BadgeOrderFoodLv02
+/// ダウニーに10回ギアを注文した
+case BadgeOrderVendorFsodrLv00
+/// ダウニーに100回ギアを注文した
+case BadgeOrderVendorFsodrLv01
+/// スパイキーに10回ギアを注文した
+case BadgeOrderVendorLv00
+/// スパイキーに100回ギアを注文した
+case BadgeOrderVendorLv01
+/// ランクが30になった
+case BadgePlayerRankLv00
+/// ランクが50になった
+case BadgePlayerRankLv01
+/// ランクが100になった
+case BadgePlayerRankLv02
+/// ランクが200になった
+case BadgePlayerRankLv03
+/// ランクが300になった
+case BadgePlayerRankLv04
+/// ランクが400になった
+case BadgePlayerRankLv05
+/// ランクが500になった
+case BadgePlayerRankLv06
+/// ランクが600になった
+case BadgePlayerRankLv07
+/// ランクが700になった
+case BadgePlayerRankLv08
+/// ランクが800になった
+case BadgePlayerRankLv09
+/// ランクが900になった
+case BadgePlayerRankLv10
+/// ランクが999になった
+case BadgePlayerRankLv11
+/// くじ引きでおカネを300,000ゲソ使った
+case BadgeSpendLotteryLv00
+/// くじ引きでおカネを3,000,000ゲソ使った
+case BadgeSpendLotteryLv01
+/// くじ引きでおカネを30,000,000ゲソ使った
+case BadgeSpendLotteryLv02
+/// ハイカラシティのフク屋でおカネを100,000ゲソ使った
+case BadgeSpendShopClothesFsodrLv00
+/// ハイカラシティのフク屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopClothesFsodrLv01
+/// バンカラ街のフク屋でおカネを100,000ゲソ使った
+case BadgeSpendShopClothesLv00
+/// バンカラ街のフク屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopClothesLv01
+/// ハイカラスクエアのフク屋でおカネを100,000ゲソ使った
+case BadgeSpendShopClothesSdodrLv00
+/// ハイカラスクエアのフク屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopClothesSdodrLv01
+/// ザッカ屋でおカネを100,000ゲソ使った
+case BadgeSpendShopGoodsLv00
+/// ザッカ屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopGoodsLv01
+/// ハイカラシティのアタマ屋でおカネを100,000ゲソ使った
+case BadgeSpendShopHeadFsodrLv00
+/// ハイカラシティのアタマ屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopHeadFsodrLv01
+/// バンカラ街のアタマ屋でおカネを100,000ゲソ使った
+case BadgeSpendShopHeadLv00
+/// バンカラ街のアタマ屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopHeadLv01
+/// ハイカラスクエアのアタマ屋でおカネを100,000ゲソ使った
+case BadgeSpendShopHeadSdodrLv00
+/// ハイカラスクエアのアタマ屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopHeadSdodrLv01
+/// ハイカラシティのクツ屋でおカネを100,000ゲソ使った
+case BadgeSpendShopShoesFsodrLv00
+/// ハイカラシティのクツ屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopShoesFsodrLv01
+/// バンカラ街のクツ屋でおカネを100,000ゲソ使った
+case BadgeSpendShopShoesLv00
+/// バンカラ街のクツ屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopShoesLv01
+/// ハイカラスクエアのクツ屋でおカネを100,000ゲソ使った
+case BadgeSpendShopShoesSdodrLv00
+/// ハイカラスクエアのクツ屋でおカネを1,000,000ゲソ使った
+case BadgeSpendShopShoesSdodrLv01
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrAutoA
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrAutoB
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrAutoC
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrContinuityA
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrContinuityB
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrContinuityC
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrFireA
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrFireB
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrFireC
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrLuckA
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrLuckB
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrLuckC
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrMoveA
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrMoveB
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrMoveC
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrRangeA
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrRangeB
+/// 同じ色のカラーチップの情報を全て集めた
+case BadgeTipColorCompleteSdodrRangeC
+/// クマサンポイントを10000pかせいだ
+case BadgeTotalKumaPointLv00
+/// クマサンポイントを100,000pかせいだ
+case BadgeTotalKumaPointLv01
+/// クマサンポイントを9,999,999pかせいだ
+case BadgeTotalKumaPointLv02
+/// ウデマエがAになった
+case BadgeUdemaeLv00
+/// ウデマエがSになった
+case BadgeUdemaeLv01
+/// ウデマエがS+になった
+case BadgeUdemaeLv02
+/// %@のじゅくれん度が★4になった
+case BadgeWeaponLevelLv00
+/// %@のじゅくれん度が★5になった
+case BadgeWeaponLevelLv01
+/// Xパワー2000以上でXマッチを15回勝ちぬけした
+case BadgeWinCountHighXpowerAtlanticLv00
+/// Xパワー2000以上でXマッチを70回勝ちぬけした
+case BadgeWinCountHighXpowerAtlanticLv01
+/// Xパワー2000以上でXマッチを350回勝ちぬけした
+case BadgeWinCountHighXpowerAtlanticLv02
+/// Xパワー2000以上でXマッチを15回勝ちぬけした
+case BadgeWinCountHighXpowerPacificLv00
+/// Xパワー2000以上でXマッチを70回勝ちぬけした
+case BadgeWinCountHighXpowerPacificLv01
+/// Xパワー2000以上でXマッチを350回勝ちぬけした
+case BadgeWinCountHighXpowerPacificLv02
+/// ナワバリバトルで50回勝利した
+case BadgeWinCountPntLv00
+/// ナワバリバトルで250回勝利した
+case BadgeWinCountPntLv01
+/// ナワバリバトルで1200回勝利した
+case BadgeWinCountPntLv02
+/// トリカラバトルの攻撃チームで勝利した
+case BadgeWinCountTclAtkLv00
+/// トリカラバトルの攻撃チームで10回勝利した
+case BadgeWinCountTclAtkLv01
+/// トリカラバトルの守備チームで勝利した
+case BadgeWinCountTclDefLv00
+/// トリカラバトルの守備チームで10回勝利した
+case BadgeWinCountTclDefLv01
+/// ガチエリアで100回勝利した
+case BadgeWinCountVarLv00
+/// ガチエリアで1000回勝利した
+case BadgeWinCountVarLv01
+/// ガチアサリで100回勝利した
+case BadgeWinCountVclLv00
+/// ガチアサリで1000回勝利した
+case BadgeWinCountVclLv01
+/// ガチホコバトルで100回勝利した
+case BadgeWinCountVglLv00
+/// ガチホコバトルで1000回勝利した
+case BadgeWinCountVglLv01
+/// ガチヤグラで100回勝利した
+case BadgeWinCountVlfLv00
+/// ガチヤグラで1000回勝利した
+case BadgeWinCountVlfLv01
+/// %@を使ってバトルで30回勝利した
+case BadgeWinCountWeaponSpLv00
+/// %@を使ってバトルで180回勝利した
+case BadgeWinCountWeaponSpLv01
+/// %@を使ってバトルで1200回勝利した
+case BadgeWinCountWeaponSpLv02
+/// Xパワーが2000以上になった
+case BadgeXpowerAtlanticLv00
+/// Xパワーが2000以上になった
+case BadgeXpowerPacificLv00
+/// Xマッチのランキングで3000位以内に入った
+case BadgeXrankLv00
+/// Xマッチのランキングで500位以内に入った
+case BadgeXrankLv01
+/// Xマッチのランキングで10位以内に入った
+case BadgeXrankLv02
+/// Xマッチのランキングで50000位以内に入った
+case BadgeXrankRevisedAtlanticLv00
+/// Xマッチのランキングで30000位以内に入った
+case BadgeXrankRevisedAtlanticLv01
+/// Xマッチのランキングで10000位以内に入った
+case BadgeXrankRevisedAtlanticLv02
+/// Xマッチのランキングで5000位以内に入った
+case BadgeXrankRevisedAtlanticLv03
+/// Xマッチのランキングで3000位以内に入った
+case BadgeXrankRevisedAtlanticLv04
+/// Xマッチのランキングで1000位以内に入った
+case BadgeXrankRevisedAtlanticLv05
+/// Xマッチのランキングで500位以内に入った
+case BadgeXrankRevisedAtlanticLv06
+/// Xマッチのランキングで10位以内に入った
+case BadgeXrankRevisedAtlanticLv07
+/// Xマッチのランキングで50000位以内に入った
+case BadgeXrankRevisedPacificLv00
+/// Xマッチのランキングで30000位以内に入った
+case BadgeXrankRevisedPacificLv01
+/// Xマッチのランキングで10000位以内に入った
+case BadgeXrankRevisedPacificLv02
+/// Xマッチのランキングで5000位以内に入った
+case BadgeXrankRevisedPacificLv03
+/// Xマッチのランキングで3000位以内に入った
+case BadgeXrankRevisedPacificLv04
+/// Xマッチのランキングで1000位以内に入った
+case BadgeXrankRevisedPacificLv05
+/// Xマッチのランキングで500位以内に入った
+case BadgeXrankRevisedPacificLv06
+/// Xマッチのランキングで10位以内に入った
+case BadgeXrankRevisedPacificLv07
+/// トリプル
+case BynameAdjective1000
+/// ツイン
+case BynameAdjective1001
+/// ダブル
+case BynameAdjective1002
+/// シングル
+case BynameAdjective1003
+/// コミカルな
+case BynameAdjective1004
+/// ワケあり
+case BynameAdjective1005
+/// かつてない
+case BynameAdjective1006
+/// 天下の
+case BynameAdjective1007
+/// ホネのある
+case BynameAdjective1008
+/// エキスパート
+case BynameAdjective1009
+/// ジャイアント
+case BynameAdjective1010
+/// タフな
+case BynameAdjective1011
+/// しなやかな
+case BynameAdjective1012
+/// アクロバティック
+case BynameAdjective1013
+/// うっとりする
+case BynameAdjective1014
+/// ひよっこ
+case BynameAdjective1015
+/// ゆったりした
+case BynameAdjective1016
+/// おちゃめな
+case BynameAdjective1017
+/// ありのままの
+case BynameAdjective1018
+/// 裏表がない
+case BynameAdjective1019
+/// まっすぐな
+case BynameAdjective1020
+/// ピュアな
+case BynameAdjective1021
+/// おおらかな
+case BynameAdjective1022
+/// ストイックな
+case BynameAdjective1023
+/// あどけない
+case BynameAdjective1024
+/// いちずな
+case BynameAdjective1025
+/// あっさり
+case BynameAdjective1026
+/// こってり
+case BynameAdjective1027
+/// ひたむきな
+case BynameAdjective1028
+/// 突き進む
+case BynameAdjective1029
+/// ありったけの
+case BynameAdjective1031
+/// 血気盛んな
+case BynameAdjective1032
+/// 破竹の勢いの
+case BynameAdjective1033
+/// 質素な
+case BynameAdjective1034
+/// 思慮深い
+case BynameAdjective1035
+/// ファジーな
+case BynameAdjective1036
+/// なんとなく
+case BynameAdjective1037
+/// しゃんとした
+case BynameAdjective1038
+/// おだやかな
+case BynameAdjective1039
+/// はかない
+case BynameAdjective1040
+/// 明るい
+case BynameAdjective1041
+/// サバサバした
+case BynameAdjective1042
+/// パサパサした
+case BynameAdjective1043
+/// メタリック
+case BynameAdjective1044
+/// 月並みな
+case BynameAdjective1045
+/// さりげない
+case BynameAdjective1046
+/// しぶとい
+case BynameAdjective1047
+/// こだわりの
+case BynameAdjective1048
+/// わがままな
+case BynameAdjective1049
+/// したたかな
+case BynameAdjective1050
+/// 不屈の
+case BynameAdjective1051
+/// ブレない
+case BynameAdjective1052
+/// ゆるぎない
+case BynameAdjective1053
+/// 奮闘する
+case BynameAdjective1054
+/// 何が何でも
+case BynameAdjective1055
+/// くじけない
+case BynameAdjective1056
+/// 耐え忍ぶ
+case BynameAdjective1057
+/// 持続する
+case BynameAdjective1058
+/// やりぬく
+case BynameAdjective1059
+/// 貫き通す
+case BynameAdjective1060
+/// 燃える
+case BynameAdjective1061
+/// のしあがる
+case BynameAdjective1062
+/// きちんとした
+case BynameAdjective1064
+/// 見どころがある
+case BynameAdjective1065
+/// さっぱりした
+case BynameAdjective1066
+/// ふてぶてしい
+case BynameAdjective1067
+/// 飾り気のない
+case BynameAdjective1068
+/// けた外れの
+case BynameAdjective1069
+/// 歯ごたえのある
+case BynameAdjective1070
+/// 知的な
+case BynameAdjective1071
+/// 良心的な
+case BynameAdjective1072
+/// 分別のある
+case BynameAdjective1073
+/// 一流の
+case BynameAdjective1074
+/// 芯の強い
+case BynameAdjective1075
+/// 手強い
+case BynameAdjective1076
+/// 正直な
+case BynameAdjective1077
+/// 覇気がある
+case BynameAdjective1078
+/// しっかりした
+case BynameAdjective1079
+/// 強じんな
+case BynameAdjective1080
+/// 堅実な
+case BynameAdjective1081
+/// きちょうめんな
+case BynameAdjective1082
+/// みがけば光る
+case BynameAdjective1083
+/// 勇ましい
+case BynameAdjective1084
+/// 覚悟を決めた
+case BynameAdjective1085
+/// 熱狂的
+case BynameAdjective1086
+/// 知る人ぞ知る
+case BynameAdjective1087
+/// ウデ利きの
+case BynameAdjective1088
+/// イケイケな
+case BynameAdjective1089
+/// すばらしい
+case BynameAdjective1090
+/// ヘビー級の
+case BynameAdjective1091
+/// あがく
+case BynameAdjective1092
+/// とことん
+case BynameAdjective1093
+/// 便利な
+case BynameAdjective1094
+/// せわしない
+case BynameAdjective1095
+/// 余裕のある
+case BynameAdjective1096
+/// わかりやすい
+case BynameAdjective1097
+/// 残された
+case BynameAdjective1099
+/// ラスト
+case BynameAdjective1100
+/// マジカル
+case BynameAdjective1101
+/// ざわざわする
+case BynameAdjective1102
+/// 重い
+case BynameAdjective1103
+/// 軽い
+case BynameAdjective1104
+/// 自分だけの
+case BynameAdjective1105
+/// 改良型
+case BynameAdjective1106
+/// ブルーな
+case BynameAdjective1107
+/// めちゃくちゃ
+case BynameAdjective1108
+/// とても
+case BynameAdjective1109
+/// 本当の
+case BynameAdjective1110
+/// 大胆不敵な
+case BynameAdjective1111
+/// これからは
+case BynameAdjective1112
+/// 新卒の
+case BynameAdjective1113
+/// 定年の
+case BynameAdjective1114
+/// ハナから
+case BynameAdjective1116
+/// 天才の
+case BynameAdjective1117
+/// 祈る
+case BynameAdjective1118
+/// ときどき
+case BynameAdjective1119
+/// たまには
+case BynameAdjective1120
+/// やりすぎの
+case BynameAdjective1121
+/// 昼休みの
+case BynameAdjective1122
+/// 名物
+case BynameAdjective1123
+/// 不死鳥の
+case BynameAdjective1124
+/// サボりがちな
+case BynameAdjective1126
+/// 感謝の
+case BynameAdjective1128
+/// 絶対的
+case BynameAdjective1129
+/// あからさまな
+case BynameAdjective1130
+/// 全盛期の
+case BynameAdjective1131
+/// 飛び回る
+case BynameAdjective1132
+/// 仮初めの
+case BynameAdjective1133
+/// 目立つ
+case BynameAdjective1135
+/// 魅了する
+case BynameAdjective1136
+/// ブロンズ
+case BynameAdjective1137
+/// ノーマル
+case BynameAdjective1138
+/// ちょい足し
+case BynameAdjective1139
+/// 甘えん坊な
+case BynameAdjective1140
+/// バーチャル
+case BynameAdjective1141
+/// フェスの
+case BynameAdjective1142
+/// フェスマッチの
+case BynameAdjective1143
+/// ゴツい
+case BynameAdjective1145
+/// グランドフェスティバルの
+case BynameAdjective1146
+/// モノクロの
+case BynameAdjective2002
+/// 長そでの
+case BynameAdjective2003
+/// コラボ好きの
+case BynameAdjective2004
+/// ストリート系
+case BynameAdjective2005
+/// さわやかな
+case BynameAdjective2006
+/// たぎる
+case BynameAdjective2007
+/// ポジティブな
+case BynameAdjective2008
+/// 黄昏の
+case BynameAdjective2009
+/// 規則正しい
+case BynameAdjective2010
+/// にぎやかな
+case BynameAdjective2011
+/// みずみずしい
+case BynameAdjective2012
+/// 追い風に乗る
+case BynameAdjective2013
+/// 絶好調の
+case BynameAdjective2014
+/// Thank You For 
+case BynameAdjective2015
+/// 大大吉の
+case BynameAdjective2500
+/// 激レアの
+case BynameAdjective2501
+/// 一万人に一人の
+case BynameAdjective2502
+/// 引きが強い
+case BynameAdjective2503
+/// 奇跡の
+case BynameAdjective2504
+/// 恵まれた
+case BynameAdjective2505
+/// ツイてる
+case BynameAdjective2506
+/// くじ引きの
+case BynameAdjective2507
+/// バンカラな
+case BynameAdjective3000
+/// インド洋の
+case BynameAdjective3001
+/// 北大西洋の
+case BynameAdjective3002
+/// 北太平洋の
+case BynameAdjective3003
+/// 南極海の
+case BynameAdjective3004
+/// 北極海の
+case BynameAdjective3005
+/// 南大西洋の
+case BynameAdjective3006
+/// 南太平洋の
+case BynameAdjective3007
+/// イカッチャの
+case BynameAdjective3008
+/// クマサン商会の
+case BynameAdjective3009
+/// クレーターの
+case BynameAdjective3010
+/// 広場の
+case BynameAdjective3011
+/// ロビーの
+case BynameAdjective3012
+/// 三代目
+case BynameAdjective3013
+/// 混沌の
+case BynameAdjective3014
+/// 真夏の
+case BynameAdjective3015
+/// オルタナの
+case BynameAdjective3100
+/// 追憶の
+case BynameAdjective3110
+/// ネリバースの
+case BynameAdjective3111
+/// サイド・オーダーの
+case BynameAdjective3112
+/// 群れる
+case BynameAdjective3113
+/// 行進する
+case BynameAdjective3114
+/// 制圧する
+case BynameAdjective3115
+/// スケルトーンの
+case BynameAdjective3116
+/// 撒き散らす
+case BynameAdjective3117
+/// 疾走する
+case BynameAdjective3118
+/// 反射する
+case BynameAdjective3119
+/// 伸縮する
+case BynameAdjective3120
+/// 噴出する
+case BynameAdjective3121
+/// 産み出す
+case BynameAdjective3122
+/// 飛来する
+case BynameAdjective3123
+/// そびえ立つ
+case BynameAdjective3124
+/// 積層し円転する
+case BynameAdjective3125
+/// 閉じこもり反発する
+case BynameAdjective3126
+/// 増殖し共鳴する
+case BynameAdjective3127
+/// エンジョイ
+case BynameAdjective3200
+/// 最強の
+case BynameAdjective3201
+/// アゲアゲの
+case BynameAdjective3300
+/// 立ちこぎの
+case BynameAdjective3301
+/// サクサクの
+case BynameAdjective3302
+/// ロブイチの
+case BynameAdjective3303
+/// プリプリの
+case BynameAdjective3304
+/// 感動の
+case BynameAdjective3305
+/// ユノハナ大渓谷の
+case BynameAdjective0000
+/// ゴンズイ地区の
+case BynameAdjective0001
+/// ヤガラ市場の
+case BynameAdjective0002
+/// マテガイ放水路の
+case BynameAdjective0003
+/// ナンプラー遺跡の
+case BynameAdjective0004
+/// ナメロウ金属の
+case BynameAdjective0005
+/// クサヤ温泉の
+case BynameAdjective0006
+/// ヒラメが丘団地の
+case BynameAdjective0007
+/// マサバ海峡大橋の
+case BynameAdjective0008
+/// キンメダイ美術館の
+case BynameAdjective0009
+/// マヒマヒリゾート＆スパの
+case BynameAdjective0010
+/// 海女美術大学の
+case BynameAdjective0011
+/// チョウザメ造船の
+case BynameAdjective0012
+/// ザトウマーケットの
+case BynameAdjective0013
+/// スメーシーワールドの
+case BynameAdjective0014
+/// タラポートショッピングパークの
+case BynameAdjective0015
+/// コンブトラックの
+case BynameAdjective0016
+/// マンタマリア号の
+case BynameAdjective0017
+/// オヒョウ海運の
+case BynameAdjective0018
+/// タカアシ経済特区の
+case BynameAdjective0019
+/// バイガイ亭の
+case BynameAdjective0020
+/// ネギトロ炭鉱の
+case BynameAdjective0021
+/// カジキ空港の
+case BynameAdjective0022
+/// リュウグウターミナルの
+case BynameAdjective0023
+/// シェケナダムの
+case BynameAdjective0040
+/// 難破船ドン・ブラコの
+case BynameAdjective0041
+/// トキシラズいぶし工房の
+case BynameAdjective0043
+/// アラマキ砦の
+case BynameAdjective0045
+/// ムニ・エール海洋発電所の
+case BynameAdjective0046
+/// すじこジャンクション跡の
+case BynameAdjective0047
+/// どんぴこ闘技場の
+case BynameAdjective0048
+/// レギュラーマッチの
+case BynameAdjective0060
+/// バンカラマッチの
+case BynameAdjective0061
+/// プライベートマッチの
+case BynameAdjective0062
+/// ヒーローモードの
+case BynameAdjective0063
+/// サーモンランの
+case BynameAdjective0064
+/// Xマッチの
+case BynameAdjective0065
+/// イベントマッチの
+case BynameAdjective0066
+/// トリカラマッチの
+case BynameAdjective0067
+/// ビッグランの
+case BynameAdjective0068
+/// バイトチームコンテストの
+case BynameAdjective0069
+/// インク切れの
+case BynameAdjective0100
+/// 週末の
+case BynameAdjective0101
+/// 目立ちたがりな
+case BynameAdjective0102
+/// 左利きの
+case BynameAdjective0103
+/// バンカラ街の
+case BynameAdjective0104
+/// 買い物好きの
+case BynameAdjective0105
+/// ふつうの
+case BynameAdjective0106
+/// まことの
+case BynameAdjective0107
+/// スーパー
+case BynameAdjective0108
+/// カリスマ
+case BynameAdjective0109
+/// えいえんの
+case BynameAdjective0110
+/// ブキ屋の
+case BynameAdjective0111
+/// アタマ屋の
+case BynameAdjective0112
+/// フク屋の
+case BynameAdjective0113
+/// クツ屋の
+case BynameAdjective0114
+/// ザッカ屋の
+case BynameAdjective0115
+/// ナワバトラー道場の
+case BynameAdjective0116
+/// 研修中の
+case BynameAdjective0117
+/// かけだしの
+case BynameAdjective0118
+/// はんにんまえの
+case BynameAdjective0119
+/// いちにんまえの
+case BynameAdjective0120
+/// じゅくれんの
+case BynameAdjective0121
+/// たつじんの
+case BynameAdjective0122
+/// でんせつの
+case BynameAdjective0123
+/// ラッシュ中の
+case BynameAdjective0124
+/// 満潮の
+case BynameAdjective0125
+/// 大量発生中の
+case BynameAdjective0126
+/// 霧の中の
+case BynameAdjective0127
+/// 干潮の
+case BynameAdjective0128
+/// 秋の
+case BynameAdjective0129
+/// 春の
+case BynameAdjective0130
+/// 冬の
+case BynameAdjective0131
+/// 夏の
+case BynameAdjective0132
+/// ハッピーな
+case BynameAdjective0133
+/// モードな
+case BynameAdjective0134
+/// エッジの効いた
+case BynameAdjective0135
+/// おしゃれな
+case BynameAdjective0136
+/// クールな
+case BynameAdjective0137
+/// シンプルな
+case BynameAdjective0138
+/// トラディショナルな
+case BynameAdjective0139
+/// トレンドの
+case BynameAdjective0140
+/// ナチュラルな
+case BynameAdjective0141
+/// ホットな
+case BynameAdjective0142
+/// 今を楽しむ
+case BynameAdjective0143
+/// 秋色の
+case BynameAdjective0144
+/// 春色の
+case BynameAdjective0145
+/// きれいめの
+case BynameAdjective0146
+/// ザ・
+case BynameAdjective0147
+/// 金欠の
+case BynameAdjective0148
+/// リッチな
+case BynameAdjective0149
+/// 司令にあこがれる
+case BynameAdjective0150
+/// ヒーローになりたい
+case BynameAdjective0151
+/// 百発百中の
+case BynameAdjective0152
+/// つっぱしる
+case BynameAdjective0154
+/// 冷静沈着な
+case BynameAdjective0155
+/// ミュート中の
+case BynameAdjective0156
+/// 両利きの
+case BynameAdjective0157
+/// 立ってプレイする
+case BynameAdjective0158
+/// 配信中の
+case BynameAdjective0159
+/// 正座中の
+case BynameAdjective0160
+/// 右利きの
+case BynameAdjective0161
+/// 無口な
+case BynameAdjective0162
+/// プロ級
+case BynameAdjective0163
+/// アマチュア
+case BynameAdjective0164
+/// ハイカラスクエアの
+case BynameAdjective0165
+/// ハイカラシティの
+case BynameAdjective0166
+/// ハイカラな
+case BynameAdjective0167
+/// 野生の
+case BynameAdjective0168
+/// 都会の
+case BynameAdjective0169
+/// いなかの
+case BynameAdjective0170
+/// どん欲な
+case BynameAdjective0171
+/// 流行りの
+case BynameAdjective0172
+/// 裏通りの
+case BynameAdjective0173
+/// 夜型の
+case BynameAdjective0174
+/// 明日が楽しみな
+case BynameAdjective0175
+/// 夢見がちな
+case BynameAdjective0177
+/// 文化系
+case BynameAdjective0178
+/// 腹ペコの
+case BynameAdjective0179
+/// 負けずぎらいな
+case BynameAdjective0180
+/// 付け焼き刃の
+case BynameAdjective0181
+/// テキトーな
+case BynameAdjective0182
+/// 朝型の
+case BynameAdjective0183
+/// だいたんな
+case BynameAdjective0184
+/// 大食いの
+case BynameAdjective0185
+/// 体育会系
+case BynameAdjective0186
+/// 早朝の
+case BynameAdjective0187
+/// 早撃ち
+case BynameAdjective0188
+/// 早起きな
+case BynameAdjective0189
+/// 深海の
+case BynameAdjective0191
+/// 寝起きの
+case BynameAdjective0193
+/// 渚の
+case BynameAdjective0194
+/// 自由自在な
+case BynameAdjective0195
+/// 時代おくれの
+case BynameAdjective0196
+/// 三国一の
+case BynameAdjective0197
+/// 国民的
+case BynameAdjective0200
+/// 荒波の
+case BynameAdjective0201
+/// こどくな
+case BynameAdjective0202
+/// 限界を超えた
+case BynameAdjective0203
+/// 強気な
+case BynameAdjective0204
+/// 泣く子もだまる
+case BynameAdjective0205
+/// 休日の
+case BynameAdjective0206
+/// 久しぶりの
+case BynameAdjective0207
+/// 帰ってきた
+case BynameAdjective0208
+/// がんばる
+case BynameAdjective0209
+/// 甘党の
+case BynameAdjective0210
+/// 海の
+case BynameAdjective0211
+/// 自己流の
+case BynameAdjective0212
+/// 夏休みの
+case BynameAdjective0213
+/// 加工された
+case BynameAdjective0214
+/// よごれた
+case BynameAdjective0215
+/// 塩味の
+case BynameAdjective0216
+/// 運まかせの
+case BynameAdjective0217
+/// 井の中の
+case BynameAdjective0219
+/// ワイプアウトの
+case BynameAdjective0220
+/// ロックな
+case BynameAdjective0221
+/// レトロな
+case BynameAdjective0222
+/// ルーズな
+case BynameAdjective0224
+/// よくばりな
+case BynameAdjective0225
+/// ヤンチャな
+case BynameAdjective0226
+/// やわらかい
+case BynameAdjective0227
+/// 無敵の
+case BynameAdjective0228
+/// ムキムキの
+case BynameAdjective0229
+/// ポップな
+case BynameAdjective0230
+/// フレッシュな
+case BynameAdjective0231
+/// フルスロットル
+case BynameAdjective0232
+/// ピチピチの
+case BynameAdjective0233
+/// 犯人は
+case BynameAdjective0234
+/// はたらく
+case BynameAdjective0235
+/// はじめての
+case BynameAdjective0236
+/// のびしろのある
+case BynameAdjective0237
+/// 塗りたくる
+case BynameAdjective0238
+/// 波乗り
+case BynameAdjective0239
+/// トレンディーな
+case BynameAdjective0240
+/// とれたての
+case BynameAdjective0241
+/// データで戦う
+case BynameAdjective0242
+/// 秩序の
+case BynameAdjective0243
+/// たったひとりの
+case BynameAdjective0244
+/// センチメンタルな
+case BynameAdjective0245
+/// スライドする
+case BynameAdjective0246
+/// スミにおけない
+case BynameAdjective0247
+/// 瞬発力のある
+case BynameAdjective0248
+/// シャイな
+case BynameAdjective0249
+/// シオカラ
+case BynameAdjective0250
+/// サバよんだ
+case BynameAdjective0251
+/// ケバ立つ
+case BynameAdjective0253
+/// ケバい
+case BynameAdjective0254
+/// グレート
+case BynameAdjective0255
+/// 今日が誕生日の
+case BynameAdjective0256
+/// 気まぐれな
+case BynameAdjective0257
+/// キケンな
+case BynameAdjective0258
+/// ガチ
+case BynameAdjective0259
+/// おいしい
+case BynameAdjective0260
+/// ウルトラ
+case BynameAdjective0261
+/// ウキワの
+case BynameAdjective0262
+/// インドアな
+case BynameAdjective0263
+/// インクまみれの
+case BynameAdjective0264
+/// インクしたたる
+case BynameAdjective0265
+/// イカす
+case BynameAdjective0266
+/// イカした
+case BynameAdjective0267
+/// ありふれた
+case BynameAdjective0268
+/// アッサリ系の
+case BynameAdjective0269
+/// 8本足の
+case BynameAdjective0270
+/// 10本足の
+case BynameAdjective0271
+/// 真冬の
+case BynameAdjective0272
+/// 想像以上に
+case BynameAdjective0273
+/// 生涯
+case BynameAdjective0274
+/// 世界三大
+case BynameAdjective0275
+/// 実は
+case BynameAdjective0276
+/// 成長中の
+case BynameAdjective0277
+/// 修行の身の
+case BynameAdjective0278
+/// 圧倒的
+case BynameAdjective0279
+/// 逃げ足の速い
+case BynameAdjective0281
+/// 直撃する
+case BynameAdjective0282
+/// はねる
+case BynameAdjective0283
+/// 走り回る
+case BynameAdjective0284
+/// 守る
+case BynameAdjective0288
+/// 攻める
+case BynameAdjective0289
+/// 護衛好きな
+case BynameAdjective0290
+/// 協力好きな
+case BynameAdjective0291
+/// 隠れ上手の
+case BynameAdjective0292
+/// センプクする
+case BynameAdjective0293
+/// ゴリ押しの
+case BynameAdjective0294
+/// カバー好きな
+case BynameAdjective0295
+/// 平日の
+case BynameAdjective0296
+/// ゲーミング
+case BynameAdjective0297
+/// 論理的な
+case BynameAdjective0301
+/// 頼もしい
+case BynameAdjective0303
+/// 優しい
+case BynameAdjective0304
+/// 自信満々の
+case BynameAdjective0305
+/// まじめな
+case BynameAdjective0306
+/// ひかえめな
+case BynameAdjective0307
+/// ゴキゲンな
+case BynameAdjective0308
+/// グルメな
+case BynameAdjective0309
+/// おしゃべりな
+case BynameAdjective0310
+/// おカネが全ての
+case BynameAdjective0311
+/// うっかりものの
+case BynameAdjective0312
+/// 愛にあふれた
+case BynameAdjective0313
+/// 風の
+case BynameAdjective0314
+/// 水の
+case BynameAdjective0315
+/// 闇の
+case BynameAdjective0316
+/// 炎の
+case BynameAdjective0317
+/// 光の
+case BynameAdjective0318
+/// 若い
+case BynameAdjective0319
+/// 組織の
+case BynameAdjective0320
+/// カンペキな
+case BynameAdjective0321
+/// 不思議の国の
+case BynameAdjective0322
+/// 世界の中心の
+case BynameAdjective0323
+/// モーレツな
+case BynameAdjective0324
+/// あいまいな
+case BynameAdjective0325
+/// 刹那の
+case BynameAdjective0326
+/// 例えるなら
+case BynameAdjective0328
+/// 涙の
+case BynameAdjective0329
+/// 旅行好きの
+case BynameAdjective0330
+/// 来年の
+case BynameAdjective0332
+/// 夕暮れ時の
+case BynameAdjective0334
+/// 唯一無二の
+case BynameAdjective0335
+/// アブラの乗った
+case BynameAdjective0336
+/// 目力の強い
+case BynameAdjective0337
+/// 迷子の
+case BynameAdjective0338
+/// 明日から本気出す
+case BynameAdjective0339
+/// 名誉
+case BynameAdjective0340
+/// 無味無臭の
+case BynameAdjective0341
+/// 無慈悲な
+case BynameAdjective0343
+/// 無限の
+case BynameAdjective0344
+/// 眠れる
+case BynameAdjective0345
+/// 未来から来た
+case BynameAdjective0347
+/// 味のある
+case BynameAdjective0348
+/// 吠える
+case BynameAdjective0350
+/// 変幻自在の
+case BynameAdjective0352
+/// 舞い降りた
+case BynameAdjective0353
+/// くさっても
+case BynameAdjective0354
+/// 必殺の
+case BynameAdjective0357
+/// 秘密の
+case BynameAdjective0358
+/// 秘伝の
+case BynameAdjective0359
+/// おつかれの
+case BynameAdjective0360
+/// 比較的
+case BynameAdjective0361
+/// 汎用型
+case BynameAdjective0362
+/// 発光する
+case BynameAdjective0363
+/// 白昼の
+case BynameAdjective0364
+/// 売れ残った
+case BynameAdjective0366
+/// 破天荒な
+case BynameAdjective0367
+/// ねばり強い
+case BynameAdjective0368
+/// アツアツの
+case BynameAdjective0369
+/// 日中の
+case BynameAdjective0370
+/// 肉厚な
+case BynameAdjective0371
+/// ナゾの
+case BynameAdjective0372
+/// 動じない
+case BynameAdjective0374
+/// 頭脳明晰な
+case BynameAdjective0375
+/// 逃げる
+case BynameAdjective0376
+/// 電池切れの
+case BynameAdjective0377
+/// 転生した
+case BynameAdjective0378
+/// 天日干しの
+case BynameAdjective0379
+/// 通称
+case BynameAdjective0381
+/// 超人的
+case BynameAdjective0382
+/// 地下生まれの
+case BynameAdjective0385
+/// 大量の
+case BynameAdjective0386
+/// 大地の
+case BynameAdjective0387
+/// 大事な
+case BynameAdjective0388
+/// 大漁の
+case BynameAdjective0389
+/// 大海の
+case BynameAdjective0390
+/// 大きな
+case BynameAdjective0391
+/// のんびりやの
+case BynameAdjective0393
+/// 太古の
+case BynameAdjective0394
+/// 増殖する
+case BynameAdjective0395
+/// 全自動
+case BynameAdjective0397
+/// 閃光の
+case BynameAdjective0398
+/// 船酔いした
+case BynameAdjective0399
+/// 染まらない
+case BynameAdjective0400
+/// 戦う
+case BynameAdjective0402
+/// 先端を行く
+case BynameAdjective0403
+/// 絶滅危惧種の
+case BynameAdjective0404
+/// 石の上にも
+case BynameAdjective0405
+/// 聖なる
+case BynameAdjective0406
+/// 生まれながらの
+case BynameAdjective0408
+/// 世紀末
+case BynameAdjective0411
+/// 世紀の
+case BynameAdjective0412
+/// 水そうの中の
+case BynameAdjective0414
+/// 推せる
+case BynameAdjective0415
+/// 人気が出てきた
+case BynameAdjective0416
+/// 辛党の
+case BynameAdjective0417
+/// 神速の
+case BynameAdjective0418
+/// 神がかった
+case BynameAdjective0419
+/// 真夜中の
+case BynameAdjective0420
+/// 真っ白な
+case BynameAdjective0421
+/// 真っ赤な
+case BynameAdjective0422
+/// 真っ青な
+case BynameAdjective0423
+/// 真っ黒な
+case BynameAdjective0424
+/// 森の
+case BynameAdjective0425
+/// 新世紀
+case BynameAdjective0426
+/// 新手の
+case BynameAdjective0428
+/// 新感覚
+case BynameAdjective0429
+/// 寝転ぶ
+case BynameAdjective0431
+/// 笑顔がまぶしい
+case BynameAdjective0432
+/// 招待された
+case BynameAdjective0433
+/// 小さな
+case BynameAdjective0436
+/// 諸行無常の
+case BynameAdjective0437
+/// 初夏の
+case BynameAdjective0438
+/// 純白の
+case BynameAdjective0439
+/// 純粋な
+case BynameAdjective0440
+/// 熟成した
+case BynameAdjective0441
+/// 祝・
+case BynameAdjective0442
+/// 渋い
+case BynameAdjective0443
+/// 邪悪なる
+case BynameAdjective0444
+/// 漆黒の
+case BynameAdjective0445
+/// 執念深い
+case BynameAdjective0447
+/// 自称
+case BynameAdjective0449
+/// 自撮りする
+case BynameAdjective0450
+/// 時の
+case BynameAdjective0451
+/// 私は
+case BynameAdjective0452
+/// 子どもっぽい
+case BynameAdjective0454
+/// 仕事好きな
+case BynameAdjective0455
+/// 残暑の
+case BynameAdjective0457
+/// 斬新な
+case BynameAdjective0458
+/// 山の
+case BynameAdjective0459
+/// 撮影する
+case BynameAdjective0460
+/// 昨日は
+case BynameAdjective0461
+/// 才色兼備な
+case BynameAdjective0462
+/// 最前線の
+case BynameAdjective0463
+/// 最新型
+case BynameAdjective0464
+/// 最初の
+case BynameAdjective0465
+/// 最後の
+case BynameAdjective0466
+/// 今年の
+case BynameAdjective0468
+/// 今日だけ特別
+case BynameAdjective0469
+/// 今を生きる
+case BynameAdjective0470
+/// とどろく
+case BynameAdjective0471
+/// 紅の
+case BynameAdjective0473
+/// 硬派な
+case BynameAdjective0474
+/// 好奇心旺盛な
+case BynameAdjective0476
+/// 悟った
+case BynameAdjective0477
+/// 孤高の
+case BynameAdjective0480
+/// 健康的な
+case BynameAdjective0484
+/// 芸術的な
+case BynameAdjective0485
+/// 空飛ぶ
+case BynameAdjective0486
+/// 筋金入りの
+case BynameAdjective0488
+/// 強運の
+case BynameAdjective0490
+/// 去年の
+case BynameAdjective0492
+/// 究極の
+case BynameAdjective0493
+/// 鬼のような
+case BynameAdjective0494
+/// かがやく
+case BynameAdjective0495
+/// 記憶のない
+case BynameAdjective0497
+/// 気持ちのこもった
+case BynameAdjective0499
+/// 丸腰の
+case BynameAdjective0501
+/// 甘い
+case BynameAdjective0502
+/// 感情的な
+case BynameAdjective0503
+/// 干潟の
+case BynameAdjective0504
+/// 完全燃焼した
+case BynameAdjective0505
+/// 海鮮
+case BynameAdjective0507
+/// 海パン
+case BynameAdjective0508
+/// 過去から来た
+case BynameAdjective0510
+/// 音速の
+case BynameAdjective0513
+/// 恋する
+case BynameAdjective0517
+/// 映画好きの
+case BynameAdjective0518
+/// 影の
+case BynameAdjective0520
+/// 運命の
+case BynameAdjective0521
+/// 宇宙の
+case BynameAdjective0522
+/// 引っこみ思案な
+case BynameAdjective0524
+/// 一本釣りの
+case BynameAdjective0525
+/// 一日
+case BynameAdjective0526
+/// いちおう
+case BynameAdjective0527
+/// 異世界の
+case BynameAdjective0529
+/// わかばマークの
+case BynameAdjective0532
+/// ワイルドな
+case BynameAdjective0533
+/// リアルな
+case BynameAdjective0534
+/// ラッキーな
+case BynameAdjective0535
+/// よく漬かった
+case BynameAdjective0537
+/// ゆるふわ
+case BynameAdjective0539
+/// やっぱり
+case BynameAdjective0540
+/// 野菜好きの
+case BynameAdjective0541
+/// もふもふの
+case BynameAdjective0542
+/// モダンな
+case BynameAdjective0543
+/// もう迷わない
+case BynameAdjective0546
+/// もう負けられない
+case BynameAdjective0547
+/// めでたい
+case BynameAdjective0548
+/// 無邪気な
+case BynameAdjective0549
+/// ミラクル
+case BynameAdjective0551
+/// ミーハーな
+case BynameAdjective0552
+/// マンガ好きの
+case BynameAdjective0553
+/// まな板の上の
+case BynameAdjective0554
+/// ホワイトな
+case BynameAdjective0556
+/// ボムの
+case BynameAdjective0557
+/// ペラペラの
+case BynameAdjective0559
+/// ふわふわの
+case BynameAdjective0560
+/// プルプルの
+case BynameAdjective0562
+/// フルーツ好きの
+case BynameAdjective0563
+/// ブラックな
+case BynameAdjective0564
+/// かぐわしい
+case BynameAdjective0565
+/// ファッショナブル
+case BynameAdjective0566
+/// ビッグな
+case BynameAdjective0568
+/// びしょぬれの
+case BynameAdjective0569
+/// ヒゲの
+case BynameAdjective0570
+/// ヒエヒエの
+case BynameAdjective0571
+/// ハンパない
+case BynameAdjective0572
+/// 遥か彼方の
+case BynameAdjective0573
+/// ハデな
+case BynameAdjective0574
+/// バズりたい
+case BynameAdjective0576
+/// はじける
+case BynameAdjective0577
+/// ハイブランド好きの
+case BynameAdjective0578
+/// ハートを撃ちぬく
+case BynameAdjective0579
+/// ハードな
+case BynameAdjective0580
+/// ヌルヌルの
+case BynameAdjective0581
+/// 塗りの
+case BynameAdjective0582
+/// なんてったって
+case BynameAdjective0584
+/// 名もなき
+case BynameAdjective0586
+/// ナイスな
+case BynameAdjective0587
+/// ドロドロの
+case BynameAdjective0588
+/// となりの
+case BynameAdjective0589
+/// ととのった
+case BynameAdjective0591
+/// トゲトゲの
+case BynameAdjective0592
+/// トガった
+case BynameAdjective0593
+/// デカい
+case BynameAdjective0594
+/// つるつるの
+case BynameAdjective0595
+/// つめた～い
+case BynameAdjective0596
+/// ちょっぴり
+case BynameAdjective0598
+/// ただの
+case BynameAdjective0599
+/// ダシがとれる
+case BynameAdjective0600
+/// ダイビング
+case BynameAdjective0601
+/// ダイナマイトな
+case BynameAdjective0602
+/// そんなこんなで
+case BynameAdjective0604
+/// せっかちな
+case BynameAdjective0605
+/// スリムな
+case BynameAdjective0607
+/// すみっこの
+case BynameAdjective0608
+/// スチームパンクな
+case BynameAdjective0609
+/// しびれる
+case BynameAdjective0610
+/// さんぽ好きの
+case BynameAdjective0612
+/// さまよえる
+case BynameAdjective0613
+/// ゴワゴワの
+case BynameAdjective0615
+/// コスパのいい
+case BynameAdjective0617
+/// ゴシック
+case BynameAdjective0618
+/// こう見えて
+case BynameAdjective0619
+/// 高性能の
+case BynameAdjective0620
+/// けなげな
+case BynameAdjective0621
+/// ゲーセンの
+case BynameAdjective0622
+/// グッド
+case BynameAdjective0623
+/// 空前絶後の
+case BynameAdjective0624
+/// ギラギラな
+case BynameAdjective0625
+/// キラキラな
+case BynameAdjective0626
+/// 巨大化した
+case BynameAdjective0627
+/// カメラ目線の
+case BynameAdjective0629
+/// カチカチの
+case BynameAdjective0630
+/// かたい
+case BynameAdjective0631
+/// 100％
+case BynameAdjective0632
+/// 隠れた
+case BynameAdjective0633
+/// お肉好きの
+case BynameAdjective0634
+/// お茶の間の
+case BynameAdjective0635
+/// お魚好きの
+case BynameAdjective0636
+/// お絵描きする
+case BynameAdjective0638
+/// おませな
+case BynameAdjective0639
+/// おちゃのこさいさい
+case BynameAdjective0640
+/// オーダーメイドの
+case BynameAdjective0642
+/// エレガントな
+case BynameAdjective0643
+/// エラ呼吸の
+case BynameAdjective0644
+/// エターナル
+case BynameAdjective0645
+/// インスタント
+case BynameAdjective0646
+/// いつもの
+case BynameAdjective0647
+/// いつだって
+case BynameAdjective0648
+/// イキのいい
+case BynameAdjective0650
+/// いい波乗ってる
+case BynameAdjective0651
+/// アングラの
+case BynameAdjective0652
+/// アルティメット
+case BynameAdjective0653
+/// あふれ出る
+case BynameAdjective0654
+/// アニメ好きの
+case BynameAdjective0655
+/// あっぱれ
+case BynameAdjective0656
+/// あったか～い
+case BynameAdjective0657
+/// アガる
+case BynameAdjective0660
+/// アウトドアな
+case BynameAdjective0661
+/// IT界の
+case BynameAdjective0662
+/// I LOVE 
+case BynameAdjective0663
+/// amiiboの
+case BynameAdjective0664
+/// 5年後には
+case BynameAdjective0665
+/// 10年前は
+case BynameAdjective0666
+/// サンカクスの
+case BynameAdjective0667
+/// 夏色の
+case BynameAdjective0669
+/// 冬色の
+case BynameAdjective0670
+/// 配信終わりの
+case BynameAdjective0671
+/// 昼型の
+case BynameAdjective0672
+/// 夜明けの
+case BynameAdjective0673
+/// リアリストな
+case BynameAdjective0674
+/// 小食の
+case BynameAdjective0675
+/// 夜ふかしの
+case BynameAdjective0676
+/// ふとんの中の
+case BynameAdjective0677
+/// 弱気な
+case BynameAdjective0678
+/// 冬休みの
+case BynameAdjective0679
+/// いわゆる
+case BynameAdjective0680
+/// 直感を信じる
+case BynameAdjective0681
+/// こってり系の
+case BynameAdjective0682
+/// 初代
+case BynameAdjective0683
+/// 二代目
+case BynameAdjective0684
+/// 最高の
+case BynameAdjective0686
+/// さすらいの
+case BynameAdjective0687
+/// DJ
+case BynameAdjective0688
+/// 荒野の
+case BynameAdjective0689
+/// 雪原の
+case BynameAdjective0690
+/// 海辺の
+case BynameAdjective0691
+/// 大空の
+case BynameAdjective0692
+/// チョーシあげたい
+case BynameAdjective0693
+/// チョーシぼちぼちの
+case BynameAdjective0694
+/// チョーシいい
+case BynameAdjective0695
+/// チョーシサイコーの
+case BynameAdjective0696
+/// スプラトゥーンの
+case BynameAdjective0697
+/// アバンギャルド
+case BynameAdjective0698
+/// パンク
+case BynameAdjective0699
+/// モッズ
+case BynameAdjective0700
+/// ゴス
+case BynameAdjective0701
+/// ロカビリー
+case BynameAdjective0702
+/// アメカジ
+case BynameAdjective0703
+/// スポーティー
+case BynameAdjective0704
+/// B系
+case BynameAdjective0705
+/// ヴィジュアル系
+case BynameAdjective0707
+/// 古着
+case BynameAdjective0708
+/// エスニック系
+case BynameAdjective0709
+/// グランジ
+case BynameAdjective0710
+/// ヒップホップ
+case BynameAdjective0714
+/// 雷の
+case BynameAdjective0716
+/// 電光石火の
+case BynameAdjective0717
+/// 老いた
+case BynameAdjective0718
+/// 今日は
+case BynameAdjective0719
+/// VR
+case BynameAdjective0720
+/// 50％
+case BynameAdjective0721
+/// 3％
+case BynameAdjective0722
+/// 瞬足の
+case BynameAdjective0723
+/// みんなの
+case BynameAdjective0724
+/// お気軽な
+case BynameAdjective0725
+/// New!
+case BynameAdjective0726
+/// かせぎまくりの
+case BynameAdjective0727
+/// チャンネルの
+case BynameAdjective0728
+/// よみがえる
+case BynameAdjective0729
+/// ハチャメチャな
+case BynameAdjective0730
+/// 力持ちな
+case BynameAdjective0731
+/// チルい
+case BynameAdjective0732
+/// ウワサ好きの
+case BynameAdjective0733
+/// ソーシャル
+case BynameAdjective0734
+/// 静かにたたずむ
+case BynameAdjective0735
+/// 希望の
+case BynameAdjective0736
+/// 封印された
+case BynameAdjective0737
+/// 理論上可能な
+case BynameAdjective0738
+/// スターターデッキの
+case BynameAdjective0739
+/// スリーブに入った
+case BynameAdjective0740
+/// 世界初の
+case BynameAdjective0741
+/// 自然あふれる
+case BynameAdjective0742
+/// 勝ち気な
+case BynameAdjective0743
+/// とっておきの
+case BynameAdjective0744
+/// なんちゃって
+case BynameAdjective0745
+/// お手ごろな
+case BynameAdjective0746
+/// 暴れん坊な
+case BynameAdjective0747
+/// とんでもない
+case BynameAdjective0748
+/// 幻の
+case BynameAdjective0749
+/// 虎の子の
+case BynameAdjective0750
+/// ゴールド
+case BynameAdjective0751
+/// シルバー
+case BynameAdjective0752
+/// 不敗の
+case BynameAdjective0753
+/// 新年の
+case BynameAdjective0754
+/// 今年最後の
+case BynameAdjective0755
+/// 新発売の
+case BynameAdjective0756
+/// 今夜は
+case BynameAdjective0757
+/// ひとりぼっちの
+case BynameAdjective0758
+/// 煮込み
+case BynameAdjective0759
+/// 電脳
+case BynameAdjective0760
+/// 魔法の
+case BynameAdjective0761
+/// 本日の
+case BynameAdjective0762
+/// いつまでも
+case BynameAdjective0763
+/// 期待の
+case BynameAdjective0764
+/// メカニカル
+case BynameAdjective0765
+/// ダーク
+case BynameAdjective0766
+/// シャイニング
+case BynameAdjective0767
+/// 古代の
+case BynameAdjective0768
+/// 並行世界の
+case BynameAdjective0769
+/// 力を秘めた
+case BynameAdjective0770
+/// 具だくさんの
+case BynameAdjective0771
+/// 栄養満点の
+case BynameAdjective0772
+/// ライジング
+case BynameAdjective0773
+/// ヤングな
+case BynameAdjective0774
+/// いつも心に
+case BynameAdjective0775
+/// みんな大好き
+case BynameAdjective0776
+/// 徹夜明けの
+case BynameAdjective0777
+/// 今日も一日
+case BynameAdjective0778
+/// 鳴りやまない
+case BynameAdjective0779
+/// アンニュイな
+case BynameAdjective0781
+/// 旬の
+case BynameAdjective0782
+/// 暴走する
+case BynameAdjective0783
+/// ピカピカの
+case BynameAdjective0784
+/// 深淵の
+case BynameAdjective0785
+/// メイドイン
+case BynameAdjective0786
+/// 何も知らない
+case BynameAdjective0787
+/// マイブームは
+case BynameAdjective0788
+/// 終わらない
+case BynameAdjective0789
+/// 生きがいは
+case BynameAdjective0790
+/// アグレッシブな
+case BynameAdjective0791
+/// 今すぐやる
+case BynameAdjective0793
+/// 天然の
+case BynameAdjective0794
+/// 高カロリーな
+case BynameAdjective0795
+/// 低カロリーな
+case BynameAdjective0796
+/// 最近は
+case BynameAdjective0797
+/// 人望のある
+case BynameAdjective0798
+/// 大好きな
+case BynameAdjective0799
+/// 実在する
+case BynameAdjective0800
+/// 実在しない
+case BynameAdjective0801
+/// バイト中の
+case BynameAdjective0802
+/// どちらかといえば
+case BynameAdjective0804
+/// 繊細な
+case BynameAdjective0805
+/// おおざっぱな
+case BynameAdjective0806
+/// 金イクラの
+case BynameAdjective0807
+/// かっこいい
+case BynameAdjective0808
+/// バッテリー切れの
+case BynameAdjective0809
+/// バッテリー満タンの
+case BynameAdjective0810
+/// 昼時の
+case BynameAdjective0811
+/// 休憩中の
+case BynameAdjective0812
+/// いそがしい
+case BynameAdjective0813
+/// 見守る
+case BynameAdjective0814
+/// 待望の
+case BynameAdjective0815
+/// 強くなった
+case BynameAdjective0816
+/// 息をひそめる
+case BynameAdjective0817
+/// 正真正銘の
+case BynameAdjective0818
+/// 素早い
+case BynameAdjective0819
+/// 動ける
+case BynameAdjective0820
+/// 自宅の
+case BynameAdjective0821
+/// 故郷の
+case BynameAdjective0822
+/// シューター界の
+case BynameAdjective0823
+/// ローラー界の
+case BynameAdjective0824
+/// チャージャー界の
+case BynameAdjective0825
+/// スロッシャー界の
+case BynameAdjective0826
+/// スピナー界の
+case BynameAdjective0827
+/// マニューバー界の
+case BynameAdjective0828
+/// シェルター界の
+case BynameAdjective0829
+/// ブラスター界の
+case BynameAdjective0830
+/// フデ界の
+case BynameAdjective0831
+/// ストリンガー界の
+case BynameAdjective0832
+/// ワイパー界の
+case BynameAdjective0833
+/// 満腹の
+case BynameAdjective0834
+/// 水を得た
+case BynameAdjective0835
+/// 勝利の
+case BynameAdjective0836
+/// 華がある
+case BynameAdjective0837
+/// 映える
+case BynameAdjective0838
+/// スタイリッシュ
+case BynameAdjective0840
+/// 三ツ星
+case BynameAdjective0841
+/// カレンダー通りの
+case BynameAdjective0842
+/// ナウい
+case BynameAdjective0843
+/// タンパクな
+case BynameAdjective0844
+/// 新・
+case BynameAdjective0845
+/// 昔ながらの
+case BynameAdjective0846
+/// どこからどう見ても
+case BynameAdjective0847
+/// 正統派
+case BynameAdjective0848
+/// 王道の
+case BynameAdjective0849
+/// 伝統的な
+case BynameAdjective0850
+/// 旧式
+case BynameAdjective0851
+/// そぼくな
+case BynameAdjective0852
+/// 先進的な
+case BynameAdjective0853
+/// 独創的な
+case BynameAdjective0854
+/// 誠実な
+case BynameAdjective0855
+/// 柔軟な
+case BynameAdjective0856
+/// クリエイティブな
+case BynameAdjective0857
+/// しゃれた
+case BynameAdjective0858
+/// スマートな
+case BynameAdjective0859
+/// 上品な
+case BynameAdjective0860
+/// ナゾめいた
+case BynameAdjective0861
+/// 目新しい
+case BynameAdjective0862
+/// すがすがしい
+case BynameAdjective0863
+/// 不滅の
+case BynameAdjective0864
+/// パワフルな
+case BynameAdjective0865
+/// 腹のすわった
+case BynameAdjective0866
+/// ゆうかんな
+case BynameAdjective0867
+/// 闊歩する
+case BynameAdjective0868
+/// キレがある
+case BynameAdjective0869
+/// 押しの強い
+case BynameAdjective0870
+/// 打たれ強い
+case BynameAdjective0871
+/// たくましい
+case BynameAdjective0872
+/// すご腕の
+case BynameAdjective0873
+/// ユルい
+case BynameAdjective0874
+/// 命知らずの
+case BynameAdjective0875
+/// ミリョク的な
+case BynameAdjective0876
+/// ダイナミックな
+case BynameAdjective0877
+/// ユニークな
+case BynameAdjective0878
+/// 俊敏な
+case BynameAdjective0879
+/// 社交的な
+case BynameAdjective0880
+/// 堂々とした
+case BynameAdjective0881
+/// マイペースな
+case BynameAdjective0882
+/// ミステリアスな
+case BynameAdjective0883
+/// 威勢のいい
+case BynameAdjective0884
+/// 逆転の
+case BynameAdjective0885
+/// シックな
+case BynameAdjective0886
+/// 巧みな
+case BynameAdjective0887
+/// 陽気な
+case BynameAdjective0888
+/// ビビッドな
+case BynameAdjective0889
+/// めずらしい
+case BynameAdjective0890
+/// スキのない
+case BynameAdjective0891
+/// シュールな
+case BynameAdjective0892
+/// 科学的な
+case BynameAdjective0893
+/// ゴージャスな
+case BynameAdjective0894
+/// キュートな
+case BynameAdjective0895
+/// ぎこちない
+case BynameAdjective0896
+/// 奥深い
+case BynameAdjective0897
+/// 飾らない
+case BynameAdjective0898
+/// ソフトな
+case BynameAdjective0899
+/// 紳士的な
+case BynameAdjective0900
+/// 有能な
+case BynameAdjective0901
+/// 爽快な
+case BynameAdjective0902
+/// ベールに包まれた
+case BynameAdjective0903
+/// しんちょうな
+case BynameAdjective0904
+/// フランクな
+case BynameAdjective0905
+/// 合理的な
+case BynameAdjective0906
+/// チャーミングな
+case BynameAdjective0907
+/// もの静かな
+case BynameAdjective0908
+/// 聡明な
+case BynameAdjective0909
+/// 内気な
+case BynameAdjective0910
+/// 抽象的な
+case BynameAdjective0911
+/// シャープな
+case BynameAdjective0912
+/// ガッツがある
+case BynameAdjective0913
+/// 本格派
+case BynameAdjective0914
+/// 経験豊かな
+case BynameAdjective0915
+/// 老練な
+case BynameAdjective0916
+/// 有望な
+case BynameAdjective0917
+/// かしこい
+case BynameAdjective0918
+/// 健全な
+case BynameAdjective0919
+/// 素直な
+case BynameAdjective0920
+/// ちょうどいい
+case BynameAdjective0921
+/// 嵐のような
+case BynameAdjective0922
+/// ファンキーな
+case BynameAdjective0923
+/// エキサイティングな
+case BynameAdjective0924
+/// ノリノリの
+case BynameAdjective0925
+/// 礼儀正しい
+case BynameAdjective0926
+/// 義理がたい
+case BynameAdjective0927
+/// 腰が低い
+case BynameAdjective0928
+/// 格式高い
+case BynameAdjective0929
+/// 愛想がいい
+case BynameAdjective0930
+/// 人なつっこい
+case BynameAdjective0931
+/// 気さくな
+case BynameAdjective0932
+/// おくゆかしい
+case BynameAdjective0933
+/// しおらしい
+case BynameAdjective0934
+/// ふくよかな
+case BynameAdjective0935
+/// お行儀のよい
+case BynameAdjective0936
+/// 律儀な
+case BynameAdjective0937
+/// 心が広い
+case BynameAdjective0938
+/// 大御所
+case BynameAdjective0939
+/// 型破りな
+case BynameAdjective0940
+/// すさまじい
+case BynameAdjective0941
+/// 机上の
+case BynameAdjective0942
+/// 度胸がある
+case BynameAdjective0944
+/// 図太い
+case BynameAdjective0945
+/// 豪快な
+case BynameAdjective0946
+/// マニアックな
+case BynameAdjective0947
+/// 偉大な
+case BynameAdjective0948
+/// エネルギッシュな
+case BynameAdjective0949
+/// 迷える
+case BynameAdjective0950
+/// 事実上の
+case BynameAdjective0951
+/// 333倍
+case BynameAdjective0952
+/// 青春の
+case BynameAdjective0953
+/// 見た目通りの
+case BynameAdjective0954
+/// 見た目とちがって
+case BynameAdjective0955
+/// ドキドキの
+case BynameAdjective0956
+/// バリバリの
+case BynameAdjective0957
+/// ギリギリの
+case BynameAdjective0958
+/// カツカツの
+case BynameAdjective0959
+/// おもしろ
+case BynameAdjective0960
+/// ワクワク
+case BynameAdjective0961
+/// シュッとした
+case BynameAdjective0962
+/// ホンモノの
+case BynameAdjective0963
+/// 名前のない
+case BynameAdjective0964
+/// もう少しで
+case BynameAdjective0965
+/// ツンツンした
+case BynameAdjective0966
+/// デレデレした
+case BynameAdjective0967
+/// 生き残る
+case BynameAdjective0968
+/// エキセントリックな
+case BynameAdjective0969
+/// クセが強い
+case BynameAdjective0970
+/// おきて破りの
+case BynameAdjective0971
+/// センスがある
+case BynameAdjective0972
+/// ウマい
+case BynameAdjective0973
+/// 今をときめく
+case BynameAdjective0974
+/// 売り出し中の
+case BynameAdjective0975
+/// うなぎのぼりの
+case BynameAdjective0976
+/// 世渡り上手な
+case BynameAdjective0977
+/// アシストする
+case BynameAdjective0978
+/// カバーする
+case BynameAdjective0979
+/// ブルジョワな
+case BynameAdjective0980
+/// クリーンな
+case BynameAdjective0981
+/// オールマイティーな
+case BynameAdjective0982
+/// 元気な
+case BynameAdjective0983
+/// 奮い立つ
+case BynameAdjective0984
+/// 前のめりな
+case BynameAdjective0985
+/// 荒ぶる
+case BynameAdjective0987
+/// 全力をそそぐ
+case BynameAdjective0988
+/// ゆかいな
+case BynameAdjective0989
+/// 花形
+case BynameAdjective0990
+/// ただならぬ
+case BynameAdjective0991
+/// オリジナル
+case BynameAdjective0992
+/// とびきり
+case BynameAdjective0993
+/// ひそかな
+case BynameAdjective0994
+/// 切ない
+case BynameAdjective0995
+/// 話題の
+case BynameAdjective0996
+/// コテコテの
+case BynameAdjective0997
+/// 胸おどらせる
+case BynameAdjective0998
+/// デラックス
+case BynameAdjective0999
+/// 末裔
+case BynameSubject10000
+/// 子孫
+case BynameSubject10010
+/// スポンサー
+case BynameSubject10020
+/// 差し金
+case BynameSubject10030
+/// 進行役
+case BynameSubject10040
+/// エンターテイナー
+case BynameSubject10050
+/// 所有者
+case BynameSubject10060
+/// ハウスキーパー
+case BynameSubject10080
+/// トレーダー
+case BynameSubject10090
+/// 占い師
+case BynameSubject10100
+/// 風来坊
+case BynameSubject10110
+/// 代打
+case BynameSubject10130
+/// 首位打者
+case BynameSubject10140
+/// 三銃士
+case BynameSubject10150
+/// 集団
+case BynameSubject10160
+/// サークル
+case BynameSubject10170
+/// 群れ
+case BynameSubject10180
+/// 協力者
+case BynameSubject10190
+/// ユニット
+case BynameSubject10200
+/// 軍団
+case BynameSubject10210
+/// 一派
+case BynameSubject10220
+/// カルテット
+case BynameSubject10230
+/// 合唱
+case BynameSubject10240
+/// 御三家
+case BynameSubject10250
+/// ギルド
+case BynameSubject10260
+/// グループ
+case BynameSubject10270
+/// ウマ
+case BynameSubject10280
+/// ウサギ
+case BynameSubject10290
+/// パンダ
+case BynameSubject10300
+/// コアラ
+case BynameSubject10310
+/// リス
+case BynameSubject10320
+/// ラッコ
+case BynameSubject10330
+/// ゾウ
+case BynameSubject10340
+/// キリン
+case BynameSubject10350
+/// クジラ
+case BynameSubject10360
+/// トラ
+case BynameSubject10370
+/// ライオン
+case BynameSubject10380
+/// ハムスター
+case BynameSubject10390
+/// シカ
+case BynameSubject10400
+/// 書記
+case BynameSubject10410
+/// 考案者
+case BynameSubject10420
+/// ロックンローラー
+case BynameSubject10430
+/// コントローラー
+case BynameSubject10440
+/// ストーリーテラー
+case BynameSubject10450
+/// イラストレーター
+case BynameSubject10460
+/// 画伯
+case BynameSubject10470
+/// 著者
+case BynameSubject10480
+/// 生みの親
+case BynameSubject10490
+/// ファミリー
+case BynameSubject10500
+/// 芸術家
+case BynameSubject10510
+/// マシン
+case BynameSubject10520
+/// ナビゲーター
+case BynameSubject10530
+/// 発明家
+case BynameSubject10540
+/// パーティー
+case BynameSubject10560
+/// 司令塔
+case BynameSubject10570
+/// 若大将
+case BynameSubject10580
+/// マスコット
+case BynameSubject10590
+/// 妖精
+case BynameSubject10600
+/// 落語家
+case BynameSubject10610
+/// 声優
+case BynameSubject10620
+/// 小学生
+case BynameSubject10630
+/// 中学生
+case BynameSubject10640
+/// 高校生
+case BynameSubject10650
+/// 大学生
+case BynameSubject10660
+/// 建築士
+case BynameSubject10670
+/// 設計士
+case BynameSubject10680
+/// 猛者
+case BynameSubject10690
+/// 有識者
+case BynameSubject10700
+/// 高嶺の花
+case BynameSubject10710
+/// 鬼才
+case BynameSubject10720
+/// 有力者
+case BynameSubject10730
+/// つわもの
+case BynameSubject10740
+/// 天敵
+case BynameSubject10750
+/// カブトガニ
+case BynameSubject10760
+/// タニシ
+case BynameSubject10770
+/// オウムガイ
+case BynameSubject10780
+/// ヤシガニ
+case BynameSubject10790
+/// イソギンチャク
+case BynameSubject10800
+/// キンギョ
+case BynameSubject10810
+/// アジ
+case BynameSubject10820
+/// マンタ
+case BynameSubject10830
+/// ウミウシ
+case BynameSubject10840
+/// エビ
+case BynameSubject10850
+/// タカアシガニ
+case BynameSubject10860
+/// ライバル
+case BynameSubject10870
+/// ウィークポイント
+case BynameSubject10880
+/// タイプ
+case BynameSubject10890
+/// 想いビト
+case BynameSubject10900
+/// もどき
+case BynameSubject10910
+/// システム
+case BynameSubject10920
+/// 集い
+case BynameSubject10930
+/// 大群
+case BynameSubject10940
+/// 一味
+case BynameSubject10950
+/// 獣
+case BynameSubject10960
+/// 支配者
+case BynameSubject10970
+/// 化石
+case BynameSubject10990
+/// 親衛隊
+case BynameSubject11000
+/// 収集家
+case BynameSubject11010
+/// 萌え
+case BynameSubject11020
+/// タマシイ
+case BynameSubject11030
+/// 境地
+case BynameSubject11040
+/// マラソン
+case BynameSubject11050
+/// いいヒト
+case BynameSubject11060
+/// 取引先
+case BynameSubject11070
+/// 人形
+case BynameSubject11080
+/// 貴公子
+case BynameSubject11090
+/// 主役
+case BynameSubject11100
+/// シンボル
+case BynameSubject11110
+/// 権威
+case BynameSubject11120
+/// 貢献者
+case BynameSubject11130
+/// ゆるキャラ
+case BynameSubject11140
+/// ぬいぐるみ
+case BynameSubject11150
+/// 精霊
+case BynameSubject11160
+/// サラブレッド
+case BynameSubject11170
+/// 御曹司
+case BynameSubject11180
+/// 達人
+case BynameSubject11190
+/// 美食家
+case BynameSubject11200
+/// 力士
+case BynameSubject11210
+/// 末っ子
+case BynameSubject11220
+/// 現役
+case BynameSubject11240
+/// 騎士団
+case BynameSubject11250
+/// 勝利者
+case BynameSubject11260
+/// 村人
+case BynameSubject11280
+/// 校長
+case BynameSubject11290
+/// 用心棒
+case BynameSubject11300
+/// 探検家
+case BynameSubject11310
+/// 探求者
+case BynameSubject11320
+/// ウォーリアー
+case BynameSubject11330
+/// パラディン
+case BynameSubject11340
+/// 門番
+case BynameSubject11350
+/// レンジャー
+case BynameSubject11370
+/// モンク
+case BynameSubject11380
+/// 賢者
+case BynameSubject11390
+/// 医者
+case BynameSubject11400
+/// 鍛冶屋
+case BynameSubject11410
+/// 科学者
+case BynameSubject11420
+/// お殿様
+case BynameSubject11430
+/// 絵師
+case BynameSubject11440
+/// 見習い
+case BynameSubject11450
+/// 錬金術師
+case BynameSubject11460
+/// 番人
+case BynameSubject11470
+/// 原石
+case BynameSubject11480
+/// ガイド
+case BynameSubject11490
+/// 運転手
+case BynameSubject11500
+/// ブロガー
+case BynameSubject11510
+/// オペレーター
+case BynameSubject11520
+/// 司書
+case BynameSubject11530
+/// オブジェ
+case BynameSubject11540
+/// 後継者
+case BynameSubject11550
+/// オーナー
+case BynameSubject11560
+/// 代理人
+case BynameSubject11570
+/// 1年生
+case BynameSubject11580
+/// 2年生
+case BynameSubject11590
+/// 3年生
+case BynameSubject11600
+/// 4年生
+case BynameSubject11610
+/// 5年生
+case BynameSubject11620
+/// 6年生
+case BynameSubject11630
+/// ケチャップ
+case BynameSubject11640
+/// たけのこ
+case BynameSubject11650
+/// ポップ
+case BynameSubject11660
+/// 超能力者
+case BynameSubject11670
+/// 重鎮
+case BynameSubject11680
+/// 文豪
+case BynameSubject11690
+/// ジョー
+case BynameSubject11720
+/// 思い出
+case BynameSubject20020
+/// スタイリスト
+case BynameSubject20030
+/// 起業家
+case BynameSubject20040
+/// ミュージシャン
+case BynameSubject20050
+/// ムードメーカー
+case BynameSubject20060
+/// 風雲児
+case BynameSubject20070
+/// 連合
+case BynameSubject20080
+/// 吟遊詩人
+case BynameSubject20090
+/// 異世界人
+case BynameSubject20100
+/// カオス
+case BynameSubject20110
+/// ニューフェイス
+case BynameSubject20120
+/// 先導者
+case BynameSubject20130
+/// 豪傑
+case BynameSubject20140
+/// Playing
+case BynameSubject20150
+/// ラッキーマン
+case BynameSubject25000
+/// 天然記念物
+case BynameSubject25010
+/// 選ばれし者
+case BynameSubject25020
+/// 遊び人
+case BynameSubject25030
+/// チャンスメーカー
+case BynameSubject25040
+/// 幸せ者
+case BynameSubject25050
+/// 勝負師
+case BynameSubject25060
+/// 当選者
+case BynameSubject25070
+/// 若者
+case BynameSubject30000
+/// イカ
+case BynameSubject30010
+/// タコ
+case BynameSubject30020
+/// シャケ
+case BynameSubject30030
+/// ボーイ
+case BynameSubject30040
+/// ガール
+case BynameSubject30041
+/// 3号
+case BynameSubject30050
+/// おとうさん
+case BynameSubject30060
+/// おかあさん
+case BynameSubject30061
+/// パパ
+case BynameSubject30070
+/// ママ
+case BynameSubject30071
+/// 息子
+case BynameSubject30080
+/// 娘
+case BynameSubject30081
+/// おにいさん
+case BynameSubject30090
+/// おねえさん
+case BynameSubject30091
+/// おとうと
+case BynameSubject30100
+/// いもうと
+case BynameSubject30101
+/// おじいさん
+case BynameSubject30110
+/// おばあさん
+case BynameSubject30111
+/// 孫
+case BynameSubject30120
+/// おじさん
+case BynameSubject30130
+/// おばさん
+case BynameSubject30131
+/// 赤ちゃん
+case BynameSubject30140
+/// ペット
+case BynameSubject30150
+/// 覇者
+case BynameSubject31000
+/// 調停者
+case BynameSubject31100
+/// ベータテスター
+case BynameSubject31110
+/// グルーヴを宿した者
+case BynameSubject31120
+/// ラングエンド
+case BynameSubject31130
+/// アンダンテ
+case BynameSubject31140
+/// グラーヴェ
+case BynameSubject31150
+/// ポータル
+case BynameSubject31160
+/// カプリチョーソ
+case BynameSubject31170
+/// アラマンボ
+case BynameSubject31180
+/// コラパルテ
+case BynameSubject31190
+/// スピッカート
+case BynameSubject31200
+/// トリオンファーレ
+case BynameSubject31210
+/// アッコルド
+case BynameSubject31220
+/// アルペジオ
+case BynameSubject31230
+/// ノビルメンテ
+case BynameSubject31240
+/// カイセンロンド
+case BynameSubject31250
+/// ゴロゴロマルチャーレ
+case BynameSubject31260
+/// イカイノカノン
+case BynameSubject31270
+/// ナワバトラー
+case BynameSubject32000
+/// カードゲーマー
+case BynameSubject32010
+/// 旅人
+case BynameSubject33000
+/// 自転車乗り
+case BynameSubject33010
+/// 天ぷら
+case BynameSubject33020
+/// 支援者
+case BynameSubject33030
+/// 歯ごたえ
+case BynameSubject33040
+/// エンディング
+case BynameSubject33050
+/// ボールドマーカー使い
+case BynameSubject00000
+/// わかばシューター使い
+case BynameSubject00010
+/// シャープマーカー使い
+case BynameSubject00020
+/// プロモデラー使い
+case BynameSubject00030
+/// スプラシューター使い
+case BynameSubject00040
+/// .52ガロン使い
+case BynameSubject00050
+/// N-ZAP使い
+case BynameSubject00060
+/// プライムシューター使い
+case BynameSubject00070
+/// .96ガロン使い
+case BynameSubject00080
+/// ジェットスイーパー使い
+case BynameSubject00090
+/// ノヴァブラスター使い
+case BynameSubject00100
+/// ホットブラスター使い
+case BynameSubject00110
+/// ロングブラスター使い
+case BynameSubject00120
+/// クラッシュブラスター使い
+case BynameSubject00130
+/// ラピッドブラスター使い
+case BynameSubject00140
+/// Rブラスターエリート使い
+case BynameSubject00150
+/// L3リールガン使い
+case BynameSubject00160
+/// H3リールガン使い
+case BynameSubject00170
+/// ボトルガイザー使い
+case BynameSubject00180
+/// カーボンローラー使い
+case BynameSubject00190
+/// スプラローラー使い
+case BynameSubject00200
+/// ダイナモローラー使い
+case BynameSubject00210
+/// ヴァリアブルローラー使い
+case BynameSubject00220
+/// パブロ使い
+case BynameSubject00230
+/// ホクサイ使い
+case BynameSubject00240
+/// スクイックリン使い
+case BynameSubject00250
+/// スプラチャージャー使い
+case BynameSubject00260
+/// リッター4K使い
+case BynameSubject00270
+/// 14式竹筒銃使い
+case BynameSubject00280
+/// ソイチューバー使い
+case BynameSubject00290
+/// バケットスロッシャー使い
+case BynameSubject00300
+/// ヒッセン使い
+case BynameSubject00310
+/// スクリュースロッシャー使い
+case BynameSubject00320
+/// オーバーフロッシャー使い
+case BynameSubject00330
+/// エクスプロッシャー使い
+case BynameSubject00340
+/// スプラスピナー使い
+case BynameSubject00350
+/// バレルスピナー使い
+case BynameSubject00360
+/// ハイドラント使い
+case BynameSubject00370
+/// クーゲルシュライバー使い
+case BynameSubject00380
+/// ノーチラス使い
+case BynameSubject00390
+/// スパッタリー使い
+case BynameSubject00400
+/// スプラマニューバー使い
+case BynameSubject00410
+/// ケルビン525使い
+case BynameSubject00420
+/// デュアルスイーパー使い
+case BynameSubject00430
+/// クアッドホッパー使い
+case BynameSubject00440
+/// パラシェルター使い
+case BynameSubject00450
+/// キャンピングシェルター使い
+case BynameSubject00460
+/// スパイガジェット使い
+case BynameSubject00470
+/// トライストリンガー使い
+case BynameSubject00480
+/// ジムワイパー使い
+case BynameSubject00490
+/// LACT-450使い
+case BynameSubject00500
+/// ドライブワイパー使い
+case BynameSubject00510
+/// スプラスコープ使い
+case BynameSubject00520
+/// 4Kスコープ使い
+case BynameSubject00530
+/// スペースシューター使い
+case BynameSubject00540
+/// ワイドローラー使い
+case BynameSubject00550
+/// R-PEN使い
+case BynameSubject00560
+/// S-BLAST使い
+case BynameSubject00570
+/// フィンセント使い
+case BynameSubject00580
+/// モップリン使い
+case BynameSubject00590
+/// イグザミナー使い
+case BynameSubject00600
+/// ガエンFF使い
+case BynameSubject00610
+/// 24式張替傘使い
+case BynameSubject00620
+/// フルイドV使い
+case BynameSubject00630
+/// デンタルワイパー使い
+case BynameSubject00640
+/// スプラッシュボム使い
+case BynameSubject01000
+/// キューバンボム使い
+case BynameSubject01010
+/// クイックボム使い
+case BynameSubject01020
+/// カーリングボム使い
+case BynameSubject01030
+/// ロボットボム使い
+case BynameSubject01040
+/// トラップ使い
+case BynameSubject01050
+/// スプリンクラー使い
+case BynameSubject01060
+/// ポイントセンサー使い
+case BynameSubject01070
+/// ポイズンミスト使い
+case BynameSubject01080
+/// スプラッシュシールド使い
+case BynameSubject01090
+/// ジャンプビーコン使い
+case BynameSubject01100
+/// タンサンボム使い
+case BynameSubject01110
+/// トーピード使い
+case BynameSubject01120
+/// ラインマーカー使い
+case BynameSubject01130
+/// アメフラシ使い
+case BynameSubject01200
+/// ウルトラショット使い
+case BynameSubject01210
+/// ウルトラハンコ使い
+case BynameSubject01220
+/// グレートバリア使い
+case BynameSubject01230
+/// ジェットパック使い
+case BynameSubject01240
+/// ホップソナー使い
+case BynameSubject01250
+/// ショクワンダー使い
+case BynameSubject01260
+/// サメライド使い
+case BynameSubject01270
+/// カニタンク使い
+case BynameSubject01280
+/// ナイスダマ使い
+case BynameSubject01290
+/// キューインキ使い
+case BynameSubject01300
+/// マルチミサイル使い
+case BynameSubject01310
+/// メガホンレーザー5.1ch使い
+case BynameSubject01320
+/// トリプルトルネード使い
+case BynameSubject01330
+/// エナジースタンド使い
+case BynameSubject01340
+/// デコイチラシ使い
+case BynameSubject01350
+/// テイオウイカ使い
+case BynameSubject01360
+/// ウルトラチャクチ使い
+case BynameSubject01370
+/// スミナガシート使い
+case BynameSubject01380
+/// バトロイカ好き
+case BynameSubject01500
+/// アイロニック好き
+case BynameSubject01510
+/// クラーゲス好き
+case BynameSubject01520
+/// ロッケンベルグ好き
+case BynameSubject01530
+/// エゾッコ好き
+case BynameSubject01540
+/// フォーリマ好き
+case BynameSubject01550
+/// ホッコリー好き
+case BynameSubject01560
+/// ホタックス好き
+case BynameSubject01570
+/// ジモン好き
+case BynameSubject01580
+/// シグレニ好き
+case BynameSubject01590
+/// アロメ好き
+case BynameSubject01600
+/// ヤコ好き
+case BynameSubject01610
+/// アナアキ好き
+case BynameSubject01620
+/// エンペリー好き
+case BynameSubject01630
+/// タタキケンサキ好き
+case BynameSubject01640
+/// エゾッコリー好き
+case BynameSubject01650
+/// バラズシ好き
+case BynameSubject01660
+/// シチリン好き
+case BynameSubject01670
+/// アタリメイド好き
+case BynameSubject01680
+/// Squid Squadファン
+case BynameSubject01800
+/// ABXYファン
+case BynameSubject01810
+/// Hightide Eraファン
+case BynameSubject01820
+/// Wet Floorファン
+case BynameSubject01830
+/// From Bottomファン
+case BynameSubject01840
+/// カレントリップファン
+case BynameSubject01850
+/// SashiMoriファン
+case BynameSubject01860
+/// 合食禁ファン
+case BynameSubject01870
+/// ω-3ファン
+case BynameSubject01880
+/// OCTOTOOLファン
+case BynameSubject01890
+/// Dedf1shファン
+case BynameSubject01900
+/// C-Sideファン
+case BynameSubject01910
+/// Front Roeファン
+case BynameSubject01920
+/// ビジー・バケーションファン
+case BynameSubject01930
+/// YOKO HORNS & FRIENDSファン
+case BynameSubject01940
+/// H2Whoaファン
+case BynameSubject01950
+/// O.C.Kファン
+case BynameSubject01960
+/// ヌラネバセブンファン
+case BynameSubject01970
+/// ロングヘア
+case BynameSubject02200
+/// ショートカット
+case BynameSubject02210
+/// おだんご
+case BynameSubject02220
+/// ウェービー
+case BynameSubject02230
+/// ツインテ
+case BynameSubject02240
+/// ぱっつん
+case BynameSubject02250
+/// ちょんまげ
+case BynameSubject02260
+/// オールバック
+case BynameSubject02270
+/// ボウズ
+case BynameSubject02280
+/// ポニテ
+case BynameSubject02290
+/// ツンツン
+case BynameSubject02300
+/// マッシュ
+case BynameSubject02310
+/// ミツアミ
+case BynameSubject02320
+/// むぞうさ
+case BynameSubject02330
+/// ウェット
+case BynameSubject02340
+/// コーンロウ
+case BynameSubject02350
+/// カーリーヘア
+case BynameSubject02360
+/// モヒカン
+case BynameSubject02370
+/// アフロ
+case BynameSubject02380
+/// タテロール
+case BynameSubject02390
+/// フェード
+case BynameSubject02400
+/// ロンゲ
+case BynameSubject02410
+/// リーゼント
+case BynameSubject02420
+/// アシメ
+case BynameSubject02430
+/// アオリファン
+case BynameSubject03000
+/// アタマ屋常連
+case BynameSubject03010
+/// イイダファン
+case BynameSubject03020
+/// ウツホファン
+case BynameSubject03030
+/// クツ屋常連
+case BynameSubject03040
+/// ザッカ屋常連
+case BynameSubject03050
+/// シオカラーズファン
+case BynameSubject03060
+/// すりみ連合ファン
+case BynameSubject03070
+/// テンタクルズファン
+case BynameSubject03080
+/// ヒメファン
+case BynameSubject03090
+/// フウカファン
+case BynameSubject03100
+/// ブキ屋常連
+case BynameSubject03110
+/// フク屋常連
+case BynameSubject03120
+/// ホタルファン
+case BynameSubject03130
+/// マンタローファン
+case BynameSubject03140
+/// ガチアサリ好き
+case BynameSubject03150
+/// ガチエリア好き
+case BynameSubject03160
+/// ガチホコバトル好き
+case BynameSubject03170
+/// ガチヤグラ好き
+case BynameSubject03180
+/// サーモンラン好き
+case BynameSubject03190
+/// ナワバリバトル好き
+case BynameSubject03200
+/// ヒーローモード好き
+case BynameSubject03210
+/// ガチアサリマスター
+case BynameSubject03220
+/// ガチエリアマスター
+case BynameSubject03230
+/// ガチヤグラマスター
+case BynameSubject03240
+/// ナワバリマスター
+case BynameSubject03250
+/// ガチホコマスター
+case BynameSubject03260
+/// サーモンランマスター
+case BynameSubject03270
+/// ヒーローモードマスター
+case BynameSubject03280
+/// インクリング
+case BynameSubject03290
+/// オクトリング
+case BynameSubject03300
+/// Tシャツ好き
+case BynameSubject03310
+/// ジャケット好き
+case BynameSubject03320
+/// シャツ好き
+case BynameSubject03330
+/// スニーカー好き
+case BynameSubject03340
+/// ニット好き
+case BynameSubject03350
+/// ファッションリーダー
+case BynameSubject03360
+/// ぼうし好き
+case BynameSubject03370
+/// メガネ好き
+case BynameSubject03380
+/// ブーツ好き
+case BynameSubject03390
+/// カードコレクター
+case BynameSubject03400
+/// ザッカコレクター
+case BynameSubject03410
+/// ファッショニスタ
+case BynameSubject03420
+/// ロッカーマニア
+case BynameSubject03430
+/// イカノボラー
+case BynameSubject03440
+/// イカローラー
+case BynameSubject03450
+/// オールラウンダー
+case BynameSubject03460
+/// ジャンパー
+case BynameSubject03470
+/// スライダー
+case BynameSubject03480
+/// スロースターター
+case BynameSubject03490
+/// ボマー
+case BynameSubject03500
+/// 守護神
+case BynameSubject03510
+/// 切りこみ隊長
+case BynameSubject03520
+/// エイ
+case BynameSubject03530
+/// オクタリアン
+case BynameSubject03540
+/// クマ
+case BynameSubject03550
+/// クラゲ
+case BynameSubject03560
+/// ニンゲン
+case BynameSubject03570
+/// 魚介類
+case BynameSubject03580
+/// 哺乳類
+case BynameSubject03590
+/// アーティスト
+case BynameSubject03600
+/// アイドル
+case BynameSubject03610
+/// アルバイター
+case BynameSubject03620
+/// ウツボ使い
+case BynameSubject03630
+/// サメ使い
+case BynameSubject03640
+/// ショップ店員
+case BynameSubject03650
+/// 会社員
+case BynameSubject03660
+/// 番長
+case BynameSubject03670
+/// チャンピオン
+case BynameSubject03680
+/// ベーシスト
+case BynameSubject03690
+/// プリンス
+case BynameSubject03710
+/// プリンセス
+case BynameSubject03711
+/// ブラザーズ
+case BynameSubject03720
+/// シスターズ
+case BynameSubject03721
+/// シティボーイ
+case BynameSubject03730
+/// シティガール
+case BynameSubject03731
+/// 新郎
+case BynameSubject03740
+/// 新婦
+case BynameSubject03741
+/// キング
+case BynameSubject03750
+/// クイーン
+case BynameSubject03751
+/// 兄弟
+case BynameSubject03760
+/// 姉妹
+case BynameSubject03761
+/// おでん
+case BynameSubject03770
+/// お祭り好き
+case BynameSubject03780
+/// サーファー
+case BynameSubject03790
+/// 夏祭り
+case BynameSubject03800
+/// 花
+case BynameSubject03810
+/// 暑がり
+case BynameSubject03820
+/// 雪だるま
+case BynameSubject03830
+/// 打ち上げ花火
+case BynameSubject03840
+/// 台風の目
+case BynameSubject03850
+/// ひれおくん
+case BynameSubject03860
+/// 破壊神
+case BynameSubject03870
+/// イヌ
+case BynameSubject03880
+/// ドラゴン
+case BynameSubject03890
+/// ネコ
+case BynameSubject03900
+/// 恐竜
+case BynameSubject03910
+/// 頭足類
+case BynameSubject03920
+/// 二枚貝
+case BynameSubject03930
+/// イルカ
+case BynameSubject03940
+/// 読書家
+case BynameSubject03950
+/// CEO
+case BynameSubject03960
+/// アシスタント
+case BynameSubject03970
+/// アスリート
+case BynameSubject03980
+/// エージェント
+case BynameSubject03990
+/// ギャンブラー
+case BynameSubject04000
+/// コーチ
+case BynameSubject04010
+/// コーディネーター
+case BynameSubject04020
+/// コメディアン
+case BynameSubject04030
+/// サイエンティスト
+case BynameSubject04040
+/// サムライ
+case BynameSubject04050
+/// スパイ
+case BynameSubject04060
+/// ダンサー
+case BynameSubject04070
+/// デザイナー
+case BynameSubject04080
+/// ニンジャ
+case BynameSubject04090
+/// バイトリーダー
+case BynameSubject04110
+/// パイロット
+case BynameSubject04120
+/// ハンター
+case BynameSubject04130
+/// プランナー
+case BynameSubject04150
+/// プログラマー
+case BynameSubject04160
+/// プロデューサー
+case BynameSubject04170
+/// ペインター
+case BynameSubject04180
+/// マネージャー
+case BynameSubject04190
+/// モデル
+case BynameSubject04200
+/// ライター
+case BynameSubject04210
+/// 委員長
+case BynameSubject04220
+/// 宇宙飛行士
+case BynameSubject04230
+/// 歌手
+case BynameSubject04240
+/// 会長
+case BynameSubject04250
+/// バイキング
+case BynameSubject04260
+/// 学生
+case BynameSubject04280
+/// 監督
+case BynameSubject04290
+/// 管理人
+case BynameSubject04300
+/// 漁師
+case BynameSubject04310
+/// 係長
+case BynameSubject04320
+/// 警備員
+case BynameSubject04330
+/// 研究員
+case BynameSubject04340
+/// 作家
+case BynameSubject04370
+/// 仕事人
+case BynameSubject04390
+/// 執事
+case BynameSubject04400
+/// 社長
+case BynameSubject04410
+/// 取締役
+case BynameSubject04420
+/// 助手
+case BynameSubject04430
+/// 職人
+case BynameSubject04440
+/// 先生
+case BynameSubject04450
+/// 村長
+case BynameSubject04460
+/// 大統領
+case BynameSubject04470
+/// 探偵
+case BynameSubject04480
+/// 登山家
+case BynameSubject04490
+/// 博士
+case BynameSubject04500
+/// 秘書
+case BynameSubject04510
+/// 美容師
+case BynameSubject04520
+/// 部長
+case BynameSubject04530
+/// 副社長
+case BynameSubject04540
+/// 冒険家
+case BynameSubject04550
+/// マンガ家
+case BynameSubject04560
+/// 勇者
+case BynameSubject04580
+/// 料理人
+case BynameSubject04590
+/// ナマケモノ
+case BynameSubject04600
+/// ビッグマウス
+case BynameSubject04610
+/// 食いしんぼう
+case BynameSubject04630
+/// 働き者
+case BynameSubject04640
+/// 熱血漢
+case BynameSubject04650
+/// タコゾネス
+case BynameSubject04660
+/// イクラ
+case BynameSubject04670
+/// ヴィラン
+case BynameSubject04680
+/// 家族
+case BynameSubject04690
+/// カメ
+case BynameSubject04700
+/// カラダ
+case BynameSubject04710
+/// 騎士
+case BynameSubject04720
+/// タマゴ
+case BynameSubject04730
+/// ツッコミ
+case BynameSubject04740
+/// 仲間
+case BynameSubject04750
+/// ヒーロー
+case BynameSubject04760
+/// ボケ
+case BynameSubject04770
+/// 魔法使い
+case BynameSubject04780
+/// 頭脳
+case BynameSubject04790
+/// 海の幸
+case BynameSubject04800
+/// DNA
+case BynameSubject04810
+/// お寿司
+case BynameSubject04820
+/// カモン
+case BynameSubject04830
+/// シーフード
+case BynameSubject04840
+/// すりみ
+case BynameSubject04850
+/// スルメ
+case BynameSubject04860
+/// ナイス
+case BynameSubject04870
+/// ビタミン
+case BynameSubject04880
+/// ホコ
+case BynameSubject04890
+/// 干物
+case BynameSubject04910
+/// 筋肉
+case BynameSubject04920
+/// 残像
+case BynameSubject04930
+/// 盾
+case BynameSubject04940
+/// リーダー
+case BynameSubject04950
+/// 視聴者
+case BynameSubject04960
+/// 全一
+case BynameSubject04980
+/// 大会出場者
+case BynameSubject04990
+/// 1号
+case BynameSubject05000
+/// 2号
+case BynameSubject05010
+/// 4号
+case BynameSubject05020
+/// 8号
+case BynameSubject05030
+/// AI
+case BynameSubject05040
+/// LOVE
+case BynameSubject05050
+/// アイツ
+case BynameSubject05070
+/// アウトロー
+case BynameSubject05080
+/// アキレス腱
+case BynameSubject05090
+/// アナログゲーマー
+case BynameSubject05100
+/// アンドロイド
+case BynameSubject05110
+/// マスター
+case BynameSubject05120
+/// イカスミ
+case BynameSubject05130
+/// イカライフ
+case BynameSubject05140
+/// イカリング
+case BynameSubject05150
+/// イカ省略
+case BynameSubject05160
+/// インク
+case BynameSubject05170
+/// インフルエンサー
+case BynameSubject05180
+/// ウツボ
+case BynameSubject05190
+/// エレガンス
+case BynameSubject05200
+/// オオモノ
+case BynameSubject05210
+/// オカシラ
+case BynameSubject05220
+/// オタク
+case BynameSubject05230
+/// 踊り子
+case BynameSubject05240
+/// オマケ
+case BynameSubject05250
+/// お子様
+case BynameSubject05260
+/// ガキ大将
+case BynameSubject05280
+/// カメラマン
+case BynameSubject05290
+/// からあげ
+case BynameSubject05300
+/// カリスマ
+case BynameSubject05310
+/// カルパッチョ
+case BynameSubject05320
+/// キーボーディスト
+case BynameSubject05330
+/// ギタリスト
+case BynameSubject05340
+/// キャンパー
+case BynameSubject05350
+/// キューピッド
+case BynameSubject05360
+/// クラブ
+case BynameSubject05370
+/// クリエイター
+case BynameSubject05380
+/// グルーヴ
+case BynameSubject05390
+/// ゲーマー
+case BynameSubject05400
+/// 最終兵器
+case BynameSubject05410
+/// サバイバー
+case BynameSubject05430
+/// サブカル好き
+case BynameSubject05440
+/// サポーター
+case BynameSubject05450
+/// サメ
+case BynameSubject05460
+/// シャケライフ
+case BynameSubject05470
+/// スイマー
+case BynameSubject05480
+/// スタイル
+case BynameSubject05490
+/// ストライカー
+case BynameSubject05500
+/// ストリーマー
+case BynameSubject05510
+/// ゼラチン
+case BynameSubject05520
+/// セレブ
+case BynameSubject05530
+/// ソムリエ
+case BynameSubject05540
+/// タイトルホルダー
+case BynameSubject05550
+/// タコスミ
+case BynameSubject05560
+/// タコライフ
+case BynameSubject05570
+/// タタキ
+case BynameSubject05580
+/// チャレンジャー
+case BynameSubject05590
+/// ドジっ子
+case BynameSubject05610
+/// ドライバー
+case BynameSubject05620
+/// ドラマー
+case BynameSubject05630
+/// トルネード
+case BynameSubject05640
+/// トレーナー
+case BynameSubject05650
+/// パーティー好き
+case BynameSubject05660
+/// バイリンガル
+case BynameSubject05670
+/// はぐれ者
+case BynameSubject05680
+/// 馬車馬
+case BynameSubject05690
+/// はにかみやさん
+case BynameSubject05700
+/// パリピ
+case BynameSubject05710
+/// ピン芸人
+case BynameSubject05720
+/// ファイター
+case BynameSubject05730
+/// ファンタジー
+case BynameSubject05740
+/// プランクトン
+case BynameSubject05760
+/// ブランド好き
+case BynameSubject05770
+/// フリーランス
+case BynameSubject05780
+/// ブリザード
+case BynameSubject05790
+/// フレンド
+case BynameSubject05810
+/// ヘッドライナー
+case BynameSubject05820
+/// ベテラン
+case BynameSubject05830
+/// ボーカル
+case BynameSubject05840
+/// ボードゲーマー
+case BynameSubject05850
+/// ボス
+case BynameSubject05860
+/// ボディガード
+case BynameSubject05880
+/// マーメイド
+case BynameSubject05890
+/// マスク
+case BynameSubject05900
+/// マドンナ
+case BynameSubject05910
+/// マニア
+case BynameSubject05920
+/// ミステリー
+case BynameSubject05930
+/// めがねっ子
+case BynameSubject05950
+/// メンタル
+case BynameSubject05960
+/// メンバー
+case BynameSubject05970
+/// ライフスタイル
+case BynameSubject05980
+/// ラッパー
+case BynameSubject05990
+/// リモートワーカー
+case BynameSubject06000
+/// ルーキー
+case BynameSubject06010
+/// ロボット
+case BynameSubject06020
+/// 愛好家
+case BynameSubject06030
+/// 一般人
+case BynameSubject06050
+/// 一匹狼
+case BynameSubject06060
+/// 一文無し
+case BynameSubject06070
+/// 逸材
+case BynameSubject06080
+/// 王者
+case BynameSubject06100
+/// 温泉好き
+case BynameSubject06110
+/// 海人
+case BynameSubject06130
+/// 海水魚
+case BynameSubject06140
+/// 海坊主
+case BynameSubject06150
+/// 寒がり
+case BynameSubject06160
+/// 観光客
+case BynameSubject06170
+/// 希少部位
+case BynameSubject06180
+/// 気分
+case BynameSubject06190
+/// 記憶
+case BynameSubject06200
+/// 鬼
+case BynameSubject06210
+/// 巨人
+case BynameSubject06220
+/// 魚拓
+case BynameSubject06230
+/// 鏡
+case BynameSubject06250
+/// 軍艦巻き
+case BynameSubject06260
+/// 月
+case BynameSubject06270
+/// コブシ
+case BynameSubject06280
+/// 原始人
+case BynameSubject06290
+/// 玄人
+case BynameSubject06300
+/// 後輩
+case BynameSubject06310
+/// 工場長
+case BynameSubject06320
+/// 荒くれ者
+case BynameSubject06330
+/// 三枚目
+case BynameSubject06340
+/// 参謀
+case BynameSubject06350
+/// 刺身
+case BynameSubject06360
+/// 四天王
+case BynameSubject06370
+/// 子分
+case BynameSubject06380
+/// 師匠
+case BynameSubject06390
+/// 自由人
+case BynameSubject06410
+/// 舎弟
+case BynameSubject06420
+/// 若輩者
+case BynameSubject06430
+/// 従業員
+case BynameSubject06440
+/// 潤滑油
+case BynameSubject06450
+/// 初心者
+case BynameSubject06460
+/// 小悪魔
+case BynameSubject06470
+/// 上司
+case BynameSubject06480
+/// 新人バイト
+case BynameSubject06490
+/// 新人王
+case BynameSubject06500
+/// 新入生
+case BynameSubject06510
+/// 真実
+case BynameSubject06520
+/// 親分
+case BynameSubject06530
+/// 人気者
+case BynameSubject06550
+/// 人見知り
+case BynameSubject06570
+/// 人生
+case BynameSubject06580
+/// 人類
+case BynameSubject06590
+/// 責任者
+case BynameSubject06600
+/// 切り身
+case BynameSubject06610
+/// 節
+case BynameSubject06620
+/// 節約家
+case BynameSubject06630
+/// 仙人
+case BynameSubject06640
+/// センパイ
+case BynameSubject06650
+/// 戦士
+case BynameSubject06660
+/// バーサーカー
+case BynameSubject06670
+/// 草
+case BynameSubject06680
+/// 存在
+case BynameSubject06690
+/// 太陽
+case BynameSubject06700
+/// 代表
+case BynameSubject06710
+/// 大臣
+case BynameSubject06720
+/// 淡水魚
+case BynameSubject06730
+/// 団員
+case BynameSubject06740
+/// 着こなし
+case BynameSubject06750
+/// 虫
+case BynameSubject06760
+/// 挑戦者
+case BynameSubject06770
+/// 鳥
+case BynameSubject06780
+/// 追っかけ
+case BynameSubject06790
+/// 釣り人
+case BynameSubject06800
+/// 弟子
+case BynameSubject06810
+/// 的
+case BynameSubject06820
+/// 天才
+case BynameSubject06830
+/// 天使
+case BynameSubject06840
+/// 島民
+case BynameSubject06850
+/// 豆腐
+case BynameSubject06860
+/// 頭皮
+case BynameSubject06870
+/// 配管工
+case BynameSubject06890
+/// 配信者
+case BynameSubject06900
+/// 半魚人
+case BynameSubject06910
+/// 反復横とび
+case BynameSubject06920
+/// 漂流物
+case BynameSubject06930
+/// 部下
+case BynameSubject06940
+/// カベ
+case BynameSubject06950
+/// 捕食者
+case BynameSubject06960
+/// 方程式
+case BynameSubject06970
+/// 魔王
+case BynameSubject06980
+/// 名人
+case BynameSubject06990
+/// 命
+case BynameSubject07000
+/// 毛玉
+case BynameSubject07010
+/// 役者
+case BynameSubject07020
+/// オバケ
+case BynameSubject07030
+/// 竜宮城
+case BynameSubject07050
+/// 涙
+case BynameSubject07060
+/// 浪人
+case BynameSubject07070
+/// 丼
+case BynameSubject07090
+/// コーデ
+case BynameSubject07100
+/// カラー
+case BynameSubject07110
+/// おつまみ
+case BynameSubject07130
+/// したっぱ
+case BynameSubject07140
+/// 漬け
+case BynameSubject07150
+/// スイッチヒッター
+case BynameSubject07160
+/// チャンプルー
+case BynameSubject07170
+/// ナマズ
+case BynameSubject07180
+/// 極めし者
+case BynameSubject07190
+/// ベイビー
+case BynameSubject07200
+/// DJ
+case BynameSubject07210
+/// 申し子
+case BynameSubject07220
+/// フリーク
+case BynameSubject07230
+/// ヘッズ
+case BynameSubject07240
+/// ルック
+case BynameSubject07250
+/// Bボーイ
+case BynameSubject07270
+/// Bガール
+case BynameSubject07271
+/// スケーター
+case BynameSubject07280
+/// おぼっちゃま
+case BynameSubject07290
+/// おじょうさま
+case BynameSubject07291
+/// 二枚目
+case BynameSubject07300
+/// 船乗り
+case BynameSubject07310
+/// ファッションデザイナー
+case BynameSubject07320
+/// 巨匠
+case BynameSubject07330
+/// 店長
+case BynameSubject07340
+/// 推し
+case BynameSubject07350
+/// 花火
+case BynameSubject07360
+/// ファンタジスタ
+case BynameSubject07370
+/// タツ
+case BynameSubject07390
+/// ヨコヅナ
+case BynameSubject07400
+/// オミコシ
+case BynameSubject07410
+/// ニュアンス
+case BynameSubject07420
+/// 宇宙人
+case BynameSubject07430
+/// 新参者
+case BynameSubject07440
+/// ホープ
+case BynameSubject07450
+/// 司会者
+case BynameSubject07460
+/// スペシャルアタック
+case BynameSubject07470
+/// スペシャルマス
+case BynameSubject07480
+/// ランカー
+case BynameSubject07490
+/// 切り札
+case BynameSubject07500
+/// デッキ
+case BynameSubject07510
+/// 手札
+case BynameSubject07520
+/// 受験生
+case BynameSubject07530
+/// 人材
+case BynameSubject07540
+/// 哲学者
+case BynameSubject07550
+/// 一発屋
+case BynameSubject07560
+/// 集合
+case BynameSubject07570
+/// スリーブコレクター
+case BynameSubject07580
+/// ロッククライマー
+case BynameSubject07590
+/// バンジージャンプ
+case BynameSubject07600
+/// ひとりごと
+case BynameSubject07610
+/// ナマコフォン
+case BynameSubject07620
+/// さざ波
+case BynameSubject07630
+/// 塩
+case BynameSubject07640
+/// こしょう
+case BynameSubject07650
+/// マヨネーズ
+case BynameSubject07660
+/// 調味料
+case BynameSubject07670
+/// 価格
+case BynameSubject07680
+/// ヒマつぶし
+case BynameSubject07690
+/// カタマリ
+case BynameSubject07700
+/// リピーター
+case BynameSubject07710
+/// キノコ
+case BynameSubject07720
+/// スター
+case BynameSubject07730
+/// 能力者
+case BynameSubject07740
+/// 超人
+case BynameSubject07750
+/// ワカメ
+case BynameSubject07760
+/// コンブ
+case BynameSubject07770
+/// マリンスノー
+case BynameSubject07780
+/// 弁当
+case BynameSubject07790
+/// 魚卵
+case BynameSubject07800
+/// 鍋
+case BynameSubject07810
+/// 煮物
+case BynameSubject07820
+/// 定食
+case BynameSubject07830
+/// カレー
+case BynameSubject07840
+/// 情熱
+case BynameSubject07860
+/// 情報
+case BynameSubject07870
+/// 心臓
+case BynameSubject07890
+/// ハート
+case BynameSubject07900
+/// ロック
+case BynameSubject07910
+/// ジャズ
+case BynameSubject07920
+/// ソロ
+case BynameSubject07930
+/// 出汁
+case BynameSubject07940
+/// スープ
+case BynameSubject07950
+/// サラダ
+case BynameSubject07960
+/// 武士
+case BynameSubject07980
+/// おにぎり
+case BynameSubject08000
+/// パラドックス
+case BynameSubject08010
+/// ドレッシング
+case BynameSubject08040
+/// タレ
+case BynameSubject08050
+/// スパイス
+case BynameSubject08060
+/// 専門家
+case BynameSubject08070
+/// 専門店
+case BynameSubject08080
+/// マエストロ
+case BynameSubject08090
+/// ランナー
+case BynameSubject08100
+/// タイムアタック
+case BynameSubject08110
+/// ジュークボックス
+case BynameSubject08120
+/// 伝説
+case BynameSubject08130
+/// 笑い
+case BynameSubject08140
+/// テーマパーク
+case BynameSubject08150
+/// ヘアスタイル
+case BynameSubject08160
+/// アンコール
+case BynameSubject08180
+/// パイオニア
+case BynameSubject08200
+/// 嵐
+case BynameSubject08210
+/// そよ風
+case BynameSubject08220
+/// 観測者
+case BynameSubject08240
+/// 右腕
+case BynameSubject08250
+/// ウニ
+case BynameSubject08280
+/// ピアノ
+case BynameSubject08330
+/// ギター
+case BynameSubject08340
+/// キーボード
+case BynameSubject08350
+/// ドラム
+case BynameSubject08360
+/// カスタネット
+case BynameSubject08370
+/// リコーダー
+case BynameSubject08380
+/// シンバル
+case BynameSubject08390
+/// 楽器
+case BynameSubject08400
+/// プレジデント
+case BynameSubject08410
+/// プロジェクトマネージャー
+case BynameSubject08420
+/// ドクター
+case BynameSubject08430
+/// 弁護士
+case BynameSubject08440
+/// 会計士
+case BynameSubject08450
+/// ボディビルダー
+case BynameSubject08460
+/// 少年
+case BynameSubject08470
+/// 少女
+case BynameSubject08471
+/// ベース
+case BynameSubject08480
+/// サンバ
+case BynameSubject08490
+/// マッチョ
+case BynameSubject08500
+/// イケメン
+case BynameSubject08510
+/// 俳優
+case BynameSubject08540
+/// 努力家
+case BynameSubject08550
+/// 船長
+case BynameSubject08570
+/// 案内人
+case BynameSubject08580
+/// 未来人
+case BynameSubject08590
+/// プリン
+case BynameSubject08600
+/// にせもの
+case BynameSubject08610
+/// ブンシン
+case BynameSubject08620
+/// グリル
+case BynameSubject08630
+/// コジャケ
+case BynameSubject08640
+/// ドスコイ
+case BynameSubject08660
+/// タマヒロイ
+case BynameSubject08670
+/// バクダン
+case BynameSubject08680
+/// ヘビ
+case BynameSubject08690
+/// テッパン
+case BynameSubject08700
+/// タワー
+case BynameSubject08710
+/// モグラ
+case BynameSubject08720
+/// コウモリ
+case BynameSubject08730
+/// カタパッド
+case BynameSubject08740
+/// ハシラ
+case BynameSubject08750
+/// ダイバー
+case BynameSubject08760
+/// ナベブタ
+case BynameSubject08770
+/// テッキュウ
+case BynameSubject08780
+/// キンシャケ
+case BynameSubject08790
+/// ハコビヤ
+case BynameSubject08800
+/// ドロシャケ
+case BynameSubject08810
+/// ヒカリバエ
+case BynameSubject08820
+/// ウデマエ
+case BynameSubject08830
+/// ロマンチスト
+case BynameSubject08840
+/// 鉄人
+case BynameSubject08850
+/// フレーバー
+case BynameSubject08860
+/// エリート
+case BynameSubject08870
+/// がんばりやさん
+case BynameSubject08880
+/// 実力者
+case BynameSubject08890
+/// 開拓者
+case BynameSubject08900
+/// キャスト
+case BynameSubject08910
+/// エース
+case BynameSubject08920
+/// ナンバーワン
+case BynameSubject08930
+/// 第一人者
+case BynameSubject08940
+/// 大黒柱
+case BynameSubject08950
+/// 帝王
+case BynameSubject08960
+/// 英雄
+case BynameSubject08970
+/// 中級者
+case BynameSubject08980
+/// 上級者
+case BynameSubject08990
+/// 英傑
+case BynameSubject09000
+/// 勇士
+case BynameSubject09010
+/// 文化人
+case BynameSubject09020
+/// 優等生
+case BynameSubject09030
+/// ブレーン
+case BynameSubject09040
+/// 狩人
+case BynameSubject09050
+/// インテリ
+case BynameSubject09060
+/// 空論
+case BynameSubject09070
+/// 若手
+case BynameSubject09080
+/// マイスター
+case BynameSubject09090
+/// 親方
+case BynameSubject09100
+/// 局長
+case BynameSubject09110
+/// 世話役
+case BynameSubject09120
+/// 頭取
+case BynameSubject09130
+/// ピエロ
+case BynameSubject09140
+/// 主人公
+case BynameSubject09150
+/// 主催者
+case BynameSubject09160
+/// VIP
+case BynameSubject09170
+/// パフォーマー
+case BynameSubject09180
+/// 木こり
+case BynameSubject09190
+/// シェフ
+case BynameSubject09200
+/// エンジニア
+case BynameSubject09210
+/// 請負人
+case BynameSubject09220
+/// 大商人
+case BynameSubject09230
+/// 審判
+case BynameSubject09240
+/// アサリ
+case BynameSubject09250
+/// コンシェルジュ
+case BynameSubject09260
+/// ゲソ
+case BynameSubject09280
+/// 貴族
+case BynameSubject09290
+/// 途中
+case BynameSubject09300
+/// いたずらっ子
+case BynameSubject09310
+/// 大王
+case BynameSubject09320
+/// 中心人物
+case BynameSubject09330
+/// 立役者
+case BynameSubject09340
+/// ダークホース
+case BynameSubject09350
+/// キーパーソン
+case BynameSubject09360
+/// 黒幕
+case BynameSubject09370
+/// 策士
+case BynameSubject09380
+/// 渡り鳥
+case BynameSubject09390
+/// 流れ者
+case BynameSubject09400
+/// 修行僧
+case BynameSubject09410
+/// 遊牧民
+case BynameSubject09420
+/// 賞金稼ぎ
+case BynameSubject09430
+/// タイムトラベラー
+case BynameSubject09440
+/// 世代
+case BynameSubject09450
+/// 長老
+case BynameSubject09460
+/// キャプテン
+case BynameSubject09470
+/// ゲスト
+case BynameSubject09480
+/// 持ち主
+case BynameSubject09490
+/// ギャラリー
+case BynameSubject09500
+/// ビッグネーム
+case BynameSubject09510
+/// お得意様
+case BynameSubject09520
+/// パートナー
+case BynameSubject09530
+/// サイボーグ
+case BynameSubject09540
+/// 成功者
+case BynameSubject09550
+/// 影武者
+case BynameSubject09560
+/// 助っ人
+case BynameSubject09570
+/// 後ろ盾
+case BynameSubject09580
+/// 長者
+case BynameSubject09590
+/// 後見人
+case BynameSubject09600
+/// 補佐役
+case BynameSubject09610
+/// 源
+case BynameSubject09620
+/// 指揮官
+case BynameSubject09630
+/// 応援団
+case BynameSubject09640
+/// スタッフ
+case BynameSubject09650
+/// 何でも屋
+case BynameSubject09660
+/// エネルギー
+case BynameSubject09670
+/// エンジン
+case BynameSubject09680
+/// コンサルタント
+case BynameSubject09690
+/// アドバイザー
+case BynameSubject09700
+/// 裏方
+case BynameSubject09710
+/// 相棒
+case BynameSubject09720
+/// 評論家
+case BynameSubject09730
+/// お調子者
+case BynameSubject09740
+/// チーム
+case BynameSubject09750
+/// 道化師
+case BynameSubject09760
+/// プレイヤー
+case BynameSubject09770
+/// タレント
+case BynameSubject09780
+/// アナウンサー
+case BynameSubject09790
+/// 名手
+case BynameSubject09800
+/// ゴルファー
+case BynameSubject09820
+/// バッター
+case BynameSubject09830
+/// ピッチャー
+case BynameSubject09840
+/// キャッチャー
+case BynameSubject09850
+/// ピンチヒッター
+case BynameSubject09860
+/// 音楽家
+case BynameSubject09870
+/// コンダクター
+case BynameSubject09880
+/// 奏者
+case BynameSubject09890
+/// 作曲家
+case BynameSubject09900
+/// ピアニスト
+case BynameSubject09910
+/// 子役
+case BynameSubject09920
+/// 語り手
+case BynameSubject09930
+/// プロレスラー
+case BynameSubject09940
+/// スプリンター
+case BynameSubject09950
+/// ボクサー
+case BynameSubject09960
+/// エキストラ
+case BynameSubject09970
+/// 写真家
+case BynameSubject09980
+/// スタントマン
+case BynameSubject09990
+/// テッキュウ
+case CoopEnemySakeArtillery
+/// ドロシャケ
+case CoopEnemySakeBigMouth
+/// ドロシャケ
+case CoopEnemySakeBigMouthGold
+/// シャケコプター
+case CoopEnemySakeCopter
+/// ダイバー
+case CoopEnemySakeDolphin
+/// タマヒロイ
+case CoopEnemySakeFlyBagman
+/// ジョー
+case CoopEnemySakeJaw
+/// ハシラ
+case CoopEnemySakePillar
+/// タツ
+case CoopEnemySakeRope
+/// ナベブタ
+case CoopEnemySakeSaucer
+/// モグラ
+case CoopEnemySakediver
+/// グリル
+case CoopEnemySakedozer
+/// バクダン
+case CoopEnemySakelienBomber
+/// カタパッド
+case CoopEnemySakelienCupTwins
+/// ヨコヅナ
+case CoopEnemySakelienGiant
+/// キンシャケ
+case CoopEnemySakelienGolden
+/// ドスコイ
+case CoopEnemySakelienLarge
+/// テッパン
+case CoopEnemySakelienShield
+/// コジャケ
+case CoopEnemySakelienSmall
+/// ヘビ
+case CoopEnemySakelienSnake
+/// シャケ
+case CoopEnemySakelienStandard
+/// タワー
+case CoopEnemySakelienTower
+/// コウモリ
+case CoopEnemySakerocket
+/// オカシラ連合
+case CoopEnemyTriple
+/// かけだし
+case CoopGrade00
+/// はんにんまえ
+case CoopGrade01
+/// いちにんまえ
+case CoopGrade02
+/// じゅくれん
+case CoopGrade03
+/// たつじん
+case CoopGrade04
+/// たつじん＋1
+case CoopGrade05
+/// たつじん＋2
+case CoopGrade06
+/// たつじん＋3
+case CoopGrade07
+/// でんせつ
+case CoopGrade08
+/// バイトツナギ オレンジ
+case CoopSkinCop001
+/// バイトツナギ グリーン
+case CoopSkinCop002
+/// バイトツナギ イエロー
+case CoopSkinCop003
+/// バイトツナギ ピンク
+case CoopSkinCop004
+/// バイトツナギ ブルー
+case CoopSkinCop005
+/// バイトツナギ ブラック
+case CoopSkinCop006
+/// バイトツナギ ホワイト
+case CoopSkinCop007
+/// バイトウェーダー オレンジ
+case CoopSkinCop008
+/// バイトウェーダー ブラック
+case CoopSkinCop009
+/// バイトウェーダー イエロー
+case CoopSkinCop010
+/// バイトウェーダー ブラウン
+case CoopSkinCop011
+/// バイトツナギ ドット
+case CoopSkinCop012
+/// バイトツナギ カモ
+case CoopSkinCop013
+/// バイトツナギ ニシキ
+case CoopSkinCop014
+/// バイトウェーダー ピーチ
+case CoopSkinCop015
+/// バイトウェーダー ライム
+case CoopSkinCop016
+/// バイトウェーダー ベリー
+case CoopSkinCop017
+/// バイトツナギ シルバー
+case CoopSkinCop018
+/// バイトツナギ ゴールド
+case CoopSkinCop019
+/// バイトツナギ プリズム
+case CoopSkinCop020
+/// バイトツナギ ブロッカー
+case CoopSkinCop021
+/// スメーシーワールド
+case CoopStageCarousel
+/// ゴンズイ地区
+case CoopStageDistrict
+/// ナンプラー遺跡
+case CoopStageFactory
+/// グランドバンカラアリーナ
+case CoopStageManbou
+/// 各地で同時発生
+case CoopStageRandom
+/// タラポートショッピングパーク
+case CoopStageSection
+/// ムニ・エール海洋発電所
+case CoopStageShakedent
+/// すじこジャンクション跡
+case CoopStageShakehighway
+/// トキシラズいぶし工房
+case CoopStageShakelift
+/// どんぴこ闘技場
+case CoopStageShakerail
+/// 難破船ドン・ブラコ
+case CoopStageShakeship
+/// アラマキ砦
+case CoopStageShakespiral
+/// シェケナダム
+case CoopStageShakeup
+/// マテガイ放水路
+case CoopStageTemple
+/// アラマキ砦
+case CoopStageTutorial
+/// ？？？
+case CoopStageUnknown
+/// 海女美術大学
+case CoopStageUpland
+/// バイトに参加するみなさんへ
+case CoopTTitleCoop00
+/// イクラ集めとは？
+case CoopTTitleCoop01
+/// イクラ集めで簡単・高収入
+case CoopTTitleCoop02
+/// バイトを始めるにあたって
+case CoopTTitleCoop03
+/// バイトの流れ・準備
+case CoopTTitleCoop04
+/// バイトの流れ・現地
+case CoopTTitleCoop05
+/// 仲間との共同作業・絆
+case CoopTTitleCoop06
+/// バイトのノルマについて
+case CoopTTitleCoop07
+/// 報酬について
+case CoopTTitleCoop08
+/// バイト評価制度
+case CoopTTitleCoop09
+/// 評価ポイント
+case CoopTTitleCoop10
+/// バイト作業のまとめ
+case CoopTTitleCoop11
+/// かけがえのない、あなたへ
+case CoopTTitleCoop12
+/// オカシラシャケについて
+case CoopTTitleCoop13
+/// ドスコイ
+case CoopTTitleCoop21
+/// タマヒロイ
+case CoopTTitleCoop22
+/// バクダン
+case CoopTTitleCoop24
+/// ヘビ
+case CoopTTitleCoop25
+/// テッパン
+case CoopTTitleCoop26
+/// タワー
+case CoopTTitleCoop27
+/// モグラ
+case CoopTTitleCoop28
+/// コウモリ
+case CoopTTitleCoop29
+/// カタパッド
+case CoopTTitleCoop30
+/// -
+case CoopTTitleCoop32
+/// ラッシュ
+case CoopTTitleCoop33
+/// 霧
+case CoopTTitleCoop34
+/// グリル発進
+case CoopTTitleCoop35
+/// ドスコイ大量発生
+case CoopTTitleCoop36
+/// キンシャケ探し
+case CoopTTitleCoop37
+/// ハコビヤ襲来
+case CoopTTitleCoop38
+/// ハシラ
+case CoopTTitleCoop39
+/// ダイバー
+case CoopTTitleCoop40
+/// ナベブタ
+case CoopTTitleCoop41
+/// テッキュウ
+case CoopTTitleCoop42
+/// ドロシャケ噴出
+case CoopTTitleCoop43
+/// 巨大タツマキ
+case CoopTTitleCoop44
+/// いま
+case CmnMenu100
+/// もうすぐ
+case CmnMenu101
+/// オープン！
+case CmnMenu102
+/// オープン！
+case CmnMenu103
+/// もうすぐ
+case CmnMenu104
+/// 次回
+case CmnMenu105
+/// そのつぎ
+case CmnMenu106
+/// ビッグラン
+case CmnMenu120
+/// バイトチームコンテストへ
+case CmnMenu150
+/// いつものバイトへ
+case CmnMenu151
+/// ？？？
+case CmnMenu199
+/// ×
+case CmnMenu201
+/// レベル 
+case CmnMenu240
+///  まで
+case CmnMenu250
+/// クレーター
+case CmnMenu001
+/// オルタナ
+case CmnMenu002
+/// そのつぎ
+case CmnMenu098
+/// つぎ
+case CmnMenu099
+/// とじる
+case CmnMenuLBottom00TInfo00
+/// もどる
+case CmnMenuLBottom01TInfo00
+/// もどる
+case CmnMenuLBottom02TInfo00
+/// もどる
+case CmnMenuLBottom03TInfo00
+/// もどる
+case CmnMenuLBottom04TInfo00
+/// カスタマイズ
+case CmnMenuLBottom05TInfo00
+/// もどる
+case CmnMenuLBottom08TInfo00
+/// カードリスト
+case CmnMenuLBtnCard00TBlackText00
+/// もっと見る
+case CmnMenuLBtnCatalog00TBlackText00
+/// フェスマッチ(オープン)
+case CmnMenuLBtnFestStage00TBlackText00
+/// トリカラマッチ
+case CmnMenuLBtnFestStage01TBlackText00
+/// SALMON  RUN
+case CmnMenuLBtnFestStage02TBlackText00
+/// フェスマッチ(チャレンジ)
+case CmnMenuLBtnFestStage03TBlackText00
+/// ロビー
+case CmnMenuLBtnMapL00TBlackText00
+/// 広場
+case CmnMenuLBtnMap01TText00
+/// イカッチャ
+case CmnMenuLBtnMap03TText00
+/// クマサン商会
+case CmnMenuLBtnMap04TText00
+/// ブキ屋
+case CmnMenuLBtnMap05TText00
+/// アタマ屋
+case CmnMenuLBtnMap06TText00
+/// フク屋
+case CmnMenuLBtnMap07TText00
+/// クツ屋
+case CmnMenuLBtnMap08TText00
+/// ザッカ屋
+case CmnMenuLBtnMap09TText00
+/// 駅
+case CmnMenuLBtnMap10TText00
+/// 変更する
+case CmnMenuLBtnNpl00TEdit00
+/// ノーマル
+case CmnMenuLBtnOption00TBtnL00
+/// リバース
+case CmnMenuLBtnOption00TBtnR00
+/// 上下操作
+case CmnMenuLBtnOption00THEader00
+/// ジャイロ操作がONのときは無効です
+case CmnMenuLBtnOption00TMsg00
+/// ノーマル
+case CmnMenuLBtnOption01TBtnL00
+/// リバース
+case CmnMenuLBtnOption01TBtnR00
+/// 左右操作
+case CmnMenuLBtnOption01THeader00
+/// ON
+case CmnMenuLBtnOption02TBtnL00
+/// OFF
+case CmnMenuLBtnOption02TBtnR00
+/// ジャイロ操作
+case CmnMenuLBtnOption02THeader00
+/// ノーマル
+case CmnMenuLBtnOption03TBtnL00
+/// リバース
+case CmnMenuLBtnOption03TBtnR00
+/// 上下操作
+case CmnMenuLBtnOption03THeader00
+/// ジャイロ操作がONのときは無効です
+case CmnMenuLBtnOption03TMsg00
+/// ノーマル
+case CmnMenuLBtnOption04TBtnL00
+/// リバース
+case CmnMenuLBtnOption04TBtnR00
+/// 左右操作
+case CmnMenuLBtnOption04THEader00
+/// ON
+case CmnMenuLBtnOption05TBtnL00
+/// OFF
+case CmnMenuLBtnOption05TBtnR00
+/// ジャイロ操作
+case CmnMenuLBtnOption05THEader00
+/// 表示ON
+case CmnMenuLBtnOption06TBtnL00
+/// 表示OFF
+case CmnMenuLBtnOption06TBtnR00
+/// 投稿の表示
+case CmnMenuLBtnOption06THEader00
+/// みまもり設定で制限されています
+case CmnMenuLBtnOption06TMsg00
+/// OFF
+case CmnMenuLBtnOption07TBtnL00
+/// ON
+case CmnMenuLBtnOption07TBtnR00
+/// 色覚サポート
+case CmnMenuLBtnOption07THEader00
+/// 送信ON
+case CmnMenuLBtnOption08TBtnL00
+/// 送信OFF
+case CmnMenuLBtnOption08TBtnR00
+/// ロビーへの通知
+case CmnMenuLBtnOption08THEader00
+/// 色覚サポート
+case CmnMenuLBtnOption09THEader00
+/// レギュラーマッチ
+case CmnMenuLBtnStage00TBlackText00
+/// バンカラマッチ(チャレンジ)
+case CmnMenuLBtnStage01TBlackText00
+/// Xマッチ
+case CmnMenuLBtnStage02TBlackText00
+/// イベントマッチ
+case CmnMenuLBtnStage03TBlackText00
+/// SALMON  RUN
+case CmnMenuLBtnStage04TBlackText00
+/// バンカラマッチ(オープン)
+case CmnMenuLBtnStage05TBlackText00
+/// おいこみボーナス
+case CmnMenuLCatalog00TEventBonus00
+/// ×1.5
+case CmnMenuLCatalog00TEventBonus01
+/// MAX
+case CmnMenuLCatalog00TMax00
+/// カタログレベル
+case CmnMenuLCatalog00TRank00
+/// ジャイロ操作感度
+case CmnMenuLGaugeOption00THEader00
+/// ジャイロ操作がOFFのときは無効です
+case CmnMenuLGaugeOption00TMsg00
+/// 操作感度
+case CmnMenuLGaugeOption01THeader00
+/// ジャイロ操作感度
+case CmnMenuLGaugeOption02THeader00
+/// ジャイロ操作がOFFのときは無効です
+case CmnMenuLGaugeOption02TMsg00
+/// 操作感度
+case CmnMenuLGaugeOption03THeader00
+/// 次のアイテム
+case CmnMenuLNextItem00TNextItem00
+/// OFF
+case CmnMenuLOptionColor00LBtn00TColor00
+/// 1
+case CmnMenuLOptionColor00LBtn01TColor00
+/// 2
+case CmnMenuLOptionColor00LBtn02TColor00
+/// もどる
+case CmnMenuLOptionColor00LGuide00TInfo00
+/// 色覚サポートはOFFです
+case CmnMenuLOptionColor00TExplain00
+/// 2色のバトル
+case CmnMenuLOptionColor00TPreview00
+/// トリカラバトル
+case CmnMenuLOptionColor00TPreview01
+/// TVモード/テーブルモード
+case CmnMenuLOption00TBlackText00
+/// 携帯モード
+case CmnMenuLOption01TBlackText00
+/// その他
+case CmnMenuLOption02TBlackText00
+/// プレイヤー設定
+case CmnMenuLPlayerEdit00TBlackText00
+/// そうび
+case CmnMenuLPlayer00TBlackText00
+/// カタログ
+case CmnMenuLPlayer01TBlackText00
+/// ギアパワー
+case CmnMenuLPlayer02TBlackText00
+/// ナワバトラー
+case CmnMenuLPlayer03TBlackText00
+/// MAX
+case CmnMenuLRankMng00TMax01
+/// ナワバトランク
+case CmnMenuLRankMng00TRankHeader01
+/// MAX
+case CmnMenuLRank00TMax00
+/// ランク
+case CmnMenuLRank00TRankHeader00
+/// ルール確認
+case CmnMenuLStage00TExplain00
+/// つぎ
+case CmnMenuLStage01TMode01
+/// ？
+case CmnMenuLStage02LIconGiant00TRandom00
+/// そのつぎ
+case CmnMenuLStage02TMode01
+/// さんぽする
+case CmnMenuLStage02TWalk00
+/// バイトチームコンテスト
+case CmnMenuLStage03TCoopRule00
+/// マップ
+case CmnMenuLTab00TText00
+/// ステージ情報
+case CmnMenuLTab01TText00
+/// プレイヤー情報
+case CmnMenuLTab02TText00
+/// オプション
+case CmnMenuLTab03TText00
+/// カタログは ザッカ屋でゲットできます
+case CmnMenuTCatalog00
+/// 持っているかけらの数
+case CmnMenuTCount01
+/// テレビ画面に映したり Switch本体を置いてプレイするときのカメラオプションを設定できます
+case CmnMenuTExplainCamera00
+/// Switch本体を持ってプレイするときのカメラオプションを設定できます
+case CmnMenuTExplainCamera01
+/// インターネット対戦などで インクカラーが見分けやすくなるよう、色を固定します
+case CmnMenuTExplainCamera02
+/// ユーザーが投稿した内容を プレイ中に表示する機能の ON/OFFを切り替えます
+case CmnMenuTExplainCamera03
+/// 自分のプレイ状況の通知を フレンドや同じチャンネルのプレイヤーのロビーへ 自動で送信します
+case CmnMenuTExplainCamera04
+/// ザッカ屋に行って 最後のアイテムをもらおう！
+case CmnMenuTMaxNext00
+/// COMPLETE!!
+case CmnMenuTMax00
+/// ステージ情報がありませんこのモードを遊ぶには インターネットに接続して最新のステージ情報を受信する必要があります
+case CmnMenuTOffStage00
+/// ショップ
+case CmnMenuTShop00
+/// ウデマエ
+case CmnMenuTUdemaeTitle00
+/// Xパワー
+case CmnMenuTXPower00
+/// クマサン印のブラスター
+case WeaponInfoMainBlasterBear
+/// Rブラスターエリート
+case WeaponInfoMainBlasterLightLong
+/// クラッシュブラスター
+case WeaponInfoMainBlasterLightShort
+/// ラピッドブラスター
+case WeaponInfoMainBlasterLight
+/// ロングブラスター
+case WeaponInfoMainBlasterLong
+/// ホットブラスター
+case WeaponInfoMainBlasterMiddle
+/// S-BLAST92
+case WeaponInfoMainBlasterPrecision
+/// ノヴァブラスター
+case WeaponInfoMainBlasterShort
+/// フィンセント
+case WeaponInfoMainBrushHeavy
+/// パブロ
+case WeaponInfoMainBrushMini
+/// ホクサイ
+case WeaponInfoMainBrushNormal
+/// クマサン印のチャージャー
+case WeaponInfoMainChargerBear
+/// ソイチューバー
+case WeaponInfoMainChargerKeeper
+/// 14式竹筒銃・甲
+case WeaponInfoMainChargerLight
+/// リッター4K
+case WeaponInfoMainChargerLong
+/// スプラチャージャー
+case WeaponInfoMainChargerNormal
+/// R-PEN/5H
+case WeaponInfoMainChargerPencil
+/// スクイックリンα
+case WeaponInfoMainChargerQuick
+/// クマサン印のマニューバー
+case WeaponInfoMainManeuverBear
+/// デュアルスイーパー
+case WeaponInfoMainManeuverDual
+/// ケルビン525
+case WeaponInfoMainManeuverGallon
+/// ガエンFF
+case WeaponInfoMainManeuverLong
+/// スプラマニューバー
+case WeaponInfoMainManeuverNormal
+/// スパッタリー
+case WeaponInfoMainManeuverShort
+/// クアッドホッパーブラック
+case WeaponInfoMainManeuverStepper
+/// クマサン印のローラー
+case WeaponInfoMainRollerBear
+/// カーボンローラー
+case WeaponInfoMainRollerCompact
+/// ダイナモローラー
+case WeaponInfoMainRollerHeavy
+/// ヴァリアブルローラー
+case WeaponInfoMainRollerHunter
+/// スプラローラー
+case WeaponInfoMainRollerNormal
+/// ワイドローラー
+case WeaponInfoMainRollerWide
+/// クマサン印のワイパー
+case WeaponInfoMainSaberBear
+/// デンタルワイパーミント
+case WeaponInfoMainSaberHeavy
+/// ドライブワイパー
+case WeaponInfoMainSaberLite
+/// ジムワイパー
+case WeaponInfoMainSaberNormal
+/// クマサン印のシェルター
+case WeaponInfoMainShelterBear
+/// スパイガジェット
+case WeaponInfoMainShelterCompact
+/// 24式張替傘・甲
+case WeaponInfoMainShelterFocus
+/// パラシェルター
+case WeaponInfoMainShelterNormal
+/// キャンピングシェルター
+case WeaponInfoMainShelterWide
+/// プロモデラーMG
+case WeaponInfoMainShooterBlaze
+/// プライムシューター
+case WeaponInfoMainShooterExpert
+/// わかばシューター
+case WeaponInfoMainShooterFirst
+/// ボトルガイザー
+case WeaponInfoMainShooterFlash
+/// .52ガロン
+case WeaponInfoMainShooterGravity
+/// .96ガロン
+case WeaponInfoMainShooterHeavy
+/// ジェットスイーパー
+case WeaponInfoMainShooterLong
+/// スプラシューター
+case WeaponInfoMainShooterNormal
+/// シャープマーカー
+case WeaponInfoMainShooterPrecision
+/// スペースシューター
+case WeaponInfoMainShooterQuickLong
+/// N-ZAP85
+case WeaponInfoMainShooterQuickMiddle
+/// ボールドマーカー
+case WeaponInfoMainShooterShort
+/// H3リールガン
+case WeaponInfoMainShooterTripleMiddle
+/// L3リールガン
+case WeaponInfoMainShooterTripleQuick
+/// オーバーフロッシャー
+case WeaponInfoMainSlosherBathtub
+/// クマサン印のスロッシャー
+case WeaponInfoMainSlosherBear
+/// ヒッセン
+case WeaponInfoMainSlosherDiffusion
+/// モップリン
+case WeaponInfoMainSlosherDouble
+/// スクリュースロッシャー
+case WeaponInfoMainSlosherLauncher
+/// バケットスロッシャー
+case WeaponInfoMainSlosherStrong
+/// エクスプロッシャー
+case WeaponInfoMainSlosherWashtub
+/// クーゲルシュライバー
+case WeaponInfoMainSpinnerDownpour
+/// イグザミナー
+case WeaponInfoMainSpinnerHyperShort
+/// ハイドラント
+case WeaponInfoMainSpinnerHyper
+/// スプラスピナー
+case WeaponInfoMainSpinnerQuick
+/// ノーチラス47
+case WeaponInfoMainSpinnerSerein
+/// バレルスピナー
+case WeaponInfoMainSpinnerStandard
+/// クマサン印のストリンガー
+case WeaponInfoMainStringerBear
+/// フルイドV
+case WeaponInfoMainStringerExplosion
+/// トライストリンガー
+case WeaponInfoMainStringerNormal
+/// LACT-450
+case WeaponInfoMainStringerShort
+/// テイオウイカ
+case WeaponInfoSpecialSpCastle
+/// カニタンク
+case WeaponInfoSpecialSpChariot
+/// ジェットパック
+case WeaponInfoSpecialSpJetpack
+/// メガホンレーザー5.1ch
+case WeaponInfoSpecialSpMicroLaser
+/// ナイスダマ
+case WeaponInfoSpecialSpNiceBall
+/// ウルトラチャクチ
+case WeaponInfoSpecialSpPogo
+/// ホップソナー
+case WeaponInfoSpecialSpShockSonar
+/// サメライド
+case WeaponInfoSpecialSpSkewer
+/// スーパーチャクチ
+case WeaponInfoSpecialSpSuperLanding
+/// トリプルトルネード
+case WeaponInfoSpecialSpTripleTornado
+/// ウルトラショット
+case WeaponInfoSpecialSpUltraShot
+/// 連射力
+case WeaponParamBlaze
+/// チャージ速度
+case WeaponParamCharge
+/// 耐久力
+case WeaponParamDefence
+/// 爆発力
+case WeaponParamExplosion
+/// 機動性
+case WeaponParamMobility
+/// 塗り進み速度
+case WeaponParamPaintSpeed
+/// 攻撃力
+case WeaponParamPower
+/// 射程
+case WeaponParamRange
+/// 軽さ
+case WeaponParamWeight
+/// 二つ名
+case CatalogByname
+/// カードパック
+case CatalogCardPack
+/// フレッシュカードパック
+case CatalogCardPackFresh
+/// カードスリーブ
+case CatalogCardSleeve
+/// エモート
+case CatalogEmote
+/// オキモノ
+case CatalogFigure
+/// ギアパワーのかけら
+case CatalogGearSkillChip
+/// プレート
+case CatalogNamePlateBg
+/// ステッカー
+case CatalogSticker
+/// カタログ
+case CatalogAppName
+/// 引き換えできます
+case CatalogAvailable
+/// ビッグラン開催中！ポイント1.2倍！
+case CatalogBigrunBonus
+/// カタログレベルを上げてミステリーボックスをゲット！
+case CatalogBonusDescription
+/// レベル10ごとにミステリーボックスをゲットできます
+case CatalogBonusGuide
+/// ボーナス！
+case CatalogBonusTitle
+/// コンプリート！
+case CatalogComplete
+/// %@ / %@
+case CatalogCurrent
+/// Lv. %@
+case CatalogCurrentExtraLevel
+/// るいけい %@ p
+case CatalogCurrentPoint
+/// 本日初勝利でもれなく%@ポイントゲット！
+case CatalogDailyBonus
+/// ドリンクチケット
+case CatalogDrinkTicket
+/// もうすぐ %@ が終了します。カタログポイント1.5倍サービス中！
+case CatalogEndOfSeason
+/// フェス開催中！ポイント1.2倍！
+case CatalogFesBonus
+/// フードチケット
+case CatalogFoodTicket
+/// ゲット！
+case CatalogGot
+/// ランクを4まで上げてザッカ屋でカタログを受け取ろう！
+case CatalogGuide
+/// x%@
+case CatalogItemAmount
+/// カタログレベル
+case CatalogLevel
+/// %@ まで
+case CatalogLimit
+/// ミステリーボックス
+case CatalogMysteryBox
+/// つぎ
+case CatalogNextBonus
+/// ページ %@
+case CatalogPage
+/// %@ / %@ ページ
+case CatalogPager
+/// %@ 開催中！
+case CatalogPeriod
+/// カタログポイント
+case CatalogPoint
+/// ザッカ屋
+case CatalogSignboard
+/// カタログ
+case CatalogTitle
+/// イカしたカタログ 配布中！
+case CatalogWelcome
+/// バトルでカタログポイントを貯めてアイテムをゲットしよう！
+case CatalogWelcomeDescription
+/// 旅の途中でテンションバクアゲ～！なグラフィティ見つけたから送るね～
+case ChallengeAboutGraffiti
+/// すべてのチャレンジを支援するために必要なポイントが貯まりました
+case ChallengeAllChallengesCompletable
+/// すべてのチャレンジの支援を達成しました
+case ChallengeAllChallengesCompleted
+/// ワタシたちクマサン商会は、この社会で暮らす全てのみなさんの生活をより豊かにするため、日々イクラ集めに取り組んでいます。そんななか、ロブさんの旅を知り、いつでもアゲ続けていく精神を忘れないロブさんの姿に非常に感動を覚えました。さらにロブさんが旅のなかでワタシたちに見せてくれる景色は、とても興味深く、好奇心をかき立てるものばかりでした。ロブさんが旅をアゲ終えたという知らせに、ワタシたちも寂しさを感じていましたが、再び旅を始められるとのことで、「次の旅にはクマサン商会からもぜひ何か協力させてください」と声をかけさせてもらい、今回のコラボレーションが実現しました。
+case ChallengeAnnouncementOfGrizzcoIndustriesStory1
+/// 新しい旅では、みなさんがバイトで塗ったぶんの塗りポイントも、ロブさんの旅の支援にあてることが可能になります。代わりに、これまでに貯めた塗りポイントのうち、余った塗りポイントは新しい旅では使えないのでリセットさせていただきます。ロブさんの挑戦をバイトで支援していくことは、あなたの人生の新たなやりがいを見つけることにもつながるかもしれません。
+case ChallengeAnnouncementOfGrizzcoIndustriesStory2
+/// ワタシたちクマサン商会は、明るい未来の発展のため、ワタシたちができることを日々考え、行動し続けています。クマサン商会は挑戦し続けるあなたを、全力で応援しサポートします。感謝と喜びから始まる社会を目指す。それがワタシたちクマサン商会です。
+case ChallengeAnnouncementOfGrizzcoIndustriesStory3
+/// クマサン商会から旅を愛するみなさんへ
+case ChallengeAnnouncementOfGrizzcoIndustriesTitle
+/// ロブイチ
+case ChallengeAppName
+/// ブラック
+case ChallengeBlack
+/// ブルー
+case ChallengeBlue
+/// チャレンジャー
+case ChallengeChallenger
+/// 支援するチャレンジを選ぶ
+case ChallengeChooseChallenge
+/// 達成しました
+case ChallengeClear
+/// コンプリート！
+case ChallengeComplete
+/// コンプリート特典
+case ChallengeCompleteReward
+/// 支援に使える塗りポイント
+case ChallengeCurrentPoint
+/// ポイント MAX!
+case ChallengeCurrentPointFull
+/// ロブから支援者のみなさまへ
+case ChallengeDearAllOfYou
+/// グラフィティのダウンロード
+case ChallengeDownloadGraffiti
+/// アイコンのダウンロード
+case ChallengeDownloadIcon
+/// 壁紙のダウンロード
+case ChallengeDownloadWallpaper
+/// グリーン
+case ChallengeGreen
+/// お礼のグラフィティをダウンロードできます
+case ChallengeGuideGraffiti
+/// リワードの二つ名をロビー端末から受け取れます
+case ChallengeGuideRewardByName
+/// リワードのアイコンをダウンロードできます
+case ChallengeGuideRewardIcon
+/// リワードの画像をダウンロードできます
+case ChallengeGuideRewardImage
+/// リワードのスリーブをロビー端末から受け取れます
+case ChallengeGuideRewardSleeve
+/// 塗りまくって貯めたポイントでロブの旅を応援しよう！旅の思い出も手に入るかも？！
+case ChallengeHowToPlay
+/// ジャーニー %@
+case ChallengeJourney
+/// 支援者求ム！
+case ChallengeLookingForSupporters
+/// オレンジ
+case ChallengeOrange
+/// %@p
+case ChallengePoint
+/// 支援に必要な塗りポイント
+case ChallengePointForSupport
+/// （あと %@p 不足しています）
+case ChallengePointNotEnough
+/// パープル
+case ChallengePurple
+/// レッド
+case ChallengeRed
+/// コンプリートまで あと %@
+case ChallengeRemainsOfChallenge
+/// ロブ
+case ChallengeRob
+/// ロブのアゲアゲ旅
+case ChallengeRobJourney
+/// 色を選んでダウンロードしてください
+case ChallengeSelectColor
+/// サイズを選んでダウンロードしてください
+case ChallengeSelectSize
+/// ポイント送信中...
+case ChallengeSendingPoint
+/// みんなアガッてる～？ 孤高のアゲアゲ旅人ロブだよ！このプロジェクトは、僕のこれまでの歩みを振り返る旅、その旅のクラウドファンディングなんだ～！
+case ChallengeStory1
+/// 僕がこれまでに立ち寄ったアツアツでアゲアゲなアツアゲスポットを自転車で一周するよ！そこで自分の「今」の立ち位置をジュワ～ッと見つめなおしてアゲなおそうと思うんだよね～。そんな旅の中で得た「気づき」「発見」「Notice」を支援してくれるみんなにもシェアしたいと思ってるんだ～。これってテンションフライハイっしょ？！
+case ChallengeStory2
+/// 旅するなかでバクアゲ～！と思った風景写真や思い出の品は支援してくれたみんなにも送るからね～。『みんなも一緒に旅する仲間っしょ！』っていう、一体感とかグルーヴを生み出せたらもっとアガるよね～！そんなこんなでこれからアゲアゲの旅をサクッと始めちゃうんでヨロシク～！
+case ChallengeStory3
+/// 支援する
+case ChallengeSupport
+/// 支援済み
+case ChallengeSupported
+/// ※ 画像の加工や営利目的での利用、再配布はご遠慮ください。
+case ChallengeTermOfUse
+/// ロブイチ
+case ChallengeTitle
+/// 無色
+case ChallengeTransparent
+/// ターコイズ
+case ChallengeTurquoise
+/// ホワイト
+case ChallengeWhite
+/// イエロー
+case ChallengeYellow
+/// %@p 持っています
+case ChallengeYourPoint
+/// %@%
+case Common
+/// キャンセル
+case CommonCancel
+/// ガチアサリ
+case CommonClamBlitz
+/// 閉じる
+case CommonClose
+/// : 
+case CommonColonRule
+/// ビッグラン
+case CommonCoopBigRun
+/// オカシラ：ランダム
+case CommonCoopBossRandom
+/// ？
+case CommonCoopBossRandomSign
+/// バイトチームコンテスト
+case CommonCoopTeamContest
+/// QRコードは、株式会社デンソーウェーブの登録商標です。
+case CommonCopyrightQrCode
+/// 決定
+case CommonDecide
+/// ダウンロード
+case CommonDownload
+/// おわる
+case CommonEnd
+/// はてな
+case CommonGearPowerBlank
+/// ホーム
+case CommonHome
+/// イカリング３
+case CommonIkaring3
+/// 戻る
+case CommonNavBack
+/// ロード中
+case CommonNowLoading
+/// ひっぱって更新
+case CommonPullToRefresh
+/// ガチホコバトル
+case CommonRainmaker
+/// シェア
+case CommonShare
+/// ガチエリア
+case CommonSplatZones
+/// タイカイサポート
+case CommonTournamentManager
+/// ガチヤグラ
+case CommonTowerControl
+/// トリカラアタック
+case CommonTricolor
+/// トリカラマッチ
+case CommonTricolorMatch
+/// ナワバリバトル
+case CommonTurfWar
+/// はてな
+case CommonWpnNotfound
+/// シフトごとのバイト回数には通信切断などで中断したバイトは含まれません
+case CoopHistoryAnnotation01
+/// 出現数
+case CoopHistoryAvailable
+/// 出現したオカシラシャケ
+case CoopHistoryAvailableBoss
+/// 平均クリアWAVE数
+case CoopHistoryAverageClearWaves
+/// ビッグラン
+case CoopHistoryBigrun
+/// 銅
+case CoopHistoryBigrunBronze
+/// 金
+case CoopHistoryBigrunGold
+/// 銀
+case CoopHistoryBigrunSilver
+/// クリアボーナス
+case CoopHistoryBonus
+/// オカシラシャケ出現！
+case CoopHistoryBossAvailable
+/// Clear!!
+case CoopHistoryClear
+/// 今回のギア
+case CoopHistoryCurrentReward
+/// キケン度
+case CoopHistoryDangerRatio
+/// オカシラシャケ撃破！
+case CoopHistoryDefeatBoss
+/// オカシラシャケを撃退した回数
+case CoopHistoryDefeatBossCount
+/// 倒した！
+case CoopHistoryDefeated
+/// 倒したオオモノシャケ
+case CoopHistoryDefeatedEnemies
+/// ※カッコ内の数字は自分で倒した数です
+case CoopHistoryDefeatedEnemiesGuide
+/// 集めたイクラ
+case CoopHistoryDeliverCount
+/// オオモノシャケ
+case CoopHistoryEnemy
+/// EX-WAVE
+case CoopHistoryExWave
+/// Failure
+case CoopHistoryFailure
+/// GJ!
+case CoopHistoryGj
+/// バイトヒストリー一覧に戻る
+case CoopHistoryGoToStats
+/// 集めた金イクラ
+case CoopHistoryGoldenDeliverCount
+/// ハイスコア
+case CoopHistoryHighestScore
+/// バイトヒストリー
+case CoopHistoryHistory
+/// 獲得ポイント
+case CoopHistoryJobPoint
+/// 評価レート
+case CoopHistoryJobRatio
+/// クマサンポイントカード
+case CoopHistoryKumaPointCard
+/// 最新のバイトへ
+case CoopHistoryLatest
+/// 現在の期間限定ポイント
+case CoopHistoryLimitedPoint
+/// 今月のギア
+case CoopHistoryMonthlyReward
+/// 次のバイト
+case CoopHistoryNext
+/// NG
+case CoopHistoryNg
+/// バイトヒストリーがありません
+case CoopHistoryNoData
+/// バイトヒストリーを表示できません
+case CoopHistoryNotAvailable
+/// 閲覧できるバイトヒストリーは、最新の50戦までです。
+case CoopHistoryNotAvailableDescription
+/// 倒せなかった...
+case CoopHistoryNotDefeated
+/// %@p
+case CoopHistoryP
+/// バイト回数
+case CoopHistoryPlayCount
+/// %@バイト
+case CoopHistoryPlayCountBySchedule
+/// 前のバイト
+case CoopHistoryPrevious
+/// プライベート
+case CoopHistoryPrivate
+/// スタッフ募集！
+case CoopHistoryRecruit
+/// 初心者でも安心！元気で明るい方大歓迎！アットホームな職場でアルバイトをしてみませんか？
+case CoopHistoryRecruitDescription
+/// 簡単
+case CoopHistoryRecruitTag1
+/// イクラ集め
+case CoopHistoryRecruitTag2
+/// ～イカした制服でイクラ集め～
+case CoopHistoryRecruitTitle
+/// いつものバイト
+case CoopHistoryRegular
+/// 現在のポイント
+case CoopHistoryRegularPoint
+/// 助けた回数
+case CoopHistoryRescueCount
+/// たすけてもらったかいすう
+case CoopHistoryRescuedCount
+/// ウロコ
+case CoopHistoryScale
+/// ドウウロコ
+case CoopHistoryScaleBronze
+/// キンウロコ
+case CoopHistoryScaleGold
+/// ギンウロコ
+case CoopHistoryScaleSilver
+/// バイトスコア
+case CoopHistoryScore
+/// スケジュールを見る
+case CoopHistorySeeSchedule
+/// オカシラゲージ
+case CoopHistorySmellMeter
+/// 支給ブキ
+case CoopHistorySupplyWeapon
+/// バイトチームコンテスト
+case CoopHistoryTeamContest
+/// サーモンラン
+case CoopHistoryTitle
+/// るいけいポイント
+case CoopHistoryTotalPoint
+/// WAVE %@
+case CoopHistoryWave
+/// 干潮
+case CoopHistoryWaveLevel0
+/// 普通
+case CoopHistoryWaveLevel1
+/// 満潮
+case CoopHistoryWaveLevel2
+/// バイト
+case CoopRecordAppName
+/// 参加回数： %@
+case CoopRecordAttended
+/// ビッグラン
+case CoopRecordBigrun
+/// 銅
+case CoopRecordBigrunBronze
+/// 金
+case CoopRecordBigrunGold
+/// 銀
+case CoopRecordBigrunSilver
+/// バイトのきろく
+case CoopRecordCoop
+/// たおした数
+case CoopRecordDefeated
+/// 最高評価
+case CoopRecordHighestJobRate
+/// ハイスコア
+case CoopRecordHighestScore
+/// もっと見る
+case CoopRecordMore
+/// きろくがありません
+case CoopRecordNoData
+/// 上位 %@ %以上
+case CoopRecordRank
+/// 順位
+case CoopRecordRanking
+/// バイトチームコンテスト
+case CoopRecordTeamContest
+/// サーモンランのきろく
+case CoopRecordTitle
+/// ホームに戻る
+case ErrorBackToHome
+/// 非正規のアクセスが確認されたため、サービス利用を停止しています。
+case ErrorBannedUser
+/// 現在利用できません。しばらくお待ちください
+case ErrorCurrentlyNotAvailable
+/// エラー
+case ErrorError
+/// エラーが発生しました
+case ErrorErrorOccurred
+/// 読みこみに失敗しました
+case ErrorErrorReopen
+/// ただいまサーバーのメンテナンス中です。時間をおいて再度アクセスしてください。
+case ErrorMaintenanceDescription
+/// しばらくお待ちください
+case ErrorMaintenanceTitle
+/// 読みこみに失敗しました。通信環境のよいところで再度お試しください。
+case ErrorNetworkNotAvailable
+/// イカリング３を表示できません。しばらく時間をおいてから通信環境の良い場所で再度お試しください。問題が解決しない場合は、ブラウザが最新版に更新されているか確認してください。それでもこの画面が表示される場合は、ご利用の環境でイカリング３を利用できない可能性があります。
+case ErrorNotSupported
+/// 再読みこみ
+case ErrorReload
+/// イベントマッチ
+case EventMatchRankingAppName
+/// もっと見る
+case EventMatchRankingMore
+/// ペア
+case EventMatchRankingPair
+/// ランキング
+case EventMatchRankingRanking
+/// ルール確認
+case EventMatchRankingRules
+/// ソロ
+case EventMatchRankingSolo
+/// チーム
+case EventMatchRankingTeam
+/// イベントマッチ
+case EventMatchRankingTitle
+/// トップ100
+case EventMatchRankingTop100
+/// %@%
+case FesRecord
+/// フェス
+case FesRecordAppName
+/// 攻撃
+case FesRecordAttack
+/// へいきん
+case FesRecordAverage
+/// チャレンジ
+case FesRecordChallenge
+/// もうすぐ開催
+case FesRecordComingSoon
+/// こうけん度 チャレンジ
+case FesRecordContributionChallenge
+/// こうけん度 オープン
+case FesRecordContributionRegular
+/// こうけん度 トリカラマッチ
+case FesRecordContributionTricolor
+/// 守備
+case FesRecordDefense
+/// %@%@パワー
+case FesRecordFestPower
+/// フェス100ケツ
+case FesRecordFestRanking
+/// ホラガイ獲得個数
+case FesRecordGotHoragai
+/// このアンケートはゲーム内で投票するまで何度でも変更できます。みんなの予定を見て、バンカラ街の広場にある投票所から投票しましょう。
+case FesRecordGuideVote
+/// 参加予定のフレンドはチームが変わることがあります
+case FesRecordGuideWillParticipates
+/// 最高フェスパワー
+case FesRecordHighestFestPower
+/// ホラガイ獲得率
+case FesRecordHoragai
+/// 未定のフレンド
+case FesRecordNotVoted
+/// 開催中！！
+case FesRecordOnGoing
+/// これまでのフェス
+case FesRecordPastFestivals
+/// %@p
+case FesRecordPoint
+/// アンケート実施中
+case FesRecordPreVoteButton
+/// フレンドの参加予定を見ることができます。みんなでチームを組んで参加しよう！
+case FesRecordPreVoteGuide
+/// みんなどこにする？アンケート実施中
+case FesRecordPreVoteTitle
+/// %@位
+case FesRecordRank
+/// オープン
+case FesRecordRegular
+/// フレンドの参加チームを見る
+case FesRecordSeeAllVotes
+/// フェス100ケツを見る
+case FesRecordSeeFestRanking
+/// フェスのきろく
+case FesRecordTitle
+/// るいけい
+case FesRecordTotal
+/// 合計
+case FesRecordTotalScore
+/// 未定
+case FesRecordUndecided
+/// 参加予定
+case FesRecordVote
+/// 得票率
+case FesRecordVoteRatio
+/// 回答済み
+case FesRecordVoted
+/// 投票済み
+case FesRecordVotedInGame
+/// フレンドの投票状況
+case FesRecordVotingStatus
+/// 結果を集計中です
+case FesRecordWaitingForResult
+/// WIN!
+case FesRecordWin
+/// %@の勝利！
+case FesRecordWinTeam
+/// あなたのきろく
+case FesRecordYourRecord
+/// ビッグラン警報発令！シャケの接近に注意！
+case FooterBigrunAnnouncement
+/// ビッグラン発生中！シャケから街を守れ！
+case FooterBigrunNowOpening
+/// もうすぐ %@ が終了します。カタログポイント1.5倍サービス中！
+case FooterEndOfSeason
+/// イベントマッチ：%@開催中！
+case FooterEventMatchNowOpening
+/// %@ フェス開催！アンケートに回答してフレンドと一緒に参加しよう！
+case FooterFestAnnouncement
+/// %@ フェス開催中！広場で投票してフェスTをゲットしよう！
+case FooterFestNowOpening
+/// フレンドリスト
+case FriendListAppName
+/// バイト中
+case FriendListInCoopGame
+/// ナワバトラー
+case FriendListInMiniGame
+/// 試合中
+case FriendListInVsGame
+/// パスワードつき
+case FriendListIsLocked
+/// フレンドのプレイ状況がここに表示されます
+case FriendListNoFriends
+/// オフライン
+case FriendListOffline
+/// オンライン
+case FriendListOnline
+/// 再読みこみ
+case FriendListReload
+/// フレンドリスト
+case FriendListTitle
+/// ボイスチャットかのう
+case FriendListVoiceChatEnabled
+/// ゲソタウン
+case GesoTownAppName
+/// ゲソタウンに戻る
+case GesoTownBackToGesotown
+/// 持っているギア
+case GesoTownCurrentGear
+/// ふだんとは違うギアパワーがついたトクベツなギアが手に入るショップ
+case GesoTownDescription
+/// 本日のピックアップ
+case GesoTownFeature
+/// ピックアップ
+case GesoTownFeatured
+/// %@ につきやすいギアパワー
+case GesoTownFrequentGearPower
+/// %@ まで
+case GesoTownLimit
+/// おカネ
+case GesoTownMoney
+/// 次のギア
+case GesoTownNext
+/// 次のピックアップ
+case GesoTownNextFeature
+/// 期限切れ
+case GesoTownNotAvailable
+/// 注文する
+case GesoTownOrder
+/// ご注文はいますぐ！
+case GesoTownOrderNow
+/// 注文済み
+case GesoTownOrdered
+/// 在庫確認中...
+case GesoTownPending
+/// 前のギア
+case GesoTownPrevious
+/// まもなく終了
+case GesoTownRemainAlmostFinished
+/// あと%@時間
+case GesoTownRemainHour
+/// あと%@分
+case GesoTownRemainMinute
+/// すでに注文済みのギアがあります
+case GesoTownRemind
+/// 注文済みのギアはキャンセルされます
+case GesoTownRemindCaution
+/// ご注文は、1回につき1コとなります
+case GesoTownRule1
+/// 注文済みのギアは、広場のスパイキーから購入できます
+case GesoTownRule2
+/// 購入前に新しく注文すると、注文済みのギアはキャンセルされます
+case GesoTownRule3
+/// 購入後、新しい注文が可能になります
+case GesoTownRule4
+/// ただいま販売中のギア
+case GesoTownStock
+/// 商品は4時間ごとに入れ替わります
+case GesoTownStockGuide
+/// ゲソタウン
+case GesoTownTitle
+/// 受付できません
+case GesoTownUnableToOrder
+/// この商品は現在取り扱っておりません
+case GesoTownUnableToOrderMessage
+/// １号
+case HeroRecordAgent1
+/// ２号
+case HeroRecordAgent2
+/// サイズを選んでダウンロードしてください
+case HeroRecordAnnotation
+/// ヒーローモード
+case HeroRecordAppName
+/// スナップ写真
+case HeroRecordAreaMemorialPhoto
+/// ボス
+case HeroRecordBossStage
+/// ヒーローモード クリア特典
+case HeroRecordClearReward
+/// オルタナ探索率100% 達成特典
+case HeroRecordNawabariMapCompleteReward
+/// オルタナ探索率
+case HeroRecordNawabariMapProgress
+/// クリアおめでとう！
+case HeroRecordNawabariMapSubCleared
+/// 100%踏破おめでとう！
+case HeroRecordNawabariMapSubComplete
+/// オルタナを100%踏破すると…？
+case HeroRecordNawabariMapSubInProgress
+/// 次へ
+case HeroRecordNext
+/// そうびなし
+case HeroRecordNoEquipments
+/// 前へ
+case HeroRecordPrev
+/// イイ目をしたワカモノ求む！！
+case HeroRecordRecruitment
+/// ヒーローモード をはじめて冒険をすすめよう
+case HeroRecordRecruitmentSub
+/// 探索率
+case HeroRecordSearchRatio
+/// スナップ写真を見る
+case HeroRecordSeePhotograph
+/// サイト %@
+case HeroRecordSite
+/// みらいユートピアランド
+case HeroRecordSite1
+/// あんしんライフファクトリー
+case HeroRecordSite2
+/// ながいきヤングニュータウン
+case HeroRecordSite3
+/// うめたてドリームランド
+case HeroRecordSite4
+/// あすなろグリーンヒルズ
+case HeroRecordSite5
+/// しあわせリサーチラボ
+case HeroRecordSite6
+/// ヒーローモードのきろく
+case HeroRecordTitle
+/// 特製壁紙
+case HeroRecordWallpaper
+/// すべてのバッジ（%@）
+case HistoryAllBadges
+/// ヒストリー
+case HistoryAppName
+/// 参加回数： %@
+case HistoryAttended
+/// バッジ
+case HistoryBadge
+/// バンカラマッチ オープン
+case HistoryBankaraOpen
+/// 銅
+case HistoryBronze
+/// 推定順位
+case HistoryEstimatedRanking
+/// イベントマッチ
+case HistoryEvent
+/// もっともよく使ったブキ
+case HistoryFrequentlyUsedWeapon
+/// 金
+case HistoryGold
+/// 最高ウデマエ
+case HistoryHighestUdemae
+/// 最高Xランキング・最高Xパワー
+case HistoryHighestXranking
+/// 最近 3ヶ月
+case HistoryLatest
+/// 最近ゲットしたバッジ
+case HistoryLatestBadge
+/// 月間
+case HistoryMonthly
+/// ※ Xマッチのきろくはシーズン終了後、集計をしてから公開されます。集計が終わるまで数日かかる場合があります。
+case HistoryPastXmatchAnnotation
+/// ランク
+case HistoryRank
+/// %@位
+case HistoryRanking
+/// シーズン
+case HistorySeason
+/// 表示を減らす
+case HistoryShowLess
+/// もっと見る
+case HistoryShowMore
+/// Xランキングを見る
+case HistoryShowXranking
+/// 銀
+case HistorySilver
+/// %@ からプレイ（%@ 更新）
+case HistorySince
+/// サマリー
+case HistorySummary
+/// ヒストリー
+case HistoryTitle
+/// 今まで塗った面積
+case HistoryTotalTurfPoint
+/// 総勝利数
+case HistoryTotalWin
+/// %@p
+case HistoryTurfPoint
+/// ウデマエ
+case HistoryUdemae
+/// ブキヒストリー
+case HistoryWeapon
+/// ブキ使用率
+case HistoryWeaponUsage
+/// Xマッチ
+case HistoryXmatch
+/// ※アプリをインストールしていない方は、このボタンを押しても開きません
+case LandingCaution
+/// Apple、Appleロゴ、App Storeは、Apple Inc.の商標です。Google Play および Google Play ロゴは Google LLC の商標です。
+case LandingCopyright
+/// App Storeからダウンロード
+case LandingDlAppStore
+/// Google Playで手に入れよう
+case LandingDlGooglePlay
+/// アプリのダウンロードはこちら
+case LandingDownload
+/// Nintendo Switch Online
+case LandingNso
+/// アプリを開く
+case LandingOpenApp
+/// スプラトゥーン3
+case LandingSplatoon3
+/// スマートフォンアプリ『Nintendo Switch Online』を開きます
+case LandingTitle
+/// メモリープレーヤー
+case MemoryPlayerAppName
+/// コピーしました
+case MemoryPlayerCopied
+/// バトルメモリーのダウンロード
+case MemoryPlayerDownload
+/// ダウンロード予約に失敗しました
+case MemoryPlayerFailedDownload
+/// ダウンロードしたバトルメモリーはスプラトゥーン3のロビー端末のメモリープレーヤーで再生することができます
+case MemoryPlayerGuide
+/// Loading...
+case MemoryPlayerLoading
+/// 最新の50件を表示しています保存期間は30日です
+case MemoryPlayerNotice
+/// コードを入力
+case MemoryPlayerPlaceholder
+/// ダウンロードコード
+case MemoryPlayerReplayCode
+/// データが見つかりません
+case MemoryPlayerReplayNotAvailable
+/// ダウンロード予約しました
+case MemoryPlayerReservedDownload
+/// 送信
+case MemoryPlayerSend
+/// メモリープレーヤー
+case MemoryPlayerTitle
+/// アップロードしたバトルメモリー
+case MemoryPlayerUploaded
+/// マイコーデをつくる
+case MyOutfitsAdd
+/// + このそうびをマイコーデに追加
+case MyOutfitsAddCurrentEquipments
+/// すべて表示
+case MyOutfitsAll
+/// マイコーデ
+case MyOutfitsAppName
+/// ブランド
+case MyOutfitsBrand
+/// カメラオプション
+case MyOutfitsCameraOption
+/// カメラオプションを隠す
+case MyOutfitsCloseCameraOption
+/// フク
+case MyOutfitsCloth
+/// 現在のそうび
+case MyOutfitsCurrentEquipments
+/// 現在のそうびは最後に対戦を行った内容を表示しています
+case MyOutfitsCurrentEquipmentsGuide
+/// 選択中のギア
+case MyOutfitsCurrentGear
+/// 選択中のブキ
+case MyOutfitsCurrentWeapon
+/// 保存に失敗しました
+case MyOutfitsErrorSave
+/// ケイケン値 %@
+case MyOutfitsExp
+/// 絞り込む
+case MyOutfitsFilter
+/// ギア
+case MyOutfitsGear
+/// ギアパワー
+case MyOutfitsGearPower
+/// 追加ギアパワー1個は、基本ギアパワー0.3個分の効果です
+case MyOutfitsGearPowerAnnotation
+/// マイコーデをつくってみよう
+case MyOutfitsGuide
+/// ギアを選択するとギアパワーの内訳が表示されます
+case MyOutfitsGuideGearPowerButton
+/// マイコーデは5つまで作成することができます
+case MyOutfitsGuideLimitation
+/// ジャイロ操作感度
+case MyOutfitsGyro
+/// ジャイロ操作
+case MyOutfitsGyroControl
+/// 携帯モード
+case MyOutfitsHandheldMode
+/// マイコーデ
+case MyOutfitsHashtag
+/// アタマ
+case MyOutfitsHead
+/// メインウェポン
+case MyOutfitsMain
+/// 一致するギアがありません
+case MyOutfitsNoGears
+/// 一致するブキがありません
+case MyOutfitsNoWeapons
+/// ノーマル
+case MyOutfitsNormal
+/// マイコーデ %@
+case MyOutfitsNumber
+/// OFF
+case MyOutfitsOff
+/// ON
+case MyOutfitsOn
+/// カメラオプションを表示する
+case MyOutfitsOpenCameraOption
+/// %@ 左右操作
+case MyOutfitsRControl
+/// %@ 操作感度
+case MyOutfitsRHorizontal
+/// ジャイロ操作OFFの時は無効になります
+case MyOutfitsRHorizontalUnavailable
+/// %@ 上下操作
+case MyOutfitsRVertical
+/// ジャイロ操作ONの時は無効になります
+case MyOutfitsRVerticalUnavailable
+/// レアド %@
+case MyOutfitsRarity
+/// リバース
+case MyOutfitsReverse
+/// 保存
+case MyOutfitsSave
+/// フクを選ぶ
+case MyOutfitsSelectCloth
+/// アタマを選ぶ
+case MyOutfitsSelectHead
+/// クツを選ぶ
+case MyOutfitsSelectShoes
+/// 保存先の選択
+case MyOutfitsSelectSlot
+/// ブキを選ぶ
+case MyOutfitsSelectWeapon
+/// シェア
+case MyOutfitsShare
+/// クツ
+case MyOutfitsShoes
+/// スペシャルウェポン
+case MyOutfitsSpecial
+/// サブウェポン
+case MyOutfitsSub
+/// 決定
+case MyOutfitsSubmitGear
+/// 決定
+case MyOutfitsSubmitWeapon
+/// マイコーデ
+case MyOutfitsTitle
+/// 今まで塗った面積 %@p
+case MyOutfitsTurfPoint
+/// TVモード/テーブルモード
+case MyOutfitsTvTabletopMode
+/// ブキ
+case MyOutfitsWeapon
+/// 写真は20枚までアップロードできます保存期間は3ヶ月です
+case PhotoAlbumAnnotation
+/// アルバム
+case PhotoAlbumAppName
+/// 選択
+case PhotoAlbumSelect
+/// フォトアルバム
+case PhotoAlbumTitle
+/// QRコードリーダー
+case QrCodeReaderAppName
+/// 日時: %@
+case QrCodeReaderCheckinDate
+/// 許可
+case QrCodeReaderConfirmationAllow
+/// 許可しない
+case QrCodeReaderConfirmationDeny
+/// このほうしゅうはすでに獲得済みです
+case QrCodeReaderErrorAlreadyGotDescription
+/// すでに獲得しています
+case QrCodeReaderErrorAlreadyGotTitle
+/// イカリング３で読み取ることのできるQRコードではありません
+case QrCodeReaderErrorNotCompatibleDescription
+/// エラー
+case QrCodeReaderErrorNotCompatibleTitle
+/// まだご利用いただけません
+case QrCodeReaderErrorNotStartedTitle
+/// このQRコードはすでに無効です
+case QrCodeReaderErrorRewardExpiredDescription
+/// 有効期間中にお使いください
+case QrCodeReaderErrorRewardNotStartedDescription
+/// イカリング３のQRコード読み取り機能がご利用いただけます。QRコードの読み取りをご利用いただくと、どのQRコードを読み取ったかという情報が任天堂に送信され、アプリ内でQRコードの読み取り履歴を確認できるようになります。これにより、任天堂がお客様の位置情報を知ることができる場合があります。以下のお客様の選択は保存されず、QRコードの読み取りをご利用いただくたびにお客様の同意（GDPR【第】6条【第】1項(a))が求められます。
+case QrCodeReaderEuConfirmation
+/// 特定の場所にあるQRコードを読み取ると特別なほうしゅうをゲットできます
+case QrCodeReaderGuide
+/// 履歴
+case QrCodeReaderHistory
+/// ほうしゅうの受け取りはスプラトゥーン3のロビー端末を使ってね
+case QrCodeReaderHowToGetReward
+/// これまでの読み取り履歴が表示されます
+case QrCodeReaderNoData
+/// カメラでQRコードを読み取る
+case QrCodeReaderReadQrcodeByCamera
+/// 保存した画像から読み取る
+case QrCodeReaderReadQrcodeByFile
+/// QRコードリーダー
+case QrCodeReaderTitle
+/// 最後に遊んだ
+case RecordLatestPlayed
+/// よく使う
+case RecordLatestUsed
+/// メイン
+case RecordMain
+/// じゅくれん度アップまで
+case RecordNextSkillLevel
+/// じゅくれん度
+case RecordSkillLevel
+/// 並べ替え
+case RecordSort
+/// スペシャル
+case RecordSpecial
+/// ステージのきろく
+case RecordStageRecord
+/// ステージ
+case RecordStageRecordAppName
+/// サブ
+case RecordSub
+/// きろく
+case RecordTitle
+/// %@p
+case RecordTotalTurfPoint
+/// 塗りポイント
+case RecordTurfPoint
+/// 遊んでないステージ
+case RecordUnplayedStages
+/// 未所持のブキ
+case RecordUnusedWeapons
+/// チョーシ
+case RecordVibes
+/// ブキのきろく
+case RecordWeaponRecord
+/// ブキ
+case RecordWeaponRecordAppName
+/// 勝利数
+case RecordWinCount
+/// %@%
+case RecordWinRatio
+/// 通常のプライベートマッチと異なり、招待URLを知っているプレイヤーは誰でも参加することができます。
+case RoomCreatorAnnotation01
+/// フレンドやチャンネルのメンバーは招待URLを知らなくてもフレンドリストや通知からこの部屋に合流することが可能です。
+case RoomCreatorAnnotation02
+/// また、この部屋ではボイスチャットを利用できません。
+case RoomCreatorAnnotation03
+/// 作った部屋に誰も入っていない状態が30分以上続くと、自動的に部屋が閉じられます。
+case RoomCreatorAnnotation04
+/// ヘヤタテ
+case RoomCreatorAppName
+/// 部屋に参加する
+case RoomCreatorApprove
+/// ホームに戻る
+case RoomCreatorBack
+/// やっぱりやめる
+case RoomCreatorCancel
+/// 部屋を解散する
+case RoomCreatorCloseRoom
+/// イカリング３で作った部屋を解散し、招待URLが無効になります。
+case RoomCreatorCloseRoomGuide
+/// 部屋を解散しますか？
+case RoomCreatorConfirmCloseRoom
+/// あなたはすでにヘヤタテで部屋を作っています。あなたの部屋を解散し、この部屋に参加しますか？
+case RoomCreatorConfirmRemoveRoom
+/// 参加しない
+case RoomCreatorConfirmRemoveRoomCancel
+/// 参加する
+case RoomCreatorConfirmRemoveRoomOk
+/// キャンセルしました
+case RoomCreatorDecline
+/// もう一度招待URLにアクセスすると、部屋に参加することができます。
+case RoomCreatorDeclineGuide
+/// すでに部屋を作っています。「ヘヤタテ」で作ることのできる部屋は同時にひとつまでです。
+case RoomCreatorErrorAlreadyExist
+/// 部屋を作ることができませんでした。
+case RoomCreatorErrorMakeRoom
+/// 部屋のURLをシェアして、プライベートマッチに招待することができます。
+case RoomCreatorGuide
+/// 部屋に入る
+case RoomCreatorHowToActivate
+/// スプラトゥーン3のロビーメニューのフレンドリストに追加された「イカリング３で作った部屋」に入ってください。
+case RoomCreatorHowToActivateGuide
+/// フレンドリストから、この部屋に合流してください。
+case RoomCreatorHowToJoin
+/// 解散する
+case RoomCreatorInvalidateInvitation
+/// 部屋に招待されました
+case RoomCreatorInvitation
+/// 部屋に参加するとスプラトゥーン3のフレンドリストに「イカリング３で作った部屋」が追加されます。
+case RoomCreatorInvitationGuide
+/// 招待URL
+case RoomCreatorInvitationUrl
+/// 部屋ができました
+case RoomCreatorInviteGuest
+/// 部屋をつくる
+case RoomCreatorMakeRoom
+/// 部屋が見つかりません
+case RoomCreatorNotFound
+/// URLが間違っているか、すでに部屋が閉じられている場合があります。
+case RoomCreatorNotFoundGuide
+/// パスワードを設定する
+case RoomCreatorPassword
+/// パスワードを設定しない
+case RoomCreatorPasswordCancel
+/// このパスワードはフレンドやチャンネルのメンバーが招待URLを使わずに部屋に合流する場合に必要です。「イカリング３で作った部屋」から入る場合はパスワードは不要です。
+case RoomCreatorPasswordGuide
+/// 4桁の数字を入力してください
+case RoomCreatorPasswordHelp
+/// 参加できる部屋
+case RoomCreatorRoom
+/// 招待したい人にURLをシェア！
+case RoomCreatorShareInvitationUrl
+/// Nintendo Switch Onlineアプリがインストールされたスマートフォンで、招待URLにアクセスしてもらいましょう。
+case RoomCreatorShareInvitationUrlGuide
+/// URLをシェア
+case RoomCreatorShareUrl
+/// 便利な部屋作成サービス
+case RoomCreatorSubtitle
+/// ヘヤタテ
+case RoomCreatorTitle
+/// 利用データの送信について
+case SettingsAboutSendingUsageData
+/// イカリング３をご利用の際には、『Nintendo Switch Online』アプリの「利用データの送信について」の設定が適用されます。この設定はいつでも変更することができます。
+case SettingsAboutSendingUsageDataDescription
+/// 権利表記
+case SettingsAcknowledgements
+/// 設定
+case SettingsAppName
+/// クレジット
+case SettingsCredits
+/// エキスパンション・パス 購入サイトへ
+case SettingsExpansionPass
+/// 設定
+case SettingsTitle
+/// パレットにセットした枚数: %@ 
+case SideOrderRecordAccumulateCount
+/// サイド・オーダー
+case SideOrderRecordAppName
+/// ドローン
+case SideOrderRecordChipCategoryAuto
+/// サポート
+case SideOrderRecordChipCategoryContinuity
+/// パワー
+case SideOrderRecordChipCategoryFire
+/// ラッキー
+case SideOrderRecordChipCategoryLuck
+/// ムーブ
+case SideOrderRecordChipCategoryMove
+/// レンジ
+case SideOrderRecordChipCategoryRange
+/// 集めた情報 %@ 
+case SideOrderRecordChiplevel
+/// クリア！
+case SideOrderRecordClear
+/// クリア: %@ 
+case SideOrderRecordClearCount
+/// 集めたカラーチップ
+case SideOrderRecordCollectedColorChips
+/// カッコ内は今までに集めた枚数です
+case SideOrderRecordCollectedColorChipsAnnotation
+/// 集めたパレット
+case SideOrderRecordCollectedPalettes
+/// すべてのパレットでクリアして 特別なほうしゅうをゲット！
+case SideOrderRecordCollectedPalettesSubtitle
+/// カラーチップ
+case SideOrderRecordColorChip
+/// チップ使用率
+case SideOrderRecordColorChipUsage
+/// かんたん
+case SideOrderRecordDifficulity0
+/// ふつう
+case SideOrderRecordDifficulity1
+/// むずかしい
+case SideOrderRecordDifficulity2
+/// ゲキムズ
+case SideOrderRecordDifficulity3
+/// ほうしゅうをゲット！
+case SideOrderRecordDownloadReward
+/// ずかん
+case SideOrderRecordEnemy
+/// スケルトーンずかん
+case SideOrderRecordEnemyCollection
+/// %@に 当たってやられた
+case SideOrderRecordFailureCollided
+/// %@に やられた
+case SideOrderRecordFailureDefeated
+/// フロアから 落ちた
+case SideOrderRecordFailureFall
+/// %@F
+case SideOrderRecordFloor
+/// クリア特典
+case SideOrderRecordGetClearReward
+/// コンプリート特典
+case SideOrderRecordGetReward
+/// イイダのハッキング
+case SideOrderRecordHacking
+/// ハイスコア！
+case SideOrderRecordHighScore
+/// 最近のきろく
+case SideOrderRecordLatestResults
+/// もっと見る
+case SideOrderRecordMore
+/// 次へ
+case SideOrderRecordNext
+/// パレット
+case SideOrderRecordPalette
+/// 各パレットの最速クリアタイムのきろくを表示します
+case SideOrderRecordPalettesAnnotation
+/// %@p
+case SideOrderRecordPoint
+/// 所持ネリコイン
+case SideOrderRecordPointCoin
+/// カラフルカラーチップボーナス
+case SideOrderRecordPointColorful
+/// クリア時ライフ
+case SideOrderRecordPointRetry
+/// 連続同色カラーチップボーナス
+case SideOrderRecordPointSameColor
+/// ポイント→シンジュ
+case SideOrderRecordPointToPearl
+/// 前へ
+case SideOrderRecordPrev
+/// きろく
+case SideOrderRecordResult
+/// あきらめた
+case SideOrderRecordRetire
+/// SCORE
+case SideOrderRecordScore
+/// サイズを選んでダウンロードしてください
+case SideOrderRecordSelectSize
+/// 入手ポイントを表示する
+case SideOrderRecordShowAllPoints
+/// フロアリセット: %@ 
+case SideOrderRecordStageReset
+/// サイド・オーダーのきろく
+case SideOrderRecordTitle
+/// 合計: %@ 
+case SideOrderRecordTotalHackingLevel
+/// トライ: %@ 
+case SideOrderRecordTryCount
+/// 自販機で使ったネリコイン: %@ 
+case SideOrderRecordUsedCoin
+/// バンカラマッチ
+case StageScheduleBankara
+/// オープン
+case StageScheduleBankaraOpen
+/// チャレンジ
+case StageScheduleBankaraOpenChallenge
+/// サーモンラン
+case StageScheduleCoop
+/// イベントマッチ
+case StageScheduleEvent
+/// いま
+case StageScheduleEventCurrentSchedule
+/// そのつぎ
+case StageScheduleEventFuture
+/// 開催中！
+case StageScheduleEventHolding
+/// 次回
+case StageScheduleEventNext
+/// つぎ
+case StageScheduleEventNextSchedule
+/// スケジュールが未定です
+case StageScheduleEventNoData
+/// ?????
+case StageScheduleEventUnknownData
+/// チャレンジ
+case StageScheduleFestChallenge
+/// オープン
+case StageScheduleFestOpen
+/// フェスマッチ
+case StageScheduleFestival
+/// もうすぐ開催
+case StageScheduleFestivalAnnounced
+/// %@ スタート！
+case StageScheduleFestivalAt
+/// 攻撃
+case StageScheduleFestivalAttack
+/// 守備
+case StageScheduleFestivalDefense
+/// 開催中！
+case StageScheduleFestivalHolding
+/// %@ - %@
+case StageScheduleFestivalPeriod
+/// そのつぎ
+case StageScheduleFuture
+/// トリカラマッチ時間割
+case StageScheduleGrandFestSchedule
+/// Webブラウザが開きます
+case StageScheduleGuideOpenBrowser
+/// つぎ
+case StageScheduleNext
+/// ビッグラン接近中！
+case StageScheduleNoticeBigrun
+/// バイトチームコンテスト開催予告！
+case StageScheduleNoticeLimited
+/// フェスマッチ開催中！
+case StageScheduleNowClosed
+/// オープン！
+case StageScheduleOpen
+/// ビッグラン発生中！
+case StageScheduleOpenBigrun
+/// バイトチームコンテスト開催中！
+case StageScheduleOpenLimited
+/// プライベートマッチ
+case StageSchedulePrivate
+/// ビッグランがやってくる！！バイト大募集 %@
+case StageScheduleRecruit
+/// バイトチームコンテスト！チームを組んで参加しよう！  %@
+case StageScheduleRecruitTeamContest
+/// レギュラーマッチ
+case StageScheduleRegular
+/// ルールを見る
+case StageScheduleRules
+/// 詳しいルールはこちら
+case StageScheduleSeeAllRules
+/// フェスのきろくを見る
+case StageScheduleSeeFestivalRecord
+/// ランダム
+case StageScheduleSuppliedWeaponRandom
+/// 支給ブキ
+case StageScheduleSuppliedWeapons
+/// スケジュール
+case StageScheduleTitle
+/// ルールごとの勝率
+case StageScheduleWinRateByRules
+/// Xマッチ
+case StageScheduleXmatch
+/// もうすぐ開催！
+case TournamentComingSoon
+/// タイカイサポート
+case TournamentTitle
+/// 開催中
+case TournamentTournamentNow
+/// １００倍マッチ
+case VsHistory100X
+/// １０倍マッチ
+case VsHistory10X
+/// １０倍ホラガイ争奪戦
+case VsHistory10XHoragaiMatch
+/// ３３３倍マッチ
+case VsHistory333X
+/// ３３倍ホラガイ争奪戦
+case VsHistory33XHoragaiMatch
+/// 計測中止
+case VsHistoryAbortedMeasurementEventPower
+/// 通信を切断したプレイヤーがいたため、負けとしてカウントされませんでした
+case VsHistoryAnnotationExemption
+/// 無効試合になりました
+case VsHistoryAnnotationNocontest
+/// 正常に試合が終了しませんでした
+case VsHistoryAnnotationPenalty
+/// 攻撃
+case VsHistoryAttack
+/// %@分あたりのアベレージ
+case VsHistoryAverage
+/// きん
+case VsHistoryAwardGold
+/// ぎん
+case VsHistoryAwardSilver
+/// バンカラマッチ
+case VsHistoryBankara
+/// バンカラマッチ チャレンジ
+case VsHistoryBankaraChallenge
+/// バンカラマッチ オープン
+case VsHistoryBankaraOpen
+/// バンカラパワー %@
+case VsHistoryBankaraPower
+/// こうけん度 %@
+case VsHistoryContribute
+/// %@カウント
+case VsHistoryCount
+/// たおされたかいすう
+case VsHistoryDeathCount
+/// 守備
+case VsHistoryDefense
+/// DRAW
+case VsHistoryDraw
+/// そうびしていたギア
+case VsHistoryEquippedGear
+/// そうびしていたブキ
+case VsHistoryEquippedWeapon
+/// イベントマッチ
+case VsHistoryEvent
+/// ペア
+case VsHistoryEventPair
+/// イベントパワー %@
+case VsHistoryEventPower
+/// ソロ
+case VsHistoryEventSolo
+/// チーム
+case VsHistoryEventTeam
+/// %@チーム
+case VsHistoryFesTeam
+/// オマツリのあかし
+case VsHistoryFesWinProof
+/// %@%@パワー
+case VsHistoryFestPower
+/// フェスマッチ
+case VsHistoryFestival
+/// オマツリガイ x%@
+case VsHistoryFestivalShell
+/// バトルのきろくに戻る
+case VsHistoryGoToStats
+/// ゲットした表彰
+case VsHistoryGotAwards
+/// ぬりまといかくほ
+case VsHistoryGotTricolorTreasure
+/// ホラガイ
+case VsHistoryHoragai
+/// Get!
+case VsHistoryHoragaiCount
+/// ホラガイ争奪戦
+case VsHistoryHoragaiMatch
+/// 挑戦中
+case VsHistoryInChallenge
+/// たおしたかいすう
+case VsHistoryKillCount
+/// ノックアウト！
+case VsHistoryKnockout
+/// 最近の50戦
+case VsHistoryLatest
+/// 最新のバトル
+case VsHistoryLatestBattle
+/// 最近
+case VsHistoryLatestTab
+/// LOSE...
+case VsHistoryLose
+/// Xパワー計測中
+case VsHistoryMeasurement
+/// 計測中
+case VsHistoryMeasurementEventPower
+/// 次のバトル
+case VsHistoryNextBattle
+/// バトルのきろくがありません
+case VsHistoryNoData
+/// バトルのきろくを表示できません
+case VsHistoryNotAvailable
+/// 閲覧できるバトルのきろくは、モードごとに最新の50戦までです。
+case VsHistoryNotAvailableDescription
+/// （おそろいボーナス x%@）
+case VsHistoryOutfitBonus
+/// 前のバトル
+case VsHistoryPreviousBattle
+/// プライベートマッチ
+case VsHistoryPrivate
+/// 昇格戦
+case VsHistoryPromo
+/// レギュラーマッチ
+case VsHistoryRegular
+/// スペシャルウェポンはつどうかいすう
+case VsHistorySpCount
+/// バトル
+case VsHistoryTitle
+/// トライかいすう
+case VsHistoryTryCount
+/// %@p
+case VsHistoryTurfPoint
+/// ウデマエポイント
+case VsHistoryUdemaePoint
+/// %@p
+case VsHistoryUdemaePointScore
+/// 挑戦中止
+case VsHistoryUdemaeReset
+/// ウデマエアップ！
+case VsHistoryUdemaeUp
+/// WIN!
+case VsHistoryWin
+/// %@連勝
+case VsHistoryWins
+/// おうかん
+case VsHistoryXcrown
+/// Xマッチ
+case VsHistoryXmatch
+/// Xパワー %@
+case VsHistoryXpower
+/// イカリング３はスプラトゥーン3と連動するサービスです。ここで紹介したもの以外にもさまざまな機能があります。
+case WelcomeAbout
+/// バトルの戦績やスケジュールをチェックしてライバルに差をつけろ！
+case WelcomeFeature1
+/// バトルの戦績やスケジュール
+case WelcomeFeature1Alt
+/// ファッションリーダーたちに朗報！いつでもマイコーデを編集できるぞ！
+case WelcomeFeature2
+/// ひとり旅に出たロブを支援して特別な報酬をゲットしよう！
+case WelcomeFeature3
+/// ここだけの特別仕様！ゲソタウンで限定ギアをチェック！
+case WelcomeFeature4
+/// Features
+case WelcomeFeatures
+/// https://store-jp.nintendo.com/list/software/70010000046394.html
+case WelcomeLink
+/// 他にも便利な機能がたくさん！
+case WelcomeOtherFeatures
+/// 本気のヤツらのためのイカしたサービス
+case WelcomeService
+/// スプラトゥーン3
+case WelcomeSplatoon3
+/// 購入サイトへ
+case WelcomeStore
+/// ウィジェット
+case WelcomeWidgets
+/// すべて表示
+case XrankingAll
+/// Xランキング
+case XrankingAppName
+/// グループ・アロメ
+case XrankingAtlantic
+/// 推定%@位
+case XrankingEstimatedRank
+/// 計測中
+case XrankingMeasurement
+/// 開催中！！
+case XrankingOpen
+/// グループ・ヤコ
+case XrankingPacific
+/// 過去のランキング
+case XrankingPastRankings
+/// ※ 過去のランキングはシーズン終了後、集計をしてから公開されます。集計が終わるまで数日かかる場合があります。
+case XrankingPastRankingsAnnotation
+/// %@ - %@
+case XrankingPeriod
+/// %@位
+case XrankingRank
+/// %@位
+case XrankingRankSns
+/// グループ
+case XrankingRegion
+/// ランキングを見る
+case XrankingSeeRanking
+/// ブキトップを見る
+case XrankingSeeWeaponTop
+/// ブキを選ぶ
+case XrankingSelectWeapon
+/// Xランキング
+case XrankingTitle
+/// トップ 500
+case XrankingTop500
+/// トッププレイヤー
+case XrankingTopPlayers
+/// ブキトップ プレイヤー
+case XrankingWeaponTop
+/// ブキトップ プレイヤー
+case XrankingWeaponTopSingular
+/// おうかん
+case XrankingXcrown
+/// Xパワー %@
+case XrankingXpower
 }

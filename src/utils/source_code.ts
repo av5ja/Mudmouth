@@ -1,5 +1,5 @@
-import { Locale } from '@/enums/locale_type'
-import type { KeyHash } from '@/models/lookup.dto'
+import type { Locale } from '@/enums/locale_type'
+import type { KeyValue } from '@/models/key_value.dto'
 import { get } from 'lodash'
 import {
   get_app_version,
@@ -23,14 +23,12 @@ export namespace SourceCode {
     console.log(web_version)
     const app_version: string = await get_app_version()
     console.log(app_version)
-    const hashes: KeyHash[] = get_sha256_hash(text)
+    const hashes: KeyValue[] = get_sha256_hash(text)
     console.log(hashes)
-    const locales: Locale.Type[] = get_locale_list(text, hash)
+    const locales: Locale.Type[] = get_locale_list(text, hash, game_version, web_version)
     console.log(locales)
     for (const locale of locales) {
-      if (locale.raw_id === Locale.RawId.JPja) {
-        console.log(await locale.get_locale())
-      }
+      await locale.write()
     }
   }
 }

@@ -50,3 +50,33 @@ export const pascalcaseKeys = (obj: any): object => {
     {},
   )
 }
+
+/**
+ * 全角を半角に変換する
+ * @param obj
+ * @returns
+ */
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+export const toHalfValues = (obj: any): object => {
+  if (!isObject(obj)) {
+    return obj
+  }
+  if (isArray(obj)) {
+    return obj.map((v) => toHalfValues(v))
+  }
+  if (isDate(obj)) {
+    return obj
+  }
+  return reduce(
+    obj,
+    (r, v, k) => {
+      return {
+        ...r,
+        [k]: (v as string).replace(/[\uFF10-\uFF19\uFF08\uFF09\uFF21-\uFF3A\uFF41-\uFF5A]/g, (c: string) =>
+          String.fromCharCode(c.charCodeAt(0) - 0xfee0),
+        ),
+      }
+    },
+    {},
+  )
+}

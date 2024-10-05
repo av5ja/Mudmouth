@@ -1,5 +1,6 @@
 import { Locale } from '@/enums/locale_type'
-import { APPVer, KeyHash, Lookup, SHA256Hash } from '@/models/lookup.dto'
+import { KeyValue } from '@/models/key_value.dto'
+import { Lookup } from '@/models/lookup.dto'
 import { z } from 'zod'
 import { pascalCase } from './camelcase_keys'
 
@@ -102,11 +103,11 @@ export const get_web_version = async (hash: string): Promise<string> => {
  * @param text
  * @returns
  */
-export const get_sha256_hash = (text: string): KeyHash[] => {
+export const get_sha256_hash = (text: string): KeyValue[] => {
   const pattern: RegExp = /id:"([a-f0-9]{64})",metadata:{},name:"([\w]*)"/g
   const matches: IterableIterator<RegExpMatchArray> = text.matchAll(pattern)
   return z
-    .array(KeyHash)
+    .array(KeyValue)
     .parse(
       [...matches]
         .map((match) => ({ key: pascalCase(match[2]), value: match[1] }))
@@ -120,7 +121,7 @@ export const get_sha256_hash = (text: string): KeyHash[] => {
  * @param hash SplatNet3のハッシュ
  * @returns
  */
-export const get_locale_list = (text: string, hash: string): Locale.Type[] => {
+export const get_locale_list = (text: string, hash: string, game_version: string, web_version): Locale.Type[] => {
   const pattern: RegExp = /([\d]{2,3}):"([a-f0-9]{8})"/g
   const matches: IterableIterator<RegExpMatchArray> = text.matchAll(pattern)
   const locales = z
@@ -140,7 +141,7 @@ export const get_locale_list = (text: string, hash: string): Locale.Type[] => {
           },
         ]),
     )
-  return locales.map((locale) => new Locale.Type(locale.key, locale.value))
+  return locales.map((locale) => new Locale.Type(locale.key, locale.value, game_version, web_version))
   // return await Promise.all(locales.map((locale) => get_locale(locale)))
 }
 
