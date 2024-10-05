@@ -29,31 +29,34 @@ final class RealmCoopResult: Object, Codable, Identifiable {
 
     convenience init(result: CoopHistoryDetailQuery.CoopResult) {
         self.init()
-        id = result.id
-        uuid = result.uuid
-        nplnUserId = result.myResult.nplnUserId
-        isClear = result.jobResult.isClear
-        failureWave = result.jobResult.failureWave
-        bossId = result.jobResult.bossId
-        stageId = result.schedule.stageId
-        isBossDefeated = result.jobResult.isBossDefeated
-        ikuraNum = result.ikuraNum
-        goldenIkuraNum = result.goldenIkuraNum
-        goldenIkuraAssistNum = result.goldenIkuraAssistNum
-        dangerRate = result.dangerRate.decimal128
-        playTime = result.playTime
-        scale = .init(contentsOf: result.scale)
         bossCounts.append(objectsIn: result.bossCounts)
+        bossId = result.jobResult.bossId
         bossKillCounts.append(objectsIn: result.bossKillCounts)
-        scenarioCode = result.scenarioCode
-
-        jobRate = result.myResult.jobRate?.decimal128
+        bossResult.append(objectsIn: result.bossResults?.map({ $0.isDefeated }) ?? [nil, nil, nil])
+        dangerRate = result.dangerRate.decimal128
+        failureWave = result.jobResult.failureWave
+        goldenIkuraAssistNum = result.goldenIkuraAssistNum
+        goldenIkuraNum = result.goldenIkuraNum
+        gradeId = result.myResult.gradeId
+        gradePoint = result.myResult.gradePoint
+        id = result.id
+        ikuraNum = result.ikuraNum
+        isBossDefeated = result.jobResult.isBossDefeated
+        isClear = result.jobResult.isClear
         jobBonus = result.myResult.jobBonus
+        jobRate = result.myResult.jobRate?.decimal128
         jobScore = result.myResult.jobScore
         kumaPoint = result.myResult.kumaPoint
-        gradePoint = result.myResult.gradePoint
-        gradeId = result.myResult.gradeId
+        mode = result.schedule.mode
+        nplnUserId = result.myResult.nplnUserId
+        weaponList.append(objectsIn: result.schedule.weaponList)
+        playTime = result.playTime
+        rule = result.schedule.rule
+        scale = .init(contentsOf: result.scale)
+        scenarioCode = result.scenarioCode
         smellMeter = result.myResult.smellMeter
+        stageId = result.schedule.stageId
+        uuid = result.uuid
 
         players = .init(contentsOf: result.members.map { RealmCoopPlayer(result: $0) })
         waves = .init(contentsOf: result.waveDetails.map { RealmCoopWave(result: $0) })
@@ -61,32 +64,36 @@ final class RealmCoopResult: Object, Codable, Identifiable {
 
     // MARK: Internal
 
-    @Persisted(primaryKey: true) var id: String
-    @Persisted var uuid: UUID
-    @Persisted var nplnUserId: String
-    @Persisted var gradePoint: Int?
-    @Persisted var gradeId: CoopGrade?
-    @Persisted var isClear: Bool
-    @Persisted var failureWave: Int?
-    @Persisted var bossId: CoopEnemy?
-    @Persisted var isBossDefeated: Bool?
-    @Persisted var ikuraNum: Int
-    @Persisted var stageId: CoopStage
-    @Persisted(indexed: true) var goldenIkuraNum: Int
-    @Persisted var goldenIkuraAssistNum: Int?
     @Persisted var bossCounts: List<Int>
+    @Persisted var bossId: CoopEnemy?
     @Persisted var bossKillCounts: List<Int>
+    @Persisted var bossResult: List<Bool?>
     @Persisted var dangerRate: Decimal128?
+    @Persisted var failureWave: Int?
+    @Persisted var goldenIkuraAssistNum: Int?
+    @Persisted var gradeId: CoopGrade?
+    @Persisted var gradePoint: Int?
+    @Persisted var ikuraNum: Int
+    @Persisted var isBossDefeated: Bool?
+    @Persisted var isClear: Bool
+    @Persisted var jobBonus: Int?
     @Persisted var jobRate: Decimal128?
     @Persisted var jobScore: Int?
     @Persisted var kumaPoint: Int?
-    @Persisted var jobBonus: Int?
-    @Persisted var smellMeter: Int?
-    @Persisted var waves: List<RealmCoopWave>
-    @Persisted var players: List<RealmCoopPlayer>
-    @Persisted var scale: List<Int?>
+    @Persisted var mode: CoopMode
+    @Persisted var nplnUserId: String
     @Persisted var playTime: Date
+    @Persisted var players: List<RealmCoopPlayer>
+    @Persisted var rule: CoopRule
+    @Persisted var scale: List<Int?>
     @Persisted var scenarioCode: String?
+    @Persisted var smellMeter: Int?
+    @Persisted var stageId: CoopStage
+    @Persisted var uuid: UUID
+    @Persisted var waves: List<RealmCoopWave>
+    @Persisted var weaponList: List<WeaponInfoMain>
+    @Persisted(indexed: true) var goldenIkuraNum: Int
+    @Persisted(primaryKey: true) var id: String
 
     // MARK: Private
 
@@ -134,10 +141,6 @@ extension RealmCoopResult {
     private var schedule: RealmCoopSchedule {
         // swiftlint:disable:next force_unwrapping
         schedules.first!
-    }
-
-    var weaponList: List<WeaponInfoMain> {
-        schedule.weaponList
     }
 
     var player: RealmCoopPlayer {

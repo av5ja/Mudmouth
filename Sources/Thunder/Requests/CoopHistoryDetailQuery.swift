@@ -34,6 +34,8 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
         public let myResult: MemberResult
         public let otherResults: [MemberResult]
         public let jobResult: JobResult
+        // swiftlint:disable:next discouraged_optional_collection
+        public let bossResults: [BossResult]?
         public let playTime: Date
         public let bossCounts: [Int]
         public let bossKillCounts: [Int]
@@ -44,10 +46,17 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
         public let scenarioCode: String?
         public let waveDetails: [WaveResult]
     }
+    
+    // MARK: - BossResult
+
+    public struct BossResult: Codable {
+        public let bossId: CoopEnemy
+        public let isDefeated: Bool
+    }
 
     // MARK: - ID
 
-    // swiftlint:disable:next type_name)
+    // swiftlint:disable:next type_name
     public struct ID: Codable {
         public let type: String
         public let nplnUserId: String

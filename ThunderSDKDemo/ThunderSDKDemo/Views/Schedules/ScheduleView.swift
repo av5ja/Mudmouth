@@ -19,8 +19,7 @@ struct ScheduleView: View {
 
     var body: some View {
         NavigationLinker(destination: {
-            EmptyView()
-//            ScheduleDetailView(schedule: schedule)
+            ScheduleDetailView(schedule: schedule)
         }, label: {
             _body
         })
