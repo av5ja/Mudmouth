@@ -38,7 +38,14 @@ const Header = (name: string, game_version: string, web_version: string) => [
   `/// - Version: ${web_version}`,
 ]
 
-const Body = (entries: KeyValue[]): string[] => entries.flatMap((entry) => [`/// ${entry.value}`, `case ${entry.key}`])
+const Body = (
+  entries: KeyValue[],
+  options: { comment?: boolean; value?: boolean } = { comment: false, value: true },
+): string[] =>
+  entries.flatMap((entry) => [
+    `/// ${options.comment ? entry.key : entry.value}`,
+    options.value ? `case ${entry.key} = "${entry.value}"` : `case ${entry.key}`,
+  ])
 
 const Definition = (name: string, protocols: Protocol[], lines: string[] = []): string[] => {
   return [`public enum ${name}: ${protocols.join(',')} {`, 'public var id: RawValue { rawValue }'].concat(lines)
@@ -73,7 +80,19 @@ export const LocalizedString = (game_version: string, web_version: string, entri
         ),
       )
       .concat([''])
-      .concat(Body(entries))
+      .concat(Body(entries, { value: false }))
+      .concat(['}']),
+  })
+
+export const SHA256Hash = (game_version: string, web_version: string, entries: KeyValue[]): Template =>
+  Template.parse({
+    path: 'Sources/ThunderSDK/Enums/SHA256Hash.swift',
+    lines: Header('SHA256Hash', game_version, web_version)
+      .concat(
+        Definition('SHA256Hash', [Protocol.STRING, Protocol.CASE_ITERABLE, Protocol.IDENTIFIABLE, Protocol.CODABLE]),
+      )
+      .concat([''])
+      .concat(Body(entries, { comment: true, value: true }))
       .concat(['}']),
   })
 
