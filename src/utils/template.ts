@@ -96,4 +96,15 @@ export const SHA256Hash = (game_version: string, web_version: string, entries: K
       .concat(['}']),
   })
 
+export const Version = (game_version: string, web_version: string, app_version: string): Template =>
+  Template.parse({
+    path: 'Sources/ThunderSDK/Extensions/ThunderSDK+Version.swift',
+    lines: Header('ThunderSDK+Version', game_version, web_version)
+      .concat([
+        'extension ThunderSDK {',
+        `static let current: SPVersion = .init(game: "${game_version}", app: "${app_version}", web: "${web_version}")`,
+      ])
+      .concat(['}']),
+  })
+
 export type Template = z.infer<typeof Template>

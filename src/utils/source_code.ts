@@ -10,7 +10,7 @@ import {
   get_sha256_hash,
   get_web_version,
 } from './resource'
-import { SHA256Hash } from './template'
+import { SHA256Hash, Version } from './template'
 
 export namespace SourceCode {
   export const generate = async (): Promise<void> => {
@@ -29,6 +29,7 @@ export namespace SourceCode {
     const locales: Locale.Type[] = get_locale_list(text, hash, game_version, web_version)
     console.log(locales)
     SHA256Hash(game_version, web_version, hashes).write()
+    Version(game_version, web_version, app_version).write()
     for (const locale of locales) {
       await locale.write()
     }
