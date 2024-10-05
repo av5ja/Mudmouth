@@ -53,7 +53,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, UIWindowSceneDelegate {
             ThunderSDK.configure(url: "https://api-dev.splatnet3.com")
         #endif
         if let documentURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            Logger.debug(documentURL.absoluteURL)
+            Logger.debug(documentURL.path)
+            
         }
         UNUserNotificationCenter.current().delegate = self
         return true
