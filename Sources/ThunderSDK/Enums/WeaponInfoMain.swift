@@ -2,7 +2,7 @@
 //  WeaponInfoMain.swift
 //  ThunderSDK
 //
-//  Created by Thunder SDK Gen on 2024/10/01
+//  Created by Thunder SDK Gen on 2024/10/05
 //  Copyright @ 2024 Magi, Corporation. All rights reserved.
 //
 //
@@ -14,229 +14,221 @@ import Foundation
 ///   tkgstrator
 /// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 9.1.0
+/// - Version: 6.0.0-30a1464a
 public enum WeaponInfoMain: SPRawRepresentable {
-    /// Unknown
-    /// - Returns: -999
-    case Unknown
-    /// RandomGold
-    /// - Returns: -2
-    case RandomGold
-    /// RandomGreen
-    /// - Returns: -1
-    case RandomGreen
     /// ボールドマーカー
     /// - Returns: 0
-    case Shooter_Short
+    case ShooterShort
     /// わかばシューター
     /// - Returns: 10
-    case Shooter_First
+    case ShooterFirst
     /// シャープマーカー
     /// - Returns: 20
-    case Shooter_Precision
+    case ShooterPrecision
     /// プロモデラー
     /// - Returns: 30
-    case Shooter_Blaze
+    case ShooterBlaze
     /// スプラシューター
     /// - Returns: 40
-    case Shooter_Normal
+    case ShooterNormal
     /// .52ガロン
     /// - Returns: 50
-    case Shooter_Gravity
+    case ShooterGravity
     /// N-ZAP
     /// - Returns: 60
-    case Shooter_QuickMiddle
+    case ShooterQuickMiddle
     /// プライムシューター
     /// - Returns: 70
-    case Shooter_Expert
+    case ShooterExpert
     /// .96ガロン
     /// - Returns: 80
-    case Shooter_Heavy
+    case ShooterHeavy
     /// ジェットスイーパー
     /// - Returns: 90
-    case Shooter_Long
+    case ShooterLong
     /// スペースシューター
     /// - Returns: 100
-    case Shooter_QuickLong
+    case ShooterQuickLong
     /// ノヴァブラスター
     /// - Returns: 200
-    case Blaster_Short
+    case BlasterShort
     /// ホットブラスター
     /// - Returns: 210
-    case Blaster_Middle
+    case BlasterMiddle
     /// ロングブラスター
     /// - Returns: 220
-    case Blaster_Long
+    case BlasterLong
     /// クラッシュブラスター
     /// - Returns: 230
-    case Blaster_LightShort
+    case BlasterLightShort
     /// ラピッドブラスター
     /// - Returns: 240
-    case Blaster_Light
+    case BlasterLight
     /// Rブラスターエリート
     /// - Returns: 250
-    case Blaster_LightLong
+    case BlasterLightLong
     /// S-BLAST
     /// - Returns: 260
-    case Blaster_Precision
+    case BlasterPrecision
     /// L3リールガン
     /// - Returns: 300
-    case Shooter_TripleQuick
+    case ShooterTripleQuick
     /// H3リールガン
     /// - Returns: 310
-    case Shooter_TripleMiddle
+    case ShooterTripleMiddle
     /// ボトルガイザー
     /// - Returns: 400
-    case Shooter_Flash
-    /// クマサン印のブラスター
-    /// - Returns: 20900
-    case Blaster_Bear
+    case ShooterFlash
     /// カーボンローラー
     /// - Returns: 1000
-    case Roller_Compact
+    case RollerCompact
     /// スプラローラー
     /// - Returns: 1010
-    case Roller_Normal
+    case RollerNormal
     /// ダイナモローラー
     /// - Returns: 1020
-    case Roller_Heavy
+    case RollerHeavy
     /// ヴァルアブルローラー
     /// - Returns: 1030
-    case Roller_Hunter
+    case RollerHunter
     /// ワイドローラー
     /// - Returns: 1040
-    case Roller_Wide
+    case RollerWide
     /// パブロ
     /// - Returns: 1100
-    case Brush_Mini
+    case BrushMini
     /// ホクサイ
     /// - Returns: 1110
-    case Brush_Normal
+    case BrushNormal
     /// フィンセント
     /// - Returns: 1120
-    case Brush_Heavy
-    /// クマサン印のローラー
-    /// - Returns: 21900
-    case Roller_Bear
+    case BrushHeavy
     /// スクイックリン
     /// - Returns: 2000
-    case Charger_Quick
+    case ChargerQuick
     /// スプラチャージャー
     /// - Returns: 2010
-    case Charger_Normal
+    case ChargerNormal
     /// リッター4K
     /// - Returns: 2030
-    case Charger_Long
+    case ChargerLong
     /// 14式竹筒銃
     /// - Returns: 2050
-    case Charger_Light
+    case ChargerLight
     /// ソイチューバー
     /// - Returns: 2060
-    case Charger_Keeper
+    case ChargerKeeper
     /// R-PEN
     /// - Returns: 2070
-    case Charger_Pencil
-    /// クマサン印のチャージャー
-    /// - Returns: 22900
-    case Charger_Bear
+    case ChargerPencil
     /// バケットスロッシャー
     /// - Returns: 3000
-    case Slosher_Strong
+    case SlosherStrong
     /// ヒッセン
     /// - Returns: 3010
-    case Slosher_Diffusion
+    case SlosherDiffusion
     /// スクリュースロッシャー
     /// - Returns: 3020
-    case Slosher_Launcher
+    case SlosherLauncher
     /// オーバーフロッシャー
     /// - Returns: 3030
-    case Slosher_Bathtub
+    case SlosherBathtub
     /// エクスプロッシャー
     /// - Returns: 3040
-    case Slosher_Washtub
+    case SlosherWashtub
     /// モップリン
     /// - Returns: 3050
-    case Slosher_Double
-    /// クマサン印のスロッシャー
-    /// - Returns: 23900
-    case Slosher_Bear
+    case SlosherDouble
     /// スプラスピナー
     /// - Returns: 4000
-    case Spinner_Quick
+    case SpinnerQuick
     /// バレルスピナー
     /// - Returns: 4010
-    case Spinner_Standard
+    case SpinnerStandard
     /// ハイドラント
     /// - Returns: 4020
-    case Spinner_Hyper
+    case SpinnerHyper
     /// クーゲルシュライバー
     /// - Returns: 4030
-    case Spinner_Downpour
+    case SpinnerDownpour
     /// ノーチラス
     /// - Returns: 4040
-    case Spinner_Serein
+    case SpinnerSerein
     /// イグザミナー
     /// - Returns: 4050
-    case Spinner_HyperShort
+    case SpinnerHyperShort
     /// スパッタリー
     /// - Returns: 5000
-    case Maneuver_Short
+    case ManeuverShort
     /// スプラマニューバー
     /// - Returns: 5010
-    case Maneuver_Normal
+    case ManeuverNormal
     /// ケルビン525
     /// - Returns: 5020
-    case Maneuver_Gallon
+    case ManeuverGallon
     /// デュアルスイーパー
     /// - Returns: 5030
-    case Maneuver_Dual
+    case ManeuverDual
     /// クアッドホッパー
     /// - Returns: 5040
-    case Maneuver_Stepper
+    case ManeuverStepper
     /// ガエンFF
     /// - Returns: 5050
-    case Maneuver_Long
-    /// クマサン印のマニューバー
-    /// - Returns: 25900
-    case Maneuver_Bear
+    case ManeuverLong
     /// パラシェルター
     /// - Returns: 6000
-    case Shelter_Normal
+    case ShelterNormal
     /// キャンピングシェルター
     /// - Returns: 6010
-    case Shelter_Wide
+    case ShelterWide
     /// スパイガジェット
     /// - Returns: 6020
-    case Shelter_Compact
+    case ShelterCompact
     /// 24式張替傘
     /// - Returns: 6030
-    case Shelter_Focus
-    /// クマサン印のシェルター
-    /// - Returns: 26900
-    case Shelter_Bear
+    case ShelterFocus
     /// ストリンガー
     /// - Returns: 7010
-    case Stringer_Normal
+    case StringerNormal
     /// LACT-450
     /// - Returns: 7020
-    case Stringer_Short
+    case StringerShort
     /// フルイドV
     /// - Returns: 7030
-    case Stringer_Explosion
-    /// クマサン印のストリンガー
-    /// - Returns: 27900
-    case Stringer_Bear
+    case StringerExplosion
     /// ジムワイパー
     /// - Returns: 8000
-    case Saber_Normal
+    case SaberNormal
     /// ドライブワイパー
     /// - Returns: 8010
-    case Saber_Lite
+    case SaberLite
     /// デンタルワイパーミント
     /// - Returns: 8020
-    case Saber_Heavy
+    case SaberHeavy
+    /// クマサン印のブラスター
+    /// - Returns: 20900
+    case BlasterBear
+    /// クマサン印のローラー
+    /// - Returns: 21900
+    case RollerBear
+    /// クマサン印のチャージャー
+    /// - Returns: 22900
+    case ChargerBear
+    /// クマサン印のスロッシャー
+    /// - Returns: 23900
+    case SlosherBear
+    /// クマサン印のマニューバー
+    /// - Returns: 25900
+    case ManeuverBear
+    /// クマサン印のシェルター
+    /// - Returns: 26900
+    case ShelterBear
+    /// クマサン印のストリンガー
+    /// - Returns: 27900
+    case StringerBear
     /// クマサン印のワイパー
     /// - Returns: 28900
-    case Saber_Bear
+    case SaberBear
     /// Undefined
     /// - Returns: rawValue
     case Undefined(RawValue)
@@ -244,158 +236,154 @@ public enum WeaponInfoMain: SPRawRepresentable {
     // MARK: Public
 
     public static let allCases: AllCases = [
-        .Unknown,
-        .RandomGold,
-        .RandomGreen,
-        .Shooter_Short,
-        .Shooter_First,
-        .Shooter_Precision,
-        .Shooter_Blaze,
-        .Shooter_Normal,
-        .Shooter_Gravity,
-        .Shooter_QuickMiddle,
-        .Shooter_Expert,
-        .Shooter_Heavy,
-        .Shooter_Long,
-        .Shooter_QuickLong,
-        .Blaster_Short,
-        .Blaster_Middle,
-        .Blaster_Long,
-        .Blaster_LightShort,
-        .Blaster_Light,
-        .Blaster_LightLong,
-        .Blaster_Precision,
-        .Shooter_TripleQuick,
-        .Shooter_TripleMiddle,
-        .Shooter_Flash,
-        .Blaster_Bear,
-        .Roller_Compact,
-        .Roller_Normal,
-        .Roller_Heavy,
-        .Roller_Hunter,
-        .Roller_Wide,
-        .Brush_Mini,
-        .Brush_Normal,
-        .Brush_Heavy,
-        .Roller_Bear,
-        .Charger_Quick,
-        .Charger_Normal,
-        .Charger_Long,
-        .Charger_Light,
-        .Charger_Keeper,
-        .Charger_Pencil,
-        .Charger_Bear,
-        .Slosher_Strong,
-        .Slosher_Diffusion,
-        .Slosher_Launcher,
-        .Slosher_Bathtub,
-        .Slosher_Washtub,
-        .Slosher_Double,
-        .Slosher_Bear,
-        .Spinner_Quick,
-        .Spinner_Standard,
-        .Spinner_Hyper,
-        .Spinner_Downpour,
-        .Spinner_Serein,
-        .Spinner_HyperShort,
-        .Maneuver_Short,
-        .Maneuver_Normal,
-        .Maneuver_Gallon,
-        .Maneuver_Dual,
-        .Maneuver_Stepper,
-        .Maneuver_Long,
-        .Maneuver_Bear,
-        .Shelter_Normal,
-        .Shelter_Wide,
-        .Shelter_Compact,
-        .Shelter_Focus,
-        .Shelter_Bear,
-        .Stringer_Normal,
-        .Stringer_Short,
-        .Stringer_Explosion,
-        .Stringer_Bear,
-        .Saber_Normal,
-        .Saber_Lite,
-        .Saber_Heavy,
-        .Saber_Bear,
+        .ShooterShort,
+        .ShooterFirst,
+        .ShooterPrecision,
+        .ShooterBlaze,
+        .ShooterNormal,
+        .ShooterGravity,
+        .ShooterQuickMiddle,
+        .ShooterExpert,
+        .ShooterHeavy,
+        .ShooterLong,
+        .ShooterQuickLong,
+        .BlasterShort,
+        .BlasterMiddle,
+        .BlasterLong,
+        .BlasterLightShort,
+        .BlasterLight,
+        .BlasterLightLong,
+        .BlasterPrecision,
+        .ShooterTripleQuick,
+        .ShooterTripleMiddle,
+        .ShooterFlash,
+        .RollerCompact,
+        .RollerNormal,
+        .RollerHeavy,
+        .RollerHunter,
+        .RollerWide,
+        .BrushMini,
+        .BrushNormal,
+        .BrushHeavy,
+        .ChargerQuick,
+        .ChargerNormal,
+        .ChargerLong,
+        .ChargerLight,
+        .ChargerKeeper,
+        .ChargerPencil,
+        .SlosherStrong,
+        .SlosherDiffusion,
+        .SlosherLauncher,
+        .SlosherBathtub,
+        .SlosherWashtub,
+        .SlosherDouble,
+        .SpinnerQuick,
+        .SpinnerStandard,
+        .SpinnerHyper,
+        .SpinnerDownpour,
+        .SpinnerSerein,
+        .SpinnerHyperShort,
+        .ManeuverShort,
+        .ManeuverNormal,
+        .ManeuverGallon,
+        .ManeuverDual,
+        .ManeuverStepper,
+        .ManeuverLong,
+        .ShelterNormal,
+        .ShelterWide,
+        .ShelterCompact,
+        .ShelterFocus,
+        .StringerNormal,
+        .StringerShort,
+        .StringerExplosion,
+        .SaberNormal,
+        .SaberLite,
+        .SaberHeavy,
+        .BlasterBear,
+        .RollerBear,
+        .ChargerBear,
+        .SlosherBear,
+        .ManeuverBear,
+        .ShelterBear,
+        .StringerBear,
+        .SaberBear,
     ]
+
+    public var id: RawValue { rawValue }
 
     public var rawValue: RawValue {
         switch self {
-        case .Unknown: return -999
-        case .RandomGold: return -2
-        case .RandomGreen: return -1
-        case .Shooter_Short: return 0
-        case .Shooter_First: return 10
-        case .Shooter_Precision: return 20
-        case .Shooter_Blaze: return 30
-        case .Shooter_Normal: return 40
-        case .Shooter_Gravity: return 50
-        case .Shooter_QuickMiddle: return 60
-        case .Shooter_Expert: return 70
-        case .Shooter_Heavy: return 80
-        case .Shooter_Long: return 90
-        case .Shooter_QuickLong: return 100
-        case .Blaster_Short: return 200
-        case .Blaster_Middle: return 210
-        case .Blaster_Long: return 220
-        case .Blaster_LightShort: return 230
-        case .Blaster_Light: return 240
-        case .Blaster_LightLong: return 250
-        case .Blaster_Precision: return 260
-        case .Shooter_TripleQuick: return 300
-        case .Shooter_TripleMiddle: return 310
-        case .Shooter_Flash: return 400
-        case .Blaster_Bear: return 20900
-        case .Roller_Compact: return 1000
-        case .Roller_Normal: return 1010
-        case .Roller_Heavy: return 1020
-        case .Roller_Hunter: return 1030
-        case .Roller_Wide: return 1040
-        case .Brush_Mini: return 1100
-        case .Brush_Normal: return 1110
-        case .Brush_Heavy: return 1120
-        case .Roller_Bear: return 21900
-        case .Charger_Quick: return 2000
-        case .Charger_Normal: return 2010
-        case .Charger_Long: return 2030
-        case .Charger_Light: return 2050
-        case .Charger_Keeper: return 2060
-        case .Charger_Pencil: return 2070
-        case .Charger_Bear: return 22900
-        case .Slosher_Strong: return 3000
-        case .Slosher_Diffusion: return 3010
-        case .Slosher_Launcher: return 3020
-        case .Slosher_Bathtub: return 3030
-        case .Slosher_Washtub: return 3040
-        case .Slosher_Double: return 3050
-        case .Slosher_Bear: return 23900
-        case .Spinner_Quick: return 4000
-        case .Spinner_Standard: return 4010
-        case .Spinner_Hyper: return 4020
-        case .Spinner_Downpour: return 4030
-        case .Spinner_Serein: return 4040
-        case .Spinner_HyperShort: return 4050
-        case .Maneuver_Short: return 5000
-        case .Maneuver_Normal: return 5010
-        case .Maneuver_Gallon: return 5020
-        case .Maneuver_Dual: return 5030
-        case .Maneuver_Stepper: return 5040
-        case .Maneuver_Long: return 5050
-        case .Maneuver_Bear: return 25900
-        case .Shelter_Normal: return 6000
-        case .Shelter_Wide: return 6010
-        case .Shelter_Compact: return 6020
-        case .Shelter_Focus: return 6030
-        case .Shelter_Bear: return 26900
-        case .Stringer_Normal: return 7010
-        case .Stringer_Short: return 7020
-        case .Stringer_Explosion: return 7030
-        case .Stringer_Bear: return 27900
-        case .Saber_Normal: return 8000
-        case .Saber_Lite: return 8010
-        case .Saber_Heavy: return 8020
-        case .Saber_Bear: return 28900
+        case .ShooterShort: return 0
+        case .ShooterFirst: return 10
+        case .ShooterPrecision: return 20
+        case .ShooterBlaze: return 30
+        case .ShooterNormal: return 40
+        case .ShooterGravity: return 50
+        case .ShooterQuickMiddle: return 60
+        case .ShooterExpert: return 70
+        case .ShooterHeavy: return 80
+        case .ShooterLong: return 90
+        case .ShooterQuickLong: return 100
+        case .BlasterShort: return 200
+        case .BlasterMiddle: return 210
+        case .BlasterLong: return 220
+        case .BlasterLightShort: return 230
+        case .BlasterLight: return 240
+        case .BlasterLightLong: return 250
+        case .BlasterPrecision: return 260
+        case .ShooterTripleQuick: return 300
+        case .ShooterTripleMiddle: return 310
+        case .ShooterFlash: return 400
+        case .RollerCompact: return 1000
+        case .RollerNormal: return 1010
+        case .RollerHeavy: return 1020
+        case .RollerHunter: return 1030
+        case .RollerWide: return 1040
+        case .BrushMini: return 1100
+        case .BrushNormal: return 1110
+        case .BrushHeavy: return 1120
+        case .ChargerQuick: return 2000
+        case .ChargerNormal: return 2010
+        case .ChargerLong: return 2030
+        case .ChargerLight: return 2050
+        case .ChargerKeeper: return 2060
+        case .ChargerPencil: return 2070
+        case .SlosherStrong: return 3000
+        case .SlosherDiffusion: return 3010
+        case .SlosherLauncher: return 3020
+        case .SlosherBathtub: return 3030
+        case .SlosherWashtub: return 3040
+        case .SlosherDouble: return 3050
+        case .SpinnerQuick: return 4000
+        case .SpinnerStandard: return 4010
+        case .SpinnerHyper: return 4020
+        case .SpinnerDownpour: return 4030
+        case .SpinnerSerein: return 4040
+        case .SpinnerHyperShort: return 4050
+        case .ManeuverShort: return 5000
+        case .ManeuverNormal: return 5010
+        case .ManeuverGallon: return 5020
+        case .ManeuverDual: return 5030
+        case .ManeuverStepper: return 5040
+        case .ManeuverLong: return 5050
+        case .ShelterNormal: return 6000
+        case .ShelterWide: return 6010
+        case .ShelterCompact: return 6020
+        case .ShelterFocus: return 6030
+        case .StringerNormal: return 7010
+        case .StringerShort: return 7020
+        case .StringerExplosion: return 7030
+        case .SaberNormal: return 8000
+        case .SaberLite: return 8010
+        case .SaberHeavy: return 8020
+        case .BlasterBear: return 20900
+        case .RollerBear: return 21900
+        case .ChargerBear: return 22900
+        case .SlosherBear: return 23900
+        case .ManeuverBear: return 25900
+        case .ShelterBear: return 26900
+        case .StringerBear: return 27900
+        case .SaberBear: return 28900
         case .Undefined(let rawValue): return rawValue
         }
     }

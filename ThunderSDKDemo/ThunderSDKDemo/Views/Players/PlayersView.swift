@@ -47,7 +47,7 @@ struct PlayersView: View {
             })
         }
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle(Text(rawValue: .XRankingTopPlayers))
+//        .navigationTitle(Text(rawValue: .XRankingTopPlayers))
     }
 
     private var iOS16: some View {
@@ -62,7 +62,7 @@ struct PlayersView: View {
             BackgroundWave()
         })
         .navigationBarTitleDisplayMode(.inline)
-        .navigationTitle(Text(rawValue: .XRankingTopPlayers))
+//        .navigationTitle(Text(rawValue: .XRankingTopPlayers))
     }
 }
 

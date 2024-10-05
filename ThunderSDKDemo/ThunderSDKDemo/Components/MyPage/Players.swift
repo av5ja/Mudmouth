@@ -16,9 +16,9 @@ struct Players: View {
         NavigationLink(
             destination: PlayersView(),
             label: {
-                Text(rawValue: .XRankingTopPlayers)
-                    .font(.custom(.Splatfont2, size: 12))
-                    .lineLimit(1)
+//                Text(rawValue: .XRankingTopPlayers)
+//                    .font(.custom(.Splatfont2, size: 12))
+//                    .lineLimit(1)
             }
         )
         .buttonStyle(.circle(forgroundColor: SPColor.SP3.SPBackground))

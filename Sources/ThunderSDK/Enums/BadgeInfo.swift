@@ -2,7 +2,7 @@
 //  BadgeInfo.swift
 //  ThunderSDK
 //
-//  Created by Thunder SDK Gen on 2024/10/01
+//  Created by Thunder SDK Gen on 2024/10/05
 //  Copyright @ 2024 Magi, Corporation. All rights reserved.
 //
 //
@@ -14,1849 +14,1850 @@ import Foundation
 ///   tkgstrator
 /// - Copyright: 2024 Nintendo Co., Ltd.
 /// - Version: 9.1.0
+/// - Version: 6.0.0-30a1464a
 public enum BadgeInfo: SPRawRepresentable {
     ///
     /// - Returns: 1000000
-    case WeaponLevel_Shooter_Short_00_Lv00
+    case WeaponLevelShooterShort00Lv00
     ///
     /// - Returns: 1000001
-    case WeaponLevel_Shooter_Short_00_Lv01
+    case WeaponLevelShooterShort00Lv01
     ///
     /// - Returns: 1000010
-    case WeaponLevel_Shooter_Short_01_Lv00
+    case WeaponLevelShooterShort01Lv00
     ///
     /// - Returns: 1000011
-    case WeaponLevel_Shooter_Short_01_Lv01
+    case WeaponLevelShooterShort01Lv01
     ///
     /// - Returns: 1000100
-    case WeaponLevel_Shooter_First_00_Lv00
+    case WeaponLevelShooterFirst00Lv00
     ///
     /// - Returns: 1000101
-    case WeaponLevel_Shooter_First_00_Lv01
+    case WeaponLevelShooterFirst00Lv01
     ///
     /// - Returns: 1000110
-    case WeaponLevel_Shooter_First_01_Lv00
+    case WeaponLevelShooterFirst01Lv00
     ///
     /// - Returns: 1000111
-    case WeaponLevel_Shooter_First_01_Lv01
+    case WeaponLevelShooterFirst01Lv01
     ///
     /// - Returns: 1000200
-    case WeaponLevel_Shooter_Precision_00_Lv00
+    case WeaponLevelShooterPrecision00Lv00
     ///
     /// - Returns: 1000201
-    case WeaponLevel_Shooter_Precision_00_Lv01
+    case WeaponLevelShooterPrecision00Lv01
     ///
     /// - Returns: 1000210
-    case WeaponLevel_Shooter_Precision_01_Lv00
+    case WeaponLevelShooterPrecision01Lv00
     ///
     /// - Returns: 1000211
-    case WeaponLevel_Shooter_Precision_01_Lv01
+    case WeaponLevelShooterPrecision01Lv01
     ///
     /// - Returns: 1000300
-    case WeaponLevel_Shooter_Blaze_00_Lv00
+    case WeaponLevelShooterBlaze00Lv00
     ///
     /// - Returns: 1000301
-    case WeaponLevel_Shooter_Blaze_00_Lv01
+    case WeaponLevelShooterBlaze00Lv01
     ///
     /// - Returns: 1000310
-    case WeaponLevel_Shooter_Blaze_01_Lv00
+    case WeaponLevelShooterBlaze01Lv00
     ///
     /// - Returns: 1000311
-    case WeaponLevel_Shooter_Blaze_01_Lv01
+    case WeaponLevelShooterBlaze01Lv01
     ///
     /// - Returns: 1000400
-    case WeaponLevel_Shooter_Normal_00_Lv00
+    case WeaponLevelShooterNormal00Lv00
     ///
     /// - Returns: 1000401
-    case WeaponLevel_Shooter_Normal_00_Lv01
+    case WeaponLevelShooterNormal00Lv01
     ///
     /// - Returns: 1000410
-    case WeaponLevel_Shooter_Normal_01_Lv00
+    case WeaponLevelShooterNormal01Lv00
     ///
     /// - Returns: 1000411
-    case WeaponLevel_Shooter_Normal_01_Lv01
+    case WeaponLevelShooterNormal01Lv01
     ///
     /// - Returns: 1000450
-    case WeaponLevel_Shooter_Normal_H_Lv00
+    case WeaponLevelShooterNormalHLv00
     ///
     /// - Returns: 1000451
-    case WeaponLevel_Shooter_Normal_H_Lv01
+    case WeaponLevelShooterNormalHLv01
     ///
     /// - Returns: 1000460
-    case WeaponLevel_Shooter_Normal_Oct_Lv00
+    case WeaponLevelShooterNormalOctLv00
     ///
     /// - Returns: 1000461
-    case WeaponLevel_Shooter_Normal_Oct_Lv01
+    case WeaponLevelShooterNormalOctLv01
     ///
     /// - Returns: 1000470
-    case WeaponLevel_Shooter_Normal_O_Lv00
+    case WeaponLevelShooterNormalOLv00
     ///
     /// - Returns: 1000471
-    case WeaponLevel_Shooter_Normal_O_Lv01
+    case WeaponLevelShooterNormalOLv01
     ///
     /// - Returns: 1000500
-    case WeaponLevel_Shooter_Gravity_00_Lv00
+    case WeaponLevelShooterGravity00Lv00
     ///
     /// - Returns: 1000501
-    case WeaponLevel_Shooter_Gravity_00_Lv01
+    case WeaponLevelShooterGravity00Lv01
     ///
     /// - Returns: 1000510
-    case WeaponLevel_Shooter_Gravity_01_Lv00
+    case WeaponLevelShooterGravity01Lv00
     ///
     /// - Returns: 1000511
-    case WeaponLevel_Shooter_Gravity_01_Lv01
+    case WeaponLevelShooterGravity01Lv01
     ///
     /// - Returns: 1000600
-    case WeaponLevel_Shooter_QuickMiddle_00_Lv00
+    case WeaponLevelShooterQuickMiddle00Lv00
     ///
     /// - Returns: 1000601
-    case WeaponLevel_Shooter_QuickMiddle_00_Lv01
+    case WeaponLevelShooterQuickMiddle00Lv01
     ///
     /// - Returns: 1000610
-    case WeaponLevel_Shooter_QuickMiddle_01_Lv00
+    case WeaponLevelShooterQuickMiddle01Lv00
     ///
     /// - Returns: 1000611
-    case WeaponLevel_Shooter_QuickMiddle_01_Lv01
+    case WeaponLevelShooterQuickMiddle01Lv01
     ///
     /// - Returns: 1000700
-    case WeaponLevel_Shooter_Expert_00_Lv00
+    case WeaponLevelShooterExpert00Lv00
     ///
     /// - Returns: 1000701
-    case WeaponLevel_Shooter_Expert_00_Lv01
+    case WeaponLevelShooterExpert00Lv01
     ///
     /// - Returns: 1000710
-    case WeaponLevel_Shooter_Expert_01_Lv00
+    case WeaponLevelShooterExpert01Lv00
     ///
     /// - Returns: 1000711
-    case WeaponLevel_Shooter_Expert_01_Lv01
+    case WeaponLevelShooterExpert01Lv01
     ///
     /// - Returns: 1000800
-    case WeaponLevel_Shooter_Heavy_00_Lv00
+    case WeaponLevelShooterHeavy00Lv00
     ///
     /// - Returns: 1000801
-    case WeaponLevel_Shooter_Heavy_00_Lv01
+    case WeaponLevelShooterHeavy00Lv01
     ///
     /// - Returns: 1000810
-    case WeaponLevel_Shooter_Heavy_01_Lv00
+    case WeaponLevelShooterHeavy01Lv00
     ///
     /// - Returns: 1000811
-    case WeaponLevel_Shooter_Heavy_01_Lv01
+    case WeaponLevelShooterHeavy01Lv01
     ///
     /// - Returns: 1000900
-    case WeaponLevel_Shooter_Long_00_Lv00
+    case WeaponLevelShooterLong00Lv00
     ///
     /// - Returns: 1000901
-    case WeaponLevel_Shooter_Long_00_Lv01
+    case WeaponLevelShooterLong00Lv01
     ///
     /// - Returns: 1000910
-    case WeaponLevel_Shooter_Long_01_Lv00
+    case WeaponLevelShooterLong01Lv00
     ///
     /// - Returns: 1000911
-    case WeaponLevel_Shooter_Long_01_Lv01
+    case WeaponLevelShooterLong01Lv01
     ///
     /// - Returns: 1001000
-    case WeaponLevel_Shooter_QuickLong_00_Lv00
+    case WeaponLevelShooterQuickLong00Lv00
     ///
     /// - Returns: 1001001
-    case WeaponLevel_Shooter_QuickLong_00_Lv01
+    case WeaponLevelShooterQuickLong00Lv01
     ///
     /// - Returns: 1001010
-    case WeaponLevel_Shooter_QuickLong_01_Lv00
+    case WeaponLevelShooterQuickLong01Lv00
     ///
     /// - Returns: 1001011
-    case WeaponLevel_Shooter_QuickLong_01_Lv01
+    case WeaponLevelShooterQuickLong01Lv01
     ///
     /// - Returns: 1002000
-    case WeaponLevel_Blaster_Short_00_Lv00
+    case WeaponLevelBlasterShort00Lv00
     ///
     /// - Returns: 1002001
-    case WeaponLevel_Blaster_Short_00_Lv01
+    case WeaponLevelBlasterShort00Lv01
     ///
     /// - Returns: 1002010
-    case WeaponLevel_Blaster_Short_01_Lv00
+    case WeaponLevelBlasterShort01Lv00
     ///
     /// - Returns: 1002011
-    case WeaponLevel_Blaster_Short_01_Lv01
+    case WeaponLevelBlasterShort01Lv01
     ///
     /// - Returns: 1002050
-    case WeaponLevel_Blaster_Short_O_Lv00
+    case WeaponLevelBlasterShortOLv00
     ///
     /// - Returns: 1002051
-    case WeaponLevel_Blaster_Short_O_Lv01
+    case WeaponLevelBlasterShortOLv01
     ///
     /// - Returns: 1002100
-    case WeaponLevel_Blaster_Middle_00_Lv00
+    case WeaponLevelBlasterMiddle00Lv00
     ///
     /// - Returns: 1002101
-    case WeaponLevel_Blaster_Middle_00_Lv01
+    case WeaponLevelBlasterMiddle00Lv01
     ///
     /// - Returns: 1002110
-    case WeaponLevel_Blaster_Middle_01_Lv00
+    case WeaponLevelBlasterMiddle01Lv00
     ///
     /// - Returns: 1002111
-    case WeaponLevel_Blaster_Middle_01_Lv01
+    case WeaponLevelBlasterMiddle01Lv01
     ///
     /// - Returns: 1002200
-    case WeaponLevel_Blaster_Long_00_Lv00
+    case WeaponLevelBlasterLong00Lv00
     ///
     /// - Returns: 1002201
-    case WeaponLevel_Blaster_Long_00_Lv01
+    case WeaponLevelBlasterLong00Lv01
     ///
     /// - Returns: 1002210
-    case WeaponLevel_Blaster_Long_01_Lv00
+    case WeaponLevelBlasterLong01Lv00
     ///
     /// - Returns: 1002211
-    case WeaponLevel_Blaster_Long_01_Lv01
+    case WeaponLevelBlasterLong01Lv01
     ///
     /// - Returns: 1002300
-    case WeaponLevel_Blaster_LightShort_00_Lv00
+    case WeaponLevelBlasterLightShort00Lv00
     ///
     /// - Returns: 1002301
-    case WeaponLevel_Blaster_LightShort_00_Lv01
+    case WeaponLevelBlasterLightShort00Lv01
     ///
     /// - Returns: 1002310
-    case WeaponLevel_Blaster_LightShort_01_Lv00
+    case WeaponLevelBlasterLightShort01Lv00
     ///
     /// - Returns: 1002311
-    case WeaponLevel_Blaster_LightShort_01_Lv01
+    case WeaponLevelBlasterLightShort01Lv01
     ///
     /// - Returns: 1002400
-    case WeaponLevel_Blaster_Light_00_Lv00
+    case WeaponLevelBlasterLight00Lv00
     ///
     /// - Returns: 1002401
-    case WeaponLevel_Blaster_Light_00_Lv01
+    case WeaponLevelBlasterLight00Lv01
     ///
     /// - Returns: 1002410
-    case WeaponLevel_Blaster_Light_01_Lv00
+    case WeaponLevelBlasterLight01Lv00
     ///
     /// - Returns: 1002411
-    case WeaponLevel_Blaster_Light_01_Lv01
+    case WeaponLevelBlasterLight01Lv01
     ///
     /// - Returns: 1002500
-    case WeaponLevel_Blaster_LightLong_00_Lv00
+    case WeaponLevelBlasterLightLong00Lv00
     ///
     /// - Returns: 1002501
-    case WeaponLevel_Blaster_LightLong_00_Lv01
+    case WeaponLevelBlasterLightLong00Lv01
     ///
     /// - Returns: 1002510
-    case WeaponLevel_Blaster_LightLong_01_Lv00
+    case WeaponLevelBlasterLightLong01Lv00
     ///
     /// - Returns: 1002511
-    case WeaponLevel_Blaster_LightLong_01_Lv01
+    case WeaponLevelBlasterLightLong01Lv01
     ///
     /// - Returns: 1002600
-    case WeaponLevel_Blaster_Precision_00_Lv00
+    case WeaponLevelBlasterPrecision00Lv00
     ///
     /// - Returns: 1002601
-    case WeaponLevel_Blaster_Precision_00_Lv01
+    case WeaponLevelBlasterPrecision00Lv01
     ///
     /// - Returns: 1002610
-    case WeaponLevel_Blaster_Precision_01_Lv00
+    case WeaponLevelBlasterPrecision01Lv00
     ///
     /// - Returns: 1002611
-    case WeaponLevel_Blaster_Precision_01_Lv01
+    case WeaponLevelBlasterPrecision01Lv01
     ///
     /// - Returns: 1003000
-    case WeaponLevel_Shooter_TripleQuick_00_Lv00
+    case WeaponLevelShooterTripleQuick00Lv00
     ///
     /// - Returns: 1003001
-    case WeaponLevel_Shooter_TripleQuick_00_Lv01
+    case WeaponLevelShooterTripleQuick00Lv01
     ///
     /// - Returns: 1003010
-    case WeaponLevel_Shooter_TripleQuick_01_Lv00
+    case WeaponLevelShooterTripleQuick01Lv00
     ///
     /// - Returns: 1003011
-    case WeaponLevel_Shooter_TripleQuick_01_Lv01
+    case WeaponLevelShooterTripleQuick01Lv01
     ///
     /// - Returns: 1003100
-    case WeaponLevel_Shooter_TripleMiddle_00_Lv00
+    case WeaponLevelShooterTripleMiddle00Lv00
     ///
     /// - Returns: 1003101
-    case WeaponLevel_Shooter_TripleMiddle_00_Lv01
+    case WeaponLevelShooterTripleMiddle00Lv01
     ///
     /// - Returns: 1003110
-    case WeaponLevel_Shooter_TripleMiddle_01_Lv00
+    case WeaponLevelShooterTripleMiddle01Lv00
     ///
     /// - Returns: 1003111
-    case WeaponLevel_Shooter_TripleMiddle_01_Lv01
+    case WeaponLevelShooterTripleMiddle01Lv01
     ///
     /// - Returns: 1004000
-    case WeaponLevel_Shooter_Flash_00_Lv00
+    case WeaponLevelShooterFlash00Lv00
     ///
     /// - Returns: 1004001
-    case WeaponLevel_Shooter_Flash_00_Lv01
+    case WeaponLevelShooterFlash00Lv01
     ///
     /// - Returns: 1004010
-    case WeaponLevel_Shooter_Flash_01_Lv00
+    case WeaponLevelShooterFlash01Lv00
     ///
     /// - Returns: 1004011
-    case WeaponLevel_Shooter_Flash_01_Lv01
+    case WeaponLevelShooterFlash01Lv01
     ///
     /// - Returns: 1010000
-    case WeaponLevel_Roller_Compact_00_Lv00
+    case WeaponLevelRollerCompact00Lv00
     ///
     /// - Returns: 1010001
-    case WeaponLevel_Roller_Compact_00_Lv01
+    case WeaponLevelRollerCompact00Lv01
     ///
     /// - Returns: 1010010
-    case WeaponLevel_Roller_Compact_01_Lv00
+    case WeaponLevelRollerCompact01Lv00
     ///
     /// - Returns: 1010011
-    case WeaponLevel_Roller_Compact_01_Lv01
+    case WeaponLevelRollerCompact01Lv01
     ///
     /// - Returns: 1010100
-    case WeaponLevel_Roller_Normal_00_Lv00
+    case WeaponLevelRollerNormal00Lv00
     ///
     /// - Returns: 1010101
-    case WeaponLevel_Roller_Normal_00_Lv01
+    case WeaponLevelRollerNormal00Lv01
     ///
     /// - Returns: 1010110
-    case WeaponLevel_Roller_Normal_01_Lv00
+    case WeaponLevelRollerNormal01Lv00
     ///
     /// - Returns: 1010111
-    case WeaponLevel_Roller_Normal_01_Lv01
+    case WeaponLevelRollerNormal01Lv01
     ///
     /// - Returns: 1010150
-    case WeaponLevel_Roller_Normal_O_Lv00
+    case WeaponLevelRollerNormalOLv00
     ///
     /// - Returns: 1010151
-    case WeaponLevel_Roller_Normal_O_Lv01
+    case WeaponLevelRollerNormalOLv01
     ///
     /// - Returns: 1010200
-    case WeaponLevel_Roller_Heavy_00_Lv00
+    case WeaponLevelRollerHeavy00Lv00
     ///
     /// - Returns: 1010201
-    case WeaponLevel_Roller_Heavy_00_Lv01
+    case WeaponLevelRollerHeavy00Lv01
     ///
     /// - Returns: 1010210
-    case WeaponLevel_Roller_Heavy_01_Lv00
+    case WeaponLevelRollerHeavy01Lv00
     ///
     /// - Returns: 1010211
-    case WeaponLevel_Roller_Heavy_01_Lv01
+    case WeaponLevelRollerHeavy01Lv01
     ///
     /// - Returns: 1010300
-    case WeaponLevel_Roller_Hunter_00_Lv00
+    case WeaponLevelRollerHunter00Lv00
     ///
     /// - Returns: 1010301
-    case WeaponLevel_Roller_Hunter_00_Lv01
+    case WeaponLevelRollerHunter00Lv01
     ///
     /// - Returns: 1010310
-    case WeaponLevel_Roller_Hunter_01_Lv00
+    case WeaponLevelRollerHunter01Lv00
     ///
     /// - Returns: 1010311
-    case WeaponLevel_Roller_Hunter_01_Lv01
+    case WeaponLevelRollerHunter01Lv01
     ///
     /// - Returns: 1010400
-    case WeaponLevel_Roller_Wide_00_Lv00
+    case WeaponLevelRollerWide00Lv00
     ///
     /// - Returns: 1010401
-    case WeaponLevel_Roller_Wide_00_Lv01
+    case WeaponLevelRollerWide00Lv01
     ///
     /// - Returns: 1010410
-    case WeaponLevel_Roller_Wide_01_Lv00
+    case WeaponLevelRollerWide01Lv00
     ///
     /// - Returns: 1010411
-    case WeaponLevel_Roller_Wide_01_Lv01
+    case WeaponLevelRollerWide01Lv01
     ///
     /// - Returns: 1011000
-    case WeaponLevel_Brush_Mini_00_Lv00
+    case WeaponLevelBrushMini00Lv00
     ///
     /// - Returns: 1011001
-    case WeaponLevel_Brush_Mini_00_Lv01
+    case WeaponLevelBrushMini00Lv01
     ///
     /// - Returns: 1011010
-    case WeaponLevel_Brush_Mini_01_Lv00
+    case WeaponLevelBrushMini01Lv00
     ///
     /// - Returns: 1011011
-    case WeaponLevel_Brush_Mini_01_Lv01
+    case WeaponLevelBrushMini01Lv01
     ///
     /// - Returns: 1011100
-    case WeaponLevel_Brush_Normal_00_Lv00
+    case WeaponLevelBrushNormal00Lv00
     ///
     /// - Returns: 1011101
-    case WeaponLevel_Brush_Normal_00_Lv01
+    case WeaponLevelBrushNormal00Lv01
     ///
     /// - Returns: 1011110
-    case WeaponLevel_Brush_Normal_01_Lv00
+    case WeaponLevelBrushNormal01Lv00
     ///
     /// - Returns: 1011111
-    case WeaponLevel_Brush_Normal_01_Lv01
+    case WeaponLevelBrushNormal01Lv01
     ///
     /// - Returns: 1011150
-    case WeaponLevel_Brush_Normal_O_Lv00
+    case WeaponLevelBrushNormalOLv00
     ///
     /// - Returns: 1011151
-    case WeaponLevel_Brush_Normal_O_Lv01
+    case WeaponLevelBrushNormalOLv01
     ///
     /// - Returns: 1011200
-    case WeaponLevel_Brush_Heavy_00_Lv00
+    case WeaponLevelBrushHeavy00Lv00
     ///
     /// - Returns: 1011201
-    case WeaponLevel_Brush_Heavy_00_Lv01
+    case WeaponLevelBrushHeavy00Lv01
     ///
     /// - Returns: 1011210
-    case WeaponLevel_Brush_Heavy_01_Lv00
+    case WeaponLevelBrushHeavy01Lv00
     ///
     /// - Returns: 1011211
-    case WeaponLevel_Brush_Heavy_01_Lv01
+    case WeaponLevelBrushHeavy01Lv01
     ///
     /// - Returns: 1020000
-    case WeaponLevel_Charger_Quick_00_Lv00
+    case WeaponLevelChargerQuick00Lv00
     ///
     /// - Returns: 1020001
-    case WeaponLevel_Charger_Quick_00_Lv01
+    case WeaponLevelChargerQuick00Lv01
     ///
     /// - Returns: 1020010
-    case WeaponLevel_Charger_Quick_01_Lv00
+    case WeaponLevelChargerQuick01Lv00
     ///
     /// - Returns: 1020011
-    case WeaponLevel_Charger_Quick_01_Lv01
+    case WeaponLevelChargerQuick01Lv01
     ///
     /// - Returns: 1020100
-    case WeaponLevel_Charger_Normal_00_Lv00
+    case WeaponLevelChargerNormal00Lv00
     ///
     /// - Returns: 1020101
-    case WeaponLevel_Charger_Normal_00_Lv01
+    case WeaponLevelChargerNormal00Lv01
     ///
     /// - Returns: 1020110
-    case WeaponLevel_Charger_Normal_01_Lv00
+    case WeaponLevelChargerNormal01Lv00
     ///
     /// - Returns: 1020111
-    case WeaponLevel_Charger_Normal_01_Lv01
+    case WeaponLevelChargerNormal01Lv01
     ///
     /// - Returns: 1020150
-    case WeaponLevel_Charger_Normal_O_Lv00
+    case WeaponLevelChargerNormalOLv00
     ///
     /// - Returns: 1020151
-    case WeaponLevel_Charger_Normal_O_Lv01
+    case WeaponLevelChargerNormalOLv01
     ///
     /// - Returns: 1020200
-    case WeaponLevel_Charger_NormalScope_00_Lv00
+    case WeaponLevelChargerNormalScope00Lv00
     ///
     /// - Returns: 1020201
-    case WeaponLevel_Charger_NormalScope_00_Lv01
+    case WeaponLevelChargerNormalScope00Lv01
     ///
     /// - Returns: 1020210
-    case WeaponLevel_Charger_NormalScope_01_Lv00
+    case WeaponLevelChargerNormalScope01Lv00
     ///
     /// - Returns: 1020211
-    case WeaponLevel_Charger_NormalScope_01_Lv01
+    case WeaponLevelChargerNormalScope01Lv01
     ///
     /// - Returns: 1020300
-    case WeaponLevel_Charger_Long_00_Lv00
+    case WeaponLevelChargerLong00Lv00
     ///
     /// - Returns: 1020301
-    case WeaponLevel_Charger_Long_00_Lv01
+    case WeaponLevelChargerLong00Lv01
     ///
     /// - Returns: 1020310
-    case WeaponLevel_Charger_Long_01_Lv00
+    case WeaponLevelChargerLong01Lv00
     ///
     /// - Returns: 1020311
-    case WeaponLevel_Charger_Long_01_Lv01
+    case WeaponLevelChargerLong01Lv01
     ///
     /// - Returns: 1020400
-    case WeaponLevel_Charger_LongScope_00_Lv00
+    case WeaponLevelChargerLongScope00Lv00
     ///
     /// - Returns: 1020401
-    case WeaponLevel_Charger_LongScope_00_Lv01
+    case WeaponLevelChargerLongScope00Lv01
     ///
     /// - Returns: 1020410
-    case WeaponLevel_Charger_LongScope_01_Lv00
+    case WeaponLevelChargerLongScope01Lv00
     ///
     /// - Returns: 1020411
-    case WeaponLevel_Charger_LongScope_01_Lv01
+    case WeaponLevelChargerLongScope01Lv01
     ///
     /// - Returns: 1020500
-    case WeaponLevel_Charger_Light_00_Lv00
+    case WeaponLevelChargerLight00Lv00
     ///
     /// - Returns: 1020501
-    case WeaponLevel_Charger_Light_00_Lv01
+    case WeaponLevelChargerLight00Lv01
     ///
     /// - Returns: 1020510
-    case WeaponLevel_Charger_Light_01_Lv00
+    case WeaponLevelChargerLight01Lv00
     ///
     /// - Returns: 1020511
-    case WeaponLevel_Charger_Light_01_Lv01
+    case WeaponLevelChargerLight01Lv01
     ///
     /// - Returns: 1020600
-    case WeaponLevel_Charger_Keeper_00_Lv00
+    case WeaponLevelChargerKeeper00Lv00
     ///
     /// - Returns: 1020601
-    case WeaponLevel_Charger_Keeper_00_Lv01
+    case WeaponLevelChargerKeeper00Lv01
     ///
     /// - Returns: 1020610
-    case WeaponLevel_Charger_Keeper_01_Lv00
+    case WeaponLevelChargerKeeper01Lv00
     ///
     /// - Returns: 1020611
-    case WeaponLevel_Charger_Keeper_01_Lv01
+    case WeaponLevelChargerKeeper01Lv01
     ///
     /// - Returns: 1020700
-    case WeaponLevel_Charger_Pencil_00_Lv00
+    case WeaponLevelChargerPencil00Lv00
     ///
     /// - Returns: 1020701
-    case WeaponLevel_Charger_Pencil_00_Lv01
+    case WeaponLevelChargerPencil00Lv01
     ///
     /// - Returns: 1020710
-    case WeaponLevel_Charger_Pencil_01_Lv00
+    case WeaponLevelChargerPencil01Lv00
     ///
     /// - Returns: 1020711
-    case WeaponLevel_Charger_Pencil_01_Lv01
+    case WeaponLevelChargerPencil01Lv01
     ///
     /// - Returns: 1030000
-    case WeaponLevel_Slosher_Strong_00_Lv00
+    case WeaponLevelSlosherStrong00Lv00
     ///
     /// - Returns: 1030001
-    case WeaponLevel_Slosher_Strong_00_Lv01
+    case WeaponLevelSlosherStrong00Lv01
     ///
     /// - Returns: 1030010
-    case WeaponLevel_Slosher_Strong_01_Lv00
+    case WeaponLevelSlosherStrong01Lv00
     ///
     /// - Returns: 1030011
-    case WeaponLevel_Slosher_Strong_01_Lv01
+    case WeaponLevelSlosherStrong01Lv01
     ///
     /// - Returns: 1030050
-    case WeaponLevel_Slosher_Strong_O_Lv00
+    case WeaponLevelSlosherStrongOLv00
     ///
     /// - Returns: 1030051
-    case WeaponLevel_Slosher_Strong_O_Lv01
+    case WeaponLevelSlosherStrongOLv01
     ///
     /// - Returns: 1030100
-    case WeaponLevel_Slosher_Diffusion_00_Lv00
+    case WeaponLevelSlosherDiffusion00Lv00
     ///
     /// - Returns: 1030101
-    case WeaponLevel_Slosher_Diffusion_00_Lv01
+    case WeaponLevelSlosherDiffusion00Lv01
     ///
     /// - Returns: 1030110
-    case WeaponLevel_Slosher_Diffusion_01_Lv00
+    case WeaponLevelSlosherDiffusion01Lv00
     ///
     /// - Returns: 1030111
-    case WeaponLevel_Slosher_Diffusion_01_Lv01
+    case WeaponLevelSlosherDiffusion01Lv01
     ///
     /// - Returns: 1030200
-    case WeaponLevel_Slosher_Launcher_00_Lv00
+    case WeaponLevelSlosherLauncher00Lv00
     ///
     /// - Returns: 1030201
-    case WeaponLevel_Slosher_Launcher_00_Lv01
+    case WeaponLevelSlosherLauncher00Lv01
     ///
     /// - Returns: 1030210
-    case WeaponLevel_Slosher_Launcher_01_Lv00
+    case WeaponLevelSlosherLauncher01Lv00
     ///
     /// - Returns: 1030211
-    case WeaponLevel_Slosher_Launcher_01_Lv01
+    case WeaponLevelSlosherLauncher01Lv01
     ///
     /// - Returns: 1030300
-    case WeaponLevel_Slosher_Bathtub_00_Lv00
+    case WeaponLevelSlosherBathtub00Lv00
     ///
     /// - Returns: 1030301
-    case WeaponLevel_Slosher_Bathtub_00_Lv01
+    case WeaponLevelSlosherBathtub00Lv01
     ///
     /// - Returns: 1030310
-    case WeaponLevel_Slosher_Bathtub_01_Lv00
+    case WeaponLevelSlosherBathtub01Lv00
     ///
     /// - Returns: 1030311
-    case WeaponLevel_Slosher_Bathtub_01_Lv01
+    case WeaponLevelSlosherBathtub01Lv01
     ///
     /// - Returns: 1030400
-    case WeaponLevel_Slosher_Washtub_00_Lv00
+    case WeaponLevelSlosherWashtub00Lv00
     ///
     /// - Returns: 1030401
-    case WeaponLevel_Slosher_Washtub_00_Lv01
+    case WeaponLevelSlosherWashtub00Lv01
     ///
     /// - Returns: 1030410
-    case WeaponLevel_Slosher_Washtub_01_Lv00
+    case WeaponLevelSlosherWashtub01Lv00
     ///
     /// - Returns: 1030411
-    case WeaponLevel_Slosher_Washtub_01_Lv01
+    case WeaponLevelSlosherWashtub01Lv01
     ///
     /// - Returns: 1030500
-    case WeaponLevel_Slosher_Double_00_Lv00
+    case WeaponLevelSlosherDouble00Lv00
     ///
     /// - Returns: 1030501
-    case WeaponLevel_Slosher_Double_00_Lv01
+    case WeaponLevelSlosherDouble00Lv01
     ///
     /// - Returns: 1030510
-    case WeaponLevel_Slosher_Double_01_Lv00
+    case WeaponLevelSlosherDouble01Lv00
     ///
     /// - Returns: 1030511
-    case WeaponLevel_Slosher_Double_01_Lv01
+    case WeaponLevelSlosherDouble01Lv01
     ///
     /// - Returns: 1040000
-    case WeaponLevel_Spinner_Quick_00_Lv00
+    case WeaponLevelSpinnerQuick00Lv00
     ///
     /// - Returns: 1040001
-    case WeaponLevel_Spinner_Quick_00_Lv01
+    case WeaponLevelSpinnerQuick00Lv01
     ///
     /// - Returns: 1040010
-    case WeaponLevel_Spinner_Quick_01_Lv00
+    case WeaponLevelSpinnerQuick01Lv00
     ///
     /// - Returns: 1040011
-    case WeaponLevel_Spinner_Quick_01_Lv01
+    case WeaponLevelSpinnerQuick01Lv01
     ///
     /// - Returns: 1040100
-    case WeaponLevel_Spinner_Standard_00_Lv00
+    case WeaponLevelSpinnerStandard00Lv00
     ///
     /// - Returns: 1040101
-    case WeaponLevel_Spinner_Standard_00_Lv01
+    case WeaponLevelSpinnerStandard00Lv01
     ///
     /// - Returns: 1040110
-    case WeaponLevel_Spinner_Standard_01_Lv00
+    case WeaponLevelSpinnerStandard01Lv00
     ///
     /// - Returns: 1040111
-    case WeaponLevel_Spinner_Standard_01_Lv01
+    case WeaponLevelSpinnerStandard01Lv01
     ///
     /// - Returns: 1040150
-    case WeaponLevel_Spinner_Standard_O_Lv00
+    case WeaponLevelSpinnerStandardOLv00
     ///
     /// - Returns: 1040151
-    case WeaponLevel_Spinner_Standard_O_Lv01
+    case WeaponLevelSpinnerStandardOLv01
     ///
     /// - Returns: 1040200
-    case WeaponLevel_Spinner_Hyper_00_Lv00
+    case WeaponLevelSpinnerHyper00Lv00
     ///
     /// - Returns: 1040201
-    case WeaponLevel_Spinner_Hyper_00_Lv01
+    case WeaponLevelSpinnerHyper00Lv01
     ///
     /// - Returns: 1040210
-    case WeaponLevel_Spinner_Hyper_01_Lv00
+    case WeaponLevelSpinnerHyper01Lv00
     ///
     /// - Returns: 1040211
-    case WeaponLevel_Spinner_Hyper_01_Lv01
+    case WeaponLevelSpinnerHyper01Lv01
     ///
     /// - Returns: 1040300
-    case WeaponLevel_Spinner_Downpour_00_Lv00
+    case WeaponLevelSpinnerDownpour00Lv00
     ///
     /// - Returns: 1040301
-    case WeaponLevel_Spinner_Downpour_00_Lv01
+    case WeaponLevelSpinnerDownpour00Lv01
     ///
     /// - Returns: 1040310
-    case WeaponLevel_Spinner_Downpour_01_Lv00
+    case WeaponLevelSpinnerDownpour01Lv00
     ///
     /// - Returns: 1040311
-    case WeaponLevel_Spinner_Downpour_01_Lv01
+    case WeaponLevelSpinnerDownpour01Lv01
     ///
     /// - Returns: 1040400
-    case WeaponLevel_Spinner_Serein_00_Lv00
+    case WeaponLevelSpinnerSerein00Lv00
     ///
     /// - Returns: 1040401
-    case WeaponLevel_Spinner_Serein_00_Lv01
+    case WeaponLevelSpinnerSerein00Lv01
     ///
     /// - Returns: 1040410
-    case WeaponLevel_Spinner_Serein_01_Lv00
+    case WeaponLevelSpinnerSerein01Lv00
     ///
     /// - Returns: 1040411
-    case WeaponLevel_Spinner_Serein_01_Lv01
+    case WeaponLevelSpinnerSerein01Lv01
     ///
     /// - Returns: 1040500
-    case WeaponLevel_Spinner_HyperShort_00_Lv00
+    case WeaponLevelSpinnerHyperShort00Lv00
     ///
     /// - Returns: 1040501
-    case WeaponLevel_Spinner_HyperShort_00_Lv01
+    case WeaponLevelSpinnerHyperShort00Lv01
     ///
     /// - Returns: 1040510
-    case WeaponLevel_Spinner_HyperShort_01_Lv00
+    case WeaponLevelSpinnerHyperShort01Lv00
     ///
     /// - Returns: 1040511
-    case WeaponLevel_Spinner_HyperShort_01_Lv01
+    case WeaponLevelSpinnerHyperShort01Lv01
     ///
     /// - Returns: 1050000
-    case WeaponLevel_Maneuver_Short_00_Lv00
+    case WeaponLevelManeuverShort00Lv00
     ///
     /// - Returns: 1050001
-    case WeaponLevel_Maneuver_Short_00_Lv01
+    case WeaponLevelManeuverShort00Lv01
     ///
     /// - Returns: 1050010
-    case WeaponLevel_Maneuver_Short_01_Lv00
+    case WeaponLevelManeuverShort01Lv00
     ///
     /// - Returns: 1050011
-    case WeaponLevel_Maneuver_Short_01_Lv01
+    case WeaponLevelManeuverShort01Lv01
     ///
     /// - Returns: 1050100
-    case WeaponLevel_Maneuver_Normal_00_Lv00
+    case WeaponLevelManeuverNormal00Lv00
     ///
     /// - Returns: 1050101
-    case WeaponLevel_Maneuver_Normal_00_Lv01
+    case WeaponLevelManeuverNormal00Lv01
     ///
     /// - Returns: 1050110
-    case WeaponLevel_Maneuver_Normal_01_Lv00
+    case WeaponLevelManeuverNormal01Lv00
     ///
     /// - Returns: 1050111
-    case WeaponLevel_Maneuver_Normal_01_Lv01
+    case WeaponLevelManeuverNormal01Lv01
     ///
     /// - Returns: 1050150
-    case WeaponLevel_Maneuver_Normal_O_Lv00
+    case WeaponLevelManeuverNormalOLv00
     ///
     /// - Returns: 1050151
-    case WeaponLevel_Maneuver_Normal_O_Lv01
+    case WeaponLevelManeuverNormalOLv01
     ///
     /// - Returns: 1050200
-    case WeaponLevel_Maneuver_Gallon_00_Lv00
+    case WeaponLevelManeuverGallon00Lv00
     ///
     /// - Returns: 1050201
-    case WeaponLevel_Maneuver_Gallon_00_Lv01
+    case WeaponLevelManeuverGallon00Lv01
     ///
     /// - Returns: 1050210
-    case WeaponLevel_Maneuver_Gallon_01_Lv00
+    case WeaponLevelManeuverGallon01Lv00
     ///
     /// - Returns: 1050211
-    case WeaponLevel_Maneuver_Gallon_01_Lv01
+    case WeaponLevelManeuverGallon01Lv01
     ///
     /// - Returns: 1050300
-    case WeaponLevel_Maneuver_Dual_00_Lv00
+    case WeaponLevelManeuverDual00Lv00
     ///
     /// - Returns: 1050301
-    case WeaponLevel_Maneuver_Dual_00_Lv01
+    case WeaponLevelManeuverDual00Lv01
     ///
     /// - Returns: 1050310
-    case WeaponLevel_Maneuver_Dual_01_Lv00
+    case WeaponLevelManeuverDual01Lv00
     ///
     /// - Returns: 1050311
-    case WeaponLevel_Maneuver_Dual_01_Lv01
+    case WeaponLevelManeuverDual01Lv01
     ///
     /// - Returns: 1050400
-    case WeaponLevel_Maneuver_Stepper_00_Lv00
+    case WeaponLevelManeuverStepper00Lv00
     ///
     /// - Returns: 1050401
-    case WeaponLevel_Maneuver_Stepper_00_Lv01
+    case WeaponLevelManeuverStepper00Lv01
     ///
     /// - Returns: 1050410
-    case WeaponLevel_Maneuver_Stepper_01_Lv00
+    case WeaponLevelManeuverStepper01Lv00
     ///
     /// - Returns: 1050411
-    case WeaponLevel_Maneuver_Stepper_01_Lv01
+    case WeaponLevelManeuverStepper01Lv01
     ///
     /// - Returns: 1050500
-    case WeaponLevel_Maneuver_Long_00_Lv00
+    case WeaponLevelManeuverLong00Lv00
     ///
     /// - Returns: 1050501
-    case WeaponLevel_Maneuver_Long_00_Lv01
+    case WeaponLevelManeuverLong00Lv01
     ///
     /// - Returns: 1050510
-    case WeaponLevel_Maneuver_Long_01_Lv00
+    case WeaponLevelManeuverLong01Lv00
     ///
     /// - Returns: 1050511
-    case WeaponLevel_Maneuver_Long_01_Lv01
+    case WeaponLevelManeuverLong01Lv01
     ///
     /// - Returns: 1060000
-    case WeaponLevel_Shelter_Normal_00_Lv00
+    case WeaponLevelShelterNormal00Lv00
     ///
     /// - Returns: 1060001
-    case WeaponLevel_Shelter_Normal_00_Lv01
+    case WeaponLevelShelterNormal00Lv01
     ///
     /// - Returns: 1060010
-    case WeaponLevel_Shelter_Normal_01_Lv00
+    case WeaponLevelShelterNormal01Lv00
     ///
     /// - Returns: 1060011
-    case WeaponLevel_Shelter_Normal_01_Lv01
+    case WeaponLevelShelterNormal01Lv01
     ///
     /// - Returns: 1060050
-    case WeaponLevel_Shelter_Normal_O_Lv00
+    case WeaponLevelShelterNormalOLv00
     ///
     /// - Returns: 1060051
-    case WeaponLevel_Shelter_Normal_O_Lv01
+    case WeaponLevelShelterNormalOLv01
     ///
     /// - Returns: 1060100
-    case WeaponLevel_Shelter_Wide_00_Lv00
+    case WeaponLevelShelterWide00Lv00
     ///
     /// - Returns: 1060101
-    case WeaponLevel_Shelter_Wide_00_Lv01
+    case WeaponLevelShelterWide00Lv01
     ///
     /// - Returns: 1060110
-    case WeaponLevel_Shelter_Wide_01_Lv00
+    case WeaponLevelShelterWide01Lv00
     ///
     /// - Returns: 1060111
-    case WeaponLevel_Shelter_Wide_01_Lv01
+    case WeaponLevelShelterWide01Lv01
     ///
     /// - Returns: 1060200
-    case WeaponLevel_Shelter_Compact_00_Lv00
+    case WeaponLevelShelterCompact00Lv00
     ///
     /// - Returns: 1060201
-    case WeaponLevel_Shelter_Compact_00_Lv01
+    case WeaponLevelShelterCompact00Lv01
     ///
     /// - Returns: 1060210
-    case WeaponLevel_Shelter_Compact_01_Lv00
+    case WeaponLevelShelterCompact01Lv00
     ///
     /// - Returns: 1060211
-    case WeaponLevel_Shelter_Compact_01_Lv01
+    case WeaponLevelShelterCompact01Lv01
     ///
     /// - Returns: 1060300
-    case WeaponLevel_Shelter_Focus_00_Lv00
+    case WeaponLevelShelterFocus00Lv00
     ///
     /// - Returns: 1060301
-    case WeaponLevel_Shelter_Focus_00_Lv01
+    case WeaponLevelShelterFocus00Lv01
     ///
     /// - Returns: 1060310
-    case WeaponLevel_Shelter_Focus_01_Lv00
+    case WeaponLevelShelterFocus01Lv00
     ///
     /// - Returns: 1060311
-    case WeaponLevel_Shelter_Focus_01_Lv01
+    case WeaponLevelShelterFocus01Lv01
     ///
     /// - Returns: 1070100
-    case WeaponLevel_Stringer_Normal_00_Lv00
+    case WeaponLevelStringerNormal00Lv00
     ///
     /// - Returns: 1070101
-    case WeaponLevel_Stringer_Normal_00_Lv01
+    case WeaponLevelStringerNormal00Lv01
     ///
     /// - Returns: 1070110
-    case WeaponLevel_Stringer_Normal_01_Lv00
+    case WeaponLevelStringerNormal01Lv00
     ///
     /// - Returns: 1070111
-    case WeaponLevel_Stringer_Normal_01_Lv01
+    case WeaponLevelStringerNormal01Lv01
     ///
     /// - Returns: 1070150
-    case WeaponLevel_Stringer_Normal_O_Lv00
+    case WeaponLevelStringerNormalOLv00
     ///
     /// - Returns: 1070151
-    case WeaponLevel_Stringer_Normal_O_Lv01
+    case WeaponLevelStringerNormalOLv01
     ///
     /// - Returns: 1070200
-    case WeaponLevel_Stringer_Short_00_Lv00
+    case WeaponLevelStringerShort00Lv00
     ///
     /// - Returns: 1070201
-    case WeaponLevel_Stringer_Short_00_Lv01
+    case WeaponLevelStringerShort00Lv01
     ///
     /// - Returns: 1070210
-    case WeaponLevel_Stringer_Short_01_Lv00
+    case WeaponLevelStringerShort01Lv00
     ///
     /// - Returns: 1070211
-    case WeaponLevel_Stringer_Short_01_Lv01
+    case WeaponLevelStringerShort01Lv01
     ///
     /// - Returns: 1070300
-    case WeaponLevel_Stringer_Explosion_00_Lv00
+    case WeaponLevelStringerExplosion00Lv00
     ///
     /// - Returns: 1070301
-    case WeaponLevel_Stringer_Explosion_00_Lv01
+    case WeaponLevelStringerExplosion00Lv01
     ///
     /// - Returns: 1070310
-    case WeaponLevel_Stringer_Explosion_01_Lv00
+    case WeaponLevelStringerExplosion01Lv00
     ///
     /// - Returns: 1070311
-    case WeaponLevel_Stringer_Explosion_01_Lv01
+    case WeaponLevelStringerExplosion01Lv01
     ///
     /// - Returns: 1080000
-    case WeaponLevel_Saber_Normal_00_Lv00
+    case WeaponLevelSaberNormal00Lv00
     ///
     /// - Returns: 1080001
-    case WeaponLevel_Saber_Normal_00_Lv01
+    case WeaponLevelSaberNormal00Lv01
     ///
     /// - Returns: 1080010
-    case WeaponLevel_Saber_Normal_01_Lv00
+    case WeaponLevelSaberNormal01Lv00
     ///
     /// - Returns: 1080011
-    case WeaponLevel_Saber_Normal_01_Lv01
+    case WeaponLevelSaberNormal01Lv01
     ///
     /// - Returns: 1080050
-    case WeaponLevel_Saber_Normal_O_Lv00
+    case WeaponLevelSaberNormalOLv00
     ///
     /// - Returns: 1080051
-    case WeaponLevel_Saber_Normal_O_Lv01
+    case WeaponLevelSaberNormalOLv01
     ///
     /// - Returns: 1080100
-    case WeaponLevel_Saber_Lite_00_Lv00
+    case WeaponLevelSaberLite00Lv00
     ///
     /// - Returns: 1080101
-    case WeaponLevel_Saber_Lite_00_Lv01
+    case WeaponLevelSaberLite00Lv01
     ///
     /// - Returns: 1080110
-    case WeaponLevel_Saber_Lite_01_Lv00
+    case WeaponLevelSaberLite01Lv00
     ///
     /// - Returns: 1080111
-    case WeaponLevel_Saber_Lite_01_Lv01
+    case WeaponLevelSaberLite01Lv01
     ///
     /// - Returns: 1080200
-    case WeaponLevel_Saber_Heavy_00_Lv00
+    case WeaponLevelSaberHeavy00Lv00
     ///
     /// - Returns: 1080201
-    case WeaponLevel_Saber_Heavy_00_Lv01
+    case WeaponLevelSaberHeavy00Lv01
     ///
     /// - Returns: 1080210
-    case WeaponLevel_Saber_Heavy_01_Lv00
+    case WeaponLevelSaberHeavy01Lv00
     ///
     /// - Returns: 1080211
-    case WeaponLevel_Saber_Heavy_01_Lv01
+    case WeaponLevelSaberHeavy01Lv01
     ///
     /// - Returns: 2000010
-    case WinCount_WeaponSp_SpUltraShot_Lv00
+    case WinCountWeaponSpSpUltraShotLv00
     ///
     /// - Returns: 2000011
-    case WinCount_WeaponSp_SpUltraShot_Lv01
+    case WinCountWeaponSpSpUltraShotLv01
     ///
     /// - Returns: 2000012
-    case WinCount_WeaponSp_SpUltraShot_Lv02
+    case WinCountWeaponSpSpUltraShotLv02
     ///
     /// - Returns: 2000020
-    case WinCount_WeaponSp_SpGreatBarrier_Lv00
+    case WinCountWeaponSpSpGreatBarrierLv00
     ///
     /// - Returns: 2000021
-    case WinCount_WeaponSp_SpGreatBarrier_Lv01
+    case WinCountWeaponSpSpGreatBarrierLv01
     ///
     /// - Returns: 2000022
-    case WinCount_WeaponSp_SpGreatBarrier_Lv02
+    case WinCountWeaponSpSpGreatBarrierLv02
     ///
     /// - Returns: 2000030
-    case WinCount_WeaponSp_SpSuperHook_Lv00
+    case WinCountWeaponSpSpSuperHookLv00
     ///
     /// - Returns: 2000031
-    case WinCount_WeaponSp_SpSuperHook_Lv01
+    case WinCountWeaponSpSpSuperHookLv01
     ///
     /// - Returns: 2000032
-    case WinCount_WeaponSp_SpSuperHook_Lv02
+    case WinCountWeaponSpSpSuperHookLv02
     ///
     /// - Returns: 2000040
-    case WinCount_WeaponSp_SpMultiMissile_Lv00
+    case WinCountWeaponSpSpMultiMissileLv00
     ///
     /// - Returns: 2000041
-    case WinCount_WeaponSp_SpMultiMissile_Lv01
+    case WinCountWeaponSpSpMultiMissileLv01
     ///
     /// - Returns: 2000042
-    case WinCount_WeaponSp_SpMultiMissile_Lv02
+    case WinCountWeaponSpSpMultiMissileLv02
     ///
     /// - Returns: 2000050
-    case WinCount_WeaponSp_SpInkStorm_Lv00
+    case WinCountWeaponSpSpInkStormLv00
     ///
     /// - Returns: 2000051
-    case WinCount_WeaponSp_SpInkStorm_Lv01
+    case WinCountWeaponSpSpInkStormLv01
     ///
     /// - Returns: 2000052
-    case WinCount_WeaponSp_SpInkStorm_Lv02
+    case WinCountWeaponSpSpInkStormLv02
     ///
     /// - Returns: 2000060
-    case WinCount_WeaponSp_SpNiceBall_Lv00
+    case WinCountWeaponSpSpNiceBallLv00
     ///
     /// - Returns: 2000061
-    case WinCount_WeaponSp_SpNiceBall_Lv01
+    case WinCountWeaponSpSpNiceBallLv01
     ///
     /// - Returns: 2000062
-    case WinCount_WeaponSp_SpNiceBall_Lv02
+    case WinCountWeaponSpSpNiceBallLv02
     ///
     /// - Returns: 2000070
-    case WinCount_WeaponSp_SpShockSonar_Lv00
+    case WinCountWeaponSpSpShockSonarLv00
     ///
     /// - Returns: 2000071
-    case WinCount_WeaponSp_SpShockSonar_Lv01
+    case WinCountWeaponSpSpShockSonarLv01
     ///
     /// - Returns: 2000072
-    case WinCount_WeaponSp_SpShockSonar_Lv02
+    case WinCountWeaponSpSpShockSonarLv02
     ///
     /// - Returns: 2000080
-    case WinCount_WeaponSp_SpBlower_Lv00
+    case WinCountWeaponSpSpBlowerLv00
     ///
     /// - Returns: 2000081
-    case WinCount_WeaponSp_SpBlower_Lv01
+    case WinCountWeaponSpSpBlowerLv01
     ///
     /// - Returns: 2000082
-    case WinCount_WeaponSp_SpBlower_Lv02
+    case WinCountWeaponSpSpBlowerLv02
     ///
     /// - Returns: 2000090
-    case WinCount_WeaponSp_SpMicroLaser_Lv00
+    case WinCountWeaponSpSpMicroLaserLv00
     ///
     /// - Returns: 2000091
-    case WinCount_WeaponSp_SpMicroLaser_Lv01
+    case WinCountWeaponSpSpMicroLaserLv01
     ///
     /// - Returns: 2000092
-    case WinCount_WeaponSp_SpMicroLaser_Lv02
+    case WinCountWeaponSpSpMicroLaserLv02
     ///
     /// - Returns: 2000100
-    case WinCount_WeaponSp_SpJetpack_Lv00
+    case WinCountWeaponSpSpJetpackLv00
     ///
     /// - Returns: 2000101
-    case WinCount_WeaponSp_SpJetpack_Lv01
+    case WinCountWeaponSpSpJetpackLv01
     ///
     /// - Returns: 2000102
-    case WinCount_WeaponSp_SpJetpack_Lv02
+    case WinCountWeaponSpSpJetpackLv02
     ///
     /// - Returns: 2000110
-    case WinCount_WeaponSp_SpUltraStamp_Lv00
+    case WinCountWeaponSpSpUltraStampLv00
     ///
     /// - Returns: 2000111
-    case WinCount_WeaponSp_SpUltraStamp_Lv01
+    case WinCountWeaponSpSpUltraStampLv01
     ///
     /// - Returns: 2000112
-    case WinCount_WeaponSp_SpUltraStamp_Lv02
+    case WinCountWeaponSpSpUltraStampLv02
     ///
     /// - Returns: 2000120
-    case WinCount_WeaponSp_SpChariot_Lv00
+    case WinCountWeaponSpSpChariotLv00
     ///
     /// - Returns: 2000121
-    case WinCount_WeaponSp_SpChariot_Lv01
+    case WinCountWeaponSpSpChariotLv01
     ///
     /// - Returns: 2000122
-    case WinCount_WeaponSp_SpChariot_Lv02
+    case WinCountWeaponSpSpChariotLv02
     ///
     /// - Returns: 2000130
-    case WinCount_WeaponSp_SpSkewer_Lv00
+    case WinCountWeaponSpSpSkewerLv00
     ///
     /// - Returns: 2000131
-    case WinCount_WeaponSp_SpSkewer_Lv01
+    case WinCountWeaponSpSpSkewerLv01
     ///
     /// - Returns: 2000132
-    case WinCount_WeaponSp_SpSkewer_Lv02
+    case WinCountWeaponSpSpSkewerLv02
     ///
     /// - Returns: 2000140
-    case WinCount_WeaponSp_SpTripleTornado_Lv00
+    case WinCountWeaponSpSpTripleTornadoLv00
     ///
     /// - Returns: 2000141
-    case WinCount_WeaponSp_SpTripleTornado_Lv01
+    case WinCountWeaponSpSpTripleTornadoLv01
     ///
     /// - Returns: 2000142
-    case WinCount_WeaponSp_SpTripleTornado_Lv02
+    case WinCountWeaponSpSpTripleTornadoLv02
     ///
     /// - Returns: 2000150
-    case WinCount_WeaponSp_SpEnergyStand_Lv00
+    case WinCountWeaponSpSpEnergyStandLv00
     ///
     /// - Returns: 2000151
-    case WinCount_WeaponSp_SpEnergyStand_Lv01
+    case WinCountWeaponSpSpEnergyStandLv01
     ///
     /// - Returns: 2000152
-    case WinCount_WeaponSp_SpEnergyStand_Lv02
+    case WinCountWeaponSpSpEnergyStandLv02
     ///
     /// - Returns: 2000160
-    case WinCount_WeaponSp_SpFirework_Lv00
+    case WinCountWeaponSpSpFireworkLv00
     ///
     /// - Returns: 2000161
-    case WinCount_WeaponSp_SpFirework_Lv01
+    case WinCountWeaponSpSpFireworkLv01
     ///
     /// - Returns: 2000162
-    case WinCount_WeaponSp_SpFirework_Lv02
+    case WinCountWeaponSpSpFireworkLv02
     ///
     /// - Returns: 2000170
-    case WinCount_WeaponSp_SpCastle_Lv00
+    case WinCountWeaponSpSpCastleLv00
     ///
     /// - Returns: 2000171
-    case WinCount_WeaponSp_SpCastle_Lv01
+    case WinCountWeaponSpSpCastleLv01
     ///
     /// - Returns: 2000172
-    case WinCount_WeaponSp_SpCastle_Lv02
+    case WinCountWeaponSpSpCastleLv02
     ///
     /// - Returns: 2000180
-    case WinCount_WeaponSp_SpPogo_Lv00
+    case WinCountWeaponSpSpPogoLv00
     ///
     /// - Returns: 2000181
-    case WinCount_WeaponSp_SpPogo_Lv01
+    case WinCountWeaponSpSpPogoLv01
     ///
     /// - Returns: 2000182
-    case WinCount_WeaponSp_SpPogo_Lv02
+    case WinCountWeaponSpSpPogoLv02
     ///
     /// - Returns: 2000190
-    case WinCount_WeaponSp_SpChimney_Lv00
+    case WinCountWeaponSpSpChimneyLv00
     ///
     /// - Returns: 2000191
-    case WinCount_WeaponSp_SpChimney_Lv01
+    case WinCountWeaponSpSpChimneyLv01
     ///
     /// - Returns: 2000192
-    case WinCount_WeaponSp_SpChimney_Lv02
+    case WinCountWeaponSpSpChimneyLv02
     ///
     /// - Returns: 3000000
-    case WinCount_Pnt_Lv00
+    case WinCountPntLv00
     ///
     /// - Returns: 3000001
-    case WinCount_Pnt_Lv01
+    case WinCountPntLv01
     ///
     /// - Returns: 3000002
-    case WinCount_Pnt_Lv02
+    case WinCountPntLv02
     ///
     /// - Returns: 3000100
-    case WinCount_Var_Lv00
+    case WinCountVarLv00
     ///
     /// - Returns: 3000101
-    case WinCount_Var_Lv01
+    case WinCountVarLv01
     ///
     /// - Returns: 3000200
-    case WinCount_Vlf_Lv00
+    case WinCountVlfLv00
     ///
     /// - Returns: 3000201
-    case WinCount_Vlf_Lv01
+    case WinCountVlfLv01
     ///
     /// - Returns: 3000300
-    case WinCount_Vgl_Lv00
+    case WinCountVglLv00
     ///
     /// - Returns: 3000301
-    case WinCount_Vgl_Lv01
+    case WinCountVglLv01
     ///
     /// - Returns: 3000400
-    case WinCount_Vcl_Lv00
+    case WinCountVclLv00
     ///
     /// - Returns: 3000401
-    case WinCount_Vcl_Lv01
+    case WinCountVclLv01
     ///
     /// - Returns: 3001000
-    case WinCount_Tcl_Atk_Lv00
+    case WinCountTclAtkLv00
     ///
     /// - Returns: 3001001
-    case WinCount_Tcl_Atk_Lv01
+    case WinCountTclAtkLv01
     ///
     /// - Returns: 3002000
-    case WinCount_Tcl_Def_Lv00
+    case WinCountTclDefLv00
     ///
     /// - Returns: 3002001
-    case WinCount_Tcl_Def_Lv01
+    case WinCountTclDefLv01
     ///
     /// - Returns: 3003000
-    case Fest10xBattle_Join_Lv00
+    case Fest10XBattleJoinLv00
     ///
     /// - Returns: 3003001
-    case Fest10xBattle_Join_Lv01
+    case Fest10XBattleJoinLv01
     ///
     /// - Returns: 3003002
-    case Fest10xBattle_Join_Lv02
+    case Fest10XBattleJoinLv02
     ///
     /// - Returns: 3003100
-    case Fest10xBattle_Win_Lv00
+    case Fest10XBattleWinLv00
     ///
     /// - Returns: 3003101
-    case Fest10xBattle_Win_Lv01
+    case Fest10XBattleWinLv01
     ///
     /// - Returns: 3003102
-    case Fest10xBattle_Win_Lv02
+    case Fest10XBattleWinLv02
     ///
     /// - Returns: 3100000
-    case Udemae_Lv00
+    case UdemaeLv00
     ///
     /// - Returns: 3100001
-    case Udemae_Lv01
+    case UdemaeLv01
     ///
     /// - Returns: 3100002
-    case Udemae_Lv02
+    case UdemaeLv02
     ///
     /// - Returns: 3100200
-    case ChallengeWinStreak_Lv00
+    case ChallengeWinStreakLv00
     ///
     /// - Returns: 3100201
-    case ChallengeWinStreak_Lv01
+    case ChallengeWinStreakLv01
     ///
     /// - Returns: 3100202
-    case ChallengeWinStreak_Lv02
+    case ChallengeWinStreakLv02
     ///
     /// - Returns: 3101000
-    case XRank_Lv00
+    case XrankLv00
     ///
     /// - Returns: 3101001
-    case XRank_Lv01
+    case XrankLv01
     ///
     /// - Returns: 3101002
-    case XRank_Lv02
+    case XrankLv02
     ///
     /// - Returns: 3101100
-    case XPower_Pacific_Lv00
+    case XpowerPacificLv00
     ///
     /// - Returns: 3101101
-    case XPower_Atlantic_Lv00
+    case XpowerAtlanticLv00
     ///
     /// - Returns: 3101200
-    case WinCount_HighXPower_Pacific_Lv00
+    case WinCountHighXpowerPacificLv00
     ///
     /// - Returns: 3101201
-    case WinCount_HighXPower_Atlantic_Lv00
+    case WinCountHighXpowerAtlanticLv00
     ///
     /// - Returns: 3101210
-    case WinCount_HighXPower_Pacific_Lv01
+    case WinCountHighXpowerPacificLv01
     ///
     /// - Returns: 3101211
-    case WinCount_HighXPower_Atlantic_Lv01
+    case WinCountHighXpowerAtlanticLv01
     ///
     /// - Returns: 3101220
-    case WinCount_HighXPower_Pacific_Lv02
+    case WinCountHighXpowerPacificLv02
     ///
     /// - Returns: 3101221
-    case WinCount_HighXPower_Atlantic_Lv02
+    case WinCountHighXpowerAtlanticLv02
     ///
     /// - Returns: 3101300
-    case XRank_Revised_Pacific_Lv00
+    case XrankRevisedPacificLv00
     ///
     /// - Returns: 3101301
-    case XRank_Revised_Atlantic_Lv00
+    case XrankRevisedAtlanticLv00
     ///
     /// - Returns: 3101310
-    case XRank_Revised_Pacific_Lv01
+    case XrankRevisedPacificLv01
     ///
     /// - Returns: 3101311
-    case XRank_Revised_Atlantic_Lv01
+    case XrankRevisedAtlanticLv01
     ///
     /// - Returns: 3101320
-    case XRank_Revised_Pacific_Lv02
+    case XrankRevisedPacificLv02
     ///
     /// - Returns: 3101321
-    case XRank_Revised_Atlantic_Lv02
+    case XrankRevisedAtlanticLv02
     ///
     /// - Returns: 3101330
-    case XRank_Revised_Pacific_Lv03
+    case XrankRevisedPacificLv03
     ///
     /// - Returns: 3101331
-    case XRank_Revised_Atlantic_Lv03
+    case XrankRevisedAtlanticLv03
     ///
     /// - Returns: 3101340
-    case XRank_Revised_Pacific_Lv04
+    case XrankRevisedPacificLv04
     ///
     /// - Returns: 3101341
-    case XRank_Revised_Atlantic_Lv04
+    case XrankRevisedAtlanticLv04
     ///
     /// - Returns: 3101350
-    case XRank_Revised_Pacific_Lv05
+    case XrankRevisedPacificLv05
     ///
     /// - Returns: 3101351
-    case XRank_Revised_Atlantic_Lv05
+    case XrankRevisedAtlanticLv05
     ///
     /// - Returns: 3101360
-    case XRank_Revised_Pacific_Lv06
+    case XrankRevisedPacificLv06
     ///
     /// - Returns: 3101361
-    case XRank_Revised_Atlantic_Lv06
+    case XrankRevisedAtlanticLv06
     ///
     /// - Returns: 3101370
-    case XRank_Revised_Pacific_Lv07
+    case XrankRevisedPacificLv07
     ///
     /// - Returns: 3101371
-    case XRank_Revised_Atlantic_Lv07
+    case XrankRevisedAtlanticLv07
     ///
     /// - Returns: 3101500
-    case EventMatch_Lv00
+    case EventMatchLv00
     ///
     /// - Returns: 3101501
-    case EventMatch_Lv01
+    case EventMatchLv01
     ///
     /// - Returns: 3101502
-    case EventMatch_Lv02
+    case EventMatchLv02
     ///
     /// - Returns: 3102000
-    case CatalogueLevel_Lv00
+    case CatalogueLevelLv00
     ///
     /// - Returns: 3102001
-    case CatalogueLevel_Lv01
+    case CatalogueLevelLv01
     ///
     /// - Returns: 3103001
     case FestRankMax
     ///
     /// - Returns: 4000000
-    case GearTotalRarity_B00_Lv00
+    case GearTotalRarityB00Lv00
     ///
     /// - Returns: 4000001
-    case GearTotalRarity_B00_Lv01
+    case GearTotalRarityB00Lv01
     ///
     /// - Returns: 4000010
-    case GearTotalRarity_B01_Lv00
+    case GearTotalRarityB01Lv00
     ///
     /// - Returns: 4000011
-    case GearTotalRarity_B01_Lv01
+    case GearTotalRarityB01Lv01
     ///
     /// - Returns: 4000020
-    case GearTotalRarity_B02_Lv00
+    case GearTotalRarityB02Lv00
     ///
     /// - Returns: 4000021
-    case GearTotalRarity_B02_Lv01
+    case GearTotalRarityB02Lv01
     ///
     /// - Returns: 4000030
-    case GearTotalRarity_B03_Lv00
+    case GearTotalRarityB03Lv00
     ///
     /// - Returns: 4000031
-    case GearTotalRarity_B03_Lv01
+    case GearTotalRarityB03Lv01
     ///
     /// - Returns: 4000040
-    case GearTotalRarity_B04_Lv00
+    case GearTotalRarityB04Lv00
     ///
     /// - Returns: 4000041
-    case GearTotalRarity_B04_Lv01
+    case GearTotalRarityB04Lv01
     ///
     /// - Returns: 4000050
-    case GearTotalRarity_B05_Lv00
+    case GearTotalRarityB05Lv00
     ///
     /// - Returns: 4000051
-    case GearTotalRarity_B05_Lv01
+    case GearTotalRarityB05Lv01
     ///
     /// - Returns: 4000060
-    case GearTotalRarity_B06_Lv00
+    case GearTotalRarityB06Lv00
     ///
     /// - Returns: 4000061
-    case GearTotalRarity_B06_Lv01
+    case GearTotalRarityB06Lv01
     ///
     /// - Returns: 4000070
-    case GearTotalRarity_B07_Lv00
+    case GearTotalRarityB07Lv00
     ///
     /// - Returns: 4000071
-    case GearTotalRarity_B07_Lv01
+    case GearTotalRarityB07Lv01
     ///
     /// - Returns: 4000080
-    case GearTotalRarity_B08_Lv00
+    case GearTotalRarityB08Lv00
     ///
     /// - Returns: 4000081
-    case GearTotalRarity_B08_Lv01
+    case GearTotalRarityB08Lv01
     ///
     /// - Returns: 4000090
-    case GearTotalRarity_B09_Lv00
+    case GearTotalRarityB09Lv00
     ///
     /// - Returns: 4000091
-    case GearTotalRarity_B09_Lv01
+    case GearTotalRarityB09Lv01
     ///
     /// - Returns: 4000100
-    case GearTotalRarity_B10_Lv00
+    case GearTotalRarityB10Lv00
     ///
     /// - Returns: 4000101
-    case GearTotalRarity_B10_Lv01
+    case GearTotalRarityB10Lv01
     ///
     /// - Returns: 4000110
-    case GearTotalRarity_B11_Lv00
+    case GearTotalRarityB11Lv00
     ///
     /// - Returns: 4000111
-    case GearTotalRarity_B11_Lv01
+    case GearTotalRarityB11Lv01
     ///
     /// - Returns: 4000150
-    case GearTotalRarity_B15_Lv00
+    case GearTotalRarityB15Lv00
     ///
     /// - Returns: 4000151
-    case GearTotalRarity_B15_Lv01
+    case GearTotalRarityB15Lv01
     ///
     /// - Returns: 4000160
-    case GearTotalRarity_B16_Lv00
+    case GearTotalRarityB16Lv00
     ///
     /// - Returns: 4000161
-    case GearTotalRarity_B16_Lv01
+    case GearTotalRarityB16Lv01
     ///
     /// - Returns: 4000170
-    case GearTotalRarity_B17_Lv00
+    case GearTotalRarityB17Lv00
     ///
     /// - Returns: 4000171
-    case GearTotalRarity_B17_Lv01
+    case GearTotalRarityB17Lv01
     ///
     /// - Returns: 4000180
-    case GearTotalRarity_B18_Lv00
+    case GearTotalRarityB18Lv00
     ///
     /// - Returns: 4000181
-    case GearTotalRarity_B18_Lv01
+    case GearTotalRarityB18Lv01
     ///
     /// - Returns: 4000190
-    case GearTotalRarity_B19_Lv00
+    case GearTotalRarityB19Lv00
     ///
     /// - Returns: 4000191
-    case GearTotalRarity_B19_Lv01
+    case GearTotalRarityB19Lv01
     ///
     /// - Returns: 4000200
-    case GearTotalRarity_B20_Lv00
+    case GearTotalRarityB20Lv00
     ///
     /// - Returns: 4000201
-    case GearTotalRarity_B20_Lv01
+    case GearTotalRarityB20Lv01
     ///
     /// - Returns: 4100000
-    case SpendShop_Head_Lv00
+    case SpendShopHeadLv00
     ///
     /// - Returns: 4100001
-    case SpendShop_Head_Lv01
+    case SpendShopHeadLv01
     ///
     /// - Returns: 4100010
-    case SpendShop_Head_Fsodr_Lv00
+    case SpendShopHeadFsodrLv00
     ///
     /// - Returns: 4100011
-    case SpendShop_Head_Fsodr_Lv01
+    case SpendShopHeadFsodrLv01
     ///
     /// - Returns: 4100020
-    case SpendShop_Head_Sdodr_Lv00
+    case SpendShopHeadSdodrLv00
     ///
     /// - Returns: 4100021
-    case SpendShop_Head_Sdodr_Lv01
+    case SpendShopHeadSdodrLv01
     ///
     /// - Returns: 4100100
-    case SpendShop_Clothes_Lv00
+    case SpendShopClothesLv00
     ///
     /// - Returns: 4100101
-    case SpendShop_Clothes_Lv01
+    case SpendShopClothesLv01
     ///
     /// - Returns: 4100110
-    case SpendShop_Clothes_Fsodr_Lv00
+    case SpendShopClothesFsodrLv00
     ///
     /// - Returns: 4100111
-    case SpendShop_Clothes_Fsodr_Lv01
+    case SpendShopClothesFsodrLv01
     ///
     /// - Returns: 4100120
-    case SpendShop_Clothes_Sdodr_Lv00
+    case SpendShopClothesSdodrLv00
     ///
     /// - Returns: 4100121
-    case SpendShop_Clothes_Sdodr_Lv01
+    case SpendShopClothesSdodrLv01
     ///
     /// - Returns: 4100200
-    case SpendShop_Shoes_Lv00
+    case SpendShopShoesLv00
     ///
     /// - Returns: 4100201
-    case SpendShop_Shoes_Lv01
+    case SpendShopShoesLv01
     ///
     /// - Returns: 4100210
-    case SpendShop_Shoes_Fsodr_Lv00
+    case SpendShopShoesFsodrLv00
     ///
     /// - Returns: 4100211
-    case SpendShop_Shoes_Fsodr_Lv01
+    case SpendShopShoesFsodrLv01
     ///
     /// - Returns: 4100220
-    case SpendShop_Shoes_Sdodr_Lv00
+    case SpendShopShoesSdodrLv00
     ///
     /// - Returns: 4100221
-    case SpendShop_Shoes_Sdodr_Lv01
+    case SpendShopShoesSdodrLv01
     ///
     /// - Returns: 4100300
-    case SpendShop_Goods_Lv00
+    case SpendShopGoodsLv00
     ///
     /// - Returns: 4100301
-    case SpendShop_Goods_Lv01
+    case SpendShopGoodsLv01
     ///
     /// - Returns: 4100400
-    case OrderVendor_Lv00
+    case OrderVendorLv00
     ///
     /// - Returns: 4100401
-    case OrderVendor_Lv01
+    case OrderVendorLv01
     ///
     /// - Returns: 4100410
-    case OrderVendor_Fsodr_Lv00
+    case OrderVendorFsodrLv00
     ///
     /// - Returns: 4100411
-    case OrderVendor_Fsodr_Lv01
+    case OrderVendorFsodrLv01
     ///
     /// - Returns: 4100500
-    case OrderFood_Lv00
+    case OrderFoodLv00
     ///
     /// - Returns: 4100501
-    case OrderFood_Lv01
+    case OrderFoodLv01
     ///
     /// - Returns: 4100502
-    case OrderFood_Lv02
+    case OrderFoodLv02
     ///
     /// - Returns: 4100600
-    case SpendLottery_Lv00
+    case SpendLotteryLv00
     ///
     /// - Returns: 4100601
-    case SpendLottery_Lv01
+    case SpendLotteryLv01
     ///
     /// - Returns: 4100602
-    case SpendLottery_Lv02
+    case SpendLotteryLv02
     ///
     /// - Returns: 4100700
-    case LimitedRewardLottery_Lv00
+    case LimitedRewardLotteryLv00
     ///
     /// - Returns: 4100701
-    case LimitedRewardLottery_Lv01
+    case LimitedRewardLotteryLv01
     ///
     /// - Returns: 4100702
-    case LimitedRewardLottery_Lv02
+    case LimitedRewardLotteryLv02
     ///
     /// - Returns: 4100800
-    case PlayerRank_Lv00
+    case PlayerRankLv00
     ///
     /// - Returns: 4100801
-    case PlayerRank_Lv01
+    case PlayerRankLv01
     ///
     /// - Returns: 4100802
-    case PlayerRank_Lv02
+    case PlayerRankLv02
     ///
     /// - Returns: 4100803
-    case PlayerRank_Lv03
+    case PlayerRankLv03
     ///
     /// - Returns: 4100804
-    case PlayerRank_Lv04
+    case PlayerRankLv04
     ///
     /// - Returns: 4100805
-    case PlayerRank_Lv05
+    case PlayerRankLv05
     ///
     /// - Returns: 4100806
-    case PlayerRank_Lv06
+    case PlayerRankLv06
     ///
     /// - Returns: 4100807
-    case PlayerRank_Lv07
+    case PlayerRankLv07
     ///
     /// - Returns: 4100808
-    case PlayerRank_Lv08
+    case PlayerRankLv08
     ///
     /// - Returns: 4100809
-    case PlayerRank_Lv09
+    case PlayerRankLv09
     ///
     /// - Returns: 4100810
-    case PlayerRank_Lv10
+    case PlayerRankLv10
     ///
     /// - Returns: 4100811
-    case PlayerRank_Lv11
+    case PlayerRankLv11
     ///
     /// - Returns: 5000010
-    case CoopGrade_Normal_Shakeup_Lv00
+    case CoopGradeNormalShakeupLv00
     ///
     /// - Returns: 5000011
-    case CoopGrade_Normal_Shakeup_Lv01
+    case CoopGradeNormalShakeupLv01
     ///
     /// - Returns: 5000012
-    case CoopGrade_Normal_Shakeup_Lv02
+    case CoopGradeNormalShakeupLv02
     ///
     /// - Returns: 5000013
-    case CoopGrade_Normal_Shakeup_Lv03
+    case CoopGradeNormalShakeupLv03
     ///
     /// - Returns: 5000020
-    case CoopGrade_Normal_Shakespiral_Lv00
+    case CoopGradeNormalShakespiralLv00
     ///
     /// - Returns: 5000021
-    case CoopGrade_Normal_Shakespiral_Lv01
+    case CoopGradeNormalShakespiralLv01
     ///
     /// - Returns: 5000022
-    case CoopGrade_Normal_Shakespiral_Lv02
+    case CoopGradeNormalShakespiralLv02
     ///
     /// - Returns: 5000023
-    case CoopGrade_Normal_Shakespiral_Lv03
+    case CoopGradeNormalShakespiralLv03
     ///
     /// - Returns: 5000040
-    case CoopGrade_Normal_Shakelift_Lv00
+    case CoopGradeNormalShakeliftLv00
     ///
     /// - Returns: 5000041
-    case CoopGrade_Normal_Shakelift_Lv01
+    case CoopGradeNormalShakeliftLv01
     ///
     /// - Returns: 5000042
-    case CoopGrade_Normal_Shakelift_Lv02
+    case CoopGradeNormalShakeliftLv02
     ///
     /// - Returns: 5000043
-    case CoopGrade_Normal_Shakelift_Lv03
+    case CoopGradeNormalShakeliftLv03
     ///
     /// - Returns: 5000060
-    case CoopGrade_Normal_Shakeship_Lv00
+    case CoopGradeNormalShakeshipLv00
     ///
     /// - Returns: 5000061
-    case CoopGrade_Normal_Shakeship_Lv01
+    case CoopGradeNormalShakeshipLv01
     ///
     /// - Returns: 5000062
-    case CoopGrade_Normal_Shakeship_Lv02
+    case CoopGradeNormalShakeshipLv02
     ///
     /// - Returns: 5000063
-    case CoopGrade_Normal_Shakeship_Lv03
+    case CoopGradeNormalShakeshipLv03
     ///
     /// - Returns: 5000070
-    case CoopGrade_Normal_Shakedent_Lv00
+    case CoopGradeNormalShakedentLv00
     ///
     /// - Returns: 5000071
-    case CoopGrade_Normal_Shakedent_Lv01
+    case CoopGradeNormalShakedentLv01
     ///
     /// - Returns: 5000072
-    case CoopGrade_Normal_Shakedent_Lv02
+    case CoopGradeNormalShakedentLv02
     ///
     /// - Returns: 5000073
-    case CoopGrade_Normal_Shakedent_Lv03
+    case CoopGradeNormalShakedentLv03
     ///
     /// - Returns: 5000080
-    case CoopGrade_Normal_Shakehighway_Lv00
+    case CoopGradeNormalShakehighwayLv00
     ///
     /// - Returns: 5000081
-    case CoopGrade_Normal_Shakehighway_Lv01
+    case CoopGradeNormalShakehighwayLv01
     ///
     /// - Returns: 5000082
-    case CoopGrade_Normal_Shakehighway_Lv02
+    case CoopGradeNormalShakehighwayLv02
     ///
     /// - Returns: 5000083
-    case CoopGrade_Normal_Shakehighway_Lv03
+    case CoopGradeNormalShakehighwayLv03
     ///
     /// - Returns: 5000090
-    case CoopGrade_Normal_Shakerail_Lv00
+    case CoopGradeNormalShakerailLv00
     ///
     /// - Returns: 5000091
-    case CoopGrade_Normal_Shakerail_Lv01
+    case CoopGradeNormalShakerailLv01
     ///
     /// - Returns: 5000092
-    case CoopGrade_Normal_Shakerail_Lv02
+    case CoopGradeNormalShakerailLv02
     ///
     /// - Returns: 5000093
-    case CoopGrade_Normal_Shakerail_Lv03
+    case CoopGradeNormalShakerailLv03
     ///
     /// - Returns: 5100000
-    case TotalKumaPoint_Lv00
+    case TotalKumaPointLv00
     ///
     /// - Returns: 5100001
-    case TotalKumaPoint_Lv01
+    case TotalKumaPointLv01
     ///
     /// - Returns: 5100002
-    case TotalKumaPoint_Lv02
+    case TotalKumaPointLv02
     ///
     /// - Returns: 5110000
     case CoopClearDangerRateMax
     ///
     /// - Returns: 5200000
-    case CoopRareEnemyKillNum_SakelienBomber_Lv00
+    case CoopRareEnemyKillNumSakelienBomberLv00
     ///
     /// - Returns: 5200001
-    case CoopRareEnemyKillNum_SakelienBomber_Lv01
+    case CoopRareEnemyKillNumSakelienBomberLv01
     ///
     /// - Returns: 5200002
-    case CoopRareEnemyKillNum_SakelienBomber_Lv02
+    case CoopRareEnemyKillNumSakelienBomberLv02
     ///
     /// - Returns: 5200010
-    case CoopRareEnemyKillNum_SakelienSnake_Lv00
+    case CoopRareEnemyKillNumSakelienSnakeLv00
     ///
     /// - Returns: 5200011
-    case CoopRareEnemyKillNum_SakelienSnake_Lv01
+    case CoopRareEnemyKillNumSakelienSnakeLv01
     ///
     /// - Returns: 5200012
-    case CoopRareEnemyKillNum_SakelienSnake_Lv02
+    case CoopRareEnemyKillNumSakelienSnakeLv02
     ///
     /// - Returns: 5200020
-    case CoopRareEnemyKillNum_SakelienShield_Lv00
+    case CoopRareEnemyKillNumSakelienShieldLv00
     ///
     /// - Returns: 5200021
-    case CoopRareEnemyKillNum_SakelienShield_Lv01
+    case CoopRareEnemyKillNumSakelienShieldLv01
     ///
     /// - Returns: 5200022
-    case CoopRareEnemyKillNum_SakelienShield_Lv02
+    case CoopRareEnemyKillNumSakelienShieldLv02
     ///
     /// - Returns: 5200030
-    case CoopRareEnemyKillNum_SakelienTower_Lv00
+    case CoopRareEnemyKillNumSakelienTowerLv00
     ///
     /// - Returns: 5200031
-    case CoopRareEnemyKillNum_SakelienTower_Lv01
+    case CoopRareEnemyKillNumSakelienTowerLv01
     ///
     /// - Returns: 5200032
-    case CoopRareEnemyKillNum_SakelienTower_Lv02
+    case CoopRareEnemyKillNumSakelienTowerLv02
     ///
     /// - Returns: 5200040
-    case CoopRareEnemyKillNum_Sakediver_Lv00
+    case CoopRareEnemyKillNumSakediverLv00
     ///
     /// - Returns: 5200041
-    case CoopRareEnemyKillNum_Sakediver_Lv01
+    case CoopRareEnemyKillNumSakediverLv01
     ///
     /// - Returns: 5200042
-    case CoopRareEnemyKillNum_Sakediver_Lv02
+    case CoopRareEnemyKillNumSakediverLv02
     ///
     /// - Returns: 5200050
-    case CoopRareEnemyKillNum_Sakerocket_Lv00
+    case CoopRareEnemyKillNumSakerocketLv00
     ///
     /// - Returns: 5200051
-    case CoopRareEnemyKillNum_Sakerocket_Lv01
+    case CoopRareEnemyKillNumSakerocketLv01
     ///
     /// - Returns: 5200052
-    case CoopRareEnemyKillNum_Sakerocket_Lv02
+    case CoopRareEnemyKillNumSakerocketLv02
     ///
     /// - Returns: 5200060
-    case CoopRareEnemyKillNum_SakelienCupTwins_Lv00
+    case CoopRareEnemyKillNumSakelienCupTwinsLv00
     ///
     /// - Returns: 5200061
-    case CoopRareEnemyKillNum_SakelienCupTwins_Lv01
+    case CoopRareEnemyKillNumSakelienCupTwinsLv01
     ///
     /// - Returns: 5200062
-    case CoopRareEnemyKillNum_SakelienCupTwins_Lv02
+    case CoopRareEnemyKillNumSakelienCupTwinsLv02
     ///
     /// - Returns: 5200070
-    case CoopRareEnemyKillNum_SakePillar_Lv00
+    case CoopRareEnemyKillNumSakePillarLv00
     ///
     /// - Returns: 5200071
-    case CoopRareEnemyKillNum_SakePillar_Lv01
+    case CoopRareEnemyKillNumSakePillarLv01
     ///
     /// - Returns: 5200072
-    case CoopRareEnemyKillNum_SakePillar_Lv02
+    case CoopRareEnemyKillNumSakePillarLv02
     ///
     /// - Returns: 5200080
-    case CoopRareEnemyKillNum_SakeDolphin_Lv00
+    case CoopRareEnemyKillNumSakeDolphinLv00
     ///
     /// - Returns: 5200081
-    case CoopRareEnemyKillNum_SakeDolphin_Lv01
+    case CoopRareEnemyKillNumSakeDolphinLv01
     ///
     /// - Returns: 5200082
-    case CoopRareEnemyKillNum_SakeDolphin_Lv02
+    case CoopRareEnemyKillNumSakeDolphinLv02
     ///
     /// - Returns: 5200090
-    case CoopRareEnemyKillNum_SakeSaucer_Lv00
+    case CoopRareEnemyKillNumSakeSaucerLv00
     ///
     /// - Returns: 5200091
-    case CoopRareEnemyKillNum_SakeSaucer_Lv01
+    case CoopRareEnemyKillNumSakeSaucerLv01
     ///
     /// - Returns: 5200092
-    case CoopRareEnemyKillNum_SakeSaucer_Lv02
+    case CoopRareEnemyKillNumSakeSaucerLv02
     ///
     /// - Returns: 5200100
-    case CoopRareEnemyKillNum_SakeArtillery_Lv00
+    case CoopRareEnemyKillNumSakeArtilleryLv00
     ///
     /// - Returns: 5200101
-    case CoopRareEnemyKillNum_SakeArtillery_Lv01
+    case CoopRareEnemyKillNumSakeArtilleryLv01
     ///
     /// - Returns: 5200102
-    case CoopRareEnemyKillNum_SakeArtillery_Lv02
+    case CoopRareEnemyKillNumSakeArtilleryLv02
     ///
     /// - Returns: 5210000
-    case CoopBossKillNum_SakelienGiant_Lv00
+    case CoopBossKillNumSakelienGiantLv00
     ///
     /// - Returns: 5210001
-    case CoopBossKillNum_SakelienGiant_Lv01
+    case CoopBossKillNumSakelienGiantLv01
     ///
     /// - Returns: 5210002
-    case CoopBossKillNum_SakelienGiant_Lv02
+    case CoopBossKillNumSakelienGiantLv02
     ///
     /// - Returns: 5210100
-    case CoopBossKillNum_SakeRope_Lv00
+    case CoopBossKillNumSakeRopeLv00
     ///
     /// - Returns: 5210101
-    case CoopBossKillNum_SakeRope_Lv01
+    case CoopBossKillNumSakeRopeLv01
     ///
     /// - Returns: 5210102
-    case CoopBossKillNum_SakeRope_Lv02
+    case CoopBossKillNumSakeRopeLv02
     ///
     /// - Returns: 5210200
-    case CoopBossKillNum_SakeJaw_Lv00
+    case CoopBossKillNumSakeJawLv00
     ///
     /// - Returns: 5210201
-    case CoopBossKillNum_SakeJaw_Lv01
+    case CoopBossKillNumSakeJawLv01
     ///
     /// - Returns: 5210202
-    case CoopBossKillNum_SakeJaw_Lv02
+    case CoopBossKillNumSakeJawLv02
     ///
     /// - Returns: 5211000
-    case CoopKillTripleBoss_Lv00
+    case CoopKillTripleBossLv00
     ///
     /// - Returns: 5220000
-    case CoopBigRunTrophy_Lv00
+    case CoopBigRunTrophyLv00
     ///
     /// - Returns: 5220001
-    case CoopBigRunTrophy_Lv01
+    case CoopBigRunTrophyLv01
     ///
     /// - Returns: 5220002
-    case CoopBigRunTrophy_Lv02
+    case CoopBigRunTrophyLv02
     ///
     /// - Returns: 5230000
-    case CoopContestTrophy_Lv00
+    case CoopContestTrophyLv00
     ///
     /// - Returns: 5230001
-    case CoopContestTrophy_Lv01
+    case CoopContestTrophyLv01
     ///
     /// - Returns: 5230002
-    case CoopContestTrophy_Lv02
+    case CoopContestTrophyLv02
     ///
     /// - Returns: 6000000
-    case Mission_Lv00
+    case MissionLv00
     ///
     /// - Returns: 6000001
-    case Mission_Lv01
+    case MissionLv01
     ///
     /// - Returns: 6000002
-    case Mission_Lv02
+    case MissionLv02
     ///
     /// - Returns: 6000003
-    case Mission_Lv03
+    case MissionLv03
     ///
     /// - Returns: 6000004
-    case Mission_Lv04
+    case MissionLv04
     ///
     /// - Returns: 6000100
-    case Achievement_Sdodr_Lv00
+    case AchievementSdodrLv00
     ///
     /// - Returns: 6000101
-    case Achievement_Sdodr_Lv01
+    case AchievementSdodrLv01
     ///
     /// - Returns: 6000102
-    case Achievement_Sdodr_Lv02
+    case AchievementSdodrLv02
     ///
     /// - Returns: 6000103
-    case Achievement_Sdodr_Lv03
+    case AchievementSdodrLv03
     ///
     /// - Returns: 6000104
-    case Achievement_Sdodr_Lv04
+    case AchievementSdodrLv04
     ///
     /// - Returns: 6000105
-    case Achievement_Sdodr_Lv05
+    case AchievementSdodrLv05
     ///
     /// - Returns: 6100200
-    case TipColorComplete_Sdodr_Fire_A
+    case TipColorCompleteSdodrFireA
     ///
     /// - Returns: 6100201
-    case TipColorComplete_Sdodr_Fire_B
+    case TipColorCompleteSdodrFireB
     ///
     /// - Returns: 6100202
-    case TipColorComplete_Sdodr_Fire_C
+    case TipColorCompleteSdodrFireC
     ///
     /// - Returns: 6100210
-    case TipColorComplete_Sdodr_Continuity_A
+    case TipColorCompleteSdodrContinuityA
     ///
     /// - Returns: 6100211
-    case TipColorComplete_Sdodr_Continuity_B
+    case TipColorCompleteSdodrContinuityB
     ///
     /// - Returns: 6100212
-    case TipColorComplete_Sdodr_Continuity_C
+    case TipColorCompleteSdodrContinuityC
     ///
     /// - Returns: 6100220
-    case TipColorComplete_Sdodr_Range_A
+    case TipColorCompleteSdodrRangeA
     ///
     /// - Returns: 6100221
-    case TipColorComplete_Sdodr_Range_B
+    case TipColorCompleteSdodrRangeB
     ///
     /// - Returns: 6100222
-    case TipColorComplete_Sdodr_Range_C
+    case TipColorCompleteSdodrRangeC
     ///
     /// - Returns: 6100230
-    case TipColorComplete_Sdodr_Move_A
+    case TipColorCompleteSdodrMoveA
     ///
     /// - Returns: 6100231
-    case TipColorComplete_Sdodr_Move_B
+    case TipColorCompleteSdodrMoveB
     ///
     /// - Returns: 6100232
-    case TipColorComplete_Sdodr_Move_C
+    case TipColorCompleteSdodrMoveC
     ///
     /// - Returns: 6100240
-    case TipColorComplete_Sdodr_Luck_A
+    case TipColorCompleteSdodrLuckA
     ///
     /// - Returns: 6100241
-    case TipColorComplete_Sdodr_Luck_B
+    case TipColorCompleteSdodrLuckB
     ///
     /// - Returns: 6100242
-    case TipColorComplete_Sdodr_Luck_C
+    case TipColorCompleteSdodrLuckC
     ///
     /// - Returns: 6100250
-    case TipColorComplete_Sdodr_Auto_A
+    case TipColorCompleteSdodrAutoA
     ///
     /// - Returns: 6100251
-    case TipColorComplete_Sdodr_Auto_B
+    case TipColorCompleteSdodrAutoB
     ///
     /// - Returns: 6100252
-    case TipColorComplete_Sdodr_Auto_C
+    case TipColorCompleteSdodrAutoC
     ///
     /// - Returns: 7000000
-    case NawaBattlerRank_Lv00
+    case NawaBattlerRankLv00
     ///
     /// - Returns: 7000001
-    case NawaBattlerRank_Lv01
+    case NawaBattlerRankLv01
     ///
     /// - Returns: 7000002
-    case NawaBattlerRank_Lv02
+    case NawaBattlerRankLv02
     ///
     /// - Returns: 7000003
-    case NawaBattlerRank_Lv03
+    case NawaBattlerRankLv03
     ///
     /// - Returns: 7000004
-    case NawaBattlerRank_Lv04
+    case NawaBattlerRankLv04
     ///
     /// - Returns: 7000005
-    case NawaBattlerRank_Lv05
+    case NawaBattlerRankLv05
     ///
     /// - Returns: 7000006
-    case NawaBattlerRank_Lv06
+    case NawaBattlerRankLv06
     ///
     /// - Returns: 7000007
-    case NawaBattlerRank_Lv07
+    case NawaBattlerRankLv07
     ///
     /// - Returns: 7000008
-    case NawaBattlerRank_Lv08
+    case NawaBattlerRankLv08
     ///
     /// - Returns: 7000009
-    case NawaBattlerRank_Lv09
+    case NawaBattlerRankLv09
     ///
     /// - Returns: 7000010
-    case NawaBattlerRank_Lv10
+    case NawaBattlerRankLv10
     ///
     /// - Returns: 7000011
-    case NawaBattlerRank_Lv11
+    case NawaBattlerRankLv11
     ///
     /// - Returns: 7000012
-    case NawaBattlerRank_Lv12
+    case NawaBattlerRankLv12
     ///
     /// - Returns: 7000100
-    case NawaBattlerCardNum_Lv00
+    case NawaBattlerCardNumLv00
     ///
     /// - Returns: 7000101
-    case NawaBattlerCardNum_Lv01
+    case NawaBattlerCardNumLv01
     ///
     /// - Returns: 7000102
-    case NawaBattlerCardNum_Lv02
+    case NawaBattlerCardNumLv02
     ///
     /// - Returns: 7000200
     case NawaBattlerWinAllNpcLevel3
     ///
     /// - Returns: 8000000
-    case HammerHostTournament_Lv00
+    case HammerHostTournamentLv00
     ///
     /// - Returns: 8000001
-    case HammerHostTournament_Lv01
+    case HammerHostTournamentLv01
     ///
     /// - Returns: 8000002
-    case HammerHostTournament_Lv02
+    case HammerHostTournamentLv02
     /// Undefined
     /// - Returns: rawValue
     case Undefined(RawValue)
@@ -1864,1238 +1865,1240 @@ public enum BadgeInfo: SPRawRepresentable {
     // MARK: Public
 
     public static let allCases: AllCases = [
-        .WeaponLevel_Shooter_Short_00_Lv00,
-        .WeaponLevel_Shooter_Short_00_Lv01,
-        .WeaponLevel_Shooter_Short_01_Lv00,
-        .WeaponLevel_Shooter_Short_01_Lv01,
-        .WeaponLevel_Shooter_First_00_Lv00,
-        .WeaponLevel_Shooter_First_00_Lv01,
-        .WeaponLevel_Shooter_First_01_Lv00,
-        .WeaponLevel_Shooter_First_01_Lv01,
-        .WeaponLevel_Shooter_Precision_00_Lv00,
-        .WeaponLevel_Shooter_Precision_00_Lv01,
-        .WeaponLevel_Shooter_Precision_01_Lv00,
-        .WeaponLevel_Shooter_Precision_01_Lv01,
-        .WeaponLevel_Shooter_Blaze_00_Lv00,
-        .WeaponLevel_Shooter_Blaze_00_Lv01,
-        .WeaponLevel_Shooter_Blaze_01_Lv00,
-        .WeaponLevel_Shooter_Blaze_01_Lv01,
-        .WeaponLevel_Shooter_Normal_00_Lv00,
-        .WeaponLevel_Shooter_Normal_00_Lv01,
-        .WeaponLevel_Shooter_Normal_01_Lv00,
-        .WeaponLevel_Shooter_Normal_01_Lv01,
-        .WeaponLevel_Shooter_Normal_H_Lv00,
-        .WeaponLevel_Shooter_Normal_H_Lv01,
-        .WeaponLevel_Shooter_Normal_Oct_Lv00,
-        .WeaponLevel_Shooter_Normal_Oct_Lv01,
-        .WeaponLevel_Shooter_Normal_O_Lv00,
-        .WeaponLevel_Shooter_Normal_O_Lv01,
-        .WeaponLevel_Shooter_Gravity_00_Lv00,
-        .WeaponLevel_Shooter_Gravity_00_Lv01,
-        .WeaponLevel_Shooter_Gravity_01_Lv00,
-        .WeaponLevel_Shooter_Gravity_01_Lv01,
-        .WeaponLevel_Shooter_QuickMiddle_00_Lv00,
-        .WeaponLevel_Shooter_QuickMiddle_00_Lv01,
-        .WeaponLevel_Shooter_QuickMiddle_01_Lv00,
-        .WeaponLevel_Shooter_QuickMiddle_01_Lv01,
-        .WeaponLevel_Shooter_Expert_00_Lv00,
-        .WeaponLevel_Shooter_Expert_00_Lv01,
-        .WeaponLevel_Shooter_Expert_01_Lv00,
-        .WeaponLevel_Shooter_Expert_01_Lv01,
-        .WeaponLevel_Shooter_Heavy_00_Lv00,
-        .WeaponLevel_Shooter_Heavy_00_Lv01,
-        .WeaponLevel_Shooter_Heavy_01_Lv00,
-        .WeaponLevel_Shooter_Heavy_01_Lv01,
-        .WeaponLevel_Shooter_Long_00_Lv00,
-        .WeaponLevel_Shooter_Long_00_Lv01,
-        .WeaponLevel_Shooter_Long_01_Lv00,
-        .WeaponLevel_Shooter_Long_01_Lv01,
-        .WeaponLevel_Shooter_QuickLong_00_Lv00,
-        .WeaponLevel_Shooter_QuickLong_00_Lv01,
-        .WeaponLevel_Shooter_QuickLong_01_Lv00,
-        .WeaponLevel_Shooter_QuickLong_01_Lv01,
-        .WeaponLevel_Blaster_Short_00_Lv00,
-        .WeaponLevel_Blaster_Short_00_Lv01,
-        .WeaponLevel_Blaster_Short_01_Lv00,
-        .WeaponLevel_Blaster_Short_01_Lv01,
-        .WeaponLevel_Blaster_Short_O_Lv00,
-        .WeaponLevel_Blaster_Short_O_Lv01,
-        .WeaponLevel_Blaster_Middle_00_Lv00,
-        .WeaponLevel_Blaster_Middle_00_Lv01,
-        .WeaponLevel_Blaster_Middle_01_Lv00,
-        .WeaponLevel_Blaster_Middle_01_Lv01,
-        .WeaponLevel_Blaster_Long_00_Lv00,
-        .WeaponLevel_Blaster_Long_00_Lv01,
-        .WeaponLevel_Blaster_Long_01_Lv00,
-        .WeaponLevel_Blaster_Long_01_Lv01,
-        .WeaponLevel_Blaster_LightShort_00_Lv00,
-        .WeaponLevel_Blaster_LightShort_00_Lv01,
-        .WeaponLevel_Blaster_LightShort_01_Lv00,
-        .WeaponLevel_Blaster_LightShort_01_Lv01,
-        .WeaponLevel_Blaster_Light_00_Lv00,
-        .WeaponLevel_Blaster_Light_00_Lv01,
-        .WeaponLevel_Blaster_Light_01_Lv00,
-        .WeaponLevel_Blaster_Light_01_Lv01,
-        .WeaponLevel_Blaster_LightLong_00_Lv00,
-        .WeaponLevel_Blaster_LightLong_00_Lv01,
-        .WeaponLevel_Blaster_LightLong_01_Lv00,
-        .WeaponLevel_Blaster_LightLong_01_Lv01,
-        .WeaponLevel_Blaster_Precision_00_Lv00,
-        .WeaponLevel_Blaster_Precision_00_Lv01,
-        .WeaponLevel_Blaster_Precision_01_Lv00,
-        .WeaponLevel_Blaster_Precision_01_Lv01,
-        .WeaponLevel_Shooter_TripleQuick_00_Lv00,
-        .WeaponLevel_Shooter_TripleQuick_00_Lv01,
-        .WeaponLevel_Shooter_TripleQuick_01_Lv00,
-        .WeaponLevel_Shooter_TripleQuick_01_Lv01,
-        .WeaponLevel_Shooter_TripleMiddle_00_Lv00,
-        .WeaponLevel_Shooter_TripleMiddle_00_Lv01,
-        .WeaponLevel_Shooter_TripleMiddle_01_Lv00,
-        .WeaponLevel_Shooter_TripleMiddle_01_Lv01,
-        .WeaponLevel_Shooter_Flash_00_Lv00,
-        .WeaponLevel_Shooter_Flash_00_Lv01,
-        .WeaponLevel_Shooter_Flash_01_Lv00,
-        .WeaponLevel_Shooter_Flash_01_Lv01,
-        .WeaponLevel_Roller_Compact_00_Lv00,
-        .WeaponLevel_Roller_Compact_00_Lv01,
-        .WeaponLevel_Roller_Compact_01_Lv00,
-        .WeaponLevel_Roller_Compact_01_Lv01,
-        .WeaponLevel_Roller_Normal_00_Lv00,
-        .WeaponLevel_Roller_Normal_00_Lv01,
-        .WeaponLevel_Roller_Normal_01_Lv00,
-        .WeaponLevel_Roller_Normal_01_Lv01,
-        .WeaponLevel_Roller_Normal_O_Lv00,
-        .WeaponLevel_Roller_Normal_O_Lv01,
-        .WeaponLevel_Roller_Heavy_00_Lv00,
-        .WeaponLevel_Roller_Heavy_00_Lv01,
-        .WeaponLevel_Roller_Heavy_01_Lv00,
-        .WeaponLevel_Roller_Heavy_01_Lv01,
-        .WeaponLevel_Roller_Hunter_00_Lv00,
-        .WeaponLevel_Roller_Hunter_00_Lv01,
-        .WeaponLevel_Roller_Hunter_01_Lv00,
-        .WeaponLevel_Roller_Hunter_01_Lv01,
-        .WeaponLevel_Roller_Wide_00_Lv00,
-        .WeaponLevel_Roller_Wide_00_Lv01,
-        .WeaponLevel_Roller_Wide_01_Lv00,
-        .WeaponLevel_Roller_Wide_01_Lv01,
-        .WeaponLevel_Brush_Mini_00_Lv00,
-        .WeaponLevel_Brush_Mini_00_Lv01,
-        .WeaponLevel_Brush_Mini_01_Lv00,
-        .WeaponLevel_Brush_Mini_01_Lv01,
-        .WeaponLevel_Brush_Normal_00_Lv00,
-        .WeaponLevel_Brush_Normal_00_Lv01,
-        .WeaponLevel_Brush_Normal_01_Lv00,
-        .WeaponLevel_Brush_Normal_01_Lv01,
-        .WeaponLevel_Brush_Normal_O_Lv00,
-        .WeaponLevel_Brush_Normal_O_Lv01,
-        .WeaponLevel_Brush_Heavy_00_Lv00,
-        .WeaponLevel_Brush_Heavy_00_Lv01,
-        .WeaponLevel_Brush_Heavy_01_Lv00,
-        .WeaponLevel_Brush_Heavy_01_Lv01,
-        .WeaponLevel_Charger_Quick_00_Lv00,
-        .WeaponLevel_Charger_Quick_00_Lv01,
-        .WeaponLevel_Charger_Quick_01_Lv00,
-        .WeaponLevel_Charger_Quick_01_Lv01,
-        .WeaponLevel_Charger_Normal_00_Lv00,
-        .WeaponLevel_Charger_Normal_00_Lv01,
-        .WeaponLevel_Charger_Normal_01_Lv00,
-        .WeaponLevel_Charger_Normal_01_Lv01,
-        .WeaponLevel_Charger_Normal_O_Lv00,
-        .WeaponLevel_Charger_Normal_O_Lv01,
-        .WeaponLevel_Charger_NormalScope_00_Lv00,
-        .WeaponLevel_Charger_NormalScope_00_Lv01,
-        .WeaponLevel_Charger_NormalScope_01_Lv00,
-        .WeaponLevel_Charger_NormalScope_01_Lv01,
-        .WeaponLevel_Charger_Long_00_Lv00,
-        .WeaponLevel_Charger_Long_00_Lv01,
-        .WeaponLevel_Charger_Long_01_Lv00,
-        .WeaponLevel_Charger_Long_01_Lv01,
-        .WeaponLevel_Charger_LongScope_00_Lv00,
-        .WeaponLevel_Charger_LongScope_00_Lv01,
-        .WeaponLevel_Charger_LongScope_01_Lv00,
-        .WeaponLevel_Charger_LongScope_01_Lv01,
-        .WeaponLevel_Charger_Light_00_Lv00,
-        .WeaponLevel_Charger_Light_00_Lv01,
-        .WeaponLevel_Charger_Light_01_Lv00,
-        .WeaponLevel_Charger_Light_01_Lv01,
-        .WeaponLevel_Charger_Keeper_00_Lv00,
-        .WeaponLevel_Charger_Keeper_00_Lv01,
-        .WeaponLevel_Charger_Keeper_01_Lv00,
-        .WeaponLevel_Charger_Keeper_01_Lv01,
-        .WeaponLevel_Charger_Pencil_00_Lv00,
-        .WeaponLevel_Charger_Pencil_00_Lv01,
-        .WeaponLevel_Charger_Pencil_01_Lv00,
-        .WeaponLevel_Charger_Pencil_01_Lv01,
-        .WeaponLevel_Slosher_Strong_00_Lv00,
-        .WeaponLevel_Slosher_Strong_00_Lv01,
-        .WeaponLevel_Slosher_Strong_01_Lv00,
-        .WeaponLevel_Slosher_Strong_01_Lv01,
-        .WeaponLevel_Slosher_Strong_O_Lv00,
-        .WeaponLevel_Slosher_Strong_O_Lv01,
-        .WeaponLevel_Slosher_Diffusion_00_Lv00,
-        .WeaponLevel_Slosher_Diffusion_00_Lv01,
-        .WeaponLevel_Slosher_Diffusion_01_Lv00,
-        .WeaponLevel_Slosher_Diffusion_01_Lv01,
-        .WeaponLevel_Slosher_Launcher_00_Lv00,
-        .WeaponLevel_Slosher_Launcher_00_Lv01,
-        .WeaponLevel_Slosher_Launcher_01_Lv00,
-        .WeaponLevel_Slosher_Launcher_01_Lv01,
-        .WeaponLevel_Slosher_Bathtub_00_Lv00,
-        .WeaponLevel_Slosher_Bathtub_00_Lv01,
-        .WeaponLevel_Slosher_Bathtub_01_Lv00,
-        .WeaponLevel_Slosher_Bathtub_01_Lv01,
-        .WeaponLevel_Slosher_Washtub_00_Lv00,
-        .WeaponLevel_Slosher_Washtub_00_Lv01,
-        .WeaponLevel_Slosher_Washtub_01_Lv00,
-        .WeaponLevel_Slosher_Washtub_01_Lv01,
-        .WeaponLevel_Slosher_Double_00_Lv00,
-        .WeaponLevel_Slosher_Double_00_Lv01,
-        .WeaponLevel_Slosher_Double_01_Lv00,
-        .WeaponLevel_Slosher_Double_01_Lv01,
-        .WeaponLevel_Spinner_Quick_00_Lv00,
-        .WeaponLevel_Spinner_Quick_00_Lv01,
-        .WeaponLevel_Spinner_Quick_01_Lv00,
-        .WeaponLevel_Spinner_Quick_01_Lv01,
-        .WeaponLevel_Spinner_Standard_00_Lv00,
-        .WeaponLevel_Spinner_Standard_00_Lv01,
-        .WeaponLevel_Spinner_Standard_01_Lv00,
-        .WeaponLevel_Spinner_Standard_01_Lv01,
-        .WeaponLevel_Spinner_Standard_O_Lv00,
-        .WeaponLevel_Spinner_Standard_O_Lv01,
-        .WeaponLevel_Spinner_Hyper_00_Lv00,
-        .WeaponLevel_Spinner_Hyper_00_Lv01,
-        .WeaponLevel_Spinner_Hyper_01_Lv00,
-        .WeaponLevel_Spinner_Hyper_01_Lv01,
-        .WeaponLevel_Spinner_Downpour_00_Lv00,
-        .WeaponLevel_Spinner_Downpour_00_Lv01,
-        .WeaponLevel_Spinner_Downpour_01_Lv00,
-        .WeaponLevel_Spinner_Downpour_01_Lv01,
-        .WeaponLevel_Spinner_Serein_00_Lv00,
-        .WeaponLevel_Spinner_Serein_00_Lv01,
-        .WeaponLevel_Spinner_Serein_01_Lv00,
-        .WeaponLevel_Spinner_Serein_01_Lv01,
-        .WeaponLevel_Spinner_HyperShort_00_Lv00,
-        .WeaponLevel_Spinner_HyperShort_00_Lv01,
-        .WeaponLevel_Spinner_HyperShort_01_Lv00,
-        .WeaponLevel_Spinner_HyperShort_01_Lv01,
-        .WeaponLevel_Maneuver_Short_00_Lv00,
-        .WeaponLevel_Maneuver_Short_00_Lv01,
-        .WeaponLevel_Maneuver_Short_01_Lv00,
-        .WeaponLevel_Maneuver_Short_01_Lv01,
-        .WeaponLevel_Maneuver_Normal_00_Lv00,
-        .WeaponLevel_Maneuver_Normal_00_Lv01,
-        .WeaponLevel_Maneuver_Normal_01_Lv00,
-        .WeaponLevel_Maneuver_Normal_01_Lv01,
-        .WeaponLevel_Maneuver_Normal_O_Lv00,
-        .WeaponLevel_Maneuver_Normal_O_Lv01,
-        .WeaponLevel_Maneuver_Gallon_00_Lv00,
-        .WeaponLevel_Maneuver_Gallon_00_Lv01,
-        .WeaponLevel_Maneuver_Gallon_01_Lv00,
-        .WeaponLevel_Maneuver_Gallon_01_Lv01,
-        .WeaponLevel_Maneuver_Dual_00_Lv00,
-        .WeaponLevel_Maneuver_Dual_00_Lv01,
-        .WeaponLevel_Maneuver_Dual_01_Lv00,
-        .WeaponLevel_Maneuver_Dual_01_Lv01,
-        .WeaponLevel_Maneuver_Stepper_00_Lv00,
-        .WeaponLevel_Maneuver_Stepper_00_Lv01,
-        .WeaponLevel_Maneuver_Stepper_01_Lv00,
-        .WeaponLevel_Maneuver_Stepper_01_Lv01,
-        .WeaponLevel_Maneuver_Long_00_Lv00,
-        .WeaponLevel_Maneuver_Long_00_Lv01,
-        .WeaponLevel_Maneuver_Long_01_Lv00,
-        .WeaponLevel_Maneuver_Long_01_Lv01,
-        .WeaponLevel_Shelter_Normal_00_Lv00,
-        .WeaponLevel_Shelter_Normal_00_Lv01,
-        .WeaponLevel_Shelter_Normal_01_Lv00,
-        .WeaponLevel_Shelter_Normal_01_Lv01,
-        .WeaponLevel_Shelter_Normal_O_Lv00,
-        .WeaponLevel_Shelter_Normal_O_Lv01,
-        .WeaponLevel_Shelter_Wide_00_Lv00,
-        .WeaponLevel_Shelter_Wide_00_Lv01,
-        .WeaponLevel_Shelter_Wide_01_Lv00,
-        .WeaponLevel_Shelter_Wide_01_Lv01,
-        .WeaponLevel_Shelter_Compact_00_Lv00,
-        .WeaponLevel_Shelter_Compact_00_Lv01,
-        .WeaponLevel_Shelter_Compact_01_Lv00,
-        .WeaponLevel_Shelter_Compact_01_Lv01,
-        .WeaponLevel_Shelter_Focus_00_Lv00,
-        .WeaponLevel_Shelter_Focus_00_Lv01,
-        .WeaponLevel_Shelter_Focus_01_Lv00,
-        .WeaponLevel_Shelter_Focus_01_Lv01,
-        .WeaponLevel_Stringer_Normal_00_Lv00,
-        .WeaponLevel_Stringer_Normal_00_Lv01,
-        .WeaponLevel_Stringer_Normal_01_Lv00,
-        .WeaponLevel_Stringer_Normal_01_Lv01,
-        .WeaponLevel_Stringer_Normal_O_Lv00,
-        .WeaponLevel_Stringer_Normal_O_Lv01,
-        .WeaponLevel_Stringer_Short_00_Lv00,
-        .WeaponLevel_Stringer_Short_00_Lv01,
-        .WeaponLevel_Stringer_Short_01_Lv00,
-        .WeaponLevel_Stringer_Short_01_Lv01,
-        .WeaponLevel_Stringer_Explosion_00_Lv00,
-        .WeaponLevel_Stringer_Explosion_00_Lv01,
-        .WeaponLevel_Stringer_Explosion_01_Lv00,
-        .WeaponLevel_Stringer_Explosion_01_Lv01,
-        .WeaponLevel_Saber_Normal_00_Lv00,
-        .WeaponLevel_Saber_Normal_00_Lv01,
-        .WeaponLevel_Saber_Normal_01_Lv00,
-        .WeaponLevel_Saber_Normal_01_Lv01,
-        .WeaponLevel_Saber_Normal_O_Lv00,
-        .WeaponLevel_Saber_Normal_O_Lv01,
-        .WeaponLevel_Saber_Lite_00_Lv00,
-        .WeaponLevel_Saber_Lite_00_Lv01,
-        .WeaponLevel_Saber_Lite_01_Lv00,
-        .WeaponLevel_Saber_Lite_01_Lv01,
-        .WeaponLevel_Saber_Heavy_00_Lv00,
-        .WeaponLevel_Saber_Heavy_00_Lv01,
-        .WeaponLevel_Saber_Heavy_01_Lv00,
-        .WeaponLevel_Saber_Heavy_01_Lv01,
-        .WinCount_WeaponSp_SpUltraShot_Lv00,
-        .WinCount_WeaponSp_SpUltraShot_Lv01,
-        .WinCount_WeaponSp_SpUltraShot_Lv02,
-        .WinCount_WeaponSp_SpGreatBarrier_Lv00,
-        .WinCount_WeaponSp_SpGreatBarrier_Lv01,
-        .WinCount_WeaponSp_SpGreatBarrier_Lv02,
-        .WinCount_WeaponSp_SpSuperHook_Lv00,
-        .WinCount_WeaponSp_SpSuperHook_Lv01,
-        .WinCount_WeaponSp_SpSuperHook_Lv02,
-        .WinCount_WeaponSp_SpMultiMissile_Lv00,
-        .WinCount_WeaponSp_SpMultiMissile_Lv01,
-        .WinCount_WeaponSp_SpMultiMissile_Lv02,
-        .WinCount_WeaponSp_SpInkStorm_Lv00,
-        .WinCount_WeaponSp_SpInkStorm_Lv01,
-        .WinCount_WeaponSp_SpInkStorm_Lv02,
-        .WinCount_WeaponSp_SpNiceBall_Lv00,
-        .WinCount_WeaponSp_SpNiceBall_Lv01,
-        .WinCount_WeaponSp_SpNiceBall_Lv02,
-        .WinCount_WeaponSp_SpShockSonar_Lv00,
-        .WinCount_WeaponSp_SpShockSonar_Lv01,
-        .WinCount_WeaponSp_SpShockSonar_Lv02,
-        .WinCount_WeaponSp_SpBlower_Lv00,
-        .WinCount_WeaponSp_SpBlower_Lv01,
-        .WinCount_WeaponSp_SpBlower_Lv02,
-        .WinCount_WeaponSp_SpMicroLaser_Lv00,
-        .WinCount_WeaponSp_SpMicroLaser_Lv01,
-        .WinCount_WeaponSp_SpMicroLaser_Lv02,
-        .WinCount_WeaponSp_SpJetpack_Lv00,
-        .WinCount_WeaponSp_SpJetpack_Lv01,
-        .WinCount_WeaponSp_SpJetpack_Lv02,
-        .WinCount_WeaponSp_SpUltraStamp_Lv00,
-        .WinCount_WeaponSp_SpUltraStamp_Lv01,
-        .WinCount_WeaponSp_SpUltraStamp_Lv02,
-        .WinCount_WeaponSp_SpChariot_Lv00,
-        .WinCount_WeaponSp_SpChariot_Lv01,
-        .WinCount_WeaponSp_SpChariot_Lv02,
-        .WinCount_WeaponSp_SpSkewer_Lv00,
-        .WinCount_WeaponSp_SpSkewer_Lv01,
-        .WinCount_WeaponSp_SpSkewer_Lv02,
-        .WinCount_WeaponSp_SpTripleTornado_Lv00,
-        .WinCount_WeaponSp_SpTripleTornado_Lv01,
-        .WinCount_WeaponSp_SpTripleTornado_Lv02,
-        .WinCount_WeaponSp_SpEnergyStand_Lv00,
-        .WinCount_WeaponSp_SpEnergyStand_Lv01,
-        .WinCount_WeaponSp_SpEnergyStand_Lv02,
-        .WinCount_WeaponSp_SpFirework_Lv00,
-        .WinCount_WeaponSp_SpFirework_Lv01,
-        .WinCount_WeaponSp_SpFirework_Lv02,
-        .WinCount_WeaponSp_SpCastle_Lv00,
-        .WinCount_WeaponSp_SpCastle_Lv01,
-        .WinCount_WeaponSp_SpCastle_Lv02,
-        .WinCount_WeaponSp_SpPogo_Lv00,
-        .WinCount_WeaponSp_SpPogo_Lv01,
-        .WinCount_WeaponSp_SpPogo_Lv02,
-        .WinCount_WeaponSp_SpChimney_Lv00,
-        .WinCount_WeaponSp_SpChimney_Lv01,
-        .WinCount_WeaponSp_SpChimney_Lv02,
-        .WinCount_Pnt_Lv00,
-        .WinCount_Pnt_Lv01,
-        .WinCount_Pnt_Lv02,
-        .WinCount_Var_Lv00,
-        .WinCount_Var_Lv01,
-        .WinCount_Vlf_Lv00,
-        .WinCount_Vlf_Lv01,
-        .WinCount_Vgl_Lv00,
-        .WinCount_Vgl_Lv01,
-        .WinCount_Vcl_Lv00,
-        .WinCount_Vcl_Lv01,
-        .WinCount_Tcl_Atk_Lv00,
-        .WinCount_Tcl_Atk_Lv01,
-        .WinCount_Tcl_Def_Lv00,
-        .WinCount_Tcl_Def_Lv01,
-        .Fest10xBattle_Join_Lv00,
-        .Fest10xBattle_Join_Lv01,
-        .Fest10xBattle_Join_Lv02,
-        .Fest10xBattle_Win_Lv00,
-        .Fest10xBattle_Win_Lv01,
-        .Fest10xBattle_Win_Lv02,
-        .Udemae_Lv00,
-        .Udemae_Lv01,
-        .Udemae_Lv02,
-        .ChallengeWinStreak_Lv00,
-        .ChallengeWinStreak_Lv01,
-        .ChallengeWinStreak_Lv02,
-        .XRank_Lv00,
-        .XRank_Lv01,
-        .XRank_Lv02,
-        .XPower_Pacific_Lv00,
-        .XPower_Atlantic_Lv00,
-        .WinCount_HighXPower_Pacific_Lv00,
-        .WinCount_HighXPower_Atlantic_Lv00,
-        .WinCount_HighXPower_Pacific_Lv01,
-        .WinCount_HighXPower_Atlantic_Lv01,
-        .WinCount_HighXPower_Pacific_Lv02,
-        .WinCount_HighXPower_Atlantic_Lv02,
-        .XRank_Revised_Pacific_Lv00,
-        .XRank_Revised_Atlantic_Lv00,
-        .XRank_Revised_Pacific_Lv01,
-        .XRank_Revised_Atlantic_Lv01,
-        .XRank_Revised_Pacific_Lv02,
-        .XRank_Revised_Atlantic_Lv02,
-        .XRank_Revised_Pacific_Lv03,
-        .XRank_Revised_Atlantic_Lv03,
-        .XRank_Revised_Pacific_Lv04,
-        .XRank_Revised_Atlantic_Lv04,
-        .XRank_Revised_Pacific_Lv05,
-        .XRank_Revised_Atlantic_Lv05,
-        .XRank_Revised_Pacific_Lv06,
-        .XRank_Revised_Atlantic_Lv06,
-        .XRank_Revised_Pacific_Lv07,
-        .XRank_Revised_Atlantic_Lv07,
-        .EventMatch_Lv00,
-        .EventMatch_Lv01,
-        .EventMatch_Lv02,
-        .CatalogueLevel_Lv00,
-        .CatalogueLevel_Lv01,
+        .WeaponLevelShooterShort00Lv00,
+        .WeaponLevelShooterShort00Lv01,
+        .WeaponLevelShooterShort01Lv00,
+        .WeaponLevelShooterShort01Lv01,
+        .WeaponLevelShooterFirst00Lv00,
+        .WeaponLevelShooterFirst00Lv01,
+        .WeaponLevelShooterFirst01Lv00,
+        .WeaponLevelShooterFirst01Lv01,
+        .WeaponLevelShooterPrecision00Lv00,
+        .WeaponLevelShooterPrecision00Lv01,
+        .WeaponLevelShooterPrecision01Lv00,
+        .WeaponLevelShooterPrecision01Lv01,
+        .WeaponLevelShooterBlaze00Lv00,
+        .WeaponLevelShooterBlaze00Lv01,
+        .WeaponLevelShooterBlaze01Lv00,
+        .WeaponLevelShooterBlaze01Lv01,
+        .WeaponLevelShooterNormal00Lv00,
+        .WeaponLevelShooterNormal00Lv01,
+        .WeaponLevelShooterNormal01Lv00,
+        .WeaponLevelShooterNormal01Lv01,
+        .WeaponLevelShooterNormalHLv00,
+        .WeaponLevelShooterNormalHLv01,
+        .WeaponLevelShooterNormalOctLv00,
+        .WeaponLevelShooterNormalOctLv01,
+        .WeaponLevelShooterNormalOLv00,
+        .WeaponLevelShooterNormalOLv01,
+        .WeaponLevelShooterGravity00Lv00,
+        .WeaponLevelShooterGravity00Lv01,
+        .WeaponLevelShooterGravity01Lv00,
+        .WeaponLevelShooterGravity01Lv01,
+        .WeaponLevelShooterQuickMiddle00Lv00,
+        .WeaponLevelShooterQuickMiddle00Lv01,
+        .WeaponLevelShooterQuickMiddle01Lv00,
+        .WeaponLevelShooterQuickMiddle01Lv01,
+        .WeaponLevelShooterExpert00Lv00,
+        .WeaponLevelShooterExpert00Lv01,
+        .WeaponLevelShooterExpert01Lv00,
+        .WeaponLevelShooterExpert01Lv01,
+        .WeaponLevelShooterHeavy00Lv00,
+        .WeaponLevelShooterHeavy00Lv01,
+        .WeaponLevelShooterHeavy01Lv00,
+        .WeaponLevelShooterHeavy01Lv01,
+        .WeaponLevelShooterLong00Lv00,
+        .WeaponLevelShooterLong00Lv01,
+        .WeaponLevelShooterLong01Lv00,
+        .WeaponLevelShooterLong01Lv01,
+        .WeaponLevelShooterQuickLong00Lv00,
+        .WeaponLevelShooterQuickLong00Lv01,
+        .WeaponLevelShooterQuickLong01Lv00,
+        .WeaponLevelShooterQuickLong01Lv01,
+        .WeaponLevelBlasterShort00Lv00,
+        .WeaponLevelBlasterShort00Lv01,
+        .WeaponLevelBlasterShort01Lv00,
+        .WeaponLevelBlasterShort01Lv01,
+        .WeaponLevelBlasterShortOLv00,
+        .WeaponLevelBlasterShortOLv01,
+        .WeaponLevelBlasterMiddle00Lv00,
+        .WeaponLevelBlasterMiddle00Lv01,
+        .WeaponLevelBlasterMiddle01Lv00,
+        .WeaponLevelBlasterMiddle01Lv01,
+        .WeaponLevelBlasterLong00Lv00,
+        .WeaponLevelBlasterLong00Lv01,
+        .WeaponLevelBlasterLong01Lv00,
+        .WeaponLevelBlasterLong01Lv01,
+        .WeaponLevelBlasterLightShort00Lv00,
+        .WeaponLevelBlasterLightShort00Lv01,
+        .WeaponLevelBlasterLightShort01Lv00,
+        .WeaponLevelBlasterLightShort01Lv01,
+        .WeaponLevelBlasterLight00Lv00,
+        .WeaponLevelBlasterLight00Lv01,
+        .WeaponLevelBlasterLight01Lv00,
+        .WeaponLevelBlasterLight01Lv01,
+        .WeaponLevelBlasterLightLong00Lv00,
+        .WeaponLevelBlasterLightLong00Lv01,
+        .WeaponLevelBlasterLightLong01Lv00,
+        .WeaponLevelBlasterLightLong01Lv01,
+        .WeaponLevelBlasterPrecision00Lv00,
+        .WeaponLevelBlasterPrecision00Lv01,
+        .WeaponLevelBlasterPrecision01Lv00,
+        .WeaponLevelBlasterPrecision01Lv01,
+        .WeaponLevelShooterTripleQuick00Lv00,
+        .WeaponLevelShooterTripleQuick00Lv01,
+        .WeaponLevelShooterTripleQuick01Lv00,
+        .WeaponLevelShooterTripleQuick01Lv01,
+        .WeaponLevelShooterTripleMiddle00Lv00,
+        .WeaponLevelShooterTripleMiddle00Lv01,
+        .WeaponLevelShooterTripleMiddle01Lv00,
+        .WeaponLevelShooterTripleMiddle01Lv01,
+        .WeaponLevelShooterFlash00Lv00,
+        .WeaponLevelShooterFlash00Lv01,
+        .WeaponLevelShooterFlash01Lv00,
+        .WeaponLevelShooterFlash01Lv01,
+        .WeaponLevelRollerCompact00Lv00,
+        .WeaponLevelRollerCompact00Lv01,
+        .WeaponLevelRollerCompact01Lv00,
+        .WeaponLevelRollerCompact01Lv01,
+        .WeaponLevelRollerNormal00Lv00,
+        .WeaponLevelRollerNormal00Lv01,
+        .WeaponLevelRollerNormal01Lv00,
+        .WeaponLevelRollerNormal01Lv01,
+        .WeaponLevelRollerNormalOLv00,
+        .WeaponLevelRollerNormalOLv01,
+        .WeaponLevelRollerHeavy00Lv00,
+        .WeaponLevelRollerHeavy00Lv01,
+        .WeaponLevelRollerHeavy01Lv00,
+        .WeaponLevelRollerHeavy01Lv01,
+        .WeaponLevelRollerHunter00Lv00,
+        .WeaponLevelRollerHunter00Lv01,
+        .WeaponLevelRollerHunter01Lv00,
+        .WeaponLevelRollerHunter01Lv01,
+        .WeaponLevelRollerWide00Lv00,
+        .WeaponLevelRollerWide00Lv01,
+        .WeaponLevelRollerWide01Lv00,
+        .WeaponLevelRollerWide01Lv01,
+        .WeaponLevelBrushMini00Lv00,
+        .WeaponLevelBrushMini00Lv01,
+        .WeaponLevelBrushMini01Lv00,
+        .WeaponLevelBrushMini01Lv01,
+        .WeaponLevelBrushNormal00Lv00,
+        .WeaponLevelBrushNormal00Lv01,
+        .WeaponLevelBrushNormal01Lv00,
+        .WeaponLevelBrushNormal01Lv01,
+        .WeaponLevelBrushNormalOLv00,
+        .WeaponLevelBrushNormalOLv01,
+        .WeaponLevelBrushHeavy00Lv00,
+        .WeaponLevelBrushHeavy00Lv01,
+        .WeaponLevelBrushHeavy01Lv00,
+        .WeaponLevelBrushHeavy01Lv01,
+        .WeaponLevelChargerQuick00Lv00,
+        .WeaponLevelChargerQuick00Lv01,
+        .WeaponLevelChargerQuick01Lv00,
+        .WeaponLevelChargerQuick01Lv01,
+        .WeaponLevelChargerNormal00Lv00,
+        .WeaponLevelChargerNormal00Lv01,
+        .WeaponLevelChargerNormal01Lv00,
+        .WeaponLevelChargerNormal01Lv01,
+        .WeaponLevelChargerNormalOLv00,
+        .WeaponLevelChargerNormalOLv01,
+        .WeaponLevelChargerNormalScope00Lv00,
+        .WeaponLevelChargerNormalScope00Lv01,
+        .WeaponLevelChargerNormalScope01Lv00,
+        .WeaponLevelChargerNormalScope01Lv01,
+        .WeaponLevelChargerLong00Lv00,
+        .WeaponLevelChargerLong00Lv01,
+        .WeaponLevelChargerLong01Lv00,
+        .WeaponLevelChargerLong01Lv01,
+        .WeaponLevelChargerLongScope00Lv00,
+        .WeaponLevelChargerLongScope00Lv01,
+        .WeaponLevelChargerLongScope01Lv00,
+        .WeaponLevelChargerLongScope01Lv01,
+        .WeaponLevelChargerLight00Lv00,
+        .WeaponLevelChargerLight00Lv01,
+        .WeaponLevelChargerLight01Lv00,
+        .WeaponLevelChargerLight01Lv01,
+        .WeaponLevelChargerKeeper00Lv00,
+        .WeaponLevelChargerKeeper00Lv01,
+        .WeaponLevelChargerKeeper01Lv00,
+        .WeaponLevelChargerKeeper01Lv01,
+        .WeaponLevelChargerPencil00Lv00,
+        .WeaponLevelChargerPencil00Lv01,
+        .WeaponLevelChargerPencil01Lv00,
+        .WeaponLevelChargerPencil01Lv01,
+        .WeaponLevelSlosherStrong00Lv00,
+        .WeaponLevelSlosherStrong00Lv01,
+        .WeaponLevelSlosherStrong01Lv00,
+        .WeaponLevelSlosherStrong01Lv01,
+        .WeaponLevelSlosherStrongOLv00,
+        .WeaponLevelSlosherStrongOLv01,
+        .WeaponLevelSlosherDiffusion00Lv00,
+        .WeaponLevelSlosherDiffusion00Lv01,
+        .WeaponLevelSlosherDiffusion01Lv00,
+        .WeaponLevelSlosherDiffusion01Lv01,
+        .WeaponLevelSlosherLauncher00Lv00,
+        .WeaponLevelSlosherLauncher00Lv01,
+        .WeaponLevelSlosherLauncher01Lv00,
+        .WeaponLevelSlosherLauncher01Lv01,
+        .WeaponLevelSlosherBathtub00Lv00,
+        .WeaponLevelSlosherBathtub00Lv01,
+        .WeaponLevelSlosherBathtub01Lv00,
+        .WeaponLevelSlosherBathtub01Lv01,
+        .WeaponLevelSlosherWashtub00Lv00,
+        .WeaponLevelSlosherWashtub00Lv01,
+        .WeaponLevelSlosherWashtub01Lv00,
+        .WeaponLevelSlosherWashtub01Lv01,
+        .WeaponLevelSlosherDouble00Lv00,
+        .WeaponLevelSlosherDouble00Lv01,
+        .WeaponLevelSlosherDouble01Lv00,
+        .WeaponLevelSlosherDouble01Lv01,
+        .WeaponLevelSpinnerQuick00Lv00,
+        .WeaponLevelSpinnerQuick00Lv01,
+        .WeaponLevelSpinnerQuick01Lv00,
+        .WeaponLevelSpinnerQuick01Lv01,
+        .WeaponLevelSpinnerStandard00Lv00,
+        .WeaponLevelSpinnerStandard00Lv01,
+        .WeaponLevelSpinnerStandard01Lv00,
+        .WeaponLevelSpinnerStandard01Lv01,
+        .WeaponLevelSpinnerStandardOLv00,
+        .WeaponLevelSpinnerStandardOLv01,
+        .WeaponLevelSpinnerHyper00Lv00,
+        .WeaponLevelSpinnerHyper00Lv01,
+        .WeaponLevelSpinnerHyper01Lv00,
+        .WeaponLevelSpinnerHyper01Lv01,
+        .WeaponLevelSpinnerDownpour00Lv00,
+        .WeaponLevelSpinnerDownpour00Lv01,
+        .WeaponLevelSpinnerDownpour01Lv00,
+        .WeaponLevelSpinnerDownpour01Lv01,
+        .WeaponLevelSpinnerSerein00Lv00,
+        .WeaponLevelSpinnerSerein00Lv01,
+        .WeaponLevelSpinnerSerein01Lv00,
+        .WeaponLevelSpinnerSerein01Lv01,
+        .WeaponLevelSpinnerHyperShort00Lv00,
+        .WeaponLevelSpinnerHyperShort00Lv01,
+        .WeaponLevelSpinnerHyperShort01Lv00,
+        .WeaponLevelSpinnerHyperShort01Lv01,
+        .WeaponLevelManeuverShort00Lv00,
+        .WeaponLevelManeuverShort00Lv01,
+        .WeaponLevelManeuverShort01Lv00,
+        .WeaponLevelManeuverShort01Lv01,
+        .WeaponLevelManeuverNormal00Lv00,
+        .WeaponLevelManeuverNormal00Lv01,
+        .WeaponLevelManeuverNormal01Lv00,
+        .WeaponLevelManeuverNormal01Lv01,
+        .WeaponLevelManeuverNormalOLv00,
+        .WeaponLevelManeuverNormalOLv01,
+        .WeaponLevelManeuverGallon00Lv00,
+        .WeaponLevelManeuverGallon00Lv01,
+        .WeaponLevelManeuverGallon01Lv00,
+        .WeaponLevelManeuverGallon01Lv01,
+        .WeaponLevelManeuverDual00Lv00,
+        .WeaponLevelManeuverDual00Lv01,
+        .WeaponLevelManeuverDual01Lv00,
+        .WeaponLevelManeuverDual01Lv01,
+        .WeaponLevelManeuverStepper00Lv00,
+        .WeaponLevelManeuverStepper00Lv01,
+        .WeaponLevelManeuverStepper01Lv00,
+        .WeaponLevelManeuverStepper01Lv01,
+        .WeaponLevelManeuverLong00Lv00,
+        .WeaponLevelManeuverLong00Lv01,
+        .WeaponLevelManeuverLong01Lv00,
+        .WeaponLevelManeuverLong01Lv01,
+        .WeaponLevelShelterNormal00Lv00,
+        .WeaponLevelShelterNormal00Lv01,
+        .WeaponLevelShelterNormal01Lv00,
+        .WeaponLevelShelterNormal01Lv01,
+        .WeaponLevelShelterNormalOLv00,
+        .WeaponLevelShelterNormalOLv01,
+        .WeaponLevelShelterWide00Lv00,
+        .WeaponLevelShelterWide00Lv01,
+        .WeaponLevelShelterWide01Lv00,
+        .WeaponLevelShelterWide01Lv01,
+        .WeaponLevelShelterCompact00Lv00,
+        .WeaponLevelShelterCompact00Lv01,
+        .WeaponLevelShelterCompact01Lv00,
+        .WeaponLevelShelterCompact01Lv01,
+        .WeaponLevelShelterFocus00Lv00,
+        .WeaponLevelShelterFocus00Lv01,
+        .WeaponLevelShelterFocus01Lv00,
+        .WeaponLevelShelterFocus01Lv01,
+        .WeaponLevelStringerNormal00Lv00,
+        .WeaponLevelStringerNormal00Lv01,
+        .WeaponLevelStringerNormal01Lv00,
+        .WeaponLevelStringerNormal01Lv01,
+        .WeaponLevelStringerNormalOLv00,
+        .WeaponLevelStringerNormalOLv01,
+        .WeaponLevelStringerShort00Lv00,
+        .WeaponLevelStringerShort00Lv01,
+        .WeaponLevelStringerShort01Lv00,
+        .WeaponLevelStringerShort01Lv01,
+        .WeaponLevelStringerExplosion00Lv00,
+        .WeaponLevelStringerExplosion00Lv01,
+        .WeaponLevelStringerExplosion01Lv00,
+        .WeaponLevelStringerExplosion01Lv01,
+        .WeaponLevelSaberNormal00Lv00,
+        .WeaponLevelSaberNormal00Lv01,
+        .WeaponLevelSaberNormal01Lv00,
+        .WeaponLevelSaberNormal01Lv01,
+        .WeaponLevelSaberNormalOLv00,
+        .WeaponLevelSaberNormalOLv01,
+        .WeaponLevelSaberLite00Lv00,
+        .WeaponLevelSaberLite00Lv01,
+        .WeaponLevelSaberLite01Lv00,
+        .WeaponLevelSaberLite01Lv01,
+        .WeaponLevelSaberHeavy00Lv00,
+        .WeaponLevelSaberHeavy00Lv01,
+        .WeaponLevelSaberHeavy01Lv00,
+        .WeaponLevelSaberHeavy01Lv01,
+        .WinCountWeaponSpSpUltraShotLv00,
+        .WinCountWeaponSpSpUltraShotLv01,
+        .WinCountWeaponSpSpUltraShotLv02,
+        .WinCountWeaponSpSpGreatBarrierLv00,
+        .WinCountWeaponSpSpGreatBarrierLv01,
+        .WinCountWeaponSpSpGreatBarrierLv02,
+        .WinCountWeaponSpSpSuperHookLv00,
+        .WinCountWeaponSpSpSuperHookLv01,
+        .WinCountWeaponSpSpSuperHookLv02,
+        .WinCountWeaponSpSpMultiMissileLv00,
+        .WinCountWeaponSpSpMultiMissileLv01,
+        .WinCountWeaponSpSpMultiMissileLv02,
+        .WinCountWeaponSpSpInkStormLv00,
+        .WinCountWeaponSpSpInkStormLv01,
+        .WinCountWeaponSpSpInkStormLv02,
+        .WinCountWeaponSpSpNiceBallLv00,
+        .WinCountWeaponSpSpNiceBallLv01,
+        .WinCountWeaponSpSpNiceBallLv02,
+        .WinCountWeaponSpSpShockSonarLv00,
+        .WinCountWeaponSpSpShockSonarLv01,
+        .WinCountWeaponSpSpShockSonarLv02,
+        .WinCountWeaponSpSpBlowerLv00,
+        .WinCountWeaponSpSpBlowerLv01,
+        .WinCountWeaponSpSpBlowerLv02,
+        .WinCountWeaponSpSpMicroLaserLv00,
+        .WinCountWeaponSpSpMicroLaserLv01,
+        .WinCountWeaponSpSpMicroLaserLv02,
+        .WinCountWeaponSpSpJetpackLv00,
+        .WinCountWeaponSpSpJetpackLv01,
+        .WinCountWeaponSpSpJetpackLv02,
+        .WinCountWeaponSpSpUltraStampLv00,
+        .WinCountWeaponSpSpUltraStampLv01,
+        .WinCountWeaponSpSpUltraStampLv02,
+        .WinCountWeaponSpSpChariotLv00,
+        .WinCountWeaponSpSpChariotLv01,
+        .WinCountWeaponSpSpChariotLv02,
+        .WinCountWeaponSpSpSkewerLv00,
+        .WinCountWeaponSpSpSkewerLv01,
+        .WinCountWeaponSpSpSkewerLv02,
+        .WinCountWeaponSpSpTripleTornadoLv00,
+        .WinCountWeaponSpSpTripleTornadoLv01,
+        .WinCountWeaponSpSpTripleTornadoLv02,
+        .WinCountWeaponSpSpEnergyStandLv00,
+        .WinCountWeaponSpSpEnergyStandLv01,
+        .WinCountWeaponSpSpEnergyStandLv02,
+        .WinCountWeaponSpSpFireworkLv00,
+        .WinCountWeaponSpSpFireworkLv01,
+        .WinCountWeaponSpSpFireworkLv02,
+        .WinCountWeaponSpSpCastleLv00,
+        .WinCountWeaponSpSpCastleLv01,
+        .WinCountWeaponSpSpCastleLv02,
+        .WinCountWeaponSpSpPogoLv00,
+        .WinCountWeaponSpSpPogoLv01,
+        .WinCountWeaponSpSpPogoLv02,
+        .WinCountWeaponSpSpChimneyLv00,
+        .WinCountWeaponSpSpChimneyLv01,
+        .WinCountWeaponSpSpChimneyLv02,
+        .WinCountPntLv00,
+        .WinCountPntLv01,
+        .WinCountPntLv02,
+        .WinCountVarLv00,
+        .WinCountVarLv01,
+        .WinCountVlfLv00,
+        .WinCountVlfLv01,
+        .WinCountVglLv00,
+        .WinCountVglLv01,
+        .WinCountVclLv00,
+        .WinCountVclLv01,
+        .WinCountTclAtkLv00,
+        .WinCountTclAtkLv01,
+        .WinCountTclDefLv00,
+        .WinCountTclDefLv01,
+        .Fest10XBattleJoinLv00,
+        .Fest10XBattleJoinLv01,
+        .Fest10XBattleJoinLv02,
+        .Fest10XBattleWinLv00,
+        .Fest10XBattleWinLv01,
+        .Fest10XBattleWinLv02,
+        .UdemaeLv00,
+        .UdemaeLv01,
+        .UdemaeLv02,
+        .ChallengeWinStreakLv00,
+        .ChallengeWinStreakLv01,
+        .ChallengeWinStreakLv02,
+        .XrankLv00,
+        .XrankLv01,
+        .XrankLv02,
+        .XpowerPacificLv00,
+        .XpowerAtlanticLv00,
+        .WinCountHighXpowerPacificLv00,
+        .WinCountHighXpowerAtlanticLv00,
+        .WinCountHighXpowerPacificLv01,
+        .WinCountHighXpowerAtlanticLv01,
+        .WinCountHighXpowerPacificLv02,
+        .WinCountHighXpowerAtlanticLv02,
+        .XrankRevisedPacificLv00,
+        .XrankRevisedAtlanticLv00,
+        .XrankRevisedPacificLv01,
+        .XrankRevisedAtlanticLv01,
+        .XrankRevisedPacificLv02,
+        .XrankRevisedAtlanticLv02,
+        .XrankRevisedPacificLv03,
+        .XrankRevisedAtlanticLv03,
+        .XrankRevisedPacificLv04,
+        .XrankRevisedAtlanticLv04,
+        .XrankRevisedPacificLv05,
+        .XrankRevisedAtlanticLv05,
+        .XrankRevisedPacificLv06,
+        .XrankRevisedAtlanticLv06,
+        .XrankRevisedPacificLv07,
+        .XrankRevisedAtlanticLv07,
+        .EventMatchLv00,
+        .EventMatchLv01,
+        .EventMatchLv02,
+        .CatalogueLevelLv00,
+        .CatalogueLevelLv01,
         .FestRankMax,
-        .GearTotalRarity_B00_Lv00,
-        .GearTotalRarity_B00_Lv01,
-        .GearTotalRarity_B01_Lv00,
-        .GearTotalRarity_B01_Lv01,
-        .GearTotalRarity_B02_Lv00,
-        .GearTotalRarity_B02_Lv01,
-        .GearTotalRarity_B03_Lv00,
-        .GearTotalRarity_B03_Lv01,
-        .GearTotalRarity_B04_Lv00,
-        .GearTotalRarity_B04_Lv01,
-        .GearTotalRarity_B05_Lv00,
-        .GearTotalRarity_B05_Lv01,
-        .GearTotalRarity_B06_Lv00,
-        .GearTotalRarity_B06_Lv01,
-        .GearTotalRarity_B07_Lv00,
-        .GearTotalRarity_B07_Lv01,
-        .GearTotalRarity_B08_Lv00,
-        .GearTotalRarity_B08_Lv01,
-        .GearTotalRarity_B09_Lv00,
-        .GearTotalRarity_B09_Lv01,
-        .GearTotalRarity_B10_Lv00,
-        .GearTotalRarity_B10_Lv01,
-        .GearTotalRarity_B11_Lv00,
-        .GearTotalRarity_B11_Lv01,
-        .GearTotalRarity_B15_Lv00,
-        .GearTotalRarity_B15_Lv01,
-        .GearTotalRarity_B16_Lv00,
-        .GearTotalRarity_B16_Lv01,
-        .GearTotalRarity_B17_Lv00,
-        .GearTotalRarity_B17_Lv01,
-        .GearTotalRarity_B18_Lv00,
-        .GearTotalRarity_B18_Lv01,
-        .GearTotalRarity_B19_Lv00,
-        .GearTotalRarity_B19_Lv01,
-        .GearTotalRarity_B20_Lv00,
-        .GearTotalRarity_B20_Lv01,
-        .SpendShop_Head_Lv00,
-        .SpendShop_Head_Lv01,
-        .SpendShop_Head_Fsodr_Lv00,
-        .SpendShop_Head_Fsodr_Lv01,
-        .SpendShop_Head_Sdodr_Lv00,
-        .SpendShop_Head_Sdodr_Lv01,
-        .SpendShop_Clothes_Lv00,
-        .SpendShop_Clothes_Lv01,
-        .SpendShop_Clothes_Fsodr_Lv00,
-        .SpendShop_Clothes_Fsodr_Lv01,
-        .SpendShop_Clothes_Sdodr_Lv00,
-        .SpendShop_Clothes_Sdodr_Lv01,
-        .SpendShop_Shoes_Lv00,
-        .SpendShop_Shoes_Lv01,
-        .SpendShop_Shoes_Fsodr_Lv00,
-        .SpendShop_Shoes_Fsodr_Lv01,
-        .SpendShop_Shoes_Sdodr_Lv00,
-        .SpendShop_Shoes_Sdodr_Lv01,
-        .SpendShop_Goods_Lv00,
-        .SpendShop_Goods_Lv01,
-        .OrderVendor_Lv00,
-        .OrderVendor_Lv01,
-        .OrderVendor_Fsodr_Lv00,
-        .OrderVendor_Fsodr_Lv01,
-        .OrderFood_Lv00,
-        .OrderFood_Lv01,
-        .OrderFood_Lv02,
-        .SpendLottery_Lv00,
-        .SpendLottery_Lv01,
-        .SpendLottery_Lv02,
-        .LimitedRewardLottery_Lv00,
-        .LimitedRewardLottery_Lv01,
-        .LimitedRewardLottery_Lv02,
-        .PlayerRank_Lv00,
-        .PlayerRank_Lv01,
-        .PlayerRank_Lv02,
-        .PlayerRank_Lv03,
-        .PlayerRank_Lv04,
-        .PlayerRank_Lv05,
-        .PlayerRank_Lv06,
-        .PlayerRank_Lv07,
-        .PlayerRank_Lv08,
-        .PlayerRank_Lv09,
-        .PlayerRank_Lv10,
-        .PlayerRank_Lv11,
-        .CoopGrade_Normal_Shakeup_Lv00,
-        .CoopGrade_Normal_Shakeup_Lv01,
-        .CoopGrade_Normal_Shakeup_Lv02,
-        .CoopGrade_Normal_Shakeup_Lv03,
-        .CoopGrade_Normal_Shakespiral_Lv00,
-        .CoopGrade_Normal_Shakespiral_Lv01,
-        .CoopGrade_Normal_Shakespiral_Lv02,
-        .CoopGrade_Normal_Shakespiral_Lv03,
-        .CoopGrade_Normal_Shakelift_Lv00,
-        .CoopGrade_Normal_Shakelift_Lv01,
-        .CoopGrade_Normal_Shakelift_Lv02,
-        .CoopGrade_Normal_Shakelift_Lv03,
-        .CoopGrade_Normal_Shakeship_Lv00,
-        .CoopGrade_Normal_Shakeship_Lv01,
-        .CoopGrade_Normal_Shakeship_Lv02,
-        .CoopGrade_Normal_Shakeship_Lv03,
-        .CoopGrade_Normal_Shakedent_Lv00,
-        .CoopGrade_Normal_Shakedent_Lv01,
-        .CoopGrade_Normal_Shakedent_Lv02,
-        .CoopGrade_Normal_Shakedent_Lv03,
-        .CoopGrade_Normal_Shakehighway_Lv00,
-        .CoopGrade_Normal_Shakehighway_Lv01,
-        .CoopGrade_Normal_Shakehighway_Lv02,
-        .CoopGrade_Normal_Shakehighway_Lv03,
-        .CoopGrade_Normal_Shakerail_Lv00,
-        .CoopGrade_Normal_Shakerail_Lv01,
-        .CoopGrade_Normal_Shakerail_Lv02,
-        .CoopGrade_Normal_Shakerail_Lv03,
-        .TotalKumaPoint_Lv00,
-        .TotalKumaPoint_Lv01,
-        .TotalKumaPoint_Lv02,
+        .GearTotalRarityB00Lv00,
+        .GearTotalRarityB00Lv01,
+        .GearTotalRarityB01Lv00,
+        .GearTotalRarityB01Lv01,
+        .GearTotalRarityB02Lv00,
+        .GearTotalRarityB02Lv01,
+        .GearTotalRarityB03Lv00,
+        .GearTotalRarityB03Lv01,
+        .GearTotalRarityB04Lv00,
+        .GearTotalRarityB04Lv01,
+        .GearTotalRarityB05Lv00,
+        .GearTotalRarityB05Lv01,
+        .GearTotalRarityB06Lv00,
+        .GearTotalRarityB06Lv01,
+        .GearTotalRarityB07Lv00,
+        .GearTotalRarityB07Lv01,
+        .GearTotalRarityB08Lv00,
+        .GearTotalRarityB08Lv01,
+        .GearTotalRarityB09Lv00,
+        .GearTotalRarityB09Lv01,
+        .GearTotalRarityB10Lv00,
+        .GearTotalRarityB10Lv01,
+        .GearTotalRarityB11Lv00,
+        .GearTotalRarityB11Lv01,
+        .GearTotalRarityB15Lv00,
+        .GearTotalRarityB15Lv01,
+        .GearTotalRarityB16Lv00,
+        .GearTotalRarityB16Lv01,
+        .GearTotalRarityB17Lv00,
+        .GearTotalRarityB17Lv01,
+        .GearTotalRarityB18Lv00,
+        .GearTotalRarityB18Lv01,
+        .GearTotalRarityB19Lv00,
+        .GearTotalRarityB19Lv01,
+        .GearTotalRarityB20Lv00,
+        .GearTotalRarityB20Lv01,
+        .SpendShopHeadLv00,
+        .SpendShopHeadLv01,
+        .SpendShopHeadFsodrLv00,
+        .SpendShopHeadFsodrLv01,
+        .SpendShopHeadSdodrLv00,
+        .SpendShopHeadSdodrLv01,
+        .SpendShopClothesLv00,
+        .SpendShopClothesLv01,
+        .SpendShopClothesFsodrLv00,
+        .SpendShopClothesFsodrLv01,
+        .SpendShopClothesSdodrLv00,
+        .SpendShopClothesSdodrLv01,
+        .SpendShopShoesLv00,
+        .SpendShopShoesLv01,
+        .SpendShopShoesFsodrLv00,
+        .SpendShopShoesFsodrLv01,
+        .SpendShopShoesSdodrLv00,
+        .SpendShopShoesSdodrLv01,
+        .SpendShopGoodsLv00,
+        .SpendShopGoodsLv01,
+        .OrderVendorLv00,
+        .OrderVendorLv01,
+        .OrderVendorFsodrLv00,
+        .OrderVendorFsodrLv01,
+        .OrderFoodLv00,
+        .OrderFoodLv01,
+        .OrderFoodLv02,
+        .SpendLotteryLv00,
+        .SpendLotteryLv01,
+        .SpendLotteryLv02,
+        .LimitedRewardLotteryLv00,
+        .LimitedRewardLotteryLv01,
+        .LimitedRewardLotteryLv02,
+        .PlayerRankLv00,
+        .PlayerRankLv01,
+        .PlayerRankLv02,
+        .PlayerRankLv03,
+        .PlayerRankLv04,
+        .PlayerRankLv05,
+        .PlayerRankLv06,
+        .PlayerRankLv07,
+        .PlayerRankLv08,
+        .PlayerRankLv09,
+        .PlayerRankLv10,
+        .PlayerRankLv11,
+        .CoopGradeNormalShakeupLv00,
+        .CoopGradeNormalShakeupLv01,
+        .CoopGradeNormalShakeupLv02,
+        .CoopGradeNormalShakeupLv03,
+        .CoopGradeNormalShakespiralLv00,
+        .CoopGradeNormalShakespiralLv01,
+        .CoopGradeNormalShakespiralLv02,
+        .CoopGradeNormalShakespiralLv03,
+        .CoopGradeNormalShakeliftLv00,
+        .CoopGradeNormalShakeliftLv01,
+        .CoopGradeNormalShakeliftLv02,
+        .CoopGradeNormalShakeliftLv03,
+        .CoopGradeNormalShakeshipLv00,
+        .CoopGradeNormalShakeshipLv01,
+        .CoopGradeNormalShakeshipLv02,
+        .CoopGradeNormalShakeshipLv03,
+        .CoopGradeNormalShakedentLv00,
+        .CoopGradeNormalShakedentLv01,
+        .CoopGradeNormalShakedentLv02,
+        .CoopGradeNormalShakedentLv03,
+        .CoopGradeNormalShakehighwayLv00,
+        .CoopGradeNormalShakehighwayLv01,
+        .CoopGradeNormalShakehighwayLv02,
+        .CoopGradeNormalShakehighwayLv03,
+        .CoopGradeNormalShakerailLv00,
+        .CoopGradeNormalShakerailLv01,
+        .CoopGradeNormalShakerailLv02,
+        .CoopGradeNormalShakerailLv03,
+        .TotalKumaPointLv00,
+        .TotalKumaPointLv01,
+        .TotalKumaPointLv02,
         .CoopClearDangerRateMax,
-        .CoopRareEnemyKillNum_SakelienBomber_Lv00,
-        .CoopRareEnemyKillNum_SakelienBomber_Lv01,
-        .CoopRareEnemyKillNum_SakelienBomber_Lv02,
-        .CoopRareEnemyKillNum_SakelienSnake_Lv00,
-        .CoopRareEnemyKillNum_SakelienSnake_Lv01,
-        .CoopRareEnemyKillNum_SakelienSnake_Lv02,
-        .CoopRareEnemyKillNum_SakelienShield_Lv00,
-        .CoopRareEnemyKillNum_SakelienShield_Lv01,
-        .CoopRareEnemyKillNum_SakelienShield_Lv02,
-        .CoopRareEnemyKillNum_SakelienTower_Lv00,
-        .CoopRareEnemyKillNum_SakelienTower_Lv01,
-        .CoopRareEnemyKillNum_SakelienTower_Lv02,
-        .CoopRareEnemyKillNum_Sakediver_Lv00,
-        .CoopRareEnemyKillNum_Sakediver_Lv01,
-        .CoopRareEnemyKillNum_Sakediver_Lv02,
-        .CoopRareEnemyKillNum_Sakerocket_Lv00,
-        .CoopRareEnemyKillNum_Sakerocket_Lv01,
-        .CoopRareEnemyKillNum_Sakerocket_Lv02,
-        .CoopRareEnemyKillNum_SakelienCupTwins_Lv00,
-        .CoopRareEnemyKillNum_SakelienCupTwins_Lv01,
-        .CoopRareEnemyKillNum_SakelienCupTwins_Lv02,
-        .CoopRareEnemyKillNum_SakePillar_Lv00,
-        .CoopRareEnemyKillNum_SakePillar_Lv01,
-        .CoopRareEnemyKillNum_SakePillar_Lv02,
-        .CoopRareEnemyKillNum_SakeDolphin_Lv00,
-        .CoopRareEnemyKillNum_SakeDolphin_Lv01,
-        .CoopRareEnemyKillNum_SakeDolphin_Lv02,
-        .CoopRareEnemyKillNum_SakeSaucer_Lv00,
-        .CoopRareEnemyKillNum_SakeSaucer_Lv01,
-        .CoopRareEnemyKillNum_SakeSaucer_Lv02,
-        .CoopRareEnemyKillNum_SakeArtillery_Lv00,
-        .CoopRareEnemyKillNum_SakeArtillery_Lv01,
-        .CoopRareEnemyKillNum_SakeArtillery_Lv02,
-        .CoopBossKillNum_SakelienGiant_Lv00,
-        .CoopBossKillNum_SakelienGiant_Lv01,
-        .CoopBossKillNum_SakelienGiant_Lv02,
-        .CoopBossKillNum_SakeRope_Lv00,
-        .CoopBossKillNum_SakeRope_Lv01,
-        .CoopBossKillNum_SakeRope_Lv02,
-        .CoopBossKillNum_SakeJaw_Lv00,
-        .CoopBossKillNum_SakeJaw_Lv01,
-        .CoopBossKillNum_SakeJaw_Lv02,
-        .CoopKillTripleBoss_Lv00,
-        .CoopBigRunTrophy_Lv00,
-        .CoopBigRunTrophy_Lv01,
-        .CoopBigRunTrophy_Lv02,
-        .CoopContestTrophy_Lv00,
-        .CoopContestTrophy_Lv01,
-        .CoopContestTrophy_Lv02,
-        .Mission_Lv00,
-        .Mission_Lv01,
-        .Mission_Lv02,
-        .Mission_Lv03,
-        .Mission_Lv04,
-        .Achievement_Sdodr_Lv00,
-        .Achievement_Sdodr_Lv01,
-        .Achievement_Sdodr_Lv02,
-        .Achievement_Sdodr_Lv03,
-        .Achievement_Sdodr_Lv04,
-        .Achievement_Sdodr_Lv05,
-        .TipColorComplete_Sdodr_Fire_A,
-        .TipColorComplete_Sdodr_Fire_B,
-        .TipColorComplete_Sdodr_Fire_C,
-        .TipColorComplete_Sdodr_Continuity_A,
-        .TipColorComplete_Sdodr_Continuity_B,
-        .TipColorComplete_Sdodr_Continuity_C,
-        .TipColorComplete_Sdodr_Range_A,
-        .TipColorComplete_Sdodr_Range_B,
-        .TipColorComplete_Sdodr_Range_C,
-        .TipColorComplete_Sdodr_Move_A,
-        .TipColorComplete_Sdodr_Move_B,
-        .TipColorComplete_Sdodr_Move_C,
-        .TipColorComplete_Sdodr_Luck_A,
-        .TipColorComplete_Sdodr_Luck_B,
-        .TipColorComplete_Sdodr_Luck_C,
-        .TipColorComplete_Sdodr_Auto_A,
-        .TipColorComplete_Sdodr_Auto_B,
-        .TipColorComplete_Sdodr_Auto_C,
-        .NawaBattlerRank_Lv00,
-        .NawaBattlerRank_Lv01,
-        .NawaBattlerRank_Lv02,
-        .NawaBattlerRank_Lv03,
-        .NawaBattlerRank_Lv04,
-        .NawaBattlerRank_Lv05,
-        .NawaBattlerRank_Lv06,
-        .NawaBattlerRank_Lv07,
-        .NawaBattlerRank_Lv08,
-        .NawaBattlerRank_Lv09,
-        .NawaBattlerRank_Lv10,
-        .NawaBattlerRank_Lv11,
-        .NawaBattlerRank_Lv12,
-        .NawaBattlerCardNum_Lv00,
-        .NawaBattlerCardNum_Lv01,
-        .NawaBattlerCardNum_Lv02,
+        .CoopRareEnemyKillNumSakelienBomberLv00,
+        .CoopRareEnemyKillNumSakelienBomberLv01,
+        .CoopRareEnemyKillNumSakelienBomberLv02,
+        .CoopRareEnemyKillNumSakelienSnakeLv00,
+        .CoopRareEnemyKillNumSakelienSnakeLv01,
+        .CoopRareEnemyKillNumSakelienSnakeLv02,
+        .CoopRareEnemyKillNumSakelienShieldLv00,
+        .CoopRareEnemyKillNumSakelienShieldLv01,
+        .CoopRareEnemyKillNumSakelienShieldLv02,
+        .CoopRareEnemyKillNumSakelienTowerLv00,
+        .CoopRareEnemyKillNumSakelienTowerLv01,
+        .CoopRareEnemyKillNumSakelienTowerLv02,
+        .CoopRareEnemyKillNumSakediverLv00,
+        .CoopRareEnemyKillNumSakediverLv01,
+        .CoopRareEnemyKillNumSakediverLv02,
+        .CoopRareEnemyKillNumSakerocketLv00,
+        .CoopRareEnemyKillNumSakerocketLv01,
+        .CoopRareEnemyKillNumSakerocketLv02,
+        .CoopRareEnemyKillNumSakelienCupTwinsLv00,
+        .CoopRareEnemyKillNumSakelienCupTwinsLv01,
+        .CoopRareEnemyKillNumSakelienCupTwinsLv02,
+        .CoopRareEnemyKillNumSakePillarLv00,
+        .CoopRareEnemyKillNumSakePillarLv01,
+        .CoopRareEnemyKillNumSakePillarLv02,
+        .CoopRareEnemyKillNumSakeDolphinLv00,
+        .CoopRareEnemyKillNumSakeDolphinLv01,
+        .CoopRareEnemyKillNumSakeDolphinLv02,
+        .CoopRareEnemyKillNumSakeSaucerLv00,
+        .CoopRareEnemyKillNumSakeSaucerLv01,
+        .CoopRareEnemyKillNumSakeSaucerLv02,
+        .CoopRareEnemyKillNumSakeArtilleryLv00,
+        .CoopRareEnemyKillNumSakeArtilleryLv01,
+        .CoopRareEnemyKillNumSakeArtilleryLv02,
+        .CoopBossKillNumSakelienGiantLv00,
+        .CoopBossKillNumSakelienGiantLv01,
+        .CoopBossKillNumSakelienGiantLv02,
+        .CoopBossKillNumSakeRopeLv00,
+        .CoopBossKillNumSakeRopeLv01,
+        .CoopBossKillNumSakeRopeLv02,
+        .CoopBossKillNumSakeJawLv00,
+        .CoopBossKillNumSakeJawLv01,
+        .CoopBossKillNumSakeJawLv02,
+        .CoopKillTripleBossLv00,
+        .CoopBigRunTrophyLv00,
+        .CoopBigRunTrophyLv01,
+        .CoopBigRunTrophyLv02,
+        .CoopContestTrophyLv00,
+        .CoopContestTrophyLv01,
+        .CoopContestTrophyLv02,
+        .MissionLv00,
+        .MissionLv01,
+        .MissionLv02,
+        .MissionLv03,
+        .MissionLv04,
+        .AchievementSdodrLv00,
+        .AchievementSdodrLv01,
+        .AchievementSdodrLv02,
+        .AchievementSdodrLv03,
+        .AchievementSdodrLv04,
+        .AchievementSdodrLv05,
+        .TipColorCompleteSdodrFireA,
+        .TipColorCompleteSdodrFireB,
+        .TipColorCompleteSdodrFireC,
+        .TipColorCompleteSdodrContinuityA,
+        .TipColorCompleteSdodrContinuityB,
+        .TipColorCompleteSdodrContinuityC,
+        .TipColorCompleteSdodrRangeA,
+        .TipColorCompleteSdodrRangeB,
+        .TipColorCompleteSdodrRangeC,
+        .TipColorCompleteSdodrMoveA,
+        .TipColorCompleteSdodrMoveB,
+        .TipColorCompleteSdodrMoveC,
+        .TipColorCompleteSdodrLuckA,
+        .TipColorCompleteSdodrLuckB,
+        .TipColorCompleteSdodrLuckC,
+        .TipColorCompleteSdodrAutoA,
+        .TipColorCompleteSdodrAutoB,
+        .TipColorCompleteSdodrAutoC,
+        .NawaBattlerRankLv00,
+        .NawaBattlerRankLv01,
+        .NawaBattlerRankLv02,
+        .NawaBattlerRankLv03,
+        .NawaBattlerRankLv04,
+        .NawaBattlerRankLv05,
+        .NawaBattlerRankLv06,
+        .NawaBattlerRankLv07,
+        .NawaBattlerRankLv08,
+        .NawaBattlerRankLv09,
+        .NawaBattlerRankLv10,
+        .NawaBattlerRankLv11,
+        .NawaBattlerRankLv12,
+        .NawaBattlerCardNumLv00,
+        .NawaBattlerCardNumLv01,
+        .NawaBattlerCardNumLv02,
         .NawaBattlerWinAllNpcLevel3,
-        .HammerHostTournament_Lv00,
-        .HammerHostTournament_Lv01,
-        .HammerHostTournament_Lv02,
+        .HammerHostTournamentLv00,
+        .HammerHostTournamentLv01,
+        .HammerHostTournamentLv02,
     ]
+
+    public var id: RawValue { rawValue }
 
     public var rawValue: RawValue {
         switch self {
-        case .WeaponLevel_Shooter_Short_00_Lv00: return 1_000_000
-        case .WeaponLevel_Shooter_Short_00_Lv01: return 1_000_001
-        case .WeaponLevel_Shooter_Short_01_Lv00: return 1_000_010
-        case .WeaponLevel_Shooter_Short_01_Lv01: return 1_000_011
-        case .WeaponLevel_Shooter_First_00_Lv00: return 1_000_100
-        case .WeaponLevel_Shooter_First_00_Lv01: return 1_000_101
-        case .WeaponLevel_Shooter_First_01_Lv00: return 1_000_110
-        case .WeaponLevel_Shooter_First_01_Lv01: return 1_000_111
-        case .WeaponLevel_Shooter_Precision_00_Lv00: return 1_000_200
-        case .WeaponLevel_Shooter_Precision_00_Lv01: return 1_000_201
-        case .WeaponLevel_Shooter_Precision_01_Lv00: return 1_000_210
-        case .WeaponLevel_Shooter_Precision_01_Lv01: return 1_000_211
-        case .WeaponLevel_Shooter_Blaze_00_Lv00: return 1_000_300
-        case .WeaponLevel_Shooter_Blaze_00_Lv01: return 1_000_301
-        case .WeaponLevel_Shooter_Blaze_01_Lv00: return 1_000_310
-        case .WeaponLevel_Shooter_Blaze_01_Lv01: return 1_000_311
-        case .WeaponLevel_Shooter_Normal_00_Lv00: return 1_000_400
-        case .WeaponLevel_Shooter_Normal_00_Lv01: return 1_000_401
-        case .WeaponLevel_Shooter_Normal_01_Lv00: return 1_000_410
-        case .WeaponLevel_Shooter_Normal_01_Lv01: return 1_000_411
-        case .WeaponLevel_Shooter_Normal_H_Lv00: return 1_000_450
-        case .WeaponLevel_Shooter_Normal_H_Lv01: return 1_000_451
-        case .WeaponLevel_Shooter_Normal_Oct_Lv00: return 1_000_460
-        case .WeaponLevel_Shooter_Normal_Oct_Lv01: return 1_000_461
-        case .WeaponLevel_Shooter_Normal_O_Lv00: return 1_000_470
-        case .WeaponLevel_Shooter_Normal_O_Lv01: return 1_000_471
-        case .WeaponLevel_Shooter_Gravity_00_Lv00: return 1_000_500
-        case .WeaponLevel_Shooter_Gravity_00_Lv01: return 1_000_501
-        case .WeaponLevel_Shooter_Gravity_01_Lv00: return 1_000_510
-        case .WeaponLevel_Shooter_Gravity_01_Lv01: return 1_000_511
-        case .WeaponLevel_Shooter_QuickMiddle_00_Lv00: return 1_000_600
-        case .WeaponLevel_Shooter_QuickMiddle_00_Lv01: return 1_000_601
-        case .WeaponLevel_Shooter_QuickMiddle_01_Lv00: return 1_000_610
-        case .WeaponLevel_Shooter_QuickMiddle_01_Lv01: return 1_000_611
-        case .WeaponLevel_Shooter_Expert_00_Lv00: return 1_000_700
-        case .WeaponLevel_Shooter_Expert_00_Lv01: return 1_000_701
-        case .WeaponLevel_Shooter_Expert_01_Lv00: return 1_000_710
-        case .WeaponLevel_Shooter_Expert_01_Lv01: return 1_000_711
-        case .WeaponLevel_Shooter_Heavy_00_Lv00: return 1_000_800
-        case .WeaponLevel_Shooter_Heavy_00_Lv01: return 1_000_801
-        case .WeaponLevel_Shooter_Heavy_01_Lv00: return 1_000_810
-        case .WeaponLevel_Shooter_Heavy_01_Lv01: return 1_000_811
-        case .WeaponLevel_Shooter_Long_00_Lv00: return 1_000_900
-        case .WeaponLevel_Shooter_Long_00_Lv01: return 1_000_901
-        case .WeaponLevel_Shooter_Long_01_Lv00: return 1_000_910
-        case .WeaponLevel_Shooter_Long_01_Lv01: return 1_000_911
-        case .WeaponLevel_Shooter_QuickLong_00_Lv00: return 1_001_000
-        case .WeaponLevel_Shooter_QuickLong_00_Lv01: return 1_001_001
-        case .WeaponLevel_Shooter_QuickLong_01_Lv00: return 1_001_010
-        case .WeaponLevel_Shooter_QuickLong_01_Lv01: return 1_001_011
-        case .WeaponLevel_Blaster_Short_00_Lv00: return 1_002_000
-        case .WeaponLevel_Blaster_Short_00_Lv01: return 1_002_001
-        case .WeaponLevel_Blaster_Short_01_Lv00: return 1_002_010
-        case .WeaponLevel_Blaster_Short_01_Lv01: return 1_002_011
-        case .WeaponLevel_Blaster_Short_O_Lv00: return 1_002_050
-        case .WeaponLevel_Blaster_Short_O_Lv01: return 1_002_051
-        case .WeaponLevel_Blaster_Middle_00_Lv00: return 1_002_100
-        case .WeaponLevel_Blaster_Middle_00_Lv01: return 1_002_101
-        case .WeaponLevel_Blaster_Middle_01_Lv00: return 1_002_110
-        case .WeaponLevel_Blaster_Middle_01_Lv01: return 1_002_111
-        case .WeaponLevel_Blaster_Long_00_Lv00: return 1_002_200
-        case .WeaponLevel_Blaster_Long_00_Lv01: return 1_002_201
-        case .WeaponLevel_Blaster_Long_01_Lv00: return 1_002_210
-        case .WeaponLevel_Blaster_Long_01_Lv01: return 1_002_211
-        case .WeaponLevel_Blaster_LightShort_00_Lv00: return 1_002_300
-        case .WeaponLevel_Blaster_LightShort_00_Lv01: return 1_002_301
-        case .WeaponLevel_Blaster_LightShort_01_Lv00: return 1_002_310
-        case .WeaponLevel_Blaster_LightShort_01_Lv01: return 1_002_311
-        case .WeaponLevel_Blaster_Light_00_Lv00: return 1_002_400
-        case .WeaponLevel_Blaster_Light_00_Lv01: return 1_002_401
-        case .WeaponLevel_Blaster_Light_01_Lv00: return 1_002_410
-        case .WeaponLevel_Blaster_Light_01_Lv01: return 1_002_411
-        case .WeaponLevel_Blaster_LightLong_00_Lv00: return 1_002_500
-        case .WeaponLevel_Blaster_LightLong_00_Lv01: return 1_002_501
-        case .WeaponLevel_Blaster_LightLong_01_Lv00: return 1_002_510
-        case .WeaponLevel_Blaster_LightLong_01_Lv01: return 1_002_511
-        case .WeaponLevel_Blaster_Precision_00_Lv00: return 1_002_600
-        case .WeaponLevel_Blaster_Precision_00_Lv01: return 1_002_601
-        case .WeaponLevel_Blaster_Precision_01_Lv00: return 1_002_610
-        case .WeaponLevel_Blaster_Precision_01_Lv01: return 1_002_611
-        case .WeaponLevel_Shooter_TripleQuick_00_Lv00: return 1_003_000
-        case .WeaponLevel_Shooter_TripleQuick_00_Lv01: return 1_003_001
-        case .WeaponLevel_Shooter_TripleQuick_01_Lv00: return 1_003_010
-        case .WeaponLevel_Shooter_TripleQuick_01_Lv01: return 1_003_011
-        case .WeaponLevel_Shooter_TripleMiddle_00_Lv00: return 1_003_100
-        case .WeaponLevel_Shooter_TripleMiddle_00_Lv01: return 1_003_101
-        case .WeaponLevel_Shooter_TripleMiddle_01_Lv00: return 1_003_110
-        case .WeaponLevel_Shooter_TripleMiddle_01_Lv01: return 1_003_111
-        case .WeaponLevel_Shooter_Flash_00_Lv00: return 1_004_000
-        case .WeaponLevel_Shooter_Flash_00_Lv01: return 1_004_001
-        case .WeaponLevel_Shooter_Flash_01_Lv00: return 1_004_010
-        case .WeaponLevel_Shooter_Flash_01_Lv01: return 1_004_011
-        case .WeaponLevel_Roller_Compact_00_Lv00: return 1_010_000
-        case .WeaponLevel_Roller_Compact_00_Lv01: return 1_010_001
-        case .WeaponLevel_Roller_Compact_01_Lv00: return 1_010_010
-        case .WeaponLevel_Roller_Compact_01_Lv01: return 1_010_011
-        case .WeaponLevel_Roller_Normal_00_Lv00: return 1_010_100
-        case .WeaponLevel_Roller_Normal_00_Lv01: return 1_010_101
-        case .WeaponLevel_Roller_Normal_01_Lv00: return 1_010_110
-        case .WeaponLevel_Roller_Normal_01_Lv01: return 1_010_111
-        case .WeaponLevel_Roller_Normal_O_Lv00: return 1_010_150
-        case .WeaponLevel_Roller_Normal_O_Lv01: return 1_010_151
-        case .WeaponLevel_Roller_Heavy_00_Lv00: return 1_010_200
-        case .WeaponLevel_Roller_Heavy_00_Lv01: return 1_010_201
-        case .WeaponLevel_Roller_Heavy_01_Lv00: return 1_010_210
-        case .WeaponLevel_Roller_Heavy_01_Lv01: return 1_010_211
-        case .WeaponLevel_Roller_Hunter_00_Lv00: return 1_010_300
-        case .WeaponLevel_Roller_Hunter_00_Lv01: return 1_010_301
-        case .WeaponLevel_Roller_Hunter_01_Lv00: return 1_010_310
-        case .WeaponLevel_Roller_Hunter_01_Lv01: return 1_010_311
-        case .WeaponLevel_Roller_Wide_00_Lv00: return 1_010_400
-        case .WeaponLevel_Roller_Wide_00_Lv01: return 1_010_401
-        case .WeaponLevel_Roller_Wide_01_Lv00: return 1_010_410
-        case .WeaponLevel_Roller_Wide_01_Lv01: return 1_010_411
-        case .WeaponLevel_Brush_Mini_00_Lv00: return 1_011_000
-        case .WeaponLevel_Brush_Mini_00_Lv01: return 1_011_001
-        case .WeaponLevel_Brush_Mini_01_Lv00: return 1_011_010
-        case .WeaponLevel_Brush_Mini_01_Lv01: return 1_011_011
-        case .WeaponLevel_Brush_Normal_00_Lv00: return 1_011_100
-        case .WeaponLevel_Brush_Normal_00_Lv01: return 1_011_101
-        case .WeaponLevel_Brush_Normal_01_Lv00: return 1_011_110
-        case .WeaponLevel_Brush_Normal_01_Lv01: return 1_011_111
-        case .WeaponLevel_Brush_Normal_O_Lv00: return 1_011_150
-        case .WeaponLevel_Brush_Normal_O_Lv01: return 1_011_151
-        case .WeaponLevel_Brush_Heavy_00_Lv00: return 1_011_200
-        case .WeaponLevel_Brush_Heavy_00_Lv01: return 1_011_201
-        case .WeaponLevel_Brush_Heavy_01_Lv00: return 1_011_210
-        case .WeaponLevel_Brush_Heavy_01_Lv01: return 1_011_211
-        case .WeaponLevel_Charger_Quick_00_Lv00: return 1_020_000
-        case .WeaponLevel_Charger_Quick_00_Lv01: return 1_020_001
-        case .WeaponLevel_Charger_Quick_01_Lv00: return 1_020_010
-        case .WeaponLevel_Charger_Quick_01_Lv01: return 1_020_011
-        case .WeaponLevel_Charger_Normal_00_Lv00: return 1_020_100
-        case .WeaponLevel_Charger_Normal_00_Lv01: return 1_020_101
-        case .WeaponLevel_Charger_Normal_01_Lv00: return 1_020_110
-        case .WeaponLevel_Charger_Normal_01_Lv01: return 1_020_111
-        case .WeaponLevel_Charger_Normal_O_Lv00: return 1_020_150
-        case .WeaponLevel_Charger_Normal_O_Lv01: return 1_020_151
-        case .WeaponLevel_Charger_NormalScope_00_Lv00: return 1_020_200
-        case .WeaponLevel_Charger_NormalScope_00_Lv01: return 1_020_201
-        case .WeaponLevel_Charger_NormalScope_01_Lv00: return 1_020_210
-        case .WeaponLevel_Charger_NormalScope_01_Lv01: return 1_020_211
-        case .WeaponLevel_Charger_Long_00_Lv00: return 1_020_300
-        case .WeaponLevel_Charger_Long_00_Lv01: return 1_020_301
-        case .WeaponLevel_Charger_Long_01_Lv00: return 1_020_310
-        case .WeaponLevel_Charger_Long_01_Lv01: return 1_020_311
-        case .WeaponLevel_Charger_LongScope_00_Lv00: return 1_020_400
-        case .WeaponLevel_Charger_LongScope_00_Lv01: return 1_020_401
-        case .WeaponLevel_Charger_LongScope_01_Lv00: return 1_020_410
-        case .WeaponLevel_Charger_LongScope_01_Lv01: return 1_020_411
-        case .WeaponLevel_Charger_Light_00_Lv00: return 1_020_500
-        case .WeaponLevel_Charger_Light_00_Lv01: return 1_020_501
-        case .WeaponLevel_Charger_Light_01_Lv00: return 1_020_510
-        case .WeaponLevel_Charger_Light_01_Lv01: return 1_020_511
-        case .WeaponLevel_Charger_Keeper_00_Lv00: return 1_020_600
-        case .WeaponLevel_Charger_Keeper_00_Lv01: return 1_020_601
-        case .WeaponLevel_Charger_Keeper_01_Lv00: return 1_020_610
-        case .WeaponLevel_Charger_Keeper_01_Lv01: return 1_020_611
-        case .WeaponLevel_Charger_Pencil_00_Lv00: return 1_020_700
-        case .WeaponLevel_Charger_Pencil_00_Lv01: return 1_020_701
-        case .WeaponLevel_Charger_Pencil_01_Lv00: return 1_020_710
-        case .WeaponLevel_Charger_Pencil_01_Lv01: return 1_020_711
-        case .WeaponLevel_Slosher_Strong_00_Lv00: return 1_030_000
-        case .WeaponLevel_Slosher_Strong_00_Lv01: return 1_030_001
-        case .WeaponLevel_Slosher_Strong_01_Lv00: return 1_030_010
-        case .WeaponLevel_Slosher_Strong_01_Lv01: return 1_030_011
-        case .WeaponLevel_Slosher_Strong_O_Lv00: return 1_030_050
-        case .WeaponLevel_Slosher_Strong_O_Lv01: return 1_030_051
-        case .WeaponLevel_Slosher_Diffusion_00_Lv00: return 1_030_100
-        case .WeaponLevel_Slosher_Diffusion_00_Lv01: return 1_030_101
-        case .WeaponLevel_Slosher_Diffusion_01_Lv00: return 1_030_110
-        case .WeaponLevel_Slosher_Diffusion_01_Lv01: return 1_030_111
-        case .WeaponLevel_Slosher_Launcher_00_Lv00: return 1_030_200
-        case .WeaponLevel_Slosher_Launcher_00_Lv01: return 1_030_201
-        case .WeaponLevel_Slosher_Launcher_01_Lv00: return 1_030_210
-        case .WeaponLevel_Slosher_Launcher_01_Lv01: return 1_030_211
-        case .WeaponLevel_Slosher_Bathtub_00_Lv00: return 1_030_300
-        case .WeaponLevel_Slosher_Bathtub_00_Lv01: return 1_030_301
-        case .WeaponLevel_Slosher_Bathtub_01_Lv00: return 1_030_310
-        case .WeaponLevel_Slosher_Bathtub_01_Lv01: return 1_030_311
-        case .WeaponLevel_Slosher_Washtub_00_Lv00: return 1_030_400
-        case .WeaponLevel_Slosher_Washtub_00_Lv01: return 1_030_401
-        case .WeaponLevel_Slosher_Washtub_01_Lv00: return 1_030_410
-        case .WeaponLevel_Slosher_Washtub_01_Lv01: return 1_030_411
-        case .WeaponLevel_Slosher_Double_00_Lv00: return 1_030_500
-        case .WeaponLevel_Slosher_Double_00_Lv01: return 1_030_501
-        case .WeaponLevel_Slosher_Double_01_Lv00: return 1_030_510
-        case .WeaponLevel_Slosher_Double_01_Lv01: return 1_030_511
-        case .WeaponLevel_Spinner_Quick_00_Lv00: return 1_040_000
-        case .WeaponLevel_Spinner_Quick_00_Lv01: return 1_040_001
-        case .WeaponLevel_Spinner_Quick_01_Lv00: return 1_040_010
-        case .WeaponLevel_Spinner_Quick_01_Lv01: return 1_040_011
-        case .WeaponLevel_Spinner_Standard_00_Lv00: return 1_040_100
-        case .WeaponLevel_Spinner_Standard_00_Lv01: return 1_040_101
-        case .WeaponLevel_Spinner_Standard_01_Lv00: return 1_040_110
-        case .WeaponLevel_Spinner_Standard_01_Lv01: return 1_040_111
-        case .WeaponLevel_Spinner_Standard_O_Lv00: return 1_040_150
-        case .WeaponLevel_Spinner_Standard_O_Lv01: return 1_040_151
-        case .WeaponLevel_Spinner_Hyper_00_Lv00: return 1_040_200
-        case .WeaponLevel_Spinner_Hyper_00_Lv01: return 1_040_201
-        case .WeaponLevel_Spinner_Hyper_01_Lv00: return 1_040_210
-        case .WeaponLevel_Spinner_Hyper_01_Lv01: return 1_040_211
-        case .WeaponLevel_Spinner_Downpour_00_Lv00: return 1_040_300
-        case .WeaponLevel_Spinner_Downpour_00_Lv01: return 1_040_301
-        case .WeaponLevel_Spinner_Downpour_01_Lv00: return 1_040_310
-        case .WeaponLevel_Spinner_Downpour_01_Lv01: return 1_040_311
-        case .WeaponLevel_Spinner_Serein_00_Lv00: return 1_040_400
-        case .WeaponLevel_Spinner_Serein_00_Lv01: return 1_040_401
-        case .WeaponLevel_Spinner_Serein_01_Lv00: return 1_040_410
-        case .WeaponLevel_Spinner_Serein_01_Lv01: return 1_040_411
-        case .WeaponLevel_Spinner_HyperShort_00_Lv00: return 1_040_500
-        case .WeaponLevel_Spinner_HyperShort_00_Lv01: return 1_040_501
-        case .WeaponLevel_Spinner_HyperShort_01_Lv00: return 1_040_510
-        case .WeaponLevel_Spinner_HyperShort_01_Lv01: return 1_040_511
-        case .WeaponLevel_Maneuver_Short_00_Lv00: return 1_050_000
-        case .WeaponLevel_Maneuver_Short_00_Lv01: return 1_050_001
-        case .WeaponLevel_Maneuver_Short_01_Lv00: return 1_050_010
-        case .WeaponLevel_Maneuver_Short_01_Lv01: return 1_050_011
-        case .WeaponLevel_Maneuver_Normal_00_Lv00: return 1_050_100
-        case .WeaponLevel_Maneuver_Normal_00_Lv01: return 1_050_101
-        case .WeaponLevel_Maneuver_Normal_01_Lv00: return 1_050_110
-        case .WeaponLevel_Maneuver_Normal_01_Lv01: return 1_050_111
-        case .WeaponLevel_Maneuver_Normal_O_Lv00: return 1_050_150
-        case .WeaponLevel_Maneuver_Normal_O_Lv01: return 1_050_151
-        case .WeaponLevel_Maneuver_Gallon_00_Lv00: return 1_050_200
-        case .WeaponLevel_Maneuver_Gallon_00_Lv01: return 1_050_201
-        case .WeaponLevel_Maneuver_Gallon_01_Lv00: return 1_050_210
-        case .WeaponLevel_Maneuver_Gallon_01_Lv01: return 1_050_211
-        case .WeaponLevel_Maneuver_Dual_00_Lv00: return 1_050_300
-        case .WeaponLevel_Maneuver_Dual_00_Lv01: return 1_050_301
-        case .WeaponLevel_Maneuver_Dual_01_Lv00: return 1_050_310
-        case .WeaponLevel_Maneuver_Dual_01_Lv01: return 1_050_311
-        case .WeaponLevel_Maneuver_Stepper_00_Lv00: return 1_050_400
-        case .WeaponLevel_Maneuver_Stepper_00_Lv01: return 1_050_401
-        case .WeaponLevel_Maneuver_Stepper_01_Lv00: return 1_050_410
-        case .WeaponLevel_Maneuver_Stepper_01_Lv01: return 1_050_411
-        case .WeaponLevel_Maneuver_Long_00_Lv00: return 1_050_500
-        case .WeaponLevel_Maneuver_Long_00_Lv01: return 1_050_501
-        case .WeaponLevel_Maneuver_Long_01_Lv00: return 1_050_510
-        case .WeaponLevel_Maneuver_Long_01_Lv01: return 1_050_511
-        case .WeaponLevel_Shelter_Normal_00_Lv00: return 1_060_000
-        case .WeaponLevel_Shelter_Normal_00_Lv01: return 1_060_001
-        case .WeaponLevel_Shelter_Normal_01_Lv00: return 1_060_010
-        case .WeaponLevel_Shelter_Normal_01_Lv01: return 1_060_011
-        case .WeaponLevel_Shelter_Normal_O_Lv00: return 1_060_050
-        case .WeaponLevel_Shelter_Normal_O_Lv01: return 1_060_051
-        case .WeaponLevel_Shelter_Wide_00_Lv00: return 1_060_100
-        case .WeaponLevel_Shelter_Wide_00_Lv01: return 1_060_101
-        case .WeaponLevel_Shelter_Wide_01_Lv00: return 1_060_110
-        case .WeaponLevel_Shelter_Wide_01_Lv01: return 1_060_111
-        case .WeaponLevel_Shelter_Compact_00_Lv00: return 1_060_200
-        case .WeaponLevel_Shelter_Compact_00_Lv01: return 1_060_201
-        case .WeaponLevel_Shelter_Compact_01_Lv00: return 1_060_210
-        case .WeaponLevel_Shelter_Compact_01_Lv01: return 1_060_211
-        case .WeaponLevel_Shelter_Focus_00_Lv00: return 1_060_300
-        case .WeaponLevel_Shelter_Focus_00_Lv01: return 1_060_301
-        case .WeaponLevel_Shelter_Focus_01_Lv00: return 1_060_310
-        case .WeaponLevel_Shelter_Focus_01_Lv01: return 1_060_311
-        case .WeaponLevel_Stringer_Normal_00_Lv00: return 1_070_100
-        case .WeaponLevel_Stringer_Normal_00_Lv01: return 1_070_101
-        case .WeaponLevel_Stringer_Normal_01_Lv00: return 1_070_110
-        case .WeaponLevel_Stringer_Normal_01_Lv01: return 1_070_111
-        case .WeaponLevel_Stringer_Normal_O_Lv00: return 1_070_150
-        case .WeaponLevel_Stringer_Normal_O_Lv01: return 1_070_151
-        case .WeaponLevel_Stringer_Short_00_Lv00: return 1_070_200
-        case .WeaponLevel_Stringer_Short_00_Lv01: return 1_070_201
-        case .WeaponLevel_Stringer_Short_01_Lv00: return 1_070_210
-        case .WeaponLevel_Stringer_Short_01_Lv01: return 1_070_211
-        case .WeaponLevel_Stringer_Explosion_00_Lv00: return 1_070_300
-        case .WeaponLevel_Stringer_Explosion_00_Lv01: return 1_070_301
-        case .WeaponLevel_Stringer_Explosion_01_Lv00: return 1_070_310
-        case .WeaponLevel_Stringer_Explosion_01_Lv01: return 1_070_311
-        case .WeaponLevel_Saber_Normal_00_Lv00: return 1_080_000
-        case .WeaponLevel_Saber_Normal_00_Lv01: return 1_080_001
-        case .WeaponLevel_Saber_Normal_01_Lv00: return 1_080_010
-        case .WeaponLevel_Saber_Normal_01_Lv01: return 1_080_011
-        case .WeaponLevel_Saber_Normal_O_Lv00: return 1_080_050
-        case .WeaponLevel_Saber_Normal_O_Lv01: return 1_080_051
-        case .WeaponLevel_Saber_Lite_00_Lv00: return 1_080_100
-        case .WeaponLevel_Saber_Lite_00_Lv01: return 1_080_101
-        case .WeaponLevel_Saber_Lite_01_Lv00: return 1_080_110
-        case .WeaponLevel_Saber_Lite_01_Lv01: return 1_080_111
-        case .WeaponLevel_Saber_Heavy_00_Lv00: return 1_080_200
-        case .WeaponLevel_Saber_Heavy_00_Lv01: return 1_080_201
-        case .WeaponLevel_Saber_Heavy_01_Lv00: return 1_080_210
-        case .WeaponLevel_Saber_Heavy_01_Lv01: return 1_080_211
-        case .WinCount_WeaponSp_SpUltraShot_Lv00: return 2_000_010
-        case .WinCount_WeaponSp_SpUltraShot_Lv01: return 2_000_011
-        case .WinCount_WeaponSp_SpUltraShot_Lv02: return 2_000_012
-        case .WinCount_WeaponSp_SpGreatBarrier_Lv00: return 2_000_020
-        case .WinCount_WeaponSp_SpGreatBarrier_Lv01: return 2_000_021
-        case .WinCount_WeaponSp_SpGreatBarrier_Lv02: return 2_000_022
-        case .WinCount_WeaponSp_SpSuperHook_Lv00: return 2_000_030
-        case .WinCount_WeaponSp_SpSuperHook_Lv01: return 2_000_031
-        case .WinCount_WeaponSp_SpSuperHook_Lv02: return 2_000_032
-        case .WinCount_WeaponSp_SpMultiMissile_Lv00: return 2_000_040
-        case .WinCount_WeaponSp_SpMultiMissile_Lv01: return 2_000_041
-        case .WinCount_WeaponSp_SpMultiMissile_Lv02: return 2_000_042
-        case .WinCount_WeaponSp_SpInkStorm_Lv00: return 2_000_050
-        case .WinCount_WeaponSp_SpInkStorm_Lv01: return 2_000_051
-        case .WinCount_WeaponSp_SpInkStorm_Lv02: return 2_000_052
-        case .WinCount_WeaponSp_SpNiceBall_Lv00: return 2_000_060
-        case .WinCount_WeaponSp_SpNiceBall_Lv01: return 2_000_061
-        case .WinCount_WeaponSp_SpNiceBall_Lv02: return 2_000_062
-        case .WinCount_WeaponSp_SpShockSonar_Lv00: return 2_000_070
-        case .WinCount_WeaponSp_SpShockSonar_Lv01: return 2_000_071
-        case .WinCount_WeaponSp_SpShockSonar_Lv02: return 2_000_072
-        case .WinCount_WeaponSp_SpBlower_Lv00: return 2_000_080
-        case .WinCount_WeaponSp_SpBlower_Lv01: return 2_000_081
-        case .WinCount_WeaponSp_SpBlower_Lv02: return 2_000_082
-        case .WinCount_WeaponSp_SpMicroLaser_Lv00: return 2_000_090
-        case .WinCount_WeaponSp_SpMicroLaser_Lv01: return 2_000_091
-        case .WinCount_WeaponSp_SpMicroLaser_Lv02: return 2_000_092
-        case .WinCount_WeaponSp_SpJetpack_Lv00: return 2_000_100
-        case .WinCount_WeaponSp_SpJetpack_Lv01: return 2_000_101
-        case .WinCount_WeaponSp_SpJetpack_Lv02: return 2_000_102
-        case .WinCount_WeaponSp_SpUltraStamp_Lv00: return 2_000_110
-        case .WinCount_WeaponSp_SpUltraStamp_Lv01: return 2_000_111
-        case .WinCount_WeaponSp_SpUltraStamp_Lv02: return 2_000_112
-        case .WinCount_WeaponSp_SpChariot_Lv00: return 2_000_120
-        case .WinCount_WeaponSp_SpChariot_Lv01: return 2_000_121
-        case .WinCount_WeaponSp_SpChariot_Lv02: return 2_000_122
-        case .WinCount_WeaponSp_SpSkewer_Lv00: return 2_000_130
-        case .WinCount_WeaponSp_SpSkewer_Lv01: return 2_000_131
-        case .WinCount_WeaponSp_SpSkewer_Lv02: return 2_000_132
-        case .WinCount_WeaponSp_SpTripleTornado_Lv00: return 2_000_140
-        case .WinCount_WeaponSp_SpTripleTornado_Lv01: return 2_000_141
-        case .WinCount_WeaponSp_SpTripleTornado_Lv02: return 2_000_142
-        case .WinCount_WeaponSp_SpEnergyStand_Lv00: return 2_000_150
-        case .WinCount_WeaponSp_SpEnergyStand_Lv01: return 2_000_151
-        case .WinCount_WeaponSp_SpEnergyStand_Lv02: return 2_000_152
-        case .WinCount_WeaponSp_SpFirework_Lv00: return 2_000_160
-        case .WinCount_WeaponSp_SpFirework_Lv01: return 2_000_161
-        case .WinCount_WeaponSp_SpFirework_Lv02: return 2_000_162
-        case .WinCount_WeaponSp_SpCastle_Lv00: return 2_000_170
-        case .WinCount_WeaponSp_SpCastle_Lv01: return 2_000_171
-        case .WinCount_WeaponSp_SpCastle_Lv02: return 2_000_172
-        case .WinCount_WeaponSp_SpPogo_Lv00: return 2_000_180
-        case .WinCount_WeaponSp_SpPogo_Lv01: return 2_000_181
-        case .WinCount_WeaponSp_SpPogo_Lv02: return 2_000_182
-        case .WinCount_WeaponSp_SpChimney_Lv00: return 2_000_190
-        case .WinCount_WeaponSp_SpChimney_Lv01: return 2_000_191
-        case .WinCount_WeaponSp_SpChimney_Lv02: return 2_000_192
-        case .WinCount_Pnt_Lv00: return 3_000_000
-        case .WinCount_Pnt_Lv01: return 3_000_001
-        case .WinCount_Pnt_Lv02: return 3_000_002
-        case .WinCount_Var_Lv00: return 3_000_100
-        case .WinCount_Var_Lv01: return 3_000_101
-        case .WinCount_Vlf_Lv00: return 3_000_200
-        case .WinCount_Vlf_Lv01: return 3_000_201
-        case .WinCount_Vgl_Lv00: return 3_000_300
-        case .WinCount_Vgl_Lv01: return 3_000_301
-        case .WinCount_Vcl_Lv00: return 3_000_400
-        case .WinCount_Vcl_Lv01: return 3_000_401
-        case .WinCount_Tcl_Atk_Lv00: return 3_001_000
-        case .WinCount_Tcl_Atk_Lv01: return 3_001_001
-        case .WinCount_Tcl_Def_Lv00: return 3_002_000
-        case .WinCount_Tcl_Def_Lv01: return 3_002_001
-        case .Fest10xBattle_Join_Lv00: return 3_003_000
-        case .Fest10xBattle_Join_Lv01: return 3_003_001
-        case .Fest10xBattle_Join_Lv02: return 3_003_002
-        case .Fest10xBattle_Win_Lv00: return 3_003_100
-        case .Fest10xBattle_Win_Lv01: return 3_003_101
-        case .Fest10xBattle_Win_Lv02: return 3_003_102
-        case .Udemae_Lv00: return 3_100_000
-        case .Udemae_Lv01: return 3_100_001
-        case .Udemae_Lv02: return 3_100_002
-        case .ChallengeWinStreak_Lv00: return 3_100_200
-        case .ChallengeWinStreak_Lv01: return 3_100_201
-        case .ChallengeWinStreak_Lv02: return 3_100_202
-        case .XRank_Lv00: return 3_101_000
-        case .XRank_Lv01: return 3_101_001
-        case .XRank_Lv02: return 3_101_002
-        case .XPower_Pacific_Lv00: return 3_101_100
-        case .XPower_Atlantic_Lv00: return 3_101_101
-        case .WinCount_HighXPower_Pacific_Lv00: return 3_101_200
-        case .WinCount_HighXPower_Atlantic_Lv00: return 3_101_201
-        case .WinCount_HighXPower_Pacific_Lv01: return 3_101_210
-        case .WinCount_HighXPower_Atlantic_Lv01: return 3_101_211
-        case .WinCount_HighXPower_Pacific_Lv02: return 3_101_220
-        case .WinCount_HighXPower_Atlantic_Lv02: return 3_101_221
-        case .XRank_Revised_Pacific_Lv00: return 3_101_300
-        case .XRank_Revised_Atlantic_Lv00: return 3_101_301
-        case .XRank_Revised_Pacific_Lv01: return 3_101_310
-        case .XRank_Revised_Atlantic_Lv01: return 3_101_311
-        case .XRank_Revised_Pacific_Lv02: return 3_101_320
-        case .XRank_Revised_Atlantic_Lv02: return 3_101_321
-        case .XRank_Revised_Pacific_Lv03: return 3_101_330
-        case .XRank_Revised_Atlantic_Lv03: return 3_101_331
-        case .XRank_Revised_Pacific_Lv04: return 3_101_340
-        case .XRank_Revised_Atlantic_Lv04: return 3_101_341
-        case .XRank_Revised_Pacific_Lv05: return 3_101_350
-        case .XRank_Revised_Atlantic_Lv05: return 3_101_351
-        case .XRank_Revised_Pacific_Lv06: return 3_101_360
-        case .XRank_Revised_Atlantic_Lv06: return 3_101_361
-        case .XRank_Revised_Pacific_Lv07: return 3_101_370
-        case .XRank_Revised_Atlantic_Lv07: return 3_101_371
-        case .EventMatch_Lv00: return 3_101_500
-        case .EventMatch_Lv01: return 3_101_501
-        case .EventMatch_Lv02: return 3_101_502
-        case .CatalogueLevel_Lv00: return 3_102_000
-        case .CatalogueLevel_Lv01: return 3_102_001
+        case .WeaponLevelShooterShort00Lv00: return 1_000_000
+        case .WeaponLevelShooterShort00Lv01: return 1_000_001
+        case .WeaponLevelShooterShort01Lv00: return 1_000_010
+        case .WeaponLevelShooterShort01Lv01: return 1_000_011
+        case .WeaponLevelShooterFirst00Lv00: return 1_000_100
+        case .WeaponLevelShooterFirst00Lv01: return 1_000_101
+        case .WeaponLevelShooterFirst01Lv00: return 1_000_110
+        case .WeaponLevelShooterFirst01Lv01: return 1_000_111
+        case .WeaponLevelShooterPrecision00Lv00: return 1_000_200
+        case .WeaponLevelShooterPrecision00Lv01: return 1_000_201
+        case .WeaponLevelShooterPrecision01Lv00: return 1_000_210
+        case .WeaponLevelShooterPrecision01Lv01: return 1_000_211
+        case .WeaponLevelShooterBlaze00Lv00: return 1_000_300
+        case .WeaponLevelShooterBlaze00Lv01: return 1_000_301
+        case .WeaponLevelShooterBlaze01Lv00: return 1_000_310
+        case .WeaponLevelShooterBlaze01Lv01: return 1_000_311
+        case .WeaponLevelShooterNormal00Lv00: return 1_000_400
+        case .WeaponLevelShooterNormal00Lv01: return 1_000_401
+        case .WeaponLevelShooterNormal01Lv00: return 1_000_410
+        case .WeaponLevelShooterNormal01Lv01: return 1_000_411
+        case .WeaponLevelShooterNormalHLv00: return 1_000_450
+        case .WeaponLevelShooterNormalHLv01: return 1_000_451
+        case .WeaponLevelShooterNormalOctLv00: return 1_000_460
+        case .WeaponLevelShooterNormalOctLv01: return 1_000_461
+        case .WeaponLevelShooterNormalOLv00: return 1_000_470
+        case .WeaponLevelShooterNormalOLv01: return 1_000_471
+        case .WeaponLevelShooterGravity00Lv00: return 1_000_500
+        case .WeaponLevelShooterGravity00Lv01: return 1_000_501
+        case .WeaponLevelShooterGravity01Lv00: return 1_000_510
+        case .WeaponLevelShooterGravity01Lv01: return 1_000_511
+        case .WeaponLevelShooterQuickMiddle00Lv00: return 1_000_600
+        case .WeaponLevelShooterQuickMiddle00Lv01: return 1_000_601
+        case .WeaponLevelShooterQuickMiddle01Lv00: return 1_000_610
+        case .WeaponLevelShooterQuickMiddle01Lv01: return 1_000_611
+        case .WeaponLevelShooterExpert00Lv00: return 1_000_700
+        case .WeaponLevelShooterExpert00Lv01: return 1_000_701
+        case .WeaponLevelShooterExpert01Lv00: return 1_000_710
+        case .WeaponLevelShooterExpert01Lv01: return 1_000_711
+        case .WeaponLevelShooterHeavy00Lv00: return 1_000_800
+        case .WeaponLevelShooterHeavy00Lv01: return 1_000_801
+        case .WeaponLevelShooterHeavy01Lv00: return 1_000_810
+        case .WeaponLevelShooterHeavy01Lv01: return 1_000_811
+        case .WeaponLevelShooterLong00Lv00: return 1_000_900
+        case .WeaponLevelShooterLong00Lv01: return 1_000_901
+        case .WeaponLevelShooterLong01Lv00: return 1_000_910
+        case .WeaponLevelShooterLong01Lv01: return 1_000_911
+        case .WeaponLevelShooterQuickLong00Lv00: return 1_001_000
+        case .WeaponLevelShooterQuickLong00Lv01: return 1_001_001
+        case .WeaponLevelShooterQuickLong01Lv00: return 1_001_010
+        case .WeaponLevelShooterQuickLong01Lv01: return 1_001_011
+        case .WeaponLevelBlasterShort00Lv00: return 1_002_000
+        case .WeaponLevelBlasterShort00Lv01: return 1_002_001
+        case .WeaponLevelBlasterShort01Lv00: return 1_002_010
+        case .WeaponLevelBlasterShort01Lv01: return 1_002_011
+        case .WeaponLevelBlasterShortOLv00: return 1_002_050
+        case .WeaponLevelBlasterShortOLv01: return 1_002_051
+        case .WeaponLevelBlasterMiddle00Lv00: return 1_002_100
+        case .WeaponLevelBlasterMiddle00Lv01: return 1_002_101
+        case .WeaponLevelBlasterMiddle01Lv00: return 1_002_110
+        case .WeaponLevelBlasterMiddle01Lv01: return 1_002_111
+        case .WeaponLevelBlasterLong00Lv00: return 1_002_200
+        case .WeaponLevelBlasterLong00Lv01: return 1_002_201
+        case .WeaponLevelBlasterLong01Lv00: return 1_002_210
+        case .WeaponLevelBlasterLong01Lv01: return 1_002_211
+        case .WeaponLevelBlasterLightShort00Lv00: return 1_002_300
+        case .WeaponLevelBlasterLightShort00Lv01: return 1_002_301
+        case .WeaponLevelBlasterLightShort01Lv00: return 1_002_310
+        case .WeaponLevelBlasterLightShort01Lv01: return 1_002_311
+        case .WeaponLevelBlasterLight00Lv00: return 1_002_400
+        case .WeaponLevelBlasterLight00Lv01: return 1_002_401
+        case .WeaponLevelBlasterLight01Lv00: return 1_002_410
+        case .WeaponLevelBlasterLight01Lv01: return 1_002_411
+        case .WeaponLevelBlasterLightLong00Lv00: return 1_002_500
+        case .WeaponLevelBlasterLightLong00Lv01: return 1_002_501
+        case .WeaponLevelBlasterLightLong01Lv00: return 1_002_510
+        case .WeaponLevelBlasterLightLong01Lv01: return 1_002_511
+        case .WeaponLevelBlasterPrecision00Lv00: return 1_002_600
+        case .WeaponLevelBlasterPrecision00Lv01: return 1_002_601
+        case .WeaponLevelBlasterPrecision01Lv00: return 1_002_610
+        case .WeaponLevelBlasterPrecision01Lv01: return 1_002_611
+        case .WeaponLevelShooterTripleQuick00Lv00: return 1_003_000
+        case .WeaponLevelShooterTripleQuick00Lv01: return 1_003_001
+        case .WeaponLevelShooterTripleQuick01Lv00: return 1_003_010
+        case .WeaponLevelShooterTripleQuick01Lv01: return 1_003_011
+        case .WeaponLevelShooterTripleMiddle00Lv00: return 1_003_100
+        case .WeaponLevelShooterTripleMiddle00Lv01: return 1_003_101
+        case .WeaponLevelShooterTripleMiddle01Lv00: return 1_003_110
+        case .WeaponLevelShooterTripleMiddle01Lv01: return 1_003_111
+        case .WeaponLevelShooterFlash00Lv00: return 1_004_000
+        case .WeaponLevelShooterFlash00Lv01: return 1_004_001
+        case .WeaponLevelShooterFlash01Lv00: return 1_004_010
+        case .WeaponLevelShooterFlash01Lv01: return 1_004_011
+        case .WeaponLevelRollerCompact00Lv00: return 1_010_000
+        case .WeaponLevelRollerCompact00Lv01: return 1_010_001
+        case .WeaponLevelRollerCompact01Lv00: return 1_010_010
+        case .WeaponLevelRollerCompact01Lv01: return 1_010_011
+        case .WeaponLevelRollerNormal00Lv00: return 1_010_100
+        case .WeaponLevelRollerNormal00Lv01: return 1_010_101
+        case .WeaponLevelRollerNormal01Lv00: return 1_010_110
+        case .WeaponLevelRollerNormal01Lv01: return 1_010_111
+        case .WeaponLevelRollerNormalOLv00: return 1_010_150
+        case .WeaponLevelRollerNormalOLv01: return 1_010_151
+        case .WeaponLevelRollerHeavy00Lv00: return 1_010_200
+        case .WeaponLevelRollerHeavy00Lv01: return 1_010_201
+        case .WeaponLevelRollerHeavy01Lv00: return 1_010_210
+        case .WeaponLevelRollerHeavy01Lv01: return 1_010_211
+        case .WeaponLevelRollerHunter00Lv00: return 1_010_300
+        case .WeaponLevelRollerHunter00Lv01: return 1_010_301
+        case .WeaponLevelRollerHunter01Lv00: return 1_010_310
+        case .WeaponLevelRollerHunter01Lv01: return 1_010_311
+        case .WeaponLevelRollerWide00Lv00: return 1_010_400
+        case .WeaponLevelRollerWide00Lv01: return 1_010_401
+        case .WeaponLevelRollerWide01Lv00: return 1_010_410
+        case .WeaponLevelRollerWide01Lv01: return 1_010_411
+        case .WeaponLevelBrushMini00Lv00: return 1_011_000
+        case .WeaponLevelBrushMini00Lv01: return 1_011_001
+        case .WeaponLevelBrushMini01Lv00: return 1_011_010
+        case .WeaponLevelBrushMini01Lv01: return 1_011_011
+        case .WeaponLevelBrushNormal00Lv00: return 1_011_100
+        case .WeaponLevelBrushNormal00Lv01: return 1_011_101
+        case .WeaponLevelBrushNormal01Lv00: return 1_011_110
+        case .WeaponLevelBrushNormal01Lv01: return 1_011_111
+        case .WeaponLevelBrushNormalOLv00: return 1_011_150
+        case .WeaponLevelBrushNormalOLv01: return 1_011_151
+        case .WeaponLevelBrushHeavy00Lv00: return 1_011_200
+        case .WeaponLevelBrushHeavy00Lv01: return 1_011_201
+        case .WeaponLevelBrushHeavy01Lv00: return 1_011_210
+        case .WeaponLevelBrushHeavy01Lv01: return 1_011_211
+        case .WeaponLevelChargerQuick00Lv00: return 1_020_000
+        case .WeaponLevelChargerQuick00Lv01: return 1_020_001
+        case .WeaponLevelChargerQuick01Lv00: return 1_020_010
+        case .WeaponLevelChargerQuick01Lv01: return 1_020_011
+        case .WeaponLevelChargerNormal00Lv00: return 1_020_100
+        case .WeaponLevelChargerNormal00Lv01: return 1_020_101
+        case .WeaponLevelChargerNormal01Lv00: return 1_020_110
+        case .WeaponLevelChargerNormal01Lv01: return 1_020_111
+        case .WeaponLevelChargerNormalOLv00: return 1_020_150
+        case .WeaponLevelChargerNormalOLv01: return 1_020_151
+        case .WeaponLevelChargerNormalScope00Lv00: return 1_020_200
+        case .WeaponLevelChargerNormalScope00Lv01: return 1_020_201
+        case .WeaponLevelChargerNormalScope01Lv00: return 1_020_210
+        case .WeaponLevelChargerNormalScope01Lv01: return 1_020_211
+        case .WeaponLevelChargerLong00Lv00: return 1_020_300
+        case .WeaponLevelChargerLong00Lv01: return 1_020_301
+        case .WeaponLevelChargerLong01Lv00: return 1_020_310
+        case .WeaponLevelChargerLong01Lv01: return 1_020_311
+        case .WeaponLevelChargerLongScope00Lv00: return 1_020_400
+        case .WeaponLevelChargerLongScope00Lv01: return 1_020_401
+        case .WeaponLevelChargerLongScope01Lv00: return 1_020_410
+        case .WeaponLevelChargerLongScope01Lv01: return 1_020_411
+        case .WeaponLevelChargerLight00Lv00: return 1_020_500
+        case .WeaponLevelChargerLight00Lv01: return 1_020_501
+        case .WeaponLevelChargerLight01Lv00: return 1_020_510
+        case .WeaponLevelChargerLight01Lv01: return 1_020_511
+        case .WeaponLevelChargerKeeper00Lv00: return 1_020_600
+        case .WeaponLevelChargerKeeper00Lv01: return 1_020_601
+        case .WeaponLevelChargerKeeper01Lv00: return 1_020_610
+        case .WeaponLevelChargerKeeper01Lv01: return 1_020_611
+        case .WeaponLevelChargerPencil00Lv00: return 1_020_700
+        case .WeaponLevelChargerPencil00Lv01: return 1_020_701
+        case .WeaponLevelChargerPencil01Lv00: return 1_020_710
+        case .WeaponLevelChargerPencil01Lv01: return 1_020_711
+        case .WeaponLevelSlosherStrong00Lv00: return 1_030_000
+        case .WeaponLevelSlosherStrong00Lv01: return 1_030_001
+        case .WeaponLevelSlosherStrong01Lv00: return 1_030_010
+        case .WeaponLevelSlosherStrong01Lv01: return 1_030_011
+        case .WeaponLevelSlosherStrongOLv00: return 1_030_050
+        case .WeaponLevelSlosherStrongOLv01: return 1_030_051
+        case .WeaponLevelSlosherDiffusion00Lv00: return 1_030_100
+        case .WeaponLevelSlosherDiffusion00Lv01: return 1_030_101
+        case .WeaponLevelSlosherDiffusion01Lv00: return 1_030_110
+        case .WeaponLevelSlosherDiffusion01Lv01: return 1_030_111
+        case .WeaponLevelSlosherLauncher00Lv00: return 1_030_200
+        case .WeaponLevelSlosherLauncher00Lv01: return 1_030_201
+        case .WeaponLevelSlosherLauncher01Lv00: return 1_030_210
+        case .WeaponLevelSlosherLauncher01Lv01: return 1_030_211
+        case .WeaponLevelSlosherBathtub00Lv00: return 1_030_300
+        case .WeaponLevelSlosherBathtub00Lv01: return 1_030_301
+        case .WeaponLevelSlosherBathtub01Lv00: return 1_030_310
+        case .WeaponLevelSlosherBathtub01Lv01: return 1_030_311
+        case .WeaponLevelSlosherWashtub00Lv00: return 1_030_400
+        case .WeaponLevelSlosherWashtub00Lv01: return 1_030_401
+        case .WeaponLevelSlosherWashtub01Lv00: return 1_030_410
+        case .WeaponLevelSlosherWashtub01Lv01: return 1_030_411
+        case .WeaponLevelSlosherDouble00Lv00: return 1_030_500
+        case .WeaponLevelSlosherDouble00Lv01: return 1_030_501
+        case .WeaponLevelSlosherDouble01Lv00: return 1_030_510
+        case .WeaponLevelSlosherDouble01Lv01: return 1_030_511
+        case .WeaponLevelSpinnerQuick00Lv00: return 1_040_000
+        case .WeaponLevelSpinnerQuick00Lv01: return 1_040_001
+        case .WeaponLevelSpinnerQuick01Lv00: return 1_040_010
+        case .WeaponLevelSpinnerQuick01Lv01: return 1_040_011
+        case .WeaponLevelSpinnerStandard00Lv00: return 1_040_100
+        case .WeaponLevelSpinnerStandard00Lv01: return 1_040_101
+        case .WeaponLevelSpinnerStandard01Lv00: return 1_040_110
+        case .WeaponLevelSpinnerStandard01Lv01: return 1_040_111
+        case .WeaponLevelSpinnerStandardOLv00: return 1_040_150
+        case .WeaponLevelSpinnerStandardOLv01: return 1_040_151
+        case .WeaponLevelSpinnerHyper00Lv00: return 1_040_200
+        case .WeaponLevelSpinnerHyper00Lv01: return 1_040_201
+        case .WeaponLevelSpinnerHyper01Lv00: return 1_040_210
+        case .WeaponLevelSpinnerHyper01Lv01: return 1_040_211
+        case .WeaponLevelSpinnerDownpour00Lv00: return 1_040_300
+        case .WeaponLevelSpinnerDownpour00Lv01: return 1_040_301
+        case .WeaponLevelSpinnerDownpour01Lv00: return 1_040_310
+        case .WeaponLevelSpinnerDownpour01Lv01: return 1_040_311
+        case .WeaponLevelSpinnerSerein00Lv00: return 1_040_400
+        case .WeaponLevelSpinnerSerein00Lv01: return 1_040_401
+        case .WeaponLevelSpinnerSerein01Lv00: return 1_040_410
+        case .WeaponLevelSpinnerSerein01Lv01: return 1_040_411
+        case .WeaponLevelSpinnerHyperShort00Lv00: return 1_040_500
+        case .WeaponLevelSpinnerHyperShort00Lv01: return 1_040_501
+        case .WeaponLevelSpinnerHyperShort01Lv00: return 1_040_510
+        case .WeaponLevelSpinnerHyperShort01Lv01: return 1_040_511
+        case .WeaponLevelManeuverShort00Lv00: return 1_050_000
+        case .WeaponLevelManeuverShort00Lv01: return 1_050_001
+        case .WeaponLevelManeuverShort01Lv00: return 1_050_010
+        case .WeaponLevelManeuverShort01Lv01: return 1_050_011
+        case .WeaponLevelManeuverNormal00Lv00: return 1_050_100
+        case .WeaponLevelManeuverNormal00Lv01: return 1_050_101
+        case .WeaponLevelManeuverNormal01Lv00: return 1_050_110
+        case .WeaponLevelManeuverNormal01Lv01: return 1_050_111
+        case .WeaponLevelManeuverNormalOLv00: return 1_050_150
+        case .WeaponLevelManeuverNormalOLv01: return 1_050_151
+        case .WeaponLevelManeuverGallon00Lv00: return 1_050_200
+        case .WeaponLevelManeuverGallon00Lv01: return 1_050_201
+        case .WeaponLevelManeuverGallon01Lv00: return 1_050_210
+        case .WeaponLevelManeuverGallon01Lv01: return 1_050_211
+        case .WeaponLevelManeuverDual00Lv00: return 1_050_300
+        case .WeaponLevelManeuverDual00Lv01: return 1_050_301
+        case .WeaponLevelManeuverDual01Lv00: return 1_050_310
+        case .WeaponLevelManeuverDual01Lv01: return 1_050_311
+        case .WeaponLevelManeuverStepper00Lv00: return 1_050_400
+        case .WeaponLevelManeuverStepper00Lv01: return 1_050_401
+        case .WeaponLevelManeuverStepper01Lv00: return 1_050_410
+        case .WeaponLevelManeuverStepper01Lv01: return 1_050_411
+        case .WeaponLevelManeuverLong00Lv00: return 1_050_500
+        case .WeaponLevelManeuverLong00Lv01: return 1_050_501
+        case .WeaponLevelManeuverLong01Lv00: return 1_050_510
+        case .WeaponLevelManeuverLong01Lv01: return 1_050_511
+        case .WeaponLevelShelterNormal00Lv00: return 1_060_000
+        case .WeaponLevelShelterNormal00Lv01: return 1_060_001
+        case .WeaponLevelShelterNormal01Lv00: return 1_060_010
+        case .WeaponLevelShelterNormal01Lv01: return 1_060_011
+        case .WeaponLevelShelterNormalOLv00: return 1_060_050
+        case .WeaponLevelShelterNormalOLv01: return 1_060_051
+        case .WeaponLevelShelterWide00Lv00: return 1_060_100
+        case .WeaponLevelShelterWide00Lv01: return 1_060_101
+        case .WeaponLevelShelterWide01Lv00: return 1_060_110
+        case .WeaponLevelShelterWide01Lv01: return 1_060_111
+        case .WeaponLevelShelterCompact00Lv00: return 1_060_200
+        case .WeaponLevelShelterCompact00Lv01: return 1_060_201
+        case .WeaponLevelShelterCompact01Lv00: return 1_060_210
+        case .WeaponLevelShelterCompact01Lv01: return 1_060_211
+        case .WeaponLevelShelterFocus00Lv00: return 1_060_300
+        case .WeaponLevelShelterFocus00Lv01: return 1_060_301
+        case .WeaponLevelShelterFocus01Lv00: return 1_060_310
+        case .WeaponLevelShelterFocus01Lv01: return 1_060_311
+        case .WeaponLevelStringerNormal00Lv00: return 1_070_100
+        case .WeaponLevelStringerNormal00Lv01: return 1_070_101
+        case .WeaponLevelStringerNormal01Lv00: return 1_070_110
+        case .WeaponLevelStringerNormal01Lv01: return 1_070_111
+        case .WeaponLevelStringerNormalOLv00: return 1_070_150
+        case .WeaponLevelStringerNormalOLv01: return 1_070_151
+        case .WeaponLevelStringerShort00Lv00: return 1_070_200
+        case .WeaponLevelStringerShort00Lv01: return 1_070_201
+        case .WeaponLevelStringerShort01Lv00: return 1_070_210
+        case .WeaponLevelStringerShort01Lv01: return 1_070_211
+        case .WeaponLevelStringerExplosion00Lv00: return 1_070_300
+        case .WeaponLevelStringerExplosion00Lv01: return 1_070_301
+        case .WeaponLevelStringerExplosion01Lv00: return 1_070_310
+        case .WeaponLevelStringerExplosion01Lv01: return 1_070_311
+        case .WeaponLevelSaberNormal00Lv00: return 1_080_000
+        case .WeaponLevelSaberNormal00Lv01: return 1_080_001
+        case .WeaponLevelSaberNormal01Lv00: return 1_080_010
+        case .WeaponLevelSaberNormal01Lv01: return 1_080_011
+        case .WeaponLevelSaberNormalOLv00: return 1_080_050
+        case .WeaponLevelSaberNormalOLv01: return 1_080_051
+        case .WeaponLevelSaberLite00Lv00: return 1_080_100
+        case .WeaponLevelSaberLite00Lv01: return 1_080_101
+        case .WeaponLevelSaberLite01Lv00: return 1_080_110
+        case .WeaponLevelSaberLite01Lv01: return 1_080_111
+        case .WeaponLevelSaberHeavy00Lv00: return 1_080_200
+        case .WeaponLevelSaberHeavy00Lv01: return 1_080_201
+        case .WeaponLevelSaberHeavy01Lv00: return 1_080_210
+        case .WeaponLevelSaberHeavy01Lv01: return 1_080_211
+        case .WinCountWeaponSpSpUltraShotLv00: return 2_000_010
+        case .WinCountWeaponSpSpUltraShotLv01: return 2_000_011
+        case .WinCountWeaponSpSpUltraShotLv02: return 2_000_012
+        case .WinCountWeaponSpSpGreatBarrierLv00: return 2_000_020
+        case .WinCountWeaponSpSpGreatBarrierLv01: return 2_000_021
+        case .WinCountWeaponSpSpGreatBarrierLv02: return 2_000_022
+        case .WinCountWeaponSpSpSuperHookLv00: return 2_000_030
+        case .WinCountWeaponSpSpSuperHookLv01: return 2_000_031
+        case .WinCountWeaponSpSpSuperHookLv02: return 2_000_032
+        case .WinCountWeaponSpSpMultiMissileLv00: return 2_000_040
+        case .WinCountWeaponSpSpMultiMissileLv01: return 2_000_041
+        case .WinCountWeaponSpSpMultiMissileLv02: return 2_000_042
+        case .WinCountWeaponSpSpInkStormLv00: return 2_000_050
+        case .WinCountWeaponSpSpInkStormLv01: return 2_000_051
+        case .WinCountWeaponSpSpInkStormLv02: return 2_000_052
+        case .WinCountWeaponSpSpNiceBallLv00: return 2_000_060
+        case .WinCountWeaponSpSpNiceBallLv01: return 2_000_061
+        case .WinCountWeaponSpSpNiceBallLv02: return 2_000_062
+        case .WinCountWeaponSpSpShockSonarLv00: return 2_000_070
+        case .WinCountWeaponSpSpShockSonarLv01: return 2_000_071
+        case .WinCountWeaponSpSpShockSonarLv02: return 2_000_072
+        case .WinCountWeaponSpSpBlowerLv00: return 2_000_080
+        case .WinCountWeaponSpSpBlowerLv01: return 2_000_081
+        case .WinCountWeaponSpSpBlowerLv02: return 2_000_082
+        case .WinCountWeaponSpSpMicroLaserLv00: return 2_000_090
+        case .WinCountWeaponSpSpMicroLaserLv01: return 2_000_091
+        case .WinCountWeaponSpSpMicroLaserLv02: return 2_000_092
+        case .WinCountWeaponSpSpJetpackLv00: return 2_000_100
+        case .WinCountWeaponSpSpJetpackLv01: return 2_000_101
+        case .WinCountWeaponSpSpJetpackLv02: return 2_000_102
+        case .WinCountWeaponSpSpUltraStampLv00: return 2_000_110
+        case .WinCountWeaponSpSpUltraStampLv01: return 2_000_111
+        case .WinCountWeaponSpSpUltraStampLv02: return 2_000_112
+        case .WinCountWeaponSpSpChariotLv00: return 2_000_120
+        case .WinCountWeaponSpSpChariotLv01: return 2_000_121
+        case .WinCountWeaponSpSpChariotLv02: return 2_000_122
+        case .WinCountWeaponSpSpSkewerLv00: return 2_000_130
+        case .WinCountWeaponSpSpSkewerLv01: return 2_000_131
+        case .WinCountWeaponSpSpSkewerLv02: return 2_000_132
+        case .WinCountWeaponSpSpTripleTornadoLv00: return 2_000_140
+        case .WinCountWeaponSpSpTripleTornadoLv01: return 2_000_141
+        case .WinCountWeaponSpSpTripleTornadoLv02: return 2_000_142
+        case .WinCountWeaponSpSpEnergyStandLv00: return 2_000_150
+        case .WinCountWeaponSpSpEnergyStandLv01: return 2_000_151
+        case .WinCountWeaponSpSpEnergyStandLv02: return 2_000_152
+        case .WinCountWeaponSpSpFireworkLv00: return 2_000_160
+        case .WinCountWeaponSpSpFireworkLv01: return 2_000_161
+        case .WinCountWeaponSpSpFireworkLv02: return 2_000_162
+        case .WinCountWeaponSpSpCastleLv00: return 2_000_170
+        case .WinCountWeaponSpSpCastleLv01: return 2_000_171
+        case .WinCountWeaponSpSpCastleLv02: return 2_000_172
+        case .WinCountWeaponSpSpPogoLv00: return 2_000_180
+        case .WinCountWeaponSpSpPogoLv01: return 2_000_181
+        case .WinCountWeaponSpSpPogoLv02: return 2_000_182
+        case .WinCountWeaponSpSpChimneyLv00: return 2_000_190
+        case .WinCountWeaponSpSpChimneyLv01: return 2_000_191
+        case .WinCountWeaponSpSpChimneyLv02: return 2_000_192
+        case .WinCountPntLv00: return 3_000_000
+        case .WinCountPntLv01: return 3_000_001
+        case .WinCountPntLv02: return 3_000_002
+        case .WinCountVarLv00: return 3_000_100
+        case .WinCountVarLv01: return 3_000_101
+        case .WinCountVlfLv00: return 3_000_200
+        case .WinCountVlfLv01: return 3_000_201
+        case .WinCountVglLv00: return 3_000_300
+        case .WinCountVglLv01: return 3_000_301
+        case .WinCountVclLv00: return 3_000_400
+        case .WinCountVclLv01: return 3_000_401
+        case .WinCountTclAtkLv00: return 3_001_000
+        case .WinCountTclAtkLv01: return 3_001_001
+        case .WinCountTclDefLv00: return 3_002_000
+        case .WinCountTclDefLv01: return 3_002_001
+        case .Fest10XBattleJoinLv00: return 3_003_000
+        case .Fest10XBattleJoinLv01: return 3_003_001
+        case .Fest10XBattleJoinLv02: return 3_003_002
+        case .Fest10XBattleWinLv00: return 3_003_100
+        case .Fest10XBattleWinLv01: return 3_003_101
+        case .Fest10XBattleWinLv02: return 3_003_102
+        case .UdemaeLv00: return 3_100_000
+        case .UdemaeLv01: return 3_100_001
+        case .UdemaeLv02: return 3_100_002
+        case .ChallengeWinStreakLv00: return 3_100_200
+        case .ChallengeWinStreakLv01: return 3_100_201
+        case .ChallengeWinStreakLv02: return 3_100_202
+        case .XrankLv00: return 3_101_000
+        case .XrankLv01: return 3_101_001
+        case .XrankLv02: return 3_101_002
+        case .XpowerPacificLv00: return 3_101_100
+        case .XpowerAtlanticLv00: return 3_101_101
+        case .WinCountHighXpowerPacificLv00: return 3_101_200
+        case .WinCountHighXpowerAtlanticLv00: return 3_101_201
+        case .WinCountHighXpowerPacificLv01: return 3_101_210
+        case .WinCountHighXpowerAtlanticLv01: return 3_101_211
+        case .WinCountHighXpowerPacificLv02: return 3_101_220
+        case .WinCountHighXpowerAtlanticLv02: return 3_101_221
+        case .XrankRevisedPacificLv00: return 3_101_300
+        case .XrankRevisedAtlanticLv00: return 3_101_301
+        case .XrankRevisedPacificLv01: return 3_101_310
+        case .XrankRevisedAtlanticLv01: return 3_101_311
+        case .XrankRevisedPacificLv02: return 3_101_320
+        case .XrankRevisedAtlanticLv02: return 3_101_321
+        case .XrankRevisedPacificLv03: return 3_101_330
+        case .XrankRevisedAtlanticLv03: return 3_101_331
+        case .XrankRevisedPacificLv04: return 3_101_340
+        case .XrankRevisedAtlanticLv04: return 3_101_341
+        case .XrankRevisedPacificLv05: return 3_101_350
+        case .XrankRevisedAtlanticLv05: return 3_101_351
+        case .XrankRevisedPacificLv06: return 3_101_360
+        case .XrankRevisedAtlanticLv06: return 3_101_361
+        case .XrankRevisedPacificLv07: return 3_101_370
+        case .XrankRevisedAtlanticLv07: return 3_101_371
+        case .EventMatchLv00: return 3_101_500
+        case .EventMatchLv01: return 3_101_501
+        case .EventMatchLv02: return 3_101_502
+        case .CatalogueLevelLv00: return 3_102_000
+        case .CatalogueLevelLv01: return 3_102_001
         case .FestRankMax: return 3_103_001
-        case .GearTotalRarity_B00_Lv00: return 4_000_000
-        case .GearTotalRarity_B00_Lv01: return 4_000_001
-        case .GearTotalRarity_B01_Lv00: return 4_000_010
-        case .GearTotalRarity_B01_Lv01: return 4_000_011
-        case .GearTotalRarity_B02_Lv00: return 4_000_020
-        case .GearTotalRarity_B02_Lv01: return 4_000_021
-        case .GearTotalRarity_B03_Lv00: return 4_000_030
-        case .GearTotalRarity_B03_Lv01: return 4_000_031
-        case .GearTotalRarity_B04_Lv00: return 4_000_040
-        case .GearTotalRarity_B04_Lv01: return 4_000_041
-        case .GearTotalRarity_B05_Lv00: return 4_000_050
-        case .GearTotalRarity_B05_Lv01: return 4_000_051
-        case .GearTotalRarity_B06_Lv00: return 4_000_060
-        case .GearTotalRarity_B06_Lv01: return 4_000_061
-        case .GearTotalRarity_B07_Lv00: return 4_000_070
-        case .GearTotalRarity_B07_Lv01: return 4_000_071
-        case .GearTotalRarity_B08_Lv00: return 4_000_080
-        case .GearTotalRarity_B08_Lv01: return 4_000_081
-        case .GearTotalRarity_B09_Lv00: return 4_000_090
-        case .GearTotalRarity_B09_Lv01: return 4_000_091
-        case .GearTotalRarity_B10_Lv00: return 4_000_100
-        case .GearTotalRarity_B10_Lv01: return 4_000_101
-        case .GearTotalRarity_B11_Lv00: return 4_000_110
-        case .GearTotalRarity_B11_Lv01: return 4_000_111
-        case .GearTotalRarity_B15_Lv00: return 4_000_150
-        case .GearTotalRarity_B15_Lv01: return 4_000_151
-        case .GearTotalRarity_B16_Lv00: return 4_000_160
-        case .GearTotalRarity_B16_Lv01: return 4_000_161
-        case .GearTotalRarity_B17_Lv00: return 4_000_170
-        case .GearTotalRarity_B17_Lv01: return 4_000_171
-        case .GearTotalRarity_B18_Lv00: return 4_000_180
-        case .GearTotalRarity_B18_Lv01: return 4_000_181
-        case .GearTotalRarity_B19_Lv00: return 4_000_190
-        case .GearTotalRarity_B19_Lv01: return 4_000_191
-        case .GearTotalRarity_B20_Lv00: return 4_000_200
-        case .GearTotalRarity_B20_Lv01: return 4_000_201
-        case .SpendShop_Head_Lv00: return 4_100_000
-        case .SpendShop_Head_Lv01: return 4_100_001
-        case .SpendShop_Head_Fsodr_Lv00: return 4_100_010
-        case .SpendShop_Head_Fsodr_Lv01: return 4_100_011
-        case .SpendShop_Head_Sdodr_Lv00: return 4_100_020
-        case .SpendShop_Head_Sdodr_Lv01: return 4_100_021
-        case .SpendShop_Clothes_Lv00: return 4_100_100
-        case .SpendShop_Clothes_Lv01: return 4_100_101
-        case .SpendShop_Clothes_Fsodr_Lv00: return 4_100_110
-        case .SpendShop_Clothes_Fsodr_Lv01: return 4_100_111
-        case .SpendShop_Clothes_Sdodr_Lv00: return 4_100_120
-        case .SpendShop_Clothes_Sdodr_Lv01: return 4_100_121
-        case .SpendShop_Shoes_Lv00: return 4_100_200
-        case .SpendShop_Shoes_Lv01: return 4_100_201
-        case .SpendShop_Shoes_Fsodr_Lv00: return 4_100_210
-        case .SpendShop_Shoes_Fsodr_Lv01: return 4_100_211
-        case .SpendShop_Shoes_Sdodr_Lv00: return 4_100_220
-        case .SpendShop_Shoes_Sdodr_Lv01: return 4_100_221
-        case .SpendShop_Goods_Lv00: return 4_100_300
-        case .SpendShop_Goods_Lv01: return 4_100_301
-        case .OrderVendor_Lv00: return 4_100_400
-        case .OrderVendor_Lv01: return 4_100_401
-        case .OrderVendor_Fsodr_Lv00: return 4_100_410
-        case .OrderVendor_Fsodr_Lv01: return 4_100_411
-        case .OrderFood_Lv00: return 4_100_500
-        case .OrderFood_Lv01: return 4_100_501
-        case .OrderFood_Lv02: return 4_100_502
-        case .SpendLottery_Lv00: return 4_100_600
-        case .SpendLottery_Lv01: return 4_100_601
-        case .SpendLottery_Lv02: return 4_100_602
-        case .LimitedRewardLottery_Lv00: return 4_100_700
-        case .LimitedRewardLottery_Lv01: return 4_100_701
-        case .LimitedRewardLottery_Lv02: return 4_100_702
-        case .PlayerRank_Lv00: return 4_100_800
-        case .PlayerRank_Lv01: return 4_100_801
-        case .PlayerRank_Lv02: return 4_100_802
-        case .PlayerRank_Lv03: return 4_100_803
-        case .PlayerRank_Lv04: return 4_100_804
-        case .PlayerRank_Lv05: return 4_100_805
-        case .PlayerRank_Lv06: return 4_100_806
-        case .PlayerRank_Lv07: return 4_100_807
-        case .PlayerRank_Lv08: return 4_100_808
-        case .PlayerRank_Lv09: return 4_100_809
-        case .PlayerRank_Lv10: return 4_100_810
-        case .PlayerRank_Lv11: return 4_100_811
-        case .CoopGrade_Normal_Shakeup_Lv00: return 5_000_010
-        case .CoopGrade_Normal_Shakeup_Lv01: return 5_000_011
-        case .CoopGrade_Normal_Shakeup_Lv02: return 5_000_012
-        case .CoopGrade_Normal_Shakeup_Lv03: return 5_000_013
-        case .CoopGrade_Normal_Shakespiral_Lv00: return 5_000_020
-        case .CoopGrade_Normal_Shakespiral_Lv01: return 5_000_021
-        case .CoopGrade_Normal_Shakespiral_Lv02: return 5_000_022
-        case .CoopGrade_Normal_Shakespiral_Lv03: return 5_000_023
-        case .CoopGrade_Normal_Shakelift_Lv00: return 5_000_040
-        case .CoopGrade_Normal_Shakelift_Lv01: return 5_000_041
-        case .CoopGrade_Normal_Shakelift_Lv02: return 5_000_042
-        case .CoopGrade_Normal_Shakelift_Lv03: return 5_000_043
-        case .CoopGrade_Normal_Shakeship_Lv00: return 5_000_060
-        case .CoopGrade_Normal_Shakeship_Lv01: return 5_000_061
-        case .CoopGrade_Normal_Shakeship_Lv02: return 5_000_062
-        case .CoopGrade_Normal_Shakeship_Lv03: return 5_000_063
-        case .CoopGrade_Normal_Shakedent_Lv00: return 5_000_070
-        case .CoopGrade_Normal_Shakedent_Lv01: return 5_000_071
-        case .CoopGrade_Normal_Shakedent_Lv02: return 5_000_072
-        case .CoopGrade_Normal_Shakedent_Lv03: return 5_000_073
-        case .CoopGrade_Normal_Shakehighway_Lv00: return 5_000_080
-        case .CoopGrade_Normal_Shakehighway_Lv01: return 5_000_081
-        case .CoopGrade_Normal_Shakehighway_Lv02: return 5_000_082
-        case .CoopGrade_Normal_Shakehighway_Lv03: return 5_000_083
-        case .CoopGrade_Normal_Shakerail_Lv00: return 5_000_090
-        case .CoopGrade_Normal_Shakerail_Lv01: return 5_000_091
-        case .CoopGrade_Normal_Shakerail_Lv02: return 5_000_092
-        case .CoopGrade_Normal_Shakerail_Lv03: return 5_000_093
-        case .TotalKumaPoint_Lv00: return 5_100_000
-        case .TotalKumaPoint_Lv01: return 5_100_001
-        case .TotalKumaPoint_Lv02: return 5_100_002
+        case .GearTotalRarityB00Lv00: return 4_000_000
+        case .GearTotalRarityB00Lv01: return 4_000_001
+        case .GearTotalRarityB01Lv00: return 4_000_010
+        case .GearTotalRarityB01Lv01: return 4_000_011
+        case .GearTotalRarityB02Lv00: return 4_000_020
+        case .GearTotalRarityB02Lv01: return 4_000_021
+        case .GearTotalRarityB03Lv00: return 4_000_030
+        case .GearTotalRarityB03Lv01: return 4_000_031
+        case .GearTotalRarityB04Lv00: return 4_000_040
+        case .GearTotalRarityB04Lv01: return 4_000_041
+        case .GearTotalRarityB05Lv00: return 4_000_050
+        case .GearTotalRarityB05Lv01: return 4_000_051
+        case .GearTotalRarityB06Lv00: return 4_000_060
+        case .GearTotalRarityB06Lv01: return 4_000_061
+        case .GearTotalRarityB07Lv00: return 4_000_070
+        case .GearTotalRarityB07Lv01: return 4_000_071
+        case .GearTotalRarityB08Lv00: return 4_000_080
+        case .GearTotalRarityB08Lv01: return 4_000_081
+        case .GearTotalRarityB09Lv00: return 4_000_090
+        case .GearTotalRarityB09Lv01: return 4_000_091
+        case .GearTotalRarityB10Lv00: return 4_000_100
+        case .GearTotalRarityB10Lv01: return 4_000_101
+        case .GearTotalRarityB11Lv00: return 4_000_110
+        case .GearTotalRarityB11Lv01: return 4_000_111
+        case .GearTotalRarityB15Lv00: return 4_000_150
+        case .GearTotalRarityB15Lv01: return 4_000_151
+        case .GearTotalRarityB16Lv00: return 4_000_160
+        case .GearTotalRarityB16Lv01: return 4_000_161
+        case .GearTotalRarityB17Lv00: return 4_000_170
+        case .GearTotalRarityB17Lv01: return 4_000_171
+        case .GearTotalRarityB18Lv00: return 4_000_180
+        case .GearTotalRarityB18Lv01: return 4_000_181
+        case .GearTotalRarityB19Lv00: return 4_000_190
+        case .GearTotalRarityB19Lv01: return 4_000_191
+        case .GearTotalRarityB20Lv00: return 4_000_200
+        case .GearTotalRarityB20Lv01: return 4_000_201
+        case .SpendShopHeadLv00: return 4_100_000
+        case .SpendShopHeadLv01: return 4_100_001
+        case .SpendShopHeadFsodrLv00: return 4_100_010
+        case .SpendShopHeadFsodrLv01: return 4_100_011
+        case .SpendShopHeadSdodrLv00: return 4_100_020
+        case .SpendShopHeadSdodrLv01: return 4_100_021
+        case .SpendShopClothesLv00: return 4_100_100
+        case .SpendShopClothesLv01: return 4_100_101
+        case .SpendShopClothesFsodrLv00: return 4_100_110
+        case .SpendShopClothesFsodrLv01: return 4_100_111
+        case .SpendShopClothesSdodrLv00: return 4_100_120
+        case .SpendShopClothesSdodrLv01: return 4_100_121
+        case .SpendShopShoesLv00: return 4_100_200
+        case .SpendShopShoesLv01: return 4_100_201
+        case .SpendShopShoesFsodrLv00: return 4_100_210
+        case .SpendShopShoesFsodrLv01: return 4_100_211
+        case .SpendShopShoesSdodrLv00: return 4_100_220
+        case .SpendShopShoesSdodrLv01: return 4_100_221
+        case .SpendShopGoodsLv00: return 4_100_300
+        case .SpendShopGoodsLv01: return 4_100_301
+        case .OrderVendorLv00: return 4_100_400
+        case .OrderVendorLv01: return 4_100_401
+        case .OrderVendorFsodrLv00: return 4_100_410
+        case .OrderVendorFsodrLv01: return 4_100_411
+        case .OrderFoodLv00: return 4_100_500
+        case .OrderFoodLv01: return 4_100_501
+        case .OrderFoodLv02: return 4_100_502
+        case .SpendLotteryLv00: return 4_100_600
+        case .SpendLotteryLv01: return 4_100_601
+        case .SpendLotteryLv02: return 4_100_602
+        case .LimitedRewardLotteryLv00: return 4_100_700
+        case .LimitedRewardLotteryLv01: return 4_100_701
+        case .LimitedRewardLotteryLv02: return 4_100_702
+        case .PlayerRankLv00: return 4_100_800
+        case .PlayerRankLv01: return 4_100_801
+        case .PlayerRankLv02: return 4_100_802
+        case .PlayerRankLv03: return 4_100_803
+        case .PlayerRankLv04: return 4_100_804
+        case .PlayerRankLv05: return 4_100_805
+        case .PlayerRankLv06: return 4_100_806
+        case .PlayerRankLv07: return 4_100_807
+        case .PlayerRankLv08: return 4_100_808
+        case .PlayerRankLv09: return 4_100_809
+        case .PlayerRankLv10: return 4_100_810
+        case .PlayerRankLv11: return 4_100_811
+        case .CoopGradeNormalShakeupLv00: return 5_000_010
+        case .CoopGradeNormalShakeupLv01: return 5_000_011
+        case .CoopGradeNormalShakeupLv02: return 5_000_012
+        case .CoopGradeNormalShakeupLv03: return 5_000_013
+        case .CoopGradeNormalShakespiralLv00: return 5_000_020
+        case .CoopGradeNormalShakespiralLv01: return 5_000_021
+        case .CoopGradeNormalShakespiralLv02: return 5_000_022
+        case .CoopGradeNormalShakespiralLv03: return 5_000_023
+        case .CoopGradeNormalShakeliftLv00: return 5_000_040
+        case .CoopGradeNormalShakeliftLv01: return 5_000_041
+        case .CoopGradeNormalShakeliftLv02: return 5_000_042
+        case .CoopGradeNormalShakeliftLv03: return 5_000_043
+        case .CoopGradeNormalShakeshipLv00: return 5_000_060
+        case .CoopGradeNormalShakeshipLv01: return 5_000_061
+        case .CoopGradeNormalShakeshipLv02: return 5_000_062
+        case .CoopGradeNormalShakeshipLv03: return 5_000_063
+        case .CoopGradeNormalShakedentLv00: return 5_000_070
+        case .CoopGradeNormalShakedentLv01: return 5_000_071
+        case .CoopGradeNormalShakedentLv02: return 5_000_072
+        case .CoopGradeNormalShakedentLv03: return 5_000_073
+        case .CoopGradeNormalShakehighwayLv00: return 5_000_080
+        case .CoopGradeNormalShakehighwayLv01: return 5_000_081
+        case .CoopGradeNormalShakehighwayLv02: return 5_000_082
+        case .CoopGradeNormalShakehighwayLv03: return 5_000_083
+        case .CoopGradeNormalShakerailLv00: return 5_000_090
+        case .CoopGradeNormalShakerailLv01: return 5_000_091
+        case .CoopGradeNormalShakerailLv02: return 5_000_092
+        case .CoopGradeNormalShakerailLv03: return 5_000_093
+        case .TotalKumaPointLv00: return 5_100_000
+        case .TotalKumaPointLv01: return 5_100_001
+        case .TotalKumaPointLv02: return 5_100_002
         case .CoopClearDangerRateMax: return 5_110_000
-        case .CoopRareEnemyKillNum_SakelienBomber_Lv00: return 5_200_000
-        case .CoopRareEnemyKillNum_SakelienBomber_Lv01: return 5_200_001
-        case .CoopRareEnemyKillNum_SakelienBomber_Lv02: return 5_200_002
-        case .CoopRareEnemyKillNum_SakelienSnake_Lv00: return 5_200_010
-        case .CoopRareEnemyKillNum_SakelienSnake_Lv01: return 5_200_011
-        case .CoopRareEnemyKillNum_SakelienSnake_Lv02: return 5_200_012
-        case .CoopRareEnemyKillNum_SakelienShield_Lv00: return 5_200_020
-        case .CoopRareEnemyKillNum_SakelienShield_Lv01: return 5_200_021
-        case .CoopRareEnemyKillNum_SakelienShield_Lv02: return 5_200_022
-        case .CoopRareEnemyKillNum_SakelienTower_Lv00: return 5_200_030
-        case .CoopRareEnemyKillNum_SakelienTower_Lv01: return 5_200_031
-        case .CoopRareEnemyKillNum_SakelienTower_Lv02: return 5_200_032
-        case .CoopRareEnemyKillNum_Sakediver_Lv00: return 5_200_040
-        case .CoopRareEnemyKillNum_Sakediver_Lv01: return 5_200_041
-        case .CoopRareEnemyKillNum_Sakediver_Lv02: return 5_200_042
-        case .CoopRareEnemyKillNum_Sakerocket_Lv00: return 5_200_050
-        case .CoopRareEnemyKillNum_Sakerocket_Lv01: return 5_200_051
-        case .CoopRareEnemyKillNum_Sakerocket_Lv02: return 5_200_052
-        case .CoopRareEnemyKillNum_SakelienCupTwins_Lv00: return 5_200_060
-        case .CoopRareEnemyKillNum_SakelienCupTwins_Lv01: return 5_200_061
-        case .CoopRareEnemyKillNum_SakelienCupTwins_Lv02: return 5_200_062
-        case .CoopRareEnemyKillNum_SakePillar_Lv00: return 5_200_070
-        case .CoopRareEnemyKillNum_SakePillar_Lv01: return 5_200_071
-        case .CoopRareEnemyKillNum_SakePillar_Lv02: return 5_200_072
-        case .CoopRareEnemyKillNum_SakeDolphin_Lv00: return 5_200_080
-        case .CoopRareEnemyKillNum_SakeDolphin_Lv01: return 5_200_081
-        case .CoopRareEnemyKillNum_SakeDolphin_Lv02: return 5_200_082
-        case .CoopRareEnemyKillNum_SakeSaucer_Lv00: return 5_200_090
-        case .CoopRareEnemyKillNum_SakeSaucer_Lv01: return 5_200_091
-        case .CoopRareEnemyKillNum_SakeSaucer_Lv02: return 5_200_092
-        case .CoopRareEnemyKillNum_SakeArtillery_Lv00: return 5_200_100
-        case .CoopRareEnemyKillNum_SakeArtillery_Lv01: return 5_200_101
-        case .CoopRareEnemyKillNum_SakeArtillery_Lv02: return 5_200_102
-        case .CoopBossKillNum_SakelienGiant_Lv00: return 5_210_000
-        case .CoopBossKillNum_SakelienGiant_Lv01: return 5_210_001
-        case .CoopBossKillNum_SakelienGiant_Lv02: return 5_210_002
-        case .CoopBossKillNum_SakeRope_Lv00: return 5_210_100
-        case .CoopBossKillNum_SakeRope_Lv01: return 5_210_101
-        case .CoopBossKillNum_SakeRope_Lv02: return 5_210_102
-        case .CoopBossKillNum_SakeJaw_Lv00: return 5_210_200
-        case .CoopBossKillNum_SakeJaw_Lv01: return 5_210_201
-        case .CoopBossKillNum_SakeJaw_Lv02: return 5_210_202
-        case .CoopKillTripleBoss_Lv00: return 5_211_000
-        case .CoopBigRunTrophy_Lv00: return 5_220_000
-        case .CoopBigRunTrophy_Lv01: return 5_220_001
-        case .CoopBigRunTrophy_Lv02: return 5_220_002
-        case .CoopContestTrophy_Lv00: return 5_230_000
-        case .CoopContestTrophy_Lv01: return 5_230_001
-        case .CoopContestTrophy_Lv02: return 5_230_002
-        case .Mission_Lv00: return 6_000_000
-        case .Mission_Lv01: return 6_000_001
-        case .Mission_Lv02: return 6_000_002
-        case .Mission_Lv03: return 6_000_003
-        case .Mission_Lv04: return 6_000_004
-        case .Achievement_Sdodr_Lv00: return 6_000_100
-        case .Achievement_Sdodr_Lv01: return 6_000_101
-        case .Achievement_Sdodr_Lv02: return 6_000_102
-        case .Achievement_Sdodr_Lv03: return 6_000_103
-        case .Achievement_Sdodr_Lv04: return 6_000_104
-        case .Achievement_Sdodr_Lv05: return 6_000_105
-        case .TipColorComplete_Sdodr_Fire_A: return 6_100_200
-        case .TipColorComplete_Sdodr_Fire_B: return 6_100_201
-        case .TipColorComplete_Sdodr_Fire_C: return 6_100_202
-        case .TipColorComplete_Sdodr_Continuity_A: return 6_100_210
-        case .TipColorComplete_Sdodr_Continuity_B: return 6_100_211
-        case .TipColorComplete_Sdodr_Continuity_C: return 6_100_212
-        case .TipColorComplete_Sdodr_Range_A: return 6_100_220
-        case .TipColorComplete_Sdodr_Range_B: return 6_100_221
-        case .TipColorComplete_Sdodr_Range_C: return 6_100_222
-        case .TipColorComplete_Sdodr_Move_A: return 6_100_230
-        case .TipColorComplete_Sdodr_Move_B: return 6_100_231
-        case .TipColorComplete_Sdodr_Move_C: return 6_100_232
-        case .TipColorComplete_Sdodr_Luck_A: return 6_100_240
-        case .TipColorComplete_Sdodr_Luck_B: return 6_100_241
-        case .TipColorComplete_Sdodr_Luck_C: return 6_100_242
-        case .TipColorComplete_Sdodr_Auto_A: return 6_100_250
-        case .TipColorComplete_Sdodr_Auto_B: return 6_100_251
-        case .TipColorComplete_Sdodr_Auto_C: return 6_100_252
-        case .NawaBattlerRank_Lv00: return 7_000_000
-        case .NawaBattlerRank_Lv01: return 7_000_001
-        case .NawaBattlerRank_Lv02: return 7_000_002
-        case .NawaBattlerRank_Lv03: return 7_000_003
-        case .NawaBattlerRank_Lv04: return 7_000_004
-        case .NawaBattlerRank_Lv05: return 7_000_005
-        case .NawaBattlerRank_Lv06: return 7_000_006
-        case .NawaBattlerRank_Lv07: return 7_000_007
-        case .NawaBattlerRank_Lv08: return 7_000_008
-        case .NawaBattlerRank_Lv09: return 7_000_009
-        case .NawaBattlerRank_Lv10: return 7_000_010
-        case .NawaBattlerRank_Lv11: return 7_000_011
-        case .NawaBattlerRank_Lv12: return 7_000_012
-        case .NawaBattlerCardNum_Lv00: return 7_000_100
-        case .NawaBattlerCardNum_Lv01: return 7_000_101
-        case .NawaBattlerCardNum_Lv02: return 7_000_102
+        case .CoopRareEnemyKillNumSakelienBomberLv00: return 5_200_000
+        case .CoopRareEnemyKillNumSakelienBomberLv01: return 5_200_001
+        case .CoopRareEnemyKillNumSakelienBomberLv02: return 5_200_002
+        case .CoopRareEnemyKillNumSakelienSnakeLv00: return 5_200_010
+        case .CoopRareEnemyKillNumSakelienSnakeLv01: return 5_200_011
+        case .CoopRareEnemyKillNumSakelienSnakeLv02: return 5_200_012
+        case .CoopRareEnemyKillNumSakelienShieldLv00: return 5_200_020
+        case .CoopRareEnemyKillNumSakelienShieldLv01: return 5_200_021
+        case .CoopRareEnemyKillNumSakelienShieldLv02: return 5_200_022
+        case .CoopRareEnemyKillNumSakelienTowerLv00: return 5_200_030
+        case .CoopRareEnemyKillNumSakelienTowerLv01: return 5_200_031
+        case .CoopRareEnemyKillNumSakelienTowerLv02: return 5_200_032
+        case .CoopRareEnemyKillNumSakediverLv00: return 5_200_040
+        case .CoopRareEnemyKillNumSakediverLv01: return 5_200_041
+        case .CoopRareEnemyKillNumSakediverLv02: return 5_200_042
+        case .CoopRareEnemyKillNumSakerocketLv00: return 5_200_050
+        case .CoopRareEnemyKillNumSakerocketLv01: return 5_200_051
+        case .CoopRareEnemyKillNumSakerocketLv02: return 5_200_052
+        case .CoopRareEnemyKillNumSakelienCupTwinsLv00: return 5_200_060
+        case .CoopRareEnemyKillNumSakelienCupTwinsLv01: return 5_200_061
+        case .CoopRareEnemyKillNumSakelienCupTwinsLv02: return 5_200_062
+        case .CoopRareEnemyKillNumSakePillarLv00: return 5_200_070
+        case .CoopRareEnemyKillNumSakePillarLv01: return 5_200_071
+        case .CoopRareEnemyKillNumSakePillarLv02: return 5_200_072
+        case .CoopRareEnemyKillNumSakeDolphinLv00: return 5_200_080
+        case .CoopRareEnemyKillNumSakeDolphinLv01: return 5_200_081
+        case .CoopRareEnemyKillNumSakeDolphinLv02: return 5_200_082
+        case .CoopRareEnemyKillNumSakeSaucerLv00: return 5_200_090
+        case .CoopRareEnemyKillNumSakeSaucerLv01: return 5_200_091
+        case .CoopRareEnemyKillNumSakeSaucerLv02: return 5_200_092
+        case .CoopRareEnemyKillNumSakeArtilleryLv00: return 5_200_100
+        case .CoopRareEnemyKillNumSakeArtilleryLv01: return 5_200_101
+        case .CoopRareEnemyKillNumSakeArtilleryLv02: return 5_200_102
+        case .CoopBossKillNumSakelienGiantLv00: return 5_210_000
+        case .CoopBossKillNumSakelienGiantLv01: return 5_210_001
+        case .CoopBossKillNumSakelienGiantLv02: return 5_210_002
+        case .CoopBossKillNumSakeRopeLv00: return 5_210_100
+        case .CoopBossKillNumSakeRopeLv01: return 5_210_101
+        case .CoopBossKillNumSakeRopeLv02: return 5_210_102
+        case .CoopBossKillNumSakeJawLv00: return 5_210_200
+        case .CoopBossKillNumSakeJawLv01: return 5_210_201
+        case .CoopBossKillNumSakeJawLv02: return 5_210_202
+        case .CoopKillTripleBossLv00: return 5_211_000
+        case .CoopBigRunTrophyLv00: return 5_220_000
+        case .CoopBigRunTrophyLv01: return 5_220_001
+        case .CoopBigRunTrophyLv02: return 5_220_002
+        case .CoopContestTrophyLv00: return 5_230_000
+        case .CoopContestTrophyLv01: return 5_230_001
+        case .CoopContestTrophyLv02: return 5_230_002
+        case .MissionLv00: return 6_000_000
+        case .MissionLv01: return 6_000_001
+        case .MissionLv02: return 6_000_002
+        case .MissionLv03: return 6_000_003
+        case .MissionLv04: return 6_000_004
+        case .AchievementSdodrLv00: return 6_000_100
+        case .AchievementSdodrLv01: return 6_000_101
+        case .AchievementSdodrLv02: return 6_000_102
+        case .AchievementSdodrLv03: return 6_000_103
+        case .AchievementSdodrLv04: return 6_000_104
+        case .AchievementSdodrLv05: return 6_000_105
+        case .TipColorCompleteSdodrFireA: return 6_100_200
+        case .TipColorCompleteSdodrFireB: return 6_100_201
+        case .TipColorCompleteSdodrFireC: return 6_100_202
+        case .TipColorCompleteSdodrContinuityA: return 6_100_210
+        case .TipColorCompleteSdodrContinuityB: return 6_100_211
+        case .TipColorCompleteSdodrContinuityC: return 6_100_212
+        case .TipColorCompleteSdodrRangeA: return 6_100_220
+        case .TipColorCompleteSdodrRangeB: return 6_100_221
+        case .TipColorCompleteSdodrRangeC: return 6_100_222
+        case .TipColorCompleteSdodrMoveA: return 6_100_230
+        case .TipColorCompleteSdodrMoveB: return 6_100_231
+        case .TipColorCompleteSdodrMoveC: return 6_100_232
+        case .TipColorCompleteSdodrLuckA: return 6_100_240
+        case .TipColorCompleteSdodrLuckB: return 6_100_241
+        case .TipColorCompleteSdodrLuckC: return 6_100_242
+        case .TipColorCompleteSdodrAutoA: return 6_100_250
+        case .TipColorCompleteSdodrAutoB: return 6_100_251
+        case .TipColorCompleteSdodrAutoC: return 6_100_252
+        case .NawaBattlerRankLv00: return 7_000_000
+        case .NawaBattlerRankLv01: return 7_000_001
+        case .NawaBattlerRankLv02: return 7_000_002
+        case .NawaBattlerRankLv03: return 7_000_003
+        case .NawaBattlerRankLv04: return 7_000_004
+        case .NawaBattlerRankLv05: return 7_000_005
+        case .NawaBattlerRankLv06: return 7_000_006
+        case .NawaBattlerRankLv07: return 7_000_007
+        case .NawaBattlerRankLv08: return 7_000_008
+        case .NawaBattlerRankLv09: return 7_000_009
+        case .NawaBattlerRankLv10: return 7_000_010
+        case .NawaBattlerRankLv11: return 7_000_011
+        case .NawaBattlerRankLv12: return 7_000_012
+        case .NawaBattlerCardNumLv00: return 7_000_100
+        case .NawaBattlerCardNumLv01: return 7_000_101
+        case .NawaBattlerCardNumLv02: return 7_000_102
         case .NawaBattlerWinAllNpcLevel3: return 7_000_200
-        case .HammerHostTournament_Lv00: return 8_000_000
-        case .HammerHostTournament_Lv01: return 8_000_001
-        case .HammerHostTournament_Lv02: return 8_000_002
+        case .HammerHostTournamentLv00: return 8_000_000
+        case .HammerHostTournamentLv01: return 8_000_001
+        case .HammerHostTournamentLv02: return 8_000_002
         case .Undefined(let rawValue): return rawValue
         }
     }
