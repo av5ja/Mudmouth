@@ -36,8 +36,8 @@ open class Thunder {
 
     /// CoopResultQuery
     /// - Returns: <#description#>
-    open func getResults() async throws -> CoopResultQuery.ResponseType {
-        let histories = try await getHistoryDetail()
+    open func getResults(lastPlayedTime: Date = .init(timeIntervalSince1970: 0)) async throws -> CoopResultQuery.ResponseType {
+        let histories = try await getHistoryDetail(lastPlayedTime: lastPlayedTime)
         return try await request(CoopResultQuery(histories))
     }
 
@@ -72,12 +72,12 @@ open class Thunder {
     /// CoopHistoryDetailQuery
     /// あるヒストリーのリザルトを全件取得する
     /// - Returns: <#description#>
-    private func getHistoryDetail() async throws -> [CoopResultQuery.Request] {
+    private func getHistoryDetail(lastPlayedTime: Date = .init(timeIntervalSince1970: 0)) async throws -> [CoopResultQuery.Request] {
         let history = try await getHistory()
         return try await withThrowingTaskGroup(of: CoopResultQuery.Request.self, body: { task in
             for history in history.histories {
                 task.addTask(priority: .background, operation: { [self] in
-                    try await getHistoryDetail(history: history)
+                    try await getHistoryDetail(history: history, lastPlayedTime: lastPlayedTime)
                 })
             }
             return try await task.reduce(into: [CoopResultQuery.Request]()) { results, result in
@@ -89,9 +89,9 @@ open class Thunder {
     /// CoopHistoryDetailQuery
     /// あるスケジュールのリザルトを全件取得する
     /// - Returns: <#description#>
-    private func getHistoryDetail(history: CoopHistoryQuery.History<CoopHistoryDetailQuery.ID>) async throws -> CoopResultQuery.Request {
+    private func getHistoryDetail(history: CoopHistoryQuery.History<CoopHistoryDetailQuery.ID>, lastPlayedTime: Date = .init(timeIntervalSince1970: 0)) async throws -> CoopResultQuery.Request {
         let results: [Data] = try await withThrowingTaskGroup(of: Data.self, body: { task in
-            for id in history.results {
+            for id in history.results.filter({ $0.playTime > lastPlayedTime }) {
                 task.addTask(priority: .background, operation: { [self] in
                     try await getHistoryDetail(id: id)
                 })

@@ -15,25 +15,27 @@ struct StageView: View {
 
     var body: some View {
         NavigationView(content: {
-            StageRecordView(allCases: CoopStage.allCases)
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationTitle(Text(rawValue: .RecordStageRecord))
-                .tabViewStyle(.page)
+            ScrollView(content: {
+               _body(allCases: CoopStage.allCases)
+            })
+            .padding(.horizontal)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(Text(rawValue: .RecordStageRecord))
+            .tabViewStyle(.page)
         })
     }
 
     // MARK: Private
+    
 
-    private struct StageRecordView: View {
+    private struct _body: View {
         @ObservedResults(RealmCoopRecord.self, sortDescriptor: SortDescriptor(keyPath: "stageId", ascending: true)) var records
         let allCases: [CoopStage]
 
         var body: some View {
-            ScrollView(content: {
-                LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 2), content: {
-                    ForEach(records.filter { allCases.contains($0.stageId) }, content: { record in
-                        StageView(record: record)
-                    })
+            LazyVGrid(columns: .init(repeating: .init(.flexible()), count: 2), content: {
+                ForEach(records.filter { allCases.contains($0.stageId) }, content: { record in
+                    StageView(record: record)
                 })
             })
         }
