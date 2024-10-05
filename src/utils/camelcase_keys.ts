@@ -2,7 +2,7 @@ import camelCase from 'camelcase'
 import { isArray, isDate, isObject, reduce, startCase } from 'lodash'
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
-export const camelcaseKeys = (obj: any, options: { pascalCase: boolean }): object => {
+export const camelcaseKeys = (obj: any, options: { pascalCase: boolean } = { pascalCase: true }): object => {
   if (!isObject(obj)) {
     return obj
   }

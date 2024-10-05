@@ -1,5 +1,7 @@
+import { Category } from '@/enums/category'
 import type { Locale } from '@/enums/locale_type'
 import { Protocol } from '@/enums/protocol'
+import type { KeyId } from '@/models/key_id.dto'
 import type { KeyValue } from '@/models/key_value.dto'
 import dayjs from 'dayjs'
 import { z } from 'zod'
@@ -13,6 +15,7 @@ export const Template = z
     return {
       ...v,
       write(): void {
+        console.log(`Generating ${v.path}`)
         Bun.write(v.path, v.lines.join('\n'))
       },
     }
@@ -31,7 +34,7 @@ const Header = (name: string, game_version: string, web_version: string) => [
   'import Foundation',
   '',
   `/// ${name}`,
-  '/// - Authors: ',
+  '/// - Authors:',
   '///   tkgstrator',
   '/// - Copyright: 2024 Nintendo Co., Ltd.',
   `/// - Version: ${game_version}`,
@@ -106,5 +109,95 @@ export const Version = (game_version: string, web_version: string, app_version: 
       ])
       .concat(['}']),
   })
+
+export const RawRepresentable = (
+  game_version: string,
+  web_version: string,
+  category: Category,
+  entries: KeyId[],
+): Template =>
+  Template.parse({
+    path: `Sources/ThunderSDK/Enums/${category}.swift`,
+    lines: Header(category, game_version, web_version)
+      .concat(Definition(category, [Protocol.SPRAWREPRESENTABLE]))
+      .concat([''])
+      .concat(Values(entries))
+      .concat([''])
+      .concat(AllCases(entries))
+      .concat([''])
+      .concat(RawValues(entries))
+      .concat([''])
+      .concat(ImagePath(category))
+      .concat(['}']),
+  })
+
+/**
+ * RawValueの定義
+ * @param entries
+ * @returns
+ */
+const RawValues = (entries: KeyId[]): string[] => {
+  return [
+    'public var rawValue: RawValue {',
+    'switch self {',
+    entries.flatMap((entry) => [`case .${entry.RowId}: return ${entry.Id}`]),
+    'case .Undefined(let rawValue): return rawValue',
+    '}',
+    '}',
+  ].flat()
+}
+
+/**
+ * AllCasesの定義
+ */
+const AllCases = (entries: KeyId[]): string[] => {
+  return ['public static let allCases: AllCases = [', entries.map((entry) => `.${entry.RowId},`), ']'].flat()
+}
+
+/**
+ * Valueの定義
+ * @param entries
+ * @returns
+ */
+const Values = (entries: KeyId[]): string[] => {
+  return entries
+    .flatMap((entry) => [
+      `/// ${entry.Label !== undefined ? entry.Label : ''}`,
+      `/// - Returns: ${entry.Id}`,
+      `case ${entry.RowId}`,
+    ])
+    .concat(['/// Undefined', '/// - Returns: rawValue', 'case Undefined(RawValue)'])
+    .flat()
+}
+
+/**
+ * 画像へのパス
+ * @param category
+ * @returns
+ */
+const ImagePath = (category: Category): string[] => [
+  'public var path: String {',
+  `"${(() => {
+    switch (category) {
+      case Category.BadgeInfo:
+        return 'badge_img'
+      case Category.CoopSkinInfo:
+        return 'coop_skin'
+      case Category.GearInfoClothes:
+        return 'gear_img/clothes'
+      case Category.GearInfoHead:
+        return 'gear_img/head'
+      case Category.GearInfoShoes:
+        return 'gear_img/shoes'
+      case Category.NamePlateBgInfo:
+        return 'npl_img'
+      case Category.WeaponInfoMain:
+        return 'weapon_illust'
+      case Category.WeaponInfoSpecial:
+        return 'special_img'
+    }
+  })()}"`,
+  '}',
+]
 
 export type Template = z.infer<typeof Template>
