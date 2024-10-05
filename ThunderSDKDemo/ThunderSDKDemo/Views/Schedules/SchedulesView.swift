@@ -17,9 +17,7 @@ struct SchedulesView: View {
     @ObservedResults(RealmCoopSchedule.self) var schedules
 
     var body: some View {
-        NavigationView(content: {
-            _body
-        })
+        _body
     }
 
     // MARK: Private

@@ -54,7 +54,6 @@ class AppDelegate: NSObject, UIApplicationDelegate, UIWindowSceneDelegate {
         #endif
         if let documentURL: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             Logger.debug(documentURL.path)
-            
         }
         UNUserNotificationCenter.current().delegate = self
         return true

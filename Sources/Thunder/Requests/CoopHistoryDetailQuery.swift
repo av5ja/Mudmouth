@@ -46,7 +46,7 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
         public let scenarioCode: String?
         public let waveDetails: [WaveResult]
     }
-    
+
     // MARK: - BossResult
 
     public struct BossResult: Codable {

@@ -1,18 +1,18 @@
 //
 //  ScheduleHeader.swift
 //  ThunderApp
-//  
+//
 //  Created by devonly on 2024/07/13.
 //  Copyright © 2024 Magi. All rights reserved.
 //
 
+import RealmSwift
 import SwiftUI
 import Thunder
-import RealmSwift
 
 struct ScheduleHeader: View {
     let schedule: RealmCoopSchedule
-    
+
     var body: some View {
         HStack(content: {
             ForEach(schedule.weaponList.indices, id: \.self, content: { index in
@@ -34,6 +34,6 @@ struct ScheduleHeader: View {
     }
 }
 
-//#Preview {
+// #Preview {
 //    ScheduleHeader(schedule: .preview)
-//}
+// }
