@@ -26,9 +26,9 @@ final class RealmManager: Thunder, ObservableObject {
         inWriteTransaction(transaction: { realm in
             for schedule in response.schedules {
                 if realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: schedule.id) == nil {
-                    Logger.debug("RealmCoopSchedule -> \(schedule.id) created")
+//                    Logger.debug("RealmCoopSchedule -> \(schedule.id) created")
                 } else {
-                    Logger.debug("RealmCoopSchedule -> \(schedule.id) updated")
+//                    Logger.debug("RealmCoopSchedule -> \(schedule.id) updated")
                 }
                 realm.update(RealmCoopSchedule.self, value: schedule, update: .modified)
 //                if realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: schedule.id) == nil {
@@ -56,8 +56,9 @@ final class RealmManager: Thunder, ObservableObject {
     }
 
     @discardableResult
-    override func getResults() async throws -> CoopResultQuery.ResponseType {
-        let response = try await super.getResults()
+    override func getResults(lastPlayedTime: Date = .init(timeIntervalSince1970: 0)) async throws -> CoopResultQuery.ResponseType {
+        Logger.debug("LastPlayedTime: \(playTime)")
+        let response = try await super.getResults(lastPlayedTime: playTime)
         inWriteTransaction(transaction: { realm in
             for history in response.histories {
 //                print(realm.object(ofType: RealmCoopSchedule.self, forPrimaryKey: history.schedule.id))
@@ -76,6 +77,13 @@ final class RealmManager: Thunder, ObservableObject {
     }
 
     // MARK: Private
+    
+    private var playTime: Date {
+        if let realm: Realm = try? .init(configuration: .default) {
+            return realm.objects(RealmCoopResult.self).sorted(byKeyPath: "playTime", ascending: true).last?.playTime ?? .init(timeIntervalSince1970: 0)
+        }
+        return .init(timeIntervalSince1970: 0)
+    }
 
     private func inWriteTransaction(transaction: @escaping (Realm) -> Void) {
         // スレッドセーフの観点からこうしてみる(ChatGPTの指摘)

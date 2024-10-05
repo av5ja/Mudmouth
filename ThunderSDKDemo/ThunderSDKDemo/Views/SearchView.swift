@@ -41,6 +41,12 @@ struct SearchView: View {
                 Toggle(isOn: $options.hasExWave, label: {
                     Text(rawValue: .CoopHistoryExWave)
                 })
+                Toggle(isOn: $options.isClear, label: {
+                    Text(rawValue: .CoopHistoryClear)
+                })
+                Toggle(isOn: $options.isBossDefeated, label: {
+                    Text(rawValue: .CoopHistoryDefeatBoss)
+                })
             }, header: {
 //                Text(rawValue: .QrCodeReaderCheckinDate)
             })
@@ -79,7 +85,7 @@ struct SearchView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
             })
         })
-        .navigationTitle(Text(rawValue: .SettingsTitle))
+        .navigationTitle(Text(rawValue: .CoopRecordCoop))
         .navigationBarTitleDisplayMode(.inline)
     }
 
