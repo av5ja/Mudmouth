@@ -41,6 +41,10 @@ public enum ThunderSDK {
         .init(string: "\(baseURL)/v1/imgs/\(value.path)/\(value.rawValue).png")
     }
 
+    static func assetURL(value: UIImg) -> URL? {
+        .init(string: "\(baseURL)/v1/imgs/\(value.path)/\(value.rawValue).png")
+    }
+
     // MARK: Private
 
     #if targetEnvironment(simulator)

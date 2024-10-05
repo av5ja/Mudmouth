@@ -32,12 +32,12 @@ export namespace SourceCode {
     /// Version定義の生成
     Version(game_version, web_version, app_version).write()
     /// 翻訳データの生成
-    // for (const locale of locales) {
-    //   await locale.write()
-    // }
+    for (const locale of locales) {
+      await locale.write()
+    }
     for (const category of Object.values(Category)) {
       const code: Internal.Code = new Internal.Code(game_version, web_version, category)
-      console.log(await code.write())
+      await code.write()
     }
   }
 }

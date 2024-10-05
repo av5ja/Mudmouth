@@ -106,14 +106,11 @@ struct ResultWaveSP2: View {
                 .padding(.bottom, 6)
 
         case false:
-            HStack(spacing: 2, content: {
-                Text(rawValue: .CoopHistoryWave)
-                Text(wave.waveId, format: .number)
-            })
-            .font(.custom(.Splatfont2, size: 15))
-            .foregroundColor(.black)
-            .padding(.top, 4)
-            .padding(.bottom, 6)
+            Text(rawValue: .CoopHistoryWave, wave.waveId)
+                .font(.custom(.Splatfont2, size: 15))
+                .foregroundColor(.black)
+                .padding(.top, 4)
+                .padding(.bottom, 6)
         }
     }
 

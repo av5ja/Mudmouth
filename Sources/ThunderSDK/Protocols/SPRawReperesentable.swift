@@ -29,15 +29,15 @@ public extension SPRawRepresentable {
 
     /// 翻訳データ
     var description: String {
-        return NSLocalizedString(String(describing: self), bundle: .module, comment: "")
-        dump(self)
-        Logger.debug("\(self), \(rawValue)")
-        switch self {
-        case .Undefined(rawValue):
-            return "Undefined \(rawValue)"
-        default:
-            return NSLocalizedString(String(describing: self), bundle: .main, comment: "")
-        }
+        NSLocalizedString(String(describing: self), bundle: .module, comment: "")
+//        dump(self)
+//        Logger.debug("\(self), \(rawValue)")
+//        switch self {
+//        case .Undefined(rawValue):
+//            return "Undefined \(rawValue)"
+//        default:
+//            return NSLocalizedString(String(describing: self), bundle: .main, comment: "")
+//        }
     }
 
     static func == (lhs: Self, rhs: Self) -> Bool {

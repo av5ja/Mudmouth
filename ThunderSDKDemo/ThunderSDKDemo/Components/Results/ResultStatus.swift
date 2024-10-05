@@ -17,16 +17,20 @@ struct ResultStatus: View {
         HStack(content: {
             VStack(spacing: 0, content: {
                 HStack(spacing: 0, content: {
-//                    GoldenIkura
-//                        .frame(width: 24, height: 20)
+                    WebImage(rawValue: .GoldenIkura)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 20)
                     Text(result.goldenIkuraNum, format: .count)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .font(.custom(.Splatfont2, size: 14))
                 })
                 .frame(width: 73.32, height: 22)
                 HStack(spacing: 0, content: {
-//                    Ikura
-//                        .frame(width: 24, height: 20)
+                    WebImage(rawValue: .Ikura)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 24, height: 20)
                     Text(result.ikuraNum, format: .count)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .font(.custom(.Splatfont2, size: 14))

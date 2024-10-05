@@ -14,4 +14,8 @@ extension WebImage<Image> {
     init(rawValue: some SPRawRepresentable) {
         self.init(url: rawValue.url)
     }
+
+    init(rawValue: UIImg) {
+        self.init(url: rawValue.url)
+    }
 }

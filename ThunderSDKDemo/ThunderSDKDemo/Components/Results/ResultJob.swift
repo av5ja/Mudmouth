@@ -38,10 +38,11 @@ struct ResultJob: View {
                     Text(result.jobBonus, format: .number)
                 })
                 Text("=")
-                HStack(spacing: 4, content: {
-                    Text(result.kumaPoint, format: .number)
-                    Text(rawValue: .RecordTotalTurfPoint)
-                })
+                if let kumaPoint = result.kumaPoint {
+                    Text(rawValue: .RecordTotalTurfPoint, kumaPoint)
+                } else {
+                    Text("-p")
+                }
             })
         })
         .font(.custom(.Splatfont2, size: 14))

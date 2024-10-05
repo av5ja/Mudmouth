@@ -18,9 +18,10 @@ public extension Text {
     init(rawValue: LocalizedString) {
         self.init(rawValue.description)
     }
-    
+
     init<T: Numeric>(rawValue: LocalizedString, _ args: T...) {
-        self.init(NSLocalizedString("\(rawValue.rawValue) \(args.map(\.magnitude))", bundle: .module, comment: ""))
+        let arguments: [String] = args.map { String(describing: $0) }
+        self.init(String(format: NSLocalizedString(rawValue.rawValue, bundle: .module, comment: ""), arguments: arguments))
     }
 
     init(rawValue: CoopWaterLevel) {
