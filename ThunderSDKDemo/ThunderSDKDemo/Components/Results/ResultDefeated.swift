@@ -57,6 +57,7 @@ struct ResultDefeated: View {
                 .overlay(alignment: .center, content: {
                     Text("\(Int(bossKillCount))(\(count))/\(Int(bossCount))")
                         .font(.custom(.Splatfont2, size: 12))
+                        .foregroundColor(.white)
                 })
             })
             .frame(height: 14)

@@ -51,6 +51,13 @@ struct ResultView: View {
                     .frame(width: 200.11, alignment: .leading)
                     .font(.custom(.Splatfont1, size: 16))
                     .foregroundColor(Color.white)
+                } else {
+                    HStack(content: {
+                        Text("-")
+                    })
+                    .frame(width: 200.11, alignment: .leading)
+                    .font(.custom(.Splatfont1, size: 16))
+                    .foregroundColor(Color.white)
                 }
             })
             Spacer()
@@ -59,27 +66,30 @@ struct ResultView: View {
             {
                 WebImage(rawValue: bossId)
                     .resizable()
-                    .frame(width: 32, height: 32)
+                    .frame(width: 36, height: 36)
+                    .grayscale(isBossDefeated ? 0.0 : 1.0)
             }
             VStack(alignment: .leading, spacing: 0, content: {
                 HStack(spacing: 0, content: {
-//                    GoldenIkura
-//                        .scaledToFit()
-//                        .frame(width: 24, height: 20)
+                    WebImage(rawValue: .GoldenIkura)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 20, alignment: .center)
                     Text(result.goldenIkuraNum, format: .count)
                         .font(.custom(.Splatfont2, size: 16))
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 })
-                .frame(width: 73.32, height: 22)
+                .frame(width: 83.32, height: 22)
                 HStack(spacing: 0, content: {
-//                    Ikura
-//                        .scaledToFit()
-//                        .frame(width: 24, height: 20)
+                    WebImage(rawValue: .Ikura)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 20, alignment: .center)
                     Text(result.ikuraNum, format: .count)
                         .font(.custom(.Splatfont2, size: 16))
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 })
-                .frame(width: 73.32, height: 22)
+                .frame(width: 83.32, height: 22)
             })
             .foregroundColor(SPColor.SP2.SPWhite)
         })
