@@ -58,7 +58,6 @@ export namespace Internal {
     async write(): Promise<void> {
       const entries: KeyIdList = await this.get_entries()
       RawRepresentable(this.game_version, this.web_version, this.category, entries).write()
-      console.log(entries)
     }
 
     private async get_entries(): Promise<KeyIdList> {

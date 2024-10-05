@@ -44,6 +44,7 @@ struct ResultPlayer: View {
     private func _common(_ player: RealmCoopPlayer) -> some View {
         VStack(alignment: .leading, spacing: 0, content: {
             Text(player.name)
+                .foregroundColor(.white)
 //            Text(visible.wrappedValue ? player.name : "-")
                 .lineLimit(1)
                 .font(.custom(.Splatfont2, size: 14))
@@ -82,8 +83,10 @@ struct ResultPlayer: View {
         HStack(spacing: 8, content: {
             VStack(alignment: .trailing, spacing: 4, content: {
                 HStack(spacing: 0, content: {
-//                    GoldenIkura
-//                        .frame(width: 40, height: 20, alignment: .leading)
+                    WebImage(rawValue: .GoldenIkura)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 20, alignment: .leading)
                     Text(player.goldenIkuraNum, format: .count)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .font(.custom(.Splatfont2, size: 14))
@@ -91,8 +94,10 @@ struct ResultPlayer: View {
                 .frame(width: 75.32, height: 22)
                 .background()
                 HStack(spacing: 0, content: {
-//                    Rescue(player.species)
-//                        .frame(width: 40, height: 20, alignment: .leading)
+                    WebImage(rawValue: .Rescue(player.species))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 20, alignment: .leading)
                     Text(player.helpCount, format: .count)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .font(.custom(.Splatfont2, size: 14))
@@ -102,8 +107,10 @@ struct ResultPlayer: View {
             })
             VStack(alignment: .trailing, spacing: 4, content: {
                 HStack(spacing: 0, content: {
-//                    Ikura
-//                        .frame(width: 40, height: 20, alignment: .leading)
+                    WebImage(rawValue: .Ikura)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 20, alignment: .leading)
                     Text(player.ikuraNum, format: .count)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .font(.custom(.Splatfont2, size: 14))
@@ -111,8 +118,10 @@ struct ResultPlayer: View {
                 .frame(width: 75.32, height: 22)
                 .background()
                 HStack(spacing: 0, content: {
-//                    Death(player.species)
-//                        .frame(width: 40, height: 20, alignment: .leading)
+                    WebImage(rawValue: .Death(player.species))
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 20, alignment: .leading)
                     Text(player.deadCount, format: .count)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                         .font(.custom(.Splatfont2, size: 14))
