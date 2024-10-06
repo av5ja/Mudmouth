@@ -32,7 +32,7 @@ final class RealmCoopResult: Object, Codable, Identifiable {
         bossCounts.append(objectsIn: result.bossCounts)
         bossId = result.jobResult.bossId
         bossKillCounts.append(objectsIn: result.bossKillCounts)
-        bossResult.append(objectsIn: result.bossResults?.map({ $0.isDefeated }) ?? [nil, nil, nil])
+        bossResult.append(objectsIn: result.bossResults?.map({ $0.isBossDefeated }) ?? [nil, nil, nil])
         dangerRate = result.dangerRate.decimal128
         failureWave = result.jobResult.failureWave
         goldenIkuraAssistNum = result.goldenIkuraAssistNum

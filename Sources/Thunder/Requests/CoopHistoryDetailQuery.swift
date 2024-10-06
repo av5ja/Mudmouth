@@ -51,7 +51,7 @@ public final class CoopHistoryDetailQuery: AuthorizedType {
 
     public struct BossResult: Codable {
         public let bossId: CoopEnemy
-        public let isDefeated: Bool
+        public let isBossDefeated: Bool
     }
 
     // MARK: - ID
