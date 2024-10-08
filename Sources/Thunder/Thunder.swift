@@ -66,7 +66,13 @@ open class Thunder {
     /// CoopHistory
     /// - Returns: <#description#>
     private func getHistory() async throws -> CoopHistoryQuery.ResponseType {
-        try await request(CoopHistoryQuery())
+        let history: CoopHistoryQuery.ResponseType = try await request(CoopHistoryQuery())
+        if let nplnUserId = history.histories.flatMap(\.results).first?.nplnUserId {
+            Logger.debug("NPLN USER ID: \(nplnUserId)")
+            keychain.update(nplnUserId: nplnUserId)
+            Logger.debug("NPLN USER ID: \(keychain.nplnUserId)")
+        }
+        return history
     }
 
     /// CoopHistoryDetailQuery

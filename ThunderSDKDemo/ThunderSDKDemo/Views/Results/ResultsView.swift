@@ -15,11 +15,11 @@ struct ResultsView: View {
 
     @ObservedResults(RealmCoopSchedule.self) var schedules
     var player: RealmCoopPlayer?
-    
+
     var body: some View {
         _body
     }
-    
+
     var navigationTitle: String {
         player?.name ?? LocalizedString.CoopHistoryHistory.description
     }

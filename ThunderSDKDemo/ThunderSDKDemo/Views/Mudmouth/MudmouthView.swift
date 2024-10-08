@@ -34,10 +34,8 @@ struct MudmouthView: View {
                     NextButton()
 
                 case .INSTALL:
-                    InstallLink(onDismiss: {
-                        selection.next()
-                    })
-                    .buttonStyle(.float)
+                    InstallLink()
+                        .buttonStyle(.float)
                     NextButton()
                     BackButton()
 

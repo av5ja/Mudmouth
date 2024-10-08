@@ -13,7 +13,9 @@ struct SettingsView: View {
     var body: some View {
         Form(content: {
             Section(content: {}, header: {})
-            Section(content: {}, header: {})
+            Section(content: {
+                SignOut()
+            }, header: {})
         })
         .navigationTitle(Text(rawValue: .SettingsTitle))
         .navigationBarTitleDisplayMode(.inline)

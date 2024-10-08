@@ -2,7 +2,7 @@
 //  ThunderSDK+Version.swift
 //  ThunderSDK
 //
-//  Created by Thunder SDK Gen on 2024/10/05
+//  Created by Thunder SDK Gen on 2024/10/08
 //  Copyright @ 2024 Magi, Corporation. All rights reserved.
 //
 //

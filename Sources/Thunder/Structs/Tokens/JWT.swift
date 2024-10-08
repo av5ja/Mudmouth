@@ -16,12 +16,14 @@ struct JWT<T: PayloadType>: Codable {
 
     init(rawValue: String) {
         let values: [String] = rawValue.components(separatedBy: ".")
+        Logger.debug(values)
         if values.count != 3 {
             fatalError("Unexpected format JWT")
         }
 
         let data: [Data] = values.compactMap(\.base64DecodedString).compactMap { $0.data(using: .utf8) }
         let decoder: JSONDecoder = .init(dateDecodingStrategy: .secondsSince1970)
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         self.rawValue = rawValue
         // swiftlint:disable:next force_try
         header = try! decoder.decode(Header.self, from: data[0])

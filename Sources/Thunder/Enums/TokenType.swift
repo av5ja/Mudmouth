@@ -13,4 +13,5 @@ public enum TokenType: String, CaseIterable, Codable {
     case SESSION_TOKEN = "session_token"
     case ID_TOKEN = "id_token"
     case TOKEN = "token"
+    case ACCESS_TOKEN = "access_token"
 }
