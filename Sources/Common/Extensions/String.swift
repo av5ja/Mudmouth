@@ -21,10 +21,12 @@ public extension String {
 
     var base64DecodedString: String? {
         let formatedString: String = self + Array(repeating: "=", count: count % 4).joined()
-        if let data = Data(base64Encoded: formatedString, options: [.ignoreUnknownCharacters]) {
-            return String(data: data, encoding: .utf8)
+        guard let data: Data = .init(base64Encoded: formatedString),
+              let stringValue: String = .init(data: data, encoding: .utf8)
+        else {
+            return nil
         }
-        return nil
+        return stringValue
     }
 
     func capture(pattern: String, group: Int) -> String? {

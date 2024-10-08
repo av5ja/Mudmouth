@@ -16,7 +16,7 @@ struct StageView: View {
     var body: some View {
         NavigationView(content: {
             ScrollView(content: {
-               _body(allCases: CoopStage.allCases)
+                _body(allCases: CoopStage.allCases)
             })
             .padding(.horizontal)
             .navigationBarTitleDisplayMode(.inline)
@@ -26,7 +26,6 @@ struct StageView: View {
     }
 
     // MARK: Private
-    
 
     private struct _body: View {
         @ObservedResults(RealmCoopRecord.self, sortDescriptor: SortDescriptor(keyPath: "stageId", ascending: true)) var records

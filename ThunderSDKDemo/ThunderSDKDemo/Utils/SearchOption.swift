@@ -22,7 +22,7 @@ class SearchOption: ObservableObject {
     @Published var dangerRate: Double = 2.00
     @Published var isClear: Bool = true
     @Published var isBossDefeated: Bool = true
-    
+
     var filter: NSPredicate {
         .init(format: "%@ <= playTime && playTime <= %@ && goldenIkuraNum >= %@ && ANY schedules.rule = %@", argumentArray: [startTime, endTime, goldenIkuraNum, rule.rawValue])
     }

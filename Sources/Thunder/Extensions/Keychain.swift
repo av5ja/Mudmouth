@@ -29,17 +29,57 @@ extension Keychain {
         try? set(encoder.encode(value), key: identifier)
     }
 
+    /// ユーザー情報
     var credential: UserInfo? {
         get {
             #if targetEnvironment(simulator)
                 UserInfo.dummy
-            //            get(key: identifier)
             #else
                 get(key: identifier)
             #endif
         }
+        // ここはユーザーのトークンを更新するタイミングでしか呼ばれない
         set {
-            set(value: newValue)
+            if var oldValue: UserInfo = credential,
+               let newValue: UserInfo = newValue {
+                oldValue.bulletToken = newValue.bulletToken
+                oldValue.userAgent = newValue.userAgent
+                oldValue.version = newValue.version
+                oldValue.nsaId = newValue.nsaId
+            } else {
+                set(value: newValue)
+            }
         }
+    }
+
+    var nplnUserId: String? {
+        credential?.nplnUserId
+    }
+
+    var nsaId: String? {
+        credential?.nsaId
+    }
+
+    /// ACCESS TOKENを更新する
+    func update(accessToken: String) {
+        // Keychainから認証情報を取得してアクセストークンを書き込む
+        guard var credential: UserInfo = credential
+        else {
+            return
+        }
+        credential.accessToken = .init(rawValue: accessToken)
+        Logger.debug(credential)
+        set(value: credential)
+    }
+
+    /// NPLN USER IDを更新する
+    func update(nplnUserId: String) {
+        guard var credential: UserInfo = credential
+        else {
+            return
+        }
+        credential.nplnUserId = nplnUserId
+        Logger.debug(credential)
+        set(value: credential)
     }
 }

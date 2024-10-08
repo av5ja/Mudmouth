@@ -77,15 +77,15 @@ final class RealmManager: Thunder, ObservableObject {
     }
 
     // MARK: Private
-    
+
     private var playTime: Date {
         #if DEBUG
-        return .init(timeIntervalSince1970: 0)
+            return .init(timeIntervalSince1970: 0)
         #else
-        if let realm: Realm = try? .init(configuration: .default) {
-            return realm.objects(RealmCoopResult.self).sorted(byKeyPath: "playTime", ascending: true).last?.playTime ?? .init(timeIntervalSince1970: 0)
-        }
-        return .init(timeIntervalSince1970: 0)
+            if let realm: Realm = try? .init(configuration: .default) {
+                return realm.objects(RealmCoopResult.self).sorted(byKeyPath: "playTime", ascending: true).last?.playTime ?? .init(timeIntervalSince1970: 0)
+            }
+            return .init(timeIntervalSince1970: 0)
         #endif
     }
 

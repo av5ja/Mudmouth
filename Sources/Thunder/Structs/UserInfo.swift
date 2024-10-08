@@ -14,10 +14,12 @@ import SwiftPackageKeys
 public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
     // MARK: Lifecycle
 
-    init(_ userInfo: [AnyHashable: Any]) throws {
+    /// MudmouthからのレスポンスをKeychainに書き込む
+    /// - Parameter
+    init(_ value: [AnyHashable: Any]) throws {
         let decoder: JSONDecoder = .default
         let headers: [KeyValuePair] = try {
-            guard let value: String = userInfo["headers"] as? String,
+            guard let value: String = value["headers"] as? String,
                   let data: Data = .init(base64Encoded: value),
                   let headers: [KeyValuePair] = try? decoder.decode([KeyValuePair].self, from: data)
             else {
@@ -26,7 +28,7 @@ public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
             return headers
         }()
         let body: [KeyValuePair] = try {
-            guard let value: String = userInfo["body"] as? String,
+            guard let value: String = value["body"] as? String,
                   let data: Data = .init(base64Encoded: value),
                   let body: [KeyValuePair] = try? decoder.decode([KeyValuePair].self, from: data)
             else {
@@ -42,30 +44,31 @@ public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
         else {
             throw SPError.DataNotFound
         }
-        self.bulletToken = Token(token: bulletToken)
-        self.gameWebToken = JWT(rawValue: gameWebToken)
-        self.version = version
+        nsaId = JWT<GameWebToken.Token>(rawValue: gameWebToken).payload.nsaId
+        nplnUserId = nil
+        accessToken = nil
+        self.bulletToken = .init(token: bulletToken)
         self.userAgent = userAgent
+        self.version = version
     }
 
-    private init(bulletToken: String, gameWebToken: String, version: String, userAgent: String) {
+    private init(nsaId: String, bulletToken: String, version: String, userAgent: String, accessToken: String, nplnUserId: String) {
+        self.nsaId = nsaId
         self.bulletToken = .init(token: bulletToken)
-        self.gameWebToken = .init(rawValue: gameWebToken)
         self.version = version
         self.userAgent = userAgent
+        self.accessToken = .init(rawValue: accessToken)
+        self.nplnUserId = nplnUserId
     }
 
     // MARK: Public
-
-    /// NSA ID
-    public var id: String {
-        gameWebToken.payload.links.networkServiceAccount.id
-    }
 
     /// リフレッシュが必要かどうか
     public var requiresRefresh: Bool {
         bulletToken.expiresIn < .init()
     }
+
+    public var id: String { nsaId }
 
     // MARK: Internal
 
@@ -110,7 +113,6 @@ public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
             else {
                 return nil
             }
-            Logger.info(headers)
         }
     }
 
@@ -123,11 +125,10 @@ public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
             else {
                 return nil
             }
-            Logger.info(headers)
         }
     }
 
-    struct Token: Codable {
+    struct BulletToken: Codable {
         // MARK: Lifecycle
 
         init(token: String) {
@@ -145,15 +146,33 @@ public struct UserInfo: Codable, AuthenticationCredential, Identifiable {
         guard let bulletToken: String = SwiftPackageKeys.bulletToken.value,
               let gameWebToken: String = SwiftPackageKeys.gameWebToken.value,
               let version: String = SwiftPackageKeys.xWebViewVer.value,
-              let userAgent: String = SwiftPackageKeys.userAgent.value
+              let userAgent: String = SwiftPackageKeys.userAgent.value,
+              let accessToken: String = SwiftPackageKeys.accessToken.value,
+              let nplnUserId: String = SwiftPackageKeys.nplnUserId.value
         else {
             return nil
         }
-        return .init(bulletToken: bulletToken, gameWebToken: gameWebToken, version: version, userAgent: userAgent)
+        return .init(
+            nsaId: JWT<GameWebToken.Token>(rawValue: gameWebToken).payload.nsaId,
+            bulletToken: bulletToken,
+            version: version,
+            userAgent: userAgent,
+            accessToken: accessToken,
+            nplnUserId: nplnUserId
+        )
     }()
 
-    let bulletToken: Token
-    let gameWebToken: JWT<GameWebToken.Token>
-    let version: String
-    let userAgent: String
+    /// Nintendo Service Account ID
+    var nsaId: String
+    /// NPLN User ID
+    var nplnUserId: String?
+    /// Bullet Token
+    var bulletToken: BulletToken
+    var version: String
+    var userAgent: String
+    var accessToken: JWT<AccessToken.Token>?
+
+    mutating func update(accessToken: String) {
+        self.accessToken = .init(rawValue: accessToken)
+    }
 }

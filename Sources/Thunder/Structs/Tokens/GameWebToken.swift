@@ -19,6 +19,10 @@ enum GameWebToken {
         let typ: TokenType
         let iat: Date
         let links: Links
+
+        var nsaId: String {
+            links.networkServiceAccount.id
+        }
     }
 
     struct NetworkServiceAccount: Codable {
