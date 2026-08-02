@@ -5,6 +5,9 @@
   "workspaceFolder": "/home/vscode/app",
   "shutdownAction": "stopCompose",
   "remoteUser": "vscode",
+  "remoteEnv": {
+    "WAKATIME_API_KEY": "${localEnv:WAKATIME_API_KEY}"
+  },
   "mounts": ["source=${env:HOME}/home/vscode/.ssh,target=/.ssh,type=bind,consistency=cached,readonly"],
   "features": {
     "ghcr.io/devcontainers/features/git:1": {
@@ -33,6 +36,7 @@
         "EditorConfig.EditorConfig",
         "GitHub.copilot",
         "PKief.material-icon-theme",
+        "WakaTime.vscode-wakatime",
         "antfu.file-nesting",
         "biomejs.biome",
         "eamodio.gitlens",
